@@ -1,9 +1,100 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Ashwin's Chronicles</title><link href="/" rel="alternate"></link><link href="/feeds/all.atom.xml" rel="self"></link><id>/</id><updated>2019-01-01T00:00:00+05:30</updated><entry><title>Make a Github Pages blog with Pelican</title><link href="/gh-pages-with-pelican.html" rel="alternate"></link><published>2019-01-01T00:00:00+05:30</published><updated>2019-01-01T00:00:00+05:30</updated><author><name>Ashwin</name></author><id>tag:None,2019-01-01:/gh-pages-with-pelican.html</id><summary type="html">&lt;h1&gt;Make a Github Pages blog with Pelican&lt;/h1&gt;
-&lt;p&gt;Github, worlds leading  hosting service for Git repositories  offers a simple, elegant website solution. It allows its users to  store page content in a git repository along with their code.&lt;/p&gt;
-&lt;p&gt;In this blog post ill walk you through the process of setting up …&lt;/p&gt;</summary><content type="html">&lt;h1&gt;Make a Github Pages blog with Pelican&lt;/h1&gt;
-&lt;p&gt;Github, worlds leading  hosting service for Git repositories  offers a simple, elegant website solution. It allows its users to  store page content in a git repository along with their code.&lt;/p&gt;
-&lt;p&gt;In this blog post ill walk you through the process of setting up a website by combining Pelican with Github Pages. Pelican is a simple python utility that lets you create beautiful weblogs using just text files. In other words its a static-site generator. I have chosen Pelican over other static-site generators as Pelican unlike its counter parts is based on python hence initial  setup takes literally no time.&lt;/p&gt;</content><category term="Github"></category><category term="Pelican"></category><category term="gh-pages"></category></entry><entry><title>The Journey Begins</title><link href="/the-journey-begins.html" rel="alternate"></link><published>2018-06-18T00:00:00+05:30</published><updated>2018-06-18T00:00:00+05:30</updated><author><name>Ashwin</name></author><id>tag:None,2018-06-18:/the-journey-begins.html</id><summary type="html">&lt;p&gt;In which the author writes their first blog post.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Thanks for joining me!&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Ashwin's Chronicles</title><link href="/" rel="alternate"></link><link href="/feeds/all.atom.xml" rel="self"></link><id>/</id><updated>2019-01-01T00:00:00+05:30</updated><entry><title>Make a Github Pages blog with Pelican</title><link href="/gh-pages-with-pelican.html" rel="alternate"></link><published>2019-01-01T00:00:00+05:30</published><updated>2019-01-01T00:00:00+05:30</updated><author><name>Ashwin</name></author><id>tag:None,2019-01-01:/gh-pages-with-pelican.html</id><summary type="html">&lt;p&gt;Nothing Much&lt;/p&gt;</summary><content type="html">&lt;p&gt;Github, worlds leading  hosting service for Git repositories  offers a simple, elegant website solution. It allows its users to  store page content in a git repository along with their code.&lt;/p&gt;
+&lt;p&gt;In this blog post ill walk you through the process of setting up a website by combining Pelican with Github Pages. Pelican is a simple python utility that lets you create beautiful weblogs using just text files. In other words its a static-site generator. I have chosen Pelican over other static-site generators as Pelican unlike its counter parts is based on python hence initial  setup takes literally no time.&lt;/p&gt;
+&lt;h2&gt;Setting up a github.io page&lt;/h2&gt;
+&lt;p&gt;To create your Github user page, log in to Github and create a  new repositorie username.github.io, as explained on Github pages. (Use your Github username for these repositories.) The  username.github.io repository will contain the output HTML files Pelican generates. To add the output directory as a submodule, initialize it with a README file.&lt;/p&gt;
+&lt;h2&gt;Installing Pelican&lt;/h2&gt;
+&lt;p&gt;We will first  create a virtual environment for Pelican via virtualenv before installing Pelican.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;virtualenv website
+cd website
+source bin/activate
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;You can also do &lt;code&gt;workon website&lt;/code&gt; inplace of the last two.
+Once the virtual environment has been created and activated, Pelican can be installed via  prefixing with sudo if permissions warrant:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;pip install pelican markdown typogrify ghp-import shovel&lt;/code&gt; &lt;br&gt;
+Now clone the source repository you created:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;git clone https://github.com/YOUR_USERNAME/YOUR_USERNAME.github.io.git web-sources&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Then change directory to the source folder:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;cd web-sources&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Because of how Github Pages prefers to work, serving the files from the master branch, you have to put your source code in a new branch, preserving the "master" for the output of the static files generated by Pelican. To do that, you must create a new branch called "source":&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;$ git checkout -b source&lt;/code&gt;&lt;/p&gt;
+&lt;h1&gt;Pelican quickstart&lt;/h1&gt;
+&lt;p&gt;Pelican provides an excellent quickstart command. Run it:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;pelican-quickstart&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;The quickstart will ask you various questions, which you can answer in turn. Before answering them, take a look at my answers below:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&amp;gt; Where do you want to create your new web site? [.] ./
+&amp;gt; What will be the title of this web site? Ashwin&amp;#39;s Chronicles
+&amp;gt; Who will be the author of this web site? Ashwin Kumar K
+&amp;gt; What will be the default language of this web site? [pt] en
+&amp;gt; Do you want to specify a URL prefix? e.g., http://example.com   (Y/n) n
+&amp;gt; Do you want to enable article pagination? (Y/n) y
+&amp;gt; How many articles per page do you want? [10] 10
+&amp;gt; What is your time zone? [Europe/Paris] Asia/Calcutta
+&amp;gt; Do you want to generate a Fabfile/Makefile to automate generation and publishing? (Y/n) Y **# PAY ATTENTION TO THIS!**
+&amp;gt; Do you want an auto-reload &amp;amp; simpleHTTP script to assist with theme and site development? (Y/n) n
+&amp;gt; Do you want to upload your website using FTP? (y/N) n
+&amp;gt; Do you want to upload your website using SSH? (y/N) n
+&amp;gt; Do you want to upload your website using Dropbox? (y/N) n
+&amp;gt; Do you want to upload your website using S3? (y/N) n
+&amp;gt; Do you want to upload your website using Rackspace Cloud Files? (y/N) n
+&amp;gt; Do you want to upload your website using GitHub Pages? (y/N) y
+&amp;gt; Is this your personal page (username.github.io)? (y/N) y
+Done. Your new project is available at YOUR_USERNAME.github.io
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Now, go ahead and create your first blog post! You might want to open the project folder on your favorite code editor and find the "content" folder inside it. Then, create a new file, which can be called my-first-post.md (Just for testing). The contents should begin with the metadata which identifies the Title, Date, Category and more from the post before you start with the content, like this:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;Title&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;My&lt;/span&gt; &lt;span class="n"&gt;first&lt;/span&gt; &lt;span class="n"&gt;post&lt;/span&gt;
+&lt;span class="n"&gt;Date&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;2018&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;
+&lt;span class="n"&gt;Modified&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;2018&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;
+&lt;span class="n"&gt;Category&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;misc&lt;/span&gt;
+&lt;span class="n"&gt;Tags&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;first&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="n"&gt;misc&lt;/span&gt;
+&lt;span class="n"&gt;Slug&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;My&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;first&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;post&lt;/span&gt;
+&lt;span class="n"&gt;Authors&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;Your&lt;/span&gt; &lt;span class="n"&gt;name&lt;/span&gt;
+&lt;span class="n"&gt;Summary&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;What&lt;/span&gt; &lt;span class="n"&gt;does&lt;/span&gt; &lt;span class="n"&gt;your&lt;/span&gt; &lt;span class="n"&gt;post&lt;/span&gt; &lt;span class="n"&gt;talk&lt;/span&gt; &lt;span class="n"&gt;about&lt;/span&gt;&lt;span class="o"&gt;?&lt;/span&gt; &lt;span class="n"&gt;Write&lt;/span&gt; &lt;span class="n"&gt;here&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;
+
+&lt;span class="n"&gt;This&lt;/span&gt; &lt;span class="k"&gt;is&lt;/span&gt; &lt;span class="n"&gt;the&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;first&lt;/span&gt; &lt;span class="n"&gt;post&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="n"&gt;from&lt;/span&gt; &lt;span class="n"&gt;my&lt;/span&gt; &lt;span class="n"&gt;Pelican&lt;/span&gt; &lt;span class="n"&gt;blog&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt; &lt;span class="o"&gt;**&lt;/span&gt;&lt;span class="n"&gt;YAY&lt;/span&gt;&lt;span class="o"&gt;!**&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Let's see how it looks?&lt;/p&gt;
+&lt;p&gt;Go to the terminal, generate the static files and start the server. To do that, use the following command:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;(venv)$ make html &amp;amp;&amp;amp; make serve&lt;/code&gt;
+While this command is running, you should be able to visit it on your favorite web browser by typing &lt;code&gt;localhost:8000&lt;/code&gt; on the address bar.&lt;/p&gt;
+&lt;h1&gt;A little touch up&lt;/h1&gt;
+&lt;p&gt;Now,  if you want to put an image in a post, a neat way is to first  create a 'images' directory inside your content directory, where your posts are. Now, you have to tell Pelican to use it. Find the &lt;code&gt;pelicanconf.py&lt;/code&gt;, the file where you configure the system, and add a variable that contains the directory with your images:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="na"&gt;.lang&lt;/span&gt;&lt;span class="err"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;python&amp;quot;&lt;/span&gt; &lt;span class="c"&gt;# DON&amp;#39;T COPY this line, it exists just for highlighting purposes&lt;/span&gt;
+
+&lt;span class="nf"&gt;STATIC_PATHS&lt;/span&gt; &lt;span class="err"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="no"&gt;images&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Save it. Go to your post and add the image this way:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="na"&gt;.lang&lt;/span&gt;&lt;span class="err"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;markdown&amp;quot;&lt;/span&gt; &lt;span class="c"&gt;# DON&amp;#39;T COPY this line, it exists just for highlighting purposes&lt;/span&gt;
+
+&lt;span class="err"&gt;![&lt;/span&gt;&lt;span class="nf"&gt;Write&lt;/span&gt; &lt;span class="no"&gt;here&lt;/span&gt; &lt;span class="no"&gt;a&lt;/span&gt; &lt;span class="no"&gt;good&lt;/span&gt; &lt;span class="no"&gt;description&lt;/span&gt; &lt;span class="no"&gt;for&lt;/span&gt; &lt;span class="no"&gt;people&lt;/span&gt; &lt;span class="no"&gt;who&lt;/span&gt; &lt;span class="no"&gt;can&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="no"&gt;t&lt;/span&gt; &lt;span class="no"&gt;see&lt;/span&gt; &lt;span class="no"&gt;the&lt;/span&gt; &lt;span class="no"&gt;image&lt;/span&gt;&lt;span class="p"&gt;](&lt;/span&gt;&lt;span class="err"&gt;{&lt;/span&gt;&lt;span class="no"&gt;filename&lt;/span&gt;&lt;span class="err"&gt;}/&lt;/span&gt;&lt;span class="no"&gt;images&lt;/span&gt;&lt;span class="err"&gt;/&lt;/span&gt;&lt;span class="no"&gt;IMAGE_NAME.jpg&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;You can interrupt the server at anytime pressing CTRL+C on the terminal. But you should start it again and check if the image is correct. Can you remember how?&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;(venv)$ make html &amp;amp;&amp;amp; make serve&lt;/code&gt;
+One last step before your coding is "done": you should make sure anyone can read your posts using ATOM or RSS feeds. Find the pelicanconf.py, the file where you configure the system, and edit the part about feed generation:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="na"&gt;.lang&lt;/span&gt;&lt;span class="err"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;python&amp;quot;&lt;/span&gt; &lt;span class="c"&gt;# DON&amp;#39;T COPY this line, it exists just for highlighting purposes&lt;/span&gt;
+
+&lt;span class="nf"&gt;FEED_ALL_ATOM&lt;/span&gt; &lt;span class="err"&gt;=&lt;/span&gt; &lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="no"&gt;feeds&lt;/span&gt;&lt;span class="err"&gt;/&lt;/span&gt;&lt;span class="no"&gt;all.atom.xml&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;
+&lt;span class="nf"&gt;FEED_ALL_RSS&lt;/span&gt; &lt;span class="err"&gt;=&lt;/span&gt; &lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="no"&gt;feeds&lt;/span&gt;&lt;span class="err"&gt;/&lt;/span&gt;&lt;span class="no"&gt;all.rss.xml&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;
+&lt;span class="nf"&gt;AUTHOR_FEED_RSS&lt;/span&gt; &lt;span class="err"&gt;=&lt;/span&gt; &lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="no"&gt;feeds&lt;/span&gt;&lt;span class="err"&gt;/&lt;/span&gt;&lt;span class="nv"&gt;%s.rss.xml&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;
+&lt;span class="nf"&gt;RSS_FEED_SUMMARY_ONLY&lt;/span&gt; &lt;span class="err"&gt;=&lt;/span&gt; &lt;span class="no"&gt;False&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Save everything so you can send the code to Github. You can do that by adding all files, committing it with a message ('first commit') and using git push. You will be asked for your Github login and password.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;$ git add -A &amp;amp;&amp;amp; git commit -a -m 'first commit' &amp;amp;&amp;amp; git push --all&lt;/code&gt;
+As I had said before you would be preserving the master branch for the output of the static files generated by Pelican. Now it's time  to generate the mater:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;$ make github&lt;/code&gt;
+You will be asked for your Github login and password again. And... voilà! Your new blog should be live on https://YOUR_USERNAME.github.io.&lt;/p&gt;</content><category term="Github"></category><category term="Pelican"></category><category term="gh-pages"></category></entry><entry><title>The Journey Begins</title><link href="/the-journey-begins.html" rel="alternate"></link><published>2018-06-18T00:00:00+05:30</published><updated>2018-06-18T00:00:00+05:30</updated><author><name>Ashwin</name></author><id>tag:None,2018-06-18:/the-journey-begins.html</id><summary type="html">&lt;p&gt;In which the author writes their first blog post.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Thanks for joining me!&lt;/p&gt;
 &lt;p&gt;I am Ashwin Kumar K, a Dual Degree BE – Int. MSc Physics at BITS Pilani KK Birla Goa campus (Batch of 2017).&lt;/p&gt;
 &lt;p&gt;This is the first post of this site where I intend to post some of my works related to the field of Science and Engineering.&lt;/p&gt;
 &lt;p&gt;I had always wanted to publish some of my projects and experiments on a public platform so that people working on similar projects can give and take ideas. It also serves as a way to showcase the experience that I have gained while doing such projects.&lt;/p&gt;
