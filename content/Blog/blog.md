@@ -36,7 +36,7 @@ Because of how Github Pages prefers to work, serving the files from the master b
 
 `$ git checkout -b source`
 
-# Pelican quickstart
+## Pelican quickstart
 Pelican provides an excellent quickstart command. Run it:
 
 `pelican-quickstart`
@@ -85,7 +85,7 @@ Go to the terminal, generate the static files and start the server. To do that, 
 `(venv)$ make html && make serve`
 While this command is running, you should be able to visit it on your favorite web browser by typing `localhost:8000` on the address bar.
 
-# A little touch up
+## A little touch up
 
 Now,  if you want to put an image in a post, a neat way is to first  create a 'images' directory inside your content directory, where your posts are. Now, you have to tell Pelican to use it. Find the `pelicanconf.py`, the file where you configure the system, and add a variable that contains the directory with your images:
 ~~~
@@ -120,3 +120,102 @@ As I had said before you would be preserving the master branch for the output of
 
 `$ make github`
 You will be asked for your Github login and password again. And... voilà! Your new blog should be live on https://YOUR_USERNAME.github.io.
+
+# What's next?
+
+You generated your first Pelican static website using Markdown and Jinja2. Additional modifications can be made to the Jinja2 templates and the content contained in the Markdown files.
+### Adding .gitignore
+
+.gitignore file contains a list of files and folder that git will ignore while syncing with the remote repository. Utilizing .gitignore wisely can reduce the amount of data you need to upload.
+
+make a file .gitignore in the web-sources file with the following contents
+
+```
+#Custom
+output
+pelicanconf_local.py
+
+#Python
+*.py[cod]
+
+# C extensions
+*.so
+
+# Packages
+*.egg
+*.egg-info
+dist
+build
+eggs
+parts
+bin
+var
+sdist
+develop-eggs
+.installed.cfg
+lib
+lib64
+
+# Installer logs
+pip-log.txt
+
+# Unit test / coverage reports
+.coverage
+.tox
+nosetests.xml
+
+# Translations
+*.mo
+
+# Mr Developer
+.mr.developer.cfg
+.project
+.pydevproject
+```
+### Automate GitHub upload process
+Create a file `up.sh` in the  `web-sources`
+```
+git add -A && git commit -a -m '$1' && git push --all
+```
+Now whenever you want to upload sync the repo just do `bash up.sh "Comment"` Note that the argument "Comment" should not contain spaces.
+
+### Download Themes
+
+Clone pelican-themes repository
+
+`git clone --recursive https://github.com/getpelican/pelican-themes themes`
+
+In `pelicanconf.py` add the following variables:
+```
+THEME = 'themes/bootstrap2'
+OUTPUT_PATH = 'output'
+PATH = 'content
+```
+
+###Custom Home page
+Add this variables to pelicanconf.py
+```
+# Custom Home page
+DIRECT_TEMPLATES = (('index', 'blog', 'tags', 'categories', 'archives'))
+PAGINATED_DIRECT_TEMPLATES = (('blog',))
+TEMPLATE_PAGES = {'home.html': 'index.html',}
+
+```
+Duplicated the index.html to blog.html in your template folder and add this lines:
+
+```
+{% set active_page = "blog" %}
+{% block title %}{{ SITENAME }} - Blog{% endblock %}
+```
+Create home.html or use page override feature to use a Markdown page as your home page.
+
+`nano home.html`
+```
+{% extends "base.html" %}
+{% block content %}
+<div class='page'>
+  <div class="page-header"><h1>Home</h1></div>
+  <div class="page-content">Content</div>
+</div>
+{% endblock %}
+```
