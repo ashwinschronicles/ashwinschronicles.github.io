@@ -17,3 +17,5 @@ I had always wanted to publish some of my projects and experiments on a public p
 I intend to post details of projects or experiments that I have performed mostly in the field of Science and Engineering as I complete them.
 
 Take a trip down my memory lane. I hope to see you around!
+
+[Here is my CV :]({filename}/pdfs/Academic_CV.pdf)

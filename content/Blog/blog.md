@@ -1,6 +1,7 @@
 Title:Make a Github Pages blog with Pelican
 Date: 2019-1-1
 Tags: Github,Pelican,gh-pages
+Category:Blog
 Slug: gh-pages-with-pelican
 Author: Ashwin
 Summary: Nothing Much

@@ -1,12 +1,13 @@
 Title:Quantum Hall Effect and related phenomenon
 Date: 2019-1-1
 Tags: qhe
+Category:Science
 Slug: qhe
 Author: Ashwin
-Summary: Nothing Much
+Summary: Notes on Quantum Hall Effect and related phenomenon
 
-Historical Aspects
-==================
+#Historical Aspects
+
 
 The quantum Hall effect is a remarkable phenomenon discovered
 experimentally in which the Hall conductivity of a two dimensional
@@ -16,7 +17,7 @@ which determine the number of electrons participating in the effect.
 The integer quantization of the Hall conductance was originally
 predicted by Ando, Matsumoto, and Uemura in 1975, on the basis of an
 approximate calculation which they themselves did not believe to be
-true![@firstfind]
+true![7]
 
 Several researchers subsequently observed the effect in experiments
 carried out on the inversion layer of MOSFETs. It was only in 1980 that
@@ -40,28 +41,24 @@ naive explanation. It is fortunate that von Klitzing switched on the
 magnetic field with a fixed current through the sample, rather than
 switched on the current at fixed field, as the coincidence of the
 unchanged digital voltmeter readings would then never have happened.
-[@RevModPhys.89.040502]
+[4]
+#Theoretical aspects [8,6]
 
-Theoretical aspects [@QHELecture; @Tong]
-========================================
 
-The Classical Hall Effect
--------------------------
+##The Classical Hall Effect
+
 
 The original, classical Hall effect was discovered in 1879 by Edwin
 Hall. It is a simple consequence of the motion of charged particles in a
 magnetic field.
 
 The setup for the same is as follows, consider a rectangular bar with
-thickness, t, Length L, and width W, as shown in Fig
-[\[fig:hall\]](#fig:hall){reference-type="ref" reference="fig:hall"}.
+thickness, t, Length L, and width W, as shown in Fig 1.
 Now a constant current along the $x$ axis is passed. When a magnetic
 field is applied along the $z$ axis ($B_{z}$), the charges in the
 current experience a force (the Lorentz force).
 
-![Schematic diagram of the Hall effect measurement setup
-[\[fig:hall\]]{#fig:hall
-label="fig:hall"}](img/Hall_Effect_Measurement_Setup_for_Electrons "fig:")[@wiki-halleffect_2019]
+![Fig 1 Schematic diagram of the Hall effect measurement setup](../images/Hall_Effect_Measurement_Setup_for_Electrons.png)
 
 In the absence $B_{z}$, the charges follow approximately straight paths.
 However, when $B_{z}$ is applied, their paths get curved, in this way
@@ -77,15 +74,13 @@ that, in the steady-state condition, charges are not moving in the
 y-axis direction. $\vec{{F}}=q(\vec{E}+\vec{vx\vec{B_{z}}})$ , Now
 $\vec{F}=0\implies0=E_{y}-v_{x}B_{z}$ also $E_y=-\frac{V_H}{w}$ thus on
 substituting these values we get : $$\begin{aligned}
-V_{H} & = & v_{x}B_{z}w\end{aligned}$$ [\[Vheqn\]]{#Vheqn label="Vheqn"}
-
+V_{H} & = & v_{x}B_{z}w\end{aligned}$$
 This shows that $V_{H}$ is proportional to $B_{z}$, this result is used
 in commercial hall sensors which are used to measure magnetic field.
 
 However one must note that the result drawn are for the the simple case
 with no impurities. Otherwise we will have to include the scattering
-effects. on doing so [\[Vheqn\]](#Vheqn){reference-type="ref"
-reference="Vheqn"} gets modified as $$\begin{aligned}
+effects. on doing so the previus equation gets modified as $$\begin{aligned}
 E_{y} & = & \frac{-eB\tau}{m}E_{x}\end{aligned}$$
 
 where $\tau$ is called the scattering time. Thus $R_{H}$ called the Hall
@@ -99,7 +94,7 @@ about the material
 
 2.  The sign determines the carriers are holes or electrons.
 
-### Experimental verification of hall effect.[@shar]
+### Experimental verification of hall effect.[5]
 
 An experiment was performed to measure the charge density of Germanium
 used as Hall Probe. The experiment was performed under the guidance of
@@ -116,36 +111,36 @@ data and graphs are as following:
 current was determined and plotted. Two readings corresponding to single
 current value specifies the values during increment and decrement of
 current viz. to minimize the error.
+![](../images/hall_data_table.png)
 
-![image](img/hall_data_table){width="12cm"}
-
-![Magnetic field vs Current ](img/hall_data_graph){width="10cm"}
+![Magnetic field vs Current ](../images/hall_data_graph.png)
 
 **Part-2:** The values of Hall Voltages are measured for different
 geometrical combinations.The data obtained is as follows -
 
-![image](img/hall_data_table2){width="12cm"}
+![image](../images/hall_data_table2.png)
 
 Corresponding graphs are plotted here.
 
-\subfloat{\centering{}\includegraphics[width=7cm]{img/hall_data_graph2}}
-\subfloat{\centering{}\includegraphics[width=7cm]{img/hall_data_graph3}}
-\subfloat{\centering{}\includegraphics[width=7cm]{img/hall_data_graph4}}
-\subfloat{\centering{}\includegraphics[width=7cm]{img/hall_data_graph5}}
+![](../images/hall_data_graph2.png)
+![](../images/hall_data_graph3.png)
+![](../images/hall_data_graph4.png)
+![](../images/hall_data_graph5.png)
+
 From all these graphs, the average value of slope is **0.03218
-$\unitfrac{mV}{Gauss}$** . We have sample current equal to 10mA and
+$\frac{mV}{Gauss}$** . We have sample current equal to 10mA and
 sample length as 5mm.
 
 1.  Hence the value of Hall Coefficient is **0.1609
-    $\unitfrac{m^{3}}{C}$.**
+    $\frac{m^{3}}{C}$.**
 
 2.  Positive sign implies that majority carriers are holes.
 
 3.  From this value, the carrier concentration can be calculated as
-    **$n=3.879\mathrm{{x}}10^{19}m^{-3}$**
+    **$n=3.879x10^{19}m^{-3}$**
 
-Quantum Hall Effects 
----------------------
+#Quantum Hall Effects 
+
 
 In the previous section we saw details about the Hall effect mainly that
 Hall Voltage is proportional to the magnetic field.
@@ -155,14 +150,10 @@ magnetic field. If the same setup is now taken down to low temperatures
 (typically around 1-5 K) and high magnetic field (greater than few
 Tesla) we see a non linear relation between Hall conductance and
 Magnetic field. We see some sort of quantization of Hall conductance.
-The observed resistivity is shown in
-Fig[\[fig:RhvsB\]](#fig:RhvsB){reference-type="ref"
-reference="fig:RhvsB"}.
+The observed resistivity is shown in next figure.
 
 ![Hall resistance and longitudinal resistivity data as a function of the
-magnetic field for a GaAs/AlGaAs hetero-structures at 1.5 K
-.[\[fig:RhvsB\]]{#fig:RhvsB label="fig:RhvsB"}
-](img/HallPvsB "fig:"){width="7cm"}[@QHELecture]
+magnetic field for a GaAs/AlGaAs hetero-structures at 1.5 K](../images/HallPvsB.png)[8]
 
 On observing the graph and a little bit of theoretical calculations one
 can deduce the following:
@@ -177,7 +168,6 @@ $\frac{\hbar}{e^{2}}$ with some plateau region in between.
 -   On these plateau, the resistivity takes the value
 
 $$\rho_{xy}=\frac{\hbar}{e^{2}}\,\frac{1}{\nu}\;\quad\nu\epsilon\mathbf{Z}$$
-[\[quantisedHallValue\]]{#quantisedHallValue label="quantisedHallValue"}
 
 The value of $\nu$ is measured to be an integer to an extraordinary
 accuracy --- something like one part in $10^{9}$ .
@@ -210,13 +200,12 @@ degree Kelvin, we need to have temperatures of less than one degree
 Kelvin in order to see the Quantum Hall effect at all. And the lower we
 can make the temperature, the better the data will look.
 
-### Classical Explanation[@nptel]
+### Classical Explanation[3]
 
 One can explain the above phenomenon classically as follows.
 
 Consider the standard 2DEG setup with four probes two along x axis and
-two along y axis similar to the arrangement in Fig
-[\[fig:hall\]](#fig:hall){reference-type="ref" reference="fig:hall"}.
+two along y axis similar to the arrangement in Fig1.
 Ohm's law can be written as $J=\sigma E$ .Where $\sigma$ is conductivity
 of the material. But in presence of Magnetic field B this $\sigma$
 becomes a 2 x 2 tensor matrix. Hence the corresponding resistivity
@@ -273,11 +262,9 @@ And hence no heat dissipation. Hence, $\sigma_{xx}=0$ means no current
 is flowing in longitudinal direction and $\rho_{xx}=0$ means there is no
 any dissipation of energy. We also see that
 $$\sigma_{xy}==\frac{-1}{\rho_{xy}}=\gamma\frac{e^{2}}{h}\qquad\gamma\rightarrow integer$$
-which is the same as Eqn
-[\[quantisedHallValue\]](#quantisedHallValue){reference-type="ref"
-reference="quantisedHallValue"}
+which is the same as the quantised hall value equation.
 
-### Landau Levels[@wiki-landau]
+### Landau Levels[2]
 
 In presence of magnetic field, electrons follow circular trajectories
 called cyclotron orbits.
@@ -314,25 +301,21 @@ calculation, lets choose the Landau gauge, which is
 $${\displaystyle \hat{\mathbf{A}}=\begin{pmatrix}0\\
 B_{z}x\\
 0
-\end{pmatrix}.}$$ where $x\ifmmode\begingroup\def\b@ld{bold}
-  \text{\ifx\math@version\b@ld\bfseries\fi\^}\endgroup\else\^\fi$ is the
-x component of the position operator. In this gauge, the Hamiltonian is
+\end{pmatrix}.}$$
 
 $${\displaystyle \hat{H}=\frac{\hat{p}_{x}^{2}}{2m}+\frac{1}{2m}\left(\hat{p}_{y}-\frac{qB\hat{x}}{c}\right)^{2}}$$
 The operator $\hat{p}_{y}$ commutes with this Hamiltonian, since the
 operator $\hat{y}$ is absent by the choice of gauge. Thus the operator
 $\hat{p}_{y}$ can be replaced by its eigenvalue
-$\ifmmode\begingroup\def\b@ld{bold}
-  \text{\ifx\math@version\b@ld\bfseries\fi\textcrh}\endgroup\else\textcrh\fi k_{y}$.
+$k_{y}$.
 
 The Hamiltonian can also be written more simply by noting that the
-cyclotron frequency is $\omega_{c}=\nicefrac{qB}{mc}$, giving
+cyclotron frequency is $\omega_{c}=\frac{qB}{mc}$, giving
 
 $$\hat{H}=\frac{\hat{p}_{x}^{2}}{2m}+\frac{1}{2}m\omega_{c}^{2}\left(\hat{x}-\frac{\hbar k_{y}}{m\omega_{c}}\right)^{2}$$
 . This is the Hamiltonian one would encounter for the quantum harmonic
 oscillator problem as well, except with the minimum of the potential
-shifted in coordinate space by $x_{0}=\ifmmode\begingroup\def\b@ld{bold}
-  \text{\ifx\math@version\b@ld\bfseries\fi\textcrh}\endgroup\else\textcrh\fi k_{y}/m\omega c$.
+shifted in coordinate space by $$x_{0}=\frac{k_{y}}{m\omega_c}$$.
 
 To find the energies, note that translating the harmonic oscillator
 potential does not affect the energies. The energies of this system are
@@ -346,14 +329,12 @@ With this argument we can conclude that the state of the electron can
 uniquely determined by two by two quantum numbers, n and $k_{y}$. Now
 let us focus on the degeneracy of Landau level.
 
-Degeneracy of Landau levels[@Tong][@wiki-landau] {#degeneracy-of-landau-levels .unnumbered .unnumbered}
-------------------------------------------------
+###Degeneracy of Landau levels[6,2] 
 
 Each set of wave functions with the same value of n is called a Landau
 level. Effects of Landau levels are only observed when the mean thermal
 energy is smaller than the energy level separation,
-$kT\ll\ifmmode\begingroup\def\b@ld{bold}
-  \text{\ifx\math@version\b@ld\bfseries\fi\textcrh}\endgroup\else\textcrh\fi\omega c$,
+$kT << \hbar omega_c$,
 meaning low temperatures and strong magnetic fields.
 
 Each Landau level is degenerate because of the second quantum number
@@ -377,7 +358,7 @@ Landau level is
 
 $${\displaystyle D=Z(2S+1){\frac{\Phi}{\Phi_{0}}}~}$$
 
-### Edge modes[@RevModPhys.89.040502]
+### Edge modes[4]
 
 So far we have discussed the ideal 2DEG scenario. The real samples,
 though comparatively clean, do not have the transnational invariance
@@ -398,7 +379,20 @@ orbits that precess around the boundary of the system in the opposite
 sense to that of the Landau orbits, when a particle in a Landau orbit
 intersects the boundary, and bounces off it.
 
-![Edge states in a sample](img/edge)
+![Edge states in a sample](../images/edge.png)
 
-\phantomsection
-\addcontentsline{toc}{section}{\refname}
+[1]"Wikipedia Entry on Hall Effect", En.Wikipedia.org (Retrieved 25 April 2019).
+
+[2]"Wikipedia Entry on Landau quantization", En.Wikipedia.org (Retrieved 26 April 2019).
+
+[3]"NPTEL :: Physics - NOC: Advanced Condensed matter physics" (Retrieved 27 April 2019).
+
+[4]F. Duncan M. Haldane, "Nobel Lecture: Topological quantum matter", Rev. Mod. Phys. 89 (2017), pp. 040502.
+
+[5]P Sharvari Kulkarni, "Report on Quantum Hall Effect" (April 18, 2019).
+
+[6]David Tong, Lectures on the Quantum Hall Effect ().
+
+[7]T. Ando; Y. Matsumoto; Y. Uemura, "Theory of Hall effect in a two-dimensional electron system", Journal of the Physical Society of Japan 39, 2 (), pp. 279--288.
+
+[8]Klaus von Klitzing, Benoît Douçot, Vincent Pasquier, Bertrand Duplantier, Vincent Rivasseau, The Quantum Hall Effect vol. 45, (Birkhäuser Basel, ).

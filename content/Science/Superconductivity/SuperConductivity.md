@@ -1,11 +1,12 @@
 Title: Superconductivity
 Date: 2019-06-06
-Category: Superconductivity,Science
+Category: Science
 Tags: Superconductivity, spin, cooper pairs
 Slug: Superconductivity
 Summary: Short note on superconductivity
 
 # Properties
+-------
 
 - Discoverd first in Hg at 4.2K in Liquid Helium
 - Super current induced in a ring follows $$ I(t)=I_0e^{(-t/\tau))}$$ and dosent change much for over 100,000 years for SC and goes to 1% of initial value in few nano secondsin a normal metal.

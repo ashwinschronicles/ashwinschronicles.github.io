@@ -1,5 +1,0 @@
-2.2.4 Particles on a Lattice in a Magnetic Field [#Tong][#RevModPhys.89.040502]
-
-2.2.5 A note on Quantum Hall Effect without Landau Levels[#PhysRevLett.61.2015]
-
-2.3 Berry Phase[#Tong] 
