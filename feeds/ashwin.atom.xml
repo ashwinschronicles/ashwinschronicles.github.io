@@ -203,7 +203,7 @@ thickness, t, Length L, and width W, as shown in Fig 1.
 Now a constant current along the &lt;span class="math"&gt;\(x\)&lt;/span&gt; axis is passed. When a magnetic
 field is applied along the &lt;span class="math"&gt;\(z\)&lt;/span&gt; axis (&lt;span class="math"&gt;\(B_{z}\)&lt;/span&gt;), the charges in the
 current experience a force (the Lorentz force).&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Fig 1 Schematic diagram of the Hall effect measurement setup" src="../images/Hall_Effect_Measurement_Setup_for_Electrons.png"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Fig 1 Schematic diagram of the Hall effect measurement setup" src="../../images/Hall_Effect_Measurement_Setup_for_Electrons.png"/&gt;&lt;/p&gt;
 &lt;p&gt;In the absence &lt;span class="math"&gt;\(B_{z}\)&lt;/span&gt;, the charges follow approximately straight paths.
 However, when &lt;span class="math"&gt;\(B_{z}\)&lt;/span&gt; is applied, their paths get curved, in this way
 moving charges aggregate on one face of the material. This leaves equal
@@ -256,16 +256,16 @@ data and graphs are as following:&lt;/p&gt;
 current was determined and plotted. Two readings corresponding to single
 current value specifies the values during increment and decrement of
 current viz. to minimize the error.
-&lt;img alt="" src="../images/hall_data_table.png"/&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Magnetic field vs Current " src="../images/hall_data_graph.png"/&gt;&lt;/p&gt;
+&lt;img alt="" src="../../images/hall_data_table.png"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Magnetic field vs Current " src="../../images/hall_data_graph.png"/&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Part-2:&lt;/strong&gt; The values of Hall Voltages are measured for different
 geometrical combinations.The data obtained is as follows -&lt;/p&gt;
-&lt;p&gt;&lt;img alt="image" src="../images/hall_data_table2.png"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="image" src="../../images/hall_data_table2.png"/&gt;&lt;/p&gt;
 &lt;p&gt;Corresponding graphs are plotted here.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="" src="../images/hall_data_graph2.png"/&gt;
-&lt;img alt="" src="../images/hall_data_graph3.png"/&gt;
-&lt;img alt="" src="../images/hall_data_graph4.png"/&gt;
-&lt;img alt="" src="../images/hall_data_graph5.png"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="../../images/hall_data_graph2.png"/&gt;
+&lt;img alt="" src="../../images/hall_data_graph3.png"/&gt;
+&lt;img alt="" src="../../images/hall_data_graph4.png"/&gt;
+&lt;img alt="" src="../../images/hall_data_graph5.png"/&gt;&lt;/p&gt;
 &lt;p&gt;From all these graphs, the average value of slope is &lt;strong&gt;0.03218
 &lt;span class="math"&gt;\(\frac{mV}{Gauss}\)&lt;/span&gt;&lt;/strong&gt; . We have sample current equal to 10mA and
 sample length as 5mm.&lt;/p&gt;
@@ -292,7 +292,7 @@ Tesla) we see a non linear relation between Hall conductance and
 Magnetic field. We see some sort of quantization of Hall conductance.
 The observed resistivity is shown in next figure.&lt;/p&gt;
 &lt;p&gt;&lt;img alt="Hall resistance and longitudinal resistivity data as a function of the
-magnetic field for a GaAs/AlGaAs hetero-structures at 1.5 K" src="../images/HallPvsB.png"/&gt;[8]&lt;/p&gt;
+magnetic field for a GaAs/AlGaAs hetero-structures at 1.5 K" src="../../images/HallPvsB.png"/&gt;[8]&lt;/p&gt;
 &lt;p&gt;On observing the graph and a little bit of theoretical calculations one
 can deduce the following:&lt;/p&gt;
 &lt;ul&gt;
@@ -503,15 +503,15 @@ are extended as opposed to localized. These edge states act as skipping
 orbits that precess around the boundary of the system in the opposite
 sense to that of the Landau orbits, when a particle in a Landau orbit
 intersects the boundary, and bounces off it.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Edge states in a sample" src="../images/edge.png"/&gt;&lt;/p&gt;
-&lt;p&gt;[1]"Wikipedia Entry on Hall Effect", En.Wikipedia.org (Retrieved 25 April 2019).&lt;/p&gt;
-&lt;p&gt;[2]"Wikipedia Entry on Landau quantization", En.Wikipedia.org (Retrieved 26 April 2019).&lt;/p&gt;
-&lt;p&gt;[3]"NPTEL :: Physics - NOC: Advanced Condensed matter physics" (Retrieved 27 April 2019).&lt;/p&gt;
-&lt;p&gt;[4]F. Duncan M. Haldane, "Nobel Lecture: Topological quantum matter", Rev. Mod. Phys. 89 (2017), pp. 040502.&lt;/p&gt;
-&lt;p&gt;[5]P Sharvari Kulkarni, "Report on Quantum Hall Effect" (April 18, 2019).&lt;/p&gt;
-&lt;p&gt;[6]David Tong, Lectures on the Quantum Hall Effect ().&lt;/p&gt;
-&lt;p&gt;[7]T. Ando; Y. Matsumoto; Y. Uemura, "Theory of Hall effect in a two-dimensional electron system", Journal of the Physical Society of Japan 39, 2 (), pp. 279--288.&lt;/p&gt;
-&lt;p&gt;[8]Klaus von Klitzing, Beno&amp;icirc;t Dou&amp;ccedil;ot, Vincent Pasquier, Bertrand Duplantier, Vincent Rivasseau, The Quantum Hall Effect vol. 45, (Birkh&amp;auml;user Basel, ).&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Edge states in a sample" src="../../images/edge.png"/&gt;&lt;/p&gt;
+&lt;p&gt;[1]:"Wikipedia Entry on Hall Effect", En.Wikipedia.org (Retrieved 25 April 2019).&lt;/p&gt;
+&lt;p&gt;[2]:"Wikipedia Entry on Landau quantization", En.Wikipedia.org (Retrieved 26 April 2019).&lt;/p&gt;
+&lt;p&gt;[3]:"NPTEL :: Physics - NOC: Advanced Condensed matter physics" (Retrieved 27 April 2019).&lt;/p&gt;
+&lt;p&gt;[4]:F. Duncan M. Haldane, "Nobel Lecture: Topological quantum matter", Rev. Mod. Phys. 89 (2017), pp. 040502.&lt;/p&gt;
+&lt;p&gt;[5]:P Sharvari Kulkarni, "Report on Quantum Hall Effect" (April 18, 2019).&lt;/p&gt;
+&lt;p&gt;[6]:David Tong, Lectures on the Quantum Hall Effect ().&lt;/p&gt;
+&lt;p&gt;[7]:T. Ando; Y. Matsumoto; Y. Uemura, "Theory of Hall effect in a two-dimensional electron system", Journal of the Physical Society of Japan 39, 2 (), pp. 279--288.&lt;/p&gt;
+&lt;p&gt;[8]:Klaus von Klitzing, Beno&amp;icirc;t Dou&amp;ccedil;ot, Vincent Pasquier, Bertrand Duplantier, Vincent Rivasseau, The Quantum Hall Effect vol. 45, (Birkh&amp;auml;user Basel, ).&lt;/p&gt;
 &lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
     var align = "center",
         indent = "0em",
