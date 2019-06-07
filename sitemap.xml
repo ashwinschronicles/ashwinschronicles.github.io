@@ -5,55 +5,55 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>/</loc>
-<lastmod>2019-06-07T14:05:02-00:00</lastmod>
+<lastmod>2019-06-07T23:39:59-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/archives.html</loc>
-<lastmod>2019-06-07T14:05:02-00:00</lastmod>
+<lastmod>2019-06-07T23:39:59-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tags.html</loc>
-<lastmod>2019-06-07T14:05:02-00:00</lastmod>
+<lastmod>2019-06-07T23:39:59-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/categories.html</loc>
-<lastmod>2019-06-07T14:05:02-00:00</lastmod>
+<lastmod>2019-06-07T23:39:59-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/pages/AboutMe.html</loc>
+<loc>/AboutMe/</loc>
 <lastmod>2018-06-18T00:00:00+05:30</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/Superconductivity.html</loc>
+<loc>/Superconductivity/</loc>
 <lastmod>2019-06-06T00:00:00+05:30</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/gh-pages-with-pelican.html</loc>
+<loc>/gh-pages-with-pelican/</loc>
 <lastmod>2019-01-01T00:00:00+05:30</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/qhe.html</loc>
+<loc>/qhe/</loc>
 <lastmod>2019-01-01T00:00:00+05:30</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
@@ -68,13 +68,6 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>/category/science.html</loc>
-<lastmod>2019-01-01T00:00:00+05:53</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
-<loc>/category/superconductivity.html</loc>
 <lastmod>2019-06-06T00:00:00+05:53</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
@@ -116,7 +109,21 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
+<loc>/tag/hall-effect.html</loc>
+<lastmod>2019-01-01T00:00:00+05:53</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
 <loc>/tag/qhe.html</loc>
+<lastmod>2019-01-01T00:00:00+05:53</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>/tag/landau-levels.html</loc>
 <lastmod>2019-01-01T00:00:00+05:53</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>

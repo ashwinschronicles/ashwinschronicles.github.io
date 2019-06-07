@@ -1,5 +1,105 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Ashwin's Chronicles - Science</title><link href="/" rel="alternate"></link><link href="/feeds/science.atom.xml" rel="self"></link><id>/</id><updated>2019-01-01T00:00:00+05:30</updated><entry><title>Quantum Hall Effect and related phenomenon</title><link href="/qhe.html" rel="alternate"></link><published>2019-01-01T00:00:00+05:30</published><updated>2019-01-01T00:00:00+05:30</updated><author><name>Ashwin</name></author><id>tag:None,2019-01-01:/qhe.html</id><summary type="html">&lt;p&gt;Nothing Much&lt;/p&gt;</summary><content type="html">&lt;h1&gt;Historical Aspects&lt;/h1&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Ashwin's Chronicles - Science</title><link href="/" rel="alternate"></link><link href="/feeds/science.atom.xml" rel="self"></link><id>/</id><updated>2019-06-06T00:00:00+05:30</updated><entry><title>Superconductivity</title><link href="/Superconductivity/" rel="alternate"></link><published>2019-06-06T00:00:00+05:30</published><updated>2019-06-06T00:00:00+05:30</updated><author><name>Ashwin Kumar K</name></author><id>tag:None,2019-06-06:/Superconductivity/</id><summary type="html">&lt;p&gt;Short note on superconductivity&lt;/p&gt;</summary><content type="html">&lt;h1 id="properties"&gt;Properties&lt;/h1&gt;
+&lt;hr/&gt;
+&lt;ul&gt;
+&lt;li&gt;Discoverd first in Hg at 4.2K in Liquid Helium&lt;/li&gt;
+&lt;li&gt;Super current induced in a ring follows &lt;div class="math"&gt;$$ I(t)=I_0e^{(-t/\tau))}$$&lt;/div&gt; and dosent change much for over 100,000 years for SC and goes to 1% of initial value in few nano secondsin a normal metal.&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Magnetic field destroy super conductivity (so does current in the SC)
+&lt;img alt="" src="..\images\SC_mag.png"/&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Magnetic Impurities lower &lt;span class="math"&gt;\(T_C\)&lt;/span&gt; (non mag has no effect)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Fe Co Ni nonSC&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;CU Ag Au nonSC&lt;/li&gt;
+&lt;li&gt;&lt;img alt="" src="..\images\sup_ele.png"/&gt;&lt;/li&gt;
+&lt;li&gt;Si becomes SC at high Pressure&lt;/li&gt;
+&lt;li&gt;Conventional and unconventional SC&lt;/li&gt;
+&lt;li&gt;most unconventional SC has C,O atoms in  pervoskite structure.&lt;/li&gt;
+&lt;li&gt;&lt;img alt="" src="..\images\SC_graph.png"/&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Meissner effect&lt;/em&gt; is perfect expulsion of Magnetic field out of SC (except penetration depth) due to screening current&lt;img alt="" src="..\images\misener.png"/&gt;&lt;/li&gt;
+&lt;li&gt;SC act as perfect diamagnet &lt;span class="math"&gt;\(\chi=-1\)&lt;/span&gt; and is a defining feature of SC and not just &lt;span class="math"&gt;\(\rho\)&lt;/span&gt;=0&lt;/li&gt;
+&lt;li&gt;Heat capacity of a SC is dicontinuous at &lt;span class="math"&gt;\(T_C\)&lt;/span&gt; and crashes to 0 after  &lt;span class="math"&gt;\(T_C\)&lt;/span&gt;
+&lt;img alt="" src="..\images\Heat_capacity.png"/&gt;&lt;/li&gt;
+&lt;li&gt;the function is given by &lt;span class="math"&gt;\(C \alpha e^{a/T}\)&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="applications"&gt;Applications&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Super conducting single photon detector telescope&lt;img alt="" src="..\images\photondetector.png"/&gt;&lt;/li&gt;
+&lt;li&gt;Quantum computer with photons.&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Levitating high speed trains(~600 km/h).
+-MRI,NMR,SQUID
+-High efficiency generators&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;em&gt;Fun fact:&lt;/em&gt; Essen, Germany has the world's longest superconducting power cable in production at 1 kilometer. It is a 10 kV liquid nitrogen cooled cable. The cable is smaller than an equivalent 110 kV regular cable and the lower voltage has the additional benefit of smaller transformers.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width &lt; 768) ? "left" : align;
+        indent = (screen.width &lt; 768) ? "0em" : indent;
+        linebreak = (screen.width &lt; 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_CHTML';
+
+    var configscript = document.createElement('script');
+    configscript.type = 'text/x-mathjax-config';
+    configscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js','color.js','mhchem.js'], equationNumbers: { autoNumber: 'none' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        fonts: [['STIX', 'TeX']]," +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'red ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('SansSerif' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_SansSerif');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_SansSerif-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_SansSerif-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_SansSerif-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_SansSerif');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_SansSerif-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_SansSerif-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_SansSerif-italic');" +
+            "});" +
+        "}";
+
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+&lt;/script&gt;</content><category term="Superconductivity"></category><category term="spin"></category><category term="cooper pairs"></category></entry><entry><title>Quantum Hall Effect and related phenomenon</title><link href="/qhe/" rel="alternate"></link><published>2019-01-01T00:00:00+05:30</published><updated>2019-01-01T00:00:00+05:30</updated><author><name>Ashwin</name></author><id>tag:None,2019-01-01:/qhe/</id><summary type="html">&lt;p&gt;Notes on Quantum Hall Effect and related phenomenon&lt;/p&gt;</summary><content type="html">&lt;h1 id="historical aspects"&gt;Historical Aspects&lt;/h1&gt;
 &lt;p&gt;The quantum Hall effect is a remarkable phenomenon discovered
 experimentally in which the Hall conductivity of a two dimensional
 system of electrons is found to have plateaus as a function of variables
@@ -7,7 +107,7 @@ which determine the number of electrons participating in the effect.&lt;/p&gt;
 &lt;p&gt;The integer quantization of the Hall conductance was originally
 predicted by Ando, Matsumoto, and Uemura in 1975, on the basis of an
 approximate calculation which they themselves did not believe to be
-true![@firstfind]&lt;/p&gt;
+true![7]&lt;/p&gt;
 &lt;p&gt;Several researchers subsequently observed the effect in experiments
 carried out on the inversion layer of MOSFETs. It was only in 1980 that
 Klaus von Klitzing, working at the high magnetic field laboratory in
@@ -29,21 +129,18 @@ naive explanation. It is fortunate that von Klitzing switched on the
 magnetic field with a fixed current through the sample, rather than
 switched on the current at fixed field, as the coincidence of the
 unchanged digital voltmeter readings would then never have happened.
-[@RevModPhys.89.040502]&lt;/p&gt;
-&lt;h1&gt;Theoretical aspects [@QHELecture; @Tong]&lt;/h1&gt;
-&lt;h2&gt;The Classical Hall Effect&lt;/h2&gt;
+[4]&lt;/p&gt;
+&lt;h1 id="theoretical aspects [8,6]"&gt;Theoretical aspects [8,6]&lt;/h1&gt;
+&lt;h2 id="the classical hall effect"&gt;The Classical Hall Effect&lt;/h2&gt;
 &lt;p&gt;The original, classical Hall effect was discovered in 1879 by Edwin
 Hall. It is a simple consequence of the motion of charged particles in a
 magnetic field.&lt;/p&gt;
 &lt;p&gt;The setup for the same is as follows, consider a rectangular bar with
-thickness, t, Length L, and width W, as shown in Fig
-&lt;a href="#fig:hall" reference="fig:hall" reference-type="ref"&gt;[fig:hall]&lt;/a&gt;.
+thickness, t, Length L, and width W, as shown in Fig 1.
 Now a constant current along the &lt;span class="math"&gt;\(x\)&lt;/span&gt; axis is passed. When a magnetic
 field is applied along the &lt;span class="math"&gt;\(z\)&lt;/span&gt; axis (&lt;span class="math"&gt;\(B_{z}\)&lt;/span&gt;), the charges in the
 current experience a force (the Lorentz force).&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Schematic diagram of the Hall effect measurement setup
-[[fig:hall]]{#fig:hall
-label=&amp;quot;fig:hall&amp;quot;}" src="img/Hall_Effect_Measurement_Setup_for_Electrons" title="fig:"&gt;[@wiki-halleffect_2019]&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Fig 1 Schematic diagram of the Hall effect measurement setup" src="../images/Hall_Effect_Measurement_Setup_for_Electrons.png"/&gt;&lt;/p&gt;
 &lt;p&gt;In the absence &lt;span class="math"&gt;\(B_{z}\)&lt;/span&gt;, the charges follow approximately straight paths.
 However, when &lt;span class="math"&gt;\(B_{z}\)&lt;/span&gt; is applied, their paths get curved, in this way
 moving charges aggregate on one face of the material. This leaves equal
@@ -59,13 +156,12 @@ y-axis direction. &lt;span class="math"&gt;\(\vec{{F}}=q(\vec{E}+\vec{vx\vec{B_{
 substituting these values we get : &lt;/p&gt;
 &lt;div class="math"&gt;$$\begin{aligned}
 V_{H} &amp;amp; = &amp;amp; v_{x}B_{z}w\end{aligned}$$&lt;/div&gt;
-&lt;p&gt; [[Vheqn]]{#Vheqn label="Vheqn"}&lt;/p&gt;
-&lt;p&gt;This shows that &lt;span class="math"&gt;\(V_{H}\)&lt;/span&gt; is proportional to &lt;span class="math"&gt;\(B_{z}\)&lt;/span&gt;, this result is used
+&lt;p&gt;
+This shows that &lt;span class="math"&gt;\(V_{H}\)&lt;/span&gt; is proportional to &lt;span class="math"&gt;\(B_{z}\)&lt;/span&gt;, this result is used
 in commercial hall sensors which are used to measure magnetic field.&lt;/p&gt;
 &lt;p&gt;However one must note that the result drawn are for the the simple case
 with no impurities. Otherwise we will have to include the scattering
-effects. on doing so &lt;a href="#Vheqn"&gt;[Vheqn]&lt;/a&gt;{reference-type="ref"
-reference="Vheqn"} gets modified as &lt;/p&gt;
+effects. on doing so the previus equation gets modified as &lt;/p&gt;
 &lt;div class="math"&gt;$$\begin{aligned}
 E_{y} &amp;amp; = &amp;amp; \frac{-eB\tau}{m}E_{x}\end{aligned}$$&lt;/div&gt;
 &lt;p&gt;where &lt;span class="math"&gt;\(\tau\)&lt;/span&gt; is called the scattering time. Thus &lt;span class="math"&gt;\(R_{H}\)&lt;/span&gt; called the Hall
@@ -83,7 +179,7 @@ about the material&lt;/p&gt;
 &lt;p&gt;The sign determines the carriers are holes or electrons.&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;h3&gt;Experimental verification of hall effect.[@shar]&lt;/h3&gt;
+&lt;h3 id="experimental verification of hall effect.[5]"&gt;Experimental verification of hall effect.[5]&lt;/h3&gt;
 &lt;p&gt;An experiment was performed to measure the charge density of Germanium
 used as Hall Probe. The experiment was performed under the guidance of
 Sharvari Kulkarni P.&lt;/p&gt;
@@ -96,34 +192,34 @@ data and graphs are as following:&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Part-1:&lt;/strong&gt; The value of magnetic field corresponding to particular
 current was determined and plotted. Two readings corresponding to single
 current value specifies the values during increment and decrement of
-current viz. to minimize the error.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="image" src="img/hall_data_table" width="12cm"&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Magnetic field vs Current " src="img/hall_data_graph" width="10cm"&gt;&lt;/p&gt;
+current viz. to minimize the error.
+&lt;img alt="" src="../images/hall_data_table.png"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Magnetic field vs Current " src="../images/hall_data_graph.png"/&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Part-2:&lt;/strong&gt; The values of Hall Voltages are measured for different
 geometrical combinations.The data obtained is as follows -&lt;/p&gt;
-&lt;p&gt;&lt;img alt="image" src="img/hall_data_table2" width="12cm"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="image" src="../images/hall_data_table2.png"/&gt;&lt;/p&gt;
 &lt;p&gt;Corresponding graphs are plotted here.&lt;/p&gt;
-&lt;p&gt;\subfloat{\centering{}\includegraphics[width=7cm]{img/hall_data_graph2}}
-\subfloat{\centering{}\includegraphics[width=7cm]{img/hall_data_graph3}}
-\subfloat{\centering{}\includegraphics[width=7cm]{img/hall_data_graph4}}
-\subfloat{\centering{}\includegraphics[width=7cm]{img/hall_data_graph5}}
-From all these graphs, the average value of slope is &lt;strong&gt;0.03218
-&lt;span class="math"&gt;\(\unitfrac{mV}{Gauss}\)&lt;/span&gt;&lt;/strong&gt; . We have sample current equal to 10mA and
+&lt;p&gt;&lt;img alt="" src="../images/hall_data_graph2.png"/&gt;
+&lt;img alt="" src="../images/hall_data_graph3.png"/&gt;
+&lt;img alt="" src="../images/hall_data_graph4.png"/&gt;
+&lt;img alt="" src="../images/hall_data_graph5.png"/&gt;&lt;/p&gt;
+&lt;p&gt;From all these graphs, the average value of slope is &lt;strong&gt;0.03218
+&lt;span class="math"&gt;\(\frac{mV}{Gauss}\)&lt;/span&gt;&lt;/strong&gt; . We have sample current equal to 10mA and
 sample length as 5mm.&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;
 &lt;p&gt;Hence the value of Hall Coefficient is &lt;strong&gt;0.1609
-    &lt;span class="math"&gt;\(\unitfrac{m^{3}}{C}\)&lt;/span&gt;.&lt;/strong&gt;&lt;/p&gt;
+    &lt;span class="math"&gt;\(\frac{m^{3}}{C}\)&lt;/span&gt;.&lt;/strong&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Positive sign implies that majority carriers are holes.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;From this value, the carrier concentration can be calculated as
-    &lt;strong&gt;&lt;span class="math"&gt;\(n=3.879\mathrm{{x}}10^{19}m^{-3}\)&lt;/span&gt;&lt;/strong&gt;&lt;/p&gt;
+    &lt;strong&gt;&lt;span class="math"&gt;\(n=3.879x10^{19}m^{-3}\)&lt;/span&gt;&lt;/strong&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;h2&gt;Quantum Hall Effects&lt;/h2&gt;
+&lt;h1 id="quantum hall effects_2"&gt;Quantum Hall Effects&lt;/h1&gt;
 &lt;p&gt;In the previous section we saw details about the Hall effect mainly that
 Hall Voltage is proportional to the magnetic field.&lt;/p&gt;
 &lt;p&gt;Hall effect is easily observed in room temperature and relatively low
@@ -131,13 +227,9 @@ magnetic field. If the same setup is now taken down to low temperatures
 (typically around 1-5 K) and high magnetic field (greater than few
 Tesla) we see a non linear relation between Hall conductance and
 Magnetic field. We see some sort of quantization of Hall conductance.
-The observed resistivity is shown in
-Fig&lt;a href="#fig:RhvsB"&gt;[fig:RhvsB]&lt;/a&gt;{reference-type="ref"
-reference="fig:RhvsB"}.&lt;/p&gt;
+The observed resistivity is shown in next figure.&lt;/p&gt;
 &lt;p&gt;&lt;img alt="Hall resistance and longitudinal resistivity data as a function of the
-magnetic field for a GaAs/AlGaAs hetero-structures at 1.5 K
-.[[fig:RhvsB]]{#fig:RhvsB label=&amp;quot;fig:RhvsB&amp;quot;}
-" src="img/HallPvsB" title="fig:" width="7cm"&gt;[@QHELecture]&lt;/p&gt;
+magnetic field for a GaAs/AlGaAs hetero-structures at 1.5 K" src="../images/HallPvsB.png"/&gt;[8]&lt;/p&gt;
 &lt;p&gt;On observing the graph and a little bit of theoretical calculations one
 can deduce the following:&lt;/p&gt;
 &lt;ul&gt;
@@ -151,8 +243,6 @@ certain limit it changes step-like with integer multiples of
 &lt;li&gt;On these plateau, the resistivity takes the value&lt;/li&gt;
 &lt;/ul&gt;
 &lt;div class="math"&gt;$$\rho_{xy}=\frac{\hbar}{e^{2}}\,\frac{1}{\nu}\;\quad\nu\epsilon\mathbf{Z}$$&lt;/div&gt;
-&lt;p&gt;
-[[quantisedHallValue]]{#quantisedHallValue label="quantisedHallValue"}&lt;/p&gt;
 &lt;p&gt;The value of &lt;span class="math"&gt;\(\nu\)&lt;/span&gt; is measured to be an integer to an extraordinary
 accuracy --- something like one part in &lt;span class="math"&gt;\(10^{9}\)&lt;/span&gt; .&lt;/p&gt;
 &lt;p&gt;The quantity&lt;span class="math"&gt;\(\frac{\hbar}{e^{2}}\)&lt;/span&gt; is called the quantum of resistivity
@@ -184,11 +274,10 @@ laboratory are only strong enough to give Zeeman energies of order one
 degree Kelvin, we need to have temperatures of less than one degree
 Kelvin in order to see the Quantum Hall effect at all. And the lower we
 can make the temperature, the better the data will look.&lt;/p&gt;
-&lt;h3&gt;Classical Explanation[@nptel]&lt;/h3&gt;
+&lt;h3 id="classical explanation[3]"&gt;Classical Explanation[3]&lt;/h3&gt;
 &lt;p&gt;One can explain the above phenomenon classically as follows.&lt;/p&gt;
 &lt;p&gt;Consider the standard 2DEG setup with four probes two along x axis and
-two along y axis similar to the arrangement in Fig
-&lt;a href="#fig:hall" reference="fig:hall" reference-type="ref"&gt;[fig:hall]&lt;/a&gt;.
+two along y axis similar to the arrangement in Fig1.
 Ohm's law can be written as &lt;span class="math"&gt;\(J=\sigma E\)&lt;/span&gt; .Where &lt;span class="math"&gt;\(\sigma\)&lt;/span&gt; is conductivity
 of the material. But in presence of Magnetic field B this &lt;span class="math"&gt;\(\sigma\)&lt;/span&gt;
 becomes a 2 x 2 tensor matrix. Hence the corresponding resistivity
@@ -246,10 +335,8 @@ any dissipation of energy. We also see that
 &lt;/p&gt;
 &lt;div class="math"&gt;$$\sigma_{xy}==\frac{-1}{\rho_{xy}}=\gamma\frac{e^{2}}{h}\qquad\gamma\rightarrow integer$$&lt;/div&gt;
 &lt;p&gt;
-which is the same as Eqn
-&lt;a href="#quantisedHallValue"&gt;[quantisedHallValue]&lt;/a&gt;{reference-type="ref"
-reference="quantisedHallValue"}&lt;/p&gt;
-&lt;h3&gt;Landau Levels[@wiki-landau]&lt;/h3&gt;
+which is the same as the quantised hall value equation.&lt;/p&gt;
+&lt;h3 id="landau levels[2]"&gt;Landau Levels[2]&lt;/h3&gt;
 &lt;p&gt;In presence of magnetic field, electrons follow circular trajectories
 called cyclotron orbits.&lt;/p&gt;
 &lt;ul&gt;
@@ -287,24 +374,21 @@ calculation, lets choose the Landau gauge, which is&lt;/p&gt;
 B_{z}x\\
 0
 \end{pmatrix}.}$$&lt;/div&gt;
-&lt;p&gt; where &lt;span class="math"&gt;\(x\ifmmode\begingroup\def\b@ld{bold}
-  \text{\ifx\math@version\b@ld\bfseries\fi\^}\endgroup\else\^\fi\)&lt;/span&gt; is the
-x component of the position operator. In this gauge, the Hamiltonian is&lt;/p&gt;
 &lt;div class="math"&gt;$${\displaystyle \hat{H}=\frac{\hat{p}_{x}^{2}}{2m}+\frac{1}{2m}\left(\hat{p}_{y}-\frac{qB\hat{x}}{c}\right)^{2}}$$&lt;/div&gt;
 &lt;p&gt;
 The operator &lt;span class="math"&gt;\(\hat{p}_{y}\)&lt;/span&gt; commutes with this Hamiltonian, since the
 operator &lt;span class="math"&gt;\(\hat{y}\)&lt;/span&gt; is absent by the choice of gauge. Thus the operator
 &lt;span class="math"&gt;\(\hat{p}_{y}\)&lt;/span&gt; can be replaced by its eigenvalue
-&lt;span class="math"&gt;\(\ifmmode\begingroup\def\b@ld{bold}
-  \text{\ifx\math@version\b@ld\bfseries\fi\textcrh}\endgroup\else\textcrh\fi k_{y}\)&lt;/span&gt;.&lt;/p&gt;
+&lt;span class="math"&gt;\(k_{y}\)&lt;/span&gt;.&lt;/p&gt;
 &lt;p&gt;The Hamiltonian can also be written more simply by noting that the
-cyclotron frequency is &lt;span class="math"&gt;\(\omega_{c}=\nicefrac{qB}{mc}\)&lt;/span&gt;, giving&lt;/p&gt;
+cyclotron frequency is &lt;span class="math"&gt;\(\omega_{c}=\frac{qB}{mc}\)&lt;/span&gt;, giving&lt;/p&gt;
 &lt;div class="math"&gt;$$\hat{H}=\frac{\hat{p}_{x}^{2}}{2m}+\frac{1}{2}m\omega_{c}^{2}\left(\hat{x}-\frac{\hbar k_{y}}{m\omega_{c}}\right)^{2}$$&lt;/div&gt;
 &lt;p&gt;
 . This is the Hamiltonian one would encounter for the quantum harmonic
 oscillator problem as well, except with the minimum of the potential
-shifted in coordinate space by &lt;span class="math"&gt;\(x_{0}=\ifmmode\begingroup\def\b@ld{bold}
-  \text{\ifx\math@version\b@ld\bfseries\fi\textcrh}\endgroup\else\textcrh\fi k_{y}/m\omega c\)&lt;/span&gt;.&lt;/p&gt;
+shifted in coordinate space by &lt;/p&gt;
+&lt;div class="math"&gt;$$x_{0}=\frac{k_{y}}{m\omega_c}$$&lt;/div&gt;
+&lt;p&gt;.&lt;/p&gt;
 &lt;p&gt;To find the energies, note that translating the harmonic oscillator
 potential does not affect the energies. The energies of this system are
 thus identical to those of the standard quantum harmonic oscillator,&lt;/p&gt;
@@ -315,12 +399,11 @@ degeneracy.&lt;/p&gt;
 &lt;p&gt;With this argument we can conclude that the state of the electron can
 uniquely determined by two by two quantum numbers, n and &lt;span class="math"&gt;\(k_{y}\)&lt;/span&gt;. Now
 let us focus on the degeneracy of Landau level.&lt;/p&gt;
-&lt;h2 class="unnumbered unnumbered" id="degeneracy-of-landau-levels"&gt;Degeneracy of Landau levels[@Tong][@wiki-landau]&lt;/h2&gt;
+&lt;h3 id="degeneracy of landau levels[6,2]"&gt;Degeneracy of Landau levels[6,2]&lt;/h3&gt;
 &lt;p&gt;Each set of wave functions with the same value of n is called a Landau
 level. Effects of Landau levels are only observed when the mean thermal
 energy is smaller than the energy level separation,
-&lt;span class="math"&gt;\(kT\ll\ifmmode\begingroup\def\b@ld{bold}
-  \text{\ifx\math@version\b@ld\bfseries\fi\textcrh}\endgroup\else\textcrh\fi\omega c\)&lt;/span&gt;,
+&lt;span class="math"&gt;\(kT &amp;lt;&amp;lt; \hbar omega_c\)&lt;/span&gt;,
 meaning low temperatures and strong magnetic fields.&lt;/p&gt;
 &lt;p&gt;Each Landau level is degenerate because of the second quantum number
 &lt;span class="math"&gt;\(k_{y}\)&lt;/span&gt;, which can take the values
@@ -339,7 +422,7 @@ is the flux through the system (with area &lt;span class="math"&gt;\(A=L_{x}L_{y
 &lt;p&gt;Thus, for particles with spin S, the maximum number D of particles per
 Landau level is&lt;/p&gt;
 &lt;div class="math"&gt;$${\displaystyle D=Z(2S+1){\frac{\Phi}{\Phi_{0}}}~}$$&lt;/div&gt;
-&lt;h3&gt;Edge modes[@RevModPhys.89.040502]&lt;/h3&gt;
+&lt;h3 id="edge modes[4]"&gt;Edge modes[4]&lt;/h3&gt;
 &lt;p&gt;So far we have discussed the ideal 2DEG scenario. The real samples,
 though comparatively clean, do not have the transnational invariance
 that makes each state in a given Landau level have exactly the same
@@ -357,9 +440,15 @@ are extended as opposed to localized. These edge states act as skipping
 orbits that precess around the boundary of the system in the opposite
 sense to that of the Landau orbits, when a particle in a Landau orbit
 intersects the boundary, and bounces off it.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Edge states in a sample" src="img/edge"&gt;&lt;/p&gt;
-&lt;p&gt;\phantomsection
-\addcontentsline{toc}{section}{\refname}&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Edge states in a sample" src="../images/edge.png"/&gt;&lt;/p&gt;
+&lt;p&gt;[1]"Wikipedia Entry on Hall Effect", En.Wikipedia.org (Retrieved 25 April 2019).&lt;/p&gt;
+&lt;p&gt;[2]"Wikipedia Entry on Landau quantization", En.Wikipedia.org (Retrieved 26 April 2019).&lt;/p&gt;
+&lt;p&gt;[3]"NPTEL :: Physics - NOC: Advanced Condensed matter physics" (Retrieved 27 April 2019).&lt;/p&gt;
+&lt;p&gt;[4]F. Duncan M. Haldane, "Nobel Lecture: Topological quantum matter", Rev. Mod. Phys. 89 (2017), pp. 040502.&lt;/p&gt;
+&lt;p&gt;[5]P Sharvari Kulkarni, "Report on Quantum Hall Effect" (April 18, 2019).&lt;/p&gt;
+&lt;p&gt;[6]David Tong, Lectures on the Quantum Hall Effect ().&lt;/p&gt;
+&lt;p&gt;[7]T. Ando; Y. Matsumoto; Y. Uemura, "Theory of Hall effect in a two-dimensional electron system", Journal of the Physical Society of Japan 39, 2 (), pp. 279--288.&lt;/p&gt;
+&lt;p&gt;[8]Klaus von Klitzing, Beno&amp;icirc;t Dou&amp;ccedil;ot, Vincent Pasquier, Bertrand Duplantier, Vincent Rivasseau, The Quantum Hall Effect vol. 45, (Birkh&amp;auml;user Basel, ).&lt;/p&gt;
 &lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
     var align = "center",
         indent = "0em",
@@ -381,7 +470,7 @@ intersects the boundary, and bounces off it.&lt;/p&gt;
     configscript[(window.opera ? "innerHTML" : "text")] =
         "MathJax.Hub.Config({" +
         "    config: ['MMLorHTML.js']," +
-        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'none' } }," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js','color.js','mhchem.js'], equationNumbers: { autoNumber: 'none' } }," +
         "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
         "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
         "    displayAlign: '"+ align +"'," +
@@ -396,28 +485,28 @@ intersects the boundary, and bounces off it.&lt;/p&gt;
         "    }, " +
         "    'HTML-CSS': { " +
         "        fonts: [['STIX', 'TeX']]," +
-        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'red ! important'} }," +
         "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
         "    }, " +
         "}); " +
-        "if ('default' !== 'default') {" +
+        "if ('SansSerif' !== 'default') {" +
             "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
                 "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
-                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
-                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
-                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
-                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['normal'].fonts.unshift('MathJax_SansSerif');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_SansSerif-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_SansSerif-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_SansSerif-italic');" +
             "});" +
             "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
                 "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
-                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
-                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
-                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
-                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['normal'].fonts.unshift('MathJax_SansSerif');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_SansSerif-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_SansSerif-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_SansSerif-italic');" +
             "});" +
         "}";
 
     (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
-&lt;/script&gt;</content><category term="qhe"></category></entry></feed>
+&lt;/script&gt;</content><category term="qhe"></category><category term="hall effect"></category><category term="landau levels"></category></entry></feed>
