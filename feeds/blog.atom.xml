@@ -1,60 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Ashwin's Chronicles - Blog</title><link href="/" rel="alternate"></link><link href="/feeds/blog.atom.xml" rel="self"></link><id>/</id><updated>2019-03-18T00:00:00+05:30</updated><entry><title>Site under reconstruction</title><link href="/site_under_reconstruction.html" rel="alternate"></link><published>2019-03-18T00:00:00+05:30</published><updated>2019-03-18T00:00:00+05:30</updated><author><name>Ashwin</name></author><id>tag:None,2019-03-18:/site_under_reconstruction.html</id><summary type="html">&lt;p&gt;Site under reconstruction.&lt;/p&gt;</summary><content type="html">&lt;p&gt;The site is under reconstruction all old articles have been removed and will be restored soon.&lt;/p&gt;
-&lt;p&gt;Sorry for the inconvenience caused.&lt;/p&gt;</content><category term="Random"></category></entry><entry><title>Make a Github Pages blog with Pelican</title><link href="/gh-pages-with-pelican.html" rel="alternate"></link><published>2019-01-01T00:00:00+05:30</published><updated>2019-01-01T00:00:00+05:30</updated><author><name>Ashwin</name></author><id>tag:None,2019-01-01:/gh-pages-with-pelican.html</id><summary type="html">&lt;p&gt;Nothing Much&lt;/p&gt;</summary><content type="html">&lt;p&gt;Github, worlds leading  hosting service for Git repositories  offers a simple, elegant website solution. It allows its users to  store page content in a git repository along with their code.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Ashwin's Chronicles - Blog</title><link href="/" rel="alternate"></link><link href="/feeds/blog.atom.xml" rel="self"></link><id>/</id><updated>2019-01-01T00:00:00+05:30</updated><entry><title>Make a Github Pages blog with Pelican</title><link href="/gh-pages-with-pelican.html" rel="alternate"></link><published>2019-01-01T00:00:00+05:30</published><updated>2019-01-01T00:00:00+05:30</updated><author><name>Ashwin</name></author><id>tag:None,2019-01-01:/gh-pages-with-pelican.html</id><summary type="html">&lt;p&gt;Nothing Much&lt;/p&gt;</summary><content type="html">&lt;p&gt;Github, worlds leading  hosting service for Git repositories  offers a simple, elegant website solution. It allows its users to  store page content in a git repository along with their code.&lt;/p&gt;
 &lt;p&gt;In this blog post ill walk you through the process of setting up a website by combining Pelican with Github Pages. Pelican is a simple python utility that lets you create beautiful weblogs using just text files. In other words its a static-site generator. I have chosen Pelican over other static-site generators as Pelican unlike its counter parts is based on python hence initial  setup takes literally no time.&lt;/p&gt;
 &lt;h2&gt;Setting up a github.io page&lt;/h2&gt;
 &lt;p&gt;To create your Github user page, log in to Github and create a  new repositorie username.github.io, as explained on Github pages. (Use your Github username for these repositories.) The  username.github.io repository will contain the output HTML files Pelican generates. To add the output directory as a submodule, initialize it with a README file.&lt;/p&gt;
 &lt;h2&gt;Installing Pelican&lt;/h2&gt;
 &lt;p&gt;We will first  create a virtual environment for Pelican via virtualenv before installing Pelican.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;virtualenv website
-&lt;span class="nb"&gt;cd&lt;/span&gt; website
-&lt;span class="nb"&gt;source&lt;/span&gt; bin/activate
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;virtualenv&lt;/span&gt; &lt;span class="n"&gt;website&lt;/span&gt;
+&lt;span class="n"&gt;cd&lt;/span&gt; &lt;span class="n"&gt;website&lt;/span&gt;
+&lt;span class="k"&gt;source&lt;/span&gt; &lt;span class="n"&gt;bin&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;activate&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;You can also do &lt;code&gt;workon website&lt;/code&gt; inplace of the last two.
 Once the virtual environment has been created and activated, Pelican can be installed via  prefixing with sudo if permissions warrant:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;pip install pelican markdown typogrify ghp-import shovel
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;Now clone the source repository you created:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="sb"&gt;`&lt;/span&gt; git clone https://github.com/YOUR_USERNAME/YOUR_USERNAME.github.io.git web-sources&lt;span class="sb"&gt;`&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
+&lt;p&gt;&lt;code&gt;pip install pelican markdown typogrify ghp-import shovel&lt;/code&gt; &lt;br&gt;
+Now clone the source repository you created:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;git clone https://github.com/YOUR_USERNAME/YOUR_USERNAME.github.io.git web-sources&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;Then change directory to the source folder:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="sb"&gt;`&lt;/span&gt;&lt;span class="nb"&gt;cd&lt;/span&gt; web-sources&lt;span class="sb"&gt;`&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
+&lt;p&gt;&lt;code&gt;cd web-sources&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;Because of how Github Pages prefers to work, serving the files from the master branch, you have to put your source code in a new branch, preserving the "master" for the output of the static files generated by Pelican. To do that, you must create a new branch called "source":&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;$ git checkout -b source&lt;/code&gt;&lt;/p&gt;
 &lt;h2&gt;Pelican quickstart&lt;/h2&gt;
 &lt;p&gt;Pelican provides an excellent quickstart command. Run it:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="sb"&gt;`&lt;/span&gt;pelican-quickstart&lt;span class="sb"&gt;`&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
+&lt;p&gt;&lt;code&gt;pelican-quickstart&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;The quickstart will ask you various questions, which you can answer in turn. Before answering them, take a look at my answers below:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&amp;gt; Where do you want to create your new web site? [.] ./
-&amp;gt; What will be the title of this web site? Ashwin&amp;#39;s Chronicles
-&amp;gt; Who will be the author of this web site? Ashwin Kumar K
-&amp;gt; What will be the default language of this web site? [pt] en
-&amp;gt; Do you want to specify a URL prefix? e.g., http://example.com   (Y/n) n
-&amp;gt; Do you want to enable article pagination? (Y/n) y
-&amp;gt; How many articles per page do you want? [10] 10
-&amp;gt; What is your time zone? [Europe/Paris] Asia/Calcutta
-&amp;gt; Do you want to generate a Fabfile/Makefile to automate generation and publishing? (Y/n) Y **# PAY ATTENTION TO THIS!**
-&amp;gt; Do you want an auto-reload &amp;amp; simpleHTTP script to assist with theme and site development? (Y/n) n
-&amp;gt; Do you want to upload your website using FTP? (y/N) n
-&amp;gt; Do you want to upload your website using SSH? (y/N) n
-&amp;gt; Do you want to upload your website using Dropbox? (y/N) n
-&amp;gt; Do you want to upload your website using S3? (y/N) n
-&amp;gt; Do you want to upload your website using Rackspace Cloud Files? (y/N) n
-&amp;gt; Do you want to upload your website using GitHub Pages? (y/N) y
-&amp;gt; Is this your personal page (username.github.io)? (y/N) y
-Done. Your new project is available at YOUR_USERNAME.github.io
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="nv"&gt;Where&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt; &lt;span class="nv"&gt;you&lt;/span&gt; &lt;span class="nv"&gt;want&lt;/span&gt; &lt;span class="nv"&gt;to&lt;/span&gt; &lt;span class="nv"&gt;create&lt;/span&gt; &lt;span class="nv"&gt;your&lt;/span&gt; &lt;span class="nv"&gt;new&lt;/span&gt; &lt;span class="nv"&gt;web&lt;/span&gt; &lt;span class="nv"&gt;site&lt;/span&gt;? [.] .&lt;span class="o"&gt;/&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="nv"&gt;What&lt;/span&gt; &lt;span class="nv"&gt;will&lt;/span&gt; &lt;span class="nv"&gt;be&lt;/span&gt; &lt;span class="nv"&gt;the&lt;/span&gt; &lt;span class="nv"&gt;title&lt;/span&gt; &lt;span class="nv"&gt;of&lt;/span&gt; &lt;span class="nv"&gt;this&lt;/span&gt; &lt;span class="nv"&gt;web&lt;/span&gt; &lt;span class="nv"&gt;site&lt;/span&gt;? &lt;span class="nv"&gt;Ashwin&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;&lt;/span&gt;&lt;span class="s"&gt;s Chronicles&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="nv"&gt;Who&lt;/span&gt; &lt;span class="nv"&gt;will&lt;/span&gt; &lt;span class="nv"&gt;be&lt;/span&gt; &lt;span class="nv"&gt;the&lt;/span&gt; &lt;span class="nv"&gt;author&lt;/span&gt; &lt;span class="nv"&gt;of&lt;/span&gt; &lt;span class="nv"&gt;this&lt;/span&gt; &lt;span class="nv"&gt;web&lt;/span&gt; &lt;span class="nv"&gt;site&lt;/span&gt;? &lt;span class="nv"&gt;Ashwin&lt;/span&gt; &lt;span class="nv"&gt;Kumar&lt;/span&gt; &lt;span class="nv"&gt;K&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="nv"&gt;What&lt;/span&gt; &lt;span class="nv"&gt;will&lt;/span&gt; &lt;span class="nv"&gt;be&lt;/span&gt; &lt;span class="nv"&gt;the&lt;/span&gt; &lt;span class="nv"&gt;default&lt;/span&gt; &lt;span class="nv"&gt;language&lt;/span&gt; &lt;span class="nv"&gt;of&lt;/span&gt; &lt;span class="nv"&gt;this&lt;/span&gt; &lt;span class="nv"&gt;web&lt;/span&gt; &lt;span class="nv"&gt;site&lt;/span&gt;? [&lt;span class="nv"&gt;pt&lt;/span&gt;] &lt;span class="nv"&gt;en&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="k"&gt;Do&lt;/span&gt; &lt;span class="nv"&gt;you&lt;/span&gt; &lt;span class="nv"&gt;want&lt;/span&gt; &lt;span class="nv"&gt;to&lt;/span&gt; &lt;span class="nv"&gt;specify&lt;/span&gt; &lt;span class="nv"&gt;a&lt;/span&gt; &lt;span class="nv"&gt;URL&lt;/span&gt; &lt;span class="nv"&gt;prefix&lt;/span&gt;? &lt;span class="nv"&gt;e&lt;/span&gt;.&lt;span class="nv"&gt;g&lt;/span&gt;., &lt;span class="nv"&gt;http&lt;/span&gt;:&lt;span class="o"&gt;//&lt;/span&gt;&lt;span class="nv"&gt;example&lt;/span&gt;.&lt;span class="nv"&gt;com&lt;/span&gt;   &lt;span class="ss"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;Y&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nv"&gt;n&lt;/span&gt;&lt;span class="ss"&gt;)&lt;/span&gt; &lt;span class="nv"&gt;n&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="k"&gt;Do&lt;/span&gt; &lt;span class="nv"&gt;you&lt;/span&gt; &lt;span class="nv"&gt;want&lt;/span&gt; &lt;span class="nv"&gt;to&lt;/span&gt; &lt;span class="nv"&gt;enable&lt;/span&gt; &lt;span class="nv"&gt;article&lt;/span&gt; &lt;span class="nv"&gt;pagination&lt;/span&gt;? &lt;span class="ss"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;Y&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nv"&gt;n&lt;/span&gt;&lt;span class="ss"&gt;)&lt;/span&gt; &lt;span class="nv"&gt;y&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="nv"&gt;How&lt;/span&gt; &lt;span class="nv"&gt;many&lt;/span&gt; &lt;span class="nv"&gt;articles&lt;/span&gt; &lt;span class="nv"&gt;per&lt;/span&gt; &lt;span class="nv"&gt;page&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt; &lt;span class="nv"&gt;you&lt;/span&gt; &lt;span class="nv"&gt;want&lt;/span&gt;? [&lt;span class="mi"&gt;10&lt;/span&gt;] &lt;span class="mi"&gt;10&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="nv"&gt;What&lt;/span&gt; &lt;span class="nv"&gt;is&lt;/span&gt; &lt;span class="nv"&gt;your&lt;/span&gt; &lt;span class="nv"&gt;time&lt;/span&gt; &lt;span class="nv"&gt;zone&lt;/span&gt;? [&lt;span class="nv"&gt;Europe&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nv"&gt;Paris&lt;/span&gt;] &lt;span class="nv"&gt;Asia&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nv"&gt;Calcutta&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="k"&gt;Do&lt;/span&gt; &lt;span class="nv"&gt;you&lt;/span&gt; &lt;span class="nv"&gt;want&lt;/span&gt; &lt;span class="nv"&gt;to&lt;/span&gt; &lt;span class="nv"&gt;generate&lt;/span&gt; &lt;span class="nv"&gt;a&lt;/span&gt; &lt;span class="nv"&gt;Fabfile&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nv"&gt;Makefile&lt;/span&gt; &lt;span class="nv"&gt;to&lt;/span&gt; &lt;span class="nv"&gt;automate&lt;/span&gt; &lt;span class="nv"&gt;generation&lt;/span&gt; &lt;span class="nv"&gt;and&lt;/span&gt; &lt;span class="nv"&gt;publishing&lt;/span&gt;? &lt;span class="ss"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;Y&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nv"&gt;n&lt;/span&gt;&lt;span class="ss"&gt;)&lt;/span&gt; &lt;span class="nv"&gt;Y&lt;/span&gt; &lt;span class="o"&gt;**&lt;/span&gt;# &lt;span class="nv"&gt;PAY&lt;/span&gt; &lt;span class="nv"&gt;ATTENTION&lt;/span&gt; &lt;span class="nv"&gt;TO&lt;/span&gt; &lt;span class="nv"&gt;THIS&lt;/span&gt;&lt;span class="o"&gt;!**&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="k"&gt;Do&lt;/span&gt; &lt;span class="nv"&gt;you&lt;/span&gt; &lt;span class="nv"&gt;want&lt;/span&gt; &lt;span class="nv"&gt;an&lt;/span&gt; &lt;span class="nv"&gt;auto&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="nv"&gt;reload&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&lt;/span&gt; &lt;span class="nv"&gt;simpleHTTP&lt;/span&gt; &lt;span class="nv"&gt;script&lt;/span&gt; &lt;span class="nv"&gt;to&lt;/span&gt; &lt;span class="nv"&gt;assist&lt;/span&gt; &lt;span class="nv"&gt;with&lt;/span&gt; &lt;span class="nv"&gt;theme&lt;/span&gt; &lt;span class="nv"&gt;and&lt;/span&gt; &lt;span class="nv"&gt;site&lt;/span&gt; &lt;span class="nv"&gt;development&lt;/span&gt;? &lt;span class="ss"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;Y&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nv"&gt;n&lt;/span&gt;&lt;span class="ss"&gt;)&lt;/span&gt; &lt;span class="nv"&gt;n&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="k"&gt;Do&lt;/span&gt; &lt;span class="nv"&gt;you&lt;/span&gt; &lt;span class="nv"&gt;want&lt;/span&gt; &lt;span class="nv"&gt;to&lt;/span&gt; &lt;span class="nv"&gt;upload&lt;/span&gt; &lt;span class="nv"&gt;your&lt;/span&gt; &lt;span class="nv"&gt;website&lt;/span&gt; &lt;span class="nv"&gt;using&lt;/span&gt; &lt;span class="nv"&gt;FTP&lt;/span&gt;? &lt;span class="ss"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;y&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nv"&gt;N&lt;/span&gt;&lt;span class="ss"&gt;)&lt;/span&gt; &lt;span class="nv"&gt;n&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="k"&gt;Do&lt;/span&gt; &lt;span class="nv"&gt;you&lt;/span&gt; &lt;span class="nv"&gt;want&lt;/span&gt; &lt;span class="nv"&gt;to&lt;/span&gt; &lt;span class="nv"&gt;upload&lt;/span&gt; &lt;span class="nv"&gt;your&lt;/span&gt; &lt;span class="nv"&gt;website&lt;/span&gt; &lt;span class="nv"&gt;using&lt;/span&gt; &lt;span class="nv"&gt;SSH&lt;/span&gt;? &lt;span class="ss"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;y&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nv"&gt;N&lt;/span&gt;&lt;span class="ss"&gt;)&lt;/span&gt; &lt;span class="nv"&gt;n&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="k"&gt;Do&lt;/span&gt; &lt;span class="nv"&gt;you&lt;/span&gt; &lt;span class="nv"&gt;want&lt;/span&gt; &lt;span class="nv"&gt;to&lt;/span&gt; &lt;span class="nv"&gt;upload&lt;/span&gt; &lt;span class="nv"&gt;your&lt;/span&gt; &lt;span class="nv"&gt;website&lt;/span&gt; &lt;span class="nv"&gt;using&lt;/span&gt; &lt;span class="nv"&gt;Dropbox&lt;/span&gt;? &lt;span class="ss"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;y&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nv"&gt;N&lt;/span&gt;&lt;span class="ss"&gt;)&lt;/span&gt; &lt;span class="nv"&gt;n&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="k"&gt;Do&lt;/span&gt; &lt;span class="nv"&gt;you&lt;/span&gt; &lt;span class="nv"&gt;want&lt;/span&gt; &lt;span class="nv"&gt;to&lt;/span&gt; &lt;span class="nv"&gt;upload&lt;/span&gt; &lt;span class="nv"&gt;your&lt;/span&gt; &lt;span class="nv"&gt;website&lt;/span&gt; &lt;span class="nv"&gt;using&lt;/span&gt; &lt;span class="nv"&gt;S3&lt;/span&gt;? &lt;span class="ss"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;y&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nv"&gt;N&lt;/span&gt;&lt;span class="ss"&gt;)&lt;/span&gt; &lt;span class="nv"&gt;n&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="k"&gt;Do&lt;/span&gt; &lt;span class="nv"&gt;you&lt;/span&gt; &lt;span class="nv"&gt;want&lt;/span&gt; &lt;span class="nv"&gt;to&lt;/span&gt; &lt;span class="nv"&gt;upload&lt;/span&gt; &lt;span class="nv"&gt;your&lt;/span&gt; &lt;span class="nv"&gt;website&lt;/span&gt; &lt;span class="nv"&gt;using&lt;/span&gt; &lt;span class="nv"&gt;Rackspace&lt;/span&gt; &lt;span class="nv"&gt;Cloud&lt;/span&gt; &lt;span class="nv"&gt;Files&lt;/span&gt;? &lt;span class="ss"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;y&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nv"&gt;N&lt;/span&gt;&lt;span class="ss"&gt;)&lt;/span&gt; &lt;span class="nv"&gt;n&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="k"&gt;Do&lt;/span&gt; &lt;span class="nv"&gt;you&lt;/span&gt; &lt;span class="nv"&gt;want&lt;/span&gt; &lt;span class="nv"&gt;to&lt;/span&gt; &lt;span class="nv"&gt;upload&lt;/span&gt; &lt;span class="nv"&gt;your&lt;/span&gt; &lt;span class="nv"&gt;website&lt;/span&gt; &lt;span class="nv"&gt;using&lt;/span&gt; &lt;span class="nv"&gt;GitHub&lt;/span&gt; &lt;span class="nv"&gt;Pages&lt;/span&gt;? &lt;span class="ss"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;y&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nv"&gt;N&lt;/span&gt;&lt;span class="ss"&gt;)&lt;/span&gt; &lt;span class="nv"&gt;y&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="nv"&gt;Is&lt;/span&gt; &lt;span class="nv"&gt;this&lt;/span&gt; &lt;span class="nv"&gt;your&lt;/span&gt; &lt;span class="nv"&gt;personal&lt;/span&gt; &lt;span class="nv"&gt;page&lt;/span&gt; &lt;span class="ss"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;username&lt;/span&gt;.&lt;span class="nv"&gt;github&lt;/span&gt;.&lt;span class="nv"&gt;io&lt;/span&gt;&lt;span class="ss"&gt;)&lt;/span&gt;? &lt;span class="ss"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;y&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nv"&gt;N&lt;/span&gt;&lt;span class="ss"&gt;)&lt;/span&gt; &lt;span class="nv"&gt;y&lt;/span&gt;
+&lt;span class="nv"&gt;Done&lt;/span&gt;. &lt;span class="nv"&gt;Your&lt;/span&gt; &lt;span class="nv"&gt;new&lt;/span&gt; &lt;span class="nv"&gt;project&lt;/span&gt; &lt;span class="nv"&gt;is&lt;/span&gt; &lt;span class="nv"&gt;available&lt;/span&gt; &lt;span class="nv"&gt;at&lt;/span&gt; &lt;span class="nv"&gt;YOUR_USERNAME&lt;/span&gt;.&lt;span class="nv"&gt;github&lt;/span&gt;.&lt;span class="nv"&gt;io&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -74,103 +61,91 @@ Done. Your new project is available at YOUR_USERNAME.github.io
 
 &lt;p&gt;Let's see how it looks?&lt;/p&gt;
 &lt;p&gt;Go to the terminal, generate the static files and start the server. To do that, use the following command:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="sb"&gt;`&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;venv&lt;span class="o"&gt;)&lt;/span&gt;$ make html &lt;span class="p"&gt;&amp;amp;&lt;/span&gt;amp&lt;span class="p"&gt;;&amp;amp;&lt;/span&gt;amp&lt;span class="p"&gt;;&lt;/span&gt; make serve&lt;span class="sb"&gt;`&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;While this command is running, you should be able to visit it on your favorite web browser by typing &lt;code&gt;localhost:8000&lt;/code&gt; on the address bar.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;(venv)$ make html &amp;amp;&amp;amp; make serve&lt;/code&gt;
+While this command is running, you should be able to visit it on your favorite web browser by typing &lt;code&gt;localhost:8000&lt;/code&gt; on the address bar.&lt;/p&gt;
 &lt;h2&gt;A little touch up&lt;/h2&gt;
 &lt;p&gt;Now,  if you want to put an image in a post, a neat way is to first  create a 'images' directory inside your content directory, where your posts are. Now, you have to tell Pelican to use it. Find the &lt;code&gt;pelicanconf.py&lt;/code&gt;, the file where you configure the system, and add a variable that contains the directory with your images:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;lang&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;python&amp;quot;&lt;/span&gt; &lt;span class="c1"&gt;# DON&amp;#39;T COPY this line, it exists just for highlighting purposes&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;.&lt;span class="nv"&gt;lang&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="s"&gt;python&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt; # &lt;span class="nv"&gt;DON&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;&lt;/span&gt;&lt;span class="s"&gt;T COPY this line, it exists just for highlighting purposes&lt;/span&gt;
 
-&lt;span class="n"&gt;STATIC_PATHS&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;images&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+&lt;span class="nv"&gt;STATIC_PATHS&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; [&lt;span class="s1"&gt;&amp;#39;&lt;/span&gt;&lt;span class="s"&gt;images&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;&lt;/span&gt;]
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;Save it. Go to your post and add the image this way:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;lang&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;markdown&amp;quot;&lt;/span&gt; &lt;span class="c1"&gt;# DON&amp;#39;T COPY this line, it exists just for highlighting purposes&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;.&lt;span class="nv"&gt;lang&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="s"&gt;markdown&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt; # &lt;span class="nv"&gt;DON&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;&lt;/span&gt;&lt;span class="s"&gt;T COPY this line, it exists just for highlighting purposes&lt;/span&gt;
 
-&lt;span class="err"&gt;!&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;Write&lt;/span&gt; &lt;span class="n"&gt;here&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="n"&gt;good&lt;/span&gt; &lt;span class="n"&gt;description&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;people&lt;/span&gt; &lt;span class="n"&gt;who&lt;/span&gt; &lt;span class="n"&gt;can&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;t see the image]({filename}/images/IMAGE_NAME.jpg)&lt;/span&gt;
+&lt;span class="o"&gt;!&lt;/span&gt;[&lt;span class="nv"&gt;Write&lt;/span&gt; &lt;span class="nv"&gt;here&lt;/span&gt; &lt;span class="nv"&gt;a&lt;/span&gt; &lt;span class="nv"&gt;good&lt;/span&gt; &lt;span class="nv"&gt;description&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="nv"&gt;people&lt;/span&gt; &lt;span class="nv"&gt;who&lt;/span&gt; &lt;span class="nv"&gt;can&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;&lt;/span&gt;&lt;span class="s"&gt;t see the image]({filename}/images/IMAGE_NAME.jpg)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;You can interrupt the server at anytime pressing CTRL+C on the terminal. But you should start it again and check if the image is correct. Can you remember how?&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;venv&lt;span class="o"&gt;)&lt;/span&gt;$ make html &lt;span class="p"&gt;&amp;amp;&lt;/span&gt;amp&lt;span class="p"&gt;;&amp;amp;&lt;/span&gt;amp&lt;span class="p"&gt;;&lt;/span&gt; make serve
-&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;code&gt;(venv)$ make html &amp;amp;&amp;amp; make serve&lt;/code&gt;
+One last step before your coding is "done": you should make sure anyone can read your posts using ATOM or RSS feeds. Find the pelicanconf.py, the file where you configure the system, and edit the part about feed generation:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;.&lt;span class="nv"&gt;lang&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="s"&gt;python&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt; # &lt;span class="nv"&gt;DON&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;&lt;/span&gt;&lt;span class="s"&gt;T COPY this line, it exists just for highlighting purposes&lt;/span&gt;
 
-
-&lt;p&gt;One last step before your coding is "done": you should make sure anyone can read your posts using ATOM or RSS feeds. Find the pelicanconf.py, the file where you configure the system, and edit the part about feed generation:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="na"&gt;.lang&lt;/span&gt;&lt;span class="err"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;python&amp;quot;&lt;/span&gt; &lt;span class="c"&gt;# DON&amp;#39;T COPY this line, it exists just for highlighting purposes&lt;/span&gt;
-
-&lt;span class="nf"&gt;FEED_ALL_ATOM&lt;/span&gt; &lt;span class="err"&gt;=&lt;/span&gt; &lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="no"&gt;feeds&lt;/span&gt;&lt;span class="err"&gt;/&lt;/span&gt;&lt;span class="no"&gt;all.atom.xml&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;
-&lt;span class="nf"&gt;FEED_ALL_RSS&lt;/span&gt; &lt;span class="err"&gt;=&lt;/span&gt; &lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="no"&gt;feeds&lt;/span&gt;&lt;span class="err"&gt;/&lt;/span&gt;&lt;span class="no"&gt;all.rss.xml&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;
-&lt;span class="nf"&gt;AUTHOR_FEED_RSS&lt;/span&gt; &lt;span class="err"&gt;=&lt;/span&gt; &lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="no"&gt;feeds&lt;/span&gt;&lt;span class="err"&gt;/&lt;/span&gt;&lt;span class="nv"&gt;%s.rss.xml&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;
-&lt;span class="nf"&gt;RSS_FEED_SUMMARY_ONLY&lt;/span&gt; &lt;span class="err"&gt;=&lt;/span&gt; &lt;span class="no"&gt;False&lt;/span&gt;
+&lt;span class="nv"&gt;FEED_ALL_ATOM&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;&lt;/span&gt;&lt;span class="s"&gt;feeds/all.atom.xml&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;&lt;/span&gt;
+&lt;span class="nv"&gt;FEED_ALL_RSS&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;&lt;/span&gt;&lt;span class="s"&gt;feeds/all.rss.xml&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;&lt;/span&gt;
+&lt;span class="nv"&gt;AUTHOR_FEED_RSS&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;&lt;/span&gt;&lt;span class="s"&gt;feeds/%s.rss.xml&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;&lt;/span&gt;
+&lt;span class="nv"&gt;RSS_FEED_SUMMARY_ONLY&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nv"&gt;False&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;Save everything so you can send the code to Github. You can do that by adding all files, committing it with a message ('first commit') and using git push. You will be asked for your Github login and password.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="sb"&gt;`&lt;/span&gt;$ git add -A &lt;span class="p"&gt;&amp;amp;&lt;/span&gt;amp&lt;span class="p"&gt;;&amp;amp;&lt;/span&gt;amp&lt;span class="p"&gt;;&lt;/span&gt; git commit -a -m &lt;span class="s1"&gt;&amp;#39;first commit&amp;#39;&lt;/span&gt; &lt;span class="p"&gt;&amp;amp;&lt;/span&gt;amp&lt;span class="p"&gt;;&amp;amp;&lt;/span&gt;amp&lt;span class="p"&gt;;&lt;/span&gt; git push --all&lt;span class="sb"&gt;`&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;As I had said before you would be preserving the master branch for the output of the static files generated by Pelican. Now it's time  to generate the mater:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="sb"&gt;`&lt;/span&gt;$ make github&lt;span class="sb"&gt;`&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;You will be asked for your Github login and password again. And... voilà! Your new blog should be live on https://YOUR_USERNAME.github.io.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;$ git add -A &amp;amp;&amp;amp; git commit -a -m 'first commit' &amp;amp;&amp;amp; git push --all&lt;/code&gt;
+As I had said before you would be preserving the master branch for the output of the static files generated by Pelican. Now it's time  to generate the mater:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;$ make github&lt;/code&gt;
+You will be asked for your Github login and password again. And... voilà! Your new blog should be live on https://YOUR_USERNAME.github.io.&lt;/p&gt;
 &lt;h1&gt;What's next?&lt;/h1&gt;
 &lt;p&gt;You generated your first Pelican static website using Markdown and Jinja2. Additional modifications can be made to the Jinja2 templates and the content contained in the Markdown files.&lt;/p&gt;
 &lt;h3&gt;Adding .gitignore&lt;/h3&gt;
 &lt;p&gt;.gitignore file contains a list of files and folder that git will ignore while syncing with the remote repository. Utilizing .gitignore wisely can reduce the amount of data you need to upload.&lt;/p&gt;
 &lt;p&gt;make a file .gitignore in the web-sources file with the following contents&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;#Custom
-output
-pelicanconf_local.py
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;#Custom&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="k"&gt;output&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="n"&gt;pelicanconf_local&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;py&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
 
-#Python
-*.py[cod]
+&lt;span class="n"&gt;#Python&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;py&lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="n"&gt;cod&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
 
-# C extensions
-*.so
+&lt;span class="err"&gt;#&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;C&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;extensions&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;so&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
 
-# Packages
-*.egg
-*.egg-info
-dist
-build
-eggs
-parts
-bin
-var
-sdist
-develop-eggs
-.installed.cfg
-lib
-lib64
+&lt;span class="err"&gt;#&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Packages&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;egg&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;egg&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;info&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="n"&gt;dist&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="n"&gt;build&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="n"&gt;eggs&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="n"&gt;parts&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="n"&gt;bin&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="nf"&gt;var&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="n"&gt;sdist&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="n"&gt;develop&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;eggs&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;installed&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;cfg&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="n"&gt;lib&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="n"&gt;lib64&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
 
-# Installer logs
-pip-log.txt
+&lt;span class="err"&gt;#&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Installer&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;logs&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="n"&gt;pip&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="nf"&gt;log&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;txt&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
 
-# Unit test / coverage reports
-.coverage
-.tox
-nosetests.xml
+&lt;span class="err"&gt;#&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Unit&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;test&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;coverage&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;reports&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;coverage&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;tox&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="n"&gt;nosetests&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nc"&gt;xml&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
 
-# Translations
-*.mo
+&lt;span class="err"&gt;#&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Translations&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;mo&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
 
-# Mr Developer
-.mr.developer.cfg
-.project
-.pydevproject
+&lt;span class="err"&gt;#&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Mr&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Developer&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;mr&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;developer&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;cfg&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;project&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;pydevproject&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;h3&gt;Automate GitHub upload process&lt;/h3&gt;
 &lt;p&gt;Create a file &lt;code&gt;up.sh&lt;/code&gt; in the  &lt;code&gt;web-sources&lt;/code&gt;&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;git add -A &amp;amp;&amp;amp; git commit -a -m &amp;#39;$1&amp;#39; &amp;amp;&amp;amp; git push --all
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;git&lt;/span&gt; &lt;span class="k"&gt;add&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;A&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class="n"&gt;git&lt;/span&gt; &lt;span class="k"&gt;commit&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;m&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;$1&amp;#39;&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class="n"&gt;git&lt;/span&gt; &lt;span class="n"&gt;push&lt;/span&gt; &lt;span class="c1"&gt;--all&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -179,18 +154,18 @@ nosetests.xml
 &lt;p&gt;Clone pelican-themes repository&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;git clone --recursive https://github.com/getpelican/pelican-themes themes&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;In &lt;code&gt;pelicanconf.py&lt;/code&gt; add the following variables:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;THEME = &amp;#39;themes/bootstrap2&amp;#39;
-OUTPUT_PATH = &amp;#39;output&amp;#39;
-PATH = &amp;#39;content
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;THEME&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;themes/bootstrap2&amp;#39;&lt;/span&gt;
+&lt;span class="n"&gt;OUTPUT_PATH&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;output&amp;#39;&lt;/span&gt;
+&lt;span class="n"&gt;PATH&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="n"&gt;content&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;h3&gt;Custom Home page&lt;/h3&gt;
 &lt;p&gt;Add this variables to pelicanconf.py&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;# Custom Home page
-DIRECT_TEMPLATES = ((&amp;#39;index&amp;#39;, &amp;#39;blog&amp;#39;, &amp;#39;tags&amp;#39;, &amp;#39;categories&amp;#39;, &amp;#39;archives&amp;#39;))
-PAGINATED_DIRECT_TEMPLATES = ((&amp;#39;blog&amp;#39;,))
-TEMPLATE_PAGES = {&amp;#39;home.html&amp;#39;: &amp;#39;index.html&amp;#39;,}
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="o"&gt;#&lt;/span&gt; &lt;span class="n"&gt;Custom&lt;/span&gt; &lt;span class="n"&gt;Home&lt;/span&gt; &lt;span class="n"&gt;page&lt;/span&gt;
+&lt;span class="n"&gt;DIRECT_TEMPLATES&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;((&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;index&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;blog&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;tags&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;categories&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;archives&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+&lt;span class="n"&gt;PAGINATED_DIRECT_TEMPLATES&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;((&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;blog&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,))&lt;/span&gt;
+&lt;span class="n"&gt;TEMPLATE_PAGES&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="err"&gt;{&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;home.html&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;index.html&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="err"&gt;}&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -209,10 +184,4 @@ TEMPLATE_PAGES = {&amp;#39;home.html&amp;#39;: &amp;#39;index.html&amp;#39;,}
   &lt;span class="nt"&gt;&amp;lt;div&lt;/span&gt; &lt;span class="na"&gt;class=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;page-content&amp;quot;&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;Content&lt;span class="nt"&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
 &lt;span class="nt"&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
 &lt;span class="cp"&gt;{%&lt;/span&gt; &lt;span class="k"&gt;endblock&lt;/span&gt; &lt;span class="cp"&gt;%}&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;</content><category term="Github"></category><category term="Pelican"></category><category term="gh-pages"></category></entry><entry><title>The Journey Begins</title><link href="/the-journey-begins.html" rel="alternate"></link><published>2018-06-18T00:00:00+05:30</published><updated>2018-06-18T00:00:00+05:30</updated><author><name>Ashwin</name></author><id>tag:None,2018-06-18:/the-journey-begins.html</id><summary type="html">&lt;p&gt;In which the author writes their first blog post.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Thanks for joining me!&lt;/p&gt;
-&lt;p&gt;I am Ashwin Kumar K, a Dual Degree BE – Int. MSc Physics at BITS Pilani KK Birla Goa campus (Batch of 2017).&lt;/p&gt;
-&lt;p&gt;This is the first post of this site where I intend to post some of my works related to the field of Science and Engineering.&lt;/p&gt;
-&lt;p&gt;I've always been fascinated with computers and electronics.
-I had always wanted to publish some of my projects and experiments on a public platform so that people working on similar projects can give and take ideas. It also serves as a way to showcase the experience that I have gained while doing such projects.&lt;/p&gt;
-&lt;p&gt;I intend to post details of projects or experiments that I have performed mostly in the field of Science and Engineering as I complete them.&lt;/p&gt;
-&lt;p&gt;Take a trip down my memory lane. I hope to see you around!&lt;/p&gt;</content><category term="Random"></category></entry></feed>
+&lt;/pre&gt;&lt;/div&gt;</content><category term="Github"></category><category term="Pelican"></category><category term="gh-pages"></category></entry></feed>

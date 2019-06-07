@@ -1,95 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-        <meta charset="utf-8" />
-        <title>Make a Github Pages blog with Pelican</title>
-        <link rel="stylesheet" href="/theme/css/main.css" />
-        <link href="/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Ashwin's Chronicles Atom Feed" />
-        <link href="/feeds/all.rss.xml" type="application/rss+xml" rel="alternate" title="Ashwin's Chronicles RSS Feed" />
-</head>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Ashwin" />
 
-<body id="index" class="home">
-        <header id="banner" class="body">
-                <h1><a href="/">Ashwin's Chronicles </a></h1>
-                <nav><ul>
-                    <li><a href="/pages/About_Me.html">About_Me</a></li>
-                    <li class="active"><a href="/category/blog.html">Blog</a></li>
-                </ul></nav>
-        </header><!-- /#banner -->
-<section id="content" class="body">
-  <article>
-    <header>
-      <h1 class="entry-title">
-        <a href="/gh-pages-with-pelican.html" rel="bookmark"
-           title="Permalink to Make a Github Pages blog with Pelican">Make a Github Pages blog with Pelican</a></h1>
+        <meta property="og:type" content="article" />
+        <meta name="twitter:card" content="summary">
+
+<meta name="keywords" content="Github, Pelican, gh-pages, Blog, " />
+
+<meta property="og:title" content="Make a Github Pages blog with Pelican "/>
+<meta property="og:url" content="/gh-pages-with-pelican.html" />
+<meta property="og:description" content="Nothing Much" />
+<meta property="og:site_name" content="Ashwin&#39;s Chronicles" />
+<meta property="og:article:author" content="Ashwin" />
+<meta property="og:article:published_time" content="2019-01-01T00:00:00+05:30" />
+<meta name="twitter:title" content="Make a Github Pages blog with Pelican ">
+<meta name="twitter:description" content="Nothing Much">
+
+        <title>Make a Github Pages blog with Pelican  · Ashwin&#39;s Chronicles
+</title>
+        <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
+        <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.1/css/font-awesome.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="/theme/css/pygments.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="/theme/tipuesearch/tipuesearch.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="/theme/css/elegant.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="/theme/css/admonition.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="/theme/css/custom.css" media="screen">
+        <link href="/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Ashwin&#39;s Chronicles - Full Atom Feed" />
+
+
+
+    </head>
+    <body>
+        <div id="content-sans-footer">
+        <div class="navbar navbar-static-top">
+            <div class="navbar-inner">
+                <div class="container-fluid">
+                    <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </a>
+                    <a class="brand" href="/"><span class=site-name>Ashwin's Chronicles</span></a>
+                    <div class="nav-collapse collapse">
+                        <ul class="nav pull-right top-menu">
+                            <li ><a href="">Home</a></li>
+                            <li ><a href="/pages/AboutMe.html">About Me</a></li>
+                            <li ><a href="/categories">Categories</a></li>
+                            <li ><a href="/tags">Tags</a></li>
+                            <li ><a href="/archives">Archives</a></li>
+                            <li><form class="navbar-search" action="/search.html" onsubmit="return validateForm(this.elements['q'].value);"> <input type="text" class="search-query" placeholder="Search" name="q" id="tipue_search_input"></form></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row-fluid">
+                <div class="span1"></div>
+                <div class="span10">
+<article itemscope>
+<div class="row-fluid">
+    <header class="page-header span10 offset2">
+    <h1><a href="/gh-pages-with-pelican.html"> Make a Github Pages blog with Pelican  </a></h1>
     </header>
+</div>
 
-    <div class="entry-content">
-<footer class="post-info">
-        <abbr class="published" title="2019-01-01T00:00:00+05:30">
-                Published: Tue 01 January 2019
-        </abbr>
+<div class="row-fluid">
+        <div class="span8 offset2 article-content">
 
-        <address class="vcard author">
-                By                         <a class="url fn" href="/author/ashwin.html">Ashwin</a>
-        </address>
-<p>In <a href="/category/blog.html">Blog</a>.</p>
-<p>tags: <a href="/tag/github.html">Github</a> <a href="/tag/pelican.html">Pelican</a> <a href="/tag/gh-pages.html">gh-pages</a> </p>
-</footer><!-- /.post-info -->      <p>Github, worlds leading  hosting service for Git repositories  offers a simple, elegant website solution. It allows its users to  store page content in a git repository along with their code.</p>
+            
+            <p>Github, worlds leading  hosting service for Git repositories  offers a simple, elegant website solution. It allows its users to  store page content in a git repository along with their code.</p>
 <p>In this blog post ill walk you through the process of setting up a website by combining Pelican with Github Pages. Pelican is a simple python utility that lets you create beautiful weblogs using just text files. In other words its a static-site generator. I have chosen Pelican over other static-site generators as Pelican unlike its counter parts is based on python hence initial  setup takes literally no time.</p>
 <h2>Setting up a github.io page</h2>
 <p>To create your Github user page, log in to Github and create a  new repositorie username.github.io, as explained on Github pages. (Use your Github username for these repositories.) The  username.github.io repository will contain the output HTML files Pelican generates. To add the output directory as a submodule, initialize it with a README file.</p>
 <h2>Installing Pelican</h2>
 <p>We will first  create a virtual environment for Pelican via virtualenv before installing Pelican.</p>
-<div class="highlight"><pre><span></span>virtualenv website
-<span class="nb">cd</span> website
-<span class="nb">source</span> bin/activate
+<div class="highlight"><pre><span></span><span class="n">virtualenv</span> <span class="n">website</span>
+<span class="n">cd</span> <span class="n">website</span>
+<span class="k">source</span> <span class="n">bin</span><span class="o">/</span><span class="n">activate</span>
 </pre></div>
 
 
 <p>You can also do <code>workon website</code> inplace of the last two.
 Once the virtual environment has been created and activated, Pelican can be installed via  prefixing with sudo if permissions warrant:</p>
-<div class="highlight"><pre><span></span>pip install pelican markdown typogrify ghp-import shovel
-</pre></div>
-
-
-<p>Now clone the source repository you created:</p>
-<div class="highlight"><pre><span></span><span class="sb">`</span> git clone https://github.com/YOUR_USERNAME/YOUR_USERNAME.github.io.git web-sources<span class="sb">`</span>
-</pre></div>
-
-
+<p><code>pip install pelican markdown typogrify ghp-import shovel</code> <br>
+Now clone the source repository you created:</p>
+<p><code>git clone https://github.com/YOUR_USERNAME/YOUR_USERNAME.github.io.git web-sources</code></p>
 <p>Then change directory to the source folder:</p>
-<div class="highlight"><pre><span></span><span class="sb">`</span><span class="nb">cd</span> web-sources<span class="sb">`</span>
-</pre></div>
-
-
+<p><code>cd web-sources</code></p>
 <p>Because of how Github Pages prefers to work, serving the files from the master branch, you have to put your source code in a new branch, preserving the "master" for the output of the static files generated by Pelican. To do that, you must create a new branch called "source":</p>
 <p><code>$ git checkout -b source</code></p>
 <h2>Pelican quickstart</h2>
 <p>Pelican provides an excellent quickstart command. Run it:</p>
-<div class="highlight"><pre><span></span><span class="sb">`</span>pelican-quickstart<span class="sb">`</span>
-</pre></div>
-
-
+<p><code>pelican-quickstart</code></p>
 <p>The quickstart will ask you various questions, which you can answer in turn. Before answering them, take a look at my answers below:</p>
-<div class="highlight"><pre><span></span>&gt; Where do you want to create your new web site? [.] ./
-&gt; What will be the title of this web site? Ashwin&#39;s Chronicles
-&gt; Who will be the author of this web site? Ashwin Kumar K
-&gt; What will be the default language of this web site? [pt] en
-&gt; Do you want to specify a URL prefix? e.g., http://example.com   (Y/n) n
-&gt; Do you want to enable article pagination? (Y/n) y
-&gt; How many articles per page do you want? [10] 10
-&gt; What is your time zone? [Europe/Paris] Asia/Calcutta
-&gt; Do you want to generate a Fabfile/Makefile to automate generation and publishing? (Y/n) Y **# PAY ATTENTION TO THIS!**
-&gt; Do you want an auto-reload &amp; simpleHTTP script to assist with theme and site development? (Y/n) n
-&gt; Do you want to upload your website using FTP? (y/N) n
-&gt; Do you want to upload your website using SSH? (y/N) n
-&gt; Do you want to upload your website using Dropbox? (y/N) n
-&gt; Do you want to upload your website using S3? (y/N) n
-&gt; Do you want to upload your website using Rackspace Cloud Files? (y/N) n
-&gt; Do you want to upload your website using GitHub Pages? (y/N) y
-&gt; Is this your personal page (username.github.io)? (y/N) y
-Done. Your new project is available at YOUR_USERNAME.github.io
+<div class="highlight"><pre><span></span><span class="o">&gt;</span> <span class="nv">Where</span> <span class="k">do</span> <span class="nv">you</span> <span class="nv">want</span> <span class="nv">to</span> <span class="nv">create</span> <span class="nv">your</span> <span class="nv">new</span> <span class="nv">web</span> <span class="nv">site</span>? [.] .<span class="o">/</span>
+<span class="o">&gt;</span> <span class="nv">What</span> <span class="nv">will</span> <span class="nv">be</span> <span class="nv">the</span> <span class="nv">title</span> <span class="nv">of</span> <span class="nv">this</span> <span class="nv">web</span> <span class="nv">site</span>? <span class="nv">Ashwin</span><span class="s1">&#39;</span><span class="s">s Chronicles</span>
+<span class="o">&gt;</span> <span class="nv">Who</span> <span class="nv">will</span> <span class="nv">be</span> <span class="nv">the</span> <span class="nv">author</span> <span class="nv">of</span> <span class="nv">this</span> <span class="nv">web</span> <span class="nv">site</span>? <span class="nv">Ashwin</span> <span class="nv">Kumar</span> <span class="nv">K</span>
+<span class="o">&gt;</span> <span class="nv">What</span> <span class="nv">will</span> <span class="nv">be</span> <span class="nv">the</span> <span class="nv">default</span> <span class="nv">language</span> <span class="nv">of</span> <span class="nv">this</span> <span class="nv">web</span> <span class="nv">site</span>? [<span class="nv">pt</span>] <span class="nv">en</span>
+<span class="o">&gt;</span> <span class="k">Do</span> <span class="nv">you</span> <span class="nv">want</span> <span class="nv">to</span> <span class="nv">specify</span> <span class="nv">a</span> <span class="nv">URL</span> <span class="nv">prefix</span>? <span class="nv">e</span>.<span class="nv">g</span>., <span class="nv">http</span>:<span class="o">//</span><span class="nv">example</span>.<span class="nv">com</span>   <span class="ss">(</span><span class="nv">Y</span><span class="o">/</span><span class="nv">n</span><span class="ss">)</span> <span class="nv">n</span>
+<span class="o">&gt;</span> <span class="k">Do</span> <span class="nv">you</span> <span class="nv">want</span> <span class="nv">to</span> <span class="nv">enable</span> <span class="nv">article</span> <span class="nv">pagination</span>? <span class="ss">(</span><span class="nv">Y</span><span class="o">/</span><span class="nv">n</span><span class="ss">)</span> <span class="nv">y</span>
+<span class="o">&gt;</span> <span class="nv">How</span> <span class="nv">many</span> <span class="nv">articles</span> <span class="nv">per</span> <span class="nv">page</span> <span class="k">do</span> <span class="nv">you</span> <span class="nv">want</span>? [<span class="mi">10</span>] <span class="mi">10</span>
+<span class="o">&gt;</span> <span class="nv">What</span> <span class="nv">is</span> <span class="nv">your</span> <span class="nv">time</span> <span class="nv">zone</span>? [<span class="nv">Europe</span><span class="o">/</span><span class="nv">Paris</span>] <span class="nv">Asia</span><span class="o">/</span><span class="nv">Calcutta</span>
+<span class="o">&gt;</span> <span class="k">Do</span> <span class="nv">you</span> <span class="nv">want</span> <span class="nv">to</span> <span class="nv">generate</span> <span class="nv">a</span> <span class="nv">Fabfile</span><span class="o">/</span><span class="nv">Makefile</span> <span class="nv">to</span> <span class="nv">automate</span> <span class="nv">generation</span> <span class="nv">and</span> <span class="nv">publishing</span>? <span class="ss">(</span><span class="nv">Y</span><span class="o">/</span><span class="nv">n</span><span class="ss">)</span> <span class="nv">Y</span> <span class="o">**</span># <span class="nv">PAY</span> <span class="nv">ATTENTION</span> <span class="nv">TO</span> <span class="nv">THIS</span><span class="o">!**</span>
+<span class="o">&gt;</span> <span class="k">Do</span> <span class="nv">you</span> <span class="nv">want</span> <span class="nv">an</span> <span class="nv">auto</span><span class="o">-</span><span class="nv">reload</span> <span class="o">&amp;</span> <span class="nv">simpleHTTP</span> <span class="nv">script</span> <span class="nv">to</span> <span class="nv">assist</span> <span class="nv">with</span> <span class="nv">theme</span> <span class="nv">and</span> <span class="nv">site</span> <span class="nv">development</span>? <span class="ss">(</span><span class="nv">Y</span><span class="o">/</span><span class="nv">n</span><span class="ss">)</span> <span class="nv">n</span>
+<span class="o">&gt;</span> <span class="k">Do</span> <span class="nv">you</span> <span class="nv">want</span> <span class="nv">to</span> <span class="nv">upload</span> <span class="nv">your</span> <span class="nv">website</span> <span class="nv">using</span> <span class="nv">FTP</span>? <span class="ss">(</span><span class="nv">y</span><span class="o">/</span><span class="nv">N</span><span class="ss">)</span> <span class="nv">n</span>
+<span class="o">&gt;</span> <span class="k">Do</span> <span class="nv">you</span> <span class="nv">want</span> <span class="nv">to</span> <span class="nv">upload</span> <span class="nv">your</span> <span class="nv">website</span> <span class="nv">using</span> <span class="nv">SSH</span>? <span class="ss">(</span><span class="nv">y</span><span class="o">/</span><span class="nv">N</span><span class="ss">)</span> <span class="nv">n</span>
+<span class="o">&gt;</span> <span class="k">Do</span> <span class="nv">you</span> <span class="nv">want</span> <span class="nv">to</span> <span class="nv">upload</span> <span class="nv">your</span> <span class="nv">website</span> <span class="nv">using</span> <span class="nv">Dropbox</span>? <span class="ss">(</span><span class="nv">y</span><span class="o">/</span><span class="nv">N</span><span class="ss">)</span> <span class="nv">n</span>
+<span class="o">&gt;</span> <span class="k">Do</span> <span class="nv">you</span> <span class="nv">want</span> <span class="nv">to</span> <span class="nv">upload</span> <span class="nv">your</span> <span class="nv">website</span> <span class="nv">using</span> <span class="nv">S3</span>? <span class="ss">(</span><span class="nv">y</span><span class="o">/</span><span class="nv">N</span><span class="ss">)</span> <span class="nv">n</span>
+<span class="o">&gt;</span> <span class="k">Do</span> <span class="nv">you</span> <span class="nv">want</span> <span class="nv">to</span> <span class="nv">upload</span> <span class="nv">your</span> <span class="nv">website</span> <span class="nv">using</span> <span class="nv">Rackspace</span> <span class="nv">Cloud</span> <span class="nv">Files</span>? <span class="ss">(</span><span class="nv">y</span><span class="o">/</span><span class="nv">N</span><span class="ss">)</span> <span class="nv">n</span>
+<span class="o">&gt;</span> <span class="k">Do</span> <span class="nv">you</span> <span class="nv">want</span> <span class="nv">to</span> <span class="nv">upload</span> <span class="nv">your</span> <span class="nv">website</span> <span class="nv">using</span> <span class="nv">GitHub</span> <span class="nv">Pages</span>? <span class="ss">(</span><span class="nv">y</span><span class="o">/</span><span class="nv">N</span><span class="ss">)</span> <span class="nv">y</span>
+<span class="o">&gt;</span> <span class="nv">Is</span> <span class="nv">this</span> <span class="nv">your</span> <span class="nv">personal</span> <span class="nv">page</span> <span class="ss">(</span><span class="nv">username</span>.<span class="nv">github</span>.<span class="nv">io</span><span class="ss">)</span>? <span class="ss">(</span><span class="nv">y</span><span class="o">/</span><span class="nv">N</span><span class="ss">)</span> <span class="nv">y</span>
+<span class="nv">Done</span>. <span class="nv">Your</span> <span class="nv">new</span> <span class="nv">project</span> <span class="nv">is</span> <span class="nv">available</span> <span class="nv">at</span> <span class="nv">YOUR_USERNAME</span>.<span class="nv">github</span>.<span class="nv">io</span>
 </pre></div>
 
 
@@ -109,103 +135,91 @@ Done. Your new project is available at YOUR_USERNAME.github.io
 
 <p>Let's see how it looks?</p>
 <p>Go to the terminal, generate the static files and start the server. To do that, use the following command:</p>
-<div class="highlight"><pre><span></span><span class="sb">`</span><span class="o">(</span>venv<span class="o">)</span>$ make html <span class="p">&amp;</span>amp<span class="p">;&amp;</span>amp<span class="p">;</span> make serve<span class="sb">`</span>
-</pre></div>
-
-
-<p>While this command is running, you should be able to visit it on your favorite web browser by typing <code>localhost:8000</code> on the address bar.</p>
+<p><code>(venv)$ make html &amp;&amp; make serve</code>
+While this command is running, you should be able to visit it on your favorite web browser by typing <code>localhost:8000</code> on the address bar.</p>
 <h2>A little touch up</h2>
 <p>Now,  if you want to put an image in a post, a neat way is to first  create a 'images' directory inside your content directory, where your posts are. Now, you have to tell Pelican to use it. Find the <code>pelicanconf.py</code>, the file where you configure the system, and add a variable that contains the directory with your images:</p>
-<div class="highlight"><pre><span></span><span class="o">.</span><span class="n">lang</span><span class="o">=</span><span class="s2">&quot;python&quot;</span> <span class="c1"># DON&#39;T COPY this line, it exists just for highlighting purposes</span>
+<div class="highlight"><pre><span></span>.<span class="nv">lang</span><span class="o">=</span><span class="s2">&quot;</span><span class="s">python</span><span class="s2">&quot;</span> # <span class="nv">DON</span><span class="s1">&#39;</span><span class="s">T COPY this line, it exists just for highlighting purposes</span>
 
-<span class="n">STATIC_PATHS</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;images&#39;</span><span class="p">]</span>
+<span class="nv">STATIC_PATHS</span> <span class="o">=</span> [<span class="s1">&#39;</span><span class="s">images</span><span class="s1">&#39;</span>]
 </pre></div>
 
 
 <p>Save it. Go to your post and add the image this way:</p>
-<div class="highlight"><pre><span></span><span class="o">.</span><span class="n">lang</span><span class="o">=</span><span class="s2">&quot;markdown&quot;</span> <span class="c1"># DON&#39;T COPY this line, it exists just for highlighting purposes</span>
+<div class="highlight"><pre><span></span>.<span class="nv">lang</span><span class="o">=</span><span class="s2">&quot;</span><span class="s">markdown</span><span class="s2">&quot;</span> # <span class="nv">DON</span><span class="s1">&#39;</span><span class="s">T COPY this line, it exists just for highlighting purposes</span>
 
-<span class="err">!</span><span class="p">[</span><span class="n">Write</span> <span class="n">here</span> <span class="n">a</span> <span class="n">good</span> <span class="n">description</span> <span class="k">for</span> <span class="n">people</span> <span class="n">who</span> <span class="n">can</span><span class="s1">&#39;t see the image]({filename}/images/IMAGE_NAME.jpg)</span>
+<span class="o">!</span>[<span class="nv">Write</span> <span class="nv">here</span> <span class="nv">a</span> <span class="nv">good</span> <span class="nv">description</span> <span class="k">for</span> <span class="nv">people</span> <span class="nv">who</span> <span class="nv">can</span><span class="s1">&#39;</span><span class="s">t see the image]({filename}/images/IMAGE_NAME.jpg)</span>
 </pre></div>
 
 
 <p>You can interrupt the server at anytime pressing CTRL+C on the terminal. But you should start it again and check if the image is correct. Can you remember how?</p>
-<div class="highlight"><pre><span></span><span class="o">(</span>venv<span class="o">)</span>$ make html <span class="p">&amp;</span>amp<span class="p">;&amp;</span>amp<span class="p">;</span> make serve
-</pre></div>
+<p><code>(venv)$ make html &amp;&amp; make serve</code>
+One last step before your coding is "done": you should make sure anyone can read your posts using ATOM or RSS feeds. Find the pelicanconf.py, the file where you configure the system, and edit the part about feed generation:</p>
+<div class="highlight"><pre><span></span>.<span class="nv">lang</span><span class="o">=</span><span class="s2">&quot;</span><span class="s">python</span><span class="s2">&quot;</span> # <span class="nv">DON</span><span class="s1">&#39;</span><span class="s">T COPY this line, it exists just for highlighting purposes</span>
 
-
-<p>One last step before your coding is "done": you should make sure anyone can read your posts using ATOM or RSS feeds. Find the pelicanconf.py, the file where you configure the system, and edit the part about feed generation:</p>
-<div class="highlight"><pre><span></span><span class="na">.lang</span><span class="err">=</span><span class="s">&quot;python&quot;</span> <span class="c"># DON&#39;T COPY this line, it exists just for highlighting purposes</span>
-
-<span class="nf">FEED_ALL_ATOM</span> <span class="err">=</span> <span class="err">&#39;</span><span class="no">feeds</span><span class="err">/</span><span class="no">all.atom.xml</span><span class="err">&#39;</span>
-<span class="nf">FEED_ALL_RSS</span> <span class="err">=</span> <span class="err">&#39;</span><span class="no">feeds</span><span class="err">/</span><span class="no">all.rss.xml</span><span class="err">&#39;</span>
-<span class="nf">AUTHOR_FEED_RSS</span> <span class="err">=</span> <span class="err">&#39;</span><span class="no">feeds</span><span class="err">/</span><span class="nv">%s.rss.xml</span><span class="err">&#39;</span>
-<span class="nf">RSS_FEED_SUMMARY_ONLY</span> <span class="err">=</span> <span class="no">False</span>
+<span class="nv">FEED_ALL_ATOM</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="s">feeds/all.atom.xml</span><span class="s1">&#39;</span>
+<span class="nv">FEED_ALL_RSS</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="s">feeds/all.rss.xml</span><span class="s1">&#39;</span>
+<span class="nv">AUTHOR_FEED_RSS</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="s">feeds/%s.rss.xml</span><span class="s1">&#39;</span>
+<span class="nv">RSS_FEED_SUMMARY_ONLY</span> <span class="o">=</span> <span class="nv">False</span>
 </pre></div>
 
 
 <p>Save everything so you can send the code to Github. You can do that by adding all files, committing it with a message ('first commit') and using git push. You will be asked for your Github login and password.</p>
-<div class="highlight"><pre><span></span><span class="sb">`</span>$ git add -A <span class="p">&amp;</span>amp<span class="p">;&amp;</span>amp<span class="p">;</span> git commit -a -m <span class="s1">&#39;first commit&#39;</span> <span class="p">&amp;</span>amp<span class="p">;&amp;</span>amp<span class="p">;</span> git push --all<span class="sb">`</span>
-</pre></div>
-
-
-<p>As I had said before you would be preserving the master branch for the output of the static files generated by Pelican. Now it's time  to generate the mater:</p>
-<div class="highlight"><pre><span></span><span class="sb">`</span>$ make github<span class="sb">`</span>
-</pre></div>
-
-
-<p>You will be asked for your Github login and password again. And... voilà! Your new blog should be live on https://YOUR_USERNAME.github.io.</p>
+<p><code>$ git add -A &amp;&amp; git commit -a -m 'first commit' &amp;&amp; git push --all</code>
+As I had said before you would be preserving the master branch for the output of the static files generated by Pelican. Now it's time  to generate the mater:</p>
+<p><code>$ make github</code>
+You will be asked for your Github login and password again. And... voilà! Your new blog should be live on https://YOUR_USERNAME.github.io.</p>
 <h1>What's next?</h1>
 <p>You generated your first Pelican static website using Markdown and Jinja2. Additional modifications can be made to the Jinja2 templates and the content contained in the Markdown files.</p>
 <h3>Adding .gitignore</h3>
 <p>.gitignore file contains a list of files and folder that git will ignore while syncing with the remote repository. Utilizing .gitignore wisely can reduce the amount of data you need to upload.</p>
 <p>make a file .gitignore in the web-sources file with the following contents</p>
-<div class="highlight"><pre><span></span>#Custom
-output
-pelicanconf_local.py
+<div class="highlight"><pre><span></span><span class="n">#Custom</span><span class="w"></span>
+<span class="k">output</span><span class="w"></span>
+<span class="n">pelicanconf_local</span><span class="p">.</span><span class="n">py</span><span class="w"></span>
 
-#Python
-*.py[cod]
+<span class="n">#Python</span><span class="w"></span>
+<span class="o">*</span><span class="p">.</span><span class="n">py</span><span class="o">[</span><span class="n">cod</span><span class="o">]</span><span class="w"></span>
 
-# C extensions
-*.so
+<span class="err">#</span><span class="w"> </span><span class="n">C</span><span class="w"> </span><span class="n">extensions</span><span class="w"></span>
+<span class="o">*</span><span class="p">.</span><span class="n">so</span><span class="w"></span>
 
-# Packages
-*.egg
-*.egg-info
-dist
-build
-eggs
-parts
-bin
-var
-sdist
-develop-eggs
-.installed.cfg
-lib
-lib64
+<span class="err">#</span><span class="w"> </span><span class="n">Packages</span><span class="w"></span>
+<span class="o">*</span><span class="p">.</span><span class="n">egg</span><span class="w"></span>
+<span class="o">*</span><span class="p">.</span><span class="n">egg</span><span class="o">-</span><span class="n">info</span><span class="w"></span>
+<span class="n">dist</span><span class="w"></span>
+<span class="n">build</span><span class="w"></span>
+<span class="n">eggs</span><span class="w"></span>
+<span class="n">parts</span><span class="w"></span>
+<span class="n">bin</span><span class="w"></span>
+<span class="nf">var</span><span class="w"></span>
+<span class="n">sdist</span><span class="w"></span>
+<span class="n">develop</span><span class="o">-</span><span class="n">eggs</span><span class="w"></span>
+<span class="p">.</span><span class="n">installed</span><span class="p">.</span><span class="n">cfg</span><span class="w"></span>
+<span class="n">lib</span><span class="w"></span>
+<span class="n">lib64</span><span class="w"></span>
 
-# Installer logs
-pip-log.txt
+<span class="err">#</span><span class="w"> </span><span class="n">Installer</span><span class="w"> </span><span class="n">logs</span><span class="w"></span>
+<span class="n">pip</span><span class="o">-</span><span class="nf">log</span><span class="p">.</span><span class="n">txt</span><span class="w"></span>
 
-# Unit test / coverage reports
-.coverage
-.tox
-nosetests.xml
+<span class="err">#</span><span class="w"> </span><span class="n">Unit</span><span class="w"> </span><span class="n">test</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">coverage</span><span class="w"> </span><span class="n">reports</span><span class="w"></span>
+<span class="p">.</span><span class="n">coverage</span><span class="w"></span>
+<span class="p">.</span><span class="n">tox</span><span class="w"></span>
+<span class="n">nosetests</span><span class="p">.</span><span class="nc">xml</span><span class="w"></span>
 
-# Translations
-*.mo
+<span class="err">#</span><span class="w"> </span><span class="n">Translations</span><span class="w"></span>
+<span class="o">*</span><span class="p">.</span><span class="n">mo</span><span class="w"></span>
 
-# Mr Developer
-.mr.developer.cfg
-.project
-.pydevproject
+<span class="err">#</span><span class="w"> </span><span class="n">Mr</span><span class="w"> </span><span class="n">Developer</span><span class="w"></span>
+<span class="p">.</span><span class="n">mr</span><span class="p">.</span><span class="n">developer</span><span class="p">.</span><span class="n">cfg</span><span class="w"></span>
+<span class="p">.</span><span class="n">project</span><span class="w"></span>
+<span class="p">.</span><span class="n">pydevproject</span><span class="w"></span>
 </pre></div>
 
 
 <h3>Automate GitHub upload process</h3>
 <p>Create a file <code>up.sh</code> in the  <code>web-sources</code></p>
-<div class="highlight"><pre><span></span>git add -A &amp;&amp; git commit -a -m &#39;$1&#39; &amp;&amp; git push --all
+<div class="highlight"><pre><span></span><span class="n">git</span> <span class="k">add</span> <span class="o">-</span><span class="n">A</span> <span class="o">&amp;&amp;</span> <span class="n">git</span> <span class="k">commit</span> <span class="o">-</span><span class="n">a</span> <span class="o">-</span><span class="n">m</span> <span class="s1">&#39;$1&#39;</span> <span class="o">&amp;&amp;</span> <span class="n">git</span> <span class="n">push</span> <span class="c1">--all</span>
 </pre></div>
 
 
@@ -214,18 +228,18 @@ nosetests.xml
 <p>Clone pelican-themes repository</p>
 <p><code>git clone --recursive https://github.com/getpelican/pelican-themes themes</code></p>
 <p>In <code>pelicanconf.py</code> add the following variables:</p>
-<div class="highlight"><pre><span></span>THEME = &#39;themes/bootstrap2&#39;
-OUTPUT_PATH = &#39;output&#39;
-PATH = &#39;content
+<div class="highlight"><pre><span></span><span class="n">THEME</span> <span class="o">=</span> <span class="s1">&#39;themes/bootstrap2&#39;</span>
+<span class="n">OUTPUT_PATH</span> <span class="o">=</span> <span class="s1">&#39;output&#39;</span>
+<span class="n">PATH</span> <span class="o">=</span> <span class="err">&#39;</span><span class="n">content</span>
 </pre></div>
 
 
 <h3>Custom Home page</h3>
 <p>Add this variables to pelicanconf.py</p>
-<div class="highlight"><pre><span></span># Custom Home page
-DIRECT_TEMPLATES = ((&#39;index&#39;, &#39;blog&#39;, &#39;tags&#39;, &#39;categories&#39;, &#39;archives&#39;))
-PAGINATED_DIRECT_TEMPLATES = ((&#39;blog&#39;,))
-TEMPLATE_PAGES = {&#39;home.html&#39;: &#39;index.html&#39;,}
+<div class="highlight"><pre><span></span><span class="o">#</span> <span class="n">Custom</span> <span class="n">Home</span> <span class="n">page</span>
+<span class="n">DIRECT_TEMPLATES</span> <span class="o">=</span> <span class="p">((</span><span class="s1">&#39;index&#39;</span><span class="p">,</span> <span class="s1">&#39;blog&#39;</span><span class="p">,</span> <span class="s1">&#39;tags&#39;</span><span class="p">,</span> <span class="s1">&#39;categories&#39;</span><span class="p">,</span> <span class="s1">&#39;archives&#39;</span><span class="p">))</span>
+<span class="n">PAGINATED_DIRECT_TEMPLATES</span> <span class="o">=</span> <span class="p">((</span><span class="s1">&#39;blog&#39;</span><span class="p">,))</span>
+<span class="n">TEMPLATE_PAGES</span> <span class="o">=</span> <span class="err">{</span><span class="s1">&#39;home.html&#39;</span><span class="p">:</span> <span class="s1">&#39;index.html&#39;</span><span class="p">,</span><span class="err">}</span>
 </pre></div>
 
 
@@ -245,38 +259,73 @@ TEMPLATE_PAGES = {&#39;home.html&#39;: &#39;index.html&#39;,}
 <span class="nt">&lt;/div&gt;</span>
 <span class="cp">{%</span> <span class="k">endblock</span> <span class="cp">%}</span>
 </pre></div>
-    </div><!-- /.entry-content -->
+            <div>
+</div>
 
-  </article>
-</section>
-        <section id="extras" class="body">
-                <div class="blogroll">
-                        <h2>links</h2>
-                        <ul>
-                            <li><a href="http://getpelican.com/">Pelican</a></li>
-                            <li><a href="http://python.org/">Python.org</a></li>
-                            <li><a href="http://jinja.pocoo.org/">Jinja2</a></li>
-                        </ul>
-                </div><!-- /.blogroll -->
-                <div class="social">
-                        <h2>social</h2>
-                        <ul>
-                            <li><a href="/feeds/all.atom.xml" type="application/atom+xml" rel="alternate">atom feed</a></li>
-                            <li><a href="/feeds/all.rss.xml" type="application/rss+xml" rel="alternate">rss feed</a></li>
+            
+            
+            <hr/>
+            <aside>
+            <nav>
+            <ul class="articles-timeline">
+                <li class="previous-article">« <a href="/qhe.html" title="Previous: Quantum Hall Effect and related phenomenon">Quantum Hall Effect and related phenomenon</a></li>
+                <li class="next-article"><a href="/Superconductivity.html" title="Next: Superconductivity">Superconductivity</a> »</li>
+            </ul>
+            </nav>
+            </aside>
+        </div>
+        <section>
+        <div class="span2" style="float:right;font-size:0.9em;">
+            <h4>Published</h4>
+            <time itemprop="dateCreated" datetime="2019-01-01T00:00:00+05:30">Jan 1, 2019</time>
+            <h4>Category</h4>
+            <a class="category-link" href="/categories.html#blog-ref">Blog</a>
+            <h4>Tags</h4>
+            <ul class="list-of-tags tags-in-article">
+                <li><a href="/tags#gh-pages-ref">gh-pages
+                    <span>1</span>
+</a></li>
+                <li><a href="/tags#github-ref">Github
+                    <span>1</span>
+</a></li>
+                <li><a href="/tags#pelican-ref">Pelican
+                    <span>1</span>
+</a></li>
+            </ul>
+<h4>Contact</h4>
+    <a href="https://github.com/iamashwin99/" title="My Git Profile" class="sidebar-social-links" target="_blank">
+    <i class="fa fa-git sidebar-social-links"></i></a>
+    <a href="https://github.com/iamashwin26/" title="My Git(old) Profile" class="sidebar-social-links" target="_blank">
+    <i class="fa fa-git(old) sidebar-social-links"></i></a>
+    <a href="https://www.facebook.com/iamashwin99" title="My Facebook Profile" class="sidebar-social-links" target="_blank">
+    <i class="fa fa-facebook sidebar-social-links"></i></a>
+        </div>
+        </section>
+</div>
+</article>
+                </div>
+                <div class="span1"></div>
+            </div>
+        </div>
+        <div id="push"></div>
+    </div>
+<footer>
+<div id="footer">
+    <ul class="footer-content">
+        <li class="elegant-power">Powered by <a href="http://getpelican.com/" title="Pelican Home Page">Pelican</a>. Theme: <a href="https://github.com/Pelican-Elegant/elegant/" title="Theme Elegant Home Page">Elegant</a></li>
+    </ul>
+</div>
+</footer>            <script src="//code.jquery.com/jquery.min.js"></script>
+        <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+        <script>
+            function validateForm(query)
+            {
+                return (query.length > 0);
+            }
+        </script>
 
-                            <li><a href="#">You can add links in your config file</a></li>
-                            <li><a href="#">Another social link</a></li>
-                        </ul>
-                </div><!-- /.social -->
-        </section><!-- /#extras -->
-
-        <footer id="contentinfo" class="body">
-                <address id="about" class="vcard body">
-                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
-                </address><!-- /#about -->
-
-                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
-        </footer><!-- /#contentinfo -->
-
-</body>
+    
+    </body>
+    <!-- Theme: Elegant built for Pelican
+    License : MIT -->
 </html>
