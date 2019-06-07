@@ -1,250 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-        <meta charset="utf-8" />
-        <title>Ashwin's Chronicles - gh-pages</title>
-        <link rel="stylesheet" href="/theme/css/main.css" />
-        <link href="/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Ashwin's Chronicles Atom Feed" />
-        <link href="/feeds/all.rss.xml" type="application/rss+xml" rel="alternate" title="Ashwin's Chronicles RSS Feed" />
-</head>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Ashwin Kumar K" />
 
-<body id="index" class="home">
-        <header id="banner" class="body">
-                <h1><a href="/">Ashwin's Chronicles </a></h1>
-                <nav><ul>
-                    <li><a href="/category/blog.html">Blog</a></li>
-                </ul></nav>
-        </header><!-- /#banner -->
+        <meta property="og:type" content="article" />
+        <meta name="twitter:card" content="summary">
 
-            <aside id="featured" class="body">
-                <article>
-                    <h1 class="entry-title"><a href="/gh-pages-with-pelican.html">Make a Github Pages blog with Pelican</a></h1>
-<footer class="post-info">
-        <abbr class="published" title="2019-01-01T00:00:00+05:30">
-                Published: Tue 01 January 2019
-        </abbr>
-
-        <address class="vcard author">
-                By                         <a class="url fn" href="/author/ashwin.html">Ashwin</a>
-        </address>
-<p>In <a href="/category/blog.html">Blog</a>.</p>
-<p>tags: <a href="/tag/github.html">Github</a> <a href="/tag/pelican.html">Pelican</a> <a href="/tag/gh-pages.html">gh-pages</a> </p>
-</footer><!-- /.post-info --><p>Github, worlds leading  hosting service for Git repositories  offers a simple, elegant website solution. It allows its users to  store page content in a git repository along with their code.</p>
-<p>In this blog post ill walk you through the process of setting up a website by combining Pelican with Github Pages. Pelican is a simple python utility that lets you create beautiful weblogs using just text files. In other words its a static-site generator. I have chosen Pelican over other static-site generators as Pelican unlike its counter parts is based on python hence initial  setup takes literally no time.</p>
-<h2>Setting up a github.io page</h2>
-<p>To create your Github user page, log in to Github and create a  new repositorie username.github.io, as explained on Github pages. (Use your Github username for these repositories.) The  username.github.io repository will contain the output HTML files Pelican generates. To add the output directory as a submodule, initialize it with a README file.</p>
-<h2>Installing Pelican</h2>
-<p>We will first  create a virtual environment for Pelican via virtualenv before installing Pelican.</p>
-<div class="highlight"><pre><span></span>virtualenv website
-cd website
-source bin/activate
-</pre></div>
+<meta property="og:title" content="Ashwin&#39;s Chronicles"/>
+<meta name="twitter:title" content="Ashwin&#39;s Chronicles">
+<meta property="og:url" content="" />
+<meta property="og:site_name" content="Ashwin&#39;s Chronicles" />
+<meta property="og:article:author" content="Ashwin Kumar K" />
+        <title>Ashwin's Chronicles - gh-pages tag</title>
+        <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
+        <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.1/css/font-awesome.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="/theme/css/pygments.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="/theme/tipuesearch/tipuesearch.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="/theme/css/elegant.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="/theme/css/admonition.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="/theme/css/custom.css" media="screen">
+        <link href="/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Ashwin&#39;s Chronicles - Full Atom Feed" />
 
 
-<p>You can also do <code>workon website</code> inplace of the last two.
-Once the virtual environment has been created and activated, Pelican can be installed via  prefixing with sudo if permissions warrant:</p>
-<p><code>pip install pelican markdown typogrify ghp-import shovel</code> <br>
-Now clone the source repository you created:</p>
-<p><code>git clone https://github.com/YOUR_USERNAME/YOUR_USERNAME.github.io.git web-sources</code></p>
-<p>Then change directory to the source folder:</p>
-<p><code>cd web-sources</code></p>
-<p>Because of how Github Pages prefers to work, serving the files from the master branch, you have to put your source code in a new branch, preserving the "master" for the output of the static files generated by Pelican. To do that, you must create a new branch called "source":</p>
-<p><code>$ git checkout -b source</code></p>
-<h2>Pelican quickstart</h2>
-<p>Pelican provides an excellent quickstart command. Run it:</p>
-<p><code>pelican-quickstart</code></p>
-<p>The quickstart will ask you various questions, which you can answer in turn. Before answering them, take a look at my answers below:</p>
-<div class="highlight"><pre><span></span>&gt; Where do you want to create your new web site? [.] ./
-&gt; What will be the title of this web site? Ashwin&#39;s Chronicles
-&gt; Who will be the author of this web site? Ashwin Kumar K
-&gt; What will be the default language of this web site? [pt] en
-&gt; Do you want to specify a URL prefix? e.g., http://example.com   (Y/n) n
-&gt; Do you want to enable article pagination? (Y/n) y
-&gt; How many articles per page do you want? [10] 10
-&gt; What is your time zone? [Europe/Paris] Asia/Calcutta
-&gt; Do you want to generate a Fabfile/Makefile to automate generation and publishing? (Y/n) Y **# PAY ATTENTION TO THIS!**
-&gt; Do you want an auto-reload &amp; simpleHTTP script to assist with theme and site development? (Y/n) n
-&gt; Do you want to upload your website using FTP? (y/N) n
-&gt; Do you want to upload your website using SSH? (y/N) n
-&gt; Do you want to upload your website using Dropbox? (y/N) n
-&gt; Do you want to upload your website using S3? (y/N) n
-&gt; Do you want to upload your website using Rackspace Cloud Files? (y/N) n
-&gt; Do you want to upload your website using GitHub Pages? (y/N) y
-&gt; Is this your personal page (username.github.io)? (y/N) y
-Done. Your new project is available at YOUR_USERNAME.github.io
-</pre></div>
 
-
-<p>Now, go ahead and create your first blog post! You might want to open the project folder on your favorite code editor and find the "content" folder inside it. Then, create a new file, which can be called my-first-post.md (Just for testing). The contents should begin with the metadata which identifies the Title, Date, Category and more from the post before you start with the content, like this:</p>
-<div class="highlight"><pre><span></span><span class="n">Title</span><span class="o">:</span> <span class="n">My</span> <span class="n">first</span> <span class="n">post</span>
-<span class="n">Date</span><span class="o">:</span> <span class="mi">2018</span><span class="o">-</span><span class="mi">1</span><span class="o">-</span><span class="mi">2</span>
-<span class="n">Modified</span><span class="o">:</span> <span class="mi">2018</span><span class="o">-</span><span class="mi">1</span><span class="o">-</span><span class="mi">3</span>
-<span class="n">Category</span><span class="o">:</span> <span class="n">misc</span>
-<span class="n">Tags</span><span class="o">:</span> <span class="n">first</span><span class="o">,</span> <span class="n">misc</span>
-<span class="n">Slug</span><span class="o">:</span> <span class="n">My</span><span class="o">-</span><span class="n">first</span><span class="o">-</span><span class="n">post</span>
-<span class="n">Authors</span><span class="o">:</span> <span class="n">Your</span> <span class="n">name</span>
-<span class="n">Summary</span><span class="o">:</span> <span class="n">What</span> <span class="n">does</span> <span class="n">your</span> <span class="n">post</span> <span class="n">talk</span> <span class="n">about</span><span class="o">?</span> <span class="n">Write</span> <span class="n">here</span><span class="o">.</span>
-
-<span class="n">This</span> <span class="k">is</span> <span class="n">the</span> <span class="o">*</span><span class="n">first</span> <span class="n">post</span><span class="o">*</span> <span class="n">from</span> <span class="n">my</span> <span class="n">Pelican</span> <span class="n">blog</span><span class="o">.</span> <span class="o">**</span><span class="n">YAY</span><span class="o">!**</span>
-</pre></div>
-
-
-<p>Let's see how it looks?</p>
-<p>Go to the terminal, generate the static files and start the server. To do that, use the following command:</p>
-<p><code>(venv)$ make html &amp;&amp; make serve</code>
-While this command is running, you should be able to visit it on your favorite web browser by typing <code>localhost:8000</code> on the address bar.</p>
-<h2>A little touch up</h2>
-<p>Now,  if you want to put an image in a post, a neat way is to first  create a 'images' directory inside your content directory, where your posts are. Now, you have to tell Pelican to use it. Find the <code>pelicanconf.py</code>, the file where you configure the system, and add a variable that contains the directory with your images:</p>
-<div class="highlight"><pre><span></span><span class="na">.lang</span><span class="err">=</span><span class="s">&quot;python&quot;</span> <span class="c"># DON&#39;T COPY this line, it exists just for highlighting purposes</span>
-
-<span class="nf">STATIC_PATHS</span> <span class="err">=</span> <span class="p">[</span><span class="err">&#39;</span><span class="no">images</span><span class="err">&#39;</span><span class="p">]</span>
-</pre></div>
-
-
-<p>Save it. Go to your post and add the image this way:</p>
-<div class="highlight"><pre><span></span><span class="na">.lang</span><span class="err">=</span><span class="s">&quot;markdown&quot;</span> <span class="c"># DON&#39;T COPY this line, it exists just for highlighting purposes</span>
-
-<span class="err">![</span><span class="nf">Write</span> <span class="no">here</span> <span class="no">a</span> <span class="no">good</span> <span class="no">description</span> <span class="no">for</span> <span class="no">people</span> <span class="no">who</span> <span class="no">can</span><span class="err">&#39;</span><span class="no">t</span> <span class="no">see</span> <span class="no">the</span> <span class="no">image</span><span class="p">](</span><span class="err">{</span><span class="no">filename</span><span class="err">}/</span><span class="no">images</span><span class="err">/</span><span class="no">IMAGE_NAME.jpg</span><span class="p">)</span>
-</pre></div>
-
-
-<p>You can interrupt the server at anytime pressing CTRL+C on the terminal. But you should start it again and check if the image is correct. Can you remember how?</p>
-<p><code>(venv)$ make html &amp;&amp; make serve</code>
-One last step before your coding is "done": you should make sure anyone can read your posts using ATOM or RSS feeds. Find the pelicanconf.py, the file where you configure the system, and edit the part about feed generation:</p>
-<div class="highlight"><pre><span></span><span class="na">.lang</span><span class="err">=</span><span class="s">&quot;python&quot;</span> <span class="c"># DON&#39;T COPY this line, it exists just for highlighting purposes</span>
-
-<span class="nf">FEED_ALL_ATOM</span> <span class="err">=</span> <span class="err">&#39;</span><span class="no">feeds</span><span class="err">/</span><span class="no">all.atom.xml</span><span class="err">&#39;</span>
-<span class="nf">FEED_ALL_RSS</span> <span class="err">=</span> <span class="err">&#39;</span><span class="no">feeds</span><span class="err">/</span><span class="no">all.rss.xml</span><span class="err">&#39;</span>
-<span class="nf">AUTHOR_FEED_RSS</span> <span class="err">=</span> <span class="err">&#39;</span><span class="no">feeds</span><span class="err">/</span><span class="nv">%s.rss.xml</span><span class="err">&#39;</span>
-<span class="nf">RSS_FEED_SUMMARY_ONLY</span> <span class="err">=</span> <span class="no">False</span>
-</pre></div>
-
-
-<p>Save everything so you can send the code to Github. You can do that by adding all files, committing it with a message ('first commit') and using git push. You will be asked for your Github login and password.</p>
-<p><code>$ git add -A &amp;&amp; git commit -a -m 'first commit' &amp;&amp; git push --all</code>
-As I had said before you would be preserving the master branch for the output of the static files generated by Pelican. Now it's time  to generate the mater:</p>
-<p><code>$ make github</code>
-You will be asked for your Github login and password again. And... voilà! Your new blog should be live on https://YOUR_USERNAME.github.io.</p>
-<h1>What's next?</h1>
-<p>You generated your first Pelican static website using Markdown and Jinja2. Additional modifications can be made to the Jinja2 templates and the content contained in the Markdown files.</p>
-<h3>Adding .gitignore</h3>
-<p>.gitignore file contains a list of files and folder that git will ignore while syncing with the remote repository. Utilizing .gitignore wisely can reduce the amount of data you need to upload.</p>
-<p>make a file .gitignore in the web-sources file with the following contents</p>
-<div class="highlight"><pre><span></span>#Custom
-output
-pelicanconf_local.py
-
-#Python
-*.py[cod]
-
-# C extensions
-*.so
-
-# Packages
-*.egg
-*.egg-info
-dist
-build
-eggs
-parts
-bin
-var
-sdist
-develop-eggs
-.installed.cfg
-lib
-lib64
-
-# Installer logs
-pip-log.txt
-
-# Unit test / coverage reports
-.coverage
-.tox
-nosetests.xml
-
-# Translations
-*.mo
-
-# Mr Developer
-.mr.developer.cfg
-.project
-.pydevproject
-</pre></div>
-
-
-<h3>Automate GitHub upload process</h3>
-<p>Create a file <code>up.sh</code> in the  <code>web-sources</code></p>
-<div class="highlight"><pre><span></span>git add -A &amp;&amp; git commit -a -m &#39;$1&#39; &amp;&amp; git push --all
-</pre></div>
-
-
-<p>Now whenever you want to upload sync the repo just do <code>bash up.sh "Comment"</code> Note that the argument "Comment" should not contain spaces.</p>
-<h3>Download Themes</h3>
-<p>Clone pelican-themes repository</p>
-<p><code>git clone --recursive https://github.com/getpelican/pelican-themes themes</code></p>
-<p>In <code>pelicanconf.py</code> add the following variables:</p>
-<div class="highlight"><pre><span></span>THEME = &#39;themes/bootstrap2&#39;
-OUTPUT_PATH = &#39;output&#39;
-PATH = &#39;content
-</pre></div>
-
-
-<h3>Custom Home page</h3>
-<p>Add this variables to pelicanconf.py</p>
-<div class="highlight"><pre><span></span># Custom Home page
-DIRECT_TEMPLATES = ((&#39;index&#39;, &#39;blog&#39;, &#39;tags&#39;, &#39;categories&#39;, &#39;archives&#39;))
-PAGINATED_DIRECT_TEMPLATES = ((&#39;blog&#39;,))
-TEMPLATE_PAGES = {&#39;home.html&#39;: &#39;index.html&#39;,}
-</pre></div>
-
-
-<p>Duplicated the index.html to blog.html in your template folder and add this lines:</p>
-<div class="highlight"><pre><span></span><span class="cp">{%</span> <span class="k">set</span> <span class="nv">active_page</span> <span class="o">=</span> <span class="s2">&quot;blog&quot;</span> <span class="cp">%}</span><span class="x"></span>
-<span class="cp">{%</span> <span class="k">block</span> <span class="nv">title</span> <span class="cp">%}{{</span> <span class="nv">SITENAME</span> <span class="cp">}}</span><span class="x"> - Blog</span><span class="cp">{%</span> <span class="k">endblock</span> <span class="cp">%}</span><span class="x"></span>
-</pre></div>
-
-
-<p>Create home.html or use page override feature to use a Markdown page as your home page.</p>
-<p><code>nano home.html</code></p>
-<div class="highlight"><pre><span></span><span class="cp">{%</span> <span class="k">extends</span> <span class="s2">&quot;base.html&quot;</span> <span class="cp">%}</span>
-<span class="cp">{%</span> <span class="k">block</span> <span class="nv">content</span> <span class="cp">%}</span>
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&#39;page&#39;</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;page-header&quot;</span><span class="nt">&gt;&lt;h1&gt;</span>Home<span class="nt">&lt;/h1&gt;&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;page-content&quot;</span><span class="nt">&gt;</span>Content<span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/div&gt;</span>
-<span class="cp">{%</span> <span class="k">endblock</span> <span class="cp">%}</span>
-</pre></div>                </article>
-            </aside><!-- /#featured -->
-        <section id="extras" class="body">
-                <div class="blogroll">
-                        <h2>links</h2>
-                        <ul>
-                            <li><a href="http://getpelican.com/">Pelican</a></li>
-                            <li><a href="http://python.org/">Python.org</a></li>
-                            <li><a href="http://jinja.pocoo.org/">Jinja2</a></li>
-                            <li><a href="#">You can modify those links in your config file</a></li>
+    </head>
+    <body>
+        <div id="content-sans-footer">
+        <div class="navbar navbar-static-top">
+            <div class="navbar-inner">
+                <div class="container-fluid">
+                    <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </a>
+                    <a class="brand" href="/"><span class=site-name>Ashwin's Chronicles</span></a>
+                    <div class="nav-collapse collapse">
+                        <ul class="nav pull-right top-menu">
+                            <li ><a href="">Home</a></li>
+                            <li ><a href="/pages/AboutMe.html">About Me</a></li>
+                            <li ><a href="/categories">Categories</a></li>
+                            <li ><a href="/tags">Tags</a></li>
+                            <li ><a href="/archives">Archives</a></li>
+                            <li><form class="navbar-search" action="/search.html" onsubmit="return validateForm(this.elements['q'].value);"> <input type="text" class="search-query" placeholder="Search" name="q" id="tipue_search_input"></form></li>
                         </ul>
-                </div><!-- /.blogroll -->
-                <div class="social">
-                        <h2>social</h2>
-                        <ul>
-                            <li><a href="/feeds/all.atom.xml" type="application/atom+xml" rel="alternate">atom feed</a></li>
-                            <li><a href="/feeds/all.rss.xml" type="application/rss+xml" rel="alternate">rss feed</a></li>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row-fluid">
+                <div class="span1"></div>
+                <div class="span10">
+<div class="row-fluid">
 
-                            <li><a href="#">You can add links in your config file</a></li>
-                            <li><a href="#">Another social link</a></li>
-                        </ul>
-                </div><!-- /.social -->
-        </section><!-- /#extras -->
+    <div class="row-fluid">
 
-        <footer id="contentinfo" class="body">
-                <address id="about" class="vcard body">
-                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
-                </address><!-- /#about -->
+    </div>
 
-                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
-        </footer><!-- /#contentinfo -->
-
-</body>
+    <div class="row-fluid">
+        <div class="span8 offset2">
+            <header>
+            <h1 id="recent-posts">Recent Posts <a id="allposts" href="/archives">all posts</a></h1>
+            </header>
+        <div class="recent-posts">
+            <article itemscope>
+                <a href="/gh-pages-with-pelican.html">Make a Github Pages blog with Pelican  </a>
+                <section>
+                    posted in
+                <a href="/categories#blog-ref">Blog</a>
+                <div class="recent-posts-time">
+                <time itemprop="dateCreated" datetime="2019-01-01T00:00:00+05:30">Tue 01 January 2019</time>
+                </div>
+                </section>
+            </article>
+        </div>
+        </div>
+    </div>
+</div>
+                </div>
+                <div class="span1"></div>
+            </div>
+        </div>
+        <div id="push"></div>
+    </div>
+<footer>
+<div id="footer">
+    <ul class="footer-content">
+        <li class="elegant-power">Powered by <a href="http://getpelican.com/" title="Pelican Home Page">Pelican</a>. Theme: <a href="https://github.com/Pelican-Elegant/elegant/" title="Theme Elegant Home Page">Elegant</a></li>
+    </ul>
+</div>
+</footer>        <script src="//code.jquery.com/jquery.min.js"></script>
+        <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+        <script>
+            function validateForm(query)
+            {
+                return (query.length > 0);
+            }
+        </script>
+    </body>
+    <!-- Theme: Elegant built for Pelican
+    License : MIT -->
 </html>
