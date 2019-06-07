@@ -1,6 +1,6 @@
 Title:Quantum Hall Effect and related phenomenon
 Date: 2019-1-1
-Tags: qhe
+Tags: qhe,hall effect,landau levels
 Category:Science
 Slug: qhe
 Author: Ashwin
@@ -381,18 +381,18 @@ intersects the boundary, and bounces off it.
 
 ![Edge states in a sample](../images/edge.png)
 
-[1]"Wikipedia Entry on Hall Effect", En.Wikipedia.org (Retrieved 25 April 2019).
+[1]:"Wikipedia Entry on Hall Effect", En.Wikipedia.org (Retrieved 25 April 2019).
 
-[2]"Wikipedia Entry on Landau quantization", En.Wikipedia.org (Retrieved 26 April 2019).
+[2]:"Wikipedia Entry on Landau quantization", En.Wikipedia.org (Retrieved 26 April 2019).
 
-[3]"NPTEL :: Physics - NOC: Advanced Condensed matter physics" (Retrieved 27 April 2019).
+[3]:"NPTEL :: Physics - NOC: Advanced Condensed matter physics" (Retrieved 27 April 2019).
 
-[4]F. Duncan M. Haldane, "Nobel Lecture: Topological quantum matter", Rev. Mod. Phys. 89 (2017), pp. 040502.
+[4]:F. Duncan M. Haldane, "Nobel Lecture: Topological quantum matter", Rev. Mod. Phys. 89 (2017), pp. 040502.
 
-[5]P Sharvari Kulkarni, "Report on Quantum Hall Effect" (April 18, 2019).
+[5]:P Sharvari Kulkarni, "Report on Quantum Hall Effect" (April 18, 2019).
 
-[6]David Tong, Lectures on the Quantum Hall Effect ().
+[6]:David Tong, Lectures on the Quantum Hall Effect ().
 
-[7]T. Ando; Y. Matsumoto; Y. Uemura, "Theory of Hall effect in a two-dimensional electron system", Journal of the Physical Society of Japan 39, 2 (), pp. 279--288.
+[7]:T. Ando; Y. Matsumoto; Y. Uemura, "Theory of Hall effect in a two-dimensional electron system", Journal of the Physical Society of Japan 39, 2 (), pp. 279--288.
 
-[8]Klaus von Klitzing, Benoît Douçot, Vincent Pasquier, Bertrand Duplantier, Vincent Rivasseau, The Quantum Hall Effect vol. 45, (Birkhäuser Basel, ).
+[8]:Klaus von Klitzing, Benoît Douçot, Vincent Pasquier, Bertrand Duplantier, Vincent Rivasseau, The Quantum Hall Effect vol. 45, (Birkhäuser Basel, ).

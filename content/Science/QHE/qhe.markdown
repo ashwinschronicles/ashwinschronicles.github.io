@@ -58,7 +58,7 @@ Now a constant current along the $x$ axis is passed. When a magnetic
 field is applied along the $z$ axis ($B_{z}$), the charges in the
 current experience a force (the Lorentz force).
 
-![Fig 1 Schematic diagram of the Hall effect measurement setup](../images/Hall_Effect_Measurement_Setup_for_Electrons.png)
+![Fig 1 Schematic diagram of the Hall effect measurement setup](../../images/Hall_Effect_Measurement_Setup_for_Electrons.png)
 
 In the absence $B_{z}$, the charges follow approximately straight paths.
 However, when $B_{z}$ is applied, their paths get curved, in this way
@@ -111,21 +111,21 @@ data and graphs are as following:
 current was determined and plotted. Two readings corresponding to single
 current value specifies the values during increment and decrement of
 current viz. to minimize the error.
-![](../images/hall_data_table.png)
+![](../../images/hall_data_table.png)
 
-![Magnetic field vs Current ](../images/hall_data_graph.png)
+![Magnetic field vs Current ](../../images/hall_data_graph.png)
 
 **Part-2:** The values of Hall Voltages are measured for different
 geometrical combinations.The data obtained is as follows -
 
-![image](../images/hall_data_table2.png)
+![image](../../images/hall_data_table2.png)
 
 Corresponding graphs are plotted here.
 
-![](../images/hall_data_graph2.png)
-![](../images/hall_data_graph3.png)
-![](../images/hall_data_graph4.png)
-![](../images/hall_data_graph5.png)
+![](../../images/hall_data_graph2.png)
+![](../../images/hall_data_graph3.png)
+![](../../images/hall_data_graph4.png)
+![](../../images/hall_data_graph5.png)
 
 From all these graphs, the average value of slope is **0.03218
 $\frac{mV}{Gauss}$** . We have sample current equal to 10mA and
@@ -153,7 +153,7 @@ Magnetic field. We see some sort of quantization of Hall conductance.
 The observed resistivity is shown in next figure.
 
 ![Hall resistance and longitudinal resistivity data as a function of the
-magnetic field for a GaAs/AlGaAs hetero-structures at 1.5 K](../images/HallPvsB.png)[8]
+magnetic field for a GaAs/AlGaAs hetero-structures at 1.5 K](../../images/HallPvsB.png)[8]
 
 On observing the graph and a little bit of theoretical calculations one
 can deduce the following:
@@ -379,20 +379,20 @@ orbits that precess around the boundary of the system in the opposite
 sense to that of the Landau orbits, when a particle in a Landau orbit
 intersects the boundary, and bounces off it.
 
-![Edge states in a sample](../images/edge.png)
+![Edge states in a sample](../../images/edge.png)
 
-[1]"Wikipedia Entry on Hall Effect", En.Wikipedia.org (Retrieved 25 April 2019).
+[1]:"Wikipedia Entry on Hall Effect", En.Wikipedia.org (Retrieved 25 April 2019).
 
-[2]"Wikipedia Entry on Landau quantization", En.Wikipedia.org (Retrieved 26 April 2019).
+[2]:"Wikipedia Entry on Landau quantization", En.Wikipedia.org (Retrieved 26 April 2019).
 
-[3]"NPTEL :: Physics - NOC: Advanced Condensed matter physics" (Retrieved 27 April 2019).
+[3]:"NPTEL :: Physics - NOC: Advanced Condensed matter physics" (Retrieved 27 April 2019).
 
-[4]F. Duncan M. Haldane, "Nobel Lecture: Topological quantum matter", Rev. Mod. Phys. 89 (2017), pp. 040502.
+[4]:F. Duncan M. Haldane, "Nobel Lecture: Topological quantum matter", Rev. Mod. Phys. 89 (2017), pp. 040502.
 
-[5]P Sharvari Kulkarni, "Report on Quantum Hall Effect" (April 18, 2019).
+[5]:P Sharvari Kulkarni, "Report on Quantum Hall Effect" (April 18, 2019).
 
-[6]David Tong, Lectures on the Quantum Hall Effect ().
+[6]:David Tong, Lectures on the Quantum Hall Effect ().
 
-[7]T. Ando; Y. Matsumoto; Y. Uemura, "Theory of Hall effect in a two-dimensional electron system", Journal of the Physical Society of Japan 39, 2 (), pp. 279--288.
+[7]:T. Ando; Y. Matsumoto; Y. Uemura, "Theory of Hall effect in a two-dimensional electron system", Journal of the Physical Society of Japan 39, 2 (), pp. 279--288.
 
-[8]Klaus von Klitzing, Benoît Douçot, Vincent Pasquier, Bertrand Duplantier, Vincent Rivasseau, The Quantum Hall Effect vol. 45, (Birkhäuser Basel, ).
+[8]:Klaus von Klitzing, Benoît Douçot, Vincent Pasquier, Bertrand Duplantier, Vincent Rivasseau, The Quantum Hall Effect vol. 45, (Birkhäuser Basel, ).
