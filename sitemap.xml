@@ -5,28 +5,28 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>/</loc>
-<lastmod>2019-06-08T01:22:31-00:00</lastmod>
+<lastmod>2019-06-20T19:46:34-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/archives.html</loc>
-<lastmod>2019-06-08T01:22:31-00:00</lastmod>
+<lastmod>2019-06-20T19:46:34-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tags.html</loc>
-<lastmod>2019-06-08T01:22:31-00:00</lastmod>
+<lastmod>2019-06-20T19:46:34-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/categories.html</loc>
-<lastmod>2019-06-08T01:22:31-00:00</lastmod>
+<lastmod>2019-06-20T19:46:34-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -40,7 +40,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>/Superconductivity/</loc>
-<lastmod>2019-06-06T00:00:00+05:30</lastmod>
+<lastmod>2019-06-20T00:00:00+05:30</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
@@ -68,7 +68,14 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>/category/science.html</loc>
-<lastmod>2019-06-06T00:00:00+05:53</lastmod>
+<lastmod>2019-06-20T00:00:00+05:53</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>/category/superconductivity.html</loc>
+<lastmod>2019-06-20T00:00:00+05:53</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -89,7 +96,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>/tag/superconductivity.html</loc>
-<lastmod>2019-06-06T00:00:00+05:53</lastmod>
+<lastmod>2019-06-20T00:00:00+05:53</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -103,7 +110,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>/tag/cooper-pairs.html</loc>
-<lastmod>2019-06-06T00:00:00+05:53</lastmod>
+<lastmod>2019-06-20T00:00:00+05:53</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -131,7 +138,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>/tag/spin.html</loc>
-<lastmod>2019-06-06T00:00:00+05:53</lastmod>
+<lastmod>2019-06-20T00:00:00+05:53</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -145,7 +152,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>/author/ashwin-kumar-k.html</loc>
-<lastmod>2019-06-06T00:00:00+05:53</lastmod>
+<lastmod>2019-06-20T00:00:00+05:53</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
