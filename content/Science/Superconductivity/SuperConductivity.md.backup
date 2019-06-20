@@ -9,33 +9,74 @@ This post is my notes on Superconductivity from video lectures of [Sergey Frolov
  
 
 # Properties
--------
 
 - Discoverd first in Hg at 4.2K in Liquid Helium
 - Super current induced in a ring follows $$ I(t)=I_0e^{(-t/\tau))}$$ and dosent change much for over 100,000 years for SC and goes to 1% of initial value in few nano secondsin a normal metal.
 - Magnetic field destroy super conductivity (so does current in the SC)
-![](../../images/SC_mag.png)
+![image](../../images/SC_mag.png)
 
 - Magnetic Impurities lower $T_C$ (non mag has no effect)
 
 - Fe Co Ni nonSC
 - CU Ag Au nonSC
-- ![](../../images/sup_ele.png)
+- ![image](../../images/sup_ele.png)
 - Si becomes SC at high Pressure
 - Conventional and unconventional SC
 - most unconventional SC has C,O atoms in  pervoskite structure.
--  ![](../../images/SC_graph.png)
-- *Meissner effect* is perfect expulsion of Magnetic field out of SC (except penetration depth) due to screening current![](../../images/misener.png)
+-  ![image](../../images/SC_graph.png)
+- *Meissner effect* is perfect expulsion of Magnetic field out of SC (except penetration depth) due to screening current![image](../../images/misener.png)
 - SC act as perfect diamagnet $\chi=-1$ and is a defining feature of SC and not just $\rho$=0
+
+- Difference between perfect conductor and SC ![Difference between perfect conductor and SC](../../images/SUP_perfCandSC.png)
+
+- The esseence of meissner effect is that SC **alaways expels the magnetic field**
+
 - Heat capacity of a SC is dicontinuous at $T_C$ and crashes to 0 after  $T_C$
-![](../../images/Heat_capacity.png)
-- the function is given by $C \alpha e^{a/T}$
+![image](../../images/Heat_capacity.png)
+
+- The function is given by $C \alpha e^{a/T}$ and is simmilar to Einstein's model of specific heat, n coupled osscilator model. 
+- Exponets offten go with gaps (semiconductor and superconductor state)
+- In the super conducting state, there is a samll energy gap arround the fermi level. With $E_g~10x^{-4}E_F$
+![SC_band](../../images/SC_band.png)
+
+- one in 10,000 electrons participate in SC state.
+- The a in $C \alpha e^{a/T}$ is given by $-E_g/2$
+- Higher $E_g$ implies higher $T_C$
+![EG_periodic](../../images/EG_periodic.png)
+
+- Nb has the higest gap of all the materials.
 
 ## Applications
-- Super conducting single photon detector telescope![](../../images/photondetector.png)
+
+- Super conducting single photon detector telescope![image](../../images/photondetector.png)
 - Quantum computer with photons.
 - Levitating high speed trains(~600 km/h).
 -MRI,NMR,SQUID
 -High efficiency generators
 
 - *Fun fact:* Essen, Germany has the world's longest superconducting power cable in production at 1 kilometer. It is a 10 kV liquid nitrogen cooled cable. The cable is smaller than an equivalent 110 kV regular cable and the lower voltage has the additional benefit of smaller transformers.
+
+# Superfluidity of He
+
+- Zero viscocity
+
+- Measurement show the 0 resistance to flow of He 
+- ie the flow velocity of liquid helium is independent of applied pressure.
+- in semicunductor attraction between $e^-$ in conduction band and holes in valence bond give rise to a bound pairs known as excitons , they also show super fluidity.![superfluidity](../../images/exciton.png)
+
+- Because they contain real bound pairs of 2 fermions (in contrast to cooper pais) excitons are bosons.
+- as a result it is possible for them to form a Bose-Einstein condensate, a superfluid that can flow withoutt resistance
+- (this does not give rise to superconductivity as excitons are incharged
+
+# Why is there superconductivity?
+tldr: Two electrons form a bound state called Cooper pair. These cooper pairs form a condensate.
+![cooperpairs](../../images/cooperpairs.png)
+
+When an electron is moving through a solid with momentum K, since it also interacts with the latice, there is an electron phonon interaction, meaning an electron mvoing th rough the crystal launches a phonon, another electron flying in a different direction can absorb this photon and forma bound state. These cooper pairs form a condensate (they are all in the same indistinguisahable quantum state). And the condensate can be represented by the wave function $\psi=n_s E^{i \phi}$, where $n_s$ is the density of Cooper pair and $\phi$ deontes the phase.
+
+# London equations
+![London equations](../../images/London_eqn.png)
+- 
+
+
+

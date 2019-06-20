@@ -93,7 +93,7 @@ SUBSCRIBE_BUTTON_TITLE = u'Send me Free updates'
 MAILCHIMP_FORM_ACTION = u'empty'
 
 # Legal
-SITE_LICENSE = """Elegant theme documentation is licensed under a <a rel="license" 
+SITE_LICENSE = """All articles written by me in this weebsite are licensed under a <a rel="license" 
     href="http://creativecommons.org/licenses/by/4.0/">
     Creative Commons Attribution 4.0 International License</a>.""" 
     
