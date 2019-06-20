@@ -532,16 +532,16 @@ data and graphs are as following:&lt;/p&gt;
 current was determined and plotted. Two readings corresponding to single
 current value specifies the values during increment and decrement of
 current viz. to minimize the error.
-&lt;img alt="" src="../../images/hall_data_table.png"/&gt;&lt;/p&gt;
+&lt;img alt="image" src="../../images/hall_data_table.png"/&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img alt="Magnetic field vs Current " src="../../images/hall_data_graph.png"/&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Part-2:&lt;/strong&gt; The values of Hall Voltages are measured for different
 geometrical combinations.The data obtained is as follows -&lt;/p&gt;
 &lt;p&gt;&lt;img alt="image" src="../../images/hall_data_table2.png"/&gt;&lt;/p&gt;
 &lt;p&gt;Corresponding graphs are plotted here.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="" src="../../images/hall_data_graph2.png"/&gt;
-&lt;img alt="" src="../../images/hall_data_graph3.png"/&gt;
-&lt;img alt="" src="../../images/hall_data_graph4.png"/&gt;
-&lt;img alt="" src="../../images/hall_data_graph5.png"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="image" src="../../images/hall_data_graph2.png"/&gt;
+&lt;img alt="image" src="../../images/hall_data_graph3.png"/&gt;
+&lt;img alt="image" src="../../images/hall_data_graph4.png"/&gt;
+&lt;img alt="image" src="../../images/hall_data_graph5.png"/&gt;&lt;/p&gt;
 &lt;p&gt;From all these graphs, the average value of slope is &lt;strong&gt;0.03218
 &lt;span class="math"&gt;\(\frac{mV}{Gauss}\)&lt;/span&gt;&lt;/strong&gt; . We have sample current equal to 10mA and
 sample length as 5mm.&lt;/p&gt;
