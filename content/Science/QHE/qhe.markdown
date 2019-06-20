@@ -111,7 +111,7 @@ data and graphs are as following:
 current was determined and plotted. Two readings corresponding to single
 current value specifies the values during increment and decrement of
 current viz. to minimize the error.
-![](../../images/hall_data_table.png)
+![image](../../images/hall_data_table.png)
 
 ![Magnetic field vs Current ](../../images/hall_data_graph.png)
 
@@ -122,10 +122,10 @@ geometrical combinations.The data obtained is as follows -
 
 Corresponding graphs are plotted here.
 
-![](../../images/hall_data_graph2.png)
-![](../../images/hall_data_graph3.png)
-![](../../images/hall_data_graph4.png)
-![](../../images/hall_data_graph5.png)
+![image](../../images/hall_data_graph2.png)
+![image](../../images/hall_data_graph3.png)
+![image](../../images/hall_data_graph4.png)
+![image](../../images/hall_data_graph5.png)
 
 From all these graphs, the average value of slope is **0.03218
 $\frac{mV}{Gauss}$** . We have sample current equal to 10mA and
