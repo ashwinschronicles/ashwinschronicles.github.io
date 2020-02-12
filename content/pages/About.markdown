@@ -18,4 +18,8 @@ I intend to post details of projects or experiments that I have performed mostly
 
 Take a trip down my memory lane. I hope to see you around!
 
-[Here is my CV :]({filename}/pdfs/Academic_CV.pdf)
+Here is my CV :
+
+[1 page version]({filename}/pdfs/Academic_CV.pdf)
+
+[Curriculum Vitae]({filename}/pdfs/Vitae.pdf)
