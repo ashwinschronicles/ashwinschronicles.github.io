@@ -42,7 +42,8 @@ EXTRA_PATH_METADATA = {
 # Social widget
 SOCIAL = (('Git', 'https://github.com/iamashwin99/'),
           ('Git(old)', 'https://github.com/iamashwin26/'),
-          ('Facebook', 'https://www.facebook.com/iamashwin99'),)
+          ('Facebook', 'https://www.facebook.com/iamashwin99'),
+          ('LinkedIn','https://www.linkedin.com/in/ashwin-k-4854b8121/'))
 
 # clean urls for pages , trailing slash to support HTTPS
 PAGE_URL = '{slug}/'
@@ -108,7 +109,9 @@ LANDING_PAGE_ABOUT = {'title': 'The Journey Begins',
 <p>I had always wanted to publish some of my projects and experiments on a public platform so that people working on similar projects can give and take ideas. It also serves as a way to showcase the experience that I have gained while doing such projects.</p>
 <p>I intend to post details of projects or experiments that I have performed mostly in the field of Science and Engineering as I complete them.</p>
 <p>Take a trip down my memory lane. I hope to see you around!</p>
-<p><a href="https://ashwinschronicles.github.io/pdfs/Academic_CV.pdf">Here is my CV :</a></p>"""}
+<p> Here is my CV : </p>
+<p> <a href="https://ashwinschronicles.github.io/pdfs/Vitae.pdf">Curriculum Vitae</a></p>
+<p> <a href="https://ashwinschronicles.github.io/pdfs/Academic_CV.pdf">1 Page Version</a></p>"""}
 
 
 # SEO

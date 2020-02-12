@@ -1,6 +1,6 @@
 Title:Introduction to IoT.
 Date: 2018-7-12
-Tags: IoT,Pelican,gh-pages
+Tags: IoT
 Category:Engineering
 Slug: Intro-to-IoT
 Author: Ashwin
