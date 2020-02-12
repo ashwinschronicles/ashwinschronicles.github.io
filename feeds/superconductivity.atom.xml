@@ -1,5 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Ashwin's Chronicles - Superconductivity</title><link href="/" rel="alternate"></link><link href="/feeds/superconductivity.atom.xml" rel="self"></link><id>/</id><updated>2019-06-20T00:00:00+05:30</updated><entry><title>Superconductivity</title><link href="/Superconductivity/" rel="alternate"></link><published>2019-06-06T00:00:00+05:30</published><updated>2019-06-20T00:00:00+05:30</updated><author><name>Ashwin Kumar K</name></author><id>tag:None,2019-06-06:/Superconductivity/</id><summary type="html">&lt;p&gt;Short note on superconductivity&lt;/p&gt;</summary><content type="html">&lt;p&gt;This post is my notes on Superconductivity from video lectures of &lt;a href="https://www.youtube.com/channel/UCDBKb7qMyNXujTf7kKRdstg" title="Youtube Link"&gt;Sergey Frolov&lt;/a&gt;on Solid State Physics and other online sites such as http://www.superconductors.org&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Ashwin's Chronicles - Superconductivity</title><link href="/" rel="alternate"></link><link href="/feeds/superconductivity.atom.xml" rel="self"></link><id>/</id><updated>2019-06-27T00:00:00+05:30</updated><entry><title>Superconductor terminology</title><link href="/Superconductor_terminology/" rel="alternate"></link><published>2019-06-26T00:00:00+05:30</published><updated>2019-06-27T00:00:00+05:30</updated><author><name>Ashwin Kumar K</name></author><id>tag:None,2019-06-26:/Superconductor_terminology/</id><summary type="html">&lt;p&gt;Short note on terminologies used in superconductivity field.&lt;/p&gt;</summary><content type="html">&lt;h1 id="superconductor terminology"&gt;Superconductor terminology&lt;/h1&gt;
+&lt;p&gt;The following content on superconductor terminology  is largely derived from &amp;nbsp;http://www.superconductors.org/terms.htm&amp;nbsp;with some modifications.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Anneal&lt;/strong&gt;: To heat and then slowly cool a material to reduce brittleness. Annealing of ceramic superconductors usually follows sintering and is done in an oxygen-rich atmosphere to restore oxygen lost during sintering. The oxygen content of a ceramic superconductor is critical. For example, YBCO with 6.4 atoms of oxygen will not superconduct. But YBCO with 6.5 atoms will. &lt;img alt="img" src="http://www.superconductors.org/O2_level.gif" width="150px"/&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Anti-ferromagnetism:&lt;/strong&gt; A state of matter where adjacent ions in a material are aligned in opposite or "anti-parallel" arrays. Such materials display almost no response to an external magnetic field at low temperatures and only a weak attaction at higher temperatures. There is evidence that anti-ferromagnetism in the copper oxides plays a role in the formation of Cooper pairs and, thus, in facilitating a superconductive state in some compounds. 
+  &lt;img alt="Image result for antiferromagnetism" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Antiferromagnetic_ordering.svg/1200px-Antiferromagnetic_ordering.svg.png" width="150px"/&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;BCS Theory&lt;/strong&gt;: The first widely-accepted theory to explain superconductivity put forth in 1957 by John Bardeen, Leon Cooper, and John Schreiffer. The theory asserts that, as electrons pass through a crystal lattice, the lattice deforms inward towards the electrons generating sound packets known as "phonons". These phonons produce a trough of positive charge in the area of deformation that assists subsequent electrons in passing through the same region in a process known as phonon-mediated coupling. This is analogous to rolling a bowling ball up the middle of a bed. 2 people, one lying on each side of the bed, will tend to roll toward the center of the bed, once the ball has created a depression in the mattress. And, a 2nd bowling ball, placed at the foot of the bed, will now, quite easily, roll toward the middle. &lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Borocarbides&lt;/strong&gt;: Superconducting borocarbides are compounds containing both boron and carbon in combination with rare-earth and transition elements; some of which exhibit the unusual ability to return to a normal, non-superconductive state at temperatures below Tc. &lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;BSCCO&lt;/strong&gt;: An acronym for a ceramic superconductor system containing the elements Bismuth, Strontium, Calcium, Copper and Oxygen. Typically, a small amount of lead is also included in these compounds to promote the highest possible Tc. BSCCO has probably found the widest acceptance among high-Tc superconductor applications due to its unique properties. BSCCO compounds exhibit both an intrinsic Josephson effect and anisotropic (directional) behavior. &lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Ceramics&lt;/strong&gt;: Ceramic superconductors are inorganic compounds formed by reacting a metal with oxygen, nitrogen, carbon or silicon. The best-known of these are the copper-perovskites. Ceramics are typically hard, brittle, heat-resistant materials formed by a process known as solid-state reaction.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Charge Reservoirs:&lt;/strong&gt; In superconductors, charge reservoirs are the layers that may control the oxidation state of adjacent superconducting planes (even though they themselves are not superconducting). In the layered cuprates, these consist of copper-oxide chains. &lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><category term="Science"></category><category term="Superconductivity"></category><category term="spin"></category><category term="cooper pairs"></category></entry><entry><title>Superconductivity</title><link href="/Superconductivity/" rel="alternate"></link><published>2019-06-06T00:00:00+05:30</published><updated>2019-06-20T00:00:00+05:30</updated><author><name>Ashwin Kumar K</name></author><id>tag:None,2019-06-06:/Superconductivity/</id><summary type="html">&lt;p&gt;Short note on superconductivity&lt;/p&gt;</summary><content type="html">&lt;p&gt;This post is my notes on Superconductivity from video lectures of &lt;a href="https://www.youtube.com/channel/UCDBKb7qMyNXujTf7kKRdstg" title="Youtube Link"&gt;Sergey Frolov&lt;/a&gt;on Solid State Physics and other online sites such as http://www.superconductors.org&lt;/p&gt;
 &lt;h1 id="properties"&gt;Properties&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;
@@ -200,19 +226,21 @@
 &lt;li&gt;
 &lt;p&gt;&lt;img alt="1561026690221" src="../../images/distance.png"/&gt;&lt;/p&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h1 id="superconductor terminology"&gt;Superconductor terminology&lt;/h1&gt;
-&lt;p&gt;The following content on superconductor terminology  is largely derived from &amp;nbsp;http://www.superconductors.org/terms.htm&amp;nbsp;with some modifications.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Anneal&lt;/strong&gt;: To heat and then slowly cool a material to reduce brittleness. Annealing of ceramic superconductors usually follows sintering and is done in an oxygen-rich atmosphere to restore oxygen lost during sintering. The oxygen content of a ceramic superconductor is critical. For example, YBCO with 6.4 atoms of oxygen will not superconduct. But YBCO with 6.5 atoms will. &lt;img alt="img" src="http://www.superconductors.org/O2_level.gif" width="150px"/&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Anti-ferromagnetism:&lt;/strong&gt; A state of matter where adjacent ions in a material are aligned in opposite or "anti-parallel" arrays. Such materials display almost no response to an external magnetic field at low temperatures and only a weak attaction at higher temperatures. There is evidence that anti-ferromagnetism in the copper oxides plays a role in the formation of Cooper pairs and, thus, in facilitating a superconductive state in some compounds. 
-  &lt;img alt="Image result for antiferromagnetism" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Antiferromagnetic_ordering.svg/1200px-Antiferromagnetic_ordering.svg.png" width="150px"/&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;BCS Theory&lt;/strong&gt;: The first widely-accepted theory to explain superconductivity put forth in 1957 by John Bardeen, Leon Cooper, and John Schreiffer. The theory asserts that, as electrons pass through a crystal lattice, the lattice deforms inward towards the electrons generating sound packets known as "phonons". These phonons produce a trough of positive charge in the area of deformation that assists subsequent electrons in passing through the same region in a process known as phonon-mediated coupling. This is analogous to rolling a bowling ball up the middle of a bed. 2 people, one lying on each side of the bed, will tend to roll toward the center of the bed, once the ball has created a depression in the mattress. And, a 2nd bowling ball, placed at the foot of the bed, will now, quite easily, roll toward the middle. &lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Borocarbides&lt;/strong&gt;: Superconducting borocarbides are compounds containing both boron and carbon in combination with rare-earth and transition elements; some of which exhibit the unusual ability to return to a normal, non-superconductive state at temperatures below Tc. &lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;BSCCO&lt;/strong&gt;: An acronym for a ceramic superconductor system containing the elements Bismuth, Strontium, Calcium, Copper and Oxygen. Typically, a small amount of lead is also included in these compounds to promote the highest possible Tc. BSCCO has probably found the widest acceptance among high-Tc superconductor applications due to its unique properties. BSCCO compounds exhibit both an intrinsic Josephson effect and anisotropic (directional) behavior. &lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Ceramics&lt;/strong&gt;: Ceramic superconductors are inorganic compounds formed by reacting a metal with oxygen, nitrogen, carbon or silicon. The best-known of these are the copper-perovskites. Ceramics are typically hard, brittle, heat-resistant materials formed by a process known as solid-state reaction.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Charge Reservoirs:&lt;/strong&gt; In superconductors, charge reservoirs are the layers that may control the oxidation state of adjacent superconducting planes (even though they themselves are not superconducting). In the layered cuprates, these consist of copper-oxide chains. &lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;in the above picture, &lt;span class="math"&gt;\(\omega_D\)&lt;/span&gt; is the &lt;strong&gt;Debye&lt;/strong&gt; relaxation &lt;strong&gt;time&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;img alt="1561294266321" src="/home/ashwin/Data/Downloads/website/websources/content/images/1561294266321.png"/&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;img alt="BCS_consiquence" src="/home/ashwin/Data/Downloads/website/websources/content/images/BCS_consiquence.png"/&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Spin singlet nature of cooper pairs were confirmed with NMR measurements&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Ferromagnetic materials are not super conduction since they cant support pairs of electrons with opposite spins (Explained by BCS)&lt;/p&gt;
+&lt;/li&gt;
 &lt;li&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
@@ -275,4 +303,4 @@
     (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
-&lt;/script&gt;</content><category term="Superconductivity"></category><category term="spin"></category><category term="cooper pairs"></category></entry></feed>
+&lt;/script&gt;</content><category term="Science"></category><category term="Superconductivity"></category><category term="spin"></category><category term="cooper pairs"></category></entry></feed>
