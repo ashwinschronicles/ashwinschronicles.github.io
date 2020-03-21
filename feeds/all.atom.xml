@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Ashwin's Chronicles</title><link href="/" rel="alternate"></link><link href="/feeds/all.atom.xml" rel="self"></link><id>/</id><updated>2019-06-27T00:00:00+05:30</updated><entry><title>Superconductor terminology</title><link href="/Superconductor_terminology/" rel="alternate"></link><published>2019-06-26T00:00:00+05:30</published><updated>2019-06-27T00:00:00+05:30</updated><author><name>Ashwin Kumar K</name></author><id>tag:None,2019-06-26:/Superconductor_terminology/</id><summary type="html">&lt;p&gt;Short note on terminologies used in superconductivity field.&lt;/p&gt;</summary><content type="html">&lt;h1&gt;Superconductor terminology&lt;/h1&gt;
-&lt;p&gt;The following content on superconductor terminology  is largely derived from  http://www.superconductors.org/terms.htm with some modifications.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Ashwin's Chronicles</title><link href="/" rel="alternate"></link><link href="/feeds/all.atom.xml" rel="self"></link><id>/</id><updated>2019-06-27T00:00:00+05:30</updated><entry><title>Superconductor terminology</title><link href="/Superconductor_terminology/" rel="alternate"></link><published>2019-06-26T00:00:00+05:30</published><updated>2019-06-27T00:00:00+05:30</updated><author><name>Ashwin Kumar K</name></author><id>tag:None,2019-06-26:/Superconductor_terminology/</id><summary type="html">&lt;p&gt;Short note on terminologies used in superconductivity field.&lt;/p&gt;</summary><content type="html">&lt;h1 id="superconductor terminology"&gt;Superconductor terminology&lt;/h1&gt;
+&lt;p&gt;The following content on superconductor terminology  is largely derived from &amp;nbsp;http://www.superconductors.org/terms.htm&amp;nbsp;with some modifications.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Anneal&lt;/strong&gt;: To heat and then slowly cool a material to reduce brittleness. Annealing of ceramic superconductors usually follows sintering and is done in an oxygen-rich atmosphere to restore oxygen lost during sintering. The oxygen content of a ceramic superconductor is critical. For example, YBCO with 6.4 atoms of oxygen will not superconduct. But YBCO with 6.5 atoms will. &lt;img alt="img" src="http://www.superconductors.org/O2_level.gif" width="150px"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Anneal&lt;/strong&gt;: To heat and then slowly cool a material to reduce brittleness. Annealing of ceramic superconductors usually follows sintering and is done in an oxygen-rich atmosphere to restore oxygen lost during sintering. The oxygen content of a ceramic superconductor is critical. For example, YBCO with 6.4 atoms of oxygen will not superconduct. But YBCO with 6.5 atoms will. &lt;img alt="img" src="http://www.superconductors.org/O2_level.gif" width="150px"/&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;strong&gt;Anti-ferromagnetism:&lt;/strong&gt; A state of matter where adjacent ions in a material are aligned in opposite or "anti-parallel" arrays. Such materials display almost no response to an external magnetic field at low temperatures and only a weak attaction at higher temperatures. There is evidence that anti-ferromagnetism in the copper oxides plays a role in the formation of Cooper pairs and, thus, in facilitating a superconductive state in some compounds. 
-  &lt;img alt="Image result for antiferromagnetism" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Antiferromagnetic_ordering.svg/1200px-Antiferromagnetic_ordering.svg.png" width="150px"&gt;&lt;/p&gt;
+  &lt;img alt="Image result for antiferromagnetism" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Antiferromagnetic_ordering.svg/1200px-Antiferromagnetic_ordering.svg.png" width="150px"/&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;strong&gt;BCS Theory&lt;/strong&gt;: The first widely-accepted theory to explain superconductivity put forth in 1957 by John Bardeen, Leon Cooper, and John Schreiffer. The theory asserts that, as electrons pass through a crystal lattice, the lattice deforms inward towards the electrons generating sound packets known as "phonons". These phonons produce a trough of positive charge in the area of deformation that assists subsequent electrons in passing through the same region in a process known as phonon-mediated coupling. This is analogous to rolling a bowling ball up the middle of a bed. 2 people, one lying on each side of the bed, will tend to roll toward the center of the bed, once the ball has created a depression in the mattress. And, a 2nd bowling ball, placed at the foot of the bed, will now, quite easily, roll toward the middle. &lt;/p&gt;
@@ -25,21 +25,21 @@
 &lt;p&gt;&lt;strong&gt;Charge Reservoirs:&lt;/strong&gt; In superconductors, charge reservoirs are the layers that may control the oxidation state of adjacent superconducting planes (even though they themselves are not superconducting). In the layered cuprates, these consist of copper-oxide chains. &lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><category term="Science,Superconductivity"></category><category term="Superconductivity"></category><category term="spin"></category><category term="cooper pairs"></category></entry><entry><title>Superconductivity</title><link href="/Superconductivity/" rel="alternate"></link><published>2019-06-06T00:00:00+05:30</published><updated>2019-06-20T00:00:00+05:30</updated><author><name>Ashwin Kumar K</name></author><id>tag:None,2019-06-06:/Superconductivity/</id><summary type="html">&lt;p&gt;Short note on superconductivity&lt;/p&gt;</summary><content type="html">&lt;p&gt;This post is my notes on Superconductivity from video lectures of &lt;a href="https://www.youtube.com/channel/UCDBKb7qMyNXujTf7kKRdstg" title="Youtube Link"&gt;Sergey Frolov&lt;/a&gt;on Solid State Physics and other online sites such as http://www.superconductors.org&lt;/p&gt;
-&lt;h1&gt;Properties&lt;/h1&gt;
+&lt;/ul&gt;</content><category term="Science"></category><category term="Superconductivity"></category><category term="spin"></category><category term="cooper pairs"></category></entry><entry><title>Superconductivity</title><link href="/Superconductivity/" rel="alternate"></link><published>2019-06-06T00:00:00+05:30</published><updated>2019-06-20T00:00:00+05:30</updated><author><name>Ashwin Kumar K</name></author><id>tag:None,2019-06-06:/Superconductivity/</id><summary type="html">&lt;p&gt;Short note on superconductivity&lt;/p&gt;</summary><content type="html">&lt;p&gt;This post is my notes on Superconductivity from video lectures of &lt;a href="https://www.youtube.com/channel/UCDBKb7qMyNXujTf7kKRdstg" title="Youtube Link"&gt;Sergey Frolov&lt;/a&gt;on Solid State Physics and other online sites such as http://www.superconductors.org&lt;/p&gt;
+&lt;h1 id="properties"&gt;Properties&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;Discoverd first in Hg at 4.2K in Liquid Helium&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;Current induced in a ring follows $$ I(t)=I_0e^{(-t/\tau))}$$ and dosent change much for over 100,000 years for SC and goes to 1% of initial value in few nano seconds in a normal metal.&lt;/p&gt;
+&lt;p&gt;Current induced in a ring follows &lt;div class="math"&gt;$$ I(t)=I_0e^{(-t/\tau))}$$&lt;/div&gt; and dosent change much for over 100,000 years for SC and goes to 1% of initial value in few nano seconds in a normal metal.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Magnetic field destroy super conductivity (so does current in the SC)
-&lt;img alt="image" src="../../images/SC_mag.png"&gt;&lt;/p&gt;
+&lt;img alt="image" src="../../images/SC_mag.png"/&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;Magnetic Impurities lower $T_C$ (non mag has no effect)&lt;/p&gt;
+&lt;p&gt;Magnetic Impurities lower &lt;span class="math"&gt;\(T_C\)&lt;/span&gt; (non mag has no effect)&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Fe Co Ni nonSC&lt;/p&gt;
@@ -48,7 +48,7 @@
 &lt;p&gt;CU Ag Au nonSC&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;img alt="image" src="../../images/sup_ele.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="image" src="../../images/sup_ele.png"/&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Si becomes SC at high Pressure&lt;/p&gt;
@@ -60,16 +60,16 @@
 &lt;p&gt;most unconventional SC has C,O atoms in  pervoskite structure.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;img alt="image" src="../../images/SC_graph.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="image" src="../../images/SC_graph.png"/&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;em&gt;Meissner effect&lt;/em&gt; is perfect expulsion of Magnetic field out of SC (except penetration depth) due to screening current&lt;img alt="image" src="../../images/misener.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Meissner effect&lt;/em&gt; is perfect expulsion of Magnetic field out of SC (except penetration depth) due to screening current&lt;img alt="image" src="../../images/misener.png"/&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;SC act as perfect diamagnet $\chi=-1$ and is a defining feature of SC and not just $\rho$=0&lt;/p&gt;
+&lt;p&gt;SC act as perfect diamagnet &lt;span class="math"&gt;\(\chi=-1\)&lt;/span&gt; and is a defining feature of SC and not just &lt;span class="math"&gt;\(\rho\)&lt;/span&gt;=0&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;Difference between perfect conductor and SC &lt;img alt="Difference between perfect conductor and SC" src="../../images/SUP_perfCandSC.png"&gt;&lt;/p&gt;
+&lt;p&gt;Difference between perfect conductor and SC &lt;img alt="Difference between perfect conductor and SC" src="../../images/SUP_perfCandSC.png"/&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;The esseence of meissner effect is that SC &lt;strong&gt;alaways expels the magnetic field&lt;/strong&gt;&lt;/p&gt;
@@ -83,36 +83,36 @@
 &lt;p&gt;3) &lt;a href="https://en.wikipedia.org/wiki/Meissner_effect"&gt;Meissner effect&lt;/a&gt;: As the material passes below the critical temperature and transitions into superconductivity, it ejects its magnetic field.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;Heat capacity of a SC is discontinuous at $T_C$ and crashes to 0 after  $T_C$
-&lt;img alt="image" src="../../images/Heat_capacity.png"&gt;&lt;/p&gt;
+&lt;p&gt;Heat capacity of a SC is discontinuous at &lt;span class="math"&gt;\(T_C\)&lt;/span&gt; and crashes to 0 after  &lt;span class="math"&gt;\(T_C\)&lt;/span&gt;
+&lt;img alt="image" src="../../images/Heat_capacity.png"/&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;The function is given by $C \alpha e^{a/T}$ and is simmilar to Einstein's model of specific heat, n coupled osscilator model. &lt;/p&gt;
+&lt;p&gt;The function is given by &lt;span class="math"&gt;\(C \alpha e^{a/T}\)&lt;/span&gt; and is simmilar to Einstein's model of specific heat, n coupled osscilator model. &lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;[verify !] Exponents often go with gaps (semiconductor and superconductor state)&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;In the super conducting state, there is a samll energy gap arround the fermi level. With $E_g~10x^{-4}E_F$
-&lt;img alt="SC_band" src="../../images/SC_band.png"&gt;&lt;/p&gt;
+&lt;p&gt;In the super conducting state, there is a samll energy gap arround the fermi level. With &lt;span class="math"&gt;\(E_g~10x^{-4}E_F\)&lt;/span&gt;
+&lt;img alt="SC_band" src="../../images/SC_band.png"/&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;one in 10,000 electrons participate in SC state.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;The a in $C \alpha e^{a/T}$ is given by $-E_g/2$&lt;/p&gt;
+&lt;p&gt;The a in &lt;span class="math"&gt;\(C \alpha e^{a/T}\)&lt;/span&gt; is given by &lt;span class="math"&gt;\(-E_g/2\)&lt;/span&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;Higher $E_g$ implies higher $T_C$
-&lt;img alt="EG_periodic" src="../../images/EG_periodic.png"&gt;&lt;/p&gt;
+&lt;p&gt;Higher &lt;span class="math"&gt;\(E_g\)&lt;/span&gt; implies higher &lt;span class="math"&gt;\(T_C\)&lt;/span&gt;
+&lt;img alt="EG_periodic" src="../../images/EG_periodic.png"/&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Nb has the higest gap of all the materials.&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2&gt;Applications&lt;/h2&gt;
+&lt;h2 id="applications"&gt;Applications&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;Super conducting single photon detector telescope&lt;img alt="image" src="../../images/photondetector.png" width="50%"&gt;&lt;/li&gt;
+&lt;li&gt;Super conducting single photon detector telescope&lt;img alt="image" src="../../images/photondetector.png" width="50%"/&gt;&lt;/li&gt;
 &lt;li&gt;Quantum computer with photons.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Levitating high speed trains(~600 km/h)&lt;/strong&gt;: Transport vehicles such as trains can be made to "float" on strong superconducting magnets, virtually eliminating friction between the train and its tracks.This reduces the heat generated and size occupied as compared to regular electromagnet. A landmark for the commercial use of MAGLEV technology occurred in 1990 when it gained the status of a nationally-funded project in Japan. The Minister of Transport authorised construction of the Yamanashi Maglev Test Line which opened on April 3, 1997. In April 2015, the MLX01 test vehicle attained an incredible speed of 603 kph.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;MRI&lt;/strong&gt;: By impinging a strong superconductor-derived magnetic field into the body, hydrogen atoms that exist in the body's water and fat molecules are forced to accept energy from the magnetic field. They then release this energy at a frequency that can be detected and displayed graphically by a computer.&lt;/li&gt;
@@ -121,7 +121,7 @@
 &lt;li&gt;&lt;strong&gt;High efficiency generators:&lt;/strong&gt; Electric generators made with superconducting wire are far more efficient than conventional generators wound with copper wire. In fact, their efficiency is above 99% and their size about half that of conventional generators.&lt;/li&gt;
 &lt;li&gt;Essen, Germany has the world's longest superconducting power cable in production at 1 kilometer. It is a 10 kV liquid nitrogen cooled cable. The cable is smaller than an equivalent 110 kV regular cable and the lower voltage has the additional benefit of smaller transformers.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h1&gt;Superfluidity of He&lt;/h1&gt;
+&lt;h1 id="superfluidity of he_1"&gt;Superfluidity of He&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;Zero viscocity&lt;/p&gt;
@@ -131,7 +131,7 @@
 &lt;/li&gt;
 &lt;li&gt;ie the flow velocity of liquid helium is independent of applied pressure.&lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;in semicunductor attraction between $e^-$ in conduction band and holes in valence bond give rise to a bound pairs known as excitons , they also show super fluidity.&lt;img alt="superfluidity" src="../../images/exciton.png"&gt;&lt;/p&gt;
+&lt;p&gt;in semicunductor attraction between &lt;span class="math"&gt;\(e^-\)&lt;/span&gt; in conduction band and holes in valence bond give rise to a bound pairs known as excitons , they also show super fluidity.&lt;img alt="superfluidity" src="../../images/exciton.png"/&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Because they contain real bound pairs of 2 fermions (in contrast to cooper pais) excitons are bosons.&lt;/p&gt;
@@ -139,19 +139,19 @@
 &lt;li&gt;as a result it is possible for them to form a Bose-Einstein condensate, a superfluid that can flow withoutt resistance&lt;/li&gt;
 &lt;li&gt;(this does not give rise to superconductivity as excitons are incharged&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h1&gt;Why is there superconductivity?&lt;/h1&gt;
+&lt;h1 id="why is there superconductivity?"&gt;Why is there superconductivity?&lt;/h1&gt;
 &lt;p&gt;tldr: Two electrons form a bound state called Cooper pair. These cooper pairs form a condensate.
-&lt;img alt="cooperpairs" src="../../images/cooperpairs.png"&gt;&lt;/p&gt;
-&lt;p&gt;When an electron is moving through a solid with momentum K, since it also interacts with the lattice, there is an electron phonon interaction, meaning an electron moving through the crystal launches a phonon, another electron flying in a different direction can absorb this photon and form a bound state. These cooper pairs form a condensate (they are all in the same indistinguishable quantum state). And the condensate can be represented by the wave function $\psi=n_s e^{i \phi}$, where $n_s$ is the density of Cooper pair and $\phi$ denotes the phase.&lt;/p&gt;
-&lt;h1&gt;London equations&lt;/h1&gt;
+&lt;img alt="cooperpairs" src="../../images/cooperpairs.png"/&gt;&lt;/p&gt;
+&lt;p&gt;When an electron is moving through a solid with momentum K, since it also interacts with the lattice, there is an electron phonon interaction, meaning an electron moving through the crystal launches a phonon, another electron flying in a different direction can absorb this photon and form a bound state. These cooper pairs form a condensate (they are all in the same indistinguishable quantum state). And the condensate can be represented by the wave function &lt;span class="math"&gt;\(\psi=n_s e^{i \phi}\)&lt;/span&gt;, where &lt;span class="math"&gt;\(n_s\)&lt;/span&gt; is the density of Cooper pair and &lt;span class="math"&gt;\(\phi\)&lt;/span&gt; denotes the phase.&lt;/p&gt;
+&lt;h1 id="london equations"&gt;London equations&lt;/h1&gt;
 &lt;p&gt;The London equations, developed by brothers Fritz and Heinz London in 1935 relate current to electromagnetic fields in and around a superconductor.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="London equations" src="../../images/London_eqn.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="London equations" src="../../images/London_eqn.png"/&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;In ohms law $j=\sigma E$ so its differential wrt time is 0, however 1st london equation gives a non 0 relation with $j'$ and $E$ .&lt;/p&gt;
+&lt;p&gt;In ohms law &lt;span class="math"&gt;\(j=\sigma E\)&lt;/span&gt; so its differential wrt time is 0, however 1st london equation gives a non 0 relation with &lt;span class="math"&gt;\(j'\)&lt;/span&gt; and &lt;span class="math"&gt;\(E\)&lt;/span&gt; .&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;In leq1, $j$ is the superconducting current density, E and B are respectively the electric and magnetic fields within the superconductor, $q$ is the charge of an electron &amp;amp; proton, m, is electron mass, and $n_s$, is a phenomenological constant loosely associated with a number density of superconducting carriers.&lt;/p&gt;
+&lt;p&gt;In leq1, &lt;span class="math"&gt;\(j\)&lt;/span&gt; is the superconducting current density, E and B are respectively the electric and magnetic fields within the superconductor, &lt;span class="math"&gt;\(q\)&lt;/span&gt; is the charge of an electron &amp;amp; proton, m, is electron mass, and &lt;span class="math"&gt;\(n_s\)&lt;/span&gt;, is a phenomenological constant loosely associated with a number density of superconducting carriers.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;London eqn 1 (le1) also means that particles in a super conductor accelerate when a voltage is applied, in normal metals they only move with drift velocity and 0 acceleration.&lt;/p&gt;
@@ -163,20 +163,20 @@
 &lt;p&gt;The rationale for the le1 can be thought of in the following different ways: &lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;1) By definition, the electrons in a superconductor flow with no resistance, hence one can  imagine electrons as if they were free electrons und er the influence of a uniform external electric field. According to the Lorentz force law $F=eE+ev\mathrm{x}B$ these electrons should encounter a uniform force, and thus they should in fact accelerate uniformly. This is precisely what the first London equation states.&lt;/p&gt;
-&lt;p&gt;2) Current density is defined according to the equation $j=-n_s e v$ , Taking this expression from a classical description to a quantum mechanical one, we must replace values j and v by the expectation values of their operators. The velocity operator $ v = (p+eA)/m$ is defined by dividing the gauge-invariant, kinematic momentum operator by the particle mass &lt;em&gt;m&lt;/em&gt;. we are using &lt;img alt="-e" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/07ba5105b33e9ac88f605cc50663a9e2c16fcc63"&gt; as the electron charge. We may then make this replacement in the equation above. However, an important assumption from the microscopic theory of superconductivity (BCS) is that the superconducting state of a system is the ground state, and according to a theorem of Bloch's,[&lt;a href="https://en.wikipedia.org/wiki/London_equations#cite_note-Michael_Tinkham_1996_5-10"&gt;]&lt;/a&gt; in such a state the canonical momentum &lt;strong&gt;p&lt;/strong&gt; is zero. This gives us $j=-\frac{n_s e^2}{m}\textbf{A}$ which is loosely the le1&lt;/p&gt;
+&lt;p&gt;1) By definition, the electrons in a superconductor flow with no resistance, hence one can  imagine electrons as if they were free electrons und er the influence of a uniform external electric field. According to the Lorentz force law &lt;span class="math"&gt;\(F=eE+ev\mathrm{x}B\)&lt;/span&gt; these electrons should encounter a uniform force, and thus they should in fact accelerate uniformly. This is precisely what the first London equation states.&lt;/p&gt;
+&lt;p&gt;2) Current density is defined according to the equation &lt;span class="math"&gt;\(j=-n_s e v\)&lt;/span&gt; , Taking this expression from a classical description to a quantum mechanical one, we must replace values j and v by the expectation values of their operators. The velocity operator &lt;span class="math"&gt;\( v = (p+eA)/m\)&lt;/span&gt; is defined by dividing the gauge-invariant, kinematic momentum operator by the particle mass &lt;em&gt;m&lt;/em&gt;. we are using &lt;img alt="-e" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/07ba5105b33e9ac88f605cc50663a9e2c16fcc63"/&gt; as the electron charge. We may then make this replacement in the equation above. However, an important assumption from the microscopic theory of superconductivity (BCS) is that the superconducting state of a system is the ground state, and according to a theorem of Bloch's,[&lt;a href="https://en.wikipedia.org/wiki/London_equations#cite_note-Michael_Tinkham_1996_5-10"&gt;]&lt;/a&gt; in such a state the canonical momentum &lt;strong&gt;p&lt;/strong&gt; is zero. This gives us &lt;span class="math"&gt;\(j=-\frac{n_s e^2}{m}\textbf{A}\)&lt;/span&gt; which is loosely the le1&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;img alt="1560962267192" src="../../images/field_penetration.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="1560962267192" src="../../images/field_penetration.png"/&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;The solution for that differential equation is ${ \nabla ^{2}\mathbf {B} ={\frac {1}{\lambda ^{2}}}\mathbf {B} ,\qquad \lambda \equiv {\sqrt {\frac {m}{\mu &lt;em s&gt;{0}n&lt;/em&gt;e^{2}}}}.}$&lt;/p&gt;
+&lt;p&gt;The solution for that differential equation is &lt;span class="math"&gt;\({ \nabla ^{2}\mathbf {B} ={\frac {1}{\lambda ^{2}}}\mathbf {B} ,\qquad \lambda \equiv {\sqrt {\frac {m}{\mu _{0}n_{s}e^{2}}}}.}\)&lt;/span&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;img alt="1560962571688" src="../../images/field_penetration.2.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="1560962571688" src="../../images/field_penetration.2.png"/&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h1&gt;Superconductivity in the bulk : Cooper pairs&lt;/h1&gt;
+&lt;h1 id="superconductivity in the bulk : cooper pairs"&gt;Superconductivity in the bulk : Cooper pairs&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;electron-phonon interaction leads to an attraction of electrons&lt;/p&gt;
@@ -191,7 +191,7 @@
 &lt;p&gt;the net spin is zero so they obey Bose-Einstein statistics: at low T all pairs condense in the lowest state (no Pauli exclusion !) and hence they are Bosons&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;img alt="Image result for density of states band gap superconductors" src="http://www.nature.com/nature/journal/v418/n6899/images/418733a-f1.2.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Image result for density of states band gap superconductors" src="http://www.nature.com/nature/journal/v418/n6899/images/418733a-f1.2.jpg"/&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;The gap in the diagram is the Superconducting energy gap, X-axis is the energy, 0 is the fremi level.&lt;/p&gt;
@@ -200,40 +200,40 @@
 &lt;p&gt;Here, the size of the energy gap indicates the energy gain for two electrons upon formation of a Cooper pair&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;If a conventional superconducting material is cooled from its metallic state (at higher temperatures) into the superconducting state, then the superconducting energy gap is absent above the critical temperature $T_{c}$, it starts to open upon entering the superconducting state at $T_{c}$, and it grows upon further cooling.&lt;/p&gt;
+&lt;p&gt;If a conventional superconducting material is cooled from its metallic state (at higher temperatures) into the superconducting state, then the superconducting energy gap is absent above the critical temperature &lt;span class="math"&gt;\(T_{c}\)&lt;/span&gt;, it starts to open upon entering the superconducting state at &lt;span class="math"&gt;\(T_{c}\)&lt;/span&gt;, and it grows upon further cooling.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;In the \Delta$   there are only cooper pair condensate and outside there are only unbound electrons.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;BCS theory predicts that the size $\Delta$  of the superconducting energy gap for conventional superconductors at zero temperature scales with their critical temperature $\Delta (T=0)=1.764\,k_{B}T_{c}$ .&lt;/p&gt;
+&lt;p&gt;BCS theory predicts that the size &lt;span class="math"&gt;\(\Delta\)&lt;/span&gt;  of the superconducting energy gap for conventional superconductors at zero temperature scales with their critical temperature &lt;span class="math"&gt;\(\Delta (T=0)=1.764\,k_{B}T_{c}\)&lt;/span&gt; .&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;The density of states is $N_s(E)=N_N(E) E/(E^2- D^2)^{0.5}$&lt;/p&gt;
+&lt;p&gt;The density of states is &lt;span class="math"&gt;\(N_s(E)=N_N(E) E/(E^2- D^2)^{0.5}\)&lt;/span&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;The super conducting state can be describes with a singel macroscopic wave function $\Psi=\sqrt(n_s)e^{i \phi}$ with$n_s$ is the density of the cooper pairs, $\phi$  phase of the condensate.&lt;/p&gt;
+&lt;p&gt;The super conducting state can be describes with a singel macroscopic wave function &lt;span class="math"&gt;\(\Psi=\sqrt(n_s)e^{i \phi}\)&lt;/span&gt; with&lt;span class="math"&gt;\(n_s\)&lt;/span&gt; is the density of the cooper pairs, &lt;span class="math"&gt;\(\phi\)&lt;/span&gt;  phase of the condensate.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;So how does the electron pairing occur? consider the crude model:&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img alt="img" src="http://www.superconductors.org/bcs_anim.GIF"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="img" src="http://www.superconductors.org/bcs_anim.GIF"/&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;img alt="img" src="../../images/simplest.GIF"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="img" src="../../images/simplest.GIF"/&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;img alt="1561026690221" src="../../images/distance.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="1561026690221" src="../../images/distance.png"/&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;in the above picture, $\omega_D$ is the &lt;strong&gt;Debye&lt;/strong&gt; relaxation &lt;strong&gt;time&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;in the above picture, &lt;span class="math"&gt;\(\omega_D\)&lt;/span&gt; is the &lt;strong&gt;Debye&lt;/strong&gt; relaxation &lt;strong&gt;time&lt;/strong&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;img alt="1561294266321" src="/home/ashwin/Data/Downloads/website/websources/content/images/1561294266321.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="1561294266321" src="/home/ashwin/Data/Downloads/website/websources/content/images/1561294266321.png"/&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;img alt="BCS_consiquence" src="/home/ashwin/Data/Downloads/website/websources/content/images/BCS_consiquence.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="BCS_consiquence" src="/home/ashwin/Data/Downloads/website/websources/content/images/BCS_consiquence.png"/&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Spin singlet nature of cooper pairs were confirmed with NMR measurements&lt;/p&gt;
@@ -242,52 +242,109 @@
 &lt;p&gt;Ferromagnetic materials are not super conduction since they cant support pairs of electrons with opposite spins (Explained by BCS)&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><category term="Science,Superconductivity"></category><category term="Superconductivity"></category><category term="spin"></category><category term="cooper pairs"></category></entry><entry><title>Make a Github Pages blog with Pelican</title><link href="/gh-pages-with-pelican/" rel="alternate"></link><published>2019-01-01T00:00:00+05:30</published><updated>2019-01-01T00:00:00+05:30</updated><author><name>Ashwin</name></author><id>tag:None,2019-01-01:/gh-pages-with-pelican/</id><summary type="html">&lt;p&gt;Nothing Much&lt;/p&gt;</summary><content type="html">&lt;p&gt;Github, worlds leading  hosting service for Git repositories  offers a simple, elegant website solution. It allows its users to  store page content in a git repository along with their code.&lt;/p&gt;
+&lt;/ul&gt;
+&lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width &lt; 768) ? "left" : align;
+        indent = (screen.width &lt; 768) ? "0em" : indent;
+        linebreak = (screen.width &lt; 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_CHTML';
+
+    var configscript = document.createElement('script');
+    configscript.type = 'text/x-mathjax-config';
+    configscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js','color.js','mhchem.js'], equationNumbers: { autoNumber: 'none' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        fonts: [['STIX', 'TeX']]," +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'red ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('SansSerif' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_SansSerif');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_SansSerif-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_SansSerif-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_SansSerif-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_SansSerif');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_SansSerif-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_SansSerif-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_SansSerif-italic');" +
+            "});" +
+        "}";
+
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+&lt;/script&gt;</content><category term="Science"></category><category term="Superconductivity"></category><category term="spin"></category><category term="cooper pairs"></category></entry><entry><title>Make a Github Pages blog with Pelican</title><link href="/gh-pages-with-pelican/" rel="alternate"></link><published>2019-01-01T00:00:00+05:30</published><updated>2019-01-01T00:00:00+05:30</updated><author><name>Ashwin</name></author><id>tag:None,2019-01-01:/gh-pages-with-pelican/</id><summary type="html">&lt;p&gt;Nothing Much&lt;/p&gt;</summary><content type="html">&lt;p&gt;Github, worlds leading  hosting service for Git repositories  offers a simple, elegant website solution. It allows its users to  store page content in a git repository along with their code.&lt;/p&gt;
 &lt;p&gt;In this blog post ill walk you through the process of setting up a website by combining Pelican with Github Pages. Pelican is a simple python utility that lets you create beautiful weblogs using just text files. In other words its a static-site generator. I have chosen Pelican over other static-site generators as Pelican unlike its counter parts is based on python hence initial  setup takes literally no time.&lt;/p&gt;
-&lt;h2&gt;Setting up a github.io page&lt;/h2&gt;
+&lt;h2 id="setting up a github.io page"&gt;Setting up a github.io page&lt;/h2&gt;
 &lt;p&gt;To create your Github user page, log in to Github and create a  new repositorie username.github.io, as explained on Github pages. (Use your Github username for these repositories.) The  username.github.io repository will contain the output HTML files Pelican generates. To add the output directory as a submodule, initialize it with a README file.&lt;/p&gt;
-&lt;h2&gt;Installing Pelican&lt;/h2&gt;
+&lt;h2 id="installing pelican"&gt;Installing Pelican&lt;/h2&gt;
 &lt;p&gt;We will first  create a virtual environment for Pelican via virtualenv before installing Pelican.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;virtualenv website&lt;/span&gt;
-&lt;span class="err"&gt;cd website&lt;/span&gt;
-&lt;span class="err"&gt;source bin/activate&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;virtualenv website
+&lt;span class="nb"&gt;cd&lt;/span&gt; website
+&lt;span class="nb"&gt;source&lt;/span&gt; bin/activate
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-
 &lt;p&gt;You can also do &lt;code&gt;workon website&lt;/code&gt; inplace of the last two.
 Once the virtual environment has been created and activated, Pelican can be installed via  prefixing with sudo if permissions warrant:&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;pip install pelican markdown typogrify ghp-import shovel&lt;/code&gt; &lt;br&gt;
+&lt;p&gt;&lt;code&gt;pip install pelican markdown typogrify ghp-import shovel&lt;/code&gt; &lt;br/&gt;
 Now clone the source repository you created:&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;git clone https://github.com/YOUR_USERNAME/YOUR_USERNAME.github.io.git web-sources&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;Then change directory to the source folder:&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;cd web-sources&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;Because of how Github Pages prefers to work, serving the files from the master branch, you have to put your source code in a new branch, preserving the "master" for the output of the static files generated by Pelican. To do that, you must create a new branch called "source":&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;$ git checkout -b source&lt;/code&gt;&lt;/p&gt;
-&lt;h2&gt;Pelican quickstart&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;git checkout -b source&lt;/code&gt;&lt;/p&gt;
+&lt;h2 id="pelican quickstart"&gt;Pelican quickstart&lt;/h2&gt;
 &lt;p&gt;Pelican provides an excellent quickstart command. Run it:&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;pelican-quickstart&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;The quickstart will ask you various questions, which you can answer in turn. Before answering them, take a look at my answers below:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;Where&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;do&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;you&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;want&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;to&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;create&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;your&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;new&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;web&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;site&lt;/span&gt;&lt;span class="vm"&gt;?&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="n"&gt;.&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;What&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;will&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;be&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;the&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;title&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;of&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;this&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;web&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;site&lt;/span&gt;&lt;span class="vm"&gt;?&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Ashwin&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="n"&gt;s&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Chronicles&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Who&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;will&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;be&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;the&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;author&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;of&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;this&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;web&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;site&lt;/span&gt;&lt;span class="vm"&gt;?&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Ashwin&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Kumar&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;K&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;What&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;will&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;be&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;the&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;default&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;language&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;of&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;this&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;web&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;site&lt;/span&gt;&lt;span class="vm"&gt;?&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="n"&gt;pt&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;en&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Do&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;you&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;want&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;to&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;specify&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;URL&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;prefix&lt;/span&gt;&lt;span class="vm"&gt;?&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;e&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;g&lt;/span&gt;&lt;span class="p"&gt;.,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nl"&gt;http&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="o"&gt;//&lt;/span&gt;&lt;span class="n"&gt;example&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;com&lt;/span&gt;&lt;span class="w"&gt;   &lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;Y&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Do&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;you&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;want&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;to&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;enable&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;article&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;pagination&lt;/span&gt;&lt;span class="vm"&gt;?&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;Y&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;How&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;many&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;articles&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;per&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;page&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;do&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;you&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;want&lt;/span&gt;&lt;span class="vm"&gt;?&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="n"&gt;10&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;What&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;is&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;your&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nc"&gt;time&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;zone&lt;/span&gt;&lt;span class="vm"&gt;?&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="n"&gt;Europe/Paris&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Asia&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;Calcutta&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Do&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;you&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;want&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;to&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;generate&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Fabfile&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;Makefile&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;to&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;automate&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;generation&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="ow"&gt;and&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;publishing&lt;/span&gt;&lt;span class="vm"&gt;?&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;Y&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Y&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;**&lt;/span&gt;&lt;span class="err"&gt;#&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;PAY&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;ATTENTION&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;TO&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;THIS&lt;/span&gt;&lt;span class="err"&gt;!&lt;/span&gt;&lt;span class="o"&gt;**&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Do&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;you&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;want&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;an&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;auto&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;reload&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;&amp;amp;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;simpleHTTP&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;script&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;to&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;assist&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;with&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;theme&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="ow"&gt;and&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;site&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;development&lt;/span&gt;&lt;span class="vm"&gt;?&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;Y&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Do&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;you&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;want&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;to&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;upload&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;your&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;website&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;using&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;FTP&lt;/span&gt;&lt;span class="vm"&gt;?&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;N&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Do&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;you&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;want&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;to&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;upload&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;your&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;website&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;using&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;SSH&lt;/span&gt;&lt;span class="vm"&gt;?&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;N&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Do&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;you&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;want&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;to&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;upload&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;your&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;website&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;using&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Dropbox&lt;/span&gt;&lt;span class="vm"&gt;?&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;N&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Do&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;you&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;want&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;to&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;upload&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;your&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;website&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;using&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;S3&lt;/span&gt;&lt;span class="vm"&gt;?&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;N&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Do&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;you&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;want&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;to&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;upload&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;your&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;website&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;using&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Rackspace&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Cloud&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Files&lt;/span&gt;&lt;span class="vm"&gt;?&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;N&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Do&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;you&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;want&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;to&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;upload&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;your&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;website&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;using&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;GitHub&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Pages&lt;/span&gt;&lt;span class="vm"&gt;?&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;N&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;Is&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;this&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;your&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;personal&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;page&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;username&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;github&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;io&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="vm"&gt;?&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;N&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-&lt;span class="n"&gt;Done&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Your&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;new&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;project&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;is&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;available&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;at&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;YOUR_USERNAME&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;github&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;io&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;gt; Where &lt;span class="k"&gt;do&lt;/span&gt; you want to create your new web site? &lt;span class="o"&gt;[&lt;/span&gt;.&lt;span class="o"&gt;]&lt;/span&gt; ./
+&amp;gt; What will be the title of this web site? Ashwin&lt;span class="err"&gt;'&lt;/span&gt;s Chronicles
+&amp;gt; Who will be the author of this web site? Ashwin Kumar K
+&amp;gt; What will be the default language of this web site? &lt;span class="o"&gt;[&lt;/span&gt;pt&lt;span class="o"&gt;]&lt;/span&gt; en
+&amp;gt; Do you want to specify a URL prefix? e.g., http://example.com   &lt;span class="o"&gt;(&lt;/span&gt;Y/n&lt;span class="o"&gt;)&lt;/span&gt; n
+&amp;gt; Do you want to &lt;span class="nb"&gt;enable&lt;/span&gt; article pagination? &lt;span class="o"&gt;(&lt;/span&gt;Y/n&lt;span class="o"&gt;)&lt;/span&gt; y
+&amp;gt; How many articles per page &lt;span class="k"&gt;do&lt;/span&gt; you want? &lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="m"&gt;10&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt; &lt;span class="m"&gt;10&lt;/span&gt;
+&amp;gt; What is your &lt;span class="nb"&gt;time&lt;/span&gt; zone? &lt;span class="o"&gt;[&lt;/span&gt;Europe/Paris&lt;span class="o"&gt;]&lt;/span&gt; Asia/Calcutta
+&amp;gt; Do you want to generate a Fabfile/Makefile to automate generation and publishing? &lt;span class="o"&gt;(&lt;/span&gt;Y/n&lt;span class="o"&gt;)&lt;/span&gt; Y **# PAY ATTENTION TO THIS!**
+&amp;gt; Do you want an auto-reload &lt;span class="p"&gt;&amp;amp;&lt;/span&gt; simpleHTTP script to assist with theme and site development? &lt;span class="o"&gt;(&lt;/span&gt;Y/n&lt;span class="o"&gt;)&lt;/span&gt; n
+&amp;gt; Do you want to upload your website using FTP? &lt;span class="o"&gt;(&lt;/span&gt;y/N&lt;span class="o"&gt;)&lt;/span&gt; n
+&amp;gt; Do you want to upload your website using SSH? &lt;span class="o"&gt;(&lt;/span&gt;y/N&lt;span class="o"&gt;)&lt;/span&gt; n
+&amp;gt; Do you want to upload your website using Dropbox? &lt;span class="o"&gt;(&lt;/span&gt;y/N&lt;span class="o"&gt;)&lt;/span&gt; n
+&amp;gt; Do you want to upload your website using S3? &lt;span class="o"&gt;(&lt;/span&gt;y/N&lt;span class="o"&gt;)&lt;/span&gt; n
+&amp;gt; Do you want to upload your website using Rackspace Cloud Files? &lt;span class="o"&gt;(&lt;/span&gt;y/N&lt;span class="o"&gt;)&lt;/span&gt; n
+&amp;gt; Do you want to upload your website using GitHub Pages? &lt;span class="o"&gt;(&lt;/span&gt;y/N&lt;span class="o"&gt;)&lt;/span&gt; y
+&amp;gt; Is this your personal page &lt;span class="o"&gt;(&lt;/span&gt;username.github.io&lt;span class="o"&gt;)&lt;/span&gt;? &lt;span class="o"&gt;(&lt;/span&gt;y/N&lt;span class="o"&gt;)&lt;/span&gt; y
+Done. Your new project is available at YOUR_USERNAME.github.io
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-
 &lt;p&gt;Now, go ahead and create your first blog post! You might want to open the project folder on your favorite code editor and find the "content" folder inside it. Then, create a new file, which can be called my-first-post.md (Just for testing). The contents should begin with the metadata which identifies the Title, Date, Category and more from the post before you start with the content, like this:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;Title&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;My&lt;/span&gt; &lt;span class="n"&gt;first&lt;/span&gt; &lt;span class="n"&gt;post&lt;/span&gt;
 &lt;span class="n"&gt;Date&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;2018&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;
@@ -300,47 +357,33 @@ Now clone the source repository you created:&lt;/p&gt;
 
 &lt;span class="n"&gt;This&lt;/span&gt; &lt;span class="k"&gt;is&lt;/span&gt; &lt;span class="n"&gt;the&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;first&lt;/span&gt; &lt;span class="n"&gt;post&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="n"&gt;from&lt;/span&gt; &lt;span class="n"&gt;my&lt;/span&gt; &lt;span class="n"&gt;Pelican&lt;/span&gt; &lt;span class="n"&gt;blog&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt; &lt;span class="o"&gt;**&lt;/span&gt;&lt;span class="n"&gt;YAY&lt;/span&gt;&lt;span class="o"&gt;!**&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-
 &lt;p&gt;Let's see how it looks?&lt;/p&gt;
 &lt;p&gt;Go to the terminal, generate the static files and start the server. To do that, use the following command:&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;(venv)$ make html &amp;amp;&amp;amp; make serve&lt;/code&gt;
 While this command is running, you should be able to visit it on your favorite web browser by typing &lt;code&gt;localhost:8000&lt;/code&gt; on the address bar.&lt;/p&gt;
-&lt;h2&gt;A little touch up&lt;/h2&gt;
+&lt;h2 id="a little touch up"&gt;A little touch up&lt;/h2&gt;
 &lt;p&gt;Now,  if you want to put an image in a post, a neat way is to first  create a 'images' directory inside your content directory, where your posts are. Now, you have to tell Pelican to use it. Find the &lt;code&gt;pelicanconf.py&lt;/code&gt;, the file where you configure the system, and add a variable that contains the directory with your images:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="na"&gt;.lang&lt;/span&gt;&lt;span class="err"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;python&amp;quot;&lt;/span&gt; &lt;span class="c"&gt;# DON&amp;#39;T COPY this line, it exists just for highlighting purposes&lt;/span&gt;
-
-&lt;span class="nf"&gt;STATIC_PATHS&lt;/span&gt; &lt;span class="err"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="no"&gt;images&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;STATIC_PATHS&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;'images'&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-
 &lt;p&gt;Save it. Go to your post and add the image this way:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="na"&gt;.lang&lt;/span&gt;&lt;span class="err"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;markdown&amp;quot;&lt;/span&gt; &lt;span class="c"&gt;# DON&amp;#39;T COPY this line, it exists just for highlighting purposes&lt;/span&gt;
-
-&lt;span class="err"&gt;![&lt;/span&gt;&lt;span class="nf"&gt;Write&lt;/span&gt; &lt;span class="no"&gt;here&lt;/span&gt; &lt;span class="no"&gt;a&lt;/span&gt; &lt;span class="no"&gt;good&lt;/span&gt; &lt;span class="no"&gt;description&lt;/span&gt; &lt;span class="no"&gt;for&lt;/span&gt; &lt;span class="no"&gt;people&lt;/span&gt; &lt;span class="no"&gt;who&lt;/span&gt; &lt;span class="no"&gt;can&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="no"&gt;t&lt;/span&gt; &lt;span class="no"&gt;see&lt;/span&gt; &lt;span class="no"&gt;the&lt;/span&gt; &lt;span class="no"&gt;image&lt;/span&gt;&lt;span class="p"&gt;](&lt;/span&gt;&lt;span class="err"&gt;{&lt;/span&gt;&lt;span class="no"&gt;filename&lt;/span&gt;&lt;span class="err"&gt;}/&lt;/span&gt;&lt;span class="no"&gt;images&lt;/span&gt;&lt;span class="err"&gt;/&lt;/span&gt;&lt;span class="no"&gt;IMAGE_NAME.jpg&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;![Write here a good description for people who can't see the image]({filename}/images/IMAGE_NAME.jpg)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-
 &lt;p&gt;You can interrupt the server at anytime pressing CTRL+C on the terminal. But you should start it again and check if the image is correct. Can you remember how?&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;(venv)$ make html &amp;amp;&amp;amp; make serve&lt;/code&gt;
 One last step before your coding is "done": you should make sure anyone can read your posts using ATOM or RSS feeds. Find the pelicanconf.py, the file where you configure the system, and edit the part about feed generation:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="na"&gt;.lang&lt;/span&gt;&lt;span class="err"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;python&amp;quot;&lt;/span&gt; &lt;span class="c"&gt;# DON&amp;#39;T COPY this line, it exists just for highlighting purposes&lt;/span&gt;
-
-&lt;span class="nf"&gt;FEED_ALL_ATOM&lt;/span&gt; &lt;span class="err"&gt;=&lt;/span&gt; &lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="no"&gt;feeds&lt;/span&gt;&lt;span class="err"&gt;/&lt;/span&gt;&lt;span class="no"&gt;all.atom.xml&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;
-&lt;span class="nf"&gt;FEED_ALL_RSS&lt;/span&gt; &lt;span class="err"&gt;=&lt;/span&gt; &lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="no"&gt;feeds&lt;/span&gt;&lt;span class="err"&gt;/&lt;/span&gt;&lt;span class="no"&gt;all.rss.xml&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;
-&lt;span class="nf"&gt;AUTHOR_FEED_RSS&lt;/span&gt; &lt;span class="err"&gt;=&lt;/span&gt; &lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="no"&gt;feeds&lt;/span&gt;&lt;span class="err"&gt;/&lt;/span&gt;&lt;span class="nv"&gt;%s.rss.xml&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;
-&lt;span class="nf"&gt;RSS_FEED_SUMMARY_ONLY&lt;/span&gt; &lt;span class="err"&gt;=&lt;/span&gt; &lt;span class="no"&gt;False&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;FEED_ALL_ATOM&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;'feeds/all.atom.xml'&lt;/span&gt;
+&lt;span class="n"&gt;FEED_ALL_RSS&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;'feeds/all.rss.xml'&lt;/span&gt;
+&lt;span class="n"&gt;AUTHOR_FEED_RSS&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;'feeds/&lt;/span&gt;&lt;span class="si"&gt;%s&lt;/span&gt;&lt;span class="s1"&gt;.rss.xml'&lt;/span&gt;
+&lt;span class="n"&gt;RSS_FEED_SUMMARY_ONLY&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kc"&gt;False&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-
 &lt;p&gt;Save everything so you can send the code to Github. You can do that by adding all files, committing it with a message ('first commit') and using git push. You will be asked for your Github login and password.&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;$ git add -A &amp;amp;&amp;amp; git commit -a -m 'first commit' &amp;amp;&amp;amp; git push --all&lt;/code&gt;
 As I had said before you would be preserving the master branch for the output of the static files generated by Pelican. Now it's time  to generate the mater:&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;$ make github&lt;/code&gt;
-You will be asked for your Github login and password again. And... voilà! Your new blog should be live on https://YOUR_USERNAME.github.io.&lt;/p&gt;
-&lt;h1&gt;What's next?&lt;/h1&gt;
+You will be asked for your Github login and password again. And... voil&amp;agrave;! Your new blog should be live on https://YOUR_USERNAME.github.io.&lt;/p&gt;
+&lt;h1 id="what's next?_1"&gt;What's next?&lt;/h1&gt;
 &lt;p&gt;You generated your first Pelican static website using Markdown and Jinja2. Additional modifications can be made to the Jinja2 templates and the content contained in the Markdown files.&lt;/p&gt;
-&lt;h3&gt;Adding .gitignore&lt;/h3&gt;
+&lt;h3 id="adding .gitignore"&gt;Adding .gitignore&lt;/h3&gt;
 &lt;p&gt;.gitignore file contains a list of files and folder that git will ignore while syncing with the remote repository. Utilizing .gitignore wisely can reduce the amount of data you need to upload.&lt;/p&gt;
 &lt;p&gt;make a file .gitignore in the web-sources file with the following contents&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;#Custom&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
@@ -384,50 +427,52 @@ You will be asked for your Github login and password again. And... voilà! Your 
 &lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;project&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
 &lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;pydevproject&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;h3&gt;Automate GitHub upload process&lt;/h3&gt;
+&lt;h3 id="automate github upload process"&gt;Automate GitHub upload process&lt;/h3&gt;
 &lt;p&gt;Create a file &lt;code&gt;up.sh&lt;/code&gt; in the  &lt;code&gt;web-sources&lt;/code&gt;&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;git add -A &amp;amp;&amp;amp; git commit -a -m &amp;#39;$1&amp;#39; &amp;amp;&amp;amp; git push --all&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;git add -A &lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt; git commit -a -m &lt;span class="s1"&gt;'$1'&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt; git push --all
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-
 &lt;p&gt;Now whenever you want to upload sync the repo just do &lt;code&gt;bash up.sh "Comment"&lt;/code&gt; Note that the argument "Comment" should not contain spaces.&lt;/p&gt;
-&lt;h3&gt;Download Themes&lt;/h3&gt;
+&lt;h3 id="download themes"&gt;Download Themes&lt;/h3&gt;
 &lt;p&gt;Clone pelican-themes repository&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;git clone --recursive https://github.com/getpelican/pelican-themes themes&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;In &lt;code&gt;pelicanconf.py&lt;/code&gt; add the following variables:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;THEME = &amp;#39;themes/bootstrap2&amp;#39;&lt;/span&gt;
-&lt;span class="err"&gt;OUTPUT_PATH = &amp;#39;output&amp;#39;&lt;/span&gt;
-&lt;span class="err"&gt;PATH = &amp;#39;content&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;THEME&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;'themes/bootstrap2'&lt;/span&gt;
+&lt;span class="n"&gt;OUTPUT_PATH&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;'output'&lt;/span&gt;
+&lt;span class="n"&gt;PATH&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;'content&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;h3&gt;Custom Home page&lt;/h3&gt;
+&lt;h3 id="custom home page"&gt;Custom Home page&lt;/h3&gt;
 &lt;p&gt;Add this variables to pelicanconf.py&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;# Custom Home page&lt;/span&gt;
-&lt;span class="err"&gt;DIRECT_TEMPLATES = ((&amp;#39;index&amp;#39;, &amp;#39;blog&amp;#39;, &amp;#39;tags&amp;#39;, &amp;#39;categories&amp;#39;, &amp;#39;archives&amp;#39;))&lt;/span&gt;
-&lt;span class="err"&gt;PAGINATED_DIRECT_TEMPLATES = ((&amp;#39;blog&amp;#39;,))&lt;/span&gt;
-&lt;span class="err"&gt;TEMPLATE_PAGES = {&amp;#39;home.html&amp;#39;: &amp;#39;index.html&amp;#39;,}&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="c1"&gt;# Custom Home page&lt;/span&gt;
+&lt;span class="n"&gt;DIRECT_TEMPLATES&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;((&lt;/span&gt;&lt;span class="s1"&gt;'index'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;'blog'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;'tags'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;'categories'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;'archives'&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+&lt;span class="n"&gt;PAGINATED_DIRECT_TEMPLATES&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;((&lt;/span&gt;&lt;span class="s1"&gt;'blog'&lt;/span&gt;&lt;span class="p"&gt;,))&lt;/span&gt;
+&lt;span class="n"&gt;TEMPLATE_PAGES&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="s1"&gt;'home.html'&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;'index.html'&lt;/span&gt;&lt;span class="p"&gt;,}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-
 &lt;p&gt;Duplicated the index.html to blog.html in your template folder and add this lines:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="cp"&gt;{%&lt;/span&gt; &lt;span class="k"&gt;set&lt;/span&gt; &lt;span class="nv"&gt;active_page&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;blog&amp;quot;&lt;/span&gt; &lt;span class="cp"&gt;%}&lt;/span&gt;&lt;span class="x"&gt;&lt;/span&gt;
-&lt;span class="cp"&gt;{%&lt;/span&gt; &lt;span class="k"&gt;block&lt;/span&gt; &lt;span class="nv"&gt;title&lt;/span&gt; &lt;span class="cp"&gt;%}{{&lt;/span&gt; &lt;span class="nv"&gt;SITENAME&lt;/span&gt; &lt;span class="cp"&gt;}}&lt;/span&gt;&lt;span class="x"&gt; - Blog&lt;/span&gt;&lt;span class="cp"&gt;{%&lt;/span&gt; &lt;span class="k"&gt;endblock&lt;/span&gt; &lt;span class="cp"&gt;%}&lt;/span&gt;&lt;span class="x"&gt;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;{% set active_page = "blog" %}
+{% block title %}{{ SITENAME }} - Blog{% endblock %}
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-
 &lt;p&gt;Create home.html or use page override feature to use a Markdown page as your home page.&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;nano home.html&lt;/code&gt;&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="cp"&gt;{%&lt;/span&gt; &lt;span class="k"&gt;extends&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;base.html&amp;quot;&lt;/span&gt; &lt;span class="cp"&gt;%}&lt;/span&gt;
-&lt;span class="cp"&gt;{%&lt;/span&gt; &lt;span class="k"&gt;block&lt;/span&gt; &lt;span class="nv"&gt;content&lt;/span&gt; &lt;span class="cp"&gt;%}&lt;/span&gt;
-&lt;span class="nt"&gt;&amp;lt;div&lt;/span&gt; &lt;span class="na"&gt;class=&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;page&amp;#39;&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;
-  &lt;span class="nt"&gt;&amp;lt;div&lt;/span&gt; &lt;span class="na"&gt;class=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;page-header&amp;quot;&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&amp;lt;h1&amp;gt;&lt;/span&gt;Home&lt;span class="nt"&gt;&amp;lt;/h1&amp;gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
-  &lt;span class="nt"&gt;&amp;lt;div&lt;/span&gt; &lt;span class="na"&gt;class=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;page-content&amp;quot;&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;Content&lt;span class="nt"&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
-&lt;span class="nt"&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
-&lt;span class="cp"&gt;{%&lt;/span&gt; &lt;span class="k"&gt;endblock&lt;/span&gt; &lt;span class="cp"&gt;%}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content><category term="Blog"></category><category term="Github"></category><category term="Pelican"></category><category term="gh-pages"></category></entry><entry><title>Quantum Hall Effect and related phenomenon</title><link href="/qhe/" rel="alternate"></link><published>2019-01-01T00:00:00+05:30</published><updated>2019-01-01T00:00:00+05:30</updated><author><name>Ashwin</name></author><id>tag:None,2019-01-01:/qhe/</id><summary type="html">&lt;p&gt;Notes on Quantum Hall Effect and related phenomenon&lt;/p&gt;</summary><content type="html">&lt;h1&gt;Historical Aspects&lt;/h1&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;{% extends "base.html" %}
+{% block content %}
+&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;div&lt;/span&gt; &lt;span class="na"&gt;class&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;'page'&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;div&lt;/span&gt; &lt;span class="na"&gt;class&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;"page-header"&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;h1&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;Home&lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;h1&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;div&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;div&lt;/span&gt; &lt;span class="na"&gt;class&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;"page-content"&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;Content&lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;div&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;div&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+{% endblock %}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3 id="process for new articles."&gt;Process for new articles.&lt;/h3&gt;
+&lt;p&gt;Ones the setup is done, the contents of the folder &lt;code&gt;web-sources&lt;/code&gt; need not be generated again using the above procedure. All one has to do is place the article in the content folder then (after testing the website locally using &lt;code&gt;make devserver&lt;/code&gt;) then execute  &lt;code&gt;bash up.sh "Comment"&lt;/code&gt;  to sync the source branch and then do &lt;code&gt;make github&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;If you are on a different machine or you have lost access to the &lt;code&gt;web-sources&lt;/code&gt; folder, you just have to make the virtual environment and then do git clone again. i.e&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;virtualenv website
+&lt;span class="nb"&gt;cd&lt;/span&gt; website
+&lt;span class="nb"&gt;source&lt;/span&gt; bin/activate
+pip install pelican markdown typogrify ghp-import shovel
+git clone https://github.com/YOUR_USERNAME/YOUR_USERNAME.github.io.git web-sources
+&lt;span class="nb"&gt;cd&lt;/span&gt; web-sources
+git checkout -b &lt;span class="nb"&gt;source&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;This article just touches uppon getting a basic website up and running. More features that Pelican offers (like custom plugins)can be explored &lt;a href="http://docs.getpelican.com/en/3.6.3/content.html"&gt;here&lt;/a&gt;.&lt;/p&gt;</content><category term="Blog"></category><category term="Github"></category><category term="Pelican"></category><category term="gh-pages"></category></entry><entry><title>Quantum Hall Effect and related phenomenon</title><link href="/qhe/" rel="alternate"></link><published>2019-01-01T00:00:00+05:30</published><updated>2019-01-01T00:00:00+05:30</updated><author><name>Ashwin</name></author><id>tag:None,2019-01-01:/qhe/</id><summary type="html">&lt;p&gt;Notes on Quantum Hall Effect and related phenomenon&lt;/p&gt;</summary><content type="html">&lt;h1 id="historical aspects"&gt;Historical Aspects&lt;/h1&gt;
 &lt;p&gt;The quantum Hall effect is a remarkable phenomenon discovered
 experimentally in which the Hall conductivity of a two dimensional
 system of electrons is found to have plateaus as a function of variables
@@ -458,39 +503,44 @@ magnetic field with a fixed current through the sample, rather than
 switched on the current at fixed field, as the coincidence of the
 unchanged digital voltmeter readings would then never have happened.
 [4]&lt;/p&gt;
-&lt;h1&gt;Theoretical aspects [8,6]&lt;/h1&gt;
-&lt;h2&gt;The Classical Hall Effect&lt;/h2&gt;
+&lt;h1 id="theoretical aspects [8,6]"&gt;Theoretical aspects [8,6]&lt;/h1&gt;
+&lt;h2 id="the classical hall effect"&gt;The Classical Hall Effect&lt;/h2&gt;
 &lt;p&gt;The original, classical Hall effect was discovered in 1879 by Edwin
 Hall. It is a simple consequence of the motion of charged particles in a
 magnetic field.&lt;/p&gt;
 &lt;p&gt;The setup for the same is as follows, consider a rectangular bar with
 thickness, t, Length L, and width W, as shown in Fig 1.
-Now a constant current along the $x$ axis is passed. When a magnetic
-field is applied along the $z$ axis ($B_{z}$), the charges in the
+Now a constant current along the &lt;span class="math"&gt;\(x\)&lt;/span&gt; axis is passed. When a magnetic
+field is applied along the &lt;span class="math"&gt;\(z\)&lt;/span&gt; axis (&lt;span class="math"&gt;\(B_{z}\)&lt;/span&gt;), the charges in the
 current experience a force (the Lorentz force).&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Fig 1 Schematic diagram of the Hall effect measurement setup" src="../../images/Hall_Effect_Measurement_Setup_for_Electrons.png"&gt;&lt;/p&gt;
-&lt;p&gt;In the absence $B_{z}$, the charges follow approximately straight paths.
-However, when $B_{z}$ is applied, their paths get curved, in this way
+&lt;p&gt;&lt;img alt="Fig 1 Schematic diagram of the Hall effect measurement setup" src="../../images/Hall_Effect_Measurement_Setup_for_Electrons.png"/&gt;&lt;/p&gt;
+&lt;p&gt;In the absence &lt;span class="math"&gt;\(B_{z}\)&lt;/span&gt;, the charges follow approximately straight paths.
+However, when &lt;span class="math"&gt;\(B_{z}\)&lt;/span&gt; is applied, their paths get curved, in this way
 moving charges aggregate on one face of the material. This leaves equal
 and opposite charges exposed on the other face, where there is a
 scarcity of mobile charges. The separation of charge establishes an
 electric field that opposes the migration of further charge, so a steady
 electric potential is established for as long as the charge is flowing.
-This is called the Hall voltage $V_{H}$.&lt;/p&gt;
-&lt;p&gt;The Hall voltage $V_{H}$ can be derived by using the Lorentz force given
+This is called the Hall voltage &lt;span class="math"&gt;\(V_{H}\)&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;The Hall voltage &lt;span class="math"&gt;\(V_{H}\)&lt;/span&gt; can be derived by using the Lorentz force given
 that, in the steady-state condition, charges are not moving in the
-y-axis direction. $\vec{{F}}=q(\vec{E}+\vec{vx\vec{B_{z}}})$ , Now
-$\vec{F}=0\implies0=E_{y}-v_{x}B_{z}$ also $E_y=-\frac{V_H}{w}$ thus on
-substituting these values we get : $$\begin{aligned}
-V_{H} &amp;amp; = &amp;amp; v_{x}B_{z}w\end{aligned}$$
-This shows that $V_{H}$ is proportional to $B_{z}$, this result is used
+y-axis direction. &lt;span class="math"&gt;\(\vec{{F}}=q(\vec{E}+\vec{vx\vec{B_{z}}})\)&lt;/span&gt; , Now
+&lt;span class="math"&gt;\(\vec{F}=0\implies0=E_{y}-v_{x}B_{z}\)&lt;/span&gt; also &lt;span class="math"&gt;\(E_y=-\frac{V_H}{w}\)&lt;/span&gt; thus on
+substituting these values we get : &lt;/p&gt;
+&lt;div class="math"&gt;$$\begin{aligned}
+V_{H} &amp;amp; = &amp;amp; v_{x}B_{z}w\end{aligned}$$&lt;/div&gt;
+&lt;p&gt;
+This shows that &lt;span class="math"&gt;\(V_{H}\)&lt;/span&gt; is proportional to &lt;span class="math"&gt;\(B_{z}\)&lt;/span&gt;, this result is used
 in commercial hall sensors which are used to measure magnetic field.&lt;/p&gt;
 &lt;p&gt;However one must note that the result drawn are for the the simple case
 with no impurities. Otherwise we will have to include the scattering
-effects. on doing so the previus equation gets modified as $$\begin{aligned}
-E_{y} &amp;amp; = &amp;amp; \frac{-eB\tau}{m}E_{x}\end{aligned}$$&lt;/p&gt;
-&lt;p&gt;where $\tau$ is called the scattering time. Thus $R_{H}$ called the Hall
-resistance is defined as $$R_{H}=\frac{E_{y}}{j_{x}B}=-\frac{1}{ne}$$
+effects. on doing so the previus equation gets modified as &lt;/p&gt;
+&lt;div class="math"&gt;$$\begin{aligned}
+E_{y} &amp;amp; = &amp;amp; \frac{-eB\tau}{m}E_{x}\end{aligned}$$&lt;/div&gt;
+&lt;p&gt;where &lt;span class="math"&gt;\(\tau\)&lt;/span&gt; is called the scattering time. Thus &lt;span class="math"&gt;\(R_{H}\)&lt;/span&gt; called the Hall
+resistance is defined as &lt;/p&gt;
+&lt;div class="math"&gt;$$R_{H}=\frac{E_{y}}{j_{x}B}=-\frac{1}{ne}$$&lt;/div&gt;
+&lt;p&gt;
 where n is the carrier constant.&lt;/p&gt;
 &lt;p&gt;Thus the measurement of Hall Coefficient gives the following information
 about the material&lt;/p&gt;
@@ -502,12 +552,12 @@ about the material&lt;/p&gt;
 &lt;p&gt;The sign determines the carriers are holes or electrons.&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;h3&gt;Experimental verification of hall effect.[5]&lt;/h3&gt;
+&lt;h3 id="experimental verification of hall effect.[5]"&gt;Experimental verification of hall effect.[5]&lt;/h3&gt;
 &lt;p&gt;An experiment was performed to measure the charge density of Germanium
 used as Hall Probe. The experiment was performed under the guidance of
 Sharvari Kulkarni P.&lt;/p&gt;
 &lt;p&gt;The current passing through sample I, was kept constant at 10mA. The
-Hall Voltages $V_{H}$ were measured for different values of Magnetic
+Hall Voltages &lt;span class="math"&gt;\(V_{H}\)&lt;/span&gt; were measured for different values of Magnetic
 field. For each value of magnetic field, four readings corresponding to
 different geometric orientations were considered. This is essential due
 to presence of other thermal and galvanometric transport effects . The
@@ -516,33 +566,33 @@ data and graphs are as following:&lt;/p&gt;
 current was determined and plotted. Two readings corresponding to single
 current value specifies the values during increment and decrement of
 current viz. to minimize the error.
-&lt;img alt="image" src="../../images/hall_data_table.png"&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Magnetic field vs Current " src="../../images/hall_data_graph.png"&gt;&lt;/p&gt;
+&lt;img alt="image" src="../../images/hall_data_table.png"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Magnetic field vs Current " src="../../images/hall_data_graph.png"/&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Part-2:&lt;/strong&gt; The values of Hall Voltages are measured for different
 geometrical combinations.The data obtained is as follows -&lt;/p&gt;
-&lt;p&gt;&lt;img alt="image" src="../../images/hall_data_table2.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="image" src="../../images/hall_data_table2.png"/&gt;&lt;/p&gt;
 &lt;p&gt;Corresponding graphs are plotted here.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="image" src="../../images/hall_data_graph2.png"&gt;
-&lt;img alt="image" src="../../images/hall_data_graph3.png"&gt;
-&lt;img alt="image" src="../../images/hall_data_graph4.png"&gt;
-&lt;img alt="image" src="../../images/hall_data_graph5.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="image" src="../../images/hall_data_graph2.png"/&gt;
+&lt;img alt="image" src="../../images/hall_data_graph3.png"/&gt;
+&lt;img alt="image" src="../../images/hall_data_graph4.png"/&gt;
+&lt;img alt="image" src="../../images/hall_data_graph5.png"/&gt;&lt;/p&gt;
 &lt;p&gt;From all these graphs, the average value of slope is &lt;strong&gt;0.03218
-$\frac{mV}{Gauss}$&lt;/strong&gt; . We have sample current equal to 10mA and
+&lt;span class="math"&gt;\(\frac{mV}{Gauss}\)&lt;/span&gt;&lt;/strong&gt; . We have sample current equal to 10mA and
 sample length as 5mm.&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;
 &lt;p&gt;Hence the value of Hall Coefficient is &lt;strong&gt;0.1609
-    $\frac{m^{3}}{C}$.&lt;/strong&gt;&lt;/p&gt;
+    &lt;span class="math"&gt;\(\frac{m^{3}}{C}\)&lt;/span&gt;.&lt;/strong&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Positive sign implies that majority carriers are holes.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;From this value, the carrier concentration can be calculated as
-    &lt;strong&gt;$n=3.879x10^{19}m^{-3}$&lt;/strong&gt;&lt;/p&gt;
+    &lt;strong&gt;&lt;span class="math"&gt;\(n=3.879x10^{19}m^{-3}\)&lt;/span&gt;&lt;/strong&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;h1&gt;Quantum Hall Effects&lt;/h1&gt;
+&lt;h1 id="quantum hall effects_2"&gt;Quantum Hall Effects&lt;/h1&gt;
 &lt;p&gt;In the previous section we saw details about the Hall effect mainly that
 Hall Voltage is proportional to the magnetic field.&lt;/p&gt;
 &lt;p&gt;Hall effect is easily observed in room temperature and relatively low
@@ -552,37 +602,38 @@ Tesla) we see a non linear relation between Hall conductance and
 Magnetic field. We see some sort of quantization of Hall conductance.
 The observed resistivity is shown in next figure.&lt;/p&gt;
 &lt;p&gt;&lt;img alt="Hall resistance and longitudinal resistivity data as a function of the
-magnetic field for a GaAs/AlGaAs hetero-structures at 1.5 K" src="../../images/HallPvsB.png"&gt;[8]&lt;/p&gt;
+magnetic field for a GaAs/AlGaAs hetero-structures at 1.5 K" src="../../images/HallPvsB.png"/&gt;[8]&lt;/p&gt;
 &lt;p&gt;On observing the graph and a little bit of theoretical calculations one
 can deduce the following:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Both the Hall resistivity $\rho_{xy}$ and the longitudinal
-    resistivity $\rho_{xx}$ exhibit non linear behavior.&lt;/li&gt;
+&lt;li&gt;Both the Hall resistivity &lt;span class="math"&gt;\(\rho_{xy}\)&lt;/span&gt; and the longitudinal
+    resistivity &lt;span class="math"&gt;\(\rho_{xx}\)&lt;/span&gt; exhibit non linear behavior.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;For lower magnetic field Transverse resistance varies linearly but after
 certain limit it changes step-like with integer multiples of
-$\frac{\hbar}{e^{2}}$ with some plateau region in between.&lt;/p&gt;
+&lt;span class="math"&gt;\(\frac{\hbar}{e^{2}}\)&lt;/span&gt; with some plateau region in between.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;On these plateau, the resistivity takes the value&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;$$\rho_{xy}=\frac{\hbar}{e^{2}}\,\frac{1}{\nu}\;\quad\nu\epsilon\mathbf{Z}$$&lt;/p&gt;
-&lt;p&gt;The value of $\nu$ is measured to be an integer to an extraordinary
-accuracy --- something like one part in $10^{9}$ .&lt;/p&gt;
-&lt;p&gt;The quantity$\frac{\hbar}{e^{2}}$ is called the quantum of resistivity
+&lt;div class="math"&gt;$$\rho_{xy}=\frac{\hbar}{e^{2}}\,\frac{1}{\nu}\;\quad\nu\epsilon\mathbf{Z}$$&lt;/div&gt;
+&lt;p&gt;The value of &lt;span class="math"&gt;\(\nu\)&lt;/span&gt; is measured to be an integer to an extraordinary
+accuracy --- something like one part in &lt;span class="math"&gt;\(10^{9}\)&lt;/span&gt; .&lt;/p&gt;
+&lt;p&gt;The quantity&lt;span class="math"&gt;\(\frac{\hbar}{e^{2}}\)&lt;/span&gt; is called the quantum of resistivity
 (with value 25.8128075 k )&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;The longitudinal resistance has zero value otherwise except at a
-    point where $\rho_{xy}$ jumps from one plateau to another.&lt;/p&gt;
+    point where &lt;span class="math"&gt;\(\rho_{xy}\)&lt;/span&gt; jumps from one plateau to another.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;The center of each plateau occurs at a point when magnetic field
     takes a value
-    $$B=\frac{hn}{\gamma e}=\left(\frac{n}{\gamma}\right)\phi_{0}$$&lt;/p&gt;
+    &lt;div class="math"&gt;$$B=\frac{hn}{\gamma e}=\left(\frac{n}{\gamma}\right)\phi_{0}$$&lt;/div&gt;
+&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Where, n is density of states of electrons and
-$\phi_{0}=\frac{\hbar}{e^{2}}$as flux quantum. This is a value of
+&lt;span class="math"&gt;\(\phi_{0}=\frac{\hbar}{e^{2}}\)&lt;/span&gt;as flux quantum. This is a value of
 Magnetic field at which number of Landau Levels are filled.&lt;/p&gt;
 &lt;p&gt;In order to see the Quantum Hall effect we need to suppress spin-flip
 scattering of the conduction electrons. Doing this requires us to do two
@@ -596,34 +647,35 @@ laboratory are only strong enough to give Zeeman energies of order one
 degree Kelvin, we need to have temperatures of less than one degree
 Kelvin in order to see the Quantum Hall effect at all. And the lower we
 can make the temperature, the better the data will look.&lt;/p&gt;
-&lt;h3&gt;Classical Explanation[3]&lt;/h3&gt;
+&lt;h3 id="classical explanation[3]"&gt;Classical Explanation[3]&lt;/h3&gt;
 &lt;p&gt;One can explain the above phenomenon classically as follows.&lt;/p&gt;
 &lt;p&gt;Consider the standard 2DEG setup with four probes two along x axis and
 two along y axis similar to the arrangement in Fig1.
-Ohm's law can be written as $J=\sigma E$ .Where $\sigma$ is conductivity
-of the material. But in presence of Magnetic field B this $\sigma$
+Ohm's law can be written as &lt;span class="math"&gt;\(J=\sigma E\)&lt;/span&gt; .Where &lt;span class="math"&gt;\(\sigma\)&lt;/span&gt; is conductivity
+of the material. But in presence of Magnetic field B this &lt;span class="math"&gt;\(\sigma\)&lt;/span&gt;
 becomes a 2 x 2 tensor matrix. Hence the corresponding resistivity
 tensor can be written as&lt;/p&gt;
-&lt;p&gt;$$\begin{aligned}
-\sigma^{-1} &amp;amp; = &amp;amp; \rho\end{aligned}$$&lt;/p&gt;
-&lt;p&gt;$$\begin{pmatrix}\sigma_{xx} &amp;amp; \sigma_{xy}\
+&lt;div class="math"&gt;$$\begin{aligned}
+\sigma^{-1} &amp;amp; = &amp;amp; \rho\end{aligned}$$&lt;/div&gt;
+&lt;div class="math"&gt;$$\begin{pmatrix}\sigma_{xx} &amp;amp; \sigma_{xy}\\
 -\sigma_{xy} &amp;amp; \sigma_{yy}
-\end{pmatrix}^{-1}=\begin{pmatrix}\rho_{xx} &amp;amp; \rho_{xy}\
+\end{pmatrix}^{-1}=\begin{pmatrix}\rho_{xx} &amp;amp; \rho_{xy}\\
 -\rho_{xy} &amp;amp; \rho_{yy}
-\end{pmatrix}$$&lt;/p&gt;
-&lt;p&gt;$\therefore$
-$$\sigma_{xx}=\frac{\rho_{xx}}{\rho_{xx}^{2}+\rho_{xy}^{2}}\quad and\quad\sigma_{xy}=-\frac{\rho_{xxy}}{\rho_{xx}^{2}+\rho_{xy}^{2}}$$&lt;/p&gt;
+\end{pmatrix}$$&lt;/div&gt;
+&lt;p&gt;&lt;span class="math"&gt;\(\therefore\)&lt;/span&gt;
+&lt;/p&gt;
+&lt;div class="math"&gt;$$\sigma_{xx}=\frac{\rho_{xx}}{\rho_{xx}^{2}+\rho_{xy}^{2}}\quad and\quad\sigma_{xy}=-\frac{\rho_{xxy}}{\rho_{xx}^{2}+\rho_{xy}^{2}}$$&lt;/div&gt;
 &lt;p&gt;This brings up the following cases&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;
-&lt;p&gt;$\sigma_{xx}=0$ $\implies\sigma_{xy}=0$ so
-    $\sigma_{xx}=\frac{1}{\rho_{xx}}$ this is the general solution&lt;/p&gt;
+&lt;p&gt;&lt;span class="math"&gt;\(\sigma_{xx}=0\)&lt;/span&gt; &lt;span class="math"&gt;\(\implies\sigma_{xy}=0\)&lt;/span&gt; so
+    &lt;span class="math"&gt;\(\sigma_{xx}=\frac{1}{\rho_{xx}}\)&lt;/span&gt; this is the general solution&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;$\rho_{xy}\neq0$ $\implies\sigma_{xx}$and $\sigma_{xy}$are non zero.&lt;/p&gt;
+&lt;p&gt;&lt;span class="math"&gt;\(\rho_{xy}\neq0\)&lt;/span&gt; &lt;span class="math"&gt;\(\implies\sigma_{xx}\)&lt;/span&gt;and &lt;span class="math"&gt;\(\sigma_{xy}\)&lt;/span&gt;are non zero.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;$\rho_{xx}=0\implies\sigma_{xx}=0$&lt;/p&gt;
+&lt;p&gt;&lt;span class="math"&gt;\(\rho_{xx}=0\implies\sigma_{xx}=0\)&lt;/span&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;The third case is the one where we see the transition from one plateau
@@ -632,29 +684,32 @@ to another plateau.&lt;/p&gt;
 considers metals as free electron gas without any interaction between
 them.So between two collision electron behaves as a free particle.
 According to the Drude's Model
-$\sigma_{xx}=\frac{\sigma_{0}}{1+\left(\tau\omega_{c}\right)^{2}}$ where
-$\tau$ is the relaxation time and $\sigma_{0}=\frac{ne^{2}\tau}{m}$.
-Thus $\sigma_{xx}=0$ implies that $\tau\rightarrow\infty$ or in other
+&lt;span class="math"&gt;\(\sigma_{xx}=\frac{\sigma_{0}}{1+\left(\tau\omega_{c}\right)^{2}}\)&lt;/span&gt; where
+&lt;span class="math"&gt;\(\tau\)&lt;/span&gt; is the relaxation time and &lt;span class="math"&gt;\(\sigma_{0}=\frac{ne^{2}\tau}{m}\)&lt;/span&gt;.
+Thus &lt;span class="math"&gt;\(\sigma_{xx}=0\)&lt;/span&gt; implies that &lt;span class="math"&gt;\(\tau\rightarrow\infty\)&lt;/span&gt; or in other
 words, absence of scattering.&lt;/p&gt;
 &lt;p&gt;In this particular case the current is flowing perpendicular to the
 field, it has the following form.&lt;/p&gt;
-&lt;p&gt;$$\hat{E}=\begin{pmatrix}E_{x}\
+&lt;div class="math"&gt;$$\hat{E}=\begin{pmatrix}E_{x}\\
 E_{y}
-\end{pmatrix}=\begin{pmatrix}0 &amp;amp; \rho_{xy}\
+\end{pmatrix}=\begin{pmatrix}0 &amp;amp; \rho_{xy}\\
 -\rho_{xy} &amp;amp; 0
-\end{pmatrix}\begin{pmatrix}j_{x}\
+\end{pmatrix}\begin{pmatrix}j_{x}\\
 j_{y}
-\end{pmatrix}=\begin{pmatrix}\rho_{xy}j_{y}\
+\end{pmatrix}=\begin{pmatrix}\rho_{xy}j_{y}\\
 -\rho_{xy}j_{x}
-\end{pmatrix}$$ This shows that E and J are perpendicular. Thus
-$\hat{E}\cdot\hat{J}$=0. This means that the work done in accelerating
+\end{pmatrix}$$&lt;/div&gt;
+&lt;p&gt; This shows that E and J are perpendicular. Thus
+&lt;span class="math"&gt;\(\hat{E}\cdot\hat{J}\)&lt;/span&gt;=0. This means that the work done in accelerating
 the charges is 0. Thus there is a steady current flowing in the sample.
-And hence no heat dissipation. Hence, $\sigma_{xx}=0$ means no current
-is flowing in longitudinal direction and $\rho_{xx}=0$ means there is no
+And hence no heat dissipation. Hence, &lt;span class="math"&gt;\(\sigma_{xx}=0\)&lt;/span&gt; means no current
+is flowing in longitudinal direction and &lt;span class="math"&gt;\(\rho_{xx}=0\)&lt;/span&gt; means there is no
 any dissipation of energy. We also see that
-$$\sigma_{xy}==\frac{-1}{\rho_{xy}}=\gamma\frac{e^{2}}{h}\qquad\gamma\rightarrow integer$$
+&lt;/p&gt;
+&lt;div class="math"&gt;$$\sigma_{xy}==\frac{-1}{\rho_{xy}}=\gamma\frac{e^{2}}{h}\qquad\gamma\rightarrow integer$$&lt;/div&gt;
+&lt;p&gt;
 which is the same as the quantised hall value equation.&lt;/p&gt;
-&lt;h3&gt;Landau Levels[2]&lt;/h3&gt;
+&lt;h3 id="landau levels[2]"&gt;Landau Levels[2]&lt;/h3&gt;
 &lt;p&gt;In presence of magnetic field, electrons follow circular trajectories
 called cyclotron orbits.&lt;/p&gt;
 &lt;ul&gt;
@@ -675,64 +730,72 @@ called cyclotron orbits.&lt;/p&gt;
 &lt;/ul&gt;
 &lt;p&gt;Now lets look at the mathematical derivation of the above statement.
 Consider our previous model of two-dimensional electron gas system, say
-with charge q confined to an area A = $L_{x}L_{y}$ in the x-y plane. Let
-the magnetic field applied be $\hat{B}=B_{z}\hat{z}$ .&lt;/p&gt;
+with charge q confined to an area A = &lt;span class="math"&gt;\(L_{x}L_{y}\)&lt;/span&gt; in the x-y plane. Let
+the magnetic field applied be &lt;span class="math"&gt;\(\hat{B}=B_{z}\hat{z}\)&lt;/span&gt; .&lt;/p&gt;
 &lt;p&gt;Now the Hamiltonian of such a system will be given by
-$$\hat{H}=\frac{1}{2m}(\hat{\mathbf{p}}-q\hat{\mathbf{A}}/c)^{2}$$&lt;/p&gt;
-&lt;p&gt;where $\hat{p}$ is the canonical momentum operator and $\hat{A}$ is the
+&lt;/p&gt;
+&lt;div class="math"&gt;$$\hat{H}=\frac{1}{2m}(\hat{\mathbf{p}}-q\hat{\mathbf{A}}/c)^{2}$$&lt;/div&gt;
+&lt;p&gt;where &lt;span class="math"&gt;\(\hat{p}\)&lt;/span&gt; is the canonical momentum operator and &lt;span class="math"&gt;\(\hat{A}\)&lt;/span&gt; is the
 electromagnetic vector potential.&lt;/p&gt;
 &lt;p&gt;There is some gauge freedom in the choice of vector potential for a
 given magnetic field which means that adding the gradient of a scalar
-field to $\hat{A}$ changes the overall phase of the wave function by an
+field to &lt;span class="math"&gt;\(\hat{A}\)&lt;/span&gt; changes the overall phase of the wave function by an
 amount corresponding to the scalar field. But physical properties are
 not influenced by the specific choice of gauge. For simplicity in
 calculation, lets choose the Landau gauge, which is&lt;/p&gt;
-&lt;p&gt;$${\displaystyle \hat{\mathbf{A}}=\begin{pmatrix}0\
-B_{z}x\
+&lt;div class="math"&gt;$${\displaystyle \hat{\mathbf{A}}=\begin{pmatrix}0\\
+B_{z}x\\
 0
-\end{pmatrix}.}$$&lt;/p&gt;
-&lt;p&gt;$${\displaystyle \hat{H}=\frac{\hat{p}&lt;em y&gt;{x}^{2}}{2m}+\frac{1}{2m}\left(\hat{p}&lt;/em&gt;-\frac{qB\hat{x}}{c}\right)^{2}}$$
-The operator $\hat{p}&lt;em y&gt;{y}$ commutes with this Hamiltonian, since the
-operator $\hat{y}$ is absent by the choice of gauge. Thus the operator
-$\hat{p}&lt;/em&gt;$ can be replaced by its eigenvalue
-$k_{y}$.&lt;/p&gt;
+\end{pmatrix}.}$$&lt;/div&gt;
+&lt;div class="math"&gt;$${\displaystyle \hat{H}=\frac{\hat{p}_{x}^{2}}{2m}+\frac{1}{2m}\left(\hat{p}_{y}-\frac{qB\hat{x}}{c}\right)^{2}}$$&lt;/div&gt;
+&lt;p&gt;
+The operator &lt;span class="math"&gt;\(\hat{p}_{y}\)&lt;/span&gt; commutes with this Hamiltonian, since the
+operator &lt;span class="math"&gt;\(\hat{y}\)&lt;/span&gt; is absent by the choice of gauge. Thus the operator
+&lt;span class="math"&gt;\(\hat{p}_{y}\)&lt;/span&gt; can be replaced by its eigenvalue
+&lt;span class="math"&gt;\(k_{y}\)&lt;/span&gt;.&lt;/p&gt;
 &lt;p&gt;The Hamiltonian can also be written more simply by noting that the
-cyclotron frequency is $\omega_{c}=\frac{qB}{mc}$, giving&lt;/p&gt;
-&lt;p&gt;$$\hat{H}=\frac{\hat{p}&lt;em c&gt;{x}^{2}}{2m}+\frac{1}{2}m\omega&lt;/em&gt;^{2}\left(\hat{x}-\frac{\hbar k_{y}}{m\omega_{c}}\right)^{2}$$
+cyclotron frequency is &lt;span class="math"&gt;\(\omega_{c}=\frac{qB}{mc}\)&lt;/span&gt;, giving&lt;/p&gt;
+&lt;div class="math"&gt;$$\hat{H}=\frac{\hat{p}_{x}^{2}}{2m}+\frac{1}{2}m\omega_{c}^{2}\left(\hat{x}-\frac{\hbar k_{y}}{m\omega_{c}}\right)^{2}$$&lt;/div&gt;
+&lt;p&gt;
 . This is the Hamiltonian one would encounter for the quantum harmonic
 oscillator problem as well, except with the minimum of the potential
-shifted in coordinate space by $$x_{0}=\frac{k_{y}}{m\omega_c}$$.&lt;/p&gt;
+shifted in coordinate space by &lt;/p&gt;
+&lt;div class="math"&gt;$$x_{0}=\frac{k_{y}}{m\omega_c}$$&lt;/div&gt;
+&lt;p&gt;.&lt;/p&gt;
 &lt;p&gt;To find the energies, note that translating the harmonic oscillator
 potential does not affect the energies. The energies of this system are
 thus identical to those of the standard quantum harmonic oscillator,&lt;/p&gt;
-&lt;p&gt;$$E_{n}=\hbar\omega_{c}\left(n+\frac{1}{2}\right),\quad n\geq0$$ . The
-energy does not depend on the quantum number $k_{y}$, so there will be
+&lt;div class="math"&gt;$$E_{n}=\hbar\omega_{c}\left(n+\frac{1}{2}\right),\quad n\geq0$$&lt;/div&gt;
+&lt;p&gt; . The
+energy does not depend on the quantum number &lt;span class="math"&gt;\(k_{y}\)&lt;/span&gt;, so there will be
 degeneracy.&lt;/p&gt;
 &lt;p&gt;With this argument we can conclude that the state of the electron can
-uniquely determined by two by two quantum numbers, n and $k_{y}$. Now
+uniquely determined by two by two quantum numbers, n and &lt;span class="math"&gt;\(k_{y}\)&lt;/span&gt;. Now
 let us focus on the degeneracy of Landau level.&lt;/p&gt;
-&lt;h3&gt;Degeneracy of Landau levels[6,2]&lt;/h3&gt;
+&lt;h3 id="degeneracy of landau levels[6,2]"&gt;Degeneracy of Landau levels[6,2]&lt;/h3&gt;
 &lt;p&gt;Each set of wave functions with the same value of n is called a Landau
 level. Effects of Landau levels are only observed when the mean thermal
 energy is smaller than the energy level separation,
-$kT &amp;lt;&amp;lt; \hbar omega_c$,
+&lt;span class="math"&gt;\(kT &amp;lt;&amp;lt; \hbar omega_c\)&lt;/span&gt;,
 meaning low temperatures and strong magnetic fields.&lt;/p&gt;
 &lt;p&gt;Each Landau level is degenerate because of the second quantum number
-$k_{y}$, which can take the values
-${\displaystyle k_{y}={\frac{2\pi N}{L_{y}}}}$, where N is an integer.&lt;/p&gt;
+&lt;span class="math"&gt;\(k_{y}\)&lt;/span&gt;, which can take the values
+&lt;span class="math"&gt;\({\displaystyle k_{y}={\frac{2\pi N}{L_{y}}}}\)&lt;/span&gt;, where N is an integer.&lt;/p&gt;
 &lt;p&gt;The allowed values of N are further restricted by the condition that the
-center of force of the oscillator, $x_{0}$, must physically lie within
-the system, $0\le x0&amp;lt;L_{x}$. This gives the following range for N,
-$${\displaystyle 0\leq N&amp;lt;{\frac{m\omega_{c}L_{x}L_{y}}{2\pi\hbar}}.}$$&lt;/p&gt;
-&lt;p&gt;For particles with charge $q=Ze$, the upper bound on N can be simply
+center of force of the oscillator, &lt;span class="math"&gt;\(x_{0}\)&lt;/span&gt;, must physically lie within
+the system, &lt;span class="math"&gt;\(0\le x0&amp;lt;L_{x}\)&lt;/span&gt;. This gives the following range for N,
+&lt;/p&gt;
+&lt;div class="math"&gt;$${\displaystyle 0\leq N&amp;lt;{\frac{m\omega_{c}L_{x}L_{y}}{2\pi\hbar}}.}$$&lt;/div&gt;
+&lt;p&gt;For particles with charge &lt;span class="math"&gt;\(q=Ze\)&lt;/span&gt;, the upper bound on N can be simply
 written as a ratio of fluxes,&lt;/p&gt;
-&lt;p&gt;$${\displaystyle {\frac{ZBL_{x}L_{y}}{(hc/e)}}=Z{\frac{\Phi}{\Phi_{0}}},}$$
-where $\Phi_{0}=hc/e$ is the fundamental quantum of flux and $\Phi=BA$
-is the flux through the system (with area $A=L_{x}L_{y}$).&lt;/p&gt;
+&lt;div class="math"&gt;$${\displaystyle {\frac{ZBL_{x}L_{y}}{(hc/e)}}=Z{\frac{\Phi}{\Phi_{0}}},}$$&lt;/div&gt;
+&lt;p&gt;
+where &lt;span class="math"&gt;\(\Phi_{0}=hc/e\)&lt;/span&gt; is the fundamental quantum of flux and &lt;span class="math"&gt;\(\Phi=BA\)&lt;/span&gt;
+is the flux through the system (with area &lt;span class="math"&gt;\(A=L_{x}L_{y}\)&lt;/span&gt;).&lt;/p&gt;
 &lt;p&gt;Thus, for particles with spin S, the maximum number D of particles per
 Landau level is&lt;/p&gt;
-&lt;p&gt;$${\displaystyle D=Z(2S+1){\frac{\Phi}{\Phi_{0}}}~}$$&lt;/p&gt;
-&lt;h3&gt;Edge modes[4]&lt;/h3&gt;
+&lt;div class="math"&gt;$${\displaystyle D=Z(2S+1){\frac{\Phi}{\Phi_{0}}}~}$$&lt;/div&gt;
+&lt;h3 id="edge modes[4]"&gt;Edge modes[4]&lt;/h3&gt;
 &lt;p&gt;So far we have discussed the ideal 2DEG scenario. The real samples,
 though comparatively clean, do not have the transnational invariance
 that makes each state in a given Landau level have exactly the same
@@ -750,7 +813,7 @@ are extended as opposed to localized. These edge states act as skipping
 orbits that precess around the boundary of the system in the opposite
 sense to that of the Landau orbits, when a particle in a Landau orbit
 intersects the boundary, and bounces off it.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Edge states in a sample" src="../../images/edge.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Edge states in a sample" src="../../images/edge.png"/&gt;&lt;/p&gt;
 &lt;p&gt;[1]:"Wikipedia Entry on Hall Effect", En.Wikipedia.org (Retrieved 25 April 2019).&lt;/p&gt;
 &lt;p&gt;[2]:"Wikipedia Entry on Landau quantization", En.Wikipedia.org (Retrieved 26 April 2019).&lt;/p&gt;
 &lt;p&gt;[3]:"NPTEL :: Physics - NOC: Advanced Condensed matter physics" (Retrieved 27 April 2019).&lt;/p&gt;
@@ -758,4 +821,65 @@ intersects the boundary, and bounces off it.&lt;/p&gt;
 &lt;p&gt;[5]:P Sharvari Kulkarni, "Report on Quantum Hall Effect" (April 18, 2019).&lt;/p&gt;
 &lt;p&gt;[6]:David Tong, Lectures on the Quantum Hall Effect ().&lt;/p&gt;
 &lt;p&gt;[7]:T. Ando; Y. Matsumoto; Y. Uemura, "Theory of Hall effect in a two-dimensional electron system", Journal of the Physical Society of Japan 39, 2 (), pp. 279--288.&lt;/p&gt;
-&lt;p&gt;[8]:Klaus von Klitzing, Benoît Douçot, Vincent Pasquier, Bertrand Duplantier, Vincent Rivasseau, The Quantum Hall Effect vol. 45, (Birkhäuser Basel, ).&lt;/p&gt;</content><category term="Science"></category><category term="qhe"></category><category term="hall effect"></category><category term="landau levels"></category></entry><entry><title>A beginers IoT Project.</title><link href="/Intro-to-IoT/" rel="alternate"></link><published>2018-07-12T00:00:00+05:30</published><updated>2018-07-12T00:00:00+05:30</updated><author><name>Ashwin</name></author><id>tag:None,2018-07-12:/Intro-to-IoT/</id><content type="html">&lt;p&gt;In this post, we’ll be making a simple IoT project. Web page controlled LED strip using NodeMCU connected on a local network.&lt;/p&gt;</content><category term="Engineering"></category><category term="IoT"></category></entry></feed>
+&lt;p&gt;[8]:Klaus von Klitzing, Beno&amp;icirc;t Dou&amp;ccedil;ot, Vincent Pasquier, Bertrand Duplantier, Vincent Rivasseau, The Quantum Hall Effect vol. 45, (Birkh&amp;auml;user Basel, ).&lt;/p&gt;
+&lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width &lt; 768) ? "left" : align;
+        indent = (screen.width &lt; 768) ? "0em" : indent;
+        linebreak = (screen.width &lt; 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_CHTML';
+
+    var configscript = document.createElement('script');
+    configscript.type = 'text/x-mathjax-config';
+    configscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js','color.js','mhchem.js'], equationNumbers: { autoNumber: 'none' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        fonts: [['STIX', 'TeX']]," +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'red ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('SansSerif' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_SansSerif');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_SansSerif-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_SansSerif-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_SansSerif-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_SansSerif');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_SansSerif-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_SansSerif-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_SansSerif-italic');" +
+            "});" +
+        "}";
+
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+&lt;/script&gt;</content><category term="Science"></category><category term="qhe"></category><category term="hall effect"></category><category term="landau levels"></category></entry><entry><title>A beginers IoT Project.</title><link href="/Intro-to-IoT/" rel="alternate"></link><published>2018-07-12T00:00:00+05:30</published><updated>2018-07-12T00:00:00+05:30</updated><author><name>Ashwin</name></author><id>tag:None,2018-07-12:/Intro-to-IoT/</id><summary type="html">&lt;p&gt;In this post, we’ll be making a simple IoT project. Web page controlled LED strip using NodeMCU connected on a local network.&lt;/p&gt;</summary><content type="html">&lt;p&gt;In this post, we&amp;rsquo;ll be making a simple IoT project. Web page controlled LED strip using NodeMCU connected on a local network.&lt;/p&gt;</content><category term="Engineering"></category><category term="IoT"></category></entry></feed>
