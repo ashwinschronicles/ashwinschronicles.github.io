@@ -57,7 +57,7 @@ DEFAULT_PAGINATION = 10
 
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True
-PLUGIN_PATHS = ['/home/ashwin/Data/Downloads/website/plugins/']
+PLUGIN_PATHS = ['/home/ashwin/Data/Sandbox/website/plugins/']
 PLUGINS = ['tipue_search' , 'pelican-toc','neighbors','render_math', 'sitemap','more_categories','liquid_tags.img','neighbors', 'related_posts', 'share_post',
            'series']
 DIRECT_TEMPLATES = (('index', 'tags', 'categories','archives', 'search', '404'))
