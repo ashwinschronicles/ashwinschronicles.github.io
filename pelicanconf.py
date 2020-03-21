@@ -88,31 +88,39 @@ SHARE_POST_INTRO = 'Like this post? Share on:'
 COMMENTS_INTRO = u'So what do you think? Did I miss something? Is any part unclear? Leave your comments below.'
 
 # Mailchimp
-EMAIL_SUBSCRIPTION_LABEL = u'Get Monthly Updates'
-EMAIL_FIELD_PLACEHOLDER = u'Enter your email...'
-SUBSCRIBE_BUTTON_TITLE = u'Send me Free updates'
-MAILCHIMP_FORM_ACTION = u'empty'
+#EMAIL_SUBSCRIPTION_LABEL = u'Get Monthly Updates'
+#EMAIL_FIELD_PLACEHOLDER = u'Enter your email...'
+#SUBSCRIBE_BUTTON_TITLE = u'Send me Free updates'
+#MAILCHIMP_FORM_ACTION = u'empty'
 
 # Legal
-SITE_LICENSE = """All articles written by me in this weebsite are licensed under a <a rel="license" 
+SITE_LICENSE = """All articles written by me in this website are licensed under <a rel="license" 
     href="http://creativecommons.org/licenses/by/4.0/">
-    Creative Commons Attribution 4.0 International License</a>.""" 
+    Creative Commons Attribution 4.0 International License</a>. <script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>""" 
     
 # Landing Page
-PROJECTS = [{'name': 'New', 'url': 'new',
-             'description': 'More comming up'}]
+PROJECTS = [{'name': 'Cryostat Probe design and optimisation for transport measurement.', 'url': 'https://ashwinschronicles.github.io/null/','description': 'Design of a cryogenic probe for transport measurements and using it to observe Superconducting transition of Niobium Nitrate'},
+            {'name': 'A review of Analog Discovery 2', 'url': 'https://ashwinschronicles.github.io/null/','description': 'A review of Analog discovery 2 in a Lab environment'},
+            {'name': 'A Beginers Guide to IoT', 'url': 'https://ashwinschronicles.github.io/Intro-to-IoT/','description': 'An OTA controlled light'},
+            {'name': 'A Pressure-sensitive mat', 'url': 'https://ashwinschronicles.github.io/null/','description': 'Designed a pressure-sensitive mat that can sense touch enabling the determination of different poses such as Running, Jumping,Rightward-leftward movement,one-leg hop etc.'}]
 
 LANDING_PAGE_ABOUT = {'title': 'The Journey Begins',
                       'details': """<p>Thanks for joining me!</p>
-<p>I am Ashwin Kumar K, a Dual Degree BE &ndash; Int. MSc Physics at BITS Pilani KK Birla Goa campus (Batch of 2017).</p>
-<p>This is the first post of this site where I intend to post some of my works related to the field of Science and Engineering.</p>
+<p>I am Ashwin Kumar K, a Dual Major (B.E Electronics and Instrumentation &ndash; Int. MSc Physics) student at BITS Pilani KK Birla Goa campus (Batch of 2017).</p>
 <p>I had always wanted to publish some of my projects and experiments on a public platform so that people working on similar projects can give and take ideas. It also serves as a way to showcase the experience that I have gained while doing such projects.</p>
-<p>I intend to post details of projects or experiments that I have performed mostly in the field of Science and Engineering as I complete them.</p>
+<p>I intend to post details of projects or experiments that I have performed  mostly in the field of Science and Engineering as I complete them on this webpage.</p>
 <p>Take a trip down my memory lane. I hope to see you around!</p>
 <p> Here is my CV : </p>
 <p> <a href="https://ashwinschronicles.github.io/pdfs/Vitae.pdf">Curriculum Vitae</a></p>
-<p> <a href="https://ashwinschronicles.github.io/pdfs/Academic_CV.pdf">1 Page Version</a></p>"""}
+<p> <a href="https://ashwinschronicles.github.io/pdfs/Academic_CV.pdf">1 Page Version</a></p>
+<div class="LI-profile-badge"  data-version="v1" data-size="medium" data-locale="en_US" data-type="horizontal" data-theme="light" data-vanity="ashwin-k-4854b8121"><a class="LI-simple-link" href='https://in.linkedin.com/in/ashwin-k-4854b8121?trk=profile-badge'>Ashwin K.(LinkedIn)</a></div>
+"""}
 
 
 # SEO
-SITE_DESCRIPTION = u'Im Ashwin Kumar K,currently dual majouring in Physics and Electronics and Instrumentation from BITS Pilani Goa Campus. This is my personal blog.'
+SITE_DESCRIPTION = u'Im Ashwin Kumar K,currently dual majoring in Physics and Electronics and Instrumentation from BITS Pilani Goa Campus. This is my personal blog.'
+
+
+#MISC
+USE_FOLDER_AS_CATEGORY = True
+DEFAULT_CATEGORY = 'misc'
