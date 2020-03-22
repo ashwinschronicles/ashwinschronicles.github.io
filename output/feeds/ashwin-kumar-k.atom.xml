@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Ashwin's Chronicles - Ashwin Kumar K</title><link href="/" rel="alternate"></link><link href="/feeds/ashwin-kumar-k.atom.xml" rel="self"></link><id>/</id><updated>2019-06-27T00:00:00+05:30</updated><entry><title>Superconductor terminology</title><link href="/Superconductor_terminology/" rel="alternate"></link><published>2019-06-26T00:00:00+05:30</published><updated>2019-06-27T00:00:00+05:30</updated><author><name>Ashwin Kumar K</name></author><id>tag:None,2019-06-26:/Superconductor_terminology/</id><summary type="html">&lt;p&gt;Short note on terminologies used in superconductivity field.&lt;/p&gt;</summary><content type="html">&lt;h1 id="superconductor terminology"&gt;Superconductor terminology&lt;/h1&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Ashwin's Chronicles - Ashwin Kumar K</title><link href="/" rel="alternate"></link><link href="/feeds/ashwin-kumar-k.atom.xml" rel="self"></link><id>/</id><updated>2019-06-27T00:00:00+05:30</updated><entry><title>Superconductor terminology</title><link href="/Superconductor_terminology/" rel="alternate"></link><published>2019-06-26T00:00:00+05:30</published><updated>2019-06-27T00:00:00+05:30</updated><author><name>Ashwin Kumar K</name></author><id>tag:None,2019-06-26:/Superconductor_terminology/</id><summary type="html">&lt;p&gt;Short note on terminologies used in superconductivity field.&lt;/p&gt;</summary><content type="html">&lt;h1 id="superconductor-terminology"&gt;Superconductor terminology&lt;a class="headerlink" href="#superconductor-terminology" title="Permanent link"&gt; &lt;/a&gt;&lt;/h1&gt;
 &lt;p&gt;The following content on superconductor terminology  is largely derived from &amp;nbsp;http://www.superconductors.org/terms.htm&amp;nbsp;with some modifications.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
@@ -26,7 +26,7 @@
 &lt;/li&gt;
 &lt;li&gt;&lt;/li&gt;
 &lt;/ul&gt;</content><category term="Science"></category><category term="Superconductivity"></category><category term="spin"></category><category term="cooper pairs"></category></entry><entry><title>Superconductivity</title><link href="/Superconductivity/" rel="alternate"></link><published>2019-06-06T00:00:00+05:30</published><updated>2019-06-20T00:00:00+05:30</updated><author><name>Ashwin Kumar K</name></author><id>tag:None,2019-06-06:/Superconductivity/</id><summary type="html">&lt;p&gt;Short note on superconductivity&lt;/p&gt;</summary><content type="html">&lt;p&gt;This post is my notes on Superconductivity from video lectures of &lt;a href="https://www.youtube.com/channel/UCDBKb7qMyNXujTf7kKRdstg" title="Youtube Link"&gt;Sergey Frolov&lt;/a&gt;on Solid State Physics and other online sites such as http://www.superconductors.org&lt;/p&gt;
-&lt;h1 id="properties"&gt;Properties&lt;/h1&gt;
+&lt;h1 id="properties"&gt;Properties&lt;a class="headerlink" href="#properties" title="Permanent link"&gt; &lt;/a&gt;&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;Discoverd first in Hg at 4.2K in Liquid Helium&lt;/p&gt;
@@ -110,7 +110,7 @@
 &lt;p&gt;Nb has the higest gap of all the materials.&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id="applications"&gt;Applications&lt;/h2&gt;
+&lt;h2 id="applications"&gt;Applications&lt;a class="headerlink" href="#applications" title="Permanent link"&gt; &lt;/a&gt;&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;Super conducting single photon detector telescope&lt;img alt="image" src="../../images/photondetector.png" width="50%"/&gt;&lt;/li&gt;
 &lt;li&gt;Quantum computer with photons.&lt;/li&gt;
@@ -121,7 +121,7 @@
 &lt;li&gt;&lt;strong&gt;High efficiency generators:&lt;/strong&gt; Electric generators made with superconducting wire are far more efficient than conventional generators wound with copper wire. In fact, their efficiency is above 99% and their size about half that of conventional generators.&lt;/li&gt;
 &lt;li&gt;Essen, Germany has the world's longest superconducting power cable in production at 1 kilometer. It is a 10 kV liquid nitrogen cooled cable. The cable is smaller than an equivalent 110 kV regular cable and the lower voltage has the additional benefit of smaller transformers.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h1 id="superfluidity of he_1"&gt;Superfluidity of He&lt;/h1&gt;
+&lt;h1 id="superfluidity-of-he_1"&gt;Superfluidity of He&lt;a class="headerlink" href="#superfluidity-of-he" title="Permanent link"&gt; &lt;/a&gt;&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;Zero viscocity&lt;/p&gt;
@@ -139,11 +139,11 @@
 &lt;li&gt;as a result it is possible for them to form a Bose-Einstein condensate, a superfluid that can flow withoutt resistance&lt;/li&gt;
 &lt;li&gt;(this does not give rise to superconductivity as excitons are incharged&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h1 id="why is there superconductivity?"&gt;Why is there superconductivity?&lt;/h1&gt;
+&lt;h1 id="why-is-there-superconductivity"&gt;Why is there superconductivity?&lt;a class="headerlink" href="#why-is-there-superconductivity" title="Permanent link"&gt; &lt;/a&gt;&lt;/h1&gt;
 &lt;p&gt;tldr: Two electrons form a bound state called Cooper pair. These cooper pairs form a condensate.
 &lt;img alt="cooperpairs" src="../../images/cooperpairs.png"/&gt;&lt;/p&gt;
 &lt;p&gt;When an electron is moving through a solid with momentum K, since it also interacts with the lattice, there is an electron phonon interaction, meaning an electron moving through the crystal launches a phonon, another electron flying in a different direction can absorb this photon and form a bound state. These cooper pairs form a condensate (they are all in the same indistinguishable quantum state). And the condensate can be represented by the wave function &lt;span class="math"&gt;\(\psi=n_s e^{i \phi}\)&lt;/span&gt;, where &lt;span class="math"&gt;\(n_s\)&lt;/span&gt; is the density of Cooper pair and &lt;span class="math"&gt;\(\phi\)&lt;/span&gt; denotes the phase.&lt;/p&gt;
-&lt;h1 id="london equations"&gt;London equations&lt;/h1&gt;
+&lt;h1 id="london-equations"&gt;London equations&lt;a class="headerlink" href="#london-equations" title="Permanent link"&gt; &lt;/a&gt;&lt;/h1&gt;
 &lt;p&gt;The London equations, developed by brothers Fritz and Heinz London in 1935 relate current to electromagnetic fields in and around a superconductor.&lt;/p&gt;
 &lt;p&gt;&lt;img alt="London equations" src="../../images/London_eqn.png"/&gt;&lt;/p&gt;
 &lt;ul&gt;
@@ -176,7 +176,7 @@
 &lt;p&gt;&lt;img alt="1560962571688" src="../../images/field_penetration.2.png"/&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h1 id="superconductivity in the bulk : cooper pairs"&gt;Superconductivity in the bulk : Cooper pairs&lt;/h1&gt;
+&lt;h1 id="superconductivity-in-the-bulk-cooper-pairs"&gt;Superconductivity in the bulk : Cooper pairs&lt;a class="headerlink" href="#superconductivity-in-the-bulk-cooper-pairs" title="Permanent link"&gt; &lt;/a&gt;&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;electron-phonon interaction leads to an attraction of electrons&lt;/p&gt;
