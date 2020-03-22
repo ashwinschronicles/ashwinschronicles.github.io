@@ -119,7 +119,7 @@ FREELISTS_NAME = "oracle-l"
 FREELISTS_FILTER = True
 
 # SMO
-TWITTER_USERNAME = "@iamashwin99"
+TWITTER_USERNAME = "iamashwin99"
 FEATURED_IMAGE = SITEURL + "/theme/images/final.png"
 
 # Share links at bottom of articles
@@ -154,17 +154,6 @@ PROJECTS = [{
   }
 ]
 
-LANDING_PAGE_ABOUT = {'title': 'The Journey Begins',
-                      'details': """<p>Thanks for joining me!</p>
-<p>I am Ashwin Kumar K, a Dual Major (B.E Electronics and Instrumentation &ndash; Int. MSc Physics) student at BITS Pilani KK Birla Goa campus (Batch of 2017).</p>
-<p>I had always wanted to publish some of my projects and experiments on a public platform so that people working on similar projects can give and take ideas. It also serves as a way to showcase the experience that I have gained while doing such projects.</p>
-<p>I intend to post details of projects or experiments that I have performed  mostly in the field of Science and Engineering as I complete them on this webpage.</p>
-<p>Take a trip down my memory lane. I hope to see you around!</p>
-<p> Here is my CV : </p>
-<p> <a href="https://ashwinschronicles.github.io/pdfs/Vitae.pdf">Curriculum Vitae</a></p>
-<p> <a href="https://ashwinschronicles.github.io/pdfs/Academic_CV.pdf">1 Page Version</a></p>
-
-"""}
 
 LANDING_PAGE_TITLE = "The Journey Begins"
 # SEO

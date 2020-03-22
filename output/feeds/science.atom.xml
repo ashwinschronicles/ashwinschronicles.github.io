@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Ashwin's Chronicles - Science</title><link href="/" rel="alternate"></link><link href="/feeds/science.atom.xml" rel="self"></link><id>/</id><updated>2019-06-27T00:00:00+05:30</updated><entry><title>Superconductor terminology</title><link href="/Superconductor_terminology" rel="alternate"></link><published>2019-06-26T00:00:00+05:30</published><updated>2019-06-27T00:00:00+05:30</updated><author><name>Ashwin Kumar K</name></author><id>tag:None,2019-06-26:/Superconductor_terminology</id><summary type="html">&lt;p&gt;Short note on terminologies used in superconductivity&amp;nbsp;field.&lt;/p&gt;</summary><content type="html">&lt;h1 id="superconductor-terminology"&gt;Superconductor terminology&lt;a class="headerlink" href="#superconductor-terminology" title="Permanent link"&gt; &lt;/a&gt;&lt;/h1&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Ashwin's Chronicles - Science</title><link href="https://ashwinschronicles.github.io/" rel="alternate"></link><link href="https://ashwinschronicles.github.io/feeds/science.atom.xml" rel="self"></link><id>https://ashwinschronicles.github.io/</id><updated>2019-06-27T00:00:00+05:30</updated><entry><title>Superconductor terminology</title><link href="https://ashwinschronicles.github.io/Superconductor_terminology" rel="alternate"></link><published>2019-06-26T00:00:00+05:30</published><updated>2019-06-27T00:00:00+05:30</updated><author><name>Ashwin Kumar K</name></author><id>tag:ashwinschronicles.github.io,2019-06-26:/Superconductor_terminology</id><summary type="html">&lt;p&gt;Short note on terminologies used in superconductivity&amp;nbsp;field.&lt;/p&gt;</summary><content type="html">&lt;h1 id="superconductor-terminology"&gt;Superconductor terminology&lt;a class="headerlink" href="#superconductor-terminology" title="Permanent link"&gt; &lt;/a&gt;&lt;/h1&gt;
 &lt;p&gt;The following content on superconductor terminology  is largely derived from &amp;nbsp;http://www.superconductors.org/terms.htm&amp;nbsp;with some&amp;nbsp;modifications.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
@@ -25,7 +25,7 @@
 &lt;p&gt;&lt;strong&gt;Charge Reservoirs:&lt;/strong&gt; In superconductors, charge reservoirs are the layers that may control the oxidation state of adjacent superconducting planes (even though they themselves are not superconducting). In the layered cuprates, these consist of copper-oxide&amp;nbsp;chains. &lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><category term="Science"></category><category term="Superconductivity"></category><category term="spin"></category><category term="cooper pairs"></category></entry><entry><title>Superconductivity</title><link href="/Superconductivity" rel="alternate"></link><published>2019-06-06T00:00:00+05:30</published><updated>2019-06-20T00:00:00+05:30</updated><author><name>Ashwin Kumar K</name></author><id>tag:None,2019-06-06:/Superconductivity</id><summary type="html">&lt;p&gt;Short note on&amp;nbsp;superconductivity&lt;/p&gt;</summary><content type="html">&lt;p&gt;This post is my notes on Superconductivity from video lectures of &lt;a href="https://www.youtube.com/channel/UCDBKb7qMyNXujTf7kKRdstg" title="Youtube Link"&gt;Sergey Frolov&lt;/a&gt;on Solid State Physics and other online sites such as&amp;nbsp;http://www.superconductors.org&lt;/p&gt;
+&lt;/ul&gt;</content><category term="Science"></category><category term="Superconductivity"></category><category term="spin"></category><category term="cooper pairs"></category></entry><entry><title>Superconductivity</title><link href="https://ashwinschronicles.github.io/Superconductivity" rel="alternate"></link><published>2019-06-06T00:00:00+05:30</published><updated>2019-06-20T00:00:00+05:30</updated><author><name>Ashwin Kumar K</name></author><id>tag:ashwinschronicles.github.io,2019-06-06:/Superconductivity</id><summary type="html">&lt;p&gt;Short note on&amp;nbsp;superconductivity&lt;/p&gt;</summary><content type="html">&lt;p&gt;This post is my notes on Superconductivity from video lectures of &lt;a href="https://www.youtube.com/channel/UCDBKb7qMyNXujTf7kKRdstg" title="Youtube Link"&gt;Sergey Frolov&lt;/a&gt;on Solid State Physics and other online sites such as&amp;nbsp;http://www.superconductors.org&lt;/p&gt;
 &lt;h1 id="properties"&gt;Properties&lt;a class="headerlink" href="#properties" title="Permanent link"&gt; &lt;/a&gt;&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;
@@ -278,7 +278,8 @@
         "        preview: 'TeX'," +
         "    }, " +
         "    'HTML-CSS': { " +
-        "        fonts: [['STIX', 'TeX']]," +
+        "        availableFonts: ['STIX', 'TeX']," +
+        "        preferredFont: 'STIX'," +
         "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'red ! important'} }," +
         "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
         "    }, " +
@@ -303,7 +304,7 @@
     (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
-&lt;/script&gt;</content><category term="Science"></category><category term="Superconductivity"></category><category term="spin"></category><category term="cooper pairs"></category></entry><entry><title>Quantum Hall Effect and related phenomenon</title><link href="/qhe" rel="alternate"></link><published>2019-01-01T00:00:00+05:30</published><updated>2019-01-01T00:00:00+05:30</updated><author><name>Ashwin</name></author><id>tag:None,2019-01-01:/qhe</id><summary type="html">&lt;p&gt;Notes on Quantum Hall Effect and related&amp;nbsp;phenomenon&lt;/p&gt;</summary><content type="html">&lt;h1 id="historical-aspects"&gt;Historical Aspects&lt;a class="headerlink" href="#historical-aspects" title="Permanent link"&gt; &lt;/a&gt;&lt;/h1&gt;
+&lt;/script&gt;</content><category term="Science"></category><category term="Superconductivity"></category><category term="spin"></category><category term="cooper pairs"></category></entry><entry><title>Quantum Hall Effect and related phenomenon</title><link href="https://ashwinschronicles.github.io/qhe" rel="alternate"></link><published>2019-01-01T00:00:00+05:30</published><updated>2019-01-01T00:00:00+05:30</updated><author><name>Ashwin</name></author><id>tag:ashwinschronicles.github.io,2019-01-01:/qhe</id><summary type="html">&lt;p&gt;Notes on Quantum Hall Effect and related&amp;nbsp;phenomenon&lt;/p&gt;</summary><content type="html">&lt;h1 id="historical-aspects"&gt;Historical Aspects&lt;a class="headerlink" href="#historical-aspects" title="Permanent link"&gt; &lt;/a&gt;&lt;/h1&gt;
 &lt;p&gt;The quantum Hall effect is a remarkable phenomenon discovered
 experimentally in which the Hall conductivity of a two dimensional
 system of electrons is found to have plateaus as a function of variables
@@ -684,7 +685,8 @@ intersects the boundary, and bounces off&amp;nbsp;it.&lt;/p&gt;
         "        preview: 'TeX'," +
         "    }, " +
         "    'HTML-CSS': { " +
-        "        fonts: [['STIX', 'TeX']]," +
+        "        availableFonts: ['STIX', 'TeX']," +
+        "        preferredFont: 'STIX'," +
         "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'red ! important'} }," +
         "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
         "    }, " +
