@@ -20,6 +20,7 @@ Take a trip down my memory lane. I hope to see you around!
 
 Here is my CV  :
 
-[1 page version]({filename}/pdfs/Academic_CV.pdf)
+[Curriculum Vitae](https://ashwinschronicles.github.io/pdfs/Vitae.pdf)
 
-[Curriculum Vitae]({filename}/pdfs/Vitae.pdf)
+[Single page version](https://ashwinschronicles.github.io/pdfs/Academic_CV.pdf)
+
