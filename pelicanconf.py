@@ -134,22 +134,22 @@ SITE_LICENSE = """All articles written by me in this website are licensed under 
 # Landing Page
 PROJECTS = [{
     'name': 'Cryostat Probe design and optimisation for transport measurement.',
-    'url': 'https://ashwinschronicles.github.io/null/',
+    'url': 'https://ashwinschronicles.github.io/null',
     'description': 'Design of a cryogenic probe for transport measurements and using it to observe Superconducting transition of Niobium Nitrate'
   },
   {
     'name': 'A review of Analog Discovery 2',
-    'url': 'https://ashwinschronicles.github.io/null/',
+    'url': 'https://ashwinschronicles.github.io/null',
     'description': 'A review of Analog discovery 2 in a Lab environment'
   },
   {
     'name': 'A Beginers Guide to IoT',
-    'url': 'https://ashwinschronicles.github.io/Intro-to-IoT/',
+    'url': 'https://ashwinschronicles.github.io/Intro-to-IoT',
     'description': 'An OTA controlled light'
   },
   {
     'name': 'A Pressure-sensitive mat',
-    'url': 'https://ashwinschronicles.github.io/null/',
+    'url': 'https://ashwinschronicles.github.io/null',
     'description': 'Designed a pressure-sensitive mat that can sense touch enabling the determination of different poses such as Running, Jumping,Rightward-leftward movement,one-leg hop etc.'
   }
 ]
