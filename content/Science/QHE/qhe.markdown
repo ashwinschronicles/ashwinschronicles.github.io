@@ -111,9 +111,9 @@ data and graphs are as following:
 current was determined and plotted. Two readings corresponding to single
 current value specifies the values during increment and decrement of
 current viz. to minimize the error.
-![image](../../images/hall_data_table.png)
+<img src="../../images/hall_data_table.png" alt="image" style="zoom:67%;" />
 
-![Magnetic field vs Current ](../../images/hall_data_graph.png)
+<img src="../../images/hall_data_graph.png" alt="Magnetic field vs Current " style="zoom:50%;" />
 
 **Part-2:** The values of Hall Voltages are measured for different
 geometrical combinations.The data obtained is as follows -
@@ -122,10 +122,10 @@ geometrical combinations.The data obtained is as follows -
 
 Corresponding graphs are plotted here.
 
-![image](../../images/hall_data_graph2.png)
-![image](../../images/hall_data_graph3.png)
-![image](../../images/hall_data_graph4.png)
-![image](../../images/hall_data_graph5.png)
+<img src="../../images/hall_data_graph2.png" alt="image" style="zoom: 67%;" />
+<img src="../../images/hall_data_graph3.png" alt="image" style="zoom:67%;" />
+<img src="../../images/hall_data_graph4.png" alt="image" style="zoom:67%;" />
+<img src="../../images/hall_data_graph5.png" alt="image" style="zoom:67%;" />
 
 From all these graphs, the average value of slope is **0.03218
 $\frac{mV}{Gauss}$** . We have sample current equal to 10mA and
@@ -152,8 +152,8 @@ Tesla) we see a non linear relation between Hall conductance and
 Magnetic field. We see some sort of quantization of Hall conductance.
 The observed resistivity is shown in next figure.
 
-![Hall resistance and longitudinal resistivity data as a function of the
-magnetic field for a GaAs/AlGaAs hetero-structures at 1.5 K](../../images/HallPvsB.png)[8]
+<img src="../../images/HallPvsB.png" alt="Hall resistance and longitudinal resistivity data as a function of the
+magnetic field for a GaAs/AlGaAs hetero-structures at 1.5 K" style="zoom:50%;" />[8]
 
 On observing the graph and a little bit of theoretical calculations one
 can deduce the following:

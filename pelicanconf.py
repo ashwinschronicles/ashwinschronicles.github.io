@@ -139,7 +139,7 @@ PROJECTS = [{
   },
   {
     'name': 'A review of Analog Discovery 2',
-    'url': 'https://ashwinschronicles.github.io/null',
+    'url': 'https://ashwinschronicles.github.io/analog-discovery-2-labview-home-bundle-review',
     'description': 'A review of Analog discovery 2 in a Lab environment'
   },
   {
