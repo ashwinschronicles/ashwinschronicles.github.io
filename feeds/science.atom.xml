@@ -395,16 +395,16 @@ data and graphs are as&amp;nbsp;following:&lt;/p&gt;
 current was determined and plotted. Two readings corresponding to single
 current value specifies the values during increment and decrement of
 current viz. to minimize the error.
-&lt;img alt="image" src="../../images/hall_data_table.png"/&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Magnetic field vs Current " src="../../images/hall_data_graph.png"/&gt;&lt;/p&gt;
+&lt;img alt="image" src="../../images/hall_data_table.png" style="zoom:67%;"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Magnetic field vs Current " src="../../images/hall_data_graph.png" style="zoom:50%;"/&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Part-2:&lt;/strong&gt; The values of Hall Voltages are measured for different
 geometrical combinations.The data obtained is as follows&amp;nbsp;-&lt;/p&gt;
 &lt;p&gt;&lt;img alt="image" src="../../images/hall_data_table2.png"/&gt;&lt;/p&gt;
 &lt;p&gt;Corresponding graphs are plotted&amp;nbsp;here.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="image" src="../../images/hall_data_graph2.png"/&gt;
-&lt;img alt="image" src="../../images/hall_data_graph3.png"/&gt;
-&lt;img alt="image" src="../../images/hall_data_graph4.png"/&gt;
-&lt;img alt="image" src="../../images/hall_data_graph5.png"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="image" src="../../images/hall_data_graph2.png" style="zoom: 67%;"/&gt;
+&lt;img alt="image" src="../../images/hall_data_graph3.png" style="zoom:67%;"/&gt;
+&lt;img alt="image" src="../../images/hall_data_graph4.png" style="zoom:67%;"/&gt;
+&lt;img alt="image" src="../../images/hall_data_graph5.png" style="zoom:67%;"/&gt;&lt;/p&gt;
 &lt;p&gt;From all these graphs, the average value of slope is &lt;strong&gt;0.03218
 &lt;span class="math"&gt;\(\frac{mV}{Gauss}\)&lt;/span&gt;&lt;/strong&gt; . We have sample current equal to 10mA and
 sample length as&amp;nbsp;5mm.&lt;/p&gt;
@@ -431,7 +431,7 @@ Tesla) we see a non linear relation between Hall conductance and
 Magnetic field. We see some sort of quantization of Hall conductance.
 The observed resistivity is shown in next&amp;nbsp;figure.&lt;/p&gt;
 &lt;p&gt;&lt;img alt="Hall resistance and longitudinal resistivity data as a function of the
-magnetic field for a GaAs/AlGaAs hetero-structures at 1.5 K" src="../../images/HallPvsB.png"/&gt;[8]&lt;/p&gt;
+magnetic field for a GaAs/AlGaAs hetero-structures at 1.5 K" src="../../images/HallPvsB.png" style="zoom:50%;"/&gt;[8]&lt;/p&gt;
 &lt;p&gt;On observing the graph and a little bit of theoretical calculations one
 can deduce the&amp;nbsp;following:&lt;/p&gt;
 &lt;ul&gt;
