@@ -149,3 +149,15 @@ The Analog Discovery 2 can very well be called as the Swiss Army Knife of Test E
  
 
 LabVIEW is no doubt the industry standard for interfacing instruments, however, its Graphical programming ideology sometimes gets messy and daunting to work with.
+
+### Scoring
+
+| **Product Performed to Expectations:**             | 6       |
+| -------------------------------------------------- | ------- |
+| **Specifications were sufficient to design with:** | 7       |
+| **Demo Software was of good quality:**             | 10      |
+| **Product was easy to use:**                       | 10      |
+| **Support materials were available:**              | 10      |
+| **The price to performance ratio was good:**       | 9       |
+|                                                    |         |
+| **TotalScore:**                                    | 52 / 60 |
