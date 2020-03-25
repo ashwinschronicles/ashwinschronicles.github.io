@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Ashwin's Chronicles - Superconductivity</title><link href="https://ashwinschronicles.github.io/" rel="alternate"></link><link href="https://ashwinschronicles.github.io/feeds/superconductivity.atom.xml" rel="self"></link><id>https://ashwinschronicles.github.io/</id><updated>2019-06-20T00:00:00+05:30</updated><entry><title>Superconductivity</title><link href="https://ashwinschronicles.github.io/Superconductivity" rel="alternate"></link><published>2019-06-06T00:00:00+05:30</published><updated>2019-06-20T00:00:00+05:30</updated><author><name>Ashwin Kumar K</name></author><id>tag:ashwinschronicles.github.io,2019-06-06:/Superconductivity</id><summary type="html">&lt;p&gt;Short note on&amp;nbsp;superconductivity&lt;/p&gt;</summary><content type="html">&lt;p&gt;This post is my notes on Superconductivity from video lectures of &lt;a href="https://www.youtube.com/channel/UCDBKb7qMyNXujTf7kKRdstg" title="Youtube Link"&gt;Sergey Frolov&lt;/a&gt; on Solid State Physics and other online sites such as&amp;nbsp;http://www.superconductors.org&lt;/p&gt;
+&lt;h1 id="properties"&gt;Properties&lt;a class="headerlink" href="#properties" title="Permanent link"&gt; &lt;/a&gt;&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Discoverd first in Hg at 4.2K in Liquid&amp;nbsp;Helium&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Current induced in a ring follows &lt;div class="math"&gt;$$ I(t)=I_0e^{(-t/\tau))}$$&lt;/div&gt; and dosent change much for over 100,000 years for &lt;span class="caps"&gt;SC&lt;/span&gt; and goes to 1% of initial value in few nano seconds in a normal&amp;nbsp;metal.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Magnetic field destroy super conductivity (so does current in the &lt;span class="caps"&gt;SC&lt;/span&gt;)
+&lt;img alt="image" src="../../images/SC_mag.png"/&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Magnetic Impurities lower &lt;span class="math"&gt;\(T_C\)&lt;/span&gt; (non mag has no&amp;nbsp;effect)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Fe Co Ni&amp;nbsp;nonSC&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;span class="caps"&gt;CU&lt;/span&gt; Ag Au&amp;nbsp;nonSC&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;img alt="image" src="../../images/sup_ele.png"/&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Si becomes &lt;span class="caps"&gt;SC&lt;/span&gt; at high&amp;nbsp;Pressure&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Conventional and unconventional &lt;span class="caps"&gt;SC&lt;/span&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;most unconventional &lt;span class="caps"&gt;SC&lt;/span&gt; has C,O atoms in  pervoskite&amp;nbsp;structure.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;img alt="image" src="../../images/SC_graph.png"/&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;em&gt;Meissner effect&lt;/em&gt; is perfect expulsion of Magnetic field out of &lt;span class="caps"&gt;SC&lt;/span&gt; (except penetration depth) due to screening current&lt;img alt="image" src="../../images/misener.png"/&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;span class="caps"&gt;SC&lt;/span&gt; act as perfect diamagnet &lt;span class="math"&gt;\(\chi=-1\)&lt;/span&gt; and is a defining feature of &lt;span class="caps"&gt;SC&lt;/span&gt; and not just &lt;span class="math"&gt;\(\rho\)&lt;/span&gt;=0&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Difference between perfect conductor and &lt;span class="caps"&gt;SC&lt;/span&gt; &lt;img alt="Difference between perfect conductor and SC" src="../../images/SUP_perfCandSC.png"/&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;The esseence of meissner effect is that &lt;span class="caps"&gt;SC&lt;/span&gt; &lt;strong&gt;alaways expels the magnetic&amp;nbsp;field&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;There are three tests, that are considered the gold standard for&amp;nbsp;superconductivity,&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;1) the drop in resistance below a critical temperature&amp;nbsp;threshold, &lt;/p&gt;
+&lt;p&gt;2) replacing elements in the material with heavier isotopes to observe a corresponding drop in superconductivity&amp;nbsp;temperature.&lt;/p&gt;
+&lt;p&gt;3) &lt;a href="https://en.wikipedia.org/wiki/Meissner_effect"&gt;Meissner effect&lt;/a&gt;: As the material passes below the critical temperature and transitions into superconductivity, it ejects its magnetic&amp;nbsp;field.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Heat capacity of a &lt;span class="caps"&gt;SC&lt;/span&gt; is discontinuous at &lt;span class="math"&gt;\(T_C\)&lt;/span&gt; and crashes to 0 after  &lt;span class="math"&gt;\(T_C\)&lt;/span&gt;
+&lt;img alt="image" src="../../images/Heat_capacity.png"/&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;The function is given by &lt;span class="math"&gt;\(C \alpha e^{a/T}\)&lt;/span&gt; and is simmilar to Einstein&amp;rsquo;s model of specific heat, n coupled osscilator&amp;nbsp;model. &lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;[verify !] Exponents often go with gaps (semiconductor and superconductor&amp;nbsp;state)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;In the super conducting state, there is a samll energy gap arround the fermi level. With &lt;span class="math"&gt;\(E_g~10x^{-4}E_F\)&lt;/span&gt;
+&lt;img alt="SC_band" src="../../images/SC_band.png"/&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;one in 10,000 electrons participate in &lt;span class="caps"&gt;SC&lt;/span&gt;&amp;nbsp;state.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;The a in &lt;span class="math"&gt;\(C \alpha e^{a/T}\)&lt;/span&gt; is given by &lt;span class="math"&gt;\(-E_g/2\)&lt;/span&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Higher &lt;span class="math"&gt;\(E_g\)&lt;/span&gt; implies higher &lt;span class="math"&gt;\(T_C\)&lt;/span&gt;
+&lt;img alt="EG_periodic" src="../../images/EG_periodic.png"/&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Nb has the higest gap of all the&amp;nbsp;materials.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="applications"&gt;Applications&lt;a class="headerlink" href="#applications" title="Permanent link"&gt; &lt;/a&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Super conducting single photon detector telescope&lt;img alt="image" src="../../images/photondetector.png" width="50%"/&gt;&lt;/li&gt;
+&lt;li&gt;Quantum computer with&amp;nbsp;photons.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Levitating high speed trains(~600 km/h)&lt;/strong&gt;: Transport vehicles such as trains can be made to &amp;ldquo;float&amp;rdquo; on strong superconducting magnets, virtually eliminating friction between the train and its tracks.This reduces the heat generated and size occupied as compared to regular electromagnet. A landmark for the commercial use of &lt;span class="caps"&gt;MAGLEV&lt;/span&gt; technology occurred in 1990 when it gained the status of a nationally-funded project in Japan. The Minister of Transport authorised construction of the Yamanashi Maglev Test Line which opened on April 3, 1997. In April 2015, the &lt;span class="caps"&gt;MLX01&lt;/span&gt; test vehicle attained an incredible speed of 603&amp;nbsp;kph.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;span class="caps"&gt;MRI&lt;/span&gt;&lt;/strong&gt;: By impinging a strong superconductor-derived magnetic field into the body, hydrogen atoms that exist in the body&amp;rsquo;s water and fat molecules are forced to accept energy from the magnetic field. They then release this energy at a frequency that can be detected and displayed graphically by a&amp;nbsp;computer.&lt;/li&gt;
+&lt;li&gt;&lt;span class="caps"&gt;NMR&lt;/span&gt;,&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;span class="caps"&gt;SQUID&lt;/span&gt;&lt;/strong&gt; &lt;strong&gt;(Superconducting QUantum Interference Device)&lt;/strong&gt;: &lt;span class="caps"&gt;SQUID&lt;/span&gt;&amp;rsquo;s are capable of sensing a change in a magnetic field over a billion times weaker than the force that moves the needle on a compass (compass: 5e-5T, &lt;span class="caps"&gt;SQUID&lt;/span&gt;: e-14T.). With this technology, the body can be probed to certain depths without the need for the strong magnetic fields associated with &lt;span class="caps"&gt;MRI&lt;/span&gt;&amp;rsquo;s. &lt;span class="caps"&gt;SQUIDS&lt;/span&gt; are being used by the &lt;span class="caps"&gt;U.S.&lt;/span&gt; &lt;span class="caps"&gt;NAVY&lt;/span&gt; to detect mines and&amp;nbsp;submarines. &lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;High efficiency generators:&lt;/strong&gt; Electric generators made with superconducting wire are far more efficient than conventional generators wound with copper wire. In fact, their efficiency is above 99% and their size about half that of conventional&amp;nbsp;generators.&lt;/li&gt;
+&lt;li&gt;Essen, Germany has the world&amp;rsquo;s longest superconducting power cable in production at 1 kilometer. It is a 10 kV liquid nitrogen cooled cable. The cable is smaller than an equivalent 110 kV regular cable and the lower voltage has the additional benefit of smaller&amp;nbsp;transformers.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id="superfluidity-of-he_1"&gt;Superfluidity of He&lt;a class="headerlink" href="#superfluidity-of-he" title="Permanent link"&gt; &lt;/a&gt;&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Zero&amp;nbsp;viscocity&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Measurement show the 0 resistance to flow of&amp;nbsp;He &lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;ie the flow velocity of liquid helium is independent of applied&amp;nbsp;pressure.&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;in semicunductor attraction between &lt;span class="math"&gt;\(e^-\)&lt;/span&gt; in conduction band and holes in valence bond give rise to a bound pairs known as excitons , they also show super fluidity.&lt;img alt="superfluidity" src="../../images/exciton.png"/&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Because they contain real bound pairs of 2 fermions (in contrast to cooper pais) excitons are&amp;nbsp;bosons.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;as a result it is possible for them to form a Bose-Einstein condensate, a superfluid that can flow withoutt&amp;nbsp;resistance&lt;/li&gt;
+&lt;li&gt;(this does not give rise to superconductivity as excitons are&amp;nbsp;incharged&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id="why-is-there-superconductivity"&gt;Why is there superconductivity?&lt;a class="headerlink" href="#why-is-there-superconductivity" title="Permanent link"&gt; &lt;/a&gt;&lt;/h1&gt;
+&lt;p&gt;tldr: Two electrons form a bound state called Cooper pair. These cooper pairs form a condensate.
+&lt;img alt="cooperpairs" src="../../images/cooperpairs.png"/&gt;&lt;/p&gt;
+&lt;p&gt;When an electron is moving through a solid with momentum K, since it also interacts with the lattice, there is an electron phonon interaction, meaning an electron moving through the crystal launches a phonon, another electron flying in a different direction can absorb this photon and form a bound state. These cooper pairs form a condensate (they are all in the same indistinguishable quantum state). And the condensate can be represented by the wave function &lt;span class="math"&gt;\(\psi=n_s e^{i \phi}\)&lt;/span&gt;, where &lt;span class="math"&gt;\(n_s\)&lt;/span&gt; is the density of Cooper pair and &lt;span class="math"&gt;\(\phi\)&lt;/span&gt; denotes the&amp;nbsp;phase.&lt;/p&gt;
+&lt;h1 id="london-equations"&gt;London equations&lt;a class="headerlink" href="#london-equations" title="Permanent link"&gt; &lt;/a&gt;&lt;/h1&gt;
+&lt;p&gt;The London equations, developed by brothers Fritz and Heinz London in 1935 relate current to electromagnetic fields in and around a&amp;nbsp;superconductor.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="London equations" src="../../images/London_eqn.png"/&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;In ohms law &lt;span class="math"&gt;\(j=\sigma E\)&lt;/span&gt; so its differential wrt time is 0, however 1st london equation gives a non 0 relation with &lt;span class="math"&gt;\(j'\)&lt;/span&gt; and &lt;span class="math"&gt;\(E\)&lt;/span&gt;&amp;nbsp;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;In leq1, &lt;span class="math"&gt;\(j\)&lt;/span&gt; is the superconducting current density, E and B are respectively the electric and magnetic fields within the superconductor, &lt;span class="math"&gt;\(q\)&lt;/span&gt; is the charge of an electron &lt;span class="amp"&gt;&amp;amp;&lt;/span&gt; proton, m, is electron mass, and &lt;span class="math"&gt;\(n_s\)&lt;/span&gt;, is a phenomenological constant loosely associated with a number density of superconducting&amp;nbsp;carriers.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;London eqn 1 (le1) also means that particles in a super conductor accelerate when a voltage is applied, in normal metals they only move with drift velocity and 0&amp;nbsp;acceleration.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;taking curl on both side of le1 and using Maxwell equations you get the second form of le1. This when integrated over an area, you get the&amp;nbsp;le2.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;The rationale for the le1 can be thought of in the following different&amp;nbsp;ways: &lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;1) By definition, the electrons in a superconductor flow with no resistance, hence one can  imagine electrons as if they were free electrons und er the influence of a uniform external electric field. According to the Lorentz force law &lt;span class="math"&gt;\(F=eE+ev\mathrm{x}B\)&lt;/span&gt; these electrons should encounter a uniform force, and thus they should in fact accelerate uniformly. This is precisely what the first London equation&amp;nbsp;states.&lt;/p&gt;
+&lt;p&gt;2) Current density is defined according to the equation &lt;span class="math"&gt;\(j=-n_s e v\)&lt;/span&gt; , Taking this expression from a classical description to a quantum mechanical one, we must replace values j and v by the expectation values of their operators. The velocity operator &lt;span class="math"&gt;\( v = (p+eA)/m\)&lt;/span&gt; is defined by dividing the gauge-invariant, kinematic momentum operator by the particle mass &lt;em&gt;m&lt;/em&gt;. we are using &lt;img alt="-e" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/07ba5105b33e9ac88f605cc50663a9e2c16fcc63"/&gt; as the electron charge. We may then make this replacement in the equation above. However, an important assumption from the microscopic theory of superconductivity (&lt;span class="caps"&gt;BCS&lt;/span&gt;) is that the superconducting state of a system is the ground state, and according to a theorem of Bloch&amp;rsquo;s,[&lt;a href="https://en.wikipedia.org/wiki/London_equations#cite_note-Michael_Tinkham_1996_5-10"&gt;]&lt;/a&gt; in such a state the canonical momentum &lt;strong&gt;p&lt;/strong&gt; is zero. This gives us &lt;span class="math"&gt;\(j=-\frac{n_s e^2}{m}\textbf{A}\)&lt;/span&gt; which is loosely the&amp;nbsp;le1&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;img alt="1560962267192" src="../../images/field_penetration.png"/&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;The solution for that differential equation is &lt;span class="math"&gt;\({ \nabla ^{2}\mathbf {B} ={\frac {1}{\lambda ^{2}}}\mathbf {B} ,\qquad \lambda \equiv {\sqrt {\frac {m}{\mu&amp;nbsp;_{0}n_{s}e^{2}}}}.}\)&lt;/span&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;img alt="1560962571688" src="../../images/field_penetration.2.png"/&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id="superconductivity-in-the-bulk-cooper-pairs"&gt;Superconductivity in the bulk : Cooper pairs&lt;a class="headerlink" href="#superconductivity-in-the-bulk-cooper-pairs" title="Permanent link"&gt; &lt;/a&gt;&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;electron-phonon interaction leads to an attraction of&amp;nbsp;electrons&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Cooper pairs: bound states of two electrons with opposite momentum and&amp;nbsp;spin.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;size of cooper pair is characterised by coherence length $\xi = \frac{\hbar v_F}{\pi \Delta} $ electrons greater than this length cant form&amp;nbsp;pairs&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;the net spin is zero so they obey Bose-Einstein statistics: at low T all pairs condense in the lowest state (no Pauli exclusion !) and hence they are&amp;nbsp;Bosons&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img alt="img" src="https://media.springernature.com/lw685/springer-static/image/art%3A10.1038%2F418733a/MediaObjects/41586_2002_Article_BF418733a_Fig1_HTML.jpg?as=webp"/&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;The gap in the diagram is the Superconducting energy gap, X-axis is the energy, 0 is the fremi&amp;nbsp;level.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Here, the size of the energy gap indicates the energy gain for two electrons upon formation of a Cooper&amp;nbsp;pair&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;If a conventional superconducting material is cooled from its metallic state (at higher temperatures) into the superconducting state, then the superconducting energy gap is absent above the critical temperature &lt;span class="math"&gt;\(T_{c}\)&lt;/span&gt;, it starts to open upon entering the superconducting state at &lt;span class="math"&gt;\(T_{c}\)&lt;/span&gt;, and it grows upon further&amp;nbsp;cooling.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;In the \Delta$   there are only cooper pair condensate and outside there are only unbound&amp;nbsp;electrons.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;span class="caps"&gt;BCS&lt;/span&gt; theory predicts that the size &lt;span class="math"&gt;\(\Delta\)&lt;/span&gt;  of the superconducting energy gap for conventional superconductors at zero temperature scales with their critical temperature &lt;span class="math"&gt;\(\Delta (T=0)=1.764\,k_{B}T_{c}\)&lt;/span&gt;&amp;nbsp;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;The density of states is &lt;span class="math"&gt;\(N_s(E)=N_N(E) E/(E^2-&amp;nbsp;D^2)^{0.5}\)&lt;/span&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;The super conducting state can be describes with a singel macroscopic wave function &lt;span class="math"&gt;\(\Psi=\sqrt(n_s)e^{i \phi}\)&lt;/span&gt; with&lt;span class="math"&gt;\(n_s\)&lt;/span&gt; is the density of the cooper pairs, &lt;span class="math"&gt;\(\phi\)&lt;/span&gt;  phase of the&amp;nbsp;condensate.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;So how does the electron pairing occur? consider the crude&amp;nbsp;model:&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img alt="img" src="http://www.superconductors.org/bcs_anim.GIF"/&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;img alt="img" src="../../images/simplest.GIF"/&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;img alt="1561026690221" src="../../images/distance.png"/&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;in the above picture, &lt;span class="math"&gt;\(\omega_D\)&lt;/span&gt; is the &lt;strong&gt;Debye&lt;/strong&gt; relaxation &lt;strong&gt;time&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;img alt="1561294266321" src="../../images/1561294266321.png"/&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;img alt="BCS_consiquence" src="../../images/BCS_consiquence.png"/&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Spin singlet nature of cooper pairs were confirmed with &lt;span class="caps"&gt;NMR&lt;/span&gt;&amp;nbsp;measurements&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Ferromagnetic materials are not super conduction since they cant support pairs of electrons with opposite spins (Explained by &lt;span class="caps"&gt;BCS&lt;/span&gt;)&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id="superconductor-terminology"&gt;Superconductor terminology&lt;a class="headerlink" href="#superconductor-terminology" title="Permanent link"&gt; &lt;/a&gt;&lt;/h1&gt;
+&lt;p&gt;The following content on superconductor terminology  is largely derived from &amp;nbsp;http://www.superconductors.org/terms.htm&amp;nbsp;with some&amp;nbsp;modifications.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Anneal&lt;/strong&gt;: To heat and then slowly cool a material to reduce brittleness. Annealing of ceramic superconductors usually follows sintering and is done in an oxygen-rich atmosphere to restore oxygen lost during sintering. The oxygen content of a ceramic superconductor is critical. For example, &lt;span class="caps"&gt;YBCO&lt;/span&gt; with 6.4 atoms of oxygen will not superconduct. But &lt;span class="caps"&gt;YBCO&lt;/span&gt; with 6.5 atoms will. &lt;img alt="img" src="http://www.superconductors.org/O2_level.gif" width="150px"/&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Anti-ferromagnetism:&lt;/strong&gt; A state of matter where adjacent ions in a material are aligned in opposite or &amp;ldquo;anti-parallel&amp;rdquo; arrays. Such materials display almost no response to an external magnetic field at low temperatures and only a weak attaction at higher temperatures. There is evidence that anti-ferromagnetism in the copper oxides plays a role in the formation of Cooper pairs and, thus, in facilitating a superconductive state in some compounds. 
+  &lt;img alt="Image result for antiferromagnetism" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Antiferromagnetic_ordering.svg/1200px-Antiferromagnetic_ordering.svg.png" width="150px"/&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;&lt;span class="caps"&gt;BCS&lt;/span&gt; Theory&lt;/strong&gt;: The first widely-accepted theory to explain superconductivity put forth in 1957 by John Bardeen, Leon Cooper, and John Schreiffer. The theory asserts that, as electrons pass through a crystal lattice, the lattice deforms inward towards the electrons generating sound packets known as &amp;ldquo;phonons&amp;rdquo;. These phonons produce a trough of positive charge in the area of deformation that assists subsequent electrons in passing through the same region in a process known as phonon-mediated coupling. This is analogous to rolling a bowling ball up the middle of a bed. 2 people, one lying on each side of the bed, will tend to roll toward the center of the bed, once the ball has created a depression in the mattress. And, a 2nd bowling ball, placed at the foot of the bed, will now, quite easily, roll toward the&amp;nbsp;middle. &lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Borocarbides&lt;/strong&gt;: Superconducting borocarbides are compounds containing both boron and carbon in combination with rare-earth and transition elements; some of which exhibit the unusual ability to return to a normal, non-superconductive state at temperatures below&amp;nbsp;Tc. &lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;&lt;span class="caps"&gt;BSCCO&lt;/span&gt;&lt;/strong&gt;: An acronym for a ceramic superconductor system containing the elements Bismuth, Strontium, Calcium, Copper and Oxygen. Typically, a small amount of lead is also included in these compounds to promote the highest possible Tc. &lt;span class="caps"&gt;BSCCO&lt;/span&gt; has probably found the widest acceptance among high-Tc superconductor applications due to its unique properties. &lt;span class="caps"&gt;BSCCO&lt;/span&gt; compounds exhibit both an intrinsic Josephson effect and anisotropic (directional)&amp;nbsp;behavior. &lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Ceramics&lt;/strong&gt;: Ceramic superconductors are inorganic compounds formed by reacting a metal with oxygen, nitrogen, carbon or silicon. The best-known of these are the copper-perovskites. Ceramics are typically hard, brittle, heat-resistant materials formed by a process known as solid-state&amp;nbsp;reaction.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Charge Reservoirs:&lt;/strong&gt; In superconductors, charge reservoirs are the layers that may control the oxidation state of adjacent superconducting planes (even though they themselves are not superconducting). In the layered cuprates, these consist of copper-oxide&amp;nbsp;chains. &lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width &lt; 768) ? "left" : align;
+        indent = (screen.width &lt; 768) ? "0em" : indent;
+        linebreak = (screen.width &lt; 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_CHTML';
+
+    var configscript = document.createElement('script');
+    configscript.type = 'text/x-mathjax-config';
+    configscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js','color.js','mhchem.js'], equationNumbers: { autoNumber: 'none' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        availableFonts: ['STIX', 'TeX']," +
+        "        preferredFont: 'STIX'," +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'red ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('SansSerif' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_SansSerif');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_SansSerif-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_SansSerif-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_SansSerif-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_SansSerif');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_SansSerif-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_SansSerif-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_SansSerif-italic');" +
+            "});" +
+        "}";
+
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+&lt;/script&gt;</content><category term="Science"></category><category term="Superconductivity"></category><category term="spin"></category><category term="cooper pairs"></category></entry></feed>
