@@ -166,7 +166,7 @@ SITE_DESCRIPTION = u'Im Ashwin Kumar K,currently dual majoring in Physics and El
 
 
 #MISC
-DISQUS_FILTER = False
-UTTERANCES_FILTER = True
+DISQUS_FILTER = True
+UTTERANCES_FILTER = False
 COMMENTBOX_FILTER = True
 APPLAUSE_BUTTON = True
