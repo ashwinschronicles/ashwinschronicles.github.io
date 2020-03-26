@@ -4,8 +4,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" type="text/css" href="https://ashwinschronicles.github.io/theme/css/elegant.prod.9e9d5ce754.css" media="screen">
-        <link rel="stylesheet" type="text/css" href="https://ashwinschronicles.github.io/theme/css/custom.css" media="screen">
+<link rel="stylesheet" href="https://ashwinschronicles.github.io/theme/css/style.min.css?fc5adb95">
 
         <link rel="dns-prefetch" href="//fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
@@ -25,7 +24,8 @@
 <meta property="og:description" content="Nothing Much" />
 <meta property="og:site_name" content="Ashwin&#39;s Chronicles" />
 <meta property="og:article:author" content="Ashwin" />
-<meta property="og:article:published_time" content="2019-01-01T00:00:00+05:30" />
+<meta property="og:article:published_time" content="2018-12-29T23:20:09+05:30" />
+<meta property="og:article:modified_time" content="2020-03-21T22:29:31+05:30" />
 <meta name="twitter:title" content="Make a Github Pages blog with Pelican">
 <meta name="twitter:description" content="Nothing Much">
 <meta property="og:image" content="/theme/images/final.png" />
@@ -54,6 +54,10 @@
     ga('send', 'pageview');
 </script>
 
+<script>
+    window.heap=window.heap||[],heap.load=function(e,t){window.heap.appid=e,window.heap.config=t=t||{};var r=t.forceSSL||"https:"===document.location.protocol,a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=(r?"https:":"http:")+"//cdn.heapanalytics.com/js/heap-"+e+".js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n);for(var o=function(e){return function(){heap.push([e].concat(Array.prototype.slice.call(arguments,0)))}},p=["addEventProperties","addUserProperties","clearEventProperties","identify","resetIdentity","removeEventProperty","setEventProperties","track","unsetEventProperty"],c=0;c<p.length;c++)heap[p[c]]=o(p[c])};
+      heap.load("1155667143");
+</script>
 
     </head>
     <body>
@@ -103,16 +107,16 @@
     <div class="span2 table-of-content">
         <nav>
         <h4>Contents</h4>
-        <div id="toc"><ul><li><a class="toc-href" href="#" title="Make a Github Pages blog with&nbsp;Pelican">Make a Github Pages blog with&nbsp;Pelican</a><ul><li><a class="toc-href" href="#setting-up-a-githubio-page" title="Setting up a github.io page ">Setting up a github.io page </a></li><li><a class="toc-href" href="#installing-pelican" title="Installing Pelican ">Installing Pelican </a></li><li><a class="toc-href" href="#pelican-quickstart" title="Pelican quickstart ">Pelican quickstart </a></li><li><a class="toc-href" href="#a-little-touch-up" title="A little touch up ">A little touch up </a></li><li><a class="toc-href" href="#whats-next_1" title="What&rsquo;s next? ">What&rsquo;s next? </a><ul><li><a class="toc-href" href="#adding-gitignore" title="Adding .gitignore ">Adding .gitignore </a></li><li><a class="toc-href" href="#automate-github-upload-process" title="Automate GitHub upload process ">Automate GitHub upload process </a></li><li><a class="toc-href" href="#download-themes" title="Download Themes ">Download Themes </a></li><li><a class="toc-href" href="#custom-home-page" title="Custom Home page ">Custom Home page </a></li><li><a class="toc-href" href="#process-for-new-articles" title="Process for new articles. ">Process for new articles. </a></li></ul></li></ul></li></ul></div>
+        <div id="toc"><ul><li><a class="toc-href" href="#" title="Make a Github Pages blog with&nbsp;Pelican">Make a Github Pages blog with&nbsp;Pelican</a><ul><li><a class="toc-href" href="#setting-up-a-githubio-page" title="Setting up a github.io page&para;">Setting up a github.io page&para;</a></li><li><a class="toc-href" href="#installing-pelican" title="Installing Pelican&para;">Installing Pelican&para;</a></li><li><a class="toc-href" href="#pelican-quickstart" title="Pelican quickstart&para;">Pelican quickstart&para;</a></li><li><a class="toc-href" href="#a-little-touch-up" title="A little touch up&para;">A little touch up&para;</a></li><li><a class="toc-href" href="#whats-next_1" title="What&rsquo;s next?&para;">What&rsquo;s next?&para;</a><ul><li><a class="toc-href" href="#adding-gitignore" title="Adding .gitignore&para;">Adding .gitignore&para;</a></li><li><a class="toc-href" href="#automate-github-upload-process" title="Automate GitHub upload process&para;">Automate GitHub upload process&para;</a></li><li><a class="toc-href" href="#download-themes" title="Download Themes&para;">Download Themes&para;</a></li><li><a class="toc-href" href="#custom-home-page" title="Custom Home page&para;">Custom Home page&para;</a></li><li><a class="toc-href" href="#process-for-new-articles" title="Process for new articles.&para;">Process for new articles.&para;</a></li></ul></li></ul></li></ul></div>
         </nav>
     </div>
     <div class="span8 article-content">
             
             <p>Github, worlds leading  hosting service for Git repositories  offers a simple, elegant website solution. It allows its users to  store page content in a git repository along with their&nbsp;code.</p>
 <p>In this blog post ill walk you through the process of setting up a website by combining Pelican with Github Pages. Pelican is a simple python utility that lets you create beautiful weblogs using just text files. In other words its a static-site generator. I have chosen Pelican over other static-site generators as Pelican unlike its counter parts is based on python hence initial  setup takes literally no&nbsp;time.</p>
-<h2 id="setting-up-a-githubio-page">Setting up a github.io page<a class="headerlink" href="#setting-up-a-githubio-page" title="Permanent link"> </a></h2>
+<h2 id="setting-up-a-githubio-page">Setting up a github.io page<a class="headerlink" href="#setting-up-a-githubio-page" title="Permanent link">&para;</a></h2>
 <p>To create your Github user page, log in to Github and create a  new repositorie username.github.io, as explained on Github pages. (Use your Github username for these repositories.) The  username.github.io repository will contain the output <span class="caps">HTML</span> files Pelican generates. To add the output directory as a submodule, initialize it with a <span class="caps">README</span>&nbsp;file.</p>
-<h2 id="installing-pelican">Installing Pelican<a class="headerlink" href="#installing-pelican" title="Permanent link"> </a></h2>
+<h2 id="installing-pelican">Installing Pelican<a class="headerlink" href="#installing-pelican" title="Permanent link">&para;</a></h2>
 <p>We will first  create a virtual environment for Pelican via virtualenv before installing&nbsp;Pelican.</p>
 <div class="highlight"><pre><span></span><code>virtualenv website
 <span class="nb">cd</span> website
@@ -127,7 +131,7 @@ Now clone the source repository you&nbsp;created:</p>
 <p><code>cd web-sources</code></p>
 <p>Because of how Github Pages prefers to work, serving the files from the master branch, you have to put your source code in a new branch, preserving the &ldquo;master&rdquo; for the output of the static files generated by Pelican. To do that, you must create a new branch called&nbsp;&ldquo;source&rdquo;:</p>
 <p><code>git checkout -b source</code></p>
-<h2 id="pelican-quickstart">Pelican quickstart<a class="headerlink" href="#pelican-quickstart" title="Permanent link"> </a></h2>
+<h2 id="pelican-quickstart">Pelican quickstart<a class="headerlink" href="#pelican-quickstart" title="Permanent link">&para;</a></h2>
 <p>Pelican provides an excellent quickstart command. Run&nbsp;it:</p>
 <p><code>pelican-quickstart</code></p>
 <p>The quickstart will ask you various questions, which you can answer in turn. Before answering them, take a look at my answers&nbsp;below:</p>
@@ -166,7 +170,7 @@ Done. Your new project is available at YOUR_USERNAME.github.io
 <p>Go to the terminal, generate the static files and start the server. To do that, use the following&nbsp;command:</p>
 <p><code>(venv)$ make html &amp;&amp; make serve</code>
 While this command is running, you should be able to visit it on your favorite web browser by typing <code>localhost:8000</code> on the address&nbsp;bar.</p>
-<h2 id="a-little-touch-up">A little touch up<a class="headerlink" href="#a-little-touch-up" title="Permanent link"> </a></h2>
+<h2 id="a-little-touch-up">A little touch up<a class="headerlink" href="#a-little-touch-up" title="Permanent link">&para;</a></h2>
 <p>Now,  if you want to put an image in a post, a neat way is to first  create a &lsquo;images&rsquo; directory inside your content directory, where your posts are. Now, you have to tell Pelican to use it. Find the <code>pelicanconf.py</code>, the file where you configure the system, and add a variable that contains the directory with your&nbsp;images:</p>
 <div class="highlight"><pre><span></span><code><span class="n">STATIC_PATHS</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'images'</span><span class="p">]</span>
 </code></pre></div>
@@ -186,9 +190,9 @@ One last step before your coding is &ldquo;done&rdquo;: you should make sure any
 As I had said before you would be preserving the master branch for the output of the static files generated by Pelican. Now it&rsquo;s time  to generate the&nbsp;mater:</p>
 <p><code>$ make github</code>
 You will be asked for your Github login and password again. And&hellip; voil&agrave;! Your new blog should be live on&nbsp;https://YOUR_USERNAME.github.io.</p>
-<h1 id="whats-next_1">What&rsquo;s next?<a class="headerlink" href="#whats-next" title="Permanent link"> </a></h1>
+<h1 id="whats-next_1">What&rsquo;s next?<a class="headerlink" href="#whats-next" title="Permanent link">&para;</a></h1>
 <p>You generated your first Pelican static website using Markdown and Jinja2. Additional modifications can be made to the Jinja2 templates and the content contained in the Markdown&nbsp;files.</p>
-<h3 id="adding-gitignore">Adding .gitignore<a class="headerlink" href="#adding-gitignore" title="Permanent link"> </a></h3>
+<h3 id="adding-gitignore">Adding .gitignore<a class="headerlink" href="#adding-gitignore" title="Permanent link">&para;</a></h3>
 <p>.gitignore file contains a list of files and folder that git will ignore while syncing with the remote repository. Utilizing .gitignore wisely can reduce the amount of data you need to&nbsp;upload.</p>
 <p>make a file .gitignore in the web-sources file with the following&nbsp;contents</p>
 <div class="highlight"><pre><span></span><code><span class="n">#Custom</span><span class="w"></span>
@@ -232,12 +236,12 @@ You will be asked for your Github login and password again. And&hellip; voil&agr
 <span class="p">.</span><span class="n">project</span><span class="w"></span>
 <span class="p">.</span><span class="n">pydevproject</span><span class="w"></span>
 </code></pre></div>
-<h3 id="automate-github-upload-process">Automate GitHub upload process<a class="headerlink" href="#automate-github-upload-process" title="Permanent link"> </a></h3>
+<h3 id="automate-github-upload-process">Automate GitHub upload process<a class="headerlink" href="#automate-github-upload-process" title="Permanent link">&para;</a></h3>
 <p>Create a file <code>up.sh</code> in the  <code>web-sources</code></p>
 <div class="highlight"><pre><span></span><code>git add -A <span class="o">&amp;&amp;</span> git commit -a -m <span class="s1">'$1'</span> <span class="o">&amp;&amp;</span> git push --all
 </code></pre></div>
 <p>Now whenever you want to upload sync the repo just do <code>bash up.sh "Comment"</code> Note that the argument &ldquo;Comment&rdquo; should not contain&nbsp;spaces.</p>
-<h3 id="download-themes">Download Themes<a class="headerlink" href="#download-themes" title="Permanent link"> </a></h3>
+<h3 id="download-themes">Download Themes<a class="headerlink" href="#download-themes" title="Permanent link">&para;</a></h3>
 <p>Clone pelican-themes&nbsp;repository</p>
 <p><code>git clone --recursive https://github.com/getpelican/pelican-themes themes</code></p>
 <p>In <code>pelicanconf.py</code> add the following&nbsp;variables:</p>
@@ -245,7 +249,7 @@ You will be asked for your Github login and password again. And&hellip; voil&agr
 <span class="n">OUTPUT_PATH</span> <span class="o">=</span> <span class="s1">'output'</span>
 <span class="n">PATH</span> <span class="o">=</span> <span class="s1">'content</span>
 </code></pre></div>
-<h3 id="custom-home-page">Custom Home page<a class="headerlink" href="#custom-home-page" title="Permanent link"> </a></h3>
+<h3 id="custom-home-page">Custom Home page<a class="headerlink" href="#custom-home-page" title="Permanent link">&para;</a></h3>
 <p>Add this variables to&nbsp;pelicanconf.py</p>
 <div class="highlight"><pre><span></span><code><span class="c1"># Custom Home page</span>
 <span class="n">DIRECT_TEMPLATES</span> <span class="o">=</span> <span class="p">((</span><span class="s1">'index'</span><span class="p">,</span> <span class="s1">'blog'</span><span class="p">,</span> <span class="s1">'tags'</span><span class="p">,</span> <span class="s1">'categories'</span><span class="p">,</span> <span class="s1">'archives'</span><span class="p">))</span>
@@ -266,7 +270,7 @@ You will be asked for your Github login and password again. And&hellip; voil&agr
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 {% endblock %}
 </code></pre></div>
-<h3 id="process-for-new-articles">Process for new articles.<a class="headerlink" href="#process-for-new-articles" title="Permanent link"> </a></h3>
+<h3 id="process-for-new-articles">Process for new articles.<a class="headerlink" href="#process-for-new-articles" title="Permanent link">&para;</a></h3>
 <p>Ones the setup is done, the contents of the folder <code>web-sources</code> need not be generated again using the above procedure. All one has to do is place the article in the content folder then (after testing the website locally using <code>make devserver</code>) then execute  <code>bash up.sh "Comment"</code>  to sync the source branch and then do <code>make github</code></p>
 <p>If you are on a different machine or you have lost access to the <code>web-sources</code> folder, you just have to make the virtual environment and then do git clone again.&nbsp;i.e</p>
 <div class="highlight"><pre><span></span><code>virtualenv website
@@ -282,10 +286,18 @@ git checkout -b <span class="nb">source</span>
 
             
 
+
+<div class="applause_button">
+    <applause-button url=https://ashwinschronicles.github.io/gh-pages-with-pelican> </applause-button>
+</div>
+
+
                 <p id="post-share-links">
     Like this post? Share on:
       <a href="https://twitter.com/intent/tweet?text=Make%20a%20Github%20Pages%20blog%20with%C2%A0Pelican&url=https%3A//ashwinschronicles.github.io/gh-pages-with-pelican&via=iamashwin99&hashtags=github,pelican,gh-pages" target="_blank" rel="nofollow noopener noreferrer" title="Share on Twitter">Twitter</a>
  ❄       <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A//ashwinschronicles.github.io/gh-pages-with-pelican" target="_blank" rel="nofollow noopener noreferrer" title="Share on Facebook">Facebook</a>
+ ❄       <a href="https://www.reddit.com/submit?url=https%3A//ashwinschronicles.github.io/gh-pages-with-pelican&title=Make%20a%20Github%20Pages%20blog%20with%C2%A0Pelican" target="_blank" rel="nofollow noopener noreferrer" title="Share on Reddit">Reddit</a>
+ ❄       <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A//ashwinschronicles.github.io/gh-pages-with-pelican&title=Make%20a%20Github%20Pages%20blog%20with%C2%A0Pelican&summary=Nothing%C2%A0Much&source=https%3A//ashwinschronicles.github.io/gh-pages-with-pelican" target="_blank" rel="nofollow noopener noreferrer" title="Share on LinkedIn">LinkedIn</a>
  ❄       <a href="mailto:?subject=Make%20a%20Github%20Pages%20blog%20with%C2%A0Pelican&amp;body=https%3A//ashwinschronicles.github.io/gh-pages-with-pelican" target="_blank" rel="nofollow noopener noreferrer" title="Share via Email">Email</a>
 
             
@@ -297,12 +309,64 @@ git checkout -b <span class="nb">source</span>
 
 
 
+<section>
+    <h6 style="display:none;">Comments</h6>
+    <p id="comment-message">So what do you think? Did I miss something? Is any part unclear? Leave your comments below. </p>
+
+    <div class="accordion" id="accordion2">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                <a class="accordion-toggle disqus-comment-count comment-count collapsed"
+                   data-toggle="collapse"
+                   data-parent="#accordion2"
+                   data-disqus-identifier="https://ashwinschronicles.github.io/gh-pages-with-pelican"
+                   href="https://ashwinschronicles.github.io/gh-pages-with-pelican#comment_thread"
+                   id="comment-accordion-toggle">
+                    Comments
+                </a>
+            </div>
+            <div id="comment_thread" class="accordion-body collapse">
+                <div class="accordion-inner">
+                    <div class="comments">
+                        <div id="disqus_thread"></div>
+                        <script>
+    var disqus_shortname = 'ashwinschronicles-github-io.disqus.com';
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+
+    var disqus_identifier = 'https://ashwinschronicles.github.io/gh-pages-with-pelican';
+    var disqus_url = 'https://ashwinschronicles.github.io/gh-pages-with-pelican';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+
+<noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
             <hr/>
             <aside>
             <nav>
             <ul class="articles-timeline">
-                <li class="previous-article">« <a href="https://ashwinschronicles.github.io/qhe" title="Previous: Quantum Hall Effect and related phenomenon">Quantum Hall Effect and related phenomenon</a></li>
-                <li class="next-article"><a href="https://ashwinschronicles.github.io/Superconductivity" title="Next: Superconductivity">Superconductivity</a> »</li>
+                <li class="previous-article">« <a href="https://ashwinschronicles.github.io/Intro-to-IoT" title="Previous: A beginers IoT Project.">A beginers IoT Project.</a></li>
+                <li class="next-article"><a href="https://ashwinschronicles.github.io/qhe" title="Next: Quantum Hall Effect and related phenomenon">Quantum Hall Effect and related phenomenon</a> »</li>
             </ul>
             </nav>
             </aside>
@@ -311,7 +375,10 @@ git checkout -b <span class="nb">source</span>
     <h4>Reading Time</h4>
     <p>~6 min read</p>
             <h4>Published</h4>
-            <time itemprop="dateCreated" datetime="2019-01-01T00:00:00+05:30">Jan 01, 2019</time>
+            <time itemprop="dateCreated" datetime="2018-12-29T23:20:09+05:30">Dec 29, 2018</time>
+<h4>Last Updated</h4>
+<time datetime="2020-03-21T22:29:31+05:30">Mar 21, 2020</time>
+
             <h4>Category</h4>
             <a class="category-link" href="https://ashwinschronicles.github.io/categories#blog-ref">Blog</a>
             <h4>Tags</h4>
@@ -328,6 +395,12 @@ git checkout -b <span class="nb">source</span>
             </ul>
 <h4>Stay in Touch</h4>
 <div id="sidebar-social-link">
+    <a href="mailto:ashwinkumar.k.rao@gmail.com" title="My Email Address" target="_blank" rel="nofollow noopener noreferrer">
+        <svg xmlns="http://www.w3.org/2000/svg" aria-label="Mail" role="img" viewBox="0 0 512 512"><rect width="512" height="512" rx="15%" fill="#328cff"/><path d="m250 186c-46 0-69 35-69 74 0 44 29 72 68 72 43 0 73-32 73-75 0-44-34-71-72-71zm-1-37c30 0 57 13 77 33 0-22 35-22 35 1v150c-1 10 10 16 16 9 25-25 54-128-14-187-64-56-149-47-195-15-48 33-79 107-49 175 33 76 126 99 182 76 28-12 41 26 12 39-45 19-168 17-225-82-38-68-36-185 67-248 78-46 182-33 244 32 66 69 62 197-2 246-28 23-71 1-71-32v-11c-20 20-47 32-77 32-57 0-108-51-108-108 0-58 51-110 108-110" fill="#fff"/></svg>
+    </a>
+    <a href="/feeds/all.atom.xml" title="" target="_blank" rel="nofollow noopener noreferrer">
+        <svg xmlns="http://www.w3.org/2000/svg" aria-label="RSS" role="img" viewBox="0 0 512 512"><rect width="512" height="512" rx="15%" fill="#f80"/><circle cx="145" cy="367" r="35" fill="#fff"/><path fill="none" stroke="#fff" stroke-width="60" d="M109 241c89 0 162 73 162 162M109 127c152 0 276 124 276 276"/></svg>
+    </a>
     <a href="https://www.facebook.com/iamashwin99" title="" target="_blank" rel="nofollow noopener noreferrer">
         <svg xmlns="http://www.w3.org/2000/svg" aria-label="Facebook" role="img" viewBox="0 0 512 512"><rect width="512" height="512" rx="15%" fill="#1877f2"/><path d="M355.6 330l11.4-74h-71v-48c0-20.2 9.9-40 41.7-40H370v-63s-29.3-5-57.3-5c-58.5 0-96.7 35.4-96.7 99.6V256h-65v74h65v182h80V330h59.6z" fill="#fff"/></svg>
     </a>
@@ -342,6 +415,17 @@ git checkout -b <span class="nb">source</span>
 
 
             
+
+
+
+<div id="mc-embed-signup">
+<!-- BEGIN FreeLists WEB FORM -->
+<form action="https://www.freelists.org/list/ashwinschronicles@freelists.org" target="_blank">
+<h4>Get New Release Alert</h4>
+  <input type="submit" value="Notify me" class="button">
+</form>
+<!-- END FreeLists WEB FORM -->
+</div>
 
 
 

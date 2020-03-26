@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Ashwin's Chronicles</title><link href="https://ashwinschronicles.github.io/" rel="alternate"></link><link href="https://ashwinschronicles.github.io/feeds/all-en.atom.xml" rel="self"></link><id>https://ashwinschronicles.github.io/</id><updated>2019-07-13T00:00:00+05:30</updated><entry><title>Analog Discovery 2 + LabVIEW Home Bundle - Review</title><link href="https://ashwinschronicles.github.io/analog-discovery-2-labview-home-bundle-review" rel="alternate"></link><published>2019-07-13T00:00:00+05:30</published><updated>2019-07-13T00:00:00+05:30</updated><author><name>Ashwin</name></author><id>tag:ashwinschronicles.github.io,2019-07-13:/analog-discovery-2-labview-home-bundle-review</id><summary type="html">&lt;p&gt;This post is a review of the Analog Discovery 2 + LabVIEW Home Bundle in a lab&amp;nbsp;environment&lt;/p&gt;</summary><content type="html">&lt;p&gt;This post is a review of the Analog Discovery 2 + LabVIEW Home Bundle in a lab environment. It was originally posted &lt;a href="https://www.element14.com/community/roadTestReviews/3075/l/analog-discovery-2-labview-home-bundle-review"&gt;here&lt;/a&gt; as a part of element14&amp;rsquo;s RoadTest. I thank element14 for sending me the review&amp;nbsp;unit.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Ashwin's Chronicles</title><link href="https://ashwinschronicles.github.io/" rel="alternate"></link><link href="https://ashwinschronicles.github.io/feeds/all-en.atom.xml" rel="self"></link><id>https://ashwinschronicles.github.io/</id><updated>2020-03-25T11:08:12+05:30</updated><entry><title>Analog Discovery 2 + LabVIEW Home Bundle - Review</title><link href="https://ashwinschronicles.github.io/analog-discovery-2-labview-home-bundle-review" rel="alternate"></link><published>2019-07-13T00:00:00+05:30</published><updated>2019-07-13T00:00:00+05:30</updated><author><name>Ashwin</name></author><id>tag:ashwinschronicles.github.io,2019-07-13:/analog-discovery-2-labview-home-bundle-review</id><summary type="html">&lt;p&gt;This post is a review of the Analog Discovery 2 + LabVIEW Home Bundle in a lab&amp;nbsp;environment&lt;/p&gt;</summary><content type="html">&lt;p&gt;This post is a review of the Analog Discovery 2 + LabVIEW Home Bundle in a lab environment. It was originally posted &lt;a href="https://www.element14.com/community/roadTestReviews/3075/l/analog-discovery-2-labview-home-bundle-review"&gt;here&lt;/a&gt; as a part of element14&amp;rsquo;s RoadTest. I thank element14 for sending me the review&amp;nbsp;unit.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;strong&gt;Evaluation Type:&lt;/strong&gt; Test&amp;nbsp;Equipment&lt;/p&gt;
@@ -14,53 +14,53 @@
 &lt;p&gt;&lt;strong&gt;What were the biggest problems encountered?:&lt;/strong&gt; Low power supply capability, coupling between Ch1 and Ch2 of the oscilloscope, it has bandwidth limitations and voltage input limitation, the device gets disconnected often(probably faulty&amp;nbsp;cable)&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id="detailed-review"&gt;Detailed Review:&lt;a class="headerlink" href="#detailed-review" title="Permanent link"&gt; &lt;/a&gt;&lt;/h2&gt;
-&lt;h5 id="typical-use-case-of-labview-in-research-labs"&gt;Typical Use case of LabVIEW in research labs.&lt;a class="headerlink" href="#typical-use-case-of-labview-in-research-labs" title="Permanent link"&gt; &lt;/a&gt;&lt;/h5&gt;
+&lt;h2 id="detailed-review"&gt;Detailed Review:&lt;a class="headerlink" href="#detailed-review" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
+&lt;h5 id="typical-use-case-of-labview-in-research-labs"&gt;Typical Use case of LabVIEW in research labs.&lt;a class="headerlink" href="#typical-use-case-of-labview-in-research-labs" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h5&gt;
 &lt;p&gt;Scientists around the world use LabVIEW and National Instruments products to design and control instruments. The lab that I currently work in does electrical and magnetic measurements of specific samples at liquid helium temperature (4 K). I wanted to interface all the instruments using LabVIEW. The system I&amp;rsquo;m using comprises of a Cryostat, Temperature controller, Source meter Unit. The cryostat uses a liquid helium compressor to cool down the chamber where the sample will be kept. The sample is kept on a sample holder that is designed in house, keeping in mind of all the sample space constraints and to maximise the thermal conductivity between cooler and the sample. An image of the sample holder with the sample can be seen&amp;nbsp;here.&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://www.element14.com/community/servlet/JiveServlet/showImage/293607990-3075-737617/pastedImage_1.png"&gt;&lt;img alt="img" src="https://www.element14.com/community/servlet/JiveServlet/downloadImage/293607990-3075-737617/pastedImage_1.png"/&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="AnD2_1" src="../images/AnD2_1.png"/&gt;&lt;/p&gt;
 &lt;p&gt;The sample you see is connected thermally to a heater and a temperature sensor (cernox sensor). Wires from the sample, temperature sensor and the heater come out of the cooler to a breakout box. One can connect any instruments to this break outbox using banana pin wires. Currently, Lakeshore 336 (&lt;span class="caps"&gt;LS336&lt;/span&gt;) temperature controller, &lt;span class="caps"&gt;B2912A&lt;/span&gt; Source meters (&lt;span class="caps"&gt;SMU&lt;/span&gt;) are connected in the photo&amp;nbsp;below.&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://www.element14.com/community/servlet/JiveServlet/showImage/293607990-3075-737761/analogdiscovery2.jpg"&gt;&lt;img alt="img" src="https://www.element14.com/community/servlet/JiveServlet/downloadImage/293607990-3075-737761/324-531/analogdiscovery2.jpg"/&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="AnD2_2_analogdiscovery2" src="../images/AnD2_2_analogdiscovery2.jpg" style="zoom: 25%;"/&gt;&lt;/p&gt;
 &lt;p&gt;A schematic of the setup&amp;nbsp;is&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://www.element14.com/community/servlet/JiveServlet/showImage/293607990-3075-737741/pastedImage_3.png"&gt;&lt;img alt="img" src="https://www.element14.com/community/servlet/JiveServlet/downloadImage/293607990-3075-737741/486-115/pastedImage_3.png"/&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="AnD2_3_pastedImage_3" src="../images/AnD2_3_pastedImage_3.png" style="zoom:100%;"/&gt;&lt;/p&gt;
 &lt;p&gt;I wanted to use LabVIEW to make a program to automate data acquisition of resistance of the sample as a function of sample&amp;nbsp;temperature.&lt;/p&gt;
 &lt;p&gt;In Labview, such software are what are called &lt;span class="caps"&gt;VI&lt;/span&gt;&amp;rsquo;s which stands for virtual instrument. There are 2 parts to any &lt;span class="caps"&gt;VI&lt;/span&gt;, the front panel, where you put all the user-controllable elements like buttons tet bar etc and logical back panel/ where all the logic for the program is written using &amp;ldquo;G&amp;rdquo; programming&amp;nbsp;language.&lt;/p&gt;
 &lt;p&gt;To get started with designing such software, typically one needs to install the instrumentation driver and look into example program. Luckily both &lt;span class="caps"&gt;LS336&lt;/span&gt; and &lt;span class="caps"&gt;SMU&lt;/span&gt; had instrument drivers&amp;nbsp;available.&lt;/p&gt;
 &lt;p&gt;Once installed, one can find example codes by going to &lt;span class="caps"&gt;HELP&lt;/span&gt;&amp;gt;&lt;span class="caps"&gt;FIND&lt;/span&gt; &lt;span class="caps"&gt;EXAMPLE&lt;/span&gt;&amp;gt; and searching the model number. In the case of &lt;span class="caps"&gt;LS336&lt;/span&gt;, &amp;ldquo;Lakeshore 336 Configure heater output control parameters and acquire single reading.vi&amp;rdquo; example was just what I needed. It had all the features I wanted to control from that instrument. Heres an image of that&amp;nbsp;vi.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Front&amp;nbsp;Panel&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;&lt;a href="https://www.element14.com/community/servlet/JiveServlet/showImage/293607990-3075-737742/pastedImage_5.png"&gt;&lt;img alt="img" src="https://www.element14.com/community/servlet/JiveServlet/downloadImage/293607990-3075-737742/631-353/pastedImage_5.png"/&gt;&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Back&amp;nbsp;panel&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://www.element14.com/community/servlet/JiveServlet/showImage/293607990-3075-737743/pastedImage_9.png"&gt;&lt;img alt="img" src="https://www.element14.com/community/servlet/JiveServlet/downloadImage/293607990-3075-737743/811-271/pastedImage_9.png"/&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="AnD2_4_pastedImage_5" src="../images/AnD2_4_pastedImage_5.png"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Back&amp;nbsp;panel&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;Now, however, &lt;span class="caps"&gt;SMU&lt;/span&gt;&amp;rsquo;s examples didn&amp;rsquo;t work well for me, in such a case, one would make a new &lt;span class="caps"&gt;VI&lt;/span&gt;, right-click on the block diagram and go&amp;nbsp;to&lt;/p&gt;
+&lt;p&gt;&lt;img alt="AnD2_5_pastedImage_9" src="../images/AnD2_5_pastedImage_9.png"/&gt;&lt;/p&gt;
 &lt;p&gt;The back panel (block diagram) actually contain many sub-&lt;span class="caps"&gt;VI&lt;/span&gt;&amp;rsquo;s that act as functions so one can use them in their own program. So, in the end, I combined parts from &lt;span class="caps"&gt;LS336&lt;/span&gt;&amp;rsquo;s example and &lt;span class="caps"&gt;SMU&lt;/span&gt;&amp;rsquo;s &lt;span class="caps"&gt;VI&lt;/span&gt; tree in a way that is suitable for the current requirement of measuring Resistance as a function of sample temperature. I also added functions to write the obtained data in a systematic&amp;nbsp;format.&lt;/p&gt;
 &lt;p&gt;In the end, this is what was&amp;nbsp;achieved.&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://www.element14.com/community/servlet/JiveServlet/showImage/293607990-3075-737749/pastedImage_16.png"&gt;&lt;img alt="img" src="https://www.element14.com/community/servlet/JiveServlet/downloadImage/293607990-3075-737749/661-551/pastedImage_16.png"/&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="AnD2_6_pastedImage_9" src="../images/AnD2_6_pastedImage_9.png"/&gt;&lt;/p&gt;
 &lt;p&gt;I would love to show you the block diagram but even 5 different images coudnt capture the entire block diagram (yes it was that messy!) so I have uploaded the source code at the end if anyone wants to take a look at&amp;nbsp;it.&lt;/p&gt;
 &lt;p&gt;One of the better measurements I was able to do with this system was to measure superconducting transition temperature of Nb thin film, a graph of the same is attached&amp;nbsp;here.&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://www.element14.com/community/servlet/JiveServlet/showImage/293607990-3075-737750/pastedImage_17.png"&gt;&lt;img alt="img" src="https://www.element14.com/community/servlet/JiveServlet/downloadImage/293607990-3075-737750/349-304/pastedImage_17.png"/&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="AnD2_7_pastedImage_11" src="../images/AnD2_7_pastedImage_11.png"/&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;A preliminary test of Analog Discovery&amp;nbsp;2!&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;My main objective of using analog discovery(&lt;span class="caps"&gt;AD&lt;/span&gt;) is to build a vibration sample magnetometer (&lt;span class="caps"&gt;VSM&lt;/span&gt;) and use &lt;span class="caps"&gt;AD2&lt;/span&gt; to source power and acquire&amp;nbsp;measurements.&lt;/p&gt;
 &lt;p&gt;But before I show you how I did that, I can want to show few of the preliminary tests that I did with &lt;span class="caps"&gt;AD2&lt;/span&gt;, and show you where it succeeds and where it&amp;nbsp;fails.&lt;/p&gt;
 &lt;p&gt;As a part of developing the sample holder for the above project, I designed 20 low pass &lt;span class="caps"&gt;RC&lt;/span&gt; filters. The &lt;span class="caps"&gt;PCB&lt;/span&gt; design and the fabricated &lt;span class="caps"&gt;PCB&lt;/span&gt; images&amp;nbsp;:&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://www.element14.com/community/servlet/JiveServlet/showImage/293607990-3075-737752/pastedImage_2.png"&gt;&lt;img alt="img" src="https://www.element14.com/community/servlet/JiveServlet/downloadImage/293607990-3075-737752/217-213/pastedImage_2.png"/&gt;&lt;/a&gt;&lt;a href="https://www.element14.com/community/servlet/JiveServlet/showImage/293607990-3075-737753/pastedImage_3.png"&gt;&lt;img alt="img" src="https://www.element14.com/community/servlet/JiveServlet/downloadImage/293607990-3075-737753/194-213/pastedImage_3.png"/&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://www.element14.com/community/servlet/JiveServlet/showImage/293607990-3075-737752/pastedImage_2.png"&gt;&lt;img alt="img" src="../images/AnD2_8_pastedImage_2.png"/&gt;&lt;/a&gt;&lt;a href="https://www.element14.com/community/servlet/JiveServlet/showImage/293607990-3075-737753/pastedImage_3.png"&gt;&lt;img alt="img" src="../images/AnD2_9_pastedImage_3.png"/&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;And in order to test them, I used the bode plot feature of &lt;span class="caps"&gt;AD2&lt;/span&gt;. The waveforms software that comes up with this device has a tab called Network analyser. The connections to the input and output side of the filter is connected as follows:e the WaveGen 1 output and Oscilloscope Channel 1 input of the device is connected to the filter input, while the Oscilloscope Channel 2 is connected to the filter output, as shown in the picture below. (taken from&amp;nbsp;digilentinc.com)&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://www.element14.com/community/servlet/JiveServlet/showImage/293607990-3075-737754/pastedImage_4.png"&gt;&lt;img alt="img" src="https://www.element14.com/community/servlet/JiveServlet/downloadImage/293607990-3075-737754/309-93/pastedImage_4.png"/&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="AnD2_10_pastedImage_4" src="../images/AnD2_10_pastedImage_4.png"/&gt;&lt;/p&gt;
 &lt;p&gt;When the instrument is started, the bode plot is shown in the program and it was verified that the &lt;span class="caps"&gt;RC&lt;/span&gt; filters are working with the cutoff at 1KHz just as designed. A screenshot of the program is&amp;nbsp;shown&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://www.element14.com/community/servlet/JiveServlet/showImage/293607990-3075-737755/RC_filter2.png"&gt;&lt;img alt="img" src="https://www.element14.com/community/servlet/JiveServlet/downloadImage/293607990-3075-737755/RC_filter2.png"/&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="AnD2_11_RC_filter2" src="../images/AnD2_11_RC_filter2.png"/&gt;&lt;/p&gt;
 &lt;p&gt;The &lt;span class="caps"&gt;RC&lt;/span&gt; filter was supposed to be used inside the cooler mentioned previously, so it would have to work at 4 K as well. But to our disappointment, at 4 K the cutoff shifted to 100KHz dues to high change in capacitance from 10uF to 12nF it is notable that the smd thin film resistor only changed values from 150ohm at room temperature to 160ohm. So the &lt;span class="caps"&gt;AD2&lt;/span&gt; was an extremely handy tool. Typical lab network analysers are pretty&amp;nbsp;expensive.&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://www.element14.com/community/servlet/JiveServlet/showImage/293607990-3075-737756/RC_filter3.png"&gt;&lt;img alt="img" src="https://www.element14.com/community/servlet/JiveServlet/downloadImage/293607990-3075-737756/RC_filter3.png"/&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="AnD2_11_RC_filter3" src="../images/AnD2_11_RC_filter3.png"/&gt;&lt;/p&gt;
 &lt;p&gt;Another notable thing is that the &lt;span class="caps"&gt;AD2&lt;/span&gt; gives unreliable results beyond 1MHz as can be seen in the above&amp;nbsp;image.&lt;/p&gt;
 &lt;p&gt;I also noticed a coupling between Ch1 and &lt;span class="caps"&gt;CH2&lt;/span&gt; of the oscilloscope, when WaveGen1 and Oscilloscope 1 wires were connected and wave gen was set to generate a random sine wave. This can be seen in the image&amp;nbsp;below.&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://www.element14.com/community/servlet/JiveServlet/showImage/293607990-3075-737758/Signal_scope.png"&gt;&lt;img alt="img" src="https://www.element14.com/community/servlet/JiveServlet/downloadImage/293607990-3075-737758/Signal_scope.png"/&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="AnD2_13_Signal_scope" src="../images/AnD2_13_Signal_scope.png"/&gt;&lt;/p&gt;
 &lt;p&gt;With the same image, one can also notice the significant change in the shape of the sine curve. This only tells me that either WaveGen or Oscilloscope or both cant be used in an environment which requires precision and accuracy. Another image showing the same phenomenon is bellow where a 1Hz frequency was sourced.
-&lt;a href="https://www.element14.com/community/servlet/JiveServlet/showImage/293607990-3075-737759/Signal_wavegen_1Hz.png"&gt;&lt;img alt="img" src="https://www.element14.com/community/servlet/JiveServlet/downloadImage/293607990-3075-737759/Signal_wavegen_1Hz.png"/&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;img alt="AnD2_14_Signal_wavegen_1Hz" src="../images/AnD2_14_Signal_wavegen_1Hz.png"/&gt;&lt;/p&gt;
 &lt;p&gt;and in the following image where 17Hz is sourced on a 4 ohm speaker&amp;nbsp;load.&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://www.element14.com/community/servlet/JiveServlet/showImage/293607990-3075-737760/Signal_wavegen_17Hz.png"&gt;&lt;img alt="img" src="https://www.element14.com/community/servlet/JiveServlet/downloadImage/293607990-3075-737760/Signal_wavegen_17Hz.png"/&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="AnD2_15_Signal_wavegen_17Hz" src="../images/AnD2_15_Signal_wavegen_17Hz.png"/&gt;&lt;/p&gt;
 &lt;p&gt;Another problem I faced a lot with my particular unit was frequent disconnection from the waveforms software but when checking the list of devices it is present. I suspect that the long cable provided with &lt;span class="caps"&gt;AD2&lt;/span&gt; has considerable resistance and whenever &lt;span class="caps"&gt;AD2&lt;/span&gt; draws some significant current through the laptop, the source voltage falls below the threshold and the device disconnects momentarily. This also posed a problem for&amp;nbsp;me.&lt;/p&gt;
 &lt;p&gt;So with all these preliminary tests, I&amp;rsquo;m unsure of using &lt;span class="caps"&gt;AD2&lt;/span&gt; to gather data for my research purpose. However ill do the &lt;span class="caps"&gt;VSM&lt;/span&gt; anyway just to see how it goes. I have already wound the 600 turn pickup coil whose signal will be captured by &lt;span class="caps"&gt;AD2&lt;/span&gt; and the Fe sample is mounted on a 4 ohm speaker which will be driven by &lt;span class="caps"&gt;AD2&lt;/span&gt; at 17Hz. Im just on the lookout for a suitable electromagnet. Earlier I thought of using &lt;span class="caps"&gt;AD2&lt;/span&gt; to power a small diameter electromagnet, however, the magnetic field produced by it is around 10 Gauss, which is very small. The &lt;span class="caps"&gt;VSM&lt;/span&gt; would need at least 100 Gauss or above, which may be achieved by and external power supply circuitry whose strength can be controlled by some signal from &lt;span class="caps"&gt;AD2&lt;/span&gt;. Ill be sure to update this post as soon as I get some&amp;nbsp;update&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Conclusion&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;The Analog Discovery 2 can very well be called as the Swiss Army Knife of Test Equipments. Everything about it is really well documented and there are video tutorials to get you started too, so it&amp;rsquo;s easy to figure out the whole capabilities of the device. The capabilities easily make this the best tool for learning and testing electronics for hobbyists to experienced. Its an extremely versatile tool to have in your lab shelf. However, this is certainly not a high-performance measurement unit, if you need accurate, precise and more control over the data acquisition or for research purpose, the device is not the go-to&amp;nbsp;choice.&lt;/p&gt;
 &lt;p&gt;LabVIEW is no doubt the industry standard for interfacing instruments, however, its Graphical programming ideology sometimes gets messy and daunting to work&amp;nbsp;with.&lt;/p&gt;
-&lt;h3 id="scoring_1"&gt;Scoring&lt;a class="headerlink" href="#scoring" title="Permanent link"&gt; &lt;/a&gt;&lt;/h3&gt;
+&lt;h3 id="scoring_1"&gt;Scoring&lt;a class="headerlink" href="#scoring" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h3&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -98,8 +98,8 @@
 &lt;td&gt;52 / 60&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
-&lt;/table&gt;</content><category term="Engineering"></category><category term="Analog Discovery 2"></category><category term="LabVIEW"></category><category term="Review"></category></entry><entry><title>Superconductivity</title><link href="https://ashwinschronicles.github.io/Superconductivity" rel="alternate"></link><published>2019-06-06T00:00:00+05:30</published><updated>2019-06-20T00:00:00+05:30</updated><author><name>Ashwin Kumar K</name></author><id>tag:ashwinschronicles.github.io,2019-06-06:/Superconductivity</id><summary type="html">&lt;p&gt;Short note on&amp;nbsp;superconductivity&lt;/p&gt;</summary><content type="html">&lt;p&gt;This post is my notes on Superconductivity from video lectures of &lt;a href="https://www.youtube.com/channel/UCDBKb7qMyNXujTf7kKRdstg" title="Youtube Link"&gt;Sergey Frolov&lt;/a&gt; on Solid State Physics and other online sites such as&amp;nbsp;http://www.superconductors.org&lt;/p&gt;
-&lt;h1 id="properties"&gt;Properties&lt;a class="headerlink" href="#properties" title="Permanent link"&gt; &lt;/a&gt;&lt;/h1&gt;
+&lt;/table&gt;</content><category term="Engineering"></category><category term="Analog Discovery 2"></category><category term="LabVIEW"></category><category term="Review"></category></entry><entry><title>Superconductivity</title><link href="https://ashwinschronicles.github.io/Superconductivity" rel="alternate"></link><published>2019-06-07T14:02:48+05:30</published><updated>2020-03-23T10:36:34+05:30</updated><author><name>Ashwin Kumar K</name></author><id>tag:ashwinschronicles.github.io,2019-06-07:/Superconductivity</id><summary type="html">&lt;p&gt;Short note on&amp;nbsp;superconductivity&lt;/p&gt;</summary><content type="html">&lt;p&gt;This post is my notes on Superconductivity from video lectures of &lt;a href="https://www.youtube.com/channel/UCDBKb7qMyNXujTf7kKRdstg" title="Youtube Link"&gt;Sergey Frolov&lt;/a&gt; on Solid State Physics and other online sites such as&amp;nbsp;http://www.superconductors.org&lt;/p&gt;
+&lt;h1 id="properties"&gt;Properties&lt;a class="headerlink" href="#properties" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;Discoverd first in Hg at 4.2K in Liquid&amp;nbsp;Helium&lt;/p&gt;
@@ -183,7 +183,7 @@
 &lt;p&gt;Nb has the higest gap of all the&amp;nbsp;materials.&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id="applications"&gt;Applications&lt;a class="headerlink" href="#applications" title="Permanent link"&gt; &lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id="applications"&gt;Applications&lt;a class="headerlink" href="#applications" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;Super conducting single photon detector telescope&lt;img alt="image" src="../../images/photondetector.png" width="50%"/&gt;&lt;/li&gt;
 &lt;li&gt;Quantum computer with&amp;nbsp;photons.&lt;/li&gt;
@@ -194,7 +194,7 @@
 &lt;li&gt;&lt;strong&gt;High efficiency generators:&lt;/strong&gt; Electric generators made with superconducting wire are far more efficient than conventional generators wound with copper wire. In fact, their efficiency is above 99% and their size about half that of conventional&amp;nbsp;generators.&lt;/li&gt;
 &lt;li&gt;Essen, Germany has the world&amp;rsquo;s longest superconducting power cable in production at 1 kilometer. It is a 10 kV liquid nitrogen cooled cable. The cable is smaller than an equivalent 110 kV regular cable and the lower voltage has the additional benefit of smaller&amp;nbsp;transformers.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h1 id="superfluidity-of-he_1"&gt;Superfluidity of He&lt;a class="headerlink" href="#superfluidity-of-he" title="Permanent link"&gt; &lt;/a&gt;&lt;/h1&gt;
+&lt;h1 id="superfluidity-of-he_1"&gt;Superfluidity of He&lt;a class="headerlink" href="#superfluidity-of-he" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;Zero&amp;nbsp;viscocity&lt;/p&gt;
@@ -212,11 +212,11 @@
 &lt;li&gt;as a result it is possible for them to form a Bose-Einstein condensate, a superfluid that can flow withoutt&amp;nbsp;resistance&lt;/li&gt;
 &lt;li&gt;(this does not give rise to superconductivity as excitons are&amp;nbsp;incharged&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h1 id="why-is-there-superconductivity"&gt;Why is there superconductivity?&lt;a class="headerlink" href="#why-is-there-superconductivity" title="Permanent link"&gt; &lt;/a&gt;&lt;/h1&gt;
+&lt;h1 id="why-is-there-superconductivity"&gt;Why is there superconductivity?&lt;a class="headerlink" href="#why-is-there-superconductivity" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h1&gt;
 &lt;p&gt;tldr: Two electrons form a bound state called Cooper pair. These cooper pairs form a condensate.
 &lt;img alt="cooperpairs" src="../../images/cooperpairs.png"/&gt;&lt;/p&gt;
 &lt;p&gt;When an electron is moving through a solid with momentum K, since it also interacts with the lattice, there is an electron phonon interaction, meaning an electron moving through the crystal launches a phonon, another electron flying in a different direction can absorb this photon and form a bound state. These cooper pairs form a condensate (they are all in the same indistinguishable quantum state). And the condensate can be represented by the wave function &lt;span class="math"&gt;\(\psi=n_s e^{i \phi}\)&lt;/span&gt;, where &lt;span class="math"&gt;\(n_s\)&lt;/span&gt; is the density of Cooper pair and &lt;span class="math"&gt;\(\phi\)&lt;/span&gt; denotes the&amp;nbsp;phase.&lt;/p&gt;
-&lt;h1 id="london-equations"&gt;London equations&lt;a class="headerlink" href="#london-equations" title="Permanent link"&gt; &lt;/a&gt;&lt;/h1&gt;
+&lt;h1 id="london-equations"&gt;London equations&lt;a class="headerlink" href="#london-equations" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h1&gt;
 &lt;p&gt;The London equations, developed by brothers Fritz and Heinz London in 1935 relate current to electromagnetic fields in and around a&amp;nbsp;superconductor.&lt;/p&gt;
 &lt;p&gt;&lt;img alt="London equations" src="../../images/London_eqn.png"/&gt;&lt;/p&gt;
 &lt;ul&gt;
@@ -249,7 +249,7 @@
 &lt;p&gt;&lt;img alt="1560962571688" src="../../images/field_penetration.2.png"/&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h1 id="superconductivity-in-the-bulk-cooper-pairs"&gt;Superconductivity in the bulk : Cooper pairs&lt;a class="headerlink" href="#superconductivity-in-the-bulk-cooper-pairs" title="Permanent link"&gt; &lt;/a&gt;&lt;/h1&gt;
+&lt;h1 id="superconductivity-in-the-bulk-cooper-pairs"&gt;Superconductivity in the bulk : Cooper pairs&lt;a class="headerlink" href="#superconductivity-in-the-bulk-cooper-pairs" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;electron-phonon interaction leads to an attraction of&amp;nbsp;electrons&lt;/p&gt;
@@ -315,7 +315,7 @@
 &lt;p&gt;Ferromagnetic materials are not super conduction since they cant support pairs of electrons with opposite spins (Explained by &lt;span class="caps"&gt;BCS&lt;/span&gt;)&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h1 id="superconductor-terminology"&gt;Superconductor terminology&lt;a class="headerlink" href="#superconductor-terminology" title="Permanent link"&gt; &lt;/a&gt;&lt;/h1&gt;
+&lt;h1 id="superconductor-terminology"&gt;Superconductor terminology&lt;a class="headerlink" href="#superconductor-terminology" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h1&gt;
 &lt;p&gt;The following content on superconductor terminology  is largely derived from &amp;nbsp;http://www.superconductors.org/terms.htm&amp;nbsp;with some&amp;nbsp;modifications.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
@@ -402,176 +402,7 @@
     (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
-&lt;/script&gt;</content><category term="Science"></category><category term="Superconductivity"></category><category term="spin"></category><category term="cooper pairs"></category></entry><entry><title>Make a Github Pages blog with Pelican</title><link href="https://ashwinschronicles.github.io/gh-pages-with-pelican" rel="alternate"></link><published>2019-01-01T00:00:00+05:30</published><updated>2019-01-01T00:00:00+05:30</updated><author><name>Ashwin</name></author><id>tag:ashwinschronicles.github.io,2019-01-01:/gh-pages-with-pelican</id><summary type="html">&lt;p&gt;Nothing&amp;nbsp;Much&lt;/p&gt;</summary><content type="html">&lt;p&gt;Github, worlds leading  hosting service for Git repositories  offers a simple, elegant website solution. It allows its users to  store page content in a git repository along with their&amp;nbsp;code.&lt;/p&gt;
-&lt;p&gt;In this blog post ill walk you through the process of setting up a website by combining Pelican with Github Pages. Pelican is a simple python utility that lets you create beautiful weblogs using just text files. In other words its a static-site generator. I have chosen Pelican over other static-site generators as Pelican unlike its counter parts is based on python hence initial  setup takes literally no&amp;nbsp;time.&lt;/p&gt;
-&lt;h2 id="setting-up-a-githubio-page"&gt;Setting up a github.io page&lt;a class="headerlink" href="#setting-up-a-githubio-page" title="Permanent link"&gt; &lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;To create your Github user page, log in to Github and create a  new repositorie username.github.io, as explained on Github pages. (Use your Github username for these repositories.) The  username.github.io repository will contain the output &lt;span class="caps"&gt;HTML&lt;/span&gt; files Pelican generates. To add the output directory as a submodule, initialize it with a &lt;span class="caps"&gt;README&lt;/span&gt;&amp;nbsp;file.&lt;/p&gt;
-&lt;h2 id="installing-pelican"&gt;Installing Pelican&lt;a class="headerlink" href="#installing-pelican" title="Permanent link"&gt; &lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;We will first  create a virtual environment for Pelican via virtualenv before installing&amp;nbsp;Pelican.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;virtualenv website
-&lt;span class="nb"&gt;cd&lt;/span&gt; website
-&lt;span class="nb"&gt;source&lt;/span&gt; bin/activate
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;You can also do &lt;code&gt;workon website&lt;/code&gt; inplace of the last two.
-Once the virtual environment has been created and activated, Pelican can be installed via  prefixing with sudo if permissions&amp;nbsp;warrant:&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;pip install pelican markdown typogrify ghp-import shovel&lt;/code&gt; &lt;br/&gt;
-Now clone the source repository you&amp;nbsp;created:&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;git clone https://github.com/YOUR_USERNAME/YOUR_USERNAME.github.io.git web-sources&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;Then change directory to the source&amp;nbsp;folder:&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;cd web-sources&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;Because of how Github Pages prefers to work, serving the files from the master branch, you have to put your source code in a new branch, preserving the &amp;ldquo;master&amp;rdquo; for the output of the static files generated by Pelican. To do that, you must create a new branch called&amp;nbsp;&amp;ldquo;source&amp;rdquo;:&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;git checkout -b source&lt;/code&gt;&lt;/p&gt;
-&lt;h2 id="pelican-quickstart"&gt;Pelican quickstart&lt;a class="headerlink" href="#pelican-quickstart" title="Permanent link"&gt; &lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;Pelican provides an excellent quickstart command. Run&amp;nbsp;it:&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;pelican-quickstart&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;The quickstart will ask you various questions, which you can answer in turn. Before answering them, take a look at my answers&amp;nbsp;below:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;gt; Where &lt;span class="k"&gt;do&lt;/span&gt; you want to create your new web site? &lt;span class="o"&gt;[&lt;/span&gt;.&lt;span class="o"&gt;]&lt;/span&gt; ./
-&amp;gt; What will be the title of this web site? Ashwin&lt;span class="err"&gt;'&lt;/span&gt;s Chronicles
-&amp;gt; Who will be the author of this web site? Ashwin Kumar K
-&amp;gt; What will be the default language of this web site? &lt;span class="o"&gt;[&lt;/span&gt;pt&lt;span class="o"&gt;]&lt;/span&gt; en
-&amp;gt; Do you want to specify a URL prefix? e.g., http://example.com   &lt;span class="o"&gt;(&lt;/span&gt;Y/n&lt;span class="o"&gt;)&lt;/span&gt; n
-&amp;gt; Do you want to &lt;span class="nb"&gt;enable&lt;/span&gt; article pagination? &lt;span class="o"&gt;(&lt;/span&gt;Y/n&lt;span class="o"&gt;)&lt;/span&gt; y
-&amp;gt; How many articles per page &lt;span class="k"&gt;do&lt;/span&gt; you want? &lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="m"&gt;10&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt; &lt;span class="m"&gt;10&lt;/span&gt;
-&amp;gt; What is your &lt;span class="nb"&gt;time&lt;/span&gt; zone? &lt;span class="o"&gt;[&lt;/span&gt;Europe/Paris&lt;span class="o"&gt;]&lt;/span&gt; Asia/Calcutta
-&amp;gt; Do you want to generate a Fabfile/Makefile to automate generation and publishing? &lt;span class="o"&gt;(&lt;/span&gt;Y/n&lt;span class="o"&gt;)&lt;/span&gt; Y **# PAY ATTENTION TO THIS!**
-&amp;gt; Do you want an auto-reload &lt;span class="p"&gt;&amp;amp;&lt;/span&gt; simpleHTTP script to assist with theme and site development? &lt;span class="o"&gt;(&lt;/span&gt;Y/n&lt;span class="o"&gt;)&lt;/span&gt; n
-&amp;gt; Do you want to upload your website using FTP? &lt;span class="o"&gt;(&lt;/span&gt;y/N&lt;span class="o"&gt;)&lt;/span&gt; n
-&amp;gt; Do you want to upload your website using SSH? &lt;span class="o"&gt;(&lt;/span&gt;y/N&lt;span class="o"&gt;)&lt;/span&gt; n
-&amp;gt; Do you want to upload your website using Dropbox? &lt;span class="o"&gt;(&lt;/span&gt;y/N&lt;span class="o"&gt;)&lt;/span&gt; n
-&amp;gt; Do you want to upload your website using S3? &lt;span class="o"&gt;(&lt;/span&gt;y/N&lt;span class="o"&gt;)&lt;/span&gt; n
-&amp;gt; Do you want to upload your website using Rackspace Cloud Files? &lt;span class="o"&gt;(&lt;/span&gt;y/N&lt;span class="o"&gt;)&lt;/span&gt; n
-&amp;gt; Do you want to upload your website using GitHub Pages? &lt;span class="o"&gt;(&lt;/span&gt;y/N&lt;span class="o"&gt;)&lt;/span&gt; y
-&amp;gt; Is this your personal page &lt;span class="o"&gt;(&lt;/span&gt;username.github.io&lt;span class="o"&gt;)&lt;/span&gt;? &lt;span class="o"&gt;(&lt;/span&gt;y/N&lt;span class="o"&gt;)&lt;/span&gt; y
-Done. Your new project is available at YOUR_USERNAME.github.io
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Now, go ahead and create your first blog post! You might want to open the project folder on your favorite code editor and find the &amp;ldquo;content&amp;rdquo; folder inside it. Then, create a new file, which can be called my-first-post.md (Just for testing). The contents should begin with the metadata which identifies the Title, Date, Category and more from the post before you start with the content, like&amp;nbsp;this:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;Title&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;My&lt;/span&gt; &lt;span class="n"&gt;first&lt;/span&gt; &lt;span class="n"&gt;post&lt;/span&gt;
-&lt;span class="n"&gt;Date&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;2018&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;
-&lt;span class="n"&gt;Modified&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;2018&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;
-&lt;span class="n"&gt;Category&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;misc&lt;/span&gt;
-&lt;span class="n"&gt;Tags&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;first&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="n"&gt;misc&lt;/span&gt;
-&lt;span class="n"&gt;Slug&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;My&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;first&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;post&lt;/span&gt;
-&lt;span class="n"&gt;Authors&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;Your&lt;/span&gt; &lt;span class="n"&gt;name&lt;/span&gt;
-&lt;span class="n"&gt;Summary&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;What&lt;/span&gt; &lt;span class="n"&gt;does&lt;/span&gt; &lt;span class="n"&gt;your&lt;/span&gt; &lt;span class="n"&gt;post&lt;/span&gt; &lt;span class="n"&gt;talk&lt;/span&gt; &lt;span class="n"&gt;about&lt;/span&gt;&lt;span class="o"&gt;?&lt;/span&gt; &lt;span class="n"&gt;Write&lt;/span&gt; &lt;span class="n"&gt;here&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;
-
-&lt;span class="n"&gt;This&lt;/span&gt; &lt;span class="k"&gt;is&lt;/span&gt; &lt;span class="n"&gt;the&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;first&lt;/span&gt; &lt;span class="n"&gt;post&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="n"&gt;from&lt;/span&gt; &lt;span class="n"&gt;my&lt;/span&gt; &lt;span class="n"&gt;Pelican&lt;/span&gt; &lt;span class="n"&gt;blog&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt; &lt;span class="o"&gt;**&lt;/span&gt;&lt;span class="n"&gt;YAY&lt;/span&gt;&lt;span class="o"&gt;!**&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Let&amp;rsquo;s see how it&amp;nbsp;looks?&lt;/p&gt;
-&lt;p&gt;Go to the terminal, generate the static files and start the server. To do that, use the following&amp;nbsp;command:&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;(venv)$ make html &amp;amp;&amp;amp; make serve&lt;/code&gt;
-While this command is running, you should be able to visit it on your favorite web browser by typing &lt;code&gt;localhost:8000&lt;/code&gt; on the address&amp;nbsp;bar.&lt;/p&gt;
-&lt;h2 id="a-little-touch-up"&gt;A little touch up&lt;a class="headerlink" href="#a-little-touch-up" title="Permanent link"&gt; &lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;Now,  if you want to put an image in a post, a neat way is to first  create a &amp;lsquo;images&amp;rsquo; directory inside your content directory, where your posts are. Now, you have to tell Pelican to use it. Find the &lt;code&gt;pelicanconf.py&lt;/code&gt;, the file where you configure the system, and add a variable that contains the directory with your&amp;nbsp;images:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;STATIC_PATHS&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;'images'&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Save it. Go to your post and add the image this&amp;nbsp;way:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;![Write here a good description for people who can't see the image]({filename}/images/IMAGE_NAME.jpg)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;You can interrupt the server at anytime pressing &lt;span class="caps"&gt;CTRL&lt;/span&gt;+C on the terminal. But you should start it again and check if the image is correct. Can you remember&amp;nbsp;how?&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;(venv)$ make html &amp;amp;&amp;amp; make serve&lt;/code&gt;
-One last step before your coding is &amp;ldquo;done&amp;rdquo;: you should make sure anyone can read your posts using &lt;span class="caps"&gt;ATOM&lt;/span&gt; or &lt;span class="caps"&gt;RSS&lt;/span&gt; feeds. Find the pelicanconf.py, the file where you configure the system, and edit the part about feed&amp;nbsp;generation:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;FEED_ALL_ATOM&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;'feeds/all.atom.xml'&lt;/span&gt;
-&lt;span class="n"&gt;FEED_ALL_RSS&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;'feeds/all.rss.xml'&lt;/span&gt;
-&lt;span class="n"&gt;AUTHOR_FEED_RSS&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;'feeds/&lt;/span&gt;&lt;span class="si"&gt;%s&lt;/span&gt;&lt;span class="s1"&gt;.rss.xml'&lt;/span&gt;
-&lt;span class="n"&gt;RSS_FEED_SUMMARY_ONLY&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kc"&gt;False&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Save everything so you can send the code to Github. You can do that by adding all files, committing it with a message (&amp;lsquo;first commit&amp;rsquo;) and using git push. You will be asked for your Github login and&amp;nbsp;password.&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;$ git add -A &amp;amp;&amp;amp; git commit -a -m 'first commit' &amp;amp;&amp;amp; git push --all&lt;/code&gt;
-As I had said before you would be preserving the master branch for the output of the static files generated by Pelican. Now it&amp;rsquo;s time  to generate the&amp;nbsp;mater:&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;$ make github&lt;/code&gt;
-You will be asked for your Github login and password again. And&amp;hellip; voil&amp;agrave;! Your new blog should be live on&amp;nbsp;https://YOUR_USERNAME.github.io.&lt;/p&gt;
-&lt;h1 id="whats-next_1"&gt;What&amp;rsquo;s next?&lt;a class="headerlink" href="#whats-next" title="Permanent link"&gt; &lt;/a&gt;&lt;/h1&gt;
-&lt;p&gt;You generated your first Pelican static website using Markdown and Jinja2. Additional modifications can be made to the Jinja2 templates and the content contained in the Markdown&amp;nbsp;files.&lt;/p&gt;
-&lt;h3 id="adding-gitignore"&gt;Adding .gitignore&lt;a class="headerlink" href="#adding-gitignore" title="Permanent link"&gt; &lt;/a&gt;&lt;/h3&gt;
-&lt;p&gt;.gitignore file contains a list of files and folder that git will ignore while syncing with the remote repository. Utilizing .gitignore wisely can reduce the amount of data you need to&amp;nbsp;upload.&lt;/p&gt;
-&lt;p&gt;make a file .gitignore in the web-sources file with the following&amp;nbsp;contents&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;#Custom&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-&lt;span class="k"&gt;output&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-&lt;span class="n"&gt;pelicanconf_local&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;py&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-
-&lt;span class="n"&gt;#Python&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;py&lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="n"&gt;cod&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-
-&lt;span class="err"&gt;#&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;C&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;extensions&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;so&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-
-&lt;span class="err"&gt;#&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Packages&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;egg&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;egg&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;info&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-&lt;span class="n"&gt;dist&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-&lt;span class="n"&gt;build&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-&lt;span class="n"&gt;eggs&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-&lt;span class="n"&gt;parts&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-&lt;span class="n"&gt;bin&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-&lt;span class="nf"&gt;var&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-&lt;span class="n"&gt;sdist&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-&lt;span class="n"&gt;develop&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;eggs&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;installed&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;cfg&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-&lt;span class="n"&gt;lib&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-&lt;span class="n"&gt;lib64&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-
-&lt;span class="err"&gt;#&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Installer&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;logs&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-&lt;span class="n"&gt;pip&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="nf"&gt;log&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;txt&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-
-&lt;span class="err"&gt;#&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Unit&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;test&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;coverage&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;reports&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;coverage&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;tox&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-&lt;span class="n"&gt;nosetests&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nc"&gt;xml&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-
-&lt;span class="err"&gt;#&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Translations&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;mo&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-
-&lt;span class="err"&gt;#&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Mr&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Developer&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;mr&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;developer&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;cfg&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;project&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;pydevproject&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h3 id="automate-github-upload-process"&gt;Automate GitHub upload process&lt;a class="headerlink" href="#automate-github-upload-process" title="Permanent link"&gt; &lt;/a&gt;&lt;/h3&gt;
-&lt;p&gt;Create a file &lt;code&gt;up.sh&lt;/code&gt; in the  &lt;code&gt;web-sources&lt;/code&gt;&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;git add -A &lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt; git commit -a -m &lt;span class="s1"&gt;'$1'&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt; git push --all
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Now whenever you want to upload sync the repo just do &lt;code&gt;bash up.sh "Comment"&lt;/code&gt; Note that the argument &amp;ldquo;Comment&amp;rdquo; should not contain&amp;nbsp;spaces.&lt;/p&gt;
-&lt;h3 id="download-themes"&gt;Download Themes&lt;a class="headerlink" href="#download-themes" title="Permanent link"&gt; &lt;/a&gt;&lt;/h3&gt;
-&lt;p&gt;Clone pelican-themes&amp;nbsp;repository&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;git clone --recursive https://github.com/getpelican/pelican-themes themes&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;In &lt;code&gt;pelicanconf.py&lt;/code&gt; add the following&amp;nbsp;variables:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;THEME&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;'themes/bootstrap2'&lt;/span&gt;
-&lt;span class="n"&gt;OUTPUT_PATH&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;'output'&lt;/span&gt;
-&lt;span class="n"&gt;PATH&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;'content&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h3 id="custom-home-page"&gt;Custom Home page&lt;a class="headerlink" href="#custom-home-page" title="Permanent link"&gt; &lt;/a&gt;&lt;/h3&gt;
-&lt;p&gt;Add this variables to&amp;nbsp;pelicanconf.py&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="c1"&gt;# Custom Home page&lt;/span&gt;
-&lt;span class="n"&gt;DIRECT_TEMPLATES&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;((&lt;/span&gt;&lt;span class="s1"&gt;'index'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;'blog'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;'tags'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;'categories'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;'archives'&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
-&lt;span class="n"&gt;PAGINATED_DIRECT_TEMPLATES&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;((&lt;/span&gt;&lt;span class="s1"&gt;'blog'&lt;/span&gt;&lt;span class="p"&gt;,))&lt;/span&gt;
-&lt;span class="n"&gt;TEMPLATE_PAGES&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="s1"&gt;'home.html'&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;'index.html'&lt;/span&gt;&lt;span class="p"&gt;,}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Duplicated the index.html to blog.html in your template folder and add this&amp;nbsp;lines:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;{% set active_page = "blog" %}
-{% block title %}{{ SITENAME }} - Blog{% endblock %}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Create home.html or use page override feature to use a Markdown page as your home&amp;nbsp;page.&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;nano home.html&lt;/code&gt;&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;{% extends "base.html" %}
-{% block content %}
-&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;div&lt;/span&gt; &lt;span class="na"&gt;class&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;'page'&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
-  &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;div&lt;/span&gt; &lt;span class="na"&gt;class&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;"page-header"&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;h1&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;Home&lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;h1&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;div&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
-  &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;div&lt;/span&gt; &lt;span class="na"&gt;class&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;"page-content"&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;Content&lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;div&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
-&lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;div&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
-{% endblock %}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h3 id="process-for-new-articles"&gt;Process for new articles.&lt;a class="headerlink" href="#process-for-new-articles" title="Permanent link"&gt; &lt;/a&gt;&lt;/h3&gt;
-&lt;p&gt;Ones the setup is done, the contents of the folder &lt;code&gt;web-sources&lt;/code&gt; need not be generated again using the above procedure. All one has to do is place the article in the content folder then (after testing the website locally using &lt;code&gt;make devserver&lt;/code&gt;) then execute  &lt;code&gt;bash up.sh "Comment"&lt;/code&gt;  to sync the source branch and then do &lt;code&gt;make github&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;If you are on a different machine or you have lost access to the &lt;code&gt;web-sources&lt;/code&gt; folder, you just have to make the virtual environment and then do git clone again.&amp;nbsp;i.e&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;virtualenv website
-&lt;span class="nb"&gt;cd&lt;/span&gt; website
-&lt;span class="nb"&gt;source&lt;/span&gt; bin/activate
-pip install pelican markdown typogrify ghp-import shovel
-git clone https://github.com/YOUR_USERNAME/YOUR_USERNAME.github.io.git web-sources
-&lt;span class="nb"&gt;cd&lt;/span&gt; web-sources
-git checkout -b &lt;span class="nb"&gt;source&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;This article just touches uppon getting a basic website up and running. More features that Pelican offers (like custom plugins)can be explored &lt;a href="http://docs.getpelican.com/en/3.6.3/content.html"&gt;here&lt;/a&gt;.&lt;/p&gt;</content><category term="Blog"></category><category term="Github"></category><category term="Pelican"></category><category term="gh-pages"></category></entry><entry><title>Quantum Hall Effect and related phenomenon</title><link href="https://ashwinschronicles.github.io/qhe" rel="alternate"></link><published>2019-01-01T00:00:00+05:30</published><updated>2019-01-01T00:00:00+05:30</updated><author><name>Ashwin</name></author><id>tag:ashwinschronicles.github.io,2019-01-01:/qhe</id><summary type="html">&lt;p&gt;Notes on Quantum Hall Effect and related&amp;nbsp;phenomenon&lt;/p&gt;</summary><content type="html">&lt;h1 id="historical-aspects"&gt;Historical Aspects&lt;a class="headerlink" href="#historical-aspects" title="Permanent link"&gt; &lt;/a&gt;&lt;/h1&gt;
+&lt;/script&gt;</content><category term="Science"></category><category term="Superconductivity"></category><category term="spin"></category><category term="cooper pairs"></category></entry><entry><title>Quantum Hall Effect and related phenomenon</title><link href="https://ashwinschronicles.github.io/qhe" rel="alternate"></link><published>2019-06-07T14:02:48+05:30</published><updated>2020-03-25T11:08:12+05:30</updated><author><name>Ashwin</name></author><id>tag:ashwinschronicles.github.io,2019-06-07:/qhe</id><summary type="html">&lt;p&gt;Notes on Quantum Hall Effect and related&amp;nbsp;phenomenon&lt;/p&gt;</summary><content type="html">&lt;h1 id="historical-aspects"&gt;Historical Aspects&lt;a class="headerlink" href="#historical-aspects" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h1&gt;
 &lt;p&gt;The quantum Hall effect is a remarkable phenomenon discovered
 experimentally in which the Hall conductivity of a two dimensional
 system of electrons is found to have plateaus as a function of variables
@@ -600,8 +431,8 @@ naive explanation. It is fortunate that von Klitzing switched on the
 magnetic field with a fixed current through the sample, rather than
 switched on the current at fixed field, as the coincidence of the
 unchanged digital voltmeter readings would then never have happened.&amp;nbsp;[4]&lt;/p&gt;
-&lt;h1 id="theoretical-aspects-86"&gt;Theoretical aspects [8,6]&lt;a class="headerlink" href="#theoretical-aspects-86" title="Permanent link"&gt; &lt;/a&gt;&lt;/h1&gt;
-&lt;h2 id="the-classical-hall-effect"&gt;The Classical Hall Effect&lt;a class="headerlink" href="#the-classical-hall-effect" title="Permanent link"&gt; &lt;/a&gt;&lt;/h2&gt;
+&lt;h1 id="theoretical-aspects-86"&gt;Theoretical aspects [8,6]&lt;a class="headerlink" href="#theoretical-aspects-86" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h1&gt;
+&lt;h2 id="the-classical-hall-effect"&gt;The Classical Hall Effect&lt;a class="headerlink" href="#the-classical-hall-effect" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;The original, classical Hall effect was discovered in 1879 by Edwin
 Hall. It is a simple consequence of the motion of charged particles in a
 magnetic&amp;nbsp;field.&lt;/p&gt;
@@ -649,7 +480,7 @@ about the&amp;nbsp;material&lt;/p&gt;
 &lt;p&gt;The sign determines the carriers are holes or&amp;nbsp;electrons.&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;h3 id="experimental-verification-of-hall-effect5"&gt;Experimental verification of hall effect.[5]&lt;a class="headerlink" href="#experimental-verification-of-hall-effect5" title="Permanent link"&gt; &lt;/a&gt;&lt;/h3&gt;
+&lt;h3 id="experimental-verification-of-hall-effect5"&gt;Experimental verification of hall effect.[5]&lt;a class="headerlink" href="#experimental-verification-of-hall-effect5" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;An experiment was performed to measure the charge density of Germanium
 used as Hall Probe. The experiment was performed under the guidance of
 Sharvari Kulkarni&amp;nbsp;P.&lt;/p&gt;
@@ -689,7 +520,7 @@ sample length as&amp;nbsp;5mm.&lt;/p&gt;
     &lt;strong&gt;&lt;span class="math"&gt;\(n=3.879x10^{19}m^{-3}\)&lt;/span&gt;&lt;/strong&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;h1 id="quantum-hall-effects_2"&gt;Quantum Hall Effects&lt;a class="headerlink" href="#quantum-hall-effects" title="Permanent link"&gt; &lt;/a&gt;&lt;/h1&gt;
+&lt;h1 id="quantum-hall-effects_2"&gt;Quantum Hall Effects&lt;a class="headerlink" href="#quantum-hall-effects" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h1&gt;
 &lt;p&gt;In the previous section we saw details about the Hall effect mainly that
 Hall Voltage is proportional to the magnetic&amp;nbsp;field.&lt;/p&gt;
 &lt;p&gt;Hall effect is easily observed in room temperature and relatively low
@@ -744,7 +575,7 @@ laboratory are only strong enough to give Zeeman energies of order one
 degree Kelvin, we need to have temperatures of less than one degree
 Kelvin in order to see the Quantum Hall effect at all. And the lower we
 can make the temperature, the better the data will&amp;nbsp;look.&lt;/p&gt;
-&lt;h3 id="classical-explanation3"&gt;Classical Explanation[3]&lt;a class="headerlink" href="#classical-explanation3" title="Permanent link"&gt; &lt;/a&gt;&lt;/h3&gt;
+&lt;h3 id="classical-explanation3"&gt;Classical Explanation[3]&lt;a class="headerlink" href="#classical-explanation3" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;One can explain the above phenomenon classically as&amp;nbsp;follows.&lt;/p&gt;
 &lt;p&gt;Consider the standard &lt;span class="caps"&gt;2DEG&lt;/span&gt; setup with four probes two along x axis and
 two along y axis similar to the arrangement in Fig1.
@@ -806,7 +637,7 @@ any dissipation of energy. We also see&amp;nbsp;that
 &lt;div class="math"&gt;$$\sigma_{xy}==\frac{-1}{\rho_{xy}}=\gamma\frac{e^{2}}{h}\qquad\gamma\rightarrow integer$$&lt;/div&gt;
 &lt;p&gt;
 which is the same as the quantised hall value&amp;nbsp;equation.&lt;/p&gt;
-&lt;h3 id="landau-levels2"&gt;Landau Levels[2]&lt;a class="headerlink" href="#landau-levels2" title="Permanent link"&gt; &lt;/a&gt;&lt;/h3&gt;
+&lt;h3 id="landau-levels2"&gt;Landau Levels[2]&lt;a class="headerlink" href="#landau-levels2" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;In presence of magnetic field, electrons follow circular trajectories
 called cyclotron&amp;nbsp;orbits.&lt;/p&gt;
 &lt;ul&gt;
@@ -867,7 +698,7 @@ energy does not depend on the quantum number &lt;span class="math"&gt;\(k_{y}\)&
 &lt;p&gt;With this argument we can conclude that the state of the electron can
 uniquely determined by two by two quantum numbers, n and &lt;span class="math"&gt;\(k_{y}\)&lt;/span&gt;. Now
 let us focus on the degeneracy of Landau&amp;nbsp;level.&lt;/p&gt;
-&lt;h3 id="degeneracy-of-landau-levels62"&gt;Degeneracy of Landau levels[6,2]&lt;a class="headerlink" href="#degeneracy-of-landau-levels62" title="Permanent link"&gt; &lt;/a&gt;&lt;/h3&gt;
+&lt;h3 id="degeneracy-of-landau-levels62"&gt;Degeneracy of Landau levels[6,2]&lt;a class="headerlink" href="#degeneracy-of-landau-levels62" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;Each set of wave functions with the same value of n is called a Landau
 level. Effects of Landau levels are only observed when the mean thermal
 energy is smaller than the energy level separation,
@@ -890,7 +721,7 @@ is the flux through the system (with area &lt;span class="math"&gt;\(A=L_{x}L_{y
 &lt;p&gt;Thus, for particles with spin S, the maximum number D of particles per
 Landau level&amp;nbsp;is&lt;/p&gt;
 &lt;div class="math"&gt;$${\displaystyle D=Z(2S+1){\frac{\Phi}{\Phi_{0}}}~}$$&lt;/div&gt;
-&lt;h3 id="edge-modes4"&gt;Edge modes[4]&lt;a class="headerlink" href="#edge-modes4" title="Permanent link"&gt; &lt;/a&gt;&lt;/h3&gt;
+&lt;h3 id="edge-modes4"&gt;Edge modes[4]&lt;a class="headerlink" href="#edge-modes4" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;So far we have discussed the ideal &lt;span class="caps"&gt;2DEG&lt;/span&gt; scenario. The real samples,
 though comparatively clean, do not have the transnational invariance
 that makes each state in a given Landau level have exactly the same
@@ -978,12 +809,181 @@ intersects the boundary, and bounces off&amp;nbsp;it.&lt;/p&gt;
     (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
-&lt;/script&gt;</content><category term="Science"></category><category term="qhe"></category><category term="hall effect"></category><category term="landau levels"></category></entry><entry><title>A beginers IoT Project.</title><link href="https://ashwinschronicles.github.io/Intro-to-IoT" rel="alternate"></link><published>2018-07-12T00:00:00+05:30</published><updated>2018-07-12T00:00:00+05:30</updated><author><name>Ashwin</name></author><id>tag:ashwinschronicles.github.io,2018-07-12:/Intro-to-IoT</id><summary type="html">&lt;p&gt;In this post, we’ll be making a simple IoT project. Web page controlled &lt;span class="caps"&gt;LED&lt;/span&gt; strip using NodeMCU connected on a local&amp;nbsp;network.&lt;/p&gt;</summary><content type="html">&lt;p&gt;In this post, we&amp;rsquo;ll be making a simple IoT project. Web page controlled &lt;span class="caps"&gt;LED&lt;/span&gt; strip using NodeMCU connected on a local&amp;nbsp;network.&lt;/p&gt;
-&lt;h2 id="outline"&gt;Outline:&lt;a class="headerlink" href="#outline" title="Permanent link"&gt; &lt;/a&gt;&lt;/h2&gt;
+&lt;/script&gt;</content><category term="Science"></category><category term="qhe"></category><category term="hall effect"></category><category term="landau levels"></category></entry><entry><title>Make a Github Pages blog with Pelican</title><link href="https://ashwinschronicles.github.io/gh-pages-with-pelican" rel="alternate"></link><published>2018-12-29T23:20:09+05:30</published><updated>2020-03-21T22:29:31+05:30</updated><author><name>Ashwin</name></author><id>tag:ashwinschronicles.github.io,2018-12-29:/gh-pages-with-pelican</id><summary type="html">&lt;p&gt;Nothing&amp;nbsp;Much&lt;/p&gt;</summary><content type="html">&lt;p&gt;Github, worlds leading  hosting service for Git repositories  offers a simple, elegant website solution. It allows its users to  store page content in a git repository along with their&amp;nbsp;code.&lt;/p&gt;
+&lt;p&gt;In this blog post ill walk you through the process of setting up a website by combining Pelican with Github Pages. Pelican is a simple python utility that lets you create beautiful weblogs using just text files. In other words its a static-site generator. I have chosen Pelican over other static-site generators as Pelican unlike its counter parts is based on python hence initial  setup takes literally no&amp;nbsp;time.&lt;/p&gt;
+&lt;h2 id="setting-up-a-githubio-page"&gt;Setting up a github.io page&lt;a class="headerlink" href="#setting-up-a-githubio-page" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;To create your Github user page, log in to Github and create a  new repositorie username.github.io, as explained on Github pages. (Use your Github username for these repositories.) The  username.github.io repository will contain the output &lt;span class="caps"&gt;HTML&lt;/span&gt; files Pelican generates. To add the output directory as a submodule, initialize it with a &lt;span class="caps"&gt;README&lt;/span&gt;&amp;nbsp;file.&lt;/p&gt;
+&lt;h2 id="installing-pelican"&gt;Installing Pelican&lt;a class="headerlink" href="#installing-pelican" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;We will first  create a virtual environment for Pelican via virtualenv before installing&amp;nbsp;Pelican.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;virtualenv website
+&lt;span class="nb"&gt;cd&lt;/span&gt; website
+&lt;span class="nb"&gt;source&lt;/span&gt; bin/activate
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;You can also do &lt;code&gt;workon website&lt;/code&gt; inplace of the last two.
+Once the virtual environment has been created and activated, Pelican can be installed via  prefixing with sudo if permissions&amp;nbsp;warrant:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;pip install pelican markdown typogrify ghp-import shovel&lt;/code&gt; &lt;br/&gt;
+Now clone the source repository you&amp;nbsp;created:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;git clone https://github.com/YOUR_USERNAME/YOUR_USERNAME.github.io.git web-sources&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Then change directory to the source&amp;nbsp;folder:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;cd web-sources&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Because of how Github Pages prefers to work, serving the files from the master branch, you have to put your source code in a new branch, preserving the &amp;ldquo;master&amp;rdquo; for the output of the static files generated by Pelican. To do that, you must create a new branch called&amp;nbsp;&amp;ldquo;source&amp;rdquo;:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;git checkout -b source&lt;/code&gt;&lt;/p&gt;
+&lt;h2 id="pelican-quickstart"&gt;Pelican quickstart&lt;a class="headerlink" href="#pelican-quickstart" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Pelican provides an excellent quickstart command. Run&amp;nbsp;it:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;pelican-quickstart&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;The quickstart will ask you various questions, which you can answer in turn. Before answering them, take a look at my answers&amp;nbsp;below:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;gt; Where &lt;span class="k"&gt;do&lt;/span&gt; you want to create your new web site? &lt;span class="o"&gt;[&lt;/span&gt;.&lt;span class="o"&gt;]&lt;/span&gt; ./
+&amp;gt; What will be the title of this web site? Ashwin&lt;span class="err"&gt;'&lt;/span&gt;s Chronicles
+&amp;gt; Who will be the author of this web site? Ashwin Kumar K
+&amp;gt; What will be the default language of this web site? &lt;span class="o"&gt;[&lt;/span&gt;pt&lt;span class="o"&gt;]&lt;/span&gt; en
+&amp;gt; Do you want to specify a URL prefix? e.g., http://example.com   &lt;span class="o"&gt;(&lt;/span&gt;Y/n&lt;span class="o"&gt;)&lt;/span&gt; n
+&amp;gt; Do you want to &lt;span class="nb"&gt;enable&lt;/span&gt; article pagination? &lt;span class="o"&gt;(&lt;/span&gt;Y/n&lt;span class="o"&gt;)&lt;/span&gt; y
+&amp;gt; How many articles per page &lt;span class="k"&gt;do&lt;/span&gt; you want? &lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="m"&gt;10&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt; &lt;span class="m"&gt;10&lt;/span&gt;
+&amp;gt; What is your &lt;span class="nb"&gt;time&lt;/span&gt; zone? &lt;span class="o"&gt;[&lt;/span&gt;Europe/Paris&lt;span class="o"&gt;]&lt;/span&gt; Asia/Calcutta
+&amp;gt; Do you want to generate a Fabfile/Makefile to automate generation and publishing? &lt;span class="o"&gt;(&lt;/span&gt;Y/n&lt;span class="o"&gt;)&lt;/span&gt; Y **# PAY ATTENTION TO THIS!**
+&amp;gt; Do you want an auto-reload &lt;span class="p"&gt;&amp;amp;&lt;/span&gt; simpleHTTP script to assist with theme and site development? &lt;span class="o"&gt;(&lt;/span&gt;Y/n&lt;span class="o"&gt;)&lt;/span&gt; n
+&amp;gt; Do you want to upload your website using FTP? &lt;span class="o"&gt;(&lt;/span&gt;y/N&lt;span class="o"&gt;)&lt;/span&gt; n
+&amp;gt; Do you want to upload your website using SSH? &lt;span class="o"&gt;(&lt;/span&gt;y/N&lt;span class="o"&gt;)&lt;/span&gt; n
+&amp;gt; Do you want to upload your website using Dropbox? &lt;span class="o"&gt;(&lt;/span&gt;y/N&lt;span class="o"&gt;)&lt;/span&gt; n
+&amp;gt; Do you want to upload your website using S3? &lt;span class="o"&gt;(&lt;/span&gt;y/N&lt;span class="o"&gt;)&lt;/span&gt; n
+&amp;gt; Do you want to upload your website using Rackspace Cloud Files? &lt;span class="o"&gt;(&lt;/span&gt;y/N&lt;span class="o"&gt;)&lt;/span&gt; n
+&amp;gt; Do you want to upload your website using GitHub Pages? &lt;span class="o"&gt;(&lt;/span&gt;y/N&lt;span class="o"&gt;)&lt;/span&gt; y
+&amp;gt; Is this your personal page &lt;span class="o"&gt;(&lt;/span&gt;username.github.io&lt;span class="o"&gt;)&lt;/span&gt;? &lt;span class="o"&gt;(&lt;/span&gt;y/N&lt;span class="o"&gt;)&lt;/span&gt; y
+Done. Your new project is available at YOUR_USERNAME.github.io
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Now, go ahead and create your first blog post! You might want to open the project folder on your favorite code editor and find the &amp;ldquo;content&amp;rdquo; folder inside it. Then, create a new file, which can be called my-first-post.md (Just for testing). The contents should begin with the metadata which identifies the Title, Date, Category and more from the post before you start with the content, like&amp;nbsp;this:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;Title&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;My&lt;/span&gt; &lt;span class="n"&gt;first&lt;/span&gt; &lt;span class="n"&gt;post&lt;/span&gt;
+&lt;span class="n"&gt;Date&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;2018&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;
+&lt;span class="n"&gt;Modified&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;2018&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;
+&lt;span class="n"&gt;Category&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;misc&lt;/span&gt;
+&lt;span class="n"&gt;Tags&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;first&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="n"&gt;misc&lt;/span&gt;
+&lt;span class="n"&gt;Slug&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;My&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;first&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;post&lt;/span&gt;
+&lt;span class="n"&gt;Authors&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;Your&lt;/span&gt; &lt;span class="n"&gt;name&lt;/span&gt;
+&lt;span class="n"&gt;Summary&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;What&lt;/span&gt; &lt;span class="n"&gt;does&lt;/span&gt; &lt;span class="n"&gt;your&lt;/span&gt; &lt;span class="n"&gt;post&lt;/span&gt; &lt;span class="n"&gt;talk&lt;/span&gt; &lt;span class="n"&gt;about&lt;/span&gt;&lt;span class="o"&gt;?&lt;/span&gt; &lt;span class="n"&gt;Write&lt;/span&gt; &lt;span class="n"&gt;here&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;
+
+&lt;span class="n"&gt;This&lt;/span&gt; &lt;span class="k"&gt;is&lt;/span&gt; &lt;span class="n"&gt;the&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;first&lt;/span&gt; &lt;span class="n"&gt;post&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="n"&gt;from&lt;/span&gt; &lt;span class="n"&gt;my&lt;/span&gt; &lt;span class="n"&gt;Pelican&lt;/span&gt; &lt;span class="n"&gt;blog&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt; &lt;span class="o"&gt;**&lt;/span&gt;&lt;span class="n"&gt;YAY&lt;/span&gt;&lt;span class="o"&gt;!**&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Let&amp;rsquo;s see how it&amp;nbsp;looks?&lt;/p&gt;
+&lt;p&gt;Go to the terminal, generate the static files and start the server. To do that, use the following&amp;nbsp;command:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;(venv)$ make html &amp;amp;&amp;amp; make serve&lt;/code&gt;
+While this command is running, you should be able to visit it on your favorite web browser by typing &lt;code&gt;localhost:8000&lt;/code&gt; on the address&amp;nbsp;bar.&lt;/p&gt;
+&lt;h2 id="a-little-touch-up"&gt;A little touch up&lt;a class="headerlink" href="#a-little-touch-up" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Now,  if you want to put an image in a post, a neat way is to first  create a &amp;lsquo;images&amp;rsquo; directory inside your content directory, where your posts are. Now, you have to tell Pelican to use it. Find the &lt;code&gt;pelicanconf.py&lt;/code&gt;, the file where you configure the system, and add a variable that contains the directory with your&amp;nbsp;images:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;STATIC_PATHS&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;'images'&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Save it. Go to your post and add the image this&amp;nbsp;way:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;![Write here a good description for people who can't see the image]({filename}/images/IMAGE_NAME.jpg)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;You can interrupt the server at anytime pressing &lt;span class="caps"&gt;CTRL&lt;/span&gt;+C on the terminal. But you should start it again and check if the image is correct. Can you remember&amp;nbsp;how?&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;(venv)$ make html &amp;amp;&amp;amp; make serve&lt;/code&gt;
+One last step before your coding is &amp;ldquo;done&amp;rdquo;: you should make sure anyone can read your posts using &lt;span class="caps"&gt;ATOM&lt;/span&gt; or &lt;span class="caps"&gt;RSS&lt;/span&gt; feeds. Find the pelicanconf.py, the file where you configure the system, and edit the part about feed&amp;nbsp;generation:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;FEED_ALL_ATOM&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;'feeds/all.atom.xml'&lt;/span&gt;
+&lt;span class="n"&gt;FEED_ALL_RSS&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;'feeds/all.rss.xml'&lt;/span&gt;
+&lt;span class="n"&gt;AUTHOR_FEED_RSS&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;'feeds/&lt;/span&gt;&lt;span class="si"&gt;%s&lt;/span&gt;&lt;span class="s1"&gt;.rss.xml'&lt;/span&gt;
+&lt;span class="n"&gt;RSS_FEED_SUMMARY_ONLY&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kc"&gt;False&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Save everything so you can send the code to Github. You can do that by adding all files, committing it with a message (&amp;lsquo;first commit&amp;rsquo;) and using git push. You will be asked for your Github login and&amp;nbsp;password.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;$ git add -A &amp;amp;&amp;amp; git commit -a -m 'first commit' &amp;amp;&amp;amp; git push --all&lt;/code&gt;
+As I had said before you would be preserving the master branch for the output of the static files generated by Pelican. Now it&amp;rsquo;s time  to generate the&amp;nbsp;mater:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;$ make github&lt;/code&gt;
+You will be asked for your Github login and password again. And&amp;hellip; voil&amp;agrave;! Your new blog should be live on&amp;nbsp;https://YOUR_USERNAME.github.io.&lt;/p&gt;
+&lt;h1 id="whats-next_1"&gt;What&amp;rsquo;s next?&lt;a class="headerlink" href="#whats-next" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h1&gt;
+&lt;p&gt;You generated your first Pelican static website using Markdown and Jinja2. Additional modifications can be made to the Jinja2 templates and the content contained in the Markdown&amp;nbsp;files.&lt;/p&gt;
+&lt;h3 id="adding-gitignore"&gt;Adding .gitignore&lt;a class="headerlink" href="#adding-gitignore" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;.gitignore file contains a list of files and folder that git will ignore while syncing with the remote repository. Utilizing .gitignore wisely can reduce the amount of data you need to&amp;nbsp;upload.&lt;/p&gt;
+&lt;p&gt;make a file .gitignore in the web-sources file with the following&amp;nbsp;contents&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;#Custom&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="k"&gt;output&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="n"&gt;pelicanconf_local&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;py&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+
+&lt;span class="n"&gt;#Python&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;py&lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="n"&gt;cod&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+
+&lt;span class="err"&gt;#&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;C&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;extensions&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;so&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+
+&lt;span class="err"&gt;#&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Packages&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;egg&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;egg&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;info&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="n"&gt;dist&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="n"&gt;build&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="n"&gt;eggs&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="n"&gt;parts&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="n"&gt;bin&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="nf"&gt;var&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="n"&gt;sdist&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="n"&gt;develop&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;eggs&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;installed&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;cfg&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="n"&gt;lib&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="n"&gt;lib64&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+
+&lt;span class="err"&gt;#&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Installer&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;logs&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="n"&gt;pip&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="nf"&gt;log&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;txt&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+
+&lt;span class="err"&gt;#&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Unit&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;test&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;coverage&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;reports&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;coverage&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;tox&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="n"&gt;nosetests&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nc"&gt;xml&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+
+&lt;span class="err"&gt;#&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Translations&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;mo&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+
+&lt;span class="err"&gt;#&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Mr&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Developer&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;mr&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;developer&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;cfg&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;project&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;pydevproject&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3 id="automate-github-upload-process"&gt;Automate GitHub upload process&lt;a class="headerlink" href="#automate-github-upload-process" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Create a file &lt;code&gt;up.sh&lt;/code&gt; in the  &lt;code&gt;web-sources&lt;/code&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;git add -A &lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt; git commit -a -m &lt;span class="s1"&gt;'$1'&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt; git push --all
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Now whenever you want to upload sync the repo just do &lt;code&gt;bash up.sh "Comment"&lt;/code&gt; Note that the argument &amp;ldquo;Comment&amp;rdquo; should not contain&amp;nbsp;spaces.&lt;/p&gt;
+&lt;h3 id="download-themes"&gt;Download Themes&lt;a class="headerlink" href="#download-themes" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Clone pelican-themes&amp;nbsp;repository&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;git clone --recursive https://github.com/getpelican/pelican-themes themes&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;In &lt;code&gt;pelicanconf.py&lt;/code&gt; add the following&amp;nbsp;variables:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;THEME&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;'themes/bootstrap2'&lt;/span&gt;
+&lt;span class="n"&gt;OUTPUT_PATH&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;'output'&lt;/span&gt;
+&lt;span class="n"&gt;PATH&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;'content&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3 id="custom-home-page"&gt;Custom Home page&lt;a class="headerlink" href="#custom-home-page" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Add this variables to&amp;nbsp;pelicanconf.py&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="c1"&gt;# Custom Home page&lt;/span&gt;
+&lt;span class="n"&gt;DIRECT_TEMPLATES&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;((&lt;/span&gt;&lt;span class="s1"&gt;'index'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;'blog'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;'tags'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;'categories'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;'archives'&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+&lt;span class="n"&gt;PAGINATED_DIRECT_TEMPLATES&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;((&lt;/span&gt;&lt;span class="s1"&gt;'blog'&lt;/span&gt;&lt;span class="p"&gt;,))&lt;/span&gt;
+&lt;span class="n"&gt;TEMPLATE_PAGES&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="s1"&gt;'home.html'&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;'index.html'&lt;/span&gt;&lt;span class="p"&gt;,}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Duplicated the index.html to blog.html in your template folder and add this&amp;nbsp;lines:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;{% set active_page = "blog" %}
+{% block title %}{{ SITENAME }} - Blog{% endblock %}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Create home.html or use page override feature to use a Markdown page as your home&amp;nbsp;page.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;nano home.html&lt;/code&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;{% extends "base.html" %}
+{% block content %}
+&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;div&lt;/span&gt; &lt;span class="na"&gt;class&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;'page'&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;div&lt;/span&gt; &lt;span class="na"&gt;class&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;"page-header"&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;h1&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;Home&lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;h1&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;div&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;div&lt;/span&gt; &lt;span class="na"&gt;class&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;"page-content"&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;Content&lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;div&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;div&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+{% endblock %}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3 id="process-for-new-articles"&gt;Process for new articles.&lt;a class="headerlink" href="#process-for-new-articles" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Ones the setup is done, the contents of the folder &lt;code&gt;web-sources&lt;/code&gt; need not be generated again using the above procedure. All one has to do is place the article in the content folder then (after testing the website locally using &lt;code&gt;make devserver&lt;/code&gt;) then execute  &lt;code&gt;bash up.sh "Comment"&lt;/code&gt;  to sync the source branch and then do &lt;code&gt;make github&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;If you are on a different machine or you have lost access to the &lt;code&gt;web-sources&lt;/code&gt; folder, you just have to make the virtual environment and then do git clone again.&amp;nbsp;i.e&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;virtualenv website
+&lt;span class="nb"&gt;cd&lt;/span&gt; website
+&lt;span class="nb"&gt;source&lt;/span&gt; bin/activate
+pip install pelican markdown typogrify ghp-import shovel
+git clone https://github.com/YOUR_USERNAME/YOUR_USERNAME.github.io.git web-sources
+&lt;span class="nb"&gt;cd&lt;/span&gt; web-sources
+git checkout -b &lt;span class="nb"&gt;source&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;This article just touches uppon getting a basic website up and running. More features that Pelican offers (like custom plugins)can be explored &lt;a href="http://docs.getpelican.com/en/3.6.3/content.html"&gt;here&lt;/a&gt;.&lt;/p&gt;</content><category term="Blog"></category><category term="Github"></category><category term="Pelican"></category><category term="gh-pages"></category></entry><entry><title>A beginers IoT Project.</title><link href="https://ashwinschronicles.github.io/Intro-to-IoT" rel="alternate"></link><published>2018-07-12T00:00:00+05:30</published><updated>2018-07-12T00:00:00+05:30</updated><author><name>Ashwin</name></author><id>tag:ashwinschronicles.github.io,2018-07-12:/Intro-to-IoT</id><summary type="html">&lt;p&gt;In this post, we’ll be making a simple IoT project. Web page controlled &lt;span class="caps"&gt;LED&lt;/span&gt; strip using NodeMCU connected on a local&amp;nbsp;network.&lt;/p&gt;</summary><content type="html">&lt;p&gt;In this post, we&amp;rsquo;ll be making a simple IoT project. Web page controlled &lt;span class="caps"&gt;LED&lt;/span&gt; strip using NodeMCU connected on a local&amp;nbsp;network.&lt;/p&gt;
+&lt;h2 id="outline"&gt;Outline:&lt;a class="headerlink" href="#outline" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Web page controlled &lt;span class="caps"&gt;LED&lt;/span&gt; strip is like the &amp;ldquo;Hello world&amp;rdquo; of IoT. In this post I will be detailing on the procedure I followed to set it up. The schematic of the project will be as&amp;nbsp;follows:&lt;/p&gt;
 &lt;p&gt;&lt;img alt="Schematic" src=".././images/IoT_1_schematic.png"/&gt;&lt;/p&gt;
 &lt;p&gt;So when we click a button on a web browser we can turn the led strip on or off using a relay which we control using the &lt;span class="caps"&gt;ESP8266&lt;/span&gt;&amp;nbsp;board.&lt;/p&gt;
-&lt;h2 id="materials"&gt;Materials:&lt;a class="headerlink" href="#materials" title="Permanent link"&gt; &lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id="materials"&gt;Materials:&lt;a class="headerlink" href="#materials" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;NodeMCU&lt;/li&gt;
 &lt;/ul&gt;
@@ -997,7 +997,7 @@ intersects the boundary, and bounces off&amp;nbsp;it.&lt;/p&gt;
 &lt;li&gt;&lt;span class="caps"&gt;LED&lt;/span&gt; strip power supply (any generic 12V power&amp;nbsp;supply)&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;&lt;img alt="powersupply" src=".././images/IoT_4_powersupply.jpeg" style="zoom:33%;"/&gt;&lt;/p&gt;
-&lt;h2 id="installing-nodemcu-board-package-in-arduino-ide"&gt;Installing NodeMCU Board Package in Arduino &lt;span class="caps"&gt;IDE&lt;/span&gt;:&lt;a class="headerlink" href="#installing-nodemcu-board-package-in-arduino-ide" title="Permanent link"&gt; &lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id="installing-nodemcu-board-package-in-arduino-ide"&gt;Installing NodeMCU Board Package in Arduino &lt;span class="caps"&gt;IDE&lt;/span&gt;:&lt;a class="headerlink" href="#installing-nodemcu-board-package-in-arduino-ide" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;Open up Arduino &lt;span class="caps"&gt;IDE&lt;/span&gt;. Go to Files-&amp;gt; Preferences. Enter &lt;code&gt;http://arduino.esp8266.com/stable/package_esp8266com_index.json&lt;/code&gt; into Additional Board Manager URLs&amp;nbsp;field.&lt;/li&gt;
 &lt;/ul&gt;
@@ -1012,11 +1012,11 @@ intersects the boundary, and bounces off&amp;nbsp;it.&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;[Note: some board come with CH340G chip in which case you dont need to follow this step.]&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;Download drivers from &lt;a href="https://www.silabs.com/products/mcu/Pages/USBtoUARTBridgeVCPDrivers.aspx"&gt;here &lt;/a&gt;and install it. Connect the nodeMCU to your computer and install the downloaded drives when your system prompts to install the drivers for the newly connected &lt;span class="caps"&gt;USB&lt;/span&gt; device.Go to the device manager of your computer and note down the &lt;span class="caps"&gt;COM&lt;/span&gt; port allocated to the newly connected &lt;span class="caps"&gt;USB&lt;/span&gt;&amp;nbsp;device.&lt;/p&gt;
 &lt;p&gt;&lt;img alt="IoT_7_deveicemanager" src="../images/IoT_7_deveicemanager.png"/&gt;&lt;/p&gt;
-&lt;h2 id="pin-connections"&gt;Pin Connections:&lt;a class="headerlink" href="#pin-connections" title="Permanent link"&gt; &lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id="pin-connections"&gt;Pin Connections:&lt;a class="headerlink" href="#pin-connections" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Connect &lt;strong&gt;NodeMCU&lt;/strong&gt; Ground (&lt;strong&gt;&lt;span class="caps"&gt;GND&lt;/span&gt;&lt;/strong&gt;) pin to &lt;strong&gt;-ve&lt;/strong&gt; pin of &lt;strong&gt;Relay&lt;/strong&gt;.&lt;/p&gt;
 &lt;p&gt;Connect &lt;strong&gt;NodeMCU&lt;/strong&gt; Supply (&lt;strong&gt;Vin)&lt;/strong&gt; pin to &lt;strong&gt;+ve&lt;/strong&gt; pin of &lt;strong&gt;Relay&lt;/strong&gt;.&lt;/p&gt;
 &lt;p&gt;Connect &lt;strong&gt;NodeMCU&lt;/strong&gt; Digital pin (&lt;strong&gt;D0&lt;/strong&gt;) to &lt;strong&gt;Input&lt;/strong&gt; pin of &lt;strong&gt;Relay&lt;/strong&gt;.&lt;/p&gt;
-&lt;h2 id="coding-part"&gt;Coding Part&lt;a class="headerlink" href="#coding-part" title="Permanent link"&gt; &lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id="coding-part"&gt;Coding Part&lt;a class="headerlink" href="#coding-part" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;The code for the nodeMCU that I have uploaded is &lt;a href="https://raw.githubusercontent.com/iamashwin26/Projs/master/Introduction to IoT/Source_code_hello_IoT.ino"&gt;here&lt;/a&gt; . Replace the&amp;nbsp;line&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;WiFi.softAP("Hello_IoT", "ashwins12345678");&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
@@ -1027,7 +1027,7 @@ intersects the boundary, and bounces off&amp;nbsp;it.&lt;/p&gt;
 &lt;p&gt;Now, go to Tools &amp;gt; Board &amp;gt; &lt;span class="caps"&gt;ESP8266&lt;/span&gt; Modules and you can see many options for &lt;span class="caps"&gt;ESP8266&lt;/span&gt;. Select &amp;ldquo;NodeMCU 1.0 (&lt;span class="caps"&gt;ESP&lt;/span&gt;-12E Module). Next, select your port ( the same one you saw in the device manager previously ). If you cant recognize your port, go to the Control Panel &amp;gt; System &amp;gt; Device Manager &amp;gt; Port and update your &lt;span class="caps"&gt;USB&lt;/span&gt;&amp;nbsp;driver.&lt;/p&gt;
 &lt;p&gt;Now upload the code to the&amp;nbsp;board.&lt;/p&gt;
 &lt;p&gt;&lt;img alt="IoT_8_upload" src="../images/IoT_8_upload.png"/&gt;&lt;/p&gt;
-&lt;h2 id="finale-testing"&gt;Finale testing:&lt;a class="headerlink" href="#finale-testing" title="Permanent link"&gt; &lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id="finale-testing"&gt;Finale testing:&lt;a class="headerlink" href="#finale-testing" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;Now open up your Serial Monitor, and note down the &lt;span class="caps"&gt;URL&lt;/span&gt;.&lt;/li&gt;
 &lt;/ul&gt;
@@ -1042,10 +1042,118 @@ intersects the boundary, and bounces off&amp;nbsp;it.&lt;/p&gt;
 &lt;/ul&gt;
 &lt;p&gt;&lt;img alt="IoT_11_test1" src="../images/IoT_11_test1.gif"/&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img alt="IoT_12_test2" src="../images/IoT_12_test2.gif"/&gt;&lt;/p&gt;
-&lt;h2 id="final-connections"&gt;Final Connections:&lt;a class="headerlink" href="#final-connections" title="Permanent link"&gt; &lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id="final-connections"&gt;Final Connections:&lt;a class="headerlink" href="#final-connections" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Now that we know our code and setup works let&amp;rsquo;s connect the relay to the led strip power source as shown in the figure in the outline&amp;nbsp;section.&lt;/p&gt;
 &lt;p&gt;&lt;img alt="IoT_13_test3" src="../images/IoT_13_test3.gif"/&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img alt="IoT_14_tes5" src="../images/IoT_14_tes5.gif"/&gt;&lt;/p&gt;
 &lt;p&gt;Vola! there&amp;rsquo;s our first&amp;nbsp;project!&lt;/p&gt;
-&lt;h2 id="whats-next"&gt;Whats next?&lt;a class="headerlink" href="#whats-next" title="Permanent link"&gt; &lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;We can add more feature to the project such as making it connect to a wifi router so that you can access the &lt;span class="caps"&gt;LED&lt;/span&gt; strip from anywhere in the world. We can convert this project to use the barebone &lt;span class="caps"&gt;ESP8266&lt;/span&gt; and &lt;span class="caps"&gt;FTDI&lt;/span&gt; programmer. We can use the power supply of the &lt;span class="caps"&gt;LED&lt;/span&gt; strip to power the &lt;span class="caps"&gt;ESP8266&lt;/span&gt; (Not recommended since most &lt;span class="caps"&gt;LED&lt;/span&gt; power supply have high &lt;span class="caps"&gt;AC&lt;/span&gt; noise as I found out in my case and hence can damage the &lt;span class="caps"&gt;ESP8266&lt;/span&gt; board).Add more devices for the &lt;span class="caps"&gt;ESP&lt;/span&gt; to control and much much more! All&amp;nbsp;that&lt;/p&gt;</content><category term="Engineering"></category><category term="IoT"></category></entry></feed>
+&lt;h2 id="whats-next"&gt;Whats next?&lt;a class="headerlink" href="#whats-next" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;We can add more feature to the project such as making it connect to a wifi router so that you can access the &lt;span class="caps"&gt;LED&lt;/span&gt; strip from anywhere in the world. We can convert this project to use the barebone &lt;span class="caps"&gt;ESP8266&lt;/span&gt; and &lt;span class="caps"&gt;FTDI&lt;/span&gt; programmer. We can use the power supply of the &lt;span class="caps"&gt;LED&lt;/span&gt; strip to power the &lt;span class="caps"&gt;ESP8266&lt;/span&gt; (Not recommended since most &lt;span class="caps"&gt;LED&lt;/span&gt; power supply have high &lt;span class="caps"&gt;AC&lt;/span&gt; noise as I found out in my case and hence can damage the &lt;span class="caps"&gt;ESP8266&lt;/span&gt; board).Add more devices for the &lt;span class="caps"&gt;ESP&lt;/span&gt; to control and much much more! All&amp;nbsp;that&lt;/p&gt;</content><category term="Engineering"></category><category term="IoT"></category></entry><entry><title>Interfacing Arduino Mega using LabVIEW</title><link href="https://ashwinschronicles.github.io/arduino-labview-review" rel="alternate"></link><published>2017-12-15T00:00:00+05:30</published><updated>2017-12-15T00:00:00+05:30</updated><author><name>Ashwin</name></author><id>tag:ashwinschronicles.github.io,2017-12-15:/arduino-labview-review</id><summary type="html">&lt;p&gt;This post is about Interfacing Arduino Mega with&amp;nbsp;LabVIEW&lt;/p&gt;</summary><content type="html">&lt;p&gt;This post is about Interfacing Arduino Mega using LabVIEW. It was originally posted &lt;a href="https://www.element14.com/community/roadTestReviews/2581/l/arduino-a000067-mega2560-rev3-development-board-review"&gt;here&lt;/a&gt; as a part of element14&amp;rsquo;s RoadTest. I thank element14 for sending me the review&amp;nbsp;unit.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Evaluation Type:&lt;/strong&gt; Independent&amp;nbsp;Products&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Was everything in the box required?:&lt;/strong&gt;&amp;nbsp;Yes&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Comparable Products/Other parts you considered:&lt;/strong&gt; Arduino due , Raspberry&amp;nbsp;Pi&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;What were the biggest problems encountered?:&lt;/strong&gt; When arduino ide is running, other programs such as Labview cant programme the mega.This is true in general of all arduino device.The only solution i found was to close arduino ide , log off and then log back&amp;nbsp;in.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Detailed&amp;nbsp;Review:&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Arduino Mega the big brother of Arduino Uno has 54 digital I/O pins, 16 analogue inputs. That&amp;rsquo;s a whopping difference of 40 digital and 10 analogue pins.the closest to it in the Arduino family is the Arduino&amp;nbsp;Due.&lt;/p&gt;
+&lt;p&gt;Arduino mega is generally used for projects that require a high number of I/O and memory thus they are commonly found in 3D printers and robotics&amp;nbsp;projects.&lt;/p&gt;
+&lt;p&gt;LabView is a system-design platform that allows you to visually write a program.It is generally used by engineers and scientists to create programs to automate the process of data acquisition from lab instruments. In this review, i try to Arduino mega to interface between the LabVIEW software and an&amp;nbsp;instrument.&lt;/p&gt;
+&lt;p&gt;## Part 1: Installing LabVIEW and &lt;span class="caps"&gt;NI&lt;/span&gt;-&lt;span class="caps"&gt;VISA&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;Go to &lt;a href="https://www.element14.com/community/external-link.jspa?url=http%3A%2F%2Fwww.ni.com%2Ftrylabview"&gt;www.ni.com/trylabview&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Click on Download&amp;nbsp;LabVIEW.&lt;/p&gt;
+&lt;p&gt;Right-Click and then run LabVIEW Setup as&amp;nbsp;administrator.&lt;/p&gt;
+&lt;p&gt;Follow the instructions and wait for the installation to&amp;nbsp;finish&lt;/p&gt;
+&lt;p&gt;Note: You might get an error while installing Click on decline support as you do not have any device drivers. We have to download driver&amp;nbsp;later.&lt;/p&gt;
+&lt;p&gt;LabVIEW 2017 is successfully&amp;nbsp;installed.&lt;/p&gt;
+&lt;p&gt;Restart system later if prompted for a&amp;nbsp;restart.&lt;/p&gt;
+&lt;p&gt;To download &lt;span class="caps"&gt;NI&lt;/span&gt;-&lt;span class="caps"&gt;VISA&lt;/span&gt; driver for serial communication go to &lt;a href="https://www.element14.com/community/external-link.jspa?url=https%3A%2F%2Fwww.ni.com%2Fvisa%2F"&gt;https://www.ni.com/visa/&lt;/a&gt; and download the appropriate version of the software, Install it in the same way as&amp;nbsp;before.&lt;/p&gt;
+&lt;p&gt;Labview has so many addons both by a 3rd party and &lt;span class="caps"&gt;NI&lt;/span&gt; itself that by default the software comes with a few basic tool set. This set can be expanded by installing add-ons, we shall now look into the process of installing the Arduino interfacing&amp;nbsp;addon.&lt;/p&gt;
+&lt;p&gt;Open the &lt;span class="caps"&gt;VI&lt;/span&gt; Package Manager and wait for it to download all the repository (this could take several minutes depending on your&amp;nbsp;bandwidth)&lt;/p&gt;
+&lt;p&gt;Search for &amp;ldquo;Arduino&amp;rdquo; in the search&amp;nbsp;bar.&lt;/p&gt;
+&lt;p&gt;Install Digilent &lt;span class="caps"&gt;LINX&lt;/span&gt; and &amp;ldquo;LabVIEW Interface for&amp;nbsp;Arduino&amp;rdquo;.&lt;/p&gt;
+&lt;p&gt;Once the installation is done without any errors you should Notice an &amp;ldquo;installed&amp;rdquo; symbol to the left of Digilent &lt;span class="caps"&gt;LINX&lt;/span&gt; toolbox, click&amp;nbsp;finish.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://www.element14.com/community/servlet/JiveServlet/showImage/293607990-2581-494997/Screenshot+(2).png"&gt;&lt;img alt="img" src="https://www.element14.com/community/servlet/JiveServlet/downloadImage/293607990-2581-494997/Screenshot+%282%29.png"/&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;In order to verify if all softwares are installed correctly, Open LabVIEW.Click on File &amp;gt; New &lt;span class="caps"&gt;VI&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;On one the panels, click on Window &amp;gt; Tile Left and Right. Right-click on the block diagram, scroll down to see that Arduino (LabView interface for Arduino: &lt;span class="caps"&gt;LIFA&lt;/span&gt;) and &lt;span class="caps"&gt;LINX&lt;/span&gt; is&amp;nbsp;installed.&lt;/p&gt;
+&lt;p&gt;### &lt;strong&gt;Uploading LabView Interface for Arduino&amp;nbsp;Firmware&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;In order to interface Arduino with the LabView, we need to upload a sketch that acts as a&amp;nbsp;firmware.&lt;/p&gt;
+&lt;p&gt;For that make sure that you have Arduino ide already&amp;nbsp;installed&lt;/p&gt;
+&lt;p&gt;Open the arduino ide and upload the sketch that has the&amp;nbsp;path:&lt;/p&gt;
+&lt;p&gt;C:\Program Files (x86)\ National&amp;nbsp;Instruments\&lt;/p&gt;
+&lt;p&gt;LabVIEW 2017\ vi.lib\ LabVIEW Interface for Arduino\ Firmware\ LIFA_Base\&amp;nbsp;LIFA_Base.ino&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://www.element14.com/community/servlet/JiveServlet/showImage/293607990-2581-494998/Screenshot+(4).png"&gt;&lt;img alt="img" src="https://www.element14.com/community/servlet/JiveServlet/downloadImage/293607990-2581-494998/Screenshot+%284%29.png"/&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;(adjust the path based on the installation location of the&amp;nbsp;LabView)&lt;/p&gt;
+&lt;p&gt;Check for Board type and &lt;span class="caps"&gt;COM&lt;/span&gt; Port under Tools&amp;nbsp;menu&lt;/p&gt;
+&lt;p&gt;&lt;span class="caps"&gt;NOTE&lt;/span&gt;: Do not upload any code to Arduino&amp;nbsp;Board&lt;/p&gt;
+&lt;p&gt;hereafter. Arduino Board with LIFA_Base firmware is now ready to be used with LabVIEW&amp;nbsp;2017.&lt;/p&gt;
+&lt;p&gt;## &lt;strong&gt;&lt;span class="caps"&gt;PART&lt;/span&gt; 2: Interfacing and Controlling an &lt;span class="caps"&gt;LED&lt;/span&gt; using LabVIEW, Arduino and &lt;span class="caps"&gt;LIFA&lt;/span&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;The hello world equivalent in Arduino is an &lt;span class="caps"&gt;LED&lt;/span&gt; blink sketch, let us look at the implementation of led blink in LabView. Every program in LabVIEW is called a &lt;span class="caps"&gt;VI&lt;/span&gt; it ends with an extension dot &lt;span class="caps"&gt;VI&lt;/span&gt;&amp;nbsp;click.&lt;/p&gt;
+&lt;p&gt;On creating a new project in Labview you will see two windows opening the first one has a front panel and the second one is the block&amp;nbsp;diagram&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://www.element14.com/community/servlet/JiveServlet/showImage/293607990-2581-495107/Screenshot+(3).png"&gt;&lt;img alt="img" src="https://www.element14.com/community/servlet/JiveServlet/downloadImage/293607990-2581-495107/Screenshot+%283%29.png"/&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;the front panel will usually house all kinds of numeric controls knobs dials meters&amp;nbsp;gauge&lt;/p&gt;
+&lt;p&gt;boolean buttons &lt;span class="caps"&gt;LED&lt;/span&gt; graphs charts indicators and the block diagram will have all programming tools structures numeric functions like addition subtraction boolean functions&amp;nbsp;etc.&lt;/p&gt;
+&lt;p&gt;now what we have to start with is right click on the block diagram scroll down to&amp;nbsp;Arduino.&lt;/p&gt;
+&lt;p&gt;For this particular program, we need four major functions to control led. Initialization, Set digital pin mode (analogous to pinMode), digital write and&amp;nbsp;Close.&lt;/p&gt;
+&lt;p&gt;to know what each of these functions does or what each of these blocks does click on it and press on the question mark on the right corner which is called as context help context help will explain what each of these blocks does and what has to be connected to each of these&amp;nbsp;terminals.&lt;/p&gt;
+&lt;p&gt;For example, in initialization, the first option is visa resource that is where you specify&amp;nbsp;which&lt;/p&gt;
+&lt;p&gt;communication port your Arduino is connected to say &lt;span class="caps"&gt;COM4&lt;/span&gt; port for&amp;nbsp;example&lt;/p&gt;
+&lt;p&gt;second, you specify the baud rate (whatever is in the bracket is by default&amp;nbsp;so&lt;/p&gt;
+&lt;p&gt;you don&amp;rsquo;t have to specify it again) Board type would be&amp;nbsp;Mega.&lt;/p&gt;
+&lt;p&gt;Now let us think about the flow of the program, first the led will be initialised as output then its is set high and then the loop continues till an event triggers the end. We represent the flow of the program in LabView in the same way. The following would be the possible connection in the&amp;nbsp;flow.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://www.element14.com/community/servlet/JiveServlet/showImage/293607990-2581-495108/Screenshot+(6).png"&gt;&lt;img alt="img" src="https://www.element14.com/community/servlet/JiveServlet/downloadImage/293607990-2581-495108/Screenshot+%286%29.png"/&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Error out pin of initialisation module is wired in series to an error in pin of digital pin mode and digital write and finally the close module. The same arrangement is made with Arduino resource pin of each&amp;nbsp;module.&lt;/p&gt;
+&lt;p&gt;the pin number is set by creating a constant at the io pin of the pinmode module and setting its value to 13 and output.The value of 0 1 at the value point in digital write module is equivalent to the High and Low&amp;nbsp;mode.&lt;/p&gt;
+&lt;p&gt;Now to set the loop right click go to programming &amp;gt; structure find the while loop module and draw a square around the digitalwrite module (the one we want to repeat). set the constitutional terminal to a boolean control such as a button in the front end&amp;nbsp;editor.&lt;/p&gt;
+&lt;p&gt;Now the program is complete. Click on run&amp;nbsp;program.&lt;/p&gt;
+&lt;p&gt;This exercise demonstrates how Arduino can be used to interface a device(an led in this case) using&amp;nbsp;Labview.&lt;/p&gt;
+&lt;h3 id="scoring"&gt;Scoring&lt;a class="headerlink" href="#scoring" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h3&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;&lt;strong&gt;Product Performed to Expectations:&lt;/strong&gt;&lt;/th&gt;
+&lt;th&gt;10&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Specifications were sufficient to design with:&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;10&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Demo Software was of good quality:&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;10&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Product was easy to use:&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;10&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Support materials were available:&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;10&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;The price to performance ratio was good:&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;9&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;TotalScore:&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;59 / 60&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;</content><category term="Engineering"></category><category term="Arduino"></category><category term="LabVIEW"></category><category term="Review"></category></entry></feed>
