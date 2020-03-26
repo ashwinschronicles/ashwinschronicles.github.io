@@ -23,7 +23,7 @@ CATEGORY_FEED_ATOM = None
 CATEGORY_FEED_RSS = None
 
 
-STATIC_PATHS = ["theme/images", "images", "extra/_redirects", "code", "pdfs"]
+STATIC_PATHS = ["theme/images", "images", "extra/_redirects", "code", "pdfs","extra"]
 
 EXTRA_PATH_METADATA = {
     'extra/custom.css': {'path': 'custom.css'},
@@ -39,7 +39,7 @@ MARKDOWN = {
         "markdown.extensions.codehilite": {"css_class": "highlight"},
         "markdown.extensions.extra": {},
         "markdown.extensions.meta": {},
-        "markdown.extensions.toc": {"permalink": " "},
+        "markdown.extensions.toc": {"permalink": "True"},
     }
 }
 
@@ -49,7 +49,9 @@ MARKDOWN = {
 
 # Social widget
 SOCIAL = (('Git', 'https://github.com/iamashwin99/'),
-          ('Git(old)', 'https://github.com/iamashwin26/'),
+          ('Email', 'ashwinkumar.k.rao@gmail.com', 'My Email Address'),
+          ('Git', 'https://github.com/iamashwin26/', "Old"),
+          ("RSS", SITEURL + "/feeds/all.atom.xml"),
           ('Facebook', 'https://www.facebook.com/iamashwin99'),
           ('LinkedIn','https://www.linkedin.com/in/ashwin-k-4854b8121/'))
 
@@ -86,10 +88,13 @@ PLUGINS = ["tipue_search",
            "liquid_tags.img",
            "neighbors",
            "related_posts", 
-           "share_post", 
+           "share_post",
            "series", 
            "post_stats", 
-           "pelican-js" ]           
+           "pelican-js",
+           "filetime_from_git",
+           "extract_toc",
+           "assets"]
 DIRECT_TEMPLATES = ["index", "tags", "categories", "archives", "search", "404"]
 
 
@@ -115,8 +120,8 @@ EMAIL_SUBSCRIPTION_LABEL = "Get New Release Alert"
 EMAIL_FIELD_PLACEHOLDER = "Enter your email..."
 SUBSCRIBE_BUTTON_TITLE = "Notify me"
 
-FREELISTS_NAME = "oracle-l"
-FREELISTS_FILTER = True
+FREELISTS_NAME = "ashwinschronicles@freelists.org" # 203984577130
+FREELISTS_FILTER = False
 
 # SMO
 TWITTER_USERNAME = "iamashwin99"
@@ -124,7 +129,7 @@ FEATURED_IMAGE = SITEURL + "/theme/images/final.png"
 
 # Share links at bottom of articles
 # Supported: twitter, facebook, hacker-news, reddit, linkedin, email
-SHARE_LINKS = [("twitter", "Twitter"), ("facebook", "Facebook"), ("email", "Email")]
+SHARE_LINKS = [("twitter", "Twitter"), ("facebook", "Facebook"),("reddit","Reddit"),("linkedin","LinkedIn"), ("email", "Email")]
 
 # Legal
 SITE_LICENSE = """All articles written by me in this website are licensed under <a rel="license" 
@@ -161,6 +166,7 @@ SITE_DESCRIPTION = u'Im Ashwin Kumar K,currently dual majoring in Physics and El
 
 
 #MISC
-DISQUS_FILTER = True
+DISQUS_FILTER = False
 UTTERANCES_FILTER = True
 COMMENTBOX_FILTER = True
+APPLAUSE_BUTTON = True
