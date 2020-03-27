@@ -24,6 +24,10 @@ if os.environ.get("CONTEXT") == "production":
     DISQUS_SITENAME = os.environ.get("DISQUS_SITENAME")
     HEAP_ANALYTICS = os.environ.get("HEAP_ANALYTICS_PROD")
 #    COMMENTBOX_PROJECT = os.environ.get("COMMENTBOX_PROJECT")
+# filetime_from_git is very slow. Use it in production only
+# to avoid slow build times during development
+    PLUGINS.append("filetime_from_git")
+    PLUGINS.append("sitemap")
 
 elif os.environ.get("CONTEXT") == "branch-deploy" and os.environ.get("HEAD") == "next":
     SITENAME = "Site (Next)"
@@ -41,13 +45,10 @@ else:
     SITEURL = ""
 
 MAILCHIMP_FORM_ACTION = os.environ.get("MAILCHIMP_FORM_ACTION")
-UTTERANCES_REPO = "Pelican-Elegant/elegant"
-UTTERANCES_LABEL = "💬documentation-comments"
+UTTERANCES_REPO = "ashwinschronicles/ashwinschronicles.github.io"
+UTTERANCES_LABEL = "💬Website-comments"
 
 RELATIVE_URLS = False
-# filetime_from_git is very slow. Use it in production only
-# to avoid slow build times during development
-PLUGINS.append("filetime_from_git")
-PLUGINS.append("sitemap")
+
 
 DELETE_OUTPUT_DIRECTORY = True

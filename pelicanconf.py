@@ -92,7 +92,7 @@ PLUGINS = ["tipue_search",
            "series", 
            "post_stats", 
            "pelican-js",
-           "filetime_from_git",
+#           "filetime_from_git",
            "extract_toc",
            "assets"]
 DIRECT_TEMPLATES = ["index", "tags", "categories", "archives", "search", "404"]
