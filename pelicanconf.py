@@ -107,8 +107,8 @@ SITEMAP = {
 
 
 #### render_math settings
-MATH_JAX = {'color':'red','align':'centre','mathjax_font':'sanserif','linebreak_automatic':'True','tex_extensions': ['color.js','mhchem.js']}
-
+#MATH_JAX = {'color':'red','align':'centre','mathjax_font':'sanserif','linebreak_automatic':'True','tex_extensions': ['color.js','mhchem.js']}
+#MATH_JAX = {'color':'blue','align':'left',,'linebreak_automatic':'True','tex_extensions': ['color.js','mhchem.js']}
 # Elegant Labels
 SOCIAL_PROFILE_LABEL = "Stay in Touch"
 RELATED_POSTS_LABEL = "Keep Reading"

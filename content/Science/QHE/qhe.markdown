@@ -111,6 +111,7 @@ data and graphs are as following:
 current was determined and plotted. Two readings corresponding to single
 current value specifies the values during increment and decrement of
 current viz. to minimize the error.
+
 <img src="../../images/hall_data_table.png" alt="image" style="zoom:67%;" />
 
 <img src="../../images/hall_data_graph.png" alt="Magnetic field vs Current " style="zoom:50%;" />
