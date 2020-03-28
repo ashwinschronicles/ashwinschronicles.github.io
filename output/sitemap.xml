@@ -5,49 +5,49 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>/</loc>
-<lastmod>2020-03-27T12:18:05-00:00</lastmod>
+<lastmod>2020-03-28T15:53:25-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tags</loc>
-<lastmod>2020-03-27T12:18:05-00:00</lastmod>
+<lastmod>2020-03-28T15:53:25-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/categories</loc>
-<lastmod>2020-03-27T12:18:05-00:00</lastmod>
+<lastmod>2020-03-28T15:53:25-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/archives</loc>
-<lastmod>2020-03-27T12:18:05-00:00</lastmod>
+<lastmod>2020-03-28T15:53:25-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/search</loc>
-<lastmod>2020-03-27T12:18:05-00:00</lastmod>
+<lastmod>2020-03-28T15:53:25-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/404.html</loc>
-<lastmod>2020-03-27T12:18:05-00:00</lastmod>
+<lastmod>2020-03-28T15:53:25-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/AboutMe</loc>
-<lastmod>2020-03-22T18:45:14+05:30</lastmod>
+<lastmod>2018-06-18T00:00:00+05:30</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
@@ -61,21 +61,21 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>/Superconductivity</loc>
-<lastmod>2020-03-23T10:36:34+05:30</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
-<loc>/qhe</loc>
-<lastmod>2020-03-25T11:08:12+05:30</lastmod>
+<lastmod>2019-06-20T00:00:00+05:30</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/gh-pages-with-pelican</loc>
-<lastmod>2020-03-21T22:29:31+05:30</lastmod>
+<lastmod>2019-01-01T00:00:00+05:30</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>/qhe</loc>
+<lastmod>2019-01-01T00:00:00+05:30</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>

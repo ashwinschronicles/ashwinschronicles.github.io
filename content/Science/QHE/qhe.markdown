@@ -1,4 +1,4 @@
-Title:Quantum Hall Effect and related phenomenon
+Title:Quantum Hall Effect and related phenomena
 Date: 2019-1-1
 Tags: qhe,hall effect,landau levels
 Category:Science
