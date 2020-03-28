@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Ashwin's Chronicles</title><link href="https://ashwinschronicles.github.io/" rel="alternate"></link><link href="https://ashwinschronicles.github.io/feeds/all-en.atom.xml" rel="self"></link><id>https://ashwinschronicles.github.io/</id><updated>2020-03-28T15:59:06+05:30</updated><entry><title>Analog Discovery 2 + LabVIEW Home Bundle - Review</title><link href="https://ashwinschronicles.github.io/analog-discovery-2-labview-home-bundle-review" rel="alternate"></link><published>2019-07-13T00:00:00+05:30</published><updated>2019-07-13T00:00:00+05:30</updated><author><name>Ashwin</name></author><id>tag:ashwinschronicles.github.io,2019-07-13:/analog-discovery-2-labview-home-bundle-review</id><summary type="html">&lt;p&gt;This post is a review of the Analog Discovery 2 + LabVIEW Home Bundle in a lab&amp;nbsp;environment&lt;/p&gt;</summary><content type="html">&lt;p&gt;This post is a review of the Analog Discovery 2 + LabVIEW Home Bundle in a lab environment. It was originally posted &lt;a href="https://www.element14.com/community/roadTestReviews/3075/l/analog-discovery-2-labview-home-bundle-review"&gt;here&lt;/a&gt; as a part of element14&amp;rsquo;s RoadTest. I thank element14 for sending me the review&amp;nbsp;unit.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Ashwin's Chronicles</title><link href="https://ashwinschronicles.github.io/" rel="alternate"></link><link href="https://ashwinschronicles.github.io/feeds/all-en.atom.xml" rel="self"></link><id>https://ashwinschronicles.github.io/</id><updated>2020-03-28T16:27:00+05:30</updated><entry><title>Analog Discovery 2 + LabVIEW Home Bundle - Review</title><link href="https://ashwinschronicles.github.io/analog-discovery-2-labview-home-bundle-review" rel="alternate"></link><published>2019-07-13T00:00:00+05:30</published><updated>2019-07-13T00:00:00+05:30</updated><author><name>Ashwin</name></author><id>tag:ashwinschronicles.github.io,2019-07-13:/analog-discovery-2-labview-home-bundle-review</id><summary type="html">&lt;p&gt;This post is a review of the Analog Discovery 2 + LabVIEW Home Bundle in a lab&amp;nbsp;environment&lt;/p&gt;</summary><content type="html">&lt;p&gt;This post is a review of the Analog Discovery 2 + LabVIEW Home Bundle in a lab environment. It was originally posted &lt;a href="https://www.element14.com/community/roadTestReviews/3075/l/analog-discovery-2-labview-home-bundle-review"&gt;here&lt;/a&gt; as a part of element14&amp;rsquo;s RoadTest. I thank element14 for sending me the review&amp;nbsp;unit.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;strong&gt;Evaluation Type:&lt;/strong&gt; Test&amp;nbsp;Equipment&lt;/p&gt;
@@ -362,7 +362,7 @@
     configscript[(window.opera ? "innerHTML" : "text")] =
         "MathJax.Hub.Config({" +
         "    config: ['MMLorHTML.js']," +
-        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js','color.js','mhchem.js'], equationNumbers: { autoNumber: 'none' } }," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'none' } }," +
         "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
         "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
         "    displayAlign: '"+ align +"'," +
@@ -378,31 +378,31 @@
         "    'HTML-CSS': { " +
         "        availableFonts: ['STIX', 'TeX']," +
         "        preferredFont: 'STIX'," +
-        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'red ! important'} }," +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
         "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
         "    }, " +
         "}); " +
-        "if ('SansSerif' !== 'default') {" +
+        "if ('default' !== 'default') {" +
             "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
                 "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
-                "VARIANT['normal'].fonts.unshift('MathJax_SansSerif');" +
-                "VARIANT['bold'].fonts.unshift('MathJax_SansSerif-bold');" +
-                "VARIANT['italic'].fonts.unshift('MathJax_SansSerif-italic');" +
-                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_SansSerif-italic');" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
             "});" +
             "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
                 "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
-                "VARIANT['normal'].fonts.unshift('MathJax_SansSerif');" +
-                "VARIANT['bold'].fonts.unshift('MathJax_SansSerif-bold');" +
-                "VARIANT['italic'].fonts.unshift('MathJax_SansSerif-italic');" +
-                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_SansSerif-italic');" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
             "});" +
         "}";
 
     (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
-&lt;/script&gt;</content><category term="Science"></category><category term="Superconductivity"></category><category term="spin"></category><category term="cooper pairs"></category></entry><entry><title>Quantum Hall Effect and related phenomena</title><link href="https://ashwinschronicles.github.io/qhe" rel="alternate"></link><published>2019-06-07T14:02:48+05:30</published><updated>2020-03-28T15:59:06+05:30</updated><author><name>Ashwin</name></author><id>tag:ashwinschronicles.github.io,2019-06-07:/qhe</id><summary type="html">&lt;p&gt;Notes on Quantum Hall Effect and related&amp;nbsp;phenomenon&lt;/p&gt;</summary><content type="html">&lt;h1 id="historical-aspects"&gt;Historical Aspects&lt;a class="headerlink" href="#historical-aspects" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h1&gt;
+&lt;/script&gt;</content><category term="Science"></category><category term="Superconductivity"></category><category term="spin"></category><category term="cooper pairs"></category></entry><entry><title>Quantum Hall Effect and related phenomena</title><link href="https://ashwinschronicles.github.io/qhe" rel="alternate"></link><published>2019-06-07T14:02:48+05:30</published><updated>2020-03-28T16:27:00+05:30</updated><author><name>Ashwin</name></author><id>tag:ashwinschronicles.github.io,2019-06-07:/qhe</id><summary type="html">&lt;p&gt;Notes on Quantum Hall Effect and related&amp;nbsp;phenomenon&lt;/p&gt;</summary><content type="html">&lt;h1 id="historical-aspects"&gt;Historical Aspects&lt;a class="headerlink" href="#historical-aspects" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h1&gt;
 &lt;p&gt;The quantum Hall effect is a remarkable phenomenon discovered
 experimentally in which the Hall conductivity of a two dimensional
 system of electrons is found to have plateaus as a function of variables
@@ -493,8 +493,8 @@ data and graphs are as&amp;nbsp;following:&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Part-1:&lt;/strong&gt; The value of magnetic field corresponding to particular
 current was determined and plotted. Two readings corresponding to single
 current value specifies the values during increment and decrement of
-current viz. to minimize the error.
-&lt;img alt="image" src="../../images/hall_data_table.png" style="zoom:67%;"/&gt;&lt;/p&gt;
+current viz. to minimize the&amp;nbsp;error.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="image" src="../../images/hall_data_table.png" style="zoom:67%;"/&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img alt="Magnetic field vs Current " src="../../images/hall_data_graph.png" style="zoom:50%;"/&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Part-2:&lt;/strong&gt; The values of Hall Voltages are measured for different
 geometrical combinations.The data obtained is as follows&amp;nbsp;-&lt;/p&gt;
@@ -769,7 +769,7 @@ intersects the boundary, and bounces off&amp;nbsp;it.&lt;/p&gt;
     configscript[(window.opera ? "innerHTML" : "text")] =
         "MathJax.Hub.Config({" +
         "    config: ['MMLorHTML.js']," +
-        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js','color.js','mhchem.js'], equationNumbers: { autoNumber: 'none' } }," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'none' } }," +
         "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
         "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
         "    displayAlign: '"+ align +"'," +
@@ -785,24 +785,24 @@ intersects the boundary, and bounces off&amp;nbsp;it.&lt;/p&gt;
         "    'HTML-CSS': { " +
         "        availableFonts: ['STIX', 'TeX']," +
         "        preferredFont: 'STIX'," +
-        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'red ! important'} }," +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
         "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
         "    }, " +
         "}); " +
-        "if ('SansSerif' !== 'default') {" +
+        "if ('default' !== 'default') {" +
             "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
                 "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
-                "VARIANT['normal'].fonts.unshift('MathJax_SansSerif');" +
-                "VARIANT['bold'].fonts.unshift('MathJax_SansSerif-bold');" +
-                "VARIANT['italic'].fonts.unshift('MathJax_SansSerif-italic');" +
-                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_SansSerif-italic');" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
             "});" +
             "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
                 "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
-                "VARIANT['normal'].fonts.unshift('MathJax_SansSerif');" +
-                "VARIANT['bold'].fonts.unshift('MathJax_SansSerif-bold');" +
-                "VARIANT['italic'].fonts.unshift('MathJax_SansSerif-italic');" +
-                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_SansSerif-italic');" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
             "});" +
         "}";
 

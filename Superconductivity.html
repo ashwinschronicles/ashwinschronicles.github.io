@@ -376,7 +376,7 @@
     configscript[(window.opera ? "innerHTML" : "text")] =
         "MathJax.Hub.Config({" +
         "    config: ['MMLorHTML.js']," +
-        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js','color.js','mhchem.js'], equationNumbers: { autoNumber: 'none' } }," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'none' } }," +
         "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
         "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
         "    displayAlign: '"+ align +"'," +
@@ -392,24 +392,24 @@
         "    'HTML-CSS': { " +
         "        availableFonts: ['STIX', 'TeX']," +
         "        preferredFont: 'STIX'," +
-        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'red ! important'} }," +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
         "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
         "    }, " +
         "}); " +
-        "if ('SansSerif' !== 'default') {" +
+        "if ('default' !== 'default') {" +
             "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
                 "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
-                "VARIANT['normal'].fonts.unshift('MathJax_SansSerif');" +
-                "VARIANT['bold'].fonts.unshift('MathJax_SansSerif-bold');" +
-                "VARIANT['italic'].fonts.unshift('MathJax_SansSerif-italic');" +
-                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_SansSerif-italic');" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
             "});" +
             "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
                 "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
-                "VARIANT['normal'].fonts.unshift('MathJax_SansSerif');" +
-                "VARIANT['bold'].fonts.unshift('MathJax_SansSerif-bold');" +
-                "VARIANT['italic'].fonts.unshift('MathJax_SansSerif-italic');" +
-                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_SansSerif-italic');" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
             "});" +
         "}";
 
