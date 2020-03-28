@@ -94,7 +94,7 @@ STATIC_PATHS = ['images']
 ~~~
 Save it. Go to your post and add the image this way:
 ~~~markdown
-![Write here a good description for people who can't see the image]({filename}/images/IMAGE_NAME.jpg)
+![Write here a good description for people who can't see the image]({filename}/images/IMAGE_NAME.webp)
 ~~~
 You can interrupt the server at anytime pressing CTRL+C on the terminal. But you should start it again and check if the image is correct. Can you remember how?
 
