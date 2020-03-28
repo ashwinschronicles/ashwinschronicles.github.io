@@ -114,7 +114,7 @@
             <p>In this post, we&rsquo;ll be making a simple IoT project. Web page controlled <span class="caps">LED</span> strip using NodeMCU connected on a local&nbsp;network.</p>
 <h2 id="outline">Outline:<a class="headerlink" href="#outline" title="Permanent link">&para;</a></h2>
 <p>Web page controlled <span class="caps">LED</span> strip is like the &ldquo;Hello world&rdquo; of IoT. In this post I will be detailing on the procedure I followed to set it up. The schematic of the project will be as&nbsp;follows:</p>
-<p><img alt="Schematic" src=".././images/IoT_1_schematic.jpg"/></p>
+<p><img alt="Schematic" src=".././images/IoT_1_schematic.webp"/></p>
 <p>So when we click a button on a web browser we can turn the led strip on or off using a relay which we control using the <span class="caps">ESP8266</span>&nbsp;board.</p>
 <h2 id="materials">Materials:<a class="headerlink" href="#materials" title="Permanent link">&para;</a></h2>
 <ul>
@@ -134,17 +134,17 @@
 <ul>
 <li>Open up Arduino <span class="caps">IDE</span>. Go to Files-&gt; Preferences. Enter <code>http://arduino.esp8266.com/stable/package_esp8266com_index.json</code> into Additional Board Manager URLs&nbsp;field.</li>
 </ul>
-<p><img alt="IoT_5_preference" src="../images/IoT_5_preference.jpg"/></p>
+<p><img alt="IoT_5_preference" src="../images/IoT_5_preference.webp"/></p>
 <ul>
 <li>Now go to Tools-&gt;Boards-&gt;Board Manager, and search for <span class="caps">ESP8266</span> and install the&nbsp;package.</li>
 </ul>
-<p><img alt="IoT_6_board" src="../images/IoT_6_board.jpg"/></p>
+<p><img alt="IoT_6_board" src="../images/IoT_6_board.webp"/></p>
 <ul>
 <li>If you have the same board as me (NodeMCU Amica) then you will have to install drivers for <span class="caps">CP2102</span> (<span class="caps">USB</span> to Serial&nbsp;Converter)</li>
 </ul>
 <p><code>[Note: some board come with CH340G chip in which case you dont need to follow this step.]</code></p>
 <p>Download drivers from <a href="https://www.silabs.com/products/mcu/Pages/USBtoUARTBridgeVCPDrivers.aspx">here </a>and install it. Connect the nodeMCU to your computer and install the downloaded drives when your system prompts to install the drivers for the newly connected <span class="caps">USB</span> device.Go to the device manager of your computer and note down the <span class="caps">COM</span> port allocated to the newly connected <span class="caps">USB</span>&nbsp;device.</p>
-<p><img alt="IoT_7_deveicemanager" src="../images/IoT_7_deveicemanager.jpg"/></p>
+<p><img alt="IoT_7_deveicemanager" src="../images/IoT_7_deveicemanager.webp"/></p>
 <h2 id="pin-connections">Pin Connections:<a class="headerlink" href="#pin-connections" title="Permanent link">&para;</a></h2>
 <p>Connect <strong>NodeMCU</strong> Ground (<strong><span class="caps">GND</span></strong>) pin to <strong>-ve</strong> pin of <strong>Relay</strong>.</p>
 <p>Connect <strong>NodeMCU</strong> Supply (<strong>Vin)</strong> pin to <strong>+ve</strong> pin of <strong>Relay</strong>.</p>
@@ -159,12 +159,12 @@
 <p>When u have successfully built your connection and the code, you have to upload the code into the NodeMCU by using a micro <span class="caps">USB</span>.</p>
 <p>Now, go to Tools &gt; Board &gt; <span class="caps">ESP8266</span> Modules and you can see many options for <span class="caps">ESP8266</span>. Select &ldquo;NodeMCU 1.0 (<span class="caps">ESP</span>-12E Module). Next, select your port ( the same one you saw in the device manager previously ). If you cant recognize your port, go to the Control Panel &gt; System &gt; Device Manager &gt; Port and update your <span class="caps">USB</span>&nbsp;driver.</p>
 <p>Now upload the code to the&nbsp;board.</p>
-<p><img alt="IoT_8_upload" src="../images/IoT_8_upload.jpg"/></p>
+<p><img alt="IoT_8_upload" src="../images/IoT_8_upload.webp"/></p>
 <h2 id="finale-testing">Finale testing:<a class="headerlink" href="#finale-testing" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Now open up your Serial Monitor, and note down the <span class="caps">URL</span>.</li>
 </ul>
-<p><img alt="IoT_9_serialmonitor" src="../images/IoT_9_serialmonitor.jpg"/></p>
+<p><img alt="IoT_9_serialmonitor" src="../images/IoT_9_serialmonitor.webp"/></p>
 <ul>
 <li>Now put the <span class="caps">URL</span> in your phone&rsquo;s browser( it usually defaults to&nbsp;192.168.4.1).</li>
 <li>A page will open having two buttons <span class="caps">ON</span> and <span class="caps">OFF</span>.</li>

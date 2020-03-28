@@ -129,44 +129,44 @@
 <h2 id="detailed-review">Detailed Review:<a class="headerlink" href="#detailed-review" title="Permanent link">&para;</a></h2>
 <h5 id="typical-use-case-of-labview-in-research-labs">Typical Use case of LabVIEW in research labs.<a class="headerlink" href="#typical-use-case-of-labview-in-research-labs" title="Permanent link">&para;</a></h5>
 <p>Scientists around the world use LabVIEW and National Instruments products to design and control instruments. The lab that I currently work in does electrical and magnetic measurements of specific samples at liquid helium temperature (4 K). I wanted to interface all the instruments using LabVIEW. The system I&rsquo;m using comprises of a Cryostat, Temperature controller, Source meter Unit. The cryostat uses a liquid helium compressor to cool down the chamber where the sample will be kept. The sample is kept on a sample holder that is designed in house, keeping in mind of all the sample space constraints and to maximise the thermal conductivity between cooler and the sample. An image of the sample holder with the sample can be seen&nbsp;here.</p>
-<p><img alt="AnD2_1" src="../images/AnD2_1.jpg"/></p>
+<p><img alt="AnD2_1" src="../images/AnD2_1.webp"/></p>
 <p>The sample you see is connected thermally to a heater and a temperature sensor (cernox sensor). Wires from the sample, temperature sensor and the heater come out of the cooler to a breakout box. One can connect any instruments to this break outbox using banana pin wires. Currently, Lakeshore 336 (<span class="caps">LS336</span>) temperature controller, <span class="caps">B2912A</span> Source meters (<span class="caps">SMU</span>) are connected in the photo&nbsp;below.</p>
-<p><img alt="AnD2_2_analogdiscovery2" src="../images/AnD2_2_analogdiscovery2.jpg" style="zoom: 25%;"/></p>
+<p><img alt="AnD2_2_analogdiscovery2" src="../images/AnD2_2_analogdiscovery2.webp" style="zoom: 25%;"/></p>
 <p>A schematic of the setup&nbsp;is</p>
-<p><img alt="AnD2_3_pastedImage_3" src="../images/AnD2_3_pastedImage_3.jpg" style="zoom:100%;"/></p>
+<p><img alt="AnD2_3_pastedImage_3" src="../images/AnD2_3_pastedImage_3.webp" style="zoom:100%;"/></p>
 <p>I wanted to use LabVIEW to make a program to automate data acquisition of resistance of the sample as a function of sample&nbsp;temperature.</p>
 <p>In Labview, such software are what are called <span class="caps">VI</span>&rsquo;s which stands for virtual instrument. There are 2 parts to any <span class="caps">VI</span>, the front panel, where you put all the user-controllable elements like buttons tet bar etc and logical back panel/ where all the logic for the program is written using &ldquo;G&rdquo; programming&nbsp;language.</p>
 <p>To get started with designing such software, typically one needs to install the instrumentation driver and look into example program. Luckily both <span class="caps">LS336</span> and <span class="caps">SMU</span> had instrument drivers&nbsp;available.</p>
 <p>Once installed, one can find example codes by going to <span class="caps">HELP</span>&gt;<span class="caps">FIND</span> <span class="caps">EXAMPLE</span>&gt; and searching the model number. In the case of <span class="caps">LS336</span>, &ldquo;Lakeshore 336 Configure heater output control parameters and acquire single reading.vi&rdquo; example was just what I needed. It had all the features I wanted to control from that instrument. Heres an image of that&nbsp;vi.</p>
 <p><strong>Front&nbsp;Panel</strong></p>
-<p><img alt="AnD2_4_pastedImage_5" src="../images/AnD2_4_pastedImage_5.jpg"/></p>
+<p><img alt="AnD2_4_pastedImage_5" src="../images/AnD2_4_pastedImage_5.webp"/></p>
 <p><strong>Back&nbsp;panel</strong></p>
 <p>Now, however, <span class="caps">SMU</span>&rsquo;s examples didn&rsquo;t work well for me, in such a case, one would make a new <span class="caps">VI</span>, right-click on the block diagram and go&nbsp;to</p>
-<p><img alt="AnD2_5_pastedImage_9" src="../images/AnD2_5_pastedImage_9.jpg"/></p>
+<p><img alt="AnD2_5_pastedImage_9" src="../images/AnD2_5_pastedImage_9.webp"/></p>
 <p>The back panel (block diagram) actually contain many sub-<span class="caps">VI</span>&rsquo;s that act as functions so one can use them in their own program. So, in the end, I combined parts from <span class="caps">LS336</span>&rsquo;s example and <span class="caps">SMU</span>&rsquo;s <span class="caps">VI</span> tree in a way that is suitable for the current requirement of measuring Resistance as a function of sample temperature. I also added functions to write the obtained data in a systematic&nbsp;format.</p>
 <p>In the end, this is what was&nbsp;achieved.</p>
-<p><img alt="AnD2_6_pastedImage_9" src="../images/AnD2_6_pastedImage_9.jpg"/></p>
+<p><img alt="AnD2_6_pastedImage_9" src="../images/AnD2_6_pastedImage_9.webp"/></p>
 <p>I would love to show you the block diagram but even 5 different images coudnt capture the entire block diagram (yes it was that messy!) so I have uploaded the source code at the end if anyone wants to take a look at&nbsp;it.</p>
 <p>One of the better measurements I was able to do with this system was to measure superconducting transition temperature of Nb thin film, a graph of the same is attached&nbsp;here.</p>
-<p><img alt="AnD2_7_pastedImage_11" src="../images/AnD2_7_pastedImage_11.jpg"/></p>
+<p><img alt="AnD2_7_pastedImage_11" src="../images/AnD2_7_pastedImage_11.webp"/></p>
 <p><strong>A preliminary test of Analog Discovery&nbsp;2!</strong></p>
 <p>My main objective of using analog discovery(<span class="caps">AD</span>) is to build a vibration sample magnetometer (<span class="caps">VSM</span>) and use <span class="caps">AD2</span> to source power and acquire&nbsp;measurements.</p>
 <p>But before I show you how I did that, I can want to show few of the preliminary tests that I did with <span class="caps">AD2</span>, and show you where it succeeds and where it&nbsp;fails.</p>
 <p>As a part of developing the sample holder for the above project, I designed 20 low pass <span class="caps">RC</span> filters. The <span class="caps">PCB</span> design and the fabricated <span class="caps">PCB</span> images&nbsp;:</p>
-<p><a href="https://www.element14.com/community/servlet/JiveServlet/showImage/293607990-3075-737752/pastedImage_2.jpg"><img alt="img" src="../images/AnD2_8_pastedImage_2.jpg"/></a><a href="https://www.element14.com/community/servlet/JiveServlet/showImage/293607990-3075-737753/pastedImage_3.jpg"><img alt="img" src="../images/AnD2_9_pastedImage_3.jpg"/></a></p>
+<p><a href="https://www.element14.com/community/servlet/JiveServlet/showImage/293607990-3075-737752/pastedImage_2.webp"><img alt="img" src="../images/AnD2_8_pastedImage_2.webp"/></a><a href="https://www.element14.com/community/servlet/JiveServlet/showImage/293607990-3075-737753/pastedImage_3.webp"><img alt="img" src="../images/AnD2_9_pastedImage_3.webp"/></a></p>
 <p>And in order to test them, I used the bode plot feature of <span class="caps">AD2</span>. The waveforms software that comes up with this device has a tab called Network analyser. The connections to the input and output side of the filter is connected as follows:e the WaveGen 1 output and Oscilloscope Channel 1 input of the device is connected to the filter input, while the Oscilloscope Channel 2 is connected to the filter output, as shown in the picture below. (taken from&nbsp;digilentinc.com)</p>
-<p><img alt="AnD2_10_pastedImage_4" src="../images/AnD2_10_pastedImage_4.jpg"/></p>
+<p><img alt="AnD2_10_pastedImage_4" src="../images/AnD2_10_pastedImage_4.webp"/></p>
 <p>When the instrument is started, the bode plot is shown in the program and it was verified that the <span class="caps">RC</span> filters are working with the cutoff at 1KHz just as designed. A screenshot of the program is&nbsp;shown</p>
-<p><img alt="AnD2_11_RC_filter2" src="../images/AnD2_11_RC_filter2.jpg"/></p>
+<p><img alt="AnD2_11_RC_filter2" src="../images/AnD2_11_RC_filter2.webp"/></p>
 <p>The <span class="caps">RC</span> filter was supposed to be used inside the cooler mentioned previously, so it would have to work at 4 K as well. But to our disappointment, at 4 K the cutoff shifted to 100KHz dues to high change in capacitance from 10uF to 12nF it is notable that the smd thin film resistor only changed values from 150ohm at room temperature to 160ohm. So the <span class="caps">AD2</span> was an extremely handy tool. Typical lab network analysers are pretty&nbsp;expensive.</p>
-<p><img alt="AnD2_11_RC_filter3" src="../images/AnD2_11_RC_filter3.jpg"/></p>
+<p><img alt="AnD2_11_RC_filter3" src="../images/AnD2_11_RC_filter3.webp"/></p>
 <p>Another notable thing is that the <span class="caps">AD2</span> gives unreliable results beyond 1MHz as can be seen in the above&nbsp;image.</p>
 <p>I also noticed a coupling between Ch1 and <span class="caps">CH2</span> of the oscilloscope, when WaveGen1 and Oscilloscope 1 wires were connected and wave gen was set to generate a random sine wave. This can be seen in the image&nbsp;below.</p>
-<p><img alt="AnD2_13_Signal_scope" src="../images/AnD2_13_Signal_scope.jpg"/></p>
+<p><img alt="AnD2_13_Signal_scope" src="../images/AnD2_13_Signal_scope.webp"/></p>
 <p>With the same image, one can also notice the significant change in the shape of the sine curve. This only tells me that either WaveGen or Oscilloscope or both cant be used in an environment which requires precision and accuracy. Another image showing the same phenomenon is bellow where a 1Hz frequency was sourced.
-<img alt="AnD2_14_Signal_wavegen_1Hz" src="../images/AnD2_14_Signal_wavegen_1Hz.jpg"/></p>
+<img alt="AnD2_14_Signal_wavegen_1Hz" src="../images/AnD2_14_Signal_wavegen_1Hz.webp"/></p>
 <p>and in the following image where 17Hz is sourced on a 4 ohm speaker&nbsp;load.</p>
-<p><img alt="AnD2_15_Signal_wavegen_17Hz" src="../images/AnD2_15_Signal_wavegen_17Hz.jpg"/></p>
+<p><img alt="AnD2_15_Signal_wavegen_17Hz" src="../images/AnD2_15_Signal_wavegen_17Hz.webp"/></p>
 <p>Another problem I faced a lot with my particular unit was frequent disconnection from the waveforms software but when checking the list of devices it is present. I suspect that the long cable provided with <span class="caps">AD2</span> has considerable resistance and whenever <span class="caps">AD2</span> draws some significant current through the laptop, the source voltage falls below the threshold and the device disconnects momentarily. This also posed a problem for&nbsp;me.</p>
 <p>So with all these preliminary tests, I&rsquo;m unsure of using <span class="caps">AD2</span> to gather data for my research purpose. However ill do the <span class="caps">VSM</span> anyway just to see how it goes. I have already wound the 600 turn pickup coil whose signal will be captured by <span class="caps">AD2</span> and the Fe sample is mounted on a 4 ohm speaker which will be driven by <span class="caps">AD2</span> at 17Hz. Im just on the lookout for a suitable electromagnet. Earlier I thought of using <span class="caps">AD2</span> to power a small diameter electromagnet, however, the magnetic field produced by it is around 10 Gauss, which is very small. The <span class="caps">VSM</span> would need at least 100 Gauss or above, which may be achieved by and external power supply circuitry whose strength can be controlled by some signal from <span class="caps">AD2</span>. Ill be sure to update this post as soon as I get some&nbsp;update</p>
 <p><strong>Conclusion</strong></p>

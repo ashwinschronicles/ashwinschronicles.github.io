@@ -5,42 +5,42 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://ashwinschronicles.github.io/</loc>
-<lastmod>2020-03-28T16:50:56-00:00</lastmod>
+<lastmod>2020-03-28T17:17:33-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://ashwinschronicles.github.io/tags</loc>
-<lastmod>2020-03-28T16:50:56-00:00</lastmod>
+<lastmod>2020-03-28T17:17:33-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://ashwinschronicles.github.io/categories</loc>
-<lastmod>2020-03-28T16:50:56-00:00</lastmod>
+<lastmod>2020-03-28T17:17:33-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://ashwinschronicles.github.io/archives</loc>
-<lastmod>2020-03-28T16:50:56-00:00</lastmod>
+<lastmod>2020-03-28T17:17:33-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://ashwinschronicles.github.io/search</loc>
-<lastmod>2020-03-28T16:50:56-00:00</lastmod>
+<lastmod>2020-03-28T17:17:33-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://ashwinschronicles.github.io/404.html</loc>
-<lastmod>2020-03-28T16:50:56-00:00</lastmod>
+<lastmod>2020-03-28T17:17:33-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -61,21 +61,21 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://ashwinschronicles.github.io/Superconductivity</loc>
-<lastmod>2020-03-28T16:43:58+05:30</lastmod>
+<lastmod>2020-03-28T17:15:57+05:30</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://ashwinschronicles.github.io/qhe</loc>
-<lastmod>2020-03-28T16:43:58+05:30</lastmod>
+<lastmod>2020-03-28T17:15:57+05:30</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://ashwinschronicles.github.io/gh-pages-with-pelican</loc>
-<lastmod>2020-03-21T22:29:31+05:30</lastmod>
+<lastmod>2020-03-28T17:15:57+05:30</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
