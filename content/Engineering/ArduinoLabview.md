@@ -91,7 +91,7 @@ This post is about Interfacing Arduino Mega using LabVIEW. It was originally pos
 
   Once the installation is done without any errors you should Notice an "installed" symbol to the left of Digilent LINX toolbox, click finish.
 
-  [![img](https://www.element14.com/community/servlet/JiveServlet/downloadImage/293607990-2581-494997/Screenshot+%282%29.png)](https://www.element14.com/community/servlet/JiveServlet/showImage/293607990-2581-494997/Screenshot+(2).png)
+  [![img](https://www.element14.com/community/servlet/JiveServlet/downloadImage/293607990-2581-494997/Screenshot+%282%29.jpg)](https://www.element14.com/community/servlet/JiveServlet/showImage/293607990-2581-494997/Screenshot+(2).jpg)
 
   In order to verify if all softwares are installed correctly, Open LabVIEW.Click on File > New VI.
 
@@ -113,7 +113,7 @@ This post is about Interfacing Arduino Mega using LabVIEW. It was originally pos
 
   LabVIEW 2017\ vi.lib\ LabVIEW Interface for Arduino\ Firmware\ LIFA_Base\ LIFA_Base.ino
 
-  [![img](https://www.element14.com/community/servlet/JiveServlet/downloadImage/293607990-2581-494998/Screenshot+%284%29.png)](https://www.element14.com/community/servlet/JiveServlet/showImage/293607990-2581-494998/Screenshot+(4).png)
+  [![img](https://www.element14.com/community/servlet/JiveServlet/downloadImage/293607990-2581-494998/Screenshot+%284%29.jpg)](https://www.element14.com/community/servlet/JiveServlet/showImage/293607990-2581-494998/Screenshot+(4).jpg)
 
   (adjust the path based on the installation location of the LabView)
 
@@ -133,7 +133,7 @@ This post is about Interfacing Arduino Mega using LabVIEW. It was originally pos
 
   On creating a new project in Labview you will see two windows opening the first one has a front panel and the second one is the block diagram
 
-  [![img](https://www.element14.com/community/servlet/JiveServlet/downloadImage/293607990-2581-495107/Screenshot+%283%29.png)](https://www.element14.com/community/servlet/JiveServlet/showImage/293607990-2581-495107/Screenshot+(3).png)
+  [![img](https://www.element14.com/community/servlet/JiveServlet/downloadImage/293607990-2581-495107/Screenshot+%283%29.jpg)](https://www.element14.com/community/servlet/JiveServlet/showImage/293607990-2581-495107/Screenshot+(3).jpg)
 
   the front panel will usually house all kinds of numeric controls knobs dials meters gauge
 
@@ -159,7 +159,7 @@ This post is about Interfacing Arduino Mega using LabVIEW. It was originally pos
 
   Now let us think about the flow of the program, first the led will be initialised as output then its is set high and then the loop continues till an event triggers the end. We represent the flow of the program in LabView in the same way. The following would be the possible connection in the flow.
 
-  [![img](https://www.element14.com/community/servlet/JiveServlet/downloadImage/293607990-2581-495108/Screenshot+%286%29.png)](https://www.element14.com/community/servlet/JiveServlet/showImage/293607990-2581-495108/Screenshot+(6).png)
+  [![img](https://www.element14.com/community/servlet/JiveServlet/downloadImage/293607990-2581-495108/Screenshot+%286%29.jpg)](https://www.element14.com/community/servlet/JiveServlet/showImage/293607990-2581-495108/Screenshot+(6).jpg)
 
   Error out pin of initialisation module is wired in series to an error in pin of digital pin mode and digital write and finally the close module. The same arrangement is made with Arduino resource pin of each module.
 

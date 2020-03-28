@@ -27,7 +27,7 @@ This post is a review of the Analog Discovery 2 + LabVIEW Home Bundle in a lab e
 
 Scientists around the world use LabVIEW and National Instruments products to design and control instruments. The lab that I currently work in does electrical and magnetic measurements of specific samples at liquid helium temperature (4 K). I wanted to interface all the instruments using LabVIEW. The system I'm using comprises of a Cryostat, Temperature controller, Source meter Unit. The cryostat uses a liquid helium compressor to cool down the chamber where the sample will be kept. The sample is kept on a sample holder that is designed in house, keeping in mind of all the sample space constraints and to maximise the thermal conductivity between cooler and the sample. An image of the sample holder with the sample can be seen here.
 
-![AnD2_1](../images/AnD2_1.png)
+![AnD2_1](../images/AnD2_1.jpg)
 
 The sample you see is connected thermally to a heater and a temperature sensor (cernox sensor). Wires from the sample, temperature sensor and the heater come out of the cooler to a breakout box. One can connect any instruments to this break outbox using banana pin wires. Currently, Lakeshore 336 (LS336) temperature controller, B2912A Source meters (SMU) are connected in the photo below.
 
@@ -39,7 +39,7 @@ The sample you see is connected thermally to a heater and a temperature sensor (
 
 A schematic of the setup is
 
-<img src="../images/AnD2_3_pastedImage_3.png" alt="AnD2_3_pastedImage_3" style="zoom:100%;" />
+<img src="../images/AnD2_3_pastedImage_3.jpg" alt="AnD2_3_pastedImage_3" style="zoom:100%;" />
 
 I wanted to use LabVIEW to make a program to automate data acquisition of resistance of the sample as a function of sample temperature.
 
@@ -55,7 +55,7 @@ Once installed, one can find example codes by going to HELP>FIND EXAMPLE> and se
 
 **Front Panel**
 
-![AnD2_4_pastedImage_5](../images/AnD2_4_pastedImage_5.png)
+![AnD2_4_pastedImage_5](../images/AnD2_4_pastedImage_5.jpg)
 
 **Back panel**
 
@@ -63,7 +63,7 @@ Once installed, one can find example codes by going to HELP>FIND EXAMPLE> and se
 
 Now, however, SMU's examples didn't work well for me, in such a case, one would make a new VI, right-click on the block diagram and go to
 
- ![AnD2_5_pastedImage_9](../images/AnD2_5_pastedImage_9.png)
+ ![AnD2_5_pastedImage_9](../images/AnD2_5_pastedImage_9.jpg)
 
 
 
@@ -73,13 +73,13 @@ The back panel (block diagram) actually contain many sub-VI's that act as functi
 
 In the end, this is what was achieved.
 
-![AnD2_6_pastedImage_9](../images/AnD2_6_pastedImage_9.png)
+![AnD2_6_pastedImage_9](../images/AnD2_6_pastedImage_9.jpg)
 
 I would love to show you the block diagram but even 5 different images coudnt capture the entire block diagram (yes it was that messy!) so I have uploaded the source code at the end if anyone wants to take a look at it.
 
 One of the better measurements I was able to do with this system was to measure superconducting transition temperature of Nb thin film, a graph of the same is attached here.
 
-![AnD2_7_pastedImage_11](../images/AnD2_7_pastedImage_11.png)
+![AnD2_7_pastedImage_11](../images/AnD2_7_pastedImage_11.jpg)
 
  
 
@@ -93,36 +93,36 @@ But before I show you how I did that, I can want to show few of the preliminary 
 
 As a part of developing the sample holder for the above project, I designed 20 low pass RC filters. The PCB design and the fabricated PCB images :
 
-[![img](../images/AnD2_8_pastedImage_2.png)](https://www.element14.com/community/servlet/JiveServlet/showImage/293607990-3075-737752/pastedImage_2.png)[![img](../images/AnD2_9_pastedImage_3.png)](https://www.element14.com/community/servlet/JiveServlet/showImage/293607990-3075-737753/pastedImage_3.png)
+[![img](../images/AnD2_8_pastedImage_2.jpg)](https://www.element14.com/community/servlet/JiveServlet/showImage/293607990-3075-737752/pastedImage_2.jpg)[![img](../images/AnD2_9_pastedImage_3.jpg)](https://www.element14.com/community/servlet/JiveServlet/showImage/293607990-3075-737753/pastedImage_3.jpg)
 
  
 
 And in order to test them, I used the bode plot feature of AD2. The waveforms software that comes up with this device has a tab called Network analyser. The connections to the input and output side of the filter is connected as follows:e the WaveGen 1 output and Oscilloscope Channel 1 input of the device is connected to the filter input, while the Oscilloscope Channel 2 is connected to the filter output, as shown in the picture below. (taken from digilentinc.com)
 
-![AnD2_10_pastedImage_4](../images/AnD2_10_pastedImage_4.png)
+![AnD2_10_pastedImage_4](../images/AnD2_10_pastedImage_4.jpg)
 
 When the instrument is started, the bode plot is shown in the program and it was verified that the RC filters are working with the cutoff at 1KHz just as designed. A screenshot of the program is shown
 
-![AnD2_11_RC_filter2](../images/AnD2_11_RC_filter2.png)
+![AnD2_11_RC_filter2](../images/AnD2_11_RC_filter2.jpg)
 
 The RC filter was supposed to be used inside the cooler mentioned previously, so it would have to work at 4 K as well. But to our disappointment, at 4 K the cutoff shifted to 100KHz dues to high change in capacitance from 10uF to 12nF it is notable that the smd thin film resistor only changed values from 150ohm at room temperature to 160ohm. So the AD2 was an extremely handy tool. Typical lab network analysers are pretty expensive.
 
-![AnD2_11_RC_filter3](../images/AnD2_11_RC_filter3.png)
+![AnD2_11_RC_filter3](../images/AnD2_11_RC_filter3.jpg)
 
 Another notable thing is that the AD2 gives unreliable results beyond 1MHz as can be seen in the above image.
 
 I also noticed a coupling between Ch1 and CH2 of the oscilloscope, when WaveGen1 and Oscilloscope 1 wires were connected and wave gen was set to generate a random sine wave. This can be seen in the image below.
 
-![AnD2_13_Signal_scope](../images/AnD2_13_Signal_scope.png)
+![AnD2_13_Signal_scope](../images/AnD2_13_Signal_scope.jpg)
 
 With the same image, one can also notice the significant change in the shape of the sine curve. This only tells me that either WaveGen or Oscilloscope or both cant be used in an environment which requires precision and accuracy. Another image showing the same phenomenon is bellow where a 1Hz frequency was sourced.
-![AnD2_14_Signal_wavegen_1Hz](../images/AnD2_14_Signal_wavegen_1Hz.png)
+![AnD2_14_Signal_wavegen_1Hz](../images/AnD2_14_Signal_wavegen_1Hz.jpg)
 
 
 
 and in the following image where 17Hz is sourced on a 4 ohm speaker load.
 
- ![AnD2_15_Signal_wavegen_17Hz](../images/AnD2_15_Signal_wavegen_17Hz.png)
+ ![AnD2_15_Signal_wavegen_17Hz](../images/AnD2_15_Signal_wavegen_17Hz.jpg)
 
 Another problem I faced a lot with my particular unit was frequent disconnection from the waveforms software but when checking the list of devices it is present. I suspect that the long cable provided with AD2 has considerable resistance and whenever AD2 draws some significant current through the laptop, the source voltage falls below the threshold and the device disconnects momentarily. This also posed a problem for me.
 

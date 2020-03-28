@@ -135,7 +135,7 @@
 <p>Search for &ldquo;Arduino&rdquo; in the search&nbsp;bar.</p>
 <p>Install Digilent <span class="caps">LINX</span> and &ldquo;LabVIEW Interface for&nbsp;Arduino&rdquo;.</p>
 <p>Once the installation is done without any errors you should Notice an &ldquo;installed&rdquo; symbol to the left of Digilent <span class="caps">LINX</span> toolbox, click&nbsp;finish.</p>
-<p><a href="https://www.element14.com/community/servlet/JiveServlet/showImage/293607990-2581-494997/Screenshot+(2).png"><img alt="img" src="https://www.element14.com/community/servlet/JiveServlet/downloadImage/293607990-2581-494997/Screenshot+%282%29.png"/></a></p>
+<p><a href="https://www.element14.com/community/servlet/JiveServlet/showImage/293607990-2581-494997/Screenshot+(2).jpg"><img alt="img" src="https://www.element14.com/community/servlet/JiveServlet/downloadImage/293607990-2581-494997/Screenshot+%282%29.jpg"/></a></p>
 <p>In order to verify if all softwares are installed correctly, Open LabVIEW.Click on File &gt; New <span class="caps">VI</span>.</p>
 <p>On one the panels, click on Window &gt; Tile Left and Right. Right-click on the block diagram, scroll down to see that Arduino (LabView interface for Arduino: <span class="caps">LIFA</span>) and <span class="caps">LINX</span> is&nbsp;installed.</p>
 <p>### <strong>Uploading LabView Interface for Arduino&nbsp;Firmware</strong></p>
@@ -144,7 +144,7 @@
 <p>Open the arduino ide and upload the sketch that has the&nbsp;path:</p>
 <p>C:\Program Files (x86)\ National&nbsp;Instruments\</p>
 <p>LabVIEW 2017\ vi.lib\ LabVIEW Interface for Arduino\ Firmware\ LIFA_Base\&nbsp;LIFA_Base.ino</p>
-<p><a href="https://www.element14.com/community/servlet/JiveServlet/showImage/293607990-2581-494998/Screenshot+(4).png"><img alt="img" src="https://www.element14.com/community/servlet/JiveServlet/downloadImage/293607990-2581-494998/Screenshot+%284%29.png"/></a></p>
+<p><a href="https://www.element14.com/community/servlet/JiveServlet/showImage/293607990-2581-494998/Screenshot+(4).jpg"><img alt="img" src="https://www.element14.com/community/servlet/JiveServlet/downloadImage/293607990-2581-494998/Screenshot+%284%29.jpg"/></a></p>
 <p>(adjust the path based on the installation location of the&nbsp;LabView)</p>
 <p>Check for Board type and <span class="caps">COM</span> Port under Tools&nbsp;menu</p>
 <p><span class="caps">NOTE</span>: Do not upload any code to Arduino&nbsp;Board</p>
@@ -152,7 +152,7 @@
 <p>## <strong><span class="caps">PART</span> 2: Interfacing and Controlling an <span class="caps">LED</span> using LabVIEW, Arduino and <span class="caps">LIFA</span></strong></p>
 <p>The hello world equivalent in Arduino is an <span class="caps">LED</span> blink sketch, let us look at the implementation of led blink in LabView. Every program in LabVIEW is called a <span class="caps">VI</span> it ends with an extension dot <span class="caps">VI</span>&nbsp;click.</p>
 <p>On creating a new project in Labview you will see two windows opening the first one has a front panel and the second one is the block&nbsp;diagram</p>
-<p><a href="https://www.element14.com/community/servlet/JiveServlet/showImage/293607990-2581-495107/Screenshot+(3).png"><img alt="img" src="https://www.element14.com/community/servlet/JiveServlet/downloadImage/293607990-2581-495107/Screenshot+%283%29.png"/></a></p>
+<p><a href="https://www.element14.com/community/servlet/JiveServlet/showImage/293607990-2581-495107/Screenshot+(3).jpg"><img alt="img" src="https://www.element14.com/community/servlet/JiveServlet/downloadImage/293607990-2581-495107/Screenshot+%283%29.jpg"/></a></p>
 <p>the front panel will usually house all kinds of numeric controls knobs dials meters&nbsp;gauge</p>
 <p>boolean buttons <span class="caps">LED</span> graphs charts indicators and the block diagram will have all programming tools structures numeric functions like addition subtraction boolean functions&nbsp;etc.</p>
 <p>now what we have to start with is right click on the block diagram scroll down to&nbsp;Arduino.</p>
@@ -163,7 +163,7 @@
 <p>second, you specify the baud rate (whatever is in the bracket is by default&nbsp;so</p>
 <p>you don&rsquo;t have to specify it again) Board type would be&nbsp;Mega.</p>
 <p>Now let us think about the flow of the program, first the led will be initialised as output then its is set high and then the loop continues till an event triggers the end. We represent the flow of the program in LabView in the same way. The following would be the possible connection in the&nbsp;flow.</p>
-<p><a href="https://www.element14.com/community/servlet/JiveServlet/showImage/293607990-2581-495108/Screenshot+(6).png"><img alt="img" src="https://www.element14.com/community/servlet/JiveServlet/downloadImage/293607990-2581-495108/Screenshot+%286%29.png"/></a></p>
+<p><a href="https://www.element14.com/community/servlet/JiveServlet/showImage/293607990-2581-495108/Screenshot+(6).jpg"><img alt="img" src="https://www.element14.com/community/servlet/JiveServlet/downloadImage/293607990-2581-495108/Screenshot+%286%29.jpg"/></a></p>
 <p>Error out pin of initialisation module is wired in series to an error in pin of digital pin mode and digital write and finally the close module. The same arrangement is made with Arduino resource pin of each&nbsp;module.</p>
 <p>the pin number is set by creating a constant at the io pin of the pinmode module and setting its value to 13 and output.The value of 0 1 at the value point in digital write module is equivalent to the High and Low&nbsp;mode.</p>
 <p>Now to set the loop right click go to programming &gt; structure find the while loop module and draw a square around the digitalwrite module (the one we want to repeat). set the constitutional terminal to a boolean control such as a button in the front end&nbsp;editor.</p>

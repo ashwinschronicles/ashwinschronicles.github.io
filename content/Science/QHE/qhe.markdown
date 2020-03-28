@@ -58,7 +58,7 @@ Now a constant current along the $x$ axis is passed. When a magnetic
 field is applied along the $z$ axis ($B_{z}$), the charges in the
 current experience a force (the Lorentz force).
 
-![Fig 1 Schematic diagram of the Hall effect measurement setup](../../images/Hall_Effect_Measurement_Setup_for_Electrons.png)
+![Fig 1 Schematic diagram of the Hall effect measurement setup](../../images/Hall_Effect_Measurement_Setup_for_Electrons.jpg)
 
 In the absence $B_{z}$, the charges follow approximately straight paths.
 However, when $B_{z}$ is applied, their paths get curved, in this way
@@ -112,21 +112,21 @@ current was determined and plotted. Two readings corresponding to single
 current value specifies the values during increment and decrement of
 current viz. to minimize the error.
 
-<img src="../../images/hall_data_table.png" alt="image" style="zoom:67%;" />
+<img src="../../images/hall_data_table.jpg" alt="image" style="zoom:67%;" />
 
-<img src="../../images/hall_data_graph.png" alt="Magnetic field vs Current " style="zoom:50%;" />
+<img src="../../images/hall_data_graph.jpg" alt="Magnetic field vs Current " style="zoom:50%;" />
 
 **Part-2:** The values of Hall Voltages are measured for different
 geometrical combinations.The data obtained is as follows -
 
-![image](../../images/hall_data_table2.png)
+![image](../../images/hall_data_table2.jpg)
 
 Corresponding graphs are plotted here.
 
-<img src="../../images/hall_data_graph2.png" alt="image" style="zoom: 67%;" />
-<img src="../../images/hall_data_graph3.png" alt="image" style="zoom:67%;" />
-<img src="../../images/hall_data_graph4.png" alt="image" style="zoom:67%;" />
-<img src="../../images/hall_data_graph5.png" alt="image" style="zoom:67%;" />
+<img src="../../images/hall_data_graph2.jpg" alt="image" style="zoom: 67%;" />
+<img src="../../images/hall_data_graph3.jpg" alt="image" style="zoom:67%;" />
+<img src="../../images/hall_data_graph4.jpg" alt="image" style="zoom:67%;" />
+<img src="../../images/hall_data_graph5.jpg" alt="image" style="zoom:67%;" />
 
 From all these graphs, the average value of slope is **0.03218
 $\frac{mV}{Gauss}$** . We have sample current equal to 10mA and
@@ -153,7 +153,7 @@ Tesla) we see a non linear relation between Hall conductance and
 Magnetic field. We see some sort of quantization of Hall conductance.
 The observed resistivity is shown in next figure.
 
-<img src="../../images/HallPvsB.png" alt="Hall resistance and longitudinal resistivity data as a function of the
+<img src="../../images/HallPvsB.jpg" alt="Hall resistance and longitudinal resistivity data as a function of the
 magnetic field for a GaAs/AlGaAs hetero-structures at 1.5 K" style="zoom:50%;" />[8]
 
 On observing the graph and a little bit of theoretical calculations one
@@ -335,7 +335,7 @@ let us focus on the degeneracy of Landau level.
 Each set of wave functions with the same value of n is called a Landau
 level. Effects of Landau levels are only observed when the mean thermal
 energy is smaller than the energy level separation,
-$kT << \hbar omega_c$,
+$kT << \hbar \omega_c$,
 meaning low temperatures and strong magnetic fields.
 
 Each Landau level is degenerate because of the second quantum number
@@ -380,7 +380,7 @@ orbits that precess around the boundary of the system in the opposite
 sense to that of the Landau orbits, when a particle in a Landau orbit
 intersects the boundary, and bounces off it.
 
-![Edge states in a sample](../../images/edge.png)
+![Edge states in a sample](../../images/edge.jpg)
 
 [1]:"Wikipedia Entry on Hall Effect", En.Wikipedia.org (Retrieved 25 April 2019).
 

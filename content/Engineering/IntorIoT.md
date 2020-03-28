@@ -15,7 +15,7 @@ In this post, we’ll be making a simple IoT project. Web page controlled LED st
 
 Web page controlled LED strip is like the “Hello world” of IoT. In this post I will be detailing on the procedure I followed to set it up. The schematic of the project will be as follows:
 
-![Schematic](.././images/IoT_1_schematic.png)
+![Schematic](.././images/IoT_1_schematic.jpg)
 
 So when we click a button on a web browser we can turn the led strip on or off using a relay which we control using the ESP8266 board.
 
@@ -42,7 +42,7 @@ So when we click a button on a web browser we can turn the led strip on or off u
 
 - Open up Arduino IDE. Go to Files-> Preferences. Enter `http://arduino.esp8266.com/stable/package_esp8266com_index.json` into Additional Board Manager URLs field.
 
-![IoT_5_preference](../images/IoT_5_preference.png)
+![IoT_5_preference](../images/IoT_5_preference.jpg)
 
 - Now go to Tools->Boards->Board Manager, and search for ESP8266 and install the package.
 
@@ -56,7 +56,7 @@ So when we click a button on a web browser we can turn the led strip on or off u
 
   Download drivers from [here ](https://www.silabs.com/products/mcu/Pages/USBtoUARTBridgeVCPDrivers.aspx)and install it. Connect the nodeMCU to your computer and install the downloaded drives when your system prompts to install the drivers for the newly connected USB device.Go to the device manager of your computer and note down the COM port allocated to the newly connected USB device.
 
-![IoT_7_deveicemanager](../images/IoT_7_deveicemanager.png)
+![IoT_7_deveicemanager](../images/IoT_7_deveicemanager.jpg)
 
 ## Pin Connections:
 
@@ -86,7 +86,7 @@ Now, go to Tools > Board > ESP8266 Modules and you can see many options for ESP8
 
 Now upload the code to the board.
 
-![IoT_8_upload](../images/IoT_8_upload.png)
+![IoT_8_upload](../images/IoT_8_upload.jpg)
 
 
 
@@ -94,7 +94,7 @@ Now upload the code to the board.
 
 - Now open up your Serial Monitor, and note down the URL.
 
-![IoT_9_serialmonitor](../images/IoT_9_serialmonitor.png)
+![IoT_9_serialmonitor](../images/IoT_9_serialmonitor.jpg)
 
 - Now put the URL in your phone’s browser( it usually defaults to 192.168.4.1).
 - A page will open having two buttons ON and OFF.

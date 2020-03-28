@@ -16,7 +16,7 @@ This post is my notes on Superconductivity from video lectures of [Sergey Frolov
 - Current induced in a ring follows $$ I(t)=I_0e^{(-t/\tau))}$$ and dosent change much for over 100,000 years for SC and goes to 1% of initial value in few nano seconds in a normal metal.
 
 - Magnetic field destroy super conductivity (so does current in the SC)
-![image](../../images/SC_mag.png)
+![image](../../images/SC_mag.jpg)
 
 - Magnetic Impurities lower $T_C$ (non mag has no effect)
 
@@ -24,7 +24,7 @@ This post is my notes on Superconductivity from video lectures of [Sergey Frolov
 
 - CU Ag Au nonSC
 
-- ![image](../../images/sup_ele.png)
+- ![image](../../images/sup_ele.jpg)
 
 - Si becomes SC at high Pressure
 
@@ -32,13 +32,13 @@ This post is my notes on Superconductivity from video lectures of [Sergey Frolov
 
 - most unconventional SC has C,O atoms in  pervoskite structure.
 
-- ![image](../../images/SC_graph.png)
+- ![image](../../images/SC_graph.jpg)
 
-- *Meissner effect* is perfect expulsion of Magnetic field out of SC (except penetration depth) due to screening current![image](../../images/misener.png)
+- *Meissner effect* is perfect expulsion of Magnetic field out of SC (except penetration depth) due to screening current![image](../../images/misener.jpg)
 
 - SC act as perfect diamagnet $\chi=-1$ and is a defining feature of SC and not just $\rho$=0
 
-- Difference between perfect conductor and SC ![Difference between perfect conductor and SC](../../images/SUP_perfCandSC.png)
+- Difference between perfect conductor and SC ![Difference between perfect conductor and SC](../../images/SUP_perfCandSC.jpg)
 
 - The esseence of meissner effect is that SC **alaways expels the magnetic field**
 
@@ -51,27 +51,27 @@ This post is my notes on Superconductivity from video lectures of [Sergey Frolov
   3) [Meissner effect](https://en.wikipedia.org/wiki/Meissner_effect): As the material passes below the critical temperature and transitions into superconductivity, it ejects its magnetic field.
 
 - Heat capacity of a SC is discontinuous at $T_C$ and crashes to 0 after  $T_C$
-![image](../../images/Heat_capacity.png)
+![image](../../images/Heat_capacity.jpg)
 
 - The function is given by $C \alpha e^{a/T}$ and is simmilar to Einstein's model of specific heat, n coupled osscilator model. 
 
 - [verify !] Exponents often go with gaps (semiconductor and superconductor state)
 
 - In the super conducting state, there is a samll energy gap arround the fermi level. With $E_g~10x^{-4}E_F$
-![SC_band](../../images/SC_band.png)
+![SC_band](../../images/SC_band.jpg)
 
 - one in 10,000 electrons participate in SC state.
 
 - The a in $C \alpha e^{a/T}$ is given by $-E_g/2$
 
 - Higher $E_g$ implies higher $T_C$
-![EG_periodic](../../images/EG_periodic.png)
+![EG_periodic](../../images/EG_periodic.jpg)
 
 - Nb has the higest gap of all the materials.
 
 ## Applications
 
-- Super conducting single photon detector telescope![image](../../images/photondetector.png){width=50%}
+- Super conducting single photon detector telescope![image](../../images/photondetector.jpg){width=50%}
 - Quantum computer with photons.
 - **Levitating high speed trains(~600 km/h)**: Transport vehicles such as trains can be made to "float" on strong superconducting magnets, virtually eliminating friction between the train and its tracks.This reduces the heat generated and size occupied as compared to regular electromagnet. A landmark for the commercial use of MAGLEV technology occurred in 1990 when it gained the status of a nationally-funded project in Japan. The Minister of Transport authorised construction of the Yamanashi Maglev Test Line which opened on April 3, 1997. In April 2015, the MLX01 test vehicle attained an incredible speed of 603 kph.
 - **MRI**: By impinging a strong superconductor-derived magnetic field into the body, hydrogen atoms that exist in the body's water and fat molecules are forced to accept energy from the magnetic field. They then release this energy at a frequency that can be detected and displayed graphically by a computer.
@@ -86,7 +86,7 @@ This post is my notes on Superconductivity from video lectures of [Sergey Frolov
 
 - Measurement show the 0 resistance to flow of He 
 - ie the flow velocity of liquid helium is independent of applied pressure.
-- in semicunductor attraction between $e^-$ in conduction band and holes in valence bond give rise to a bound pairs known as excitons , they also show super fluidity.![superfluidity](../../images/exciton.png)
+- in semicunductor attraction between $e^-$ in conduction band and holes in valence bond give rise to a bound pairs known as excitons , they also show super fluidity.![superfluidity](../../images/exciton.jpg)
 
 - Because they contain real bound pairs of 2 fermions (in contrast to cooper pais) excitons are bosons.
 - as a result it is possible for them to form a Bose-Einstein condensate, a superfluid that can flow withoutt resistance
@@ -94,7 +94,7 @@ This post is my notes on Superconductivity from video lectures of [Sergey Frolov
 
 # Why is there superconductivity?
 tldr: Two electrons form a bound state called Cooper pair. These cooper pairs form a condensate.
-![cooperpairs](../../images/cooperpairs.png)
+![cooperpairs](../../images/cooperpairs.jpg)
 
 When an electron is moving through a solid with momentum K, since it also interacts with the lattice, there is an electron phonon interaction, meaning an electron moving through the crystal launches a phonon, another electron flying in a different direction can absorb this photon and form a bound state. These cooper pairs form a condensate (they are all in the same indistinguishable quantum state). And the condensate can be represented by the wave function $\psi=n_s e^{i \phi}$, where $n_s$ is the density of Cooper pair and $\phi$ denotes the phase.
 
@@ -102,7 +102,7 @@ When an electron is moving through a solid with momentum K, since it also intera
 
 The London equations, developed by brothers Fritz and Heinz London in 1935 relate current to electromagnetic fields in and around a superconductor.
 
-![London equations](../../images/London_eqn.png)
+![London equations](../../images/London_eqn.jpg)
 
 
 
@@ -120,11 +120,11 @@ The London equations, developed by brothers Fritz and Heinz London in 1935 relat
 
   2) Current density is defined according to the equation $j=-n_s e v$ , Taking this expression from a classical description to a quantum mechanical one, we must replace values j and v by the expectation values of their operators. The velocity operator $ v = (p+eA)/m$ is defined by dividing the gauge-invariant, kinematic momentum operator by the particle mass *m*. we are using ![-e](https://wikimedia.org/api/rest_v1/media/math/render/svg/07ba5105b33e9ac88f605cc50663a9e2c16fcc63) as the electron charge. We may then make this replacement in the equation above. However, an important assumption from the microscopic theory of superconductivity (BCS) is that the superconducting state of a system is the ground state, and according to a theorem of Bloch's,[[\]](https://en.wikipedia.org/wiki/London_equations#cite_note-Michael_Tinkham_1996_5-10) in such a state the canonical momentum **p** is zero. This gives us $j=-\frac{n_s e^2}{m}\textbf{A}$ which is loosely the le1
 
-- ![1560962267192](../../images/field_penetration.png)
+- ![1560962267192](../../images/field_penetration.jpg)
 
 - The solution for that differential equation is ${ \nabla ^{2}\mathbf {B} ={\frac {1}{\lambda ^{2}}}\mathbf {B} ,\qquad \lambda \equiv {\sqrt {\frac {m}{\mu _{0}n_{s}e^{2}}}}.}$
 
-- ![1560962571688](../../images/field_penetration.2.png)
+- ![1560962571688](../../images/field_penetration.2.jpg)
 
 # Superconductivity in the bulk : Cooper pairs
 
@@ -159,13 +159,13 @@ The London equations, developed by brothers Fritz and Heinz London in 1935 relat
 
 - ![img](../../images/simplest.GIF)
 
-- ![1561026690221](../../images/distance.png)
+- ![1561026690221](../../images/distance.jpg)
 
 - in the above picture, $\omega_D$ is the **Debye** relaxation **time**
 
-- ![1561294266321](../../images/1561294266321.png)
+- ![1561294266321](../../images/1561294266321.jpg)
 
-- ![BCS_consiquence](../../images/BCS_consiquence.png)
+- ![BCS_consiquence](../../images/BCS_consiquence.jpg)
 
 - Spin singlet nature of cooper pairs were confirmed with NMR measurements
 
@@ -181,7 +181,7 @@ The London equations, developed by brothers Fritz and Heinz London in 1935 relat
 - **Anneal**: To heat and then slowly cool a material to reduce brittleness. Annealing of ceramic superconductors usually follows sintering and is done in an oxygen-rich atmosphere to restore oxygen lost during sintering. The oxygen content of a ceramic superconductor is critical. For example, YBCO with 6.4 atoms of oxygen will not superconduct. But YBCO with 6.5 atoms will. ![img](http://www.superconductors.org/O2_level.gif){width=150px}
 
 - **Anti-ferromagnetism:** A state of matter where adjacent ions in a material are aligned in opposite or "anti-parallel" arrays. Such materials display almost no response to an external magnetic field at low temperatures and only a weak attaction at higher temperatures. There is evidence that anti-ferromagnetism in the copper oxides plays a role in the formation of Cooper pairs and, thus, in facilitating a superconductive state in some compounds. 
-  ![Image result for antiferromagnetism](https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Antiferromagnetic_ordering.svg/1200px-Antiferromagnetic_ordering.svg.png){width=150px}
+  ![Image result for antiferromagnetism](https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Antiferromagnetic_ordering.svg/1200px-Antiferromagnetic_ordering.svg.jpg){width=150px}
 
 - **BCS Theory**: The first widely-accepted theory to explain superconductivity put forth in 1957 by John Bardeen, Leon Cooper, and John Schreiffer. The theory asserts that, as electrons pass through a crystal lattice, the lattice deforms inward towards the electrons generating sound packets known as "phonons". These phonons produce a trough of positive charge in the area of deformation that assists subsequent electrons in passing through the same region in a process known as phonon-mediated coupling. This is analogous to rolling a bowling ball up the middle of a bed. 2 people, one lying on each side of the bed, will tend to roll toward the center of the bed, once the ball has created a depression in the mattress. And, a 2nd bowling ball, placed at the foot of the bed, will now, quite easily, roll toward the middle. 
 
