@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Ashwin's Chronicles - Science</title><link href="https://ashwinschronicles.github.io/" rel="alternate"></link><link href="https://ashwinschronicles.github.io/feeds/science.atom.xml" rel="self"></link><id>https://ashwinschronicles.github.io/</id><updated>2020-03-28T16:27:00+05:30</updated><entry><title>Superconductivity</title><link href="https://ashwinschronicles.github.io/Superconductivity" rel="alternate"></link><published>2019-06-07T14:02:48+05:30</published><updated>2020-03-23T10:36:34+05:30</updated><author><name>Ashwin Kumar K</name></author><id>tag:ashwinschronicles.github.io,2019-06-07:/Superconductivity</id><summary type="html">&lt;p&gt;Short note on&amp;nbsp;superconductivity&lt;/p&gt;</summary><content type="html">&lt;p&gt;This post is my notes on Superconductivity from video lectures of &lt;a href="https://www.youtube.com/channel/UCDBKb7qMyNXujTf7kKRdstg" title="Youtube Link"&gt;Sergey Frolov&lt;/a&gt; on Solid State Physics and other online sites such as&amp;nbsp;http://www.superconductors.org&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Ashwin's Chronicles - Science</title><link href="https://ashwinschronicles.github.io/" rel="alternate"></link><link href="https://ashwinschronicles.github.io/feeds/science.atom.xml" rel="self"></link><id>https://ashwinschronicles.github.io/</id><updated>2020-03-28T16:43:58+05:30</updated><entry><title>Superconductivity</title><link href="https://ashwinschronicles.github.io/Superconductivity" rel="alternate"></link><published>2019-06-07T14:02:48+05:30</published><updated>2020-03-28T16:43:58+05:30</updated><author><name>Ashwin Kumar K</name></author><id>tag:ashwinschronicles.github.io,2019-06-07:/Superconductivity</id><summary type="html">&lt;p&gt;Short note on&amp;nbsp;superconductivity&lt;/p&gt;</summary><content type="html">&lt;p&gt;This post is my notes on Superconductivity from video lectures of &lt;a href="https://www.youtube.com/channel/UCDBKb7qMyNXujTf7kKRdstg" title="Youtube Link"&gt;Sergey Frolov&lt;/a&gt; on Solid State Physics and other online sites such as&amp;nbsp;http://www.superconductors.org&lt;/p&gt;
 &lt;h1 id="properties"&gt;Properties&lt;a class="headerlink" href="#properties" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;
@@ -10,7 +10,7 @@
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Magnetic field destroy super conductivity (so does current in the &lt;span class="caps"&gt;SC&lt;/span&gt;)
-&lt;img alt="image" src="../../images/SC_mag.png"/&gt;&lt;/p&gt;
+&lt;img alt="image" src="../../images/SC_mag.jpg"/&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Magnetic Impurities lower &lt;span class="math"&gt;\(T_C\)&lt;/span&gt; (non mag has no&amp;nbsp;effect)&lt;/p&gt;
@@ -22,7 +22,7 @@
 &lt;p&gt;&lt;span class="caps"&gt;CU&lt;/span&gt; Ag Au&amp;nbsp;nonSC&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;img alt="image" src="../../images/sup_ele.png"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="image" src="../../images/sup_ele.jpg"/&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Si becomes &lt;span class="caps"&gt;SC&lt;/span&gt; at high&amp;nbsp;Pressure&lt;/p&gt;
@@ -34,16 +34,16 @@
 &lt;p&gt;most unconventional &lt;span class="caps"&gt;SC&lt;/span&gt; has C,O atoms in  pervoskite&amp;nbsp;structure.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;img alt="image" src="../../images/SC_graph.png"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="image" src="../../images/SC_graph.jpg"/&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;em&gt;Meissner effect&lt;/em&gt; is perfect expulsion of Magnetic field out of &lt;span class="caps"&gt;SC&lt;/span&gt; (except penetration depth) due to screening current&lt;img alt="image" src="../../images/misener.png"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Meissner effect&lt;/em&gt; is perfect expulsion of Magnetic field out of &lt;span class="caps"&gt;SC&lt;/span&gt; (except penetration depth) due to screening current&lt;img alt="image" src="../../images/misener.jpg"/&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;span class="caps"&gt;SC&lt;/span&gt; act as perfect diamagnet &lt;span class="math"&gt;\(\chi=-1\)&lt;/span&gt; and is a defining feature of &lt;span class="caps"&gt;SC&lt;/span&gt; and not just &lt;span class="math"&gt;\(\rho\)&lt;/span&gt;=0&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;Difference between perfect conductor and &lt;span class="caps"&gt;SC&lt;/span&gt; &lt;img alt="Difference between perfect conductor and SC" src="../../images/SUP_perfCandSC.png"/&gt;&lt;/p&gt;
+&lt;p&gt;Difference between perfect conductor and &lt;span class="caps"&gt;SC&lt;/span&gt; &lt;img alt="Difference between perfect conductor and SC" src="../../images/SUP_perfCandSC.jpg"/&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;The esseence of meissner effect is that &lt;span class="caps"&gt;SC&lt;/span&gt; &lt;strong&gt;alaways expels the magnetic&amp;nbsp;field&lt;/strong&gt;&lt;/p&gt;
@@ -58,7 +58,7 @@
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;Heat capacity of a &lt;span class="caps"&gt;SC&lt;/span&gt; is discontinuous at &lt;span class="math"&gt;\(T_C\)&lt;/span&gt; and crashes to 0 after  &lt;span class="math"&gt;\(T_C\)&lt;/span&gt;
-&lt;img alt="image" src="../../images/Heat_capacity.png"/&gt;&lt;/p&gt;
+&lt;img alt="image" src="../../images/Heat_capacity.jpg"/&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;The function is given by &lt;span class="math"&gt;\(C \alpha e^{a/T}\)&lt;/span&gt; and is simmilar to Einstein&amp;rsquo;s model of specific heat, n coupled osscilator&amp;nbsp;model. &lt;/p&gt;
@@ -68,7 +68,7 @@
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;In the super conducting state, there is a samll energy gap arround the fermi level. With &lt;span class="math"&gt;\(E_g~10x^{-4}E_F\)&lt;/span&gt;
-&lt;img alt="SC_band" src="../../images/SC_band.png"/&gt;&lt;/p&gt;
+&lt;img alt="SC_band" src="../../images/SC_band.jpg"/&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;one in 10,000 electrons participate in &lt;span class="caps"&gt;SC&lt;/span&gt;&amp;nbsp;state.&lt;/p&gt;
@@ -78,7 +78,7 @@
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Higher &lt;span class="math"&gt;\(E_g\)&lt;/span&gt; implies higher &lt;span class="math"&gt;\(T_C\)&lt;/span&gt;
-&lt;img alt="EG_periodic" src="../../images/EG_periodic.png"/&gt;&lt;/p&gt;
+&lt;img alt="EG_periodic" src="../../images/EG_periodic.jpg"/&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Nb has the higest gap of all the&amp;nbsp;materials.&lt;/p&gt;
@@ -86,7 +86,7 @@
 &lt;/ul&gt;
 &lt;h2 id="applications"&gt;Applications&lt;a class="headerlink" href="#applications" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;Super conducting single photon detector telescope&lt;img alt="image" src="../../images/photondetector.png" width="50%"/&gt;&lt;/li&gt;
+&lt;li&gt;Super conducting single photon detector telescope&lt;img alt="image" src="../../images/photondetector.jpg" width="50%"/&gt;&lt;/li&gt;
 &lt;li&gt;Quantum computer with&amp;nbsp;photons.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Levitating high speed trains(~600 km/h)&lt;/strong&gt;: Transport vehicles such as trains can be made to &amp;ldquo;float&amp;rdquo; on strong superconducting magnets, virtually eliminating friction between the train and its tracks.This reduces the heat generated and size occupied as compared to regular electromagnet. A landmark for the commercial use of &lt;span class="caps"&gt;MAGLEV&lt;/span&gt; technology occurred in 1990 when it gained the status of a nationally-funded project in Japan. The Minister of Transport authorised construction of the Yamanashi Maglev Test Line which opened on April 3, 1997. In April 2015, the &lt;span class="caps"&gt;MLX01&lt;/span&gt; test vehicle attained an incredible speed of 603&amp;nbsp;kph.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;&lt;span class="caps"&gt;MRI&lt;/span&gt;&lt;/strong&gt;: By impinging a strong superconductor-derived magnetic field into the body, hydrogen atoms that exist in the body&amp;rsquo;s water and fat molecules are forced to accept energy from the magnetic field. They then release this energy at a frequency that can be detected and displayed graphically by a&amp;nbsp;computer.&lt;/li&gt;
@@ -105,7 +105,7 @@
 &lt;/li&gt;
 &lt;li&gt;ie the flow velocity of liquid helium is independent of applied&amp;nbsp;pressure.&lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;in semicunductor attraction between &lt;span class="math"&gt;\(e^-\)&lt;/span&gt; in conduction band and holes in valence bond give rise to a bound pairs known as excitons , they also show super fluidity.&lt;img alt="superfluidity" src="../../images/exciton.png"/&gt;&lt;/p&gt;
+&lt;p&gt;in semicunductor attraction between &lt;span class="math"&gt;\(e^-\)&lt;/span&gt; in conduction band and holes in valence bond give rise to a bound pairs known as excitons , they also show super fluidity.&lt;img alt="superfluidity" src="../../images/exciton.jpg"/&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Because they contain real bound pairs of 2 fermions (in contrast to cooper pais) excitons are&amp;nbsp;bosons.&lt;/p&gt;
@@ -115,11 +115,11 @@
 &lt;/ul&gt;
 &lt;h1 id="why-is-there-superconductivity"&gt;Why is there superconductivity?&lt;a class="headerlink" href="#why-is-there-superconductivity" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h1&gt;
 &lt;p&gt;tldr: Two electrons form a bound state called Cooper pair. These cooper pairs form a condensate.
-&lt;img alt="cooperpairs" src="../../images/cooperpairs.png"/&gt;&lt;/p&gt;
+&lt;img alt="cooperpairs" src="../../images/cooperpairs.jpg"/&gt;&lt;/p&gt;
 &lt;p&gt;When an electron is moving through a solid with momentum K, since it also interacts with the lattice, there is an electron phonon interaction, meaning an electron moving through the crystal launches a phonon, another electron flying in a different direction can absorb this photon and form a bound state. These cooper pairs form a condensate (they are all in the same indistinguishable quantum state). And the condensate can be represented by the wave function &lt;span class="math"&gt;\(\psi=n_s e^{i \phi}\)&lt;/span&gt;, where &lt;span class="math"&gt;\(n_s\)&lt;/span&gt; is the density of Cooper pair and &lt;span class="math"&gt;\(\phi\)&lt;/span&gt; denotes the&amp;nbsp;phase.&lt;/p&gt;
 &lt;h1 id="london-equations"&gt;London equations&lt;a class="headerlink" href="#london-equations" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h1&gt;
 &lt;p&gt;The London equations, developed by brothers Fritz and Heinz London in 1935 relate current to electromagnetic fields in and around a&amp;nbsp;superconductor.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="London equations" src="../../images/London_eqn.png"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="London equations" src="../../images/London_eqn.jpg"/&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;In ohms law &lt;span class="math"&gt;\(j=\sigma E\)&lt;/span&gt; so its differential wrt time is 0, however 1st london equation gives a non 0 relation with &lt;span class="math"&gt;\(j'\)&lt;/span&gt; and &lt;span class="math"&gt;\(E\)&lt;/span&gt;&amp;nbsp;.&lt;/p&gt;
@@ -141,13 +141,13 @@
 &lt;p&gt;2) Current density is defined according to the equation &lt;span class="math"&gt;\(j=-n_s e v\)&lt;/span&gt; , Taking this expression from a classical description to a quantum mechanical one, we must replace values j and v by the expectation values of their operators. The velocity operator &lt;span class="math"&gt;\( v = (p+eA)/m\)&lt;/span&gt; is defined by dividing the gauge-invariant, kinematic momentum operator by the particle mass &lt;em&gt;m&lt;/em&gt;. we are using &lt;img alt="-e" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/07ba5105b33e9ac88f605cc50663a9e2c16fcc63"/&gt; as the electron charge. We may then make this replacement in the equation above. However, an important assumption from the microscopic theory of superconductivity (&lt;span class="caps"&gt;BCS&lt;/span&gt;) is that the superconducting state of a system is the ground state, and according to a theorem of Bloch&amp;rsquo;s,[&lt;a href="https://en.wikipedia.org/wiki/London_equations#cite_note-Michael_Tinkham_1996_5-10"&gt;]&lt;/a&gt; in such a state the canonical momentum &lt;strong&gt;p&lt;/strong&gt; is zero. This gives us &lt;span class="math"&gt;\(j=-\frac{n_s e^2}{m}\textbf{A}\)&lt;/span&gt; which is loosely the&amp;nbsp;le1&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;img alt="1560962267192" src="../../images/field_penetration.png"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="1560962267192" src="../../images/field_penetration.jpg"/&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;The solution for that differential equation is &lt;span class="math"&gt;\({ \nabla ^{2}\mathbf {B} ={\frac {1}{\lambda ^{2}}}\mathbf {B} ,\qquad \lambda \equiv {\sqrt {\frac {m}{\mu&amp;nbsp;_{0}n_{s}e^{2}}}}.}\)&lt;/span&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;img alt="1560962571688" src="../../images/field_penetration.2.png"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="1560962571688" src="../../images/field_penetration.2.jpg"/&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;h1 id="superconductivity-in-the-bulk-cooper-pairs"&gt;Superconductivity in the bulk : Cooper pairs&lt;a class="headerlink" href="#superconductivity-in-the-bulk-cooper-pairs" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h1&gt;
@@ -198,16 +198,16 @@
 &lt;p&gt;&lt;img alt="img" src="../../images/simplest.GIF"/&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;img alt="1561026690221" src="../../images/distance.png"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="1561026690221" src="../../images/distance.jpg"/&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;in the above picture, &lt;span class="math"&gt;\(\omega_D\)&lt;/span&gt; is the &lt;strong&gt;Debye&lt;/strong&gt; relaxation &lt;strong&gt;time&lt;/strong&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;img alt="1561294266321" src="../../images/1561294266321.png"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="1561294266321" src="../../images/1561294266321.jpg"/&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;img alt="BCS_consiquence" src="../../images/BCS_consiquence.png"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="BCS_consiquence" src="../../images/BCS_consiquence.jpg"/&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Spin singlet nature of cooper pairs were confirmed with &lt;span class="caps"&gt;NMR&lt;/span&gt;&amp;nbsp;measurements&lt;/p&gt;
@@ -224,7 +224,7 @@
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;strong&gt;Anti-ferromagnetism:&lt;/strong&gt; A state of matter where adjacent ions in a material are aligned in opposite or &amp;ldquo;anti-parallel&amp;rdquo; arrays. Such materials display almost no response to an external magnetic field at low temperatures and only a weak attaction at higher temperatures. There is evidence that anti-ferromagnetism in the copper oxides plays a role in the formation of Cooper pairs and, thus, in facilitating a superconductive state in some compounds. 
-  &lt;img alt="Image result for antiferromagnetism" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Antiferromagnetic_ordering.svg/1200px-Antiferromagnetic_ordering.svg.png" width="150px"/&gt;&lt;/p&gt;
+  &lt;img alt="Image result for antiferromagnetism" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Antiferromagnetic_ordering.svg/1200px-Antiferromagnetic_ordering.svg.jpg" width="150px"/&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;strong&gt;&lt;span class="caps"&gt;BCS&lt;/span&gt; Theory&lt;/strong&gt;: The first widely-accepted theory to explain superconductivity put forth in 1957 by John Bardeen, Leon Cooper, and John Schreiffer. The theory asserts that, as electrons pass through a crystal lattice, the lattice deforms inward towards the electrons generating sound packets known as &amp;ldquo;phonons&amp;rdquo;. These phonons produce a trough of positive charge in the area of deformation that assists subsequent electrons in passing through the same region in a process known as phonon-mediated coupling. This is analogous to rolling a bowling ball up the middle of a bed. 2 people, one lying on each side of the bed, will tend to roll toward the center of the bed, once the ball has created a depression in the mattress. And, a 2nd bowling ball, placed at the foot of the bed, will now, quite easily, roll toward the&amp;nbsp;middle. &lt;/p&gt;
@@ -303,7 +303,7 @@
     (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
-&lt;/script&gt;</content><category term="Science"></category><category term="Superconductivity"></category><category term="spin"></category><category term="cooper pairs"></category></entry><entry><title>Quantum Hall Effect and related phenomena</title><link href="https://ashwinschronicles.github.io/qhe" rel="alternate"></link><published>2019-06-07T14:02:48+05:30</published><updated>2020-03-28T16:27:00+05:30</updated><author><name>Ashwin</name></author><id>tag:ashwinschronicles.github.io,2019-06-07:/qhe</id><summary type="html">&lt;p&gt;Notes on Quantum Hall Effect and related&amp;nbsp;phenomenon&lt;/p&gt;</summary><content type="html">&lt;h1 id="historical-aspects"&gt;Historical Aspects&lt;a class="headerlink" href="#historical-aspects" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h1&gt;
+&lt;/script&gt;</content><category term="Science"></category><category term="Superconductivity"></category><category term="spin"></category><category term="cooper pairs"></category></entry><entry><title>Quantum Hall Effect and related phenomena</title><link href="https://ashwinschronicles.github.io/qhe" rel="alternate"></link><published>2019-06-07T14:02:48+05:30</published><updated>2020-03-28T16:43:58+05:30</updated><author><name>Ashwin</name></author><id>tag:ashwinschronicles.github.io,2019-06-07:/qhe</id><summary type="html">&lt;p&gt;Notes on Quantum Hall Effect and related&amp;nbsp;phenomenon&lt;/p&gt;</summary><content type="html">&lt;h1 id="historical-aspects"&gt;Historical Aspects&lt;a class="headerlink" href="#historical-aspects" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h1&gt;
 &lt;p&gt;The quantum Hall effect is a remarkable phenomenon discovered
 experimentally in which the Hall conductivity of a two dimensional
 system of electrons is found to have plateaus as a function of variables
@@ -342,7 +342,7 @@ thickness, t, Length L, and width W, as shown in Fig 1.
 Now a constant current along the &lt;span class="math"&gt;\(x\)&lt;/span&gt; axis is passed. When a magnetic
 field is applied along the &lt;span class="math"&gt;\(z\)&lt;/span&gt; axis (&lt;span class="math"&gt;\(B_{z}\)&lt;/span&gt;), the charges in the
 current experience a force (the Lorentz&amp;nbsp;force).&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Fig 1 Schematic diagram of the Hall effect measurement setup" src="../../images/Hall_Effect_Measurement_Setup_for_Electrons.png"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Fig 1 Schematic diagram of the Hall effect measurement setup" src="../../images/Hall_Effect_Measurement_Setup_for_Electrons.jpg"/&gt;&lt;/p&gt;
 &lt;p&gt;In the absence &lt;span class="math"&gt;\(B_{z}\)&lt;/span&gt;, the charges follow approximately straight paths.
 However, when &lt;span class="math"&gt;\(B_{z}\)&lt;/span&gt; is applied, their paths get curved, in this way
 moving charges aggregate on one face of the material. This leaves equal
@@ -395,16 +395,16 @@ data and graphs are as&amp;nbsp;following:&lt;/p&gt;
 current was determined and plotted. Two readings corresponding to single
 current value specifies the values during increment and decrement of
 current viz. to minimize the&amp;nbsp;error.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="image" src="../../images/hall_data_table.png" style="zoom:67%;"/&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Magnetic field vs Current " src="../../images/hall_data_graph.png" style="zoom:50%;"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="image" src="../../images/hall_data_table.jpg" style="zoom:67%;"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Magnetic field vs Current " src="../../images/hall_data_graph.jpg" style="zoom:50%;"/&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Part-2:&lt;/strong&gt; The values of Hall Voltages are measured for different
 geometrical combinations.The data obtained is as follows&amp;nbsp;-&lt;/p&gt;
-&lt;p&gt;&lt;img alt="image" src="../../images/hall_data_table2.png"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="image" src="../../images/hall_data_table2.jpg"/&gt;&lt;/p&gt;
 &lt;p&gt;Corresponding graphs are plotted&amp;nbsp;here.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="image" src="../../images/hall_data_graph2.png" style="zoom: 67%;"/&gt;
-&lt;img alt="image" src="../../images/hall_data_graph3.png" style="zoom:67%;"/&gt;
-&lt;img alt="image" src="../../images/hall_data_graph4.png" style="zoom:67%;"/&gt;
-&lt;img alt="image" src="../../images/hall_data_graph5.png" style="zoom:67%;"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="image" src="../../images/hall_data_graph2.jpg" style="zoom: 67%;"/&gt;
+&lt;img alt="image" src="../../images/hall_data_graph3.jpg" style="zoom:67%;"/&gt;
+&lt;img alt="image" src="../../images/hall_data_graph4.jpg" style="zoom:67%;"/&gt;
+&lt;img alt="image" src="../../images/hall_data_graph5.jpg" style="zoom:67%;"/&gt;&lt;/p&gt;
 &lt;p&gt;From all these graphs, the average value of slope is &lt;strong&gt;0.03218
 &lt;span class="math"&gt;\(\frac{mV}{Gauss}\)&lt;/span&gt;&lt;/strong&gt; . We have sample current equal to 10mA and
 sample length as&amp;nbsp;5mm.&lt;/p&gt;
@@ -431,7 +431,7 @@ Tesla) we see a non linear relation between Hall conductance and
 Magnetic field. We see some sort of quantization of Hall conductance.
 The observed resistivity is shown in next&amp;nbsp;figure.&lt;/p&gt;
 &lt;p&gt;&lt;img alt="Hall resistance and longitudinal resistivity data as a function of the
-magnetic field for a GaAs/AlGaAs hetero-structures at 1.5 K" src="../../images/HallPvsB.png" style="zoom:50%;"/&gt;[8]&lt;/p&gt;
+magnetic field for a GaAs/AlGaAs hetero-structures at 1.5 K" src="../../images/HallPvsB.jpg" style="zoom:50%;"/&gt;[8]&lt;/p&gt;
 &lt;p&gt;On observing the graph and a little bit of theoretical calculations one
 can deduce the&amp;nbsp;following:&lt;/p&gt;
 &lt;ul&gt;
@@ -603,7 +603,7 @@ let us focus on the degeneracy of Landau&amp;nbsp;level.&lt;/p&gt;
 &lt;p&gt;Each set of wave functions with the same value of n is called a Landau
 level. Effects of Landau levels are only observed when the mean thermal
 energy is smaller than the energy level separation,
-&lt;span class="math"&gt;\(kT &amp;lt;&amp;lt; \hbar omega_c\)&lt;/span&gt;,
+&lt;span class="math"&gt;\(kT &amp;lt;&amp;lt; \hbar \omega_c\)&lt;/span&gt;,
 meaning low temperatures and strong magnetic&amp;nbsp;fields.&lt;/p&gt;
 &lt;p&gt;Each Landau level is degenerate because of the second quantum number
 &lt;span class="math"&gt;\(k_{y}\)&lt;/span&gt;, which can take the values
@@ -640,7 +640,7 @@ are extended as opposed to localized. These edge states act as skipping
 orbits that precess around the boundary of the system in the opposite
 sense to that of the Landau orbits, when a particle in a Landau orbit
 intersects the boundary, and bounces off&amp;nbsp;it.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Edge states in a sample" src="../../images/edge.png"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Edge states in a sample" src="../../images/edge.jpg"/&gt;&lt;/p&gt;
 &lt;p&gt;[1]:&amp;rdquo;Wikipedia Entry on Hall Effect&amp;rdquo;, En.Wikipedia.org (Retrieved 25 April&amp;nbsp;2019).&lt;/p&gt;
 &lt;p&gt;[2]:&amp;rdquo;Wikipedia Entry on Landau quantization&amp;rdquo;, En.Wikipedia.org (Retrieved 26 April&amp;nbsp;2019).&lt;/p&gt;
 &lt;p&gt;[3]:&amp;rdquo;&lt;span class="caps"&gt;NPTEL&lt;/span&gt; :: Physics - &lt;span class="caps"&gt;NOC&lt;/span&gt;: Advanced Condensed matter physics&amp;rdquo; (Retrieved 27 April&amp;nbsp;2019).&lt;/p&gt;
