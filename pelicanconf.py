@@ -32,6 +32,7 @@ EXTRA_PATH_METADATA = {
     'extra/CNAME': {'path': 'CNAME'},
     'extra/LICENSE': {'path': 'LICENSE'},
     'extra/README': {'path': 'README'},
+    'extra/utterances.json': {'path': 'utterances.json'}
 }
 MARKDOWN = {
     "extension_configs": {
