@@ -22,5 +22,5 @@ Here is my CV  :
 
 [Curriculum Vitae](https://ashwinschronicles.github.io/pdfs/Vitae.pdf)
 
-[Single page version](https://ashwinschronicles.github.io/pdfs/Academic_CV.pdf)
+[Single page version(old)](https://ashwinschronicles.github.io/pdfs/Academic_CV.pdf)
 
