@@ -93,6 +93,7 @@ PLUGINS = ["tipue_search",
            "series", 
            "post_stats", 
            "pelican-js",
+           "series",
 #           "filetime_from_git",
            "extract_toc",
            "assets"]

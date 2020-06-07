@@ -1,0 +1,29 @@
+---
+title: Battery Management  System for an xEV - Part 1
+date: 2020-05-25
+tags: BMS,EV,battery-terminologies
+category: Engineering
+slug:BMS_for_an_EV_terminologies
+author: Ashwin
+summary: This post is about information gathered on designing a BMS for a xEV
+subtitle: This article talks about the various terminologies that are used in the battery industry.
+keywords: BMS,EV,NominalVoltage
+modified: 2020-05-25
+series_title: Battery Management  System for an xEV - Part 1 (Battery Terminologies )
+series: More in the series: BMS
+series_index: 1
+gittime: off
+---
+
+This is part 1 of a series on Battery management system design. The data presented here was  collected as a part of study based Internship at Kaynes Technology, Mysore.
+
+This article talks about the various terminologies that are used in the battery industry.
+
+* **xEVs:** Electric vehicles come in different categories and are abbreviated as xEVs 
+  * **Hybrid-electric vehicles (HEVs)** These vehicles have drive provided by an electric motor and one other source ( like petrol engine ). The battery pack in these systems store small amount of energy and are used only  for power boost when the vehicle must accelerate, or as a power sink when the vehicle must decelerate. They essentially have zero all-electric vehicle range and are never plugged in to recharge their battery pack; instead, the gasoline engine recharges the battery
+    when extra power is available. An example HEV is the Toyota Prius.
+  * **Plug-in hybrid-electric vehicles (PHEVs)**. These vehicles are similar
+    to HEVs but have a somewhat larger battery pack and motor. They
+    can operate in electric-only mode under some operating conditions,
+    typically at lower speeds such as for residential or city driving
+
