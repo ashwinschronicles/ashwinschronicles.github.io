@@ -8,8 +8,8 @@ author: Ashwin
 summary: This post is about information gathered on designing a BMS for a xEV
 subtitle: Basic BMS requiremnets
 keywords: BMS,EV,NominalVoltage,
-modified: 2020-05-25
-series_title: Battery Management  System for an xEV - Part 1 ( Requiremnets )
+modified: 2020-06-10
+series_title: Battery Management  System for an xEV - Part 1 ( Requirements )
 series: More in the series: BMS
 series_index: 1
 gittime: off
@@ -25,6 +25,10 @@ Most of the data here is my notes on the text book "Battery Management Systems, 
 
 # Basic terminologies 
 
+* Batteries and battery packs are made up from groups of cells wired in series, parallel or a combination of them. 
+* Nominal Voltage is a representative voltage that depends on the combination of the active chamicals used. It dosent relate to the voltage under load, its more of an average or typical voltage.
+* C rate is a relative measure of the cell electrical current eg. A 20 Ah cell should be able to deliver 20 A (“1C”) for 1 h or 2 A (“C/10”) for about 10 h (but, the relationship is not strictly linear)
+* A cell stores energy in electrochemical form, which it can later release to do work, The energy release rate is the cell’s instantaneous power (mW, W, or kW)
 * **xEVs:** Electric vehicles come in different categories and are abbreviated as xEVs 
   * **Hybrid-electric vehicles (HEVs)** These vehicles have drive provided by an electric motor and one other source ( like petrol engine ). The battery pack in these systems store small amount of energy and are used only  for power boost when the vehicle must accelerate, or as a power sink when the vehicle must decelerate. They essentially have zero all-electric vehicle range and are never plugged in to recharge their battery pack; instead, the gasoline engine recharges the battery
     when extra power is available. An example HEV is the Toyota Prius.
@@ -32,8 +36,20 @@ Most of the data here is my notes on the text book "Battery Management Systems, 
     to HEVs but have a somewhat larger battery pack and motor. They
     can operate in electric-only mode under some operating conditions,
     typically at lower speeds such as for residential or city driving
+  * **Extended-Range Electric Vehicle**  (E-REV): Larger battery than PHEV allows some all-electric range under full-load conditions.
+  * Electric Vehicle (EV), a.k.a. Battery-Electric Vehicle (BEV): Battery  provides only motive power.
 
+# What must a BMS do?
 
+The primary functions of a BMS are to:
+
+* Protect human safety of device’s operator:
+* Detect unsafe operating conditions and respond
+* Protect cells of battery from damage in abuse/failure cases
+* Prolong life of battery (normal operating cases)
+* Maintain battery in a state in which it can fulfil its functional design requirements
+* Inform the application controller how to make the best use of the pack right now
+  (e.g., by providing power limits), control charger, etc.
 
 # Basic working of an electrochemical cell
 

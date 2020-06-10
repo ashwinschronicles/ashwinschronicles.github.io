@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Ashwin's Chronicles</title><link href="/" rel="alternate"></link><link href="/feeds/all-en.atom.xml" rel="self"></link><id>/</id><updated>2020-05-25T00:00:00+05:30</updated><entry><title>Battery Management System for an xEV - Part 1</title><link href="/BMS_for_an_EV_intro" rel="alternate"></link><published>2020-05-25T00:00:00+05:30</published><updated>2020-05-25T00:00:00+05:30</updated><author><name>Ashwin</name></author><id>tag:None,2020-05-25:/BMS_for_an_EV_intro</id><summary type="html">&lt;p&gt;This post is about information gathered on designing a &lt;span class="caps"&gt;BMS&lt;/span&gt; for a&amp;nbsp;xEV&lt;/p&gt;</summary><content type="html">&lt;p&gt;This is part 1 of a series on Battery management system&amp;nbsp;design.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Ashwin's Chronicles</title><link href="/" rel="alternate"></link><link href="/feeds/all-en.atom.xml" rel="self"></link><id>/</id><updated>2020-06-10T00:00:00+05:30</updated><entry><title>Battery Management System for an xEV - Part 1</title><link href="/BMS_for_an_EV_intro" rel="alternate"></link><published>2020-05-25T00:00:00+05:30</published><updated>2020-06-10T00:00:00+05:30</updated><author><name>Ashwin</name></author><id>tag:None,2020-05-25:/BMS_for_an_EV_intro</id><summary type="html">&lt;p&gt;This post is about information gathered on designing a &lt;span class="caps"&gt;BMS&lt;/span&gt; for a&amp;nbsp;xEV&lt;/p&gt;</summary><content type="html">&lt;p&gt;This is part 1 of a series on Battery management system&amp;nbsp;design.&lt;/p&gt;
 &lt;p&gt;The data presented here was  collected as a part of study based Internship at Kaynes Technology,&amp;nbsp;Mysore.&lt;/p&gt;
 &lt;p&gt;Most of the data here is my notes on the text book &amp;ldquo;Battery Management Systems, Volume I &lt;span class="amp"&gt;&amp;amp;&lt;/span&gt; &lt;span class="caps"&gt;II&lt;/span&gt;&amp;rdquo; by Gregory L. Plett along with his&amp;nbsp;course. &lt;/p&gt;
 &lt;h1 id="basic-terminologies"&gt;Basic terminologies&lt;a class="headerlink" href="#basic-terminologies" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h1&gt;
 &lt;ul&gt;
+&lt;li&gt;Batteries and battery packs are made up from groups of cells wired in series, parallel or a combination of&amp;nbsp;them. &lt;/li&gt;
+&lt;li&gt;Nominal Voltage is a representative voltage that depends on the combination of the active chamicals used. It dosent relate to the voltage under load, its more of an average or typical&amp;nbsp;voltage.&lt;/li&gt;
+&lt;li&gt;C rate is a relative measure of the cell electrical current eg. A 20 Ah cell should be able to deliver 20 A (&amp;ldquo;1C&amp;rdquo;) for 1 h or 2 A (&amp;ldquo;C/10&amp;rdquo;) for about 10 h (but, the relationship is not strictly&amp;nbsp;linear)&lt;/li&gt;
+&lt;li&gt;A cell stores energy in electrochemical form, which it can later release to do work, The energy release rate is the cell&amp;rsquo;s instantaneous power (mW, W, or&amp;nbsp;kW)&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;xEVs:&lt;/strong&gt; Electric vehicles come in different categories and are abbreviated as&amp;nbsp;xEVs &lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Hybrid-electric vehicles (HEVs)&lt;/strong&gt; These vehicles have drive provided by an electric motor and one other source ( like petrol engine ). The battery pack in these systems store small amount of energy and are used only  for power boost when the vehicle must accelerate, or as a power sink when the vehicle must decelerate. They essentially have zero all-electric vehicle range and are never plugged in to recharge their battery pack; instead, the gasoline engine recharges the battery
     when extra power is available. An example &lt;span class="caps"&gt;HEV&lt;/span&gt; is the Toyota&amp;nbsp;Prius.&lt;/li&gt;
@@ -11,6 +15,19 @@
     to HEVs but have a somewhat larger battery pack and motor. They
     can operate in electric-only mode under some operating conditions,
     typically at lower speeds such as for residential or city&amp;nbsp;driving&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Extended-Range Electric Vehicle&lt;/strong&gt;  (E-&lt;span class="caps"&gt;REV&lt;/span&gt;): Larger battery than &lt;span class="caps"&gt;PHEV&lt;/span&gt; allows some all-electric range under full-load&amp;nbsp;conditions.&lt;/li&gt;
+&lt;li&gt;Electric Vehicle (&lt;span class="caps"&gt;EV&lt;/span&gt;), a.k.a. Battery-Electric Vehicle (&lt;span class="caps"&gt;BEV&lt;/span&gt;): Battery  provides only motive&amp;nbsp;power.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id="what-must-a-bms-do"&gt;What must a &lt;span class="caps"&gt;BMS&lt;/span&gt; do?&lt;a class="headerlink" href="#what-must-a-bms-do" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h1&gt;
+&lt;p&gt;The primary functions of a &lt;span class="caps"&gt;BMS&lt;/span&gt; are&amp;nbsp;to:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Protect human safety of device&amp;rsquo;s&amp;nbsp;operator:&lt;/li&gt;
+&lt;li&gt;Detect unsafe operating conditions and&amp;nbsp;respond&lt;/li&gt;
+&lt;li&gt;Protect cells of battery from damage in abuse/failure&amp;nbsp;cases&lt;/li&gt;
+&lt;li&gt;Prolong life of battery (normal operating&amp;nbsp;cases)&lt;/li&gt;
+&lt;li&gt;Maintain battery in a state in which it can fulfil its functional design&amp;nbsp;requirements&lt;/li&gt;
+&lt;li&gt;Inform the application controller how to make the best use of the pack right now
+  (e.g., by providing power limits), control charger,&amp;nbsp;etc.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h1 id="basic-working-of-an-electrochemical-cell"&gt;Basic working of an electrochemical cell&lt;a class="headerlink" href="#basic-working-of-an-electrochemical-cell" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h1&gt;
 &lt;p&gt;&lt;img alt="Kaynes%20report%208f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled.png" src="/Kaynes report 8f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled.png"/&gt;&lt;/p&gt;
