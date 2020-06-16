@@ -1,5 +1,191 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Ashwin's Chronicles - Blog</title><link href="https://ashwinschronicles.github.io/" rel="alternate"></link><link href="https://ashwinschronicles.github.io/feeds/blog.atom.xml" rel="self"></link><id>https://ashwinschronicles.github.io/</id><updated>2020-03-28T17:15:57+05:30</updated><entry><title>Make a Github Pages blog with Pelican</title><link href="https://ashwinschronicles.github.io/gh-pages-with-pelican" rel="alternate"></link><published>2018-12-29T23:20:09+05:30</published><updated>2020-03-28T17:15:57+05:30</updated><author><name>Ashwin</name></author><id>tag:ashwinschronicles.github.io,2018-12-29:/gh-pages-with-pelican</id><summary type="html">&lt;p&gt;Nothing&amp;nbsp;Much&lt;/p&gt;</summary><content type="html">&lt;p&gt;Github, worlds leading  hosting service for Git repositories  offers a simple, elegant website solution. It allows its users to  store page content in a git repository along with their&amp;nbsp;code.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Ashwin's Chronicles - Blog</title><link href="https://ashwinschronicles.github.io/" rel="alternate"></link><link href="https://ashwinschronicles.github.io/feeds/blog.atom.xml" rel="self"></link><id>https://ashwinschronicles.github.io/</id><updated>2020-06-16T11:24:11+05:30</updated><entry><title>Extending Desktop to another device over VNC</title><link href="https://ashwinschronicles.github.io/extending-desktop-to-another-device-over-vnc" rel="alternate"></link><published>2020-02-05T00:00:00+05:30</published><updated>2020-02-05T00:00:00+05:30</updated><author><name>Ashwin</name></author><id>tag:ashwinschronicles.github.io,2020-02-05:/extending-desktop-to-another-device-over-vnc</id><summary type="html">&lt;p&gt;This post details the procedure to Extending Desktop to another device over &lt;span class="caps"&gt;VNC&lt;/span&gt; or other protocol in&amp;nbsp;Linux&lt;/p&gt;</summary><content type="html">&lt;hr/&gt;
+&lt;p&gt;If you have an old tablet or old laptop, you might want to put it to good use by using its display as a secondary screen to your primary laptop. If you are using windows on your primary laptop, you have a host of applications that does this for you (like Builtin windows Wireless display, Synergy) but if you are using linux you can follow the following&amp;nbsp;instructions.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Assumptions&lt;/strong&gt;
+I will list the steps on how to get it done wit the following&amp;nbsp;configuration:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The laptop screen is&amp;nbsp;eDP-1&lt;/li&gt;
+&lt;li&gt;We are using the &lt;span class="caps"&gt;VIRTUAL1&lt;/span&gt; output for the &lt;span class="caps"&gt;VNC&lt;/span&gt;&amp;nbsp;server&lt;/li&gt;
+&lt;li&gt;The resolution of the &lt;span class="caps"&gt;VNC&lt;/span&gt; monitor will be&amp;nbsp;1920x1080&lt;/li&gt;
+&lt;li&gt;We are extending the desktop to the right of the laptop&amp;rsquo;s&amp;nbsp;screen&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Step 1:&lt;/strong&gt; Generate modeline for the resolution of the vpn screen you are going to use with your &lt;span class="caps"&gt;VNC&lt;/span&gt; display.
+If xrandr already show the desired mode for any of the displays, generating a new one is not needed, we can use the existing one. If this is the case, you can jump directly to step 3.
+Any random number can be used for the frequency, as we are not using the mode with any real&amp;nbsp;monitor.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;gtf &lt;span class="m"&gt;1920&lt;/span&gt; &lt;span class="m"&gt;1080&lt;/span&gt; &lt;span class="m"&gt;60&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;This command generates the following&amp;nbsp;modeline:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt; &lt;span class="c1"&gt;# 1920x1080 @ 60.00 Hz (GTF) hsync: 67.08 kHz; pclk: 172.80 MHz&lt;/span&gt;
+  Modeline &lt;span class="s2"&gt;"1920x1080_60.00"&lt;/span&gt;  &lt;span class="m"&gt;172&lt;/span&gt;.80  &lt;span class="m"&gt;1920&lt;/span&gt; &lt;span class="m"&gt;2040&lt;/span&gt; &lt;span class="m"&gt;2248&lt;/span&gt; &lt;span class="m"&gt;2576&lt;/span&gt;  &lt;span class="m"&gt;1080&lt;/span&gt; &lt;span class="m"&gt;1081&lt;/span&gt; &lt;span class="m"&gt;1084&lt;/span&gt; &lt;span class="m"&gt;1118&lt;/span&gt;  -HSync +Vsync
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;Step 2:&lt;/strong&gt; Generate a new mode based on the modeline we got from step&amp;nbsp;1.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;xrandr --newmode &lt;span class="s2"&gt;"1920x1080_60.00"&lt;/span&gt;  &lt;span class="m"&gt;172&lt;/span&gt;.80  &lt;span class="m"&gt;1920&lt;/span&gt; &lt;span class="m"&gt;2040&lt;/span&gt; &lt;span class="m"&gt;2248&lt;/span&gt; &lt;span class="m"&gt;2576&lt;/span&gt;  &lt;span class="m"&gt;1080&lt;/span&gt; &lt;span class="m"&gt;1081&lt;/span&gt; &lt;span class="m"&gt;1084&lt;/span&gt; &lt;span class="m"&gt;1118&lt;/span&gt;  -HSync +Vsync
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;Step 3:&lt;/strong&gt; Add the desired mode to our disconnected&amp;nbsp;output:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;xrandr --addmode VIRTUAL1 1920x1080_60.00
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;Step 4:&lt;/strong&gt; Enable the disconnected monitor using the newly added mode and use it to extend the desktop to the right of&amp;nbsp;eDP1:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;xrandr --output VIRTUAL1 --mode 1920x1080_60.00 --right-of eDP1
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;This extends your desktop to the invisible monitor on your left. At this point you can&amp;rsquo;t see it&amp;rsquo;s picture but you can move your mouse there and drag your windows there. if your hardware dosnet support &lt;span class="caps"&gt;VIRTUAL1&lt;/span&gt;, you can also use &lt;span class="caps"&gt;VGA1&lt;/span&gt;  instead of &lt;span class="caps"&gt;VIRTUAL1&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Step 5:&lt;/strong&gt; Run xrandr to check if the new setup is&amp;nbsp;listed.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Step 6:&lt;/strong&gt; Export the invisible part of your desktop using &lt;span class="caps"&gt;VNC&lt;/span&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;x11vnc -clip 1920x1080+1920+0 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;Step 7:&lt;/strong&gt; &lt;span class="caps"&gt;VNC&lt;/span&gt; viewer
+Some kind of &lt;span class="caps"&gt;VNC&lt;/span&gt; viewer that supports showing the remote cursor is needed on your secondary laptop /&amp;nbsp;tablet.&lt;/p&gt;
+&lt;p&gt;Both of them needs to be on the same network and they need to be discover-able. After that you are asked the ip address of the remote computer. If your not happy with the performance of the setup you can use &lt;strong&gt;NoMachine&lt;/strong&gt; instead of &lt;span class="caps"&gt;VNC&lt;/span&gt; viewer, it uses &lt;span class="caps"&gt;NX&lt;/span&gt; protocoal and seems to be better optimised for low bandwidth and low performance device (the secondary laptop).
+This trick works on the more or less recent Intel drivers on an Optimus/Bumblebee system. It would be fun to know if this trick is also repeatable using other&amp;nbsp;drivers. &lt;/p&gt;
+&lt;p&gt;Once this is setup the parameters can be set in as a bash&amp;nbsp;script&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="ch"&gt;#!/bin/bash&lt;/span&gt;
+&lt;span class="c1"&gt;#contents of virtual_display_to_right.sh&lt;/span&gt;
+xrandr --newmode &lt;span class="s2"&gt;"1920x1080_60.00"&lt;/span&gt;  &lt;span class="m"&gt;172&lt;/span&gt;.80  &lt;span class="m"&gt;1920&lt;/span&gt; &lt;span class="m"&gt;2040&lt;/span&gt; &lt;span class="m"&gt;2248&lt;/span&gt; &lt;span class="m"&gt;2576&lt;/span&gt;  &lt;span class="m"&gt;1080&lt;/span&gt; &lt;span class="m"&gt;1081&lt;/span&gt; &lt;span class="m"&gt;1084&lt;/span&gt; &lt;span class="m"&gt;1118&lt;/span&gt;  -HSync +Vsync
+xrandr --addmode VIRTUAL1 1920x1080_60.00
+xrandr --output VIRTUAL1 --mode 1920x1080_60.00 --right-of eDP1
+xrandr
+x11vnc -clip 1920x1080+1920+0 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content><category term="Blog"></category><category term="VNC"></category><category term="Nomachine"></category><category term="Extend desktop"></category><category term="Linux"></category></entry><entry><title>git cheat-sheet</title><link href="https://ashwinschronicles.github.io/git-cheat-sheet" rel="alternate"></link><published>2019-04-17T00:00:00+05:30</published><updated>2019-04-17T00:00:00+05:30</updated><author><name>Ashwin</name></author><id>tag:ashwinschronicles.github.io,2019-04-17:/git-cheat-sheet</id><summary type="html">&lt;p&gt;This post is about&amp;nbsp;git&lt;/p&gt;</summary><content type="html">&lt;h1 id="quick-refresher"&gt;Quick Refresher&lt;a class="headerlink" href="#quick-refresher" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h1&gt;
+&lt;h2 id="initial-setup"&gt;Initial setup&lt;a class="headerlink" href="#initial-setup" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Open a terminal/shell and&amp;nbsp;type:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$ git config --global user.name &lt;span class="s2"&gt;"Your name here"&lt;/span&gt;
+$ git config --global user.email &lt;span class="s2"&gt;"your_email@example.com"&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;(Don&amp;rsquo;t type the &lt;code&gt;$&lt;/code&gt;; that just indicates that you&amp;rsquo;re doing this at the command&amp;nbsp;line.)&lt;/p&gt;
+&lt;p&gt;optionally&amp;nbsp;do:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$ git config --global color.ui &lt;span class="nb"&gt;true&lt;/span&gt;
+$ git config --global core.editor nano
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;The first of these will enable coloured output in the terminal; the second tells git that you want to use nano (a user friendly text editor). You can change the highlighted section with your editor of&amp;nbsp;choice!&lt;/p&gt;
+&lt;p&gt;Another way to do this is to edit the &lt;code&gt;.gitconfig&lt;/code&gt; file in your &lt;code&gt;home&lt;/code&gt; directory. The location of this file depends on the operating system you&amp;rsquo;re&amp;nbsp;using.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Set up ssh on your&amp;nbsp;computer. &lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Look to see if you have files &lt;code&gt;~/.ssh/id_rsa&lt;/code&gt; and &lt;code&gt;~/.ssh/id_rsa.pub&lt;/code&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;If not, create such public/private keys: Open a terminal/shell and&amp;nbsp;type:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;$ ssh-keygen -t rsa -C "your_email@example.com"&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Copy your public key (the contents of the newly-created &lt;code&gt;id_rsa.pub&lt;/code&gt; file) into your&amp;nbsp;clipboard.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Paste your ssh public key into your github account&amp;nbsp;settings.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Go to your github &lt;a href="https://github.com/settings/profile"&gt;Account&amp;nbsp;Settings&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Click &amp;ldquo;&lt;a href="https://github.com/settings/ssh"&gt;&lt;span class="caps"&gt;SSH&lt;/span&gt; Keys&lt;/a&gt;&amp;rdquo; on the&amp;nbsp;left.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Click &amp;ldquo;Add &lt;span class="caps"&gt;SSH&lt;/span&gt; Key&amp;rdquo; on the&amp;nbsp;right.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Add a label (like &amp;ldquo;My laptop&amp;rdquo;) and paste the public key into the big text&amp;nbsp;box.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;In a terminal/shell, type the following to test&amp;nbsp;it:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;$ ssh -T git@github.com&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;If it says something like the following, it&amp;nbsp;worked:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;Hi username! You've successfully authenticated, but Github does
+not provide shell access.&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="start-a-new-git-repository"&gt;Start a new git repository&lt;a class="headerlink" href="#start-a-new-git-repository" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Your first instinct, when you start to do something new, should be &lt;code&gt;git init&lt;/code&gt;. You&amp;rsquo;re starting to write a new paper, you&amp;rsquo;re writing a bit of code to do a computer simulation, you&amp;rsquo;re mucking around with some new data &amp;hellip; &lt;em&gt;anything&lt;/em&gt;: think &lt;code&gt;git init&lt;/code&gt;.&lt;/p&gt;
+&lt;h3 id="a-new-repo-from-scratch"&gt;A new repo from scratch&lt;a class="headerlink" href="#a-new-repo-from-scratch" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Say you&amp;rsquo;ve just got some data from a collaborator and are about to start exploring&amp;nbsp;it.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Create a directory to contain the&amp;nbsp;project.&lt;/li&gt;
+&lt;li&gt;Go into the new&amp;nbsp;directory.&lt;/li&gt;
+&lt;li&gt;Type &lt;code&gt;git init&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Write some&amp;nbsp;code.&lt;/li&gt;
+&lt;li&gt;Type &lt;code&gt;git add&lt;/code&gt; to add the files (see the &lt;a href="https://kbroman.org/github_tutorial/pages/routine.html"&gt;typical use page&lt;/a&gt;).&lt;/li&gt;
+&lt;li&gt;Type &lt;code&gt;git commit&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The first file to create (and add and commit) is probably a ReadMe file, either as plain text or with &lt;a href="https://daringfireball.net/projects/markdown/"&gt;Markdown&lt;/a&gt;, describing the&amp;nbsp;project.&lt;/p&gt;
+&lt;h3 id="a-new-repo-from-an-existing-project"&gt;A new repo from an existing project&lt;a class="headerlink" href="#a-new-repo-from-an-existing-project" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Say you&amp;rsquo;ve got an existing project that you want to start tracking with&amp;nbsp;git.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Go into the directory containing the&amp;nbsp;project.&lt;/li&gt;
+&lt;li&gt;Type &lt;code&gt;git init&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Type &lt;code&gt;git add&lt;/code&gt; to add all of the relevant&amp;nbsp;files.&lt;/li&gt;
+&lt;li&gt;You&amp;rsquo;ll probably want to create a &lt;code&gt;.gitignore&lt;/code&gt; file right away, to indicate all of the files you don&amp;rsquo;t want to track. Use &lt;code&gt;git add .gitignore&lt;/code&gt;,&amp;nbsp;too.&lt;/li&gt;
+&lt;li&gt;Type &lt;code&gt;git commit&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="connect-it-to-github"&gt;Connect it to github&lt;a class="headerlink" href="#connect-it-to-github" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;You&amp;rsquo;ve now got a local git repository. You can use git locally, like that, if you want. But if you want the thing to have a home on github, do the&amp;nbsp;following.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Go to &lt;a href="https://github.com/"&gt;github&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Log in to your&amp;nbsp;account.&lt;/li&gt;
+&lt;li&gt;Click the &lt;a href="https://github.com/new"&gt;new repository&lt;/a&gt; button in the top-right. You&amp;rsquo;ll have an option there to initialize the repository with a &lt;span class="caps"&gt;README&lt;/span&gt; file, but I suggest you  don&amp;rsquo;t do&amp;nbsp;it.&lt;/li&gt;
+&lt;li&gt;Click the &amp;ldquo;Create repository&amp;rdquo;&amp;nbsp;button.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Now, follow the second set of instructions shown on the screen, &amp;ldquo;Push an existing&amp;nbsp;repository&amp;hellip;&amp;rdquo;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$ git remote add origin git@github.com:username/new_repo
+$ git push -u origin master
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Actually, the first line of the instructions will usually&amp;nbsp;say&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$ git remote add origin https://github.com/username/new_repo
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;But I use &lt;code&gt;git@github.com:username/new_repo&lt;/code&gt; rather than &lt;code&gt;https://github.com/username/new_repo&lt;/code&gt;, as the former is for use with &lt;a href="https://en.wikipedia.org/wiki/Secure_Shell"&gt;ssh&lt;/a&gt;, if you set up ssh  then you won&amp;rsquo;t have to type your password every time you push things to github. If you use the latter construction, you&amp;rsquo;ll have to type your github password every time you push to&amp;nbsp;github.&lt;/p&gt;
+&lt;h2 id="often-used-commands_1"&gt;Often used commands&lt;a class="headerlink" href="#often-used-commands" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
+&lt;h3 id="add-and-commit"&gt;Add and commit&lt;a class="headerlink" href="#add-and-commit" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;After you&amp;rsquo;ve made some small modifications to your project and checked that they work, use &lt;code&gt;git add&lt;/code&gt; to indicate that they&amp;rsquo;re&amp;nbsp;ready.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$ git add R/modified.R man/modified.Rd
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Then use &lt;code&gt;git commit&lt;/code&gt; to add the modifications to the&amp;nbsp;repository.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$ git commit
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;A text editor (nano if you followed this tutorial) will open; add a short message describing the&amp;nbsp;changes.&lt;/p&gt;
+&lt;p&gt;To abandon your commit, exit the editor without adding text ( ctrl+x in case of nano&amp;nbsp;).&lt;/p&gt;
+&lt;p&gt;For a one-line commit message, you can just&amp;nbsp;type&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$ git commit -m &lt;span class="s2"&gt;"Fix such and such"&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;If you want to commit all of the modifications you&amp;rsquo;ve made, without having to explicitly &amp;ldquo;add&amp;rdquo; each file, you can skip the separate &lt;code&gt;add&lt;/code&gt; and &lt;code&gt;commit&lt;/code&gt; commands and just&amp;nbsp;type&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$ git commit -a
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3 id="push-to-github"&gt;Push to &lt;a href="https://github.com/"&gt;github&lt;/a&gt;&lt;a class="headerlink" href="#push-to-github" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;To push committed changes to github,&amp;nbsp;type&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$ git push
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;You don&amp;rsquo;t need to do this every time. Do it after you&amp;rsquo;ve completed a batch of changes that you&amp;rsquo;re thoroughly happy with and before you move on to something&amp;nbsp;else.&lt;/p&gt;
+&lt;p&gt;Once you&amp;rsquo;ve pushed a commit, it&amp;rsquo;s hard to take it away. If you&amp;rsquo;ve not pushed it yet, you &lt;em&gt;can&lt;/em&gt; go back and scrap it and not have it be part of your project&amp;rsquo;s&amp;nbsp;history.&lt;/p&gt;
+&lt;h3 id="status"&gt;Status&lt;a class="headerlink" href="#status" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;You&amp;rsquo;ve made some changes to a project, but you&amp;rsquo;re not sure what.&amp;nbsp;Type&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;git status&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;It&amp;rsquo;ll give you a list of files that have been changed, plus new files that haven&amp;rsquo;t been formally&amp;nbsp;added.&lt;/p&gt;
+&lt;h3 id="diff"&gt;Diff&lt;a class="headerlink" href="#diff" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Exactly what changes have you made?&amp;nbsp;Type&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;git diff&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Or to see your changes to a particular file,&amp;nbsp;type&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;git diff R/modified.R&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;It&amp;rsquo;ll show you which lines have been added and which have been&amp;nbsp;deleted.&lt;/p&gt;
+&lt;h3 id="gitignore"&gt;.gitignore&lt;a class="headerlink" href="#gitignore" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;The various files in your project directory that you&amp;rsquo;re not tracking in git should be indicated in a &lt;code&gt;.gitignore&lt;/code&gt; file.&lt;/p&gt;
+&lt;p&gt;You don&amp;rsquo;t &lt;em&gt;have&lt;/em&gt; to have a &lt;code&gt;.gitignore&lt;/code&gt; file, but if you don&amp;rsquo;t, those files will show up every time you type &lt;code&gt;git status&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Each subdirectory can have its own &lt;code&gt;.gitignore&lt;/code&gt; file,&amp;nbsp;too.&lt;/p&gt;
+&lt;p&gt;Also, you can have a global such in your home directory; I use &lt;code&gt;~/.gitignore_global&lt;/code&gt;, which&amp;nbsp;contains:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;*~&lt;/span&gt;
+&lt;span class="err"&gt;.*~&lt;/span&gt;
+&lt;span class="na"&gt;.DS_Store&lt;/span&gt;
+&lt;span class="na"&gt;.Rhistory&lt;/span&gt;
+&lt;span class="na"&gt;.RData&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;You have to tell git about the global &lt;code&gt;.gitignore&lt;/code&gt; file:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$ git config --global core.excludesfile ~/.gitignore_global
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Huge thanks to &lt;a href="https://kbroman.org/github_tutorial/"&gt;kbroman.org&lt;/a&gt; for his tutorials from where I have collated articles for this cheat sheet. you can check out his page for more detailed&amp;nbsp;workflow. &lt;/p&gt;</content><category term="Blog"></category><category term="git"></category><category term="github"></category></entry><entry><title>Make a Github Pages blog with Pelican</title><link href="https://ashwinschronicles.github.io/gh-pages-with-pelican" rel="alternate"></link><published>2018-12-29T23:20:09+05:30</published><updated>2020-06-16T11:24:11+05:30</updated><author><name>Ashwin</name></author><id>tag:ashwinschronicles.github.io,2018-12-29:/gh-pages-with-pelican</id><summary type="html">&lt;p&gt;Wake your own webbsite using Pelican static site generator  and host it on github&amp;nbsp;pages&lt;/p&gt;</summary><content type="html">&lt;p&gt;Github, worlds leading  hosting service for Git repositories  offers a simple, elegant website solution. It allows its users to  store page content in a git repository along with their&amp;nbsp;code.&lt;/p&gt;
 &lt;p&gt;In this blog post ill walk you through the process of setting up a website by combining Pelican with Github Pages. Pelican is a simple python utility that lets you create beautiful weblogs using just text files. In other words its a static-site generator. I have chosen Pelican over other static-site generators as Pelican unlike its counter parts is based on python hence initial  setup takes literally no&amp;nbsp;time.&lt;/p&gt;
 &lt;h2 id="setting-up-a-githubio-page"&gt;Setting up a github.io page&lt;a class="headerlink" href="#setting-up-a-githubio-page" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;To create your Github user page, log in to Github and create a  new repositorie username.github.io, as explained on Github pages. (Use your Github username for these repositories.) The  username.github.io repository will contain the output &lt;span class="caps"&gt;HTML&lt;/span&gt; files Pelican generates. To add the output directory as a submodule, initialize it with a &lt;span class="caps"&gt;README&lt;/span&gt;&amp;nbsp;file.&lt;/p&gt;
@@ -125,7 +311,7 @@ You will be asked for your Github login and password again. And&amp;hellip; voil
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;h3 id="automate-github-upload-process"&gt;Automate GitHub upload process&lt;a class="headerlink" href="#automate-github-upload-process" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;Create a file &lt;code&gt;up.sh&lt;/code&gt; in the  &lt;code&gt;web-sources&lt;/code&gt;&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;git add -A &lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt; git commit -a -m &lt;span class="s1"&gt;'$1'&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt; git push --all
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;git add -A &lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt; git commit -a -m &lt;span class="s2"&gt;""&lt;/span&gt;&lt;span class="nv"&gt;$1&lt;/span&gt;&lt;span class="s2"&gt;" &amp;amp;&amp;amp; git push --all&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Now whenever you want to upload sync the repo just do &lt;code&gt;bash up.sh "Comment"&lt;/code&gt; Note that the argument &amp;ldquo;Comment&amp;rdquo; should not contain&amp;nbsp;spaces.&lt;/p&gt;
 &lt;h3 id="download-themes"&gt;Download Themes&lt;a class="headerlink" href="#download-themes" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h3&gt;
@@ -157,10 +343,11 @@ You will be asked for your Github login and password again. And&amp;hellip; voil
 &lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;div&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
 {% endblock %}
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h3 id="process-for-new-articles"&gt;Process for new articles.&lt;a class="headerlink" href="#process-for-new-articles" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h3&gt;
+&lt;h1 id="process-for-new-articles_1"&gt;Process for new articles.&lt;a class="headerlink" href="#process-for-new-articles" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h1&gt;
 &lt;p&gt;Ones the setup is done, the contents of the folder &lt;code&gt;web-sources&lt;/code&gt; need not be generated again using the above procedure. All one has to do is place the article in the content folder then (after testing the website locally using &lt;code&gt;make devserver&lt;/code&gt;) then execute  &lt;code&gt;bash up.sh "Comment"&lt;/code&gt;  to sync the source branch and then do &lt;code&gt;make github&lt;/code&gt;&lt;/p&gt;
+&lt;h2 id="process-for-moving-to-a-different-machine"&gt;Process for moving to a different machine&lt;a class="headerlink" href="#process-for-moving-to-a-different-machine" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;If you are on a different machine or you have lost access to the &lt;code&gt;web-sources&lt;/code&gt; folder, you just have to make the virtual environment and then do git clone again.&amp;nbsp;i.e&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;virtualenv website
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;virtualenv website  
 &lt;span class="nb"&gt;cd&lt;/span&gt; website
 &lt;span class="nb"&gt;source&lt;/span&gt; bin/activate
 pip install pelican markdown typogrify ghp-import shovel
@@ -168,4 +355,8 @@ git clone https://github.com/YOUR_USERNAME/YOUR_USERNAME.github.io.git web-sourc
 &lt;span class="nb"&gt;cd&lt;/span&gt; web-sources
 git checkout -b &lt;span class="nb"&gt;source&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;This article just touches uppon getting a basic website up and running. More features that Pelican offers (like custom plugins)can be explored &lt;a href="http://docs.getpelican.com/en/3.6.3/content.html"&gt;here&lt;/a&gt;.&lt;/p&gt;</content><category term="Blog"></category><category term="Github"></category><category term="Pelican"></category><category term="gh-pages"></category></entry></feed>
+&lt;p&gt;This article just touches upon getting a basic website up and running. More features that Pelican offers (like custom plugins)can be explored &lt;a href="http://docs.getpelican.com/en/3.6.3/content.html"&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;h1 id="faqs-and-tips_1"&gt;FAQs and Tips&lt;a class="headerlink" href="#faqs-and-tips" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Separate slug (&lt;span class="caps"&gt;URL&lt;/span&gt;) words with a hyphen, or an underscore?&lt;/strong&gt; you should use a &lt;strong&gt;hyphen&lt;/strong&gt; for your &lt;span class="caps"&gt;SEO&lt;/span&gt; &lt;strong&gt;URLs&lt;/strong&gt;. Google treats a &lt;strong&gt;hyphen&lt;/strong&gt; as a word separator, but does not treat an &lt;strong&gt;underscore&lt;/strong&gt; that way. Google treats and &lt;strong&gt;underscore&lt;/strong&gt; as a word joiner &amp;mdash; so github_pages is the same as githubpages to&amp;nbsp;Google.&lt;/li&gt;
+&lt;/ul&gt;</content><category term="Blog"></category><category term="Github"></category><category term="Pelican"></category><category term="gh-pages"></category></entry></feed>
