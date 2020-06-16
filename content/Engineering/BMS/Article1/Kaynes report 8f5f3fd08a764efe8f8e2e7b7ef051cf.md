@@ -19,7 +19,12 @@ This is part 1 of a series on Battery management system design.
 
  The data presented here was  collected as a part of study based Internship at Kaynes Technology, Mysore.
 
-Most of the data here is my notes on the text book "Battery Management Systems, Volume I & II" by Gregory L. Plett along with his course. 
+Most of the data here is my notes on the following resources:
+
+*   "Battery Management Systems, Volume I & II" by Gregory L. Plett along with his course. 
+* "Advances in Battery Technologies  for Electric Vehicles" (Woodhead Publishing Series in Energy: Number 80)
+* "ELECTRIC VEHICLE BATTERY SYSTEMS" by Sandeep Dhameja
+* "Battery Reference Book" 3e by T.R Crompton.
 
 
 
