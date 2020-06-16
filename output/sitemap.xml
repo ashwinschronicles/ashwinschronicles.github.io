@@ -5,42 +5,42 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>/</loc>
-<lastmod>2020-06-16T12:00:55-00:00</lastmod>
+<lastmod>2020-06-16T12:30:27-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tags</loc>
-<lastmod>2020-06-16T12:00:55-00:00</lastmod>
+<lastmod>2020-06-16T12:30:27-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/categories</loc>
-<lastmod>2020-06-16T12:00:55-00:00</lastmod>
+<lastmod>2020-06-16T12:30:27-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/archives</loc>
-<lastmod>2020-06-16T12:00:55-00:00</lastmod>
+<lastmod>2020-06-16T12:30:27-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/search</loc>
-<lastmod>2020-06-16T12:00:55-00:00</lastmod>
+<lastmod>2020-06-16T12:30:27-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/404.html</loc>
-<lastmod>2020-06-16T12:00:55-00:00</lastmod>
+<lastmod>2020-06-16T12:30:27-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -76,6 +76,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>/Superconductivity</loc>
 <lastmod>2019-06-20T00:00:00+05:30</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>/git-cheat-sheet</loc>
+<lastmod>2019-04-17T00:00:00+05:30</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>

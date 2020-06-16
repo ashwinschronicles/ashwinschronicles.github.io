@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="/theme/css/style.min.css?fc5adb95">
+
+        <link rel="dns-prefetch" href="//fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+
+        <meta name="author" content="Ashwin" />
+
+        <meta name="description" content="This post is about git
+" />
+        <meta name="twitter:creator" content="@iamashwin99">
+        <meta property="og:type" content="article" />
+        <meta name="twitter:card" content="summary">
+
+<meta name="keywords" content="git, github, Blog, git,github" />
+
+<meta property="og:title" content="git cheat-sheet"/>
+<meta property="og:url" content="/git-cheat-sheet" />
+<meta property="og:description" content="This post is about git" />
+<meta property="og:site_name" content="Ashwin&#39;s Chronicles" />
+<meta property="og:article:author" content="Ashwin" />
+<meta property="og:article:published_time" content="2019-04-17T00:00:00+05:30" />
+<meta name="twitter:title" content="git cheat-sheet">
+<meta name="twitter:description" content="This post is about git">
+<meta property="og:image" content="/theme/images/final.png" />
+<meta name="twitter:image" content="/theme/images/final.png" >
+
+        <title>git cheat-sheet · Ashwin&#39;s Chronicles
+</title>
+        <link rel="shortcut icon" href="/theme/images/favicon.ico" type="image/x-icon" />
+        <link rel="icon" href="/theme/images/apple-touch-icon-152x152.png" type="image/png" />
+        <link rel="apple-touch-icon" href="/theme/images/apple-touch-icon.png"  type="image/png" />
+        <link rel="apple-touch-icon" sizes="57x57" href="/theme/images/apple-touch-icon-57x57.png" type="image/png" />
+        <link rel="apple-touch-icon" sizes="72x72" href="/theme/images/apple-touch-icon-72x72.png" type="image/png" />
+        <link rel="apple-touch-icon" sizes="76x76" href="/theme/images/apple-touch-icon-76x76.png" type="image/png" />
+        <link rel="apple-touch-icon" sizes="114x114" href="/theme/images/apple-touch-icon-114x114.png" type="image/png" />
+        <link rel="apple-touch-icon" sizes="120x120" href="/theme/images/apple-touch-icon-120x120.png" type="image/png" />
+        <link rel="apple-touch-icon" sizes="144x144" href="/theme/images/apple-touch-icon-144x144.png" type="image/png" />
+        <link rel="apple-touch-icon" sizes="152x152" href="/theme/images/apple-touch-icon-152x152.png" type="image/png" />
+        <link rel="apple-touch-icon" sizes="152x152" href="/theme/images/apple-touch-icon-180x180.png" type="image/png" />
+        <link href="/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Ashwin&#39;s Chronicles - Full Atom Feed" />
+
+
+    </head>
+    <body>
+        <div id="content">
+            <div class="navbar navbar-static-top">
+                <div class="navbar-inner">
+                    <div class="container-fluid">
+                        <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </a>
+                        <a class="brand" href="/"><span class=site-name><span style="color:#329A97;">Ashwin's</span> <span style="color:purple">Chronicles</span> </span></a>
+                        <div class="nav-collapse collapse">
+                            <ul class="nav pull-right top-menu">
+                                <li >
+                                    <a href=
+                                       "/"
+                                    >Home</a>
+                                </li>
+                                <li ><a href="/AboutMe">About&nbsp;Me</a></li>
+                                <li ><a href="/categories">Categories</a></li>
+                                <li ><a href="/tags">Tags</a></li>
+                                <li ><a href="/archives">Archives</a></li>
+                                <li><form class="navbar-search" action="/search" onsubmit="return validateForm(this.elements['q'].value);"> <input type="text" class="search-query" placeholder="Search" name="q" id="tipue_search_input"></form></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid">
+                <div class="row-fluid">
+                    <div class="span1"></div>
+                    <div class="span10">
+<article itemscope>
+<div class="row-fluid">
+    <header class="page-header span10 offset2">
+        <h1>
+            <a href="/git-cheat-sheet">
+                git&nbsp;cheat-sheet
+            </a>
+        </h1>
+    </header>
+</div>
+
+<div class="row-fluid">
+    <div class="span2 table-of-content">
+        <nav>
+        <h4>Contents</h4>
+        <div id="toc"><ul><li><a class="toc-href" href="#" title="git&nbsp;cheat-sheet">git&nbsp;cheat-sheet</a><ul><li><a class="toc-href" href="#quick-refresher" title="Quick Refresher&para;">Quick Refresher&para;</a><ul><li><a class="toc-href" href="#initial-setup" title="Initial setup&para;">Initial setup&para;</a></li><li><a class="toc-href" href="#start-a-new-git-repository" title="Start a new git repository&para;">Start a new git repository&para;</a><ul><li><a class="toc-href" href="#a-new-repo-from-scratch" title="A new repo from scratch&para;">A new repo from scratch&para;</a></li><li><a class="toc-href" href="#a-new-repo-from-an-existing-project" title="A new repo from an existing project&para;">A new repo from an existing project&para;</a></li><li><a class="toc-href" href="#connect-it-to-github" title="Connect it to github&para;">Connect it to github&para;</a></li></ul></li><li><a class="toc-href" href="#often-used-commands_1" title="Often used commands&para;">Often used commands&para;</a><ul><li><a class="toc-href" href="#add-and-commit" title="Add and commit&para;">Add and commit&para;</a></li><li><a class="toc-href" href="#push-to-github" title="Push to github&para;">Push to github&para;</a></li><li><a class="toc-href" href="#status" title="Status&para;">Status&para;</a></li><li><a class="toc-href" href="#diff" title="Diff&para;">Diff&para;</a></li><li><a class="toc-href" href="#gitignore" title=".gitignore&para;">.gitignore&para;</a></li></ul></li></ul></li></ul></li></ul></div>
+        </nav>
+    </div>
+    <div class="span8 article-content">
+            
+            <h1 id="quick-refresher">Quick Refresher<a class="headerlink" href="#quick-refresher" title="Permanent link">&para;</a></h1>
+<h2 id="initial-setup">Initial setup<a class="headerlink" href="#initial-setup" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Open a terminal/shell and&nbsp;type:</li>
+</ul>
+<div class="highlight"><pre><span></span><code>$ git config --global user.name <span class="s2">"Your name here"</span>
+$ git config --global user.email <span class="s2">"your_email@example.com"</span>
+</code></pre></div>
+<p>(Don&rsquo;t type the <code>$</code>; that just indicates that you&rsquo;re doing this at the command&nbsp;line.)</p>
+<p>optionally&nbsp;do:</p>
+<div class="highlight"><pre><span></span><code>$ git config --global color.ui <span class="nb">true</span>
+$ git config --global core.editor nano
+</code></pre></div>
+<p>The first of these will enable coloured output in the terminal; the second tells git that you want to use nano (a user friendly text editor). You can change the highlighted section with your editor of&nbsp;choice!</p>
+<p>Another way to do this is to edit the <code>.gitconfig</code> file in your <code>home</code> directory. The location of this file depends on the operating system you&rsquo;re&nbsp;using.</p>
+<ul>
+<li>
+<p>Set up ssh on your&nbsp;computer. </p>
+</li>
+<li>
+<p>Look to see if you have files <code>~/.ssh/id_rsa</code> and <code>~/.ssh/id_rsa.pub</code>.</p>
+</li>
+<li>
+<p>If not, create such public/private keys: Open a terminal/shell and&nbsp;type:</p>
+<p><code>$ ssh-keygen -t rsa -C "your_email@example.com"</code></p>
+</li>
+<li>
+<p>Copy your public key (the contents of the newly-created <code>id_rsa.pub</code> file) into your&nbsp;clipboard.</p>
+</li>
+<li>
+<p>Paste your ssh public key into your github account&nbsp;settings.</p>
+</li>
+<li>
+<p>Go to your github <a href="https://github.com/settings/profile">Account&nbsp;Settings</a></p>
+</li>
+<li>
+<p>Click &ldquo;<a href="https://github.com/settings/ssh"><span class="caps">SSH</span> Keys</a>&rdquo; on the&nbsp;left.</p>
+</li>
+<li>
+<p>Click &ldquo;Add <span class="caps">SSH</span> Key&rdquo; on the&nbsp;right.</p>
+</li>
+<li>
+<p>Add a label (like &ldquo;My laptop&rdquo;) and paste the public key into the big text&nbsp;box.</p>
+</li>
+<li>
+<p>In a terminal/shell, type the following to test&nbsp;it:</p>
+<p><code>$ ssh -T git@github.com</code></p>
+</li>
+<li>
+<p>If it says something like the following, it&nbsp;worked:</p>
+<p><code>Hi username! You've successfully authenticated, but Github does
+not provide shell access.</code></p>
+</li>
+</ul>
+<h2 id="start-a-new-git-repository">Start a new git repository<a class="headerlink" href="#start-a-new-git-repository" title="Permanent link">&para;</a></h2>
+<p>Your first instinct, when you start to do something new, should be <code>git init</code>. You&rsquo;re starting to write a new paper, you&rsquo;re writing a bit of code to do a computer simulation, you&rsquo;re mucking around with some new data &hellip; <em>anything</em>: think <code>git init</code>.</p>
+<h3 id="a-new-repo-from-scratch">A new repo from scratch<a class="headerlink" href="#a-new-repo-from-scratch" title="Permanent link">&para;</a></h3>
+<p>Say you&rsquo;ve just got some data from a collaborator and are about to start exploring&nbsp;it.</p>
+<ul>
+<li>Create a directory to contain the&nbsp;project.</li>
+<li>Go into the new&nbsp;directory.</li>
+<li>Type <code>git init</code>.</li>
+<li>Write some&nbsp;code.</li>
+<li>Type <code>git add</code> to add the files (see the <a href="https://kbroman.org/github_tutorial/pages/routine.html">typical use page</a>).</li>
+<li>Type <code>git commit</code>.</li>
+</ul>
+<p>The first file to create (and add and commit) is probably a ReadMe file, either as plain text or with <a href="https://daringfireball.net/projects/markdown/">Markdown</a>, describing the&nbsp;project.</p>
+<h3 id="a-new-repo-from-an-existing-project">A new repo from an existing project<a class="headerlink" href="#a-new-repo-from-an-existing-project" title="Permanent link">&para;</a></h3>
+<p>Say you&rsquo;ve got an existing project that you want to start tracking with&nbsp;git.</p>
+<ul>
+<li>Go into the directory containing the&nbsp;project.</li>
+<li>Type <code>git init</code>.</li>
+<li>Type <code>git add</code> to add all of the relevant&nbsp;files.</li>
+<li>You&rsquo;ll probably want to create a <code>.gitignore</code> file right away, to indicate all of the files you don&rsquo;t want to track. Use <code>git add .gitignore</code>,&nbsp;too.</li>
+<li>Type <code>git commit</code>.</li>
+</ul>
+<h3 id="connect-it-to-github">Connect it to github<a class="headerlink" href="#connect-it-to-github" title="Permanent link">&para;</a></h3>
+<p>You&rsquo;ve now got a local git repository. You can use git locally, like that, if you want. But if you want the thing to have a home on github, do the&nbsp;following.</p>
+<ul>
+<li>Go to <a href="https://github.com/">github</a>.</li>
+<li>Log in to your&nbsp;account.</li>
+<li>Click the <a href="https://github.com/new">new repository</a> button in the top-right. You&rsquo;ll have an option there to initialize the repository with a <span class="caps">README</span> file, but I suggest you  don&rsquo;t do&nbsp;it.</li>
+<li>Click the &ldquo;Create repository&rdquo;&nbsp;button.</li>
+</ul>
+<p>Now, follow the second set of instructions shown on the screen, &ldquo;Push an existing&nbsp;repository&hellip;&rdquo;</p>
+<div class="highlight"><pre><span></span><code>$ git remote add origin git@github.com:username/new_repo
+$ git push -u origin master
+</code></pre></div>
+<p>Actually, the first line of the instructions will usually&nbsp;say</p>
+<div class="highlight"><pre><span></span><code>$ git remote add origin https://github.com/username/new_repo
+</code></pre></div>
+<p>But I use <code>git@github.com:username/new_repo</code> rather than <code>https://github.com/username/new_repo</code>, as the former is for use with <a href="https://en.wikipedia.org/wiki/Secure_Shell">ssh</a>, if you set up ssh  then you won&rsquo;t have to type your password every time you push things to github. If you use the latter construction, you&rsquo;ll have to type your github password every time you push to&nbsp;github.</p>
+<h2 id="often-used-commands_1">Often used commands<a class="headerlink" href="#often-used-commands" title="Permanent link">&para;</a></h2>
+<h3 id="add-and-commit">Add and commit<a class="headerlink" href="#add-and-commit" title="Permanent link">&para;</a></h3>
+<p>After you&rsquo;ve made some small modifications to your project and checked that they work, use <code>git add</code> to indicate that they&rsquo;re&nbsp;ready.</p>
+<div class="highlight"><pre><span></span><code>$ git add R/modified.R man/modified.Rd
+</code></pre></div>
+<p>Then use <code>git commit</code> to add the modifications to the&nbsp;repository.</p>
+<div class="highlight"><pre><span></span><code>$ git commit
+</code></pre></div>
+<p>A text editor (nano if you followed this tutorial) will open; add a short message describing the&nbsp;changes.</p>
+<p>To abandon your commit, exit the editor without adding text ( ctrl+x in case of nano&nbsp;).</p>
+<p>For a one-line commit message, you can just&nbsp;type</p>
+<div class="highlight"><pre><span></span><code>$ git commit -m <span class="s2">"Fix such and such"</span>
+</code></pre></div>
+<p>If you want to commit all of the modifications you&rsquo;ve made, without having to explicitly &ldquo;add&rdquo; each file, you can skip the separate <code>add</code> and <code>commit</code> commands and just&nbsp;type</p>
+<div class="highlight"><pre><span></span><code>$ git commit -a
+</code></pre></div>
+<h3 id="push-to-github">Push to <a href="https://github.com/">github</a><a class="headerlink" href="#push-to-github" title="Permanent link">&para;</a></h3>
+<p>To push committed changes to github,&nbsp;type</p>
+<div class="highlight"><pre><span></span><code>$ git push
+</code></pre></div>
+<p>You don&rsquo;t need to do this every time. Do it after you&rsquo;ve completed a batch of changes that you&rsquo;re thoroughly happy with and before you move on to something&nbsp;else.</p>
+<p>Once you&rsquo;ve pushed a commit, it&rsquo;s hard to take it away. If you&rsquo;ve not pushed it yet, you <em>can</em> go back and scrap it and not have it be part of your project&rsquo;s&nbsp;history.</p>
+<h3 id="status">Status<a class="headerlink" href="#status" title="Permanent link">&para;</a></h3>
+<p>You&rsquo;ve made some changes to a project, but you&rsquo;re not sure what.&nbsp;Type</p>
+<div class="highlight"><pre><span></span><code><span class="err">git status</span>
+</code></pre></div>
+<p>It&rsquo;ll give you a list of files that have been changed, plus new files that haven&rsquo;t been formally&nbsp;added.</p>
+<h3 id="diff">Diff<a class="headerlink" href="#diff" title="Permanent link">&para;</a></h3>
+<p>Exactly what changes have you made?&nbsp;Type</p>
+<div class="highlight"><pre><span></span><code><span class="err">git diff</span>
+</code></pre></div>
+<p>Or to see your changes to a particular file,&nbsp;type</p>
+<div class="highlight"><pre><span></span><code><span class="err">git diff R/modified.R</span>
+</code></pre></div>
+<p>It&rsquo;ll show you which lines have been added and which have been&nbsp;deleted.</p>
+<h3 id="gitignore">.gitignore<a class="headerlink" href="#gitignore" title="Permanent link">&para;</a></h3>
+<p>The various files in your project directory that you&rsquo;re not tracking in git should be indicated in a <code>.gitignore</code> file.</p>
+<p>You don&rsquo;t <em>have</em> to have a <code>.gitignore</code> file, but if you don&rsquo;t, those files will show up every time you type <code>git status</code>.</p>
+<p>Each subdirectory can have its own <code>.gitignore</code> file,&nbsp;too.</p>
+<p>Also, you can have a global such in your home directory; I use <code>~/.gitignore_global</code>, which&nbsp;contains:</p>
+<div class="highlight"><pre><span></span><code><span class="err">*~</span>
+<span class="err">.*~</span>
+<span class="na">.DS_Store</span>
+<span class="na">.Rhistory</span>
+<span class="na">.RData</span>
+</code></pre></div>
+<p>You have to tell git about the global <code>.gitignore</code> file:</p>
+<div class="highlight"><pre><span></span><code>$ git config --global core.excludesfile ~/.gitignore_global
+</code></pre></div>
+<p>Huge thanks to <a href="https://kbroman.org/github_tutorial/">kbroman.org</a> for his tutorials from where I have collated articles for this cheat sheet. you can check out his page for more detailed&nbsp;workflow. </p>
+
+
+            
+
+
+<div class="applause_button">
+    <applause-button url=/git-cheat-sheet> </applause-button>
+</div>
+
+
+                <p id="post-share-links">
+    Like this post? Share on:
+      <a href="https://twitter.com/intent/tweet?text=git%C2%A0cheat-sheet&url=/git-cheat-sheet&via=iamashwin99&hashtags=git,github" target="_blank" rel="nofollow noopener noreferrer" title="Share on Twitter">Twitter</a>
+ ❄       <a href="https://www.facebook.com/sharer/sharer.php?u=/git-cheat-sheet" target="_blank" rel="nofollow noopener noreferrer" title="Share on Facebook">Facebook</a>
+ ❄       <a href="https://www.reddit.com/submit?url=/git-cheat-sheet&title=git%C2%A0cheat-sheet" target="_blank" rel="nofollow noopener noreferrer" title="Share on Reddit">Reddit</a>
+ ❄       <a href="https://www.linkedin.com/shareArticle?mini=true&url=/git-cheat-sheet&title=git%C2%A0cheat-sheet&summary=This%20post%20is%20about%C2%A0git&source=/git-cheat-sheet" target="_blank" rel="nofollow noopener noreferrer" title="Share on LinkedIn">LinkedIn</a>
+ ❄       <a href="mailto:?subject=git%C2%A0cheat-sheet&amp;body=/git-cheat-sheet" target="_blank" rel="nofollow noopener noreferrer" title="Share via Email">Email</a>
+
+            
+            
+
+
+
+
+
+
+
+            <hr/>
+<section>
+    <h2>Keep Reading</h2>
+<ul class="related-posts-list">
+<li><a href="/gh-pages-with-pelican" title="Make a Github Pages blog with Pelican">Make a Github Pages blog with Pelican</a></li>
+</ul>
+<hr />
+</section>
+            <aside>
+            <nav>
+            <ul class="articles-timeline">
+                <li class="previous-article">« <a href="/gh-pages-with-pelican" title="Previous: Make a Github Pages blog with Pelican">Make a Github Pages blog with Pelican</a></li>
+                <li class="next-article"><a href="/Superconductivity" title="Next: Superconductivity">Superconductivity</a> »</li>
+            </ul>
+            </nav>
+            </aside>
+        </div>
+        <section id="article-sidebar" class="span2">
+            <h4>Published</h4>
+            <time itemprop="dateCreated" datetime="2019-04-17T00:00:00+05:30">Apr 17, 2019</time>
+            <h4>Category</h4>
+            <a class="category-link" href="/categories#blog-ref">Blog</a>
+            <h4>Tags</h4>
+            <ul class="list-of-tags tags-in-article">
+                <li><a href="/tags#git-ref">git
+                    <span class="superscript">1</span>
+</a></li>
+                <li><a href="/tags#github-ref">github
+                    <span class="superscript">2</span>
+</a></li>
+            </ul>
+<h4>Stay in Touch</h4>
+<div id="sidebar-social-link">
+    <a href="mailto:ashwinkumar.k.rao@gmail.com" title="My Email Address" target="_blank" rel="nofollow noopener noreferrer">
+        <svg xmlns="http://www.w3.org/2000/svg" aria-label="Mail" role="img" viewBox="0 0 512 512"><rect width="512" height="512" rx="15%" fill="#328cff"/><path d="m250 186c-46 0-69 35-69 74 0 44 29 72 68 72 43 0 73-32 73-75 0-44-34-71-72-71zm-1-37c30 0 57 13 77 33 0-22 35-22 35 1v150c-1 10 10 16 16 9 25-25 54-128-14-187-64-56-149-47-195-15-48 33-79 107-49 175 33 76 126 99 182 76 28-12 41 26 12 39-45 19-168 17-225-82-38-68-36-185 67-248 78-46 182-33 244 32 66 69 62 197-2 246-28 23-71 1-71-32v-11c-20 20-47 32-77 32-57 0-108-51-108-108 0-58 51-110 108-110" fill="#fff"/></svg>
+    </a>
+    <a href="/feeds/all.atom.xml" title="" target="_blank" rel="nofollow noopener noreferrer">
+        <svg xmlns="http://www.w3.org/2000/svg" aria-label="RSS" role="img" viewBox="0 0 512 512"><rect width="512" height="512" rx="15%" fill="#f80"/><circle cx="145" cy="367" r="35" fill="#fff"/><path fill="none" stroke="#fff" stroke-width="60" d="M109 241c89 0 162 73 162 162M109 127c152 0 276 124 276 276"/></svg>
+    </a>
+    <a href="https://www.facebook.com/iamashwin99" title="" target="_blank" rel="nofollow noopener noreferrer">
+        <svg xmlns="http://www.w3.org/2000/svg" aria-label="Facebook" role="img" viewBox="0 0 512 512"><rect width="512" height="512" rx="15%" fill="#1877f2"/><path d="M355.6 330l11.4-74h-71v-48c0-20.2 9.9-40 41.7-40H370v-63s-29.3-5-57.3-5c-58.5 0-96.7 35.4-96.7 99.6V256h-65v74h65v182h80V330h59.6z" fill="#fff"/></svg>
+    </a>
+    <a href="https://www.linkedin.com/in/ashwin-k-4854b8121/" title="" target="_blank" rel="nofollow noopener noreferrer">
+        <svg xmlns="http://www.w3.org/2000/svg" aria-label="LinkedIn" role="img" viewBox="0 0 512 512" fill="#fff"><rect width="512" height="512" rx="15%" fill="#0077b5"/><circle cx="142" cy="138" r="37"/><path stroke="#fff" stroke-width="66" d="M244 194v198M142 194v198"/><path d="M276 282c0-20 13-40 36-40 24 0 33 18 33 45v105h66V279c0-61-32-89-76-89-34 0-51 19-59 32"/></svg>
+    </a>
+</div>
+            
+
+
+
+
+
+            
+
+
+
+<div id="mc-embed-signup">
+<!-- BEGIN FreeLists WEB FORM -->
+<form action="https://www.freelists.org/list/ashwinschronicles@freelists.org" target="_blank">
+<h4>Get New Release Alert</h4>
+  <input type="submit" value="Notify me" class="button">
+</form>
+<!-- END FreeLists WEB FORM -->
+</div>
+
+
+
+        </section>
+</div>
+</article>
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe.
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides.
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo https://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>                    </div>
+                    <div class="span1"></div>
+                </div>
+            </div>
+        </div>
+<footer>
+    <div>
+        All articles written by me in this website are licensed under <a rel="license" 
+    href="http://creativecommons.org/licenses/by/4.0/">
+    Creative Commons Attribution 4.0 International License</a>.
+    </div>
+
+
+
+
+    <div id="fpowered">
+        Powered by: <a href="http://getpelican.com/" title="Pelican Home Page" target="_blank" rel="nofollow noopener noreferrer">Pelican</a>
+        Theme: <a href="https://elegant.oncrashreboot.com/" title="Theme Elegant Home Page" target="_blank" rel="nofollow noopener noreferrer">Elegant</a>
+    </div>
+</footer>            <script src="//code.jquery.com/jquery.min.js"></script>
+        <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+        <script src="/theme/js/elegant.prod.9e9d5ce754.js"></script>
+        <script>
+            function validateForm(query)
+            {
+                return (query.length > 0);
+            }
+        </script>
+
+    <script>
+    (function () {
+        if (window.location.hash.match(/^#comment-\d+$/)) {
+            $('#comment_thread').collapse('show');
+        }
+    })();
+    window.onhashchange=function(){
+        if (window.location.hash.match(/^#comment-\d+$/))
+            window.location.reload(true);
+    }
+    $('#comment_thread').on('shown', function () {
+        var link = document.getElementById('comment-accordion-toggle');
+        var old_innerHTML = link.innerHTML;
+        $(link).fadeOut(200, function() {
+            $(this).text('Click here to hide comments').fadeIn(200);
+        });
+        $('#comment_thread').on('hidden', function () {
+            $(link).fadeOut(200, function() {
+                $(this).text(old_innerHTML).fadeIn(200);
+            });
+        })
+    })
+</script>
+
+    </body>
+    <!-- Theme: Elegant built for Pelican
+        License : MIT -->
+</html>

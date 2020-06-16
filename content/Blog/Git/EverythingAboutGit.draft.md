@@ -2,7 +2,6 @@
 title: git cheat-sheet
 date: 2019-04-17
 tags: git,github
-status: hidden
 category:Blog
 slug:git-cheat-sheet
 author: Ashwin
