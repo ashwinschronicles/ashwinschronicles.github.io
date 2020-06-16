@@ -4,98 +4,105 @@ xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitem
 xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
-<loc>https://ashwinschronicles.github.io/</loc>
-<lastmod>2020-06-16T11:08:50-00:00</lastmod>
+<loc>/</loc>
+<lastmod>2020-06-16T12:00:55-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://ashwinschronicles.github.io/tags</loc>
-<lastmod>2020-06-16T11:08:50-00:00</lastmod>
+<loc>/tags</loc>
+<lastmod>2020-06-16T12:00:55-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://ashwinschronicles.github.io/categories</loc>
-<lastmod>2020-06-16T11:08:50-00:00</lastmod>
+<loc>/categories</loc>
+<lastmod>2020-06-16T12:00:55-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://ashwinschronicles.github.io/archives</loc>
-<lastmod>2020-06-16T11:08:50-00:00</lastmod>
+<loc>/archives</loc>
+<lastmod>2020-06-16T12:00:55-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://ashwinschronicles.github.io/search</loc>
-<lastmod>2020-06-16T11:08:50-00:00</lastmod>
+<loc>/search</loc>
+<lastmod>2020-06-16T12:00:55-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://ashwinschronicles.github.io/404.html</loc>
-<lastmod>2020-06-16T11:08:50-00:00</lastmod>
+<loc>/404.html</loc>
+<lastmod>2020-06-16T12:00:55-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://ashwinschronicles.github.io/AboutMe</loc>
-<lastmod>2020-03-22T18:45:14+05:30</lastmod>
+<loc>/AboutMe</loc>
+<lastmod>2018-06-18T00:00:00+05:30</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://ashwinschronicles.github.io/BMS_for_an_EV_intro</loc>
+<loc>/BMS_for_an_EV_intro</loc>
 <lastmod>2020-06-10T00:00:00+05:30</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://ashwinschronicles.github.io/analog-discovery-2-labview-home-bundle-review</loc>
+<loc>/extending-desktop-to-another-device-over-vnc</loc>
+<lastmod>2020-02-05T00:00:00+05:30</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>/analog-discovery-2-labview-home-bundle-review</loc>
 <lastmod>2019-07-13T00:00:00+05:30</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://ashwinschronicles.github.io/Superconductivity</loc>
-<lastmod>2020-03-28T17:15:57+05:30</lastmod>
+<loc>/Superconductivity</loc>
+<lastmod>2019-06-20T00:00:00+05:30</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://ashwinschronicles.github.io/qhe</loc>
-<lastmod>2020-03-28T17:15:57+05:30</lastmod>
+<loc>/gh-pages-with-pelican</loc>
+<lastmod>2019-01-01T00:00:00+05:30</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://ashwinschronicles.github.io/gh-pages-with-pelican</loc>
-<lastmod>2020-03-28T17:15:57+05:30</lastmod>
+<loc>/qhe</loc>
+<lastmod>2019-01-01T00:00:00+05:30</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://ashwinschronicles.github.io/Intro-to-IoT</loc>
+<loc>/Intro-to-IoT</loc>
 <lastmod>2018-07-12T00:00:00+05:30</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://ashwinschronicles.github.io/arduino-labview-review</loc>
+<loc>/arduino-labview-review</loc>
 <lastmod>2017-12-15T00:00:00+05:30</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
