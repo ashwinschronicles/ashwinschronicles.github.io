@@ -1,11 +1,12 @@
+---
 Title:Make a Github Pages blog with Pelican
 Date: 2019-1-1
 Tags: Github,Pelican,gh-pages
 Category:Blog
 Slug: gh-pages-with-pelican
 Author: Ashwin
-Summary: Nothing Much
-
+Summary: Wake your own webbsite using Pelican static site generator  and host it on github pages
+---
 
 Github, worlds leading  hosting service for Git repositories  offers a simple, elegant website solution. It allows its users to  store page content in a git repository along with their code.
 
@@ -168,7 +169,7 @@ nosetests.xml
 ### Automate GitHub upload process
 Create a file `up.sh` in the  `web-sources`
 ```bash
-git add -A && git commit -a -m '$1' && git push --all
+git add -A && git commit -a -m ""$1" && git push --all
 ```
 Now whenever you want to upload sync the repo just do `bash up.sh "Comment"` Note that the argument "Comment" should not contain spaces.
 
@@ -218,14 +219,16 @@ Create home.html or use page override feature to use a Markdown page as your hom
 
 
 
-### Process for new articles.
+# Process for new articles.
 
 Ones the setup is done, the contents of the folder `web-sources` need not be generated again using the above procedure. All one has to do is place the article in the content folder then (after testing the website locally using `make devserver`) then execute  `bash up.sh "Comment"`  to sync the source branch and then do `make github`
+
+## Process for moving to a different machine
 
 If you are on a different machine or you have lost access to the `web-sources` folder, you just have to make the virtual environment and then do git clone again. i.e
 
 ~~~bash
-virtualenv website
+virtualenv website  
 cd website
 source bin/activate
 pip install pelican markdown typogrify ghp-import shovel
@@ -234,7 +237,10 @@ cd web-sources
 git checkout -b source
 ~~~
 
-This article just touches uppon getting a basic website up and running. More features that Pelican offers (like custom plugins)can be explored [here](http://docs.getpelican.com/en/3.6.3/content.html).
+This article just touches upon getting a basic website up and running. More features that Pelican offers (like custom plugins)can be explored [here](http://docs.getpelican.com/en/3.6.3/content.html).
 
 
 
+# FAQs and Tips
+
+* **Separate slug (URL) words with a hyphen, or an underscore?** you should use a **hyphen** for your SEO **URLs**. Google treats a **hyphen** as a word separator, but does not treat an **underscore** that way. Google treats and **underscore** as a word joiner — so github_pages is the same as githubpages to Google.

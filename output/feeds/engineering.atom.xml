@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom"><title>Ashwin's Chronicles - Engineering</title><link href="https://ashwinschronicles.github.io/" rel="alternate"></link><link href="https://ashwinschronicles.github.io/feeds/engineering.atom.xml" rel="self"></link><id>https://ashwinschronicles.github.io/</id><updated>2020-06-10T00:00:00+05:30</updated><entry><title>Battery Management System for an xEV - Part 1</title><link href="https://ashwinschronicles.github.io/BMS_for_an_EV_intro" rel="alternate"></link><published>2020-05-25T00:00:00+05:30</published><updated>2020-06-10T00:00:00+05:30</updated><author><name>Ashwin</name></author><id>tag:ashwinschronicles.github.io,2020-05-25:/BMS_for_an_EV_intro</id><summary type="html">&lt;p&gt;This post is about information gathered on designing a &lt;span class="caps"&gt;BMS&lt;/span&gt; for a&amp;nbsp;xEV&lt;/p&gt;</summary><content type="html">&lt;p&gt;This is part 1 of a series on Battery management system&amp;nbsp;design.&lt;/p&gt;
 &lt;p&gt;The data presented here was  collected as a part of study based Internship at Kaynes Technology,&amp;nbsp;Mysore.&lt;/p&gt;
-&lt;p&gt;Most of the data here is my notes on the text book &amp;ldquo;Battery Management Systems, Volume I &lt;span class="amp"&gt;&amp;amp;&lt;/span&gt; &lt;span class="caps"&gt;II&lt;/span&gt;&amp;rdquo; by Gregory L. Plett along with his&amp;nbsp;course. &lt;/p&gt;
+&lt;p&gt;Most of the data here is my notes on the following&amp;nbsp;resources:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class="dquo"&gt;&amp;ldquo;&lt;/span&gt;Battery Management Systems, Volume I &lt;span class="amp"&gt;&amp;amp;&lt;/span&gt; &lt;span class="caps"&gt;II&lt;/span&gt;&amp;rdquo; by Gregory L. Plett along with his&amp;nbsp;course. &lt;/li&gt;
+&lt;li&gt;&lt;span class="dquo"&gt;&amp;ldquo;&lt;/span&gt;Advances in Battery Technologies  for Electric Vehicles&amp;rdquo; (Woodhead Publishing Series in Energy: Number&amp;nbsp;80)&lt;/li&gt;
+&lt;li&gt;&lt;span class="dquo"&gt;&amp;ldquo;&lt;/span&gt;&lt;span class="caps"&gt;ELECTRIC&lt;/span&gt; &lt;span class="caps"&gt;VEHICLE&lt;/span&gt; &lt;span class="caps"&gt;BATTERY&lt;/span&gt; &lt;span class="caps"&gt;SYSTEMS&lt;/span&gt;&amp;rdquo; by Sandeep&amp;nbsp;Dhameja&lt;/li&gt;
+&lt;li&gt;&lt;span class="dquo"&gt;&amp;ldquo;&lt;/span&gt;Battery Reference Book&amp;rdquo; 3e by T.R&amp;nbsp;Crompton.&lt;/li&gt;
+&lt;/ul&gt;
 &lt;h1 id="basic-terminologies"&gt;Basic terminologies&lt;a class="headerlink" href="#basic-terminologies" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;Batteries and battery packs are made up from groups of cells wired in series, parallel or a combination of&amp;nbsp;them. &lt;/li&gt;

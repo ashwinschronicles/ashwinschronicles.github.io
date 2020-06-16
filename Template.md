@@ -4,7 +4,7 @@ date: 2017-12-15
 tags: Arduino,LabVIEW,Review
 status: hidden
 category:Engineering
-slug:arduino-labview-review
+slug:extending_desktop-to-another-device-over-vnc
 author: Ashwin
 summary: This post is about Interfacing Arduino Mega with LabVIEW
 subtitle: Bla

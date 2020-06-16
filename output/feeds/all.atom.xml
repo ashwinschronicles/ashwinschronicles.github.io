@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Ashwin's Chronicles</title><link href="/" rel="alternate"></link><link href="/feeds/all.atom.xml" rel="self"></link><id>/</id><updated>2020-06-10T00:00:00+05:30</updated><entry><title>Battery Management System for an xEV - Part 1</title><link href="/BMS_for_an_EV_intro" rel="alternate"></link><published>2020-05-25T00:00:00+05:30</published><updated>2020-06-10T00:00:00+05:30</updated><author><name>Ashwin</name></author><id>tag:None,2020-05-25:/BMS_for_an_EV_intro</id><summary type="html">&lt;p&gt;This post is about information gathered on designing a &lt;span class="caps"&gt;BMS&lt;/span&gt; for a&amp;nbsp;xEV&lt;/p&gt;</summary><content type="html">&lt;p&gt;This is part 1 of a series on Battery management system&amp;nbsp;design.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Ashwin's Chronicles</title><link href="https://ashwinschronicles.github.io/" rel="alternate"></link><link href="https://ashwinschronicles.github.io/feeds/all.atom.xml" rel="self"></link><id>https://ashwinschronicles.github.io/</id><updated>2020-06-10T00:00:00+05:30</updated><entry><title>Battery Management System for an xEV - Part 1</title><link href="https://ashwinschronicles.github.io/BMS_for_an_EV_intro" rel="alternate"></link><published>2020-05-25T00:00:00+05:30</published><updated>2020-06-10T00:00:00+05:30</updated><author><name>Ashwin</name></author><id>tag:ashwinschronicles.github.io,2020-05-25:/BMS_for_an_EV_intro</id><summary type="html">&lt;p&gt;This post is about information gathered on designing a &lt;span class="caps"&gt;BMS&lt;/span&gt; for a&amp;nbsp;xEV&lt;/p&gt;</summary><content type="html">&lt;p&gt;This is part 1 of a series on Battery management system&amp;nbsp;design.&lt;/p&gt;
 &lt;p&gt;The data presented here was  collected as a part of study based Internship at Kaynes Technology,&amp;nbsp;Mysore.&lt;/p&gt;
-&lt;p&gt;Most of the data here is my notes on the text book &amp;ldquo;Battery Management Systems, Volume I &lt;span class="amp"&gt;&amp;amp;&lt;/span&gt; &lt;span class="caps"&gt;II&lt;/span&gt;&amp;rdquo; by Gregory L. Plett along with his&amp;nbsp;course. &lt;/p&gt;
+&lt;p&gt;Most of the data here is my notes on the following&amp;nbsp;resources:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class="dquo"&gt;&amp;ldquo;&lt;/span&gt;Battery Management Systems, Volume I &lt;span class="amp"&gt;&amp;amp;&lt;/span&gt; &lt;span class="caps"&gt;II&lt;/span&gt;&amp;rdquo; by Gregory L. Plett along with his&amp;nbsp;course. &lt;/li&gt;
+&lt;li&gt;&lt;span class="dquo"&gt;&amp;ldquo;&lt;/span&gt;Advances in Battery Technologies  for Electric Vehicles&amp;rdquo; (Woodhead Publishing Series in Energy: Number&amp;nbsp;80)&lt;/li&gt;
+&lt;li&gt;&lt;span class="dquo"&gt;&amp;ldquo;&lt;/span&gt;&lt;span class="caps"&gt;ELECTRIC&lt;/span&gt; &lt;span class="caps"&gt;VEHICLE&lt;/span&gt; &lt;span class="caps"&gt;BATTERY&lt;/span&gt; &lt;span class="caps"&gt;SYSTEMS&lt;/span&gt;&amp;rdquo; by Sandeep&amp;nbsp;Dhameja&lt;/li&gt;
+&lt;li&gt;&lt;span class="dquo"&gt;&amp;ldquo;&lt;/span&gt;Battery Reference Book&amp;rdquo; 3e by T.R&amp;nbsp;Crompton.&lt;/li&gt;
+&lt;/ul&gt;
 &lt;h1 id="basic-terminologies"&gt;Basic terminologies&lt;a class="headerlink" href="#basic-terminologies" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;Batteries and battery packs are made up from groups of cells wired in series, parallel or a combination of&amp;nbsp;them. &lt;/li&gt;
@@ -30,7 +36,7 @@
   (e.g., by providing power limits), control charger,&amp;nbsp;etc.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h1 id="basic-working-of-an-electrochemical-cell"&gt;Basic working of an electrochemical cell&lt;a class="headerlink" href="#basic-working-of-an-electrochemical-cell" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h1&gt;
-&lt;p&gt;&lt;img alt="Kaynes%20report%208f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled.png" src="/Kaynes report 8f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled.png"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Kaynes%20report%208f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled.png" src="https://ashwinschronicles.github.io/Kaynes report 8f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled.png"/&gt;&lt;/p&gt;
 &lt;h2 id="the-function-of-the-negative-electrode"&gt;The function of the negative electrode&lt;a class="headerlink" href="#the-function-of-the-negative-electrode" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;In an electrochemical cell, the negative electrode is often a metal or an alloy or hydrogen (lead metal or paste for&amp;nbsp;PbA)&lt;/p&gt;
 &lt;ul&gt;
@@ -47,7 +53,7 @@ electrons from circuit, is&amp;nbsp;reduced&lt;/li&gt;
 to external circuit, is&amp;nbsp;oxidized&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h1 id="li-ion-working-the-process-of-intercalation_1"&gt;Li-ion working (The process of intercalation)&lt;a class="headerlink" href="#li-ion-working-the-process-of-intercalation" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h1&gt;
-&lt;p&gt;&lt;img alt="Kaynes%20report%208f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled%201.png" src="/Kaynes report 8f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled 1.png"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Kaynes%20report%208f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled%201.png" src="https://ashwinschronicles.github.io/Kaynes report 8f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled 1.png"/&gt;&lt;/p&gt;
 &lt;p&gt;Discharge&amp;nbsp;process:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;During discharge, Li exits the surface of the negative-electrode
@@ -63,7 +69,7 @@ external circuit to positive&amp;nbsp;electrode&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;The active electrode materials are coated on both sides of metallic foils which act
 as the current collectors conducting the current into and out of the&amp;nbsp;cell&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Kaynes%20report%208f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled%202.png" src="/Kaynes report 8f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled 2.png"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Kaynes%20report%208f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled%202.png" src="https://ashwinschronicles.github.io/Kaynes report 8f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled 2.png"/&gt;&lt;/p&gt;
 &lt;h1 id="negative-electrodes-for-lithium-ion-cells"&gt;Negative electrodes for lithium-ion cells&lt;a class="headerlink" href="#negative-electrodes-for-lithium-ion-cells" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;Presently, essentially all commercial lithium-ion cells use some form of graphite
@@ -72,15 +78,15 @@ as the current collectors conducting the current into and out of the&amp;nbsp;ce
 structures that are tightly bonded These layers are loosely stacked and there is
 room for lithium to intercalate between&amp;nbsp;them&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img alt="Kaynes%20report%208f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled%203.png" src="/Kaynes report 8f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled 3.png"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Kaynes%20report%208f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled%203.png" src="https://ashwinschronicles.github.io/Kaynes report 8f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled 3.png"/&gt;&lt;/p&gt;
 &lt;h1 id="alternate-negative-electrode-material-lto"&gt;Alternate negative-electrode material &lt;span class="caps"&gt;LTO&lt;/span&gt;&lt;a class="headerlink" href="#alternate-negative-electrode-material-lto" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;Lithium titanate oxide (Li4 Ti5 O12 , &lt;span class="caps"&gt;LTO&lt;/span&gt;) is an alternative negative-electrode&amp;nbsp;material&lt;/li&gt;
 &lt;li&gt;Disadvantage: high open-circuit potential (making cell voltage low)
 Advantage: nearly indestructible &amp;mdash; very long&amp;nbsp;life&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img alt="Kaynes%20report%208f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled%204.png" src="/Kaynes report 8f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled 4.png"/&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Kaynes%20report%208f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled%205.png" src="/Kaynes report 8f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled 5.png"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Kaynes%20report%208f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled%204.png" src="https://ashwinschronicles.github.io/Kaynes report 8f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled 4.png"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Kaynes%20report%208f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled%205.png" src="https://ashwinschronicles.github.io/Kaynes report 8f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled 5.png"/&gt;&lt;/p&gt;
 &lt;h1 id="future-negative-electrode-material-silicon"&gt;Future negative-electrode material silicon&lt;a class="headerlink" href="#future-negative-electrode-material-silicon" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;Using graphite, one can store up to one Li per six C atoms;
@@ -103,7 +109,7 @@ in-between to allow for&amp;nbsp;expansion&lt;/li&gt;
 called a &amp;ldquo;layered&amp;nbsp;cathode&amp;rdquo;&lt;/li&gt;
 &lt;li&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img alt="Kaynes%20report%208f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled%206.png" src="/Kaynes report 8f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled 6.png"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Kaynes%20report%208f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled%206.png" src="https://ashwinschronicles.github.io/Kaynes report 8f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled 6.png"/&gt;&lt;/p&gt;
 &lt;p&gt;Disadavntages:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Cobalt is rare, toxic, and&amp;nbsp;expensive;&lt;/li&gt;
@@ -143,7 +149,7 @@ including conductive&amp;nbsp;additives&lt;/li&gt;
 &lt;li&gt;Olivine cathodes (&lt;span class="caps"&gt;LFP&lt;/span&gt;) have low voltage (and very little state information in their&amp;nbsp;voltage)&lt;/li&gt;
 &lt;li&gt;Spinel cathodes (&lt;span class="caps"&gt;LMO&lt;/span&gt;) are inexpensive and non-toxic, but can degrade&amp;nbsp;rapidly&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img alt="Kaynes%20report%208f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled%207.png" src="/Kaynes report 8f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled 7.png"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Kaynes%20report%208f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled%207.png" src="https://ashwinschronicles.github.io/Kaynes report 8f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled 7.png"/&gt;&lt;/p&gt;
 &lt;h1 id="what-are-the-primary-functions-of-a-bms_1"&gt;What are the primary functions of a &lt;span class="caps"&gt;BMS&lt;/span&gt;?&lt;a class="headerlink" href="#what-are-the-primary-functions-of-a-bms" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h1&gt;
 &lt;p&gt;A &lt;span class="caps"&gt;BMS&lt;/span&gt; has the following&amp;nbsp;priorities:&lt;/p&gt;
 &lt;ul&gt;
@@ -160,7 +166,7 @@ charger,&amp;nbsp;etc.&lt;/li&gt;
 &lt;h2 id="1-sensing-and-high-voltage-control"&gt;1. Sensing and high-voltage control&lt;a class="headerlink" href="#1-sensing-and-high-voltage-control" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Measure voltage, current,temperature; control contactor,
 pre-charge; ground-fault detection,thermal&amp;nbsp;management&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Kaynes%20report%208f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled%208.png" src="/Kaynes report 8f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled 8.png"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Kaynes%20report%208f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled%208.png" src="https://ashwinschronicles.github.io/Kaynes report 8f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled 8.png"/&gt;&lt;/p&gt;
 &lt;h2 id="2-protection-against"&gt;2. Protection against&lt;a class="headerlink" href="#2-protection-against" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Over-charge, over-discharge, over-current, short circuit, extreme&amp;nbsp;temperatures&lt;/p&gt;
 &lt;h2 id="3-interface"&gt;3. Interface&lt;a class="headerlink" href="#3-interface" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
@@ -175,7 +181,7 @@ all applications implement all&amp;nbsp;features&lt;/p&gt;
 &lt;h1 id="modular-design-of-bms"&gt;Modular design of &lt;span class="caps"&gt;BMS&lt;/span&gt;&lt;a class="headerlink" href="#modular-design-of-bms" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h1&gt;
 &lt;p&gt;Design extreme 1: Parallel-cell modules (&lt;span class="caps"&gt;PCM&lt;/span&gt;)
 Design extreme 2: Series-cell modules (&lt;span class="caps"&gt;SCM&lt;/span&gt;)&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Kaynes%20report%208f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled%209.png" src="/Kaynes report 8f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled 9.png"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Kaynes%20report%208f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled%209.png" src="https://ashwinschronicles.github.io/Kaynes report 8f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled 9.png"/&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;A modular battery pack suggests a hierarchical master&amp;ndash;slave
 &lt;span class="caps"&gt;BMS&lt;/span&gt; design as&amp;nbsp;well&lt;/li&gt;
@@ -193,7 +199,7 @@ wires&amp;mdash;minimizes wiring-harness&amp;nbsp;nightmare&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img alt="Kaynes%20report%208f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled%2010.png" src="/Kaynes report 8f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled 10.png"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Kaynes%20report%208f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled%2010.png" src="https://ashwinschronicles.github.io/Kaynes report 8f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled 10.png"/&gt;&lt;/p&gt;
 &lt;h1 id="bms-slave-role"&gt;&lt;span class="caps"&gt;BMS&lt;/span&gt; slave role&lt;a class="headerlink" href="#bms-slave-role" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h1&gt;
 &lt;p&gt;&lt;span class="caps"&gt;BMS&lt;/span&gt; slave needs&amp;nbsp;to:&lt;/p&gt;
 &lt;ul&gt;
@@ -272,7 +278,7 @@ expressed as&amp;nbsp;%)&lt;/li&gt;
 widths, expressed as &lt;span class="caps"&gt;ADC&lt;/span&gt;&amp;nbsp;counts)&lt;/li&gt;
 &lt;li&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img alt="Kaynes%20report%208f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled%2011.png" src="/Kaynes report 8f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled 11.png"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Kaynes%20report%208f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled%2011.png" src="https://ashwinschronicles.github.io/Kaynes report 8f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled 11.png"/&gt;&lt;/p&gt;
 &lt;h1 id="chipsets_1"&gt;Chipsets&lt;a class="headerlink" href="#chipsets" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h1&gt;
 &lt;p&gt;Special chipsets are made to aid high-voltage &lt;span class="caps"&gt;BMS&lt;/span&gt;&amp;nbsp;design&lt;/p&gt;
 &lt;ul&gt;
@@ -326,7 +332,7 @@ to one or more cells per module and calibrate internal&amp;nbsp;temperature&lt;/
 &lt;li&gt;Thermistor (uses voltage divider&amp;nbsp;circuit)&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Voltage-divider + thermistor&amp;nbsp;example&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Kaynes%20report%208f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled%2012.png" src="/Kaynes report 8f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled 12.png"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Kaynes%20report%208f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled%2012.png" src="https://ashwinschronicles.github.io/Kaynes report 8f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled 12.png"/&gt;&lt;/p&gt;
 &lt;h1 id="1c-battery-pack-sensing-current_1"&gt;1c. Battery-pack sensing: Current&lt;a class="headerlink" href="#1c-battery-pack-sensing-current" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h1&gt;
 &lt;p&gt;Battery pack electrical current must be measured to monitor
 safety, log abuse, and inform &lt;span class="caps"&gt;SOC&lt;/span&gt; and &lt;span class="caps"&gt;SOH&lt;/span&gt;&amp;nbsp;algorithms&lt;/p&gt;
@@ -334,13 +340,13 @@ safety, log abuse, and inform &lt;span class="caps"&gt;SOC&lt;/span&gt; and &lt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;Shunt current sensor (Kelvin&amp;nbsp;four-wire)&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Kaynes%20report%208f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled%2013.png" src="/Kaynes report 8f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled 13.png"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Kaynes%20report%208f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled%2013.png" src="https://ashwinschronicles.github.io/Kaynes report 8f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled 13.png"/&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Hall-effect current&amp;nbsp;sensing&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img alt="Kaynes%20report%208f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled%2014.png" src="/Kaynes report 8f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled 14.png"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Kaynes%20report%208f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled%2014.png" src="https://ashwinschronicles.github.io/Kaynes report 8f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled 14.png"/&gt;&lt;/p&gt;
 &lt;p&gt;Both methods have advantages and disadvantages and both are in common use in
 &lt;span class="caps"&gt;BMS&lt;/span&gt;&amp;nbsp;today&lt;/p&gt;
 &lt;h1 id="1d-high-voltage-contactor-control"&gt;1d: High-voltage contactor control&lt;a class="headerlink" href="#1d-high-voltage-contactor-control" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h1&gt;
@@ -356,9 +362,9 @@ simultaneously, enormous current would flow instantly,
 potentially welding the contactors closed or blowing a&amp;nbsp;fuse&lt;/li&gt;
 &lt;li&gt;So, a third &amp;ldquo;pre-charge&amp;rdquo; contactor is&amp;nbsp;used&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img alt="Kaynes%20report%208f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled%2015.png" src="/Kaynes report 8f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled 15.png"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Kaynes%20report%208f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled%2015.png" src="https://ashwinschronicles.github.io/Kaynes report 8f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled 15.png"/&gt;&lt;/p&gt;
 &lt;p&gt;Contactor&amp;nbsp;procedure:&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Kaynes%20report%208f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled%2016.png" src="/Kaynes report 8f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled 16.png"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Kaynes%20report%208f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled%2016.png" src="https://ashwinschronicles.github.io/Kaynes report 8f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled 16.png"/&gt;&lt;/p&gt;
 &lt;h1 id="1e-isolation-sensing"&gt;1e. Isolation sensing&lt;a class="headerlink" href="#1e-isolation-sensing" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h1&gt;
 &lt;p&gt;Isolation sensing detects presence of a ground&amp;nbsp;fault&lt;/p&gt;
 &lt;ul&gt;
@@ -372,13 +378,13 @@ either the positive or negative terminal of the battery
 pack via a direct&amp;nbsp;short&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Procedure: &lt;/p&gt;
-&lt;p&gt;&lt;img alt="Kaynes%20report%208f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled%2017.png" src="/Kaynes report 8f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled 17.png"/&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Kaynes%20report%208f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled%2018.png" src="/Kaynes report 8f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled 18.png"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Kaynes%20report%208f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled%2017.png" src="https://ashwinschronicles.github.io/Kaynes report 8f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled 17.png"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Kaynes%20report%208f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled%2018.png" src="https://ashwinschronicles.github.io/Kaynes report 8f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled 18.png"/&gt;&lt;/p&gt;
 &lt;p&gt;For fault on low&amp;nbsp;side &lt;/p&gt;
-&lt;p&gt;&lt;img alt="Kaynes%20report%208f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled%2019.png" src="/Kaynes report 8f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled 19.png"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Kaynes%20report%208f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled%2019.png" src="https://ashwinschronicles.github.io/Kaynes report 8f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled 19.png"/&gt;&lt;/p&gt;
 &lt;p&gt;Isolation is deemed sufficient if Ri&amp;gt;Vb /0.002 or R1 &amp;gt;&amp;nbsp;500Vb&lt;/p&gt;
 &lt;h1 id="1f-thermal-control"&gt;1f. Thermal control&lt;a class="headerlink" href="#1f-thermal-control" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h1&gt;
-&lt;p&gt;&lt;img alt="Kaynes%20report%208f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled%2020.png" src="/Kaynes report 8f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled 20.png"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Kaynes%20report%208f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled%2020.png" src="https://ashwinschronicles.github.io/Kaynes report 8f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled 20.png"/&gt;&lt;/p&gt;
 &lt;p&gt;Important to keep battery-pack cells at a &amp;ldquo;comfortable&amp;rdquo;temperature to ensure safety and to extend&amp;nbsp;life&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Also important to keep cells at a uniform temperature for consistent aging (also
@@ -415,7 +421,7 @@ circuitry must act quickly&amp;nbsp;state&lt;/li&gt;
 &lt;li&gt;Abuse&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id="overcurrentovertemperature-protection"&gt;Overcurrent/overtemperature protection&lt;a class="headerlink" href="#overcurrentovertemperature-protection" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;&lt;img alt="Kaynes%20report%208f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled%2021.png" src="/Kaynes report 8f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled 21.png"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Kaynes%20report%208f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled%2021.png" src="https://ashwinschronicles.github.io/Kaynes report 8f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled 21.png"/&gt;&lt;/p&gt;
 &lt;p&gt;When possible, fallback protection paths should be&amp;nbsp;implemented&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Red = cell-manufacturer specified region where cells
@@ -429,7 +435,7 @@ safe&amp;nbsp;region&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id="overvoltageovertemperature-protection"&gt;Overvoltage/overtemperature protection&lt;a class="headerlink" href="#overvoltageovertemperature-protection" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Similar for voltage&amp;nbsp;limits:&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Kaynes%20report%208f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled%2022.png" src="/Kaynes report 8f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled 22.png"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Kaynes%20report%208f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled%2022.png" src="https://ashwinschronicles.github.io/Kaynes report 8f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled 22.png"/&gt;&lt;/p&gt;
 &lt;p&gt;But, each protection device added into main current path increases battery impedance, reducing power delivered to load
 Examples of protection devices&amp;nbsp;include:&lt;/p&gt;
 &lt;ul&gt;
@@ -488,7 +494,7 @@ operate at two rates:&lt;ul&gt;
 &lt;li&gt;Control&amp;nbsp;signals&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;A typical packet(frame) in &lt;span class="caps"&gt;CAN&lt;/span&gt; bus looks like&amp;nbsp;: &lt;/p&gt;
-&lt;p&gt;&lt;img alt="Kaynes%20report%208f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled%2023.png" src="/Kaynes report 8f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled 23.png"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Kaynes%20report%208f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled%2023.png" src="https://ashwinschronicles.github.io/Kaynes report 8f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled 23.png"/&gt;&lt;/p&gt;
 &lt;p&gt;Abbreviations : &lt;span class="caps"&gt;SOF&lt;/span&gt; -  Start of frame; &lt;span class="caps"&gt;RTR&lt;/span&gt;- Ready to receive; &lt;span class="caps"&gt;CRC&lt;/span&gt; - cyclic redundancy check; &lt;span class="caps"&gt;ACK&lt;/span&gt;-acknowledgement&amp;nbsp;bit&lt;/p&gt;
 &lt;p&gt;Data frames are transmitted sequentially over the&amp;nbsp;bus.&lt;/p&gt;
 &lt;h2 id="3b-charger-control"&gt;3b. Charger control&lt;a class="headerlink" href="#3b-charger-control" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
@@ -559,7 +565,7 @@ Instead, must estimate these&amp;nbsp;values.&lt;/p&gt;
 &lt;/ul&gt;
 &lt;p&gt;But, cannot directly measure these parameters either! Therefore, must &lt;strong&gt;estimate&lt;/strong&gt; &lt;span class="caps"&gt;SOC&lt;/span&gt;, &lt;span class="caps"&gt;SOH&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;Available inputs include all cell voltages, pack current, and temperatures of cells or&amp;nbsp;modules.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Kaynes%20report%208f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled%2024.png" src="/Kaynes report 8f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled 24.png"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Kaynes%20report%208f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled%2024.png" src="https://ashwinschronicles.github.io/Kaynes report 8f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled 24.png"/&gt;&lt;/p&gt;
 &lt;p&gt;There are both good and poor methods to produce estimates:
 Poor methods are generally simpler to understand, code,
 and validate, but yield less-accurate&amp;nbsp;results&lt;/p&gt;
@@ -578,7 +584,7 @@ All of these have costs in dollars, weight and/or&amp;nbsp;volume&lt;/li&gt;
 &lt;li&gt;Article 3: Advanced methods for &lt;span class="caps"&gt;SOC&lt;/span&gt;&amp;nbsp;estimation&lt;/li&gt;
 &lt;li&gt;Article 4: &lt;span class="caps"&gt;SOH&lt;/span&gt;&amp;nbsp;estimation&lt;/li&gt;
 &lt;li&gt;Article 5: Balancing and power-limits&amp;nbsp;estimation&lt;/li&gt;
-&lt;/ul&gt;</content><category term="Engineering"></category><category term="BMS"></category><category term="EV"></category><category term="battery-terminologies"></category><category term="BMS-requirements"></category><category term="electrochemical-cell"></category><category term="Li-ion_working"></category><category term="ADC"></category><category term="Shunt-sensor"></category><category term="hall-effect current sensor"></category><category term="contactor"></category><category term="Isolation sensing"></category><category term="BMS protection"></category><category term="Charger control"></category><category term="Performance management"></category></entry><entry><title>Analog Discovery 2 + LabVIEW Home Bundle - Review</title><link href="/analog-discovery-2-labview-home-bundle-review" rel="alternate"></link><published>2019-07-13T00:00:00+05:30</published><updated>2019-07-13T00:00:00+05:30</updated><author><name>Ashwin</name></author><id>tag:None,2019-07-13:/analog-discovery-2-labview-home-bundle-review</id><summary type="html">&lt;p&gt;This post is a review of the Analog Discovery 2 + LabVIEW Home Bundle in a lab&amp;nbsp;environment&lt;/p&gt;</summary><content type="html">&lt;p&gt;This post is a review of the Analog Discovery 2 + LabVIEW Home Bundle in a lab environment. It was originally posted &lt;a href="https://www.element14.com/community/roadTestReviews/3075/l/analog-discovery-2-labview-home-bundle-review"&gt;here&lt;/a&gt; as a part of element14&amp;rsquo;s RoadTest. I thank element14 for sending me the review&amp;nbsp;unit.&lt;/p&gt;
+&lt;/ul&gt;</content><category term="Engineering"></category><category term="BMS"></category><category term="EV"></category><category term="battery-terminologies"></category><category term="BMS-requirements"></category><category term="electrochemical-cell"></category><category term="Li-ion_working"></category><category term="ADC"></category><category term="Shunt-sensor"></category><category term="hall-effect current sensor"></category><category term="contactor"></category><category term="Isolation sensing"></category><category term="BMS protection"></category><category term="Charger control"></category><category term="Performance management"></category></entry><entry><title>Analog Discovery 2 + LabVIEW Home Bundle - Review</title><link href="https://ashwinschronicles.github.io/analog-discovery-2-labview-home-bundle-review" rel="alternate"></link><published>2019-07-13T00:00:00+05:30</published><updated>2019-07-13T00:00:00+05:30</updated><author><name>Ashwin</name></author><id>tag:ashwinschronicles.github.io,2019-07-13:/analog-discovery-2-labview-home-bundle-review</id><summary type="html">&lt;p&gt;This post is a review of the Analog Discovery 2 + LabVIEW Home Bundle in a lab&amp;nbsp;environment&lt;/p&gt;</summary><content type="html">&lt;p&gt;This post is a review of the Analog Discovery 2 + LabVIEW Home Bundle in a lab environment. It was originally posted &lt;a href="https://www.element14.com/community/roadTestReviews/3075/l/analog-discovery-2-labview-home-bundle-review"&gt;here&lt;/a&gt; as a part of element14&amp;rsquo;s RoadTest. I thank element14 for sending me the review&amp;nbsp;unit.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;strong&gt;Evaluation Type:&lt;/strong&gt; Test&amp;nbsp;Equipment&lt;/p&gt;
@@ -677,7 +683,7 @@ All of these have costs in dollars, weight and/or&amp;nbsp;volume&lt;/li&gt;
 &lt;td&gt;52 / 60&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
-&lt;/table&gt;</content><category term="Engineering"></category><category term="Analog Discovery 2"></category><category term="LabVIEW"></category><category term="Review"></category></entry><entry><title>Superconductivity</title><link href="/Superconductivity" rel="alternate"></link><published>2019-06-06T00:00:00+05:30</published><updated>2019-06-20T00:00:00+05:30</updated><author><name>Ashwin Kumar K</name></author><id>tag:None,2019-06-06:/Superconductivity</id><summary type="html">&lt;p&gt;Short note on&amp;nbsp;superconductivity&lt;/p&gt;</summary><content type="html">&lt;p&gt;This post is my notes on Superconductivity from video lectures of &lt;a href="https://www.youtube.com/channel/UCDBKb7qMyNXujTf7kKRdstg" title="Youtube Link"&gt;Sergey Frolov&lt;/a&gt; on Solid State Physics and other online sites such as&amp;nbsp;http://www.superconductors.org&lt;/p&gt;
+&lt;/table&gt;</content><category term="Engineering"></category><category term="Analog Discovery 2"></category><category term="LabVIEW"></category><category term="Review"></category></entry><entry><title>Superconductivity</title><link href="https://ashwinschronicles.github.io/Superconductivity" rel="alternate"></link><published>2019-06-07T14:02:48+05:30</published><updated>2020-03-28T17:15:57+05:30</updated><author><name>Ashwin Kumar K</name></author><id>tag:ashwinschronicles.github.io,2019-06-07:/Superconductivity</id><summary type="html">&lt;p&gt;Short note on&amp;nbsp;superconductivity&lt;/p&gt;</summary><content type="html">&lt;p&gt;This post is my notes on Superconductivity from video lectures of &lt;a href="https://www.youtube.com/channel/UCDBKb7qMyNXujTf7kKRdstg" title="Youtube Link"&gt;Sergey Frolov&lt;/a&gt; on Solid State Physics and other online sites such as&amp;nbsp;http://www.superconductors.org&lt;/p&gt;
 &lt;h1 id="properties"&gt;Properties&lt;a class="headerlink" href="#properties" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;
@@ -981,176 +987,7 @@ All of these have costs in dollars, weight and/or&amp;nbsp;volume&lt;/li&gt;
     (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
-&lt;/script&gt;</content><category term="Science"></category><category term="Superconductivity"></category><category term="spin"></category><category term="cooper pairs"></category></entry><entry><title>Make a Github Pages blog with Pelican</title><link href="/gh-pages-with-pelican" rel="alternate"></link><published>2019-01-01T00:00:00+05:30</published><updated>2019-01-01T00:00:00+05:30</updated><author><name>Ashwin</name></author><id>tag:None,2019-01-01:/gh-pages-with-pelican</id><summary type="html">&lt;p&gt;Nothing&amp;nbsp;Much&lt;/p&gt;</summary><content type="html">&lt;p&gt;Github, worlds leading  hosting service for Git repositories  offers a simple, elegant website solution. It allows its users to  store page content in a git repository along with their&amp;nbsp;code.&lt;/p&gt;
-&lt;p&gt;In this blog post ill walk you through the process of setting up a website by combining Pelican with Github Pages. Pelican is a simple python utility that lets you create beautiful weblogs using just text files. In other words its a static-site generator. I have chosen Pelican over other static-site generators as Pelican unlike its counter parts is based on python hence initial  setup takes literally no&amp;nbsp;time.&lt;/p&gt;
-&lt;h2 id="setting-up-a-githubio-page"&gt;Setting up a github.io page&lt;a class="headerlink" href="#setting-up-a-githubio-page" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;To create your Github user page, log in to Github and create a  new repositorie username.github.io, as explained on Github pages. (Use your Github username for these repositories.) The  username.github.io repository will contain the output &lt;span class="caps"&gt;HTML&lt;/span&gt; files Pelican generates. To add the output directory as a submodule, initialize it with a &lt;span class="caps"&gt;README&lt;/span&gt;&amp;nbsp;file.&lt;/p&gt;
-&lt;h2 id="installing-pelican"&gt;Installing Pelican&lt;a class="headerlink" href="#installing-pelican" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;We will first  create a virtual environment for Pelican via virtualenv before installing&amp;nbsp;Pelican.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;virtualenv website
-&lt;span class="nb"&gt;cd&lt;/span&gt; website
-&lt;span class="nb"&gt;source&lt;/span&gt; bin/activate
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;You can also do &lt;code&gt;workon website&lt;/code&gt; inplace of the last two.
-Once the virtual environment has been created and activated, Pelican can be installed via  prefixing with sudo if permissions&amp;nbsp;warrant:&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;pip install pelican markdown typogrify ghp-import shovel&lt;/code&gt; &lt;br/&gt;
-Now clone the source repository you&amp;nbsp;created:&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;git clone https://github.com/YOUR_USERNAME/YOUR_USERNAME.github.io.git web-sources&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;Then change directory to the source&amp;nbsp;folder:&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;cd web-sources&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;Because of how Github Pages prefers to work, serving the files from the master branch, you have to put your source code in a new branch, preserving the &amp;ldquo;master&amp;rdquo; for the output of the static files generated by Pelican. To do that, you must create a new branch called&amp;nbsp;&amp;ldquo;source&amp;rdquo;:&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;git checkout -b source&lt;/code&gt;&lt;/p&gt;
-&lt;h2 id="pelican-quickstart"&gt;Pelican quickstart&lt;a class="headerlink" href="#pelican-quickstart" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;Pelican provides an excellent quickstart command. Run&amp;nbsp;it:&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;pelican-quickstart&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;The quickstart will ask you various questions, which you can answer in turn. Before answering them, take a look at my answers&amp;nbsp;below:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;gt; Where &lt;span class="k"&gt;do&lt;/span&gt; you want to create your new web site? &lt;span class="o"&gt;[&lt;/span&gt;.&lt;span class="o"&gt;]&lt;/span&gt; ./
-&amp;gt; What will be the title of this web site? Ashwin&lt;span class="err"&gt;'&lt;/span&gt;s Chronicles
-&amp;gt; Who will be the author of this web site? Ashwin Kumar K
-&amp;gt; What will be the default language of this web site? &lt;span class="o"&gt;[&lt;/span&gt;pt&lt;span class="o"&gt;]&lt;/span&gt; en
-&amp;gt; Do you want to specify a URL prefix? e.g., http://example.com   &lt;span class="o"&gt;(&lt;/span&gt;Y/n&lt;span class="o"&gt;)&lt;/span&gt; n
-&amp;gt; Do you want to &lt;span class="nb"&gt;enable&lt;/span&gt; article pagination? &lt;span class="o"&gt;(&lt;/span&gt;Y/n&lt;span class="o"&gt;)&lt;/span&gt; y
-&amp;gt; How many articles per page &lt;span class="k"&gt;do&lt;/span&gt; you want? &lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="m"&gt;10&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt; &lt;span class="m"&gt;10&lt;/span&gt;
-&amp;gt; What is your &lt;span class="nb"&gt;time&lt;/span&gt; zone? &lt;span class="o"&gt;[&lt;/span&gt;Europe/Paris&lt;span class="o"&gt;]&lt;/span&gt; Asia/Calcutta
-&amp;gt; Do you want to generate a Fabfile/Makefile to automate generation and publishing? &lt;span class="o"&gt;(&lt;/span&gt;Y/n&lt;span class="o"&gt;)&lt;/span&gt; Y **# PAY ATTENTION TO THIS!**
-&amp;gt; Do you want an auto-reload &lt;span class="p"&gt;&amp;amp;&lt;/span&gt; simpleHTTP script to assist with theme and site development? &lt;span class="o"&gt;(&lt;/span&gt;Y/n&lt;span class="o"&gt;)&lt;/span&gt; n
-&amp;gt; Do you want to upload your website using FTP? &lt;span class="o"&gt;(&lt;/span&gt;y/N&lt;span class="o"&gt;)&lt;/span&gt; n
-&amp;gt; Do you want to upload your website using SSH? &lt;span class="o"&gt;(&lt;/span&gt;y/N&lt;span class="o"&gt;)&lt;/span&gt; n
-&amp;gt; Do you want to upload your website using Dropbox? &lt;span class="o"&gt;(&lt;/span&gt;y/N&lt;span class="o"&gt;)&lt;/span&gt; n
-&amp;gt; Do you want to upload your website using S3? &lt;span class="o"&gt;(&lt;/span&gt;y/N&lt;span class="o"&gt;)&lt;/span&gt; n
-&amp;gt; Do you want to upload your website using Rackspace Cloud Files? &lt;span class="o"&gt;(&lt;/span&gt;y/N&lt;span class="o"&gt;)&lt;/span&gt; n
-&amp;gt; Do you want to upload your website using GitHub Pages? &lt;span class="o"&gt;(&lt;/span&gt;y/N&lt;span class="o"&gt;)&lt;/span&gt; y
-&amp;gt; Is this your personal page &lt;span class="o"&gt;(&lt;/span&gt;username.github.io&lt;span class="o"&gt;)&lt;/span&gt;? &lt;span class="o"&gt;(&lt;/span&gt;y/N&lt;span class="o"&gt;)&lt;/span&gt; y
-Done. Your new project is available at YOUR_USERNAME.github.io
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Now, go ahead and create your first blog post! You might want to open the project folder on your favorite code editor and find the &amp;ldquo;content&amp;rdquo; folder inside it. Then, create a new file, which can be called my-first-post.md (Just for testing). The contents should begin with the metadata which identifies the Title, Date, Category and more from the post before you start with the content, like&amp;nbsp;this:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;Title&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;My&lt;/span&gt; &lt;span class="n"&gt;first&lt;/span&gt; &lt;span class="n"&gt;post&lt;/span&gt;
-&lt;span class="n"&gt;Date&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;2018&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;
-&lt;span class="n"&gt;Modified&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;2018&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;
-&lt;span class="n"&gt;Category&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;misc&lt;/span&gt;
-&lt;span class="n"&gt;Tags&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;first&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="n"&gt;misc&lt;/span&gt;
-&lt;span class="n"&gt;Slug&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;My&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;first&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;post&lt;/span&gt;
-&lt;span class="n"&gt;Authors&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;Your&lt;/span&gt; &lt;span class="n"&gt;name&lt;/span&gt;
-&lt;span class="n"&gt;Summary&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;What&lt;/span&gt; &lt;span class="n"&gt;does&lt;/span&gt; &lt;span class="n"&gt;your&lt;/span&gt; &lt;span class="n"&gt;post&lt;/span&gt; &lt;span class="n"&gt;talk&lt;/span&gt; &lt;span class="n"&gt;about&lt;/span&gt;&lt;span class="o"&gt;?&lt;/span&gt; &lt;span class="n"&gt;Write&lt;/span&gt; &lt;span class="n"&gt;here&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;
-
-&lt;span class="n"&gt;This&lt;/span&gt; &lt;span class="k"&gt;is&lt;/span&gt; &lt;span class="n"&gt;the&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;first&lt;/span&gt; &lt;span class="n"&gt;post&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="n"&gt;from&lt;/span&gt; &lt;span class="n"&gt;my&lt;/span&gt; &lt;span class="n"&gt;Pelican&lt;/span&gt; &lt;span class="n"&gt;blog&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt; &lt;span class="o"&gt;**&lt;/span&gt;&lt;span class="n"&gt;YAY&lt;/span&gt;&lt;span class="o"&gt;!**&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Let&amp;rsquo;s see how it&amp;nbsp;looks?&lt;/p&gt;
-&lt;p&gt;Go to the terminal, generate the static files and start the server. To do that, use the following&amp;nbsp;command:&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;(venv)$ make html &amp;amp;&amp;amp; make serve&lt;/code&gt;
-While this command is running, you should be able to visit it on your favorite web browser by typing &lt;code&gt;localhost:8000&lt;/code&gt; on the address&amp;nbsp;bar.&lt;/p&gt;
-&lt;h2 id="a-little-touch-up"&gt;A little touch up&lt;a class="headerlink" href="#a-little-touch-up" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;Now,  if you want to put an image in a post, a neat way is to first  create a &amp;lsquo;images&amp;rsquo; directory inside your content directory, where your posts are. Now, you have to tell Pelican to use it. Find the &lt;code&gt;pelicanconf.py&lt;/code&gt;, the file where you configure the system, and add a variable that contains the directory with your&amp;nbsp;images:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;STATIC_PATHS&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;'images'&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Save it. Go to your post and add the image this&amp;nbsp;way:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;![Write here a good description for people who can't see the image]({filename}/images/IMAGE_NAME.webp)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;You can interrupt the server at anytime pressing &lt;span class="caps"&gt;CTRL&lt;/span&gt;+C on the terminal. But you should start it again and check if the image is correct. Can you remember&amp;nbsp;how?&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;(venv)$ make html &amp;amp;&amp;amp; make serve&lt;/code&gt;
-One last step before your coding is &amp;ldquo;done&amp;rdquo;: you should make sure anyone can read your posts using &lt;span class="caps"&gt;ATOM&lt;/span&gt; or &lt;span class="caps"&gt;RSS&lt;/span&gt; feeds. Find the pelicanconf.py, the file where you configure the system, and edit the part about feed&amp;nbsp;generation:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;FEED_ALL_ATOM&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;'feeds/all.atom.xml'&lt;/span&gt;
-&lt;span class="n"&gt;FEED_ALL_RSS&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;'feeds/all.rss.xml'&lt;/span&gt;
-&lt;span class="n"&gt;AUTHOR_FEED_RSS&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;'feeds/&lt;/span&gt;&lt;span class="si"&gt;%s&lt;/span&gt;&lt;span class="s1"&gt;.rss.xml'&lt;/span&gt;
-&lt;span class="n"&gt;RSS_FEED_SUMMARY_ONLY&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kc"&gt;False&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Save everything so you can send the code to Github. You can do that by adding all files, committing it with a message (&amp;lsquo;first commit&amp;rsquo;) and using git push. You will be asked for your Github login and&amp;nbsp;password.&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;$ git add -A &amp;amp;&amp;amp; git commit -a -m 'first commit' &amp;amp;&amp;amp; git push --all&lt;/code&gt;
-As I had said before you would be preserving the master branch for the output of the static files generated by Pelican. Now it&amp;rsquo;s time  to generate the&amp;nbsp;mater:&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;$ make github&lt;/code&gt;
-You will be asked for your Github login and password again. And&amp;hellip; voil&amp;agrave;! Your new blog should be live on&amp;nbsp;https://YOUR_USERNAME.github.io.&lt;/p&gt;
-&lt;h1 id="whats-next_1"&gt;What&amp;rsquo;s next?&lt;a class="headerlink" href="#whats-next" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h1&gt;
-&lt;p&gt;You generated your first Pelican static website using Markdown and Jinja2. Additional modifications can be made to the Jinja2 templates and the content contained in the Markdown&amp;nbsp;files.&lt;/p&gt;
-&lt;h3 id="adding-gitignore"&gt;Adding .gitignore&lt;a class="headerlink" href="#adding-gitignore" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h3&gt;
-&lt;p&gt;.gitignore file contains a list of files and folder that git will ignore while syncing with the remote repository. Utilizing .gitignore wisely can reduce the amount of data you need to&amp;nbsp;upload.&lt;/p&gt;
-&lt;p&gt;make a file .gitignore in the web-sources file with the following&amp;nbsp;contents&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;#Custom&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-&lt;span class="k"&gt;output&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-&lt;span class="n"&gt;pelicanconf_local&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;py&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-
-&lt;span class="n"&gt;#Python&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;py&lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="n"&gt;cod&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-
-&lt;span class="err"&gt;#&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;C&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;extensions&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;so&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-
-&lt;span class="err"&gt;#&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Packages&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;egg&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;egg&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;info&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-&lt;span class="n"&gt;dist&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-&lt;span class="n"&gt;build&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-&lt;span class="n"&gt;eggs&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-&lt;span class="n"&gt;parts&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-&lt;span class="n"&gt;bin&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-&lt;span class="nf"&gt;var&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-&lt;span class="n"&gt;sdist&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-&lt;span class="n"&gt;develop&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;eggs&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;installed&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;cfg&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-&lt;span class="n"&gt;lib&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-&lt;span class="n"&gt;lib64&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-
-&lt;span class="err"&gt;#&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Installer&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;logs&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-&lt;span class="n"&gt;pip&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="nf"&gt;log&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;txt&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-
-&lt;span class="err"&gt;#&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Unit&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;test&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;coverage&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;reports&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;coverage&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;tox&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-&lt;span class="n"&gt;nosetests&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nc"&gt;xml&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-
-&lt;span class="err"&gt;#&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Translations&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;mo&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-
-&lt;span class="err"&gt;#&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Mr&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Developer&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;mr&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;developer&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;cfg&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;project&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;pydevproject&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h3 id="automate-github-upload-process"&gt;Automate GitHub upload process&lt;a class="headerlink" href="#automate-github-upload-process" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h3&gt;
-&lt;p&gt;Create a file &lt;code&gt;up.sh&lt;/code&gt; in the  &lt;code&gt;web-sources&lt;/code&gt;&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;git add -A &lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt; git commit -a -m &lt;span class="s1"&gt;'$1'&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt; git push --all
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Now whenever you want to upload sync the repo just do &lt;code&gt;bash up.sh "Comment"&lt;/code&gt; Note that the argument &amp;ldquo;Comment&amp;rdquo; should not contain&amp;nbsp;spaces.&lt;/p&gt;
-&lt;h3 id="download-themes"&gt;Download Themes&lt;a class="headerlink" href="#download-themes" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h3&gt;
-&lt;p&gt;Clone pelican-themes&amp;nbsp;repository&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;git clone --recursive https://github.com/getpelican/pelican-themes themes&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;In &lt;code&gt;pelicanconf.py&lt;/code&gt; add the following&amp;nbsp;variables:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;THEME&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;'themes/bootstrap2'&lt;/span&gt;
-&lt;span class="n"&gt;OUTPUT_PATH&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;'output'&lt;/span&gt;
-&lt;span class="n"&gt;PATH&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;'content&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h3 id="custom-home-page"&gt;Custom Home page&lt;a class="headerlink" href="#custom-home-page" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h3&gt;
-&lt;p&gt;Add this variables to&amp;nbsp;pelicanconf.py&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="c1"&gt;# Custom Home page&lt;/span&gt;
-&lt;span class="n"&gt;DIRECT_TEMPLATES&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;((&lt;/span&gt;&lt;span class="s1"&gt;'index'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;'blog'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;'tags'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;'categories'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;'archives'&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
-&lt;span class="n"&gt;PAGINATED_DIRECT_TEMPLATES&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;((&lt;/span&gt;&lt;span class="s1"&gt;'blog'&lt;/span&gt;&lt;span class="p"&gt;,))&lt;/span&gt;
-&lt;span class="n"&gt;TEMPLATE_PAGES&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="s1"&gt;'home.html'&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;'index.html'&lt;/span&gt;&lt;span class="p"&gt;,}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Duplicated the index.html to blog.html in your template folder and add this&amp;nbsp;lines:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;{% set active_page = "blog" %}
-{% block title %}{{ SITENAME }} - Blog{% endblock %}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Create home.html or use page override feature to use a Markdown page as your home&amp;nbsp;page.&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;nano home.html&lt;/code&gt;&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;{% extends "base.html" %}
-{% block content %}
-&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;div&lt;/span&gt; &lt;span class="na"&gt;class&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;'page'&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
-  &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;div&lt;/span&gt; &lt;span class="na"&gt;class&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;"page-header"&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;h1&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;Home&lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;h1&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;div&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
-  &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;div&lt;/span&gt; &lt;span class="na"&gt;class&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;"page-content"&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;Content&lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;div&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
-&lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;div&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
-{% endblock %}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h3 id="process-for-new-articles"&gt;Process for new articles.&lt;a class="headerlink" href="#process-for-new-articles" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h3&gt;
-&lt;p&gt;Ones the setup is done, the contents of the folder &lt;code&gt;web-sources&lt;/code&gt; need not be generated again using the above procedure. All one has to do is place the article in the content folder then (after testing the website locally using &lt;code&gt;make devserver&lt;/code&gt;) then execute  &lt;code&gt;bash up.sh "Comment"&lt;/code&gt;  to sync the source branch and then do &lt;code&gt;make github&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;If you are on a different machine or you have lost access to the &lt;code&gt;web-sources&lt;/code&gt; folder, you just have to make the virtual environment and then do git clone again.&amp;nbsp;i.e&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;virtualenv website
-&lt;span class="nb"&gt;cd&lt;/span&gt; website
-&lt;span class="nb"&gt;source&lt;/span&gt; bin/activate
-pip install pelican markdown typogrify ghp-import shovel
-git clone https://github.com/YOUR_USERNAME/YOUR_USERNAME.github.io.git web-sources
-&lt;span class="nb"&gt;cd&lt;/span&gt; web-sources
-git checkout -b &lt;span class="nb"&gt;source&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;This article just touches uppon getting a basic website up and running. More features that Pelican offers (like custom plugins)can be explored &lt;a href="http://docs.getpelican.com/en/3.6.3/content.html"&gt;here&lt;/a&gt;.&lt;/p&gt;</content><category term="Blog"></category><category term="Github"></category><category term="Pelican"></category><category term="gh-pages"></category></entry><entry><title>Quantum Hall Effect and related phenomena</title><link href="/qhe" rel="alternate"></link><published>2019-01-01T00:00:00+05:30</published><updated>2019-01-01T00:00:00+05:30</updated><author><name>Ashwin</name></author><id>tag:None,2019-01-01:/qhe</id><summary type="html">&lt;p&gt;Notes on Quantum Hall Effect and related&amp;nbsp;phenomenon&lt;/p&gt;</summary><content type="html">&lt;h1 id="historical-aspects"&gt;Historical Aspects&lt;a class="headerlink" href="#historical-aspects" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h1&gt;
+&lt;/script&gt;</content><category term="Science"></category><category term="Superconductivity"></category><category term="spin"></category><category term="cooper pairs"></category></entry><entry><title>Quantum Hall Effect and related phenomena</title><link href="https://ashwinschronicles.github.io/qhe" rel="alternate"></link><published>2019-06-07T14:02:48+05:30</published><updated>2020-03-28T17:15:57+05:30</updated><author><name>Ashwin</name></author><id>tag:ashwinschronicles.github.io,2019-06-07:/qhe</id><summary type="html">&lt;p&gt;Notes on Quantum Hall Effect and related&amp;nbsp;phenomenon&lt;/p&gt;</summary><content type="html">&lt;h1 id="historical-aspects"&gt;Historical Aspects&lt;a class="headerlink" href="#historical-aspects" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h1&gt;
 &lt;p&gt;The quantum Hall effect is a remarkable phenomenon discovered
 experimentally in which the Hall conductivity of a two dimensional
 system of electrons is found to have plateaus as a function of variables
@@ -1557,7 +1394,176 @@ intersects the boundary, and bounces off&amp;nbsp;it.&lt;/p&gt;
     (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
-&lt;/script&gt;</content><category term="Science"></category><category term="qhe"></category><category term="hall effect"></category><category term="landau levels"></category></entry><entry><title>A beginers IoT Project.</title><link href="/Intro-to-IoT" rel="alternate"></link><published>2018-07-12T00:00:00+05:30</published><updated>2018-07-12T00:00:00+05:30</updated><author><name>Ashwin</name></author><id>tag:None,2018-07-12:/Intro-to-IoT</id><summary type="html">&lt;p&gt;In this post, we’ll be making a simple IoT project. Web page controlled &lt;span class="caps"&gt;LED&lt;/span&gt; strip using NodeMCU connected on a local&amp;nbsp;network.&lt;/p&gt;</summary><content type="html">&lt;p&gt;In this post, we&amp;rsquo;ll be making a simple IoT project. Web page controlled &lt;span class="caps"&gt;LED&lt;/span&gt; strip using NodeMCU connected on a local&amp;nbsp;network.&lt;/p&gt;
+&lt;/script&gt;</content><category term="Science"></category><category term="qhe"></category><category term="hall effect"></category><category term="landau levels"></category></entry><entry><title>Make a Github Pages blog with Pelican</title><link href="https://ashwinschronicles.github.io/gh-pages-with-pelican" rel="alternate"></link><published>2018-12-29T23:20:09+05:30</published><updated>2020-03-28T17:15:57+05:30</updated><author><name>Ashwin</name></author><id>tag:ashwinschronicles.github.io,2018-12-29:/gh-pages-with-pelican</id><summary type="html">&lt;p&gt;Nothing&amp;nbsp;Much&lt;/p&gt;</summary><content type="html">&lt;p&gt;Github, worlds leading  hosting service for Git repositories  offers a simple, elegant website solution. It allows its users to  store page content in a git repository along with their&amp;nbsp;code.&lt;/p&gt;
+&lt;p&gt;In this blog post ill walk you through the process of setting up a website by combining Pelican with Github Pages. Pelican is a simple python utility that lets you create beautiful weblogs using just text files. In other words its a static-site generator. I have chosen Pelican over other static-site generators as Pelican unlike its counter parts is based on python hence initial  setup takes literally no&amp;nbsp;time.&lt;/p&gt;
+&lt;h2 id="setting-up-a-githubio-page"&gt;Setting up a github.io page&lt;a class="headerlink" href="#setting-up-a-githubio-page" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;To create your Github user page, log in to Github and create a  new repositorie username.github.io, as explained on Github pages. (Use your Github username for these repositories.) The  username.github.io repository will contain the output &lt;span class="caps"&gt;HTML&lt;/span&gt; files Pelican generates. To add the output directory as a submodule, initialize it with a &lt;span class="caps"&gt;README&lt;/span&gt;&amp;nbsp;file.&lt;/p&gt;
+&lt;h2 id="installing-pelican"&gt;Installing Pelican&lt;a class="headerlink" href="#installing-pelican" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;We will first  create a virtual environment for Pelican via virtualenv before installing&amp;nbsp;Pelican.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;virtualenv website
+&lt;span class="nb"&gt;cd&lt;/span&gt; website
+&lt;span class="nb"&gt;source&lt;/span&gt; bin/activate
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;You can also do &lt;code&gt;workon website&lt;/code&gt; inplace of the last two.
+Once the virtual environment has been created and activated, Pelican can be installed via  prefixing with sudo if permissions&amp;nbsp;warrant:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;pip install pelican markdown typogrify ghp-import shovel&lt;/code&gt; &lt;br/&gt;
+Now clone the source repository you&amp;nbsp;created:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;git clone https://github.com/YOUR_USERNAME/YOUR_USERNAME.github.io.git web-sources&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Then change directory to the source&amp;nbsp;folder:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;cd web-sources&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Because of how Github Pages prefers to work, serving the files from the master branch, you have to put your source code in a new branch, preserving the &amp;ldquo;master&amp;rdquo; for the output of the static files generated by Pelican. To do that, you must create a new branch called&amp;nbsp;&amp;ldquo;source&amp;rdquo;:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;git checkout -b source&lt;/code&gt;&lt;/p&gt;
+&lt;h2 id="pelican-quickstart"&gt;Pelican quickstart&lt;a class="headerlink" href="#pelican-quickstart" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Pelican provides an excellent quickstart command. Run&amp;nbsp;it:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;pelican-quickstart&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;The quickstart will ask you various questions, which you can answer in turn. Before answering them, take a look at my answers&amp;nbsp;below:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;gt; Where &lt;span class="k"&gt;do&lt;/span&gt; you want to create your new web site? &lt;span class="o"&gt;[&lt;/span&gt;.&lt;span class="o"&gt;]&lt;/span&gt; ./
+&amp;gt; What will be the title of this web site? Ashwin&lt;span class="err"&gt;'&lt;/span&gt;s Chronicles
+&amp;gt; Who will be the author of this web site? Ashwin Kumar K
+&amp;gt; What will be the default language of this web site? &lt;span class="o"&gt;[&lt;/span&gt;pt&lt;span class="o"&gt;]&lt;/span&gt; en
+&amp;gt; Do you want to specify a URL prefix? e.g., http://example.com   &lt;span class="o"&gt;(&lt;/span&gt;Y/n&lt;span class="o"&gt;)&lt;/span&gt; n
+&amp;gt; Do you want to &lt;span class="nb"&gt;enable&lt;/span&gt; article pagination? &lt;span class="o"&gt;(&lt;/span&gt;Y/n&lt;span class="o"&gt;)&lt;/span&gt; y
+&amp;gt; How many articles per page &lt;span class="k"&gt;do&lt;/span&gt; you want? &lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="m"&gt;10&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt; &lt;span class="m"&gt;10&lt;/span&gt;
+&amp;gt; What is your &lt;span class="nb"&gt;time&lt;/span&gt; zone? &lt;span class="o"&gt;[&lt;/span&gt;Europe/Paris&lt;span class="o"&gt;]&lt;/span&gt; Asia/Calcutta
+&amp;gt; Do you want to generate a Fabfile/Makefile to automate generation and publishing? &lt;span class="o"&gt;(&lt;/span&gt;Y/n&lt;span class="o"&gt;)&lt;/span&gt; Y **# PAY ATTENTION TO THIS!**
+&amp;gt; Do you want an auto-reload &lt;span class="p"&gt;&amp;amp;&lt;/span&gt; simpleHTTP script to assist with theme and site development? &lt;span class="o"&gt;(&lt;/span&gt;Y/n&lt;span class="o"&gt;)&lt;/span&gt; n
+&amp;gt; Do you want to upload your website using FTP? &lt;span class="o"&gt;(&lt;/span&gt;y/N&lt;span class="o"&gt;)&lt;/span&gt; n
+&amp;gt; Do you want to upload your website using SSH? &lt;span class="o"&gt;(&lt;/span&gt;y/N&lt;span class="o"&gt;)&lt;/span&gt; n
+&amp;gt; Do you want to upload your website using Dropbox? &lt;span class="o"&gt;(&lt;/span&gt;y/N&lt;span class="o"&gt;)&lt;/span&gt; n
+&amp;gt; Do you want to upload your website using S3? &lt;span class="o"&gt;(&lt;/span&gt;y/N&lt;span class="o"&gt;)&lt;/span&gt; n
+&amp;gt; Do you want to upload your website using Rackspace Cloud Files? &lt;span class="o"&gt;(&lt;/span&gt;y/N&lt;span class="o"&gt;)&lt;/span&gt; n
+&amp;gt; Do you want to upload your website using GitHub Pages? &lt;span class="o"&gt;(&lt;/span&gt;y/N&lt;span class="o"&gt;)&lt;/span&gt; y
+&amp;gt; Is this your personal page &lt;span class="o"&gt;(&lt;/span&gt;username.github.io&lt;span class="o"&gt;)&lt;/span&gt;? &lt;span class="o"&gt;(&lt;/span&gt;y/N&lt;span class="o"&gt;)&lt;/span&gt; y
+Done. Your new project is available at YOUR_USERNAME.github.io
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Now, go ahead and create your first blog post! You might want to open the project folder on your favorite code editor and find the &amp;ldquo;content&amp;rdquo; folder inside it. Then, create a new file, which can be called my-first-post.md (Just for testing). The contents should begin with the metadata which identifies the Title, Date, Category and more from the post before you start with the content, like&amp;nbsp;this:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;Title&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;My&lt;/span&gt; &lt;span class="n"&gt;first&lt;/span&gt; &lt;span class="n"&gt;post&lt;/span&gt;
+&lt;span class="n"&gt;Date&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;2018&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;
+&lt;span class="n"&gt;Modified&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;2018&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;
+&lt;span class="n"&gt;Category&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;misc&lt;/span&gt;
+&lt;span class="n"&gt;Tags&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;first&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="n"&gt;misc&lt;/span&gt;
+&lt;span class="n"&gt;Slug&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;My&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;first&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;post&lt;/span&gt;
+&lt;span class="n"&gt;Authors&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;Your&lt;/span&gt; &lt;span class="n"&gt;name&lt;/span&gt;
+&lt;span class="n"&gt;Summary&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;What&lt;/span&gt; &lt;span class="n"&gt;does&lt;/span&gt; &lt;span class="n"&gt;your&lt;/span&gt; &lt;span class="n"&gt;post&lt;/span&gt; &lt;span class="n"&gt;talk&lt;/span&gt; &lt;span class="n"&gt;about&lt;/span&gt;&lt;span class="o"&gt;?&lt;/span&gt; &lt;span class="n"&gt;Write&lt;/span&gt; &lt;span class="n"&gt;here&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;
+
+&lt;span class="n"&gt;This&lt;/span&gt; &lt;span class="k"&gt;is&lt;/span&gt; &lt;span class="n"&gt;the&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;first&lt;/span&gt; &lt;span class="n"&gt;post&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="n"&gt;from&lt;/span&gt; &lt;span class="n"&gt;my&lt;/span&gt; &lt;span class="n"&gt;Pelican&lt;/span&gt; &lt;span class="n"&gt;blog&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt; &lt;span class="o"&gt;**&lt;/span&gt;&lt;span class="n"&gt;YAY&lt;/span&gt;&lt;span class="o"&gt;!**&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Let&amp;rsquo;s see how it&amp;nbsp;looks?&lt;/p&gt;
+&lt;p&gt;Go to the terminal, generate the static files and start the server. To do that, use the following&amp;nbsp;command:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;(venv)$ make html &amp;amp;&amp;amp; make serve&lt;/code&gt;
+While this command is running, you should be able to visit it on your favorite web browser by typing &lt;code&gt;localhost:8000&lt;/code&gt; on the address&amp;nbsp;bar.&lt;/p&gt;
+&lt;h2 id="a-little-touch-up"&gt;A little touch up&lt;a class="headerlink" href="#a-little-touch-up" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Now,  if you want to put an image in a post, a neat way is to first  create a &amp;lsquo;images&amp;rsquo; directory inside your content directory, where your posts are. Now, you have to tell Pelican to use it. Find the &lt;code&gt;pelicanconf.py&lt;/code&gt;, the file where you configure the system, and add a variable that contains the directory with your&amp;nbsp;images:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;STATIC_PATHS&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;'images'&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Save it. Go to your post and add the image this&amp;nbsp;way:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;![Write here a good description for people who can't see the image]({filename}/images/IMAGE_NAME.webp)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;You can interrupt the server at anytime pressing &lt;span class="caps"&gt;CTRL&lt;/span&gt;+C on the terminal. But you should start it again and check if the image is correct. Can you remember&amp;nbsp;how?&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;(venv)$ make html &amp;amp;&amp;amp; make serve&lt;/code&gt;
+One last step before your coding is &amp;ldquo;done&amp;rdquo;: you should make sure anyone can read your posts using &lt;span class="caps"&gt;ATOM&lt;/span&gt; or &lt;span class="caps"&gt;RSS&lt;/span&gt; feeds. Find the pelicanconf.py, the file where you configure the system, and edit the part about feed&amp;nbsp;generation:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;FEED_ALL_ATOM&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;'feeds/all.atom.xml'&lt;/span&gt;
+&lt;span class="n"&gt;FEED_ALL_RSS&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;'feeds/all.rss.xml'&lt;/span&gt;
+&lt;span class="n"&gt;AUTHOR_FEED_RSS&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;'feeds/&lt;/span&gt;&lt;span class="si"&gt;%s&lt;/span&gt;&lt;span class="s1"&gt;.rss.xml'&lt;/span&gt;
+&lt;span class="n"&gt;RSS_FEED_SUMMARY_ONLY&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kc"&gt;False&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Save everything so you can send the code to Github. You can do that by adding all files, committing it with a message (&amp;lsquo;first commit&amp;rsquo;) and using git push. You will be asked for your Github login and&amp;nbsp;password.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;$ git add -A &amp;amp;&amp;amp; git commit -a -m 'first commit' &amp;amp;&amp;amp; git push --all&lt;/code&gt;
+As I had said before you would be preserving the master branch for the output of the static files generated by Pelican. Now it&amp;rsquo;s time  to generate the&amp;nbsp;mater:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;$ make github&lt;/code&gt;
+You will be asked for your Github login and password again. And&amp;hellip; voil&amp;agrave;! Your new blog should be live on&amp;nbsp;https://YOUR_USERNAME.github.io.&lt;/p&gt;
+&lt;h1 id="whats-next_1"&gt;What&amp;rsquo;s next?&lt;a class="headerlink" href="#whats-next" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h1&gt;
+&lt;p&gt;You generated your first Pelican static website using Markdown and Jinja2. Additional modifications can be made to the Jinja2 templates and the content contained in the Markdown&amp;nbsp;files.&lt;/p&gt;
+&lt;h3 id="adding-gitignore"&gt;Adding .gitignore&lt;a class="headerlink" href="#adding-gitignore" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;.gitignore file contains a list of files and folder that git will ignore while syncing with the remote repository. Utilizing .gitignore wisely can reduce the amount of data you need to&amp;nbsp;upload.&lt;/p&gt;
+&lt;p&gt;make a file .gitignore in the web-sources file with the following&amp;nbsp;contents&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;#Custom&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="k"&gt;output&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="n"&gt;pelicanconf_local&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;py&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+
+&lt;span class="n"&gt;#Python&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;py&lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="n"&gt;cod&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+
+&lt;span class="err"&gt;#&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;C&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;extensions&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;so&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+
+&lt;span class="err"&gt;#&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Packages&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;egg&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;egg&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;info&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="n"&gt;dist&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="n"&gt;build&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="n"&gt;eggs&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="n"&gt;parts&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="n"&gt;bin&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="nf"&gt;var&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="n"&gt;sdist&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="n"&gt;develop&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;eggs&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;installed&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;cfg&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="n"&gt;lib&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="n"&gt;lib64&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+
+&lt;span class="err"&gt;#&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Installer&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;logs&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="n"&gt;pip&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="nf"&gt;log&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;txt&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+
+&lt;span class="err"&gt;#&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Unit&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;test&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;coverage&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;reports&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;coverage&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;tox&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="n"&gt;nosetests&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nc"&gt;xml&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+
+&lt;span class="err"&gt;#&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Translations&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;mo&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+
+&lt;span class="err"&gt;#&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Mr&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Developer&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;mr&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;developer&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;cfg&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;project&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;pydevproject&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3 id="automate-github-upload-process"&gt;Automate GitHub upload process&lt;a class="headerlink" href="#automate-github-upload-process" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Create a file &lt;code&gt;up.sh&lt;/code&gt; in the  &lt;code&gt;web-sources&lt;/code&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;git add -A &lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt; git commit -a -m &lt;span class="s1"&gt;'$1'&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt; git push --all
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Now whenever you want to upload sync the repo just do &lt;code&gt;bash up.sh "Comment"&lt;/code&gt; Note that the argument &amp;ldquo;Comment&amp;rdquo; should not contain&amp;nbsp;spaces.&lt;/p&gt;
+&lt;h3 id="download-themes"&gt;Download Themes&lt;a class="headerlink" href="#download-themes" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Clone pelican-themes&amp;nbsp;repository&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;git clone --recursive https://github.com/getpelican/pelican-themes themes&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;In &lt;code&gt;pelicanconf.py&lt;/code&gt; add the following&amp;nbsp;variables:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;THEME&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;'themes/bootstrap2'&lt;/span&gt;
+&lt;span class="n"&gt;OUTPUT_PATH&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;'output'&lt;/span&gt;
+&lt;span class="n"&gt;PATH&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;'content&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3 id="custom-home-page"&gt;Custom Home page&lt;a class="headerlink" href="#custom-home-page" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Add this variables to&amp;nbsp;pelicanconf.py&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="c1"&gt;# Custom Home page&lt;/span&gt;
+&lt;span class="n"&gt;DIRECT_TEMPLATES&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;((&lt;/span&gt;&lt;span class="s1"&gt;'index'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;'blog'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;'tags'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;'categories'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;'archives'&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+&lt;span class="n"&gt;PAGINATED_DIRECT_TEMPLATES&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;((&lt;/span&gt;&lt;span class="s1"&gt;'blog'&lt;/span&gt;&lt;span class="p"&gt;,))&lt;/span&gt;
+&lt;span class="n"&gt;TEMPLATE_PAGES&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="s1"&gt;'home.html'&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;'index.html'&lt;/span&gt;&lt;span class="p"&gt;,}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Duplicated the index.html to blog.html in your template folder and add this&amp;nbsp;lines:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;{% set active_page = "blog" %}
+{% block title %}{{ SITENAME }} - Blog{% endblock %}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Create home.html or use page override feature to use a Markdown page as your home&amp;nbsp;page.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;nano home.html&lt;/code&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;{% extends "base.html" %}
+{% block content %}
+&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;div&lt;/span&gt; &lt;span class="na"&gt;class&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;'page'&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;div&lt;/span&gt; &lt;span class="na"&gt;class&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;"page-header"&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;h1&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;Home&lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;h1&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;div&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;div&lt;/span&gt; &lt;span class="na"&gt;class&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;"page-content"&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;Content&lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;div&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;div&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+{% endblock %}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3 id="process-for-new-articles"&gt;Process for new articles.&lt;a class="headerlink" href="#process-for-new-articles" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Ones the setup is done, the contents of the folder &lt;code&gt;web-sources&lt;/code&gt; need not be generated again using the above procedure. All one has to do is place the article in the content folder then (after testing the website locally using &lt;code&gt;make devserver&lt;/code&gt;) then execute  &lt;code&gt;bash up.sh "Comment"&lt;/code&gt;  to sync the source branch and then do &lt;code&gt;make github&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;If you are on a different machine or you have lost access to the &lt;code&gt;web-sources&lt;/code&gt; folder, you just have to make the virtual environment and then do git clone again.&amp;nbsp;i.e&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;virtualenv website
+&lt;span class="nb"&gt;cd&lt;/span&gt; website
+&lt;span class="nb"&gt;source&lt;/span&gt; bin/activate
+pip install pelican markdown typogrify ghp-import shovel
+git clone https://github.com/YOUR_USERNAME/YOUR_USERNAME.github.io.git web-sources
+&lt;span class="nb"&gt;cd&lt;/span&gt; web-sources
+git checkout -b &lt;span class="nb"&gt;source&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;This article just touches uppon getting a basic website up and running. More features that Pelican offers (like custom plugins)can be explored &lt;a href="http://docs.getpelican.com/en/3.6.3/content.html"&gt;here&lt;/a&gt;.&lt;/p&gt;</content><category term="Blog"></category><category term="Github"></category><category term="Pelican"></category><category term="gh-pages"></category></entry><entry><title>A beginers IoT Project.</title><link href="https://ashwinschronicles.github.io/Intro-to-IoT" rel="alternate"></link><published>2018-07-12T00:00:00+05:30</published><updated>2018-07-12T00:00:00+05:30</updated><author><name>Ashwin</name></author><id>tag:ashwinschronicles.github.io,2018-07-12:/Intro-to-IoT</id><summary type="html">&lt;p&gt;In this post, we’ll be making a simple IoT project. Web page controlled &lt;span class="caps"&gt;LED&lt;/span&gt; strip using NodeMCU connected on a local&amp;nbsp;network.&lt;/p&gt;</summary><content type="html">&lt;p&gt;In this post, we&amp;rsquo;ll be making a simple IoT project. Web page controlled &lt;span class="caps"&gt;LED&lt;/span&gt; strip using NodeMCU connected on a local&amp;nbsp;network.&lt;/p&gt;
 &lt;h2 id="outline"&gt;Outline:&lt;a class="headerlink" href="#outline" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Web page controlled &lt;span class="caps"&gt;LED&lt;/span&gt; strip is like the &amp;ldquo;Hello world&amp;rdquo; of IoT. In this post I will be detailing on the procedure I followed to set it up. The schematic of the project will be as&amp;nbsp;follows:&lt;/p&gt;
 &lt;p&gt;&lt;img alt="Schematic" src=".././images/IoT_1_schematic.webp"/&gt;&lt;/p&gt;
@@ -1627,7 +1633,7 @@ intersects the boundary, and bounces off&amp;nbsp;it.&lt;/p&gt;
 &lt;p&gt;&lt;img alt="IoT_14_tes5" src="../images/IoT_14_tes5.gif"/&gt;&lt;/p&gt;
 &lt;p&gt;Vola! there&amp;rsquo;s our first&amp;nbsp;project!&lt;/p&gt;
 &lt;h2 id="whats-next"&gt;Whats next?&lt;a class="headerlink" href="#whats-next" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;We can add more feature to the project such as making it connect to a wifi router so that you can access the &lt;span class="caps"&gt;LED&lt;/span&gt; strip from anywhere in the world. We can convert this project to use the barebone &lt;span class="caps"&gt;ESP8266&lt;/span&gt; and &lt;span class="caps"&gt;FTDI&lt;/span&gt; programmer. We can use the power supply of the &lt;span class="caps"&gt;LED&lt;/span&gt; strip to power the &lt;span class="caps"&gt;ESP8266&lt;/span&gt; (Not recommended since most &lt;span class="caps"&gt;LED&lt;/span&gt; power supply have high &lt;span class="caps"&gt;AC&lt;/span&gt; noise as I found out in my case and hence can damage the &lt;span class="caps"&gt;ESP8266&lt;/span&gt; board).Add more devices for the &lt;span class="caps"&gt;ESP&lt;/span&gt; to control and much much more! All&amp;nbsp;that&lt;/p&gt;</content><category term="Engineering"></category><category term="IoT"></category></entry><entry><title>Interfacing Arduino Mega using LabVIEW</title><link href="/arduino-labview-review" rel="alternate"></link><published>2017-12-15T00:00:00+05:30</published><updated>2017-12-15T00:00:00+05:30</updated><author><name>Ashwin</name></author><id>tag:None,2017-12-15:/arduino-labview-review</id><summary type="html">&lt;p&gt;This post is about Interfacing Arduino Mega with&amp;nbsp;LabVIEW&lt;/p&gt;</summary><content type="html">&lt;p&gt;This post is about Interfacing Arduino Mega using LabVIEW. It was originally posted &lt;a href="https://www.element14.com/community/roadTestReviews/2581/l/arduino-a000067-mega2560-rev3-development-board-review"&gt;here&lt;/a&gt; as a part of element14&amp;rsquo;s RoadTest. I thank element14 for sending me the review&amp;nbsp;unit.&lt;/p&gt;
+&lt;p&gt;We can add more feature to the project such as making it connect to a wifi router so that you can access the &lt;span class="caps"&gt;LED&lt;/span&gt; strip from anywhere in the world. We can convert this project to use the barebone &lt;span class="caps"&gt;ESP8266&lt;/span&gt; and &lt;span class="caps"&gt;FTDI&lt;/span&gt; programmer. We can use the power supply of the &lt;span class="caps"&gt;LED&lt;/span&gt; strip to power the &lt;span class="caps"&gt;ESP8266&lt;/span&gt; (Not recommended since most &lt;span class="caps"&gt;LED&lt;/span&gt; power supply have high &lt;span class="caps"&gt;AC&lt;/span&gt; noise as I found out in my case and hence can damage the &lt;span class="caps"&gt;ESP8266&lt;/span&gt; board).Add more devices for the &lt;span class="caps"&gt;ESP&lt;/span&gt; to control and much much more! All&amp;nbsp;that&lt;/p&gt;</content><category term="Engineering"></category><category term="IoT"></category></entry><entry><title>Interfacing Arduino Mega using LabVIEW</title><link href="https://ashwinschronicles.github.io/arduino-labview-review" rel="alternate"></link><published>2017-12-15T00:00:00+05:30</published><updated>2017-12-15T00:00:00+05:30</updated><author><name>Ashwin</name></author><id>tag:ashwinschronicles.github.io,2017-12-15:/arduino-labview-review</id><summary type="html">&lt;p&gt;This post is about Interfacing Arduino Mega with&amp;nbsp;LabVIEW&lt;/p&gt;</summary><content type="html">&lt;p&gt;This post is about Interfacing Arduino Mega using LabVIEW. It was originally posted &lt;a href="https://www.element14.com/community/roadTestReviews/2581/l/arduino-a000067-mega2560-rev3-development-board-review"&gt;here&lt;/a&gt; as a part of element14&amp;rsquo;s RoadTest. I thank element14 for sending me the review&amp;nbsp;unit.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;strong&gt;Evaluation Type:&lt;/strong&gt; Independent&amp;nbsp;Products&lt;/p&gt;
