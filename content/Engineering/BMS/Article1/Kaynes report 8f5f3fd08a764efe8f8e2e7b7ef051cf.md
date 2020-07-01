@@ -28,7 +28,7 @@ Most of the data here is my notes on the following resources:
 
 
 
-# Basic terminologies 
+# Basic terminologies
 
 * Batteries and battery packs are made up from groups of cells wired in series, parallel or a combination of them. 
 * Nominal Voltage is a representative voltage that depends on the combination of the active chamicals used. It dosent relate to the voltage under load, its more of an average or typical voltage.
