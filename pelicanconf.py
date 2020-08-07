@@ -139,9 +139,10 @@ SITE_LICENSE = """All articles written by me in this website are licensed under 
     Creative Commons Attribution 4.0 International License</a>.""" 
     
 # Landing Page
-PROJECTS = [{
+PROJECTS = [
+  {
     'name': 'Cryostat Probe design and optimisation for transport measurement.',
-    'url': 'https://ashwinschronicles.github.io/null',
+    'url': 'https://ashwinschronicles.github.io/Cryostat-probe-design',
     'description': 'Design of a cryogenic probe for transport measurements and using it to observe Superconducting transition of Niobium Nitrate'
   },
   {

@@ -1,19 +1,32 @@
+---
+title: Cryostat probe design and optimisation for transport measurement.
+date: 2019-07-14
+tags: cryostat,probe,transport measurement,rc filter,LabVIEW,internship
+category: Science
+slug:Cryostat-probe-design
+author: Ashwin
+summary: This post is about a design of a cryostat probe which is optimised for transport measurement.
+subtitle: An overview of my internship
+keywords: cryostat,probe,transport measurement,rc filter,LabVIEW,internship
+modified: 2020-06-10
+gittime: off
+---
 Getting to know the cryostat
 ============================
 
-A cryostat is a device used to maintain low cryogenic temperatures of samples or devices mounted within the cryostat. The temperature range can be as low as few millikelvin in Dilution refrigerators. Most common ones are either liquid Helium based which can cool to below 10 K or are liquid Nitrogen based, which can cool to about 80 K which is Nitrogen's boiling point. The sample is mounted on something called as the probe, which houses electrical wires connecting the sample to the instruments used for various measurements. Cryostats can be closed cycle ones, or continuous flow systems. In closed cycle cryostat the cold cryogen (refrigerant) is pumped to the sample chamber and the warm cryogen is extracted and cooled and then recycled into the system. Continuous-flow cryostats are cooled by liquid cryogens from a storage dewar. As the cryogen boils within the cryostat, it is continuously replenished by a steady flow from the storage dewar.
+A cryostat is a device used to maintain low cryogenic temperatures of samples or devices mounted within the cryostat. The temperature range can be as low as few milli-kelvin in Dilution refrigerators. Most common ones are either liquid Helium based which can cool to below 10 K or are liquid Nitrogen based, which can cool to about 80 K which is Nitrogen's boiling point. The sample is mounted on something called as the probe, which houses electrical wires connecting the sample to the instruments used for various measurements. Cryostats can be closed cycle ones, or continuous flow systems. In closed cycle cryostat the cold cryogen (refrigerant) is pumped to the sample chamber and the warm cryogen is extracted and cooled and then recycled into the system. Continuous-flow cryostats are cooled by liquid cryogens from a storage dewar. As the cryogen boils within the cryostat, it is continuously replenished by a steady flow from the storage dewar.
 
-The cryostat at Superconductivity Lab, NISER, for which I had to develop the probe tip, is a customized closed system cryostat provided by ColdEdge.The key features of this cryostat is large sample space and fast cooling. In the large sample space (aka sample well), helium gas is purged (at \<0.5 psi pressure) which cools the sample by convection cooling methods. The helium gas is provided from an external gas cylinder. A 0.5 psi relief valve is present for safety in case the sample space becomes over pressurized.
+The cryostat at Superconductivity Lab, NISER, for which I had to develop the probe tip, is a customised closed system cryostat provided by ColdEdge. The key features of this cryostat is large sample space and fast cooling. In the large sample space (aka sample well), helium gas is purged (at <0.5 psi pressure) which cools the sample by convection cooling methods. The helium gas is provided from an external gas cylinder. A 0.5 psi relief valve is present for safety in case the sample space becomes over pressurised.
 
 The cooling part of the system is called cold head. It removes heat from the compressors incoming gas by expansion through an internal displacer. The displacer is filled with regenerative material that also helps with the cooling of the gas.
 
-The compressor is part of the cryocooler system which cycles helium gas to and from the cold head. It contains an absorber which is used to filter out impurities from the gas which may cause cool down problems for the cold head.
+The compressor is part of the cryo-cooler system which cycles helium gas to and from the cold head. It contains an absorber which is used to filter out impurities from the gas which may cause cool down problems for the cold head.
 
 The sample space is attached directly to the cold head and achieves the temperature range (4 - 325K) of the cold head. The sample is attached to the probe which is plunged into cold helium gas inside the sample well. Since the interface remains cold and the probe stick can be removed from the cold interface without having to warm up and break vacuum, different samples can be examined quickly.
 
 By default, the cryostat comes with two Cernox temperature sensors, one for the cold head and the other on the probe to measure sample temperature. Cernox is the best suitable sensor for such low temperature high magnetic field regions.
 
-A vacuum jacket (aka vacuum shroud)is placed over the Cold Head and sample well, which acts as an insulator between the Cold Head and ambient room temperature. It will ensure that ice does not build up on the cooler. Power to the cold head is supplied through the compressor.
+A vacuum jacket (aka vacuum shroud) is placed over the Cold Head and sample well, which acts as an insulator between the Cold Head and ambient room temperature. It will ensure that ice does not build up on the cooler. Power to the cold head is supplied through the compressor.
 
 A load lock above the sample space, helps to insert the probe without having to warm up and break vacuum of sample space.
 
@@ -25,67 +38,69 @@ Design and Fabrication of Probe
 Design
 ------
 
-The probe design was made keeping in mind thermal equilibrium of sample and temperature sensor and to maximize the number of connections one can make in a sample. The company for the cryostat had given us a basic stick support structure for the dipstick, which looks like Fig[1](#fig:Basic-Probe){reference-type="ref" reference="fig:Basic-Probe"}
+The probe design was made keeping in mind thermal equilibrium of sample and temperature sensor and to maximize the number of connections one can make in a sample. The company for the cryostat had given us a basic stick support structure for the dipstick, which looks like Fig[1](#fig:Basic-Probe)
 
-![Basic Probe[\[fig:Basic-Probe\]]{#fig:Basic-Probe label="fig:Basic-Probe"}](Photos/BasicProbe.png){#fig:Basic-Probe height="10cm"}
+![Basic Probe{#fig:Basic-Probe label="fig:Basic-Probe"}]({attach}Photos/BasicProbe.png)
 
 The lower end of this structure has a temperature sensor and a heater, so a probe tip had to be designed that can do measurements efficiently.
 
-The design finalized is as shown in Fig[2](#fig:Design){reference-type="ref" reference="fig:Design"} . In this design, the brown square part is the copper sheet, the green sheet is an RC filter for all the input wires, and the sample is the purple one, the sample holder pcb can be connected and disconnected to the RC filter PCB, this is so that the sample holder can be removed and taken to the wire bonder etc. There are two versions of this support, the magnetic base (aka flat base)and the non magnetic base (aka square base). In both the case, the 10 pins of each side are connected in parallel. Hence in one go, one can measure at most 10 pads or 4 (2) samples.
+The design finalized is as shown in Fig[2](#fig:Design). In this design, the brown square part is the copper sheet, the green sheet is an RC filter for all the input wires, and the sample is the purple one, the sample holder pcb can be connected and disconnected to the RC filter PCB, this is so that the sample holder can be removed and taken to the wire bonder etc. There are two versions of this support, the magnetic base (aka flat base)and the non magnetic base (aka square base). In both the case, the 10 pins of each side are connected in parallel. Hence in one go, one can measure at most 10 pads or 4 (2) samples.
 
-![Design[\[fig:Design\]]{#fig:Design label="fig:Design"}](Photos/Design.png){#fig:Design width="15cm"}
+![Design[\[fig:Design\]]{#fig:Design label="fig:Design"}]({attach}Photos/Design.png)
 
-Next we had to design the PCB which included an RC low pass filter and a sample holder, the design which was finalised is shown in Fig[3](#fig:PCB-Design){reference-type="ref" reference="fig:PCB-Design"} it was designed using a free online service called easyeda.com . The RC filter parameters are $f_c$ = 1000Hz, R=150 ohm, C = 10 $\mu$ F.
+Next we had to design the PCB which included an RC low pass filter and a sample holder, the design which was finalised is shown in Fig[3](#fig:PCB-Design) it was designed using a free online service called www.easyeda.com . The RC filter parameters are $f_c$ = 1000Hz, R=150 ohm, C = 10 $\mu$ F.
 
-![PCB Design[\[fig:PCB-Design\]]{#fig:PCB-Design label="fig:PCB-Design"}](Photos/PCB.png){#fig:PCB-Design width="10cm"}
+![PCB Design[\[fig:PCB-Design\]]{#fig:PCB-Design label="fig:PCB-Design"}]({attach}Photos/PCB.png)
 
-Another version of the square support is the flat support which supports  using magnetic coils for magnetic measurements is as shown in fig[\[fig:Magnetic-Base\]](#fig:Magnetic-Base){reference-type="ref" reference="fig:Magnetic-Base"}
+Another version of the square support is the flat support which supports  using magnetic coils for magnetic measurements is as shown in fig[3](#fig:Magnetic-Base)
 
-![RC filter Circuit[\[fig:RC-filter-Circuit\]]{#fig:RC-filter-Circuit label="fig:RC-filter-Circuit"}](Photos/MagneticBase.png){#fig:RC-filter-Circuit width="5cm"}
+![RC filter Circuit[\[fig:RC-filter-Circuit\]]{#fig:RC-filter-Circuit label="fig:RC-filter-Circuit"}]({attach}Photos/MagneticBase.png)
 
-![RC filter Circuit[\[fig:RC-filter-Circuit\]]{#fig:RC-filter-Circuit label="fig:RC-filter-Circuit"}](\string"Photos/RC FIlter\string".png){#fig:RC-filter-Circuit width="5cm"}
+![RC filter Circuit[\[fig:RC-filter-Circuit\]]{#fig:RC-filter-Circuit label="fig:RC-filter-Circuit"}]({attach}Photos/RC_Filter.png)
 
 The RC filter works by using capacitor and resistor to attenuate high frequency noise. A circuit diagram for the same can be seen in Fig [5](#fig:RC-filter-Circuit){reference-type="ref" reference="fig:RC-filter-Circuit"}. The characteristic bode plot expected for a functioning RC filter is shown in Fig [6](#fig:Expected-Bode-plot){reference-type="ref" reference="fig:Expected-Bode-plot"}.
 
-![Expected Bode plot[\[fig:Expected-Bode-plot\]]{#fig:Expected-Bode-plot label="fig:Expected-Bode-plot"}](Photos/RC_Bde.png){#fig:Expected-Bode-plot width="7cm"}
+![Expected Bode plot[\[fig:Expected-Bode-plot\]]{#fig:Expected-Bode-plot label="fig:Expected-Bode-plot"}]({attach}Photos/RC_Bde.png)
 
 Fabrication
 -----------
 
-The pcbs were designed and then sent tojlcpcb.com for fabrication of PCB. The electronic components required for the board were ordered from lcsc.com. The delivered product is shown in Fig [7](#fig:Fabricated-PCB){reference-type="ref" reference="fig:Fabricated-PCB"}.
+The pcbs were designed and then sent to www.jlcpcb.com for fabrication of PCB. The electronic components required for the board were ordered from www.lcsc.com. 
 
-![Fabricated PCB[\[fig:Fabricated-PCB\]]{#fig:Fabricated-PCB label="fig:Fabricated-PCB"}](\string"Photos/Fabricated PCB\string".jpg){#fig:Fabricated-PCB width="7cm"}
+The delivered product is shown in Fig [7](#fig:Fabricated-PCB).
 
-The base was made in house using copper sheets which were cut using an angle grinder to the required measurements. The joints were fixed by brazing it with copper. The finished probe ends are seen in Fig [\[fig:FabricatedBases\]](#fig:FabricatedBases){reference-type="ref" reference="fig:FabricatedBases"}.
+![Fabricated PCB[\[fig:Fabricated-PCB\]]{#fig:Fabricated-PCB label="fig:Fabricated-PCB"}](Photos\Fabricated_PCB.jpg)
 
-![Drawing of Non Magnetic Base](\string"Photos/Drawing oof Non Magnetic Base\string".png){width="15cm"}
+The base was made in house using copper sheets which were cut using an angle grinder to the required measurements. The joints were fixed by brazing it with copper. The finished probe ends are seen in Fig [8](#fig:FabricatedBases).
 
-![Drawing of Magnetic Base](\string"Photos/Drawing of Magnetic Base\string".png){width="15cm"}
+![Drawing_of_Magnetic_Base]({attach}Photos/Drawing_of_Magnetic_Base.png)
 
-For measurement purpose, a sample of sputtered Nb thin film (55nm) was stuck on the copper base of the holder and wire bonding was done in 4 probe arrangement. The sample after wire-bonding is in fig[8](#fig:Sample-Holder){reference-type="ref" reference="fig:Sample-Holder"} .
+![Drawing_of_Non_Magnetic_Base]({attach}Photos/Drawing_of_Non_Magnetic_Base.png)
 
-![[\[fig:Sample-Holder\]]{#fig:Sample-Holder label="fig:Sample-Holder"}Sample Holder](\string"Photos/sample holder\string".png){#fig:Sample-Holder width="7cm"}
+For measurement purpose, a sample of sputtered Nb thin film (55nm) was stuck on the copper base of the holder and wire bonding was done in 4 probe arrangement. The sample after wire-bonding is in fig[8](#fig:Sample-Holder) .
 
-The wiring for the probes were made with 37 gauge enameled copper wire twisted in pairs (Fig [9](#fig:Probe Wiring){reference-type="ref" reference="fig:Probe Wiring"}). The pin out for the connector can be found in Table [1](#tab:Connector-pin-out){reference-type="ref" reference="tab:Connector-pin-out"}.
+![[\[fig:Sample-Holder\]]{#fig:Sample-Holder label="fig:Sample-Holder"}Sample Holder]({attach}Photos/sample_holder.png)
 
-![[\[fig:Probe Wiring\]]{#fig:Probe Wiring label="fig:Probe Wiring"}Probe Wiring](Photos/Connector_wiring.jpg){#fig:Probe Wiring width="5cm"}
+The wiring for the probes were made with 37 gauge enameled copper wire twisted in pairs (Fig [9](#fig:Probe Wiring)). The pin out for the connector can be found in Table [1](#tab:Connector-pin-out).
 
-The pads of the sample are connected to the break out box (fig [22](#fig:breakoutbox ){reference-type="ref" reference="fig:breakoutbox "}).
+![[\[fig:Probe Wiring\]]{#fig:Probe Wiring label="fig:Probe Wiring"}Probe Wiring]({attach}Photos/Connector_wiring.jpg)
+
+The pads of the sample are connected to the break out box (fig [22](#fig:breakoutbox )).
 
 Software for data acquisition
 =============================
 
-The signal from the sample is fed into the temperature controller and Source meter unit. The data from these instruments is gathered using a software written in Labview. A schematic of data flow is in Fig[10](#fig:Schematic){reference-type="ref" reference="fig:Schematic"}.
+The signal from the sample is fed into the temperature controller and Source meter unit. The data from these instruments is gathered using a software written in Labview. A schematic of data flow is in Fig[10](#fig:Schematic).
 
-![[\[fig:Schematic\]]{#fig:Schematic label="fig:Schematic"}Schematic](Photos/Schematic.png){#fig:Schematic width="10cm"}
+![[\[fig:Schematic\]]{#fig:Schematic label="fig:Schematic"}Schematic]({attach}Photos/Schematic.png)
 
-All the software tools required for data acquisition is compiled into a Labview project file "MeasurementLibrary.lvproj". A shortcut to this file is kept in desktop (Fig [11](#fig:Lv1){reference-type="ref" reference="fig:Lv1"}).
+All the software tools required for data acquisition is compiled into a Labview project file "MeasurementLibrary.lvproj". A shortcut to this file is kept in desktop (Fig [11](#fig:Lv1)).
 
-![[\[fig:Lv1\]]{#fig:Lv1 label="fig:Lv1"}Desktop shortcut](\string"Photos/Screenshots/Screenshot (2)\string".png){#fig:Lv1 width="3cm"}
+![[\[fig:Lv1\]]{#fig:Lv1 label="fig:Lv1"}Desktop shortcut]({attach}Photos/Screenshots/Screenshot(2).png)
 
 When the project file is opened, A list of all the available programs is shown (Fig [12](#fig:Measurement-Library){reference-type="ref" reference="fig:Measurement-Library"})
 
-![[\[fig:Measurement-Library\]]{#fig:Measurement-Library label="fig:Measurement-Library"}Measurement Library](\string"Photos/Screenshots/Screenshot (3)\string".png){#fig:Measurement-Library width="10cm"}
+![[\[fig:Measurement-Library\]]{#fig:Measurement-Library label="fig:Measurement-Library"}Measurement Library]({attach}Photos/Screenshots/Screenshot(3).png) 
 
 This software suite consists of
 
@@ -108,29 +123,37 @@ Let us look at the functioning of each program one by one.
 
 The 4 probe resistance measurement interface is shown in Fig [13](#fig:4-probe-resistance){reference-type="ref" reference="fig:4-probe-resistance"}.
 
-![[\[fig:4-probe-resistance\]]{#fig:4-probe-resistance label="fig:4-probe-resistance"}4 probe resistance measurement interface](\string"Photos/Screenshots/Screenshot (4)\string".png){#fig:4-probe-resistance width="13cm"}
+![[\[fig:4-probe-resistance\]]{#fig:4-probe-resistance label="fig:4-probe-resistance"}4 probe resistance measurement interface]({attach}Photos/Screenshots/Screenshot(4).png)
 
 The software takes in the SMU VISA name (hardware address) and all the resistance measurement mode settings and does a single measurement. The hardware address for LS336 is GPIB0::1::INSTR and that for the SMU is GPIB0::2::INSTR (or USB:xxxx in case it is connected via serial).
 
-![[\[fig:save changes\]]{#fig:save changes label="fig:save changes"}Save changes dialogue](\string"Photos/Screenshots/Screenshot (5)\string".png){#fig:save changes width="13cm"}
+![[\[fig:save changes\]]{#fig:save changes label="fig:save changes"}Save changes dialogue]({attach}Photos/Screenshots/Screenshot(5).png)
 
-Note: If you change some parameter, when you close the program there might be a confirmation to save changes (Like Fig [14](#fig:save changes){reference-type="ref" reference="fig:save changes"}.) ALWAYS CLICK "DONT SAVE ALL", this is to ensure no pre-configured parameter gets changed by accident.
+Note: If you change some parameter, when you close the program there might be a confirmation to save changes (Like Fig [14](#fig:save changes){reference-type="ref" reference="fig:save changes"}.) 
+
+ALWAYS CLICK "DONT SAVE ALL", this is to ensure no pre-configured parameter gets changed by accident.
 
 Basic GPIB communication tester
 -------------------------------
 
 The interface for Basic GPIB communication tester is shown in Fig [15](#fig:GPIB-tester-interface){reference-type="ref" reference="fig:GPIB-tester-interface"}.
 
-![[\[fig:GPIB-tester-interface\]]{#fig:GPIB-tester-interface label="fig:GPIB-tester-interface"}GPIB tester interface](\string"Photos/Screenshots/Screenshot (7)\string".png){#fig:GPIB-tester-interface width="13cm"}
+![[\[fig:GPIB-tester-interface\]]{#fig:GPIB-tester-interface label="fig:GPIB-tester-interface"}GPIB tester interface]({attach}Photos/Screenshots/Screenshot(7).png)
 
-This tool allows you to debug GPIB connections and to check the state of the instrument. After selecting the right Hardware address, (VISA Resource name) you can write any serial SCPI commands in the Write buffer and when you execute the program the instruments response is shown in read buffer. Typical serial SCPI commands include:\*IDN? - Identify \*RST - Reset \*OPC? - Operation complete query \*CLS - Clear Status .
+This tool allows you to debug GPIB connections and to check the state of the instrument. After selecting the right Hardware address, (VISA Resource name) you can write any serial SCPI commands in the Write buffer and when you execute the program the instruments response is shown in read buffer. Typical serial SCPI commands include:
+
+```
+\*IDN? - Identify \*RST - Reset \*OPC? - Operation complete query \*CLS - Clear Status
+```
+
+ .
 
 LS336 Heater Output Configuration Panel
 ---------------------------------------
 
 The interface for LS336 Heater Output Configuration Panel is shown in Fig [16](#fig:LS336-Heater-configuration){reference-type="ref" reference="fig:LS336-Heater-configuration"}.
 
-![[\[fig:LS336-Heater-configuration\]]{#fig:LS336-Heater-configuration label="fig:LS336-Heater-configuration"}LS336 Heater configuration interface](\string"Photos/Screenshots/Screenshot (8)\string".png){#fig:LS336-Heater-configuration width="13cm"}
+![[\[fig:LS336-Heater-configuration\]]{#fig:LS336-Heater-configuration label="fig:LS336-Heater-configuration"}LS336 Heater configuration interface]({attach}Photos/Screenshots/Screenshot(8).png)
 
 This software initializes the instrument, allows the user to determine if heater output control parameters and setpoint values are sent, takes a single sensor reading, and then closes the instrument.
 
@@ -139,7 +162,7 @@ LS336 Temperature Logger
 
 The interface for LS336 Temperature Logger is shown in Fig [17](#fig:LS336-Temperature-Logger){reference-type="ref" reference="fig:LS336-Temperature-Logger"}.
 
-![[\[fig:LS336-Temperature-Logger\]]{#fig:LS336-Temperature-Logger label="fig:LS336-Temperature-Logger"}LS336 Temperature Logger interface](\string"Photos/Screenshots/Screenshot (9)\string".png){#fig:LS336-Temperature-Logger width="13cm"}
+![[\[fig:LS336-Temperature-Logger\]]{#fig:LS336-Temperature-Logger label="fig:LS336-Temperature-Logger"}LS336 Temperature Logger interface]({attach}Photos/Screenshots/Screenshot(9).png)
 
 This software logs the sensor reading (of two inputs), and then saves the data in a tab separated file specified by the user.
 
@@ -148,7 +171,7 @@ Basic RT,Tt Plotter
 
 The interface for Basic RT,Tt Plotter is shown in Fig [18](#fig:Basic-RT,Tt-Plotter){reference-type="ref" reference="fig:Basic-RT,Tt-Plotter"}.
 
-![[\[fig:Basic-RT,Tt-Plotter\]]{#fig:Basic-RT,Tt-Plotter label="fig:Basic-RT,Tt-Plotter"}Basic RT,Tt Plotter interface](\string"Photos/Screenshots/Screenshot (10)\string".png){#fig:Basic-RT,Tt-Plotter width="13cm"}
+![[\[fig:Basic-RT,Tt-Plotter\]]{#fig:Basic-RT,Tt-Plotter label="fig:Basic-RT,Tt-Plotter"}Basic RT,Tt Plotter interface]({attach}Photos/Screenshots/Screenshot(10).png)
 
 The application takes in a tab separated text file containing data of index,V,I,R,$T_(coldhead)$,$T_(sample)$ (obtained from temperature logger or RT Logger with Temperature controller )and then plots the RT , Tt graphs with T being the $T_(sample)$ .
 
@@ -157,7 +180,7 @@ RT Logger with Temperature controller
 
 The interface for RT Logger with Temperature controller is shown in Fig [19](#fig:RT-Logger-with){reference-type="ref" reference="fig:RT-Logger-with"}.
 
-![[\[fig:RT-Logger-with\]]{#fig:RT-Logger-with label="fig:RT-Logger-with"}RT Logger with Temperature controller interface](\string"Photos/Screenshots/Screenshot (11)\string".png){#fig:RT-Logger-with width="13cm"}
+![[\[fig:RT-Logger-with\]]{#fig:RT-Logger-with label="fig:RT-Logger-with"}RT Logger with Temperature controller interface]({attach}Photos/Screenshots/Screenshot(11).png)
 
 This application is basically all the above utilities put in one. There are two tabs, one for controls, the other for viewing the plots. In the control tab, one can set the parameters for SMU as well as Temperature controller. When the application is executed with the correct parameters set, the data of index,V,I,R,$T_(coldhead)$,$T_(sample)$ are stored in a tab separated text file at user specified location. The controls on the temperature controller side might look daunting at first, however a quick glance of LS336 manual clears up all the parameters.
 
@@ -169,52 +192,34 @@ Cryostat connections.
 
 The connections of Vacuum jacket, Vacuum pump, Pirani gauge, load lock and the valves can be made as shown in Fig [20](#fig:VacuumConnections){reference-type="ref" reference="fig:VacuumConnections"}.
 
-![[\[fig:VacuumConnections\]]{#fig:VacuumConnections label="fig:VacuumConnections"}Vacuum Connections: 1) Load Lock Valve 2) Pirani Gauge 3)Cross Connector 4)To Vacuum Pump 5)Vacuum Valve 6) connector to vacuum jacket](Photos/Connectors.jpg){#fig:VacuumConnections width="10cm"}
+![[\[fig:VacuumConnections\]]{#fig:VacuumConnections label="fig:VacuumConnections"}Vacuum Connections: 1) Load Lock Valve 2) Pirani Gauge 3)Cross Connector 4)To Vacuum Pump 5)Vacuum Valve 6) connector to vacuum jacket]({attach}Photos/Connectors.jpg)
 
 The temperature sensor connections are to be made as in Fig [21](#fig:TempSensorConnections){reference-type="ref" reference="fig:TempSensorConnections"}. The temperature sensor on the probe needs to be connected to Input B and that of the Cold Head to Input C (This is needed as the proper curves are chosen for this particular arrangement). The heater on the probe needs to be connected to Output 2 (50W) and that of the Cold head to Output 1(100W). Both the heaters are 50 Ohm heaters.
 
-![[\[fig:TempSensorConnections\]]{#fig:TempSensorConnections label="fig:TempSensorConnections"} Temperature Sensor connections](Photos/TempController_backpanel.jpg){#fig:TempSensorConnections width="10cm"}
+![[\[fig:TempSensorConnections\]]{#fig:TempSensorConnections label="fig:TempSensorConnections"} Temperature Sensor connections]({attach}Photos/TempController_backpanel.jpg)
 
 The break out for the pads on the sample holder can be accessed through the break out box (Fig [22](#fig:breakoutbox ){reference-type="ref" reference="fig:breakoutbox "}.)
 
-![[\[fig:breakoutbox \]]{#fig:breakoutbox  label="fig:breakoutbox "} Break out box](\string"Photos/Junction Box\string".jpg){#fig:breakoutbox  width="5cm"}
+![[\[fig:breakoutbox \]]{#fig:breakoutbox  label="fig:breakoutbox "} Break out box]({attach}Photos/Junction_Box.jpg)
 
 Each wire from the Hermetic connector is colour coded (as in Fig [23](#fig:Hermetic connector ){reference-type="ref" reference="fig:Hermetic connector "}), the pin-out for the same is in Table .
 
-![[\[fig:Hermetic connector \]]{#fig:Hermetic connector  label="fig:Hermetic connector "} Hermetic connector](Photos/Connector_wiring3.jpg){#fig:Hermetic connector  width="5cm"}
+![[\[fig:Hermetic connector \]]{#fig:Hermetic connector  label="fig:Hermetic connector "} Hermetic connector]({attach}Photos/Connector_wiring3.jpg)
 
-::: {#tab:Connector-pin-out}
-  Lettering   Colour         Source
-  ----------- -------------- -------------------------------
-  A           Blue-Red       TempSensor1 I+
-  B           Orange         TempSensor1 V+
-  C           White          TempSensor1 V-
-  D           Red-Green      TempSensor1 I-
-  E           Red            Heater HI (+)
-  F           Black          Heater Low (-)
-  G           White-Red      TempSensor2 I+
-  H           Blue-White     TempSensor2 V+
-  J           Red-White      Contact Pad 10/TempSensor2 V-
-  K           Blue-Black     TempSensor2 I-
-  L           Orange         Contact Pad 1
-  M           Orange-Black   Contact Pad 2
-  N           Black-White    Contact Pad 3
-  P           Red-Black      Contact Pad 4
-  R           White-Black    Contact Pad 7
-  S           Black-Red      Contact Pad 8
-  T           Blue           Contact Pad 9
-  U           Green          Contact Pad 5
-  V           Green-White    Contact Pad 6
 
-  : [\[tab:Connector-pin-out\]]{#tab:Connector-pin-out label="tab:Connector-pin-out"}Connector pin out
-:::
+
+![Table]({attach}Photos/Table.png)
+
+
+
+
 
 NOTE: Never create vacuum in sample space, the rubber bellows can get torn under vacuum.
 
 Check connections for leaks.
 ----------------------------
 
--   After making the connections,vacuum the vacuum pipe( turn off the Load Lock Valve ,turn on the Pirani Gauge). now slowly turn on the Vacuum Valve and .Wait till 10E-3 Torr of vacuum is achieved.
+-   After making the connections,vacuum the vacuum pipe( turn off the Load Lock Valve ,turn on the Pirani Gauge). now slowly turn on the Vacuum Valve and . Wait till 10E-3 Torr of vacuum is achieved.
 
 -   Spray all joints with Isopropanol and watch for a spike in vacuum. If spraying Isopropanol over any joint causes a spike in vacuum, you know that you have a small leak. Re-grease 0- rings and recheck. Any debris on the O-ring or inside the O-ring groove will certainly cause a leak path and will be noticeable .
 
@@ -223,11 +228,11 @@ Purging the Interface.
 
 Before turning the system on (after a long gap) you will need to purge the interface to remove any air that is trapped inside the sample well. This step is not required in regular use. This step can also help in getting a clear view through view port ( Fig [24](#fig:View-Port){reference-type="ref" reference="fig:View-Port"}) by removing some condensation.
 
-![[\[fig:View-Port\]]{#fig:View-Port label="fig:View-Port"}View Port](Photos/ViewPort.jpg){#fig:View-Port width="5cm"}
+![[\[fig:View-Port\]]{#fig:View-Port label="fig:View-Port"}View Port]({attach}Photos/ViewPort.jpg)
 
 -   Supply about \~0.5 psi of pressure to the gas inlet of the cryostat through the regulator. (NOTE: Supplying more than 20 psi to the Regulator may cause damage to the internal diaphragm. )
 
-![[\[fig:Gas-Regulator\]]{#fig:Gas-Regulator label="fig:Gas-Regulator"}Gas Regulator](\string"Photos/Gas Regulator\string".jpg){#fig:Gas-Regulator width="5cm"}
+![[\[fig:Gas-Regulator\]]{#fig:Gas-Regulator label="fig:Gas-Regulator"}Gas Regulator]({attach}Photos/Gas_Regulator.jpg)
 
 NOTE: If the sample well is not free of moisture and/or air it will cause the gas inlet tube to freeze below liquid Nitrogen temperatures. When this occurs the sample well will start to create vacuum and will suck the bellows into the well, potentially ripping or forcing the bellows from it's clamp.
 
@@ -255,7 +260,7 @@ Now that the Cryocooler is running, maintaining the 0.5 psi pressure on the samp
 Sample Insertion.
 -----------------
 
-![[\[fig:View-Port-1\]]{#fig:View-Port-1 label="fig:View-Port-1"}Sample insertion. 1)Probe stick 2) Rotatable Gripper of probe 3) Clamp 4) Quick clamp (shipping cap)](\string"Photos/Rotatable Knob of probe\string".jpg){#fig:View-Port-1 width="5cm"}
+![[\[fig:View-Port-1\]]{#fig:View-Port-1 label="fig:View-Port-1"}Sample insertion. 1)Probe stick 2) Rotatable Gripper of probe 3) Clamp 4) Quick clamp (shipping cap)]({attach}Photos/RotatableKnobofprobe.jpg)
 
 -   Replace the shipping cap with the quick clamp .
 
@@ -299,49 +304,41 @@ Once the experiment cycle is done or there is a requirement of shutdown for main
 
 -   Maintain small gas purge on the sample well while the system is warming to room temperature. This will assure that moisture does not collect inside the well.
 
-![Top view of sample space with load lock open with noticeable amount of water condensation at the bottom.[\[fig:Top-view-ofsamplespace\]]{#fig:Top-view-ofsamplespace label="fig:Top-view-ofsamplespace"}](Photos/SampleSpace_topView_loadLockOpen.jpg){#fig:Top-view-ofsamplespace width="5cm"}
+![Top view of sample space with load lock open with noticeable amount of water condensation at the bottom.[\[fig:Top-view-ofsamplespace\]]{#fig:Top-view-ofsamplespace label="fig:Top-view-ofsamplespace"}]({attach}Photos/SampleSpace_topView_loadLockOpen.jpg)
 
 Diagnostic remark
 -----------------
 
-  Problem                                       Causes                                               Suggestion
-  --------------------------------------------- ---------------------------------------------------- ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  cryostat isn't going to minimum temperature   To much of a helium purge                            If the internal gas in the sample well is being disrupted by inducing more than a few psi of pressure the gas will not have a chance to properly cool. So reduce helium pressure
-                                                Insufficient vacuum shielding in the Vacuum jacket   System must be pumped to 10E-3 Torr before operating the system. And should Achieve \> 10-5 Torr .
-                                                Instrumentation not properly set                     Check connections according to the manual. Verify sensor curves and sensor type.
-                                                Sample inserted improperly                           Make sure that the sample is inserted into the sample Stick as far as possible. The higher the sample sits from the bottom of the well the the greater the. temperature difference
-                                                Sample has large thermal mass                        The sample or the sample holder might have large thermal mass. Replace non magnetic sample holder with the magnetic one since it has lesser thermal mass
-  System takes longer than 3 hrs to cool        No Helim Purge                                       Lack of helium in the sample space will cause formation of ice around the sample. Check if gas cylinder is emptied.
-  Icing around Vacuum shroud                    Vacuum Leak                                          Check joints and oring sealing for leaks. One method to try is by spraying isopropanol around the joints and oring areas and watching the vacuum gauge for a rise. If the vacuum rises you found a leak point.
-
-  : Diagnostic Remark
+![table2]({attach}Photos/table2.png)
 
 Measurement Results
 ===================
 
 One of the very first measurement done was of the RC filter, which was tested using Analog Discovery 2 and the data is as in Fig[28](#fig:RC-Filter-Bode){reference-type="ref" reference="fig:RC-Filter-Bode"} and one can easily conclude that the RC filter was working as intended at the cut off of 1000Hz at room temperature.
 
-![RC Filter Bode Plot[\[fig:RC-Filter-Bode\]]{#fig:RC-Filter-Bode label="fig:RC-Filter-Bode"}](Photos/RC_BOde.png){#fig:RC-Filter-Bode width="14cm"}
+![RC Filter Bode Plot[\[fig:RC-Filter-Bode\]]{#fig:RC-Filter-Bode label="fig:RC-Filter-Bode"}]({attach}Photos/RC_BOde.png)
 
 It was suspected that the resistor and capacitors might not work reliably at low temperatures (since the resistor is made from thin film of a metal oxide and the capacitor is made of ceramic material). In order to test it, a resistor was mounted on a puck (Fig [29](#fig:Puck){reference-type="ref" reference="fig:Puck"})and a RT graph was drawn using a PPMS made by Cryogenic Ltd which was present in the lab.
 
-![Puck with the SMD Resistor[\[fig:Puck\]]{#fig:Puck label="fig:Puck"}](Photos/ResistorTest.jpg){#fig:Puck width="3cm"}
+![Puck with the SMD Resistor[\[fig:Puck\]]{#fig:Puck label="fig:Puck"}]({attach}Photos/ResistorTest.jpg)
 
 The results showed minimal change of resistance at low temperature (160 ohms at below 10 K). Hence the smd resistor worked fine at low temperatures. The cryogenic PPMS didnt have ready method to measure capacitance as a function of temperature. Hence this measurement was only possible after assembling the PCB and mounting it on the probe. This exercise revealed that the capacitance dropped to 10 nF below temperatures of 10 K and an RC plot showed the cut off frequency shift to 100KHz. Nullifying the use case of the RC filter. The bode plot for this trial is in Fig. [30](#fig:RC-Filter-Bode-1){reference-type="ref" reference="fig:RC-Filter-Bode-1"}
 
-![RC Filter Bode Plot at 10 K[\[fig:RC-Filter-Bode-1\]]{#fig:RC-Filter-Bode-1 label="fig:RC-Filter-Bode-1"}](Photos/RC_filter3.png){#fig:RC-Filter-Bode-1 width="14cm"}
+![RC Filter Bode Plot at 10 K[\[fig:RC-Filter-Bode-1\]]{#fig:RC-Filter-Bode-1 label="fig:RC-Filter-Bode-1"}]({attach}Photos/RC_filter3.png)
 
 Finally, one trail to measure the superconducting transition of a 55nm thin-film of Nb was done using the probe.
 
 The RT graph of the Nb sample as obtained is as in Fig [31](#fig:Superconducting-Transition-of){reference-type="ref" reference="fig:Superconducting-Transition-of"}. From this graph we can conclude that the Tc for the given sample is 7.68 K.
 
-![Superconducting Transition of Nb(55nm) thin film[\[fig:Superconducting-Transition-of\]]{#fig:Superconducting-Transition-of label="fig:Superconducting-Transition-of"}](Photos/pasted1.png){#fig:Superconducting-Transition-of width="13cm"}
+![Superconducting Transition of Nb(55nm) thin film[\[fig:Superconducting-Transition-of\]]{#fig:Superconducting-Transition-of label="fig:Superconducting-Transition-of"}]({attach}Photos/pasted1.png)
 
 An attempt was made to fabricate a Nb\|$Nb_2O_5$\|Nb Josephson Junction and to measure the IV graph of the same. The junction was made by taking two strands of Nb wire (50 $\mu$ M thick ) cleaned with 0.5 molar HCl. One strand was oxidized at 100 degree Celsius for a fixed time, and then the two wires were made to contact each other under tension provided by a stick with sharp edge (Fig [32](#fig:NbSISJunction){reference-type="ref" reference="fig:NbSISJunction"}). However not much success was found.
 
-![Sample holder for Nb\|$Nb_2O_5$\|Nb Josephson Junction 1) Clean Nb wire 2) Nb wire oxidized in air 3) wooden stick for tension [\[fig:NbSISJunction\]]{#fig:NbSISJunction label="fig:NbSISJunction"}](Photos/Mounted_sample_Junction.jpg){#fig:NbSISJunction width="7cm"}
+![Sample holder for Nb\|$Nb_2O_5$\|Nb Josephson Junction 1) Clean Nb wire 2) Nb wire oxidized in air 3) wooden stick for tension [\[fig:NbSISJunction\]]{#fig:NbSISJunction label="fig:NbSISJunction"}]({attach}Photos/Mounted_sample_Junction.jpg)
 
 Conclusions
 ===========
 
 The probe was successfully fabricated according to the initial design. However many new modifications come into mind after going through the 2 month process. The first major draw back was the failure of the RC filter, which was caused by the SMD capacitor, one can modify the circuit for an inductor instead of capacitor, or one can replace the current SMD capacitor with a different class capacitor. The second draw back was the large thermal mass of the non magnetic base. To counter this, one can reduce the number of samples, thickness of Copper, Increase joint thermal conductivity (by applying thermal paste or indium sheet). Thirdly, the size of the probe is very close to the allowed limits of the system, hence a new design can have a smaller sample holder and adapter. Next, the problem of ease of changing adapter has to be addressed by modifying the entire design . One can also think of replacing the default shielding that the probe comes in with something like silica aerogel for better insulation. One of the major problem faced was that the Helium cylinder gets emptied very quickly, this can be because of helium escaping through the plastic tubing, one can fix this by replacing the tube with cooper piping. Also, PID values for both the heater have to be optimised, the current values of 10,20,10 give a moderately good result. Finally the LabVIEW program can be made more robust, the current program is as basic as it can get, more features such as automation of multiple trials using some form of sequence editor can be thought of.
+
+A pdf version of this page (with better formatting) is available [here](https://ashwinschronicles.github.io/pdfs/NISER_Report.pdf). And the LabVIEW software mentioned in the article is available [here](https://github.com/iamashwin99/Cryostat-Measurement-Library/tree/master/Final) 
