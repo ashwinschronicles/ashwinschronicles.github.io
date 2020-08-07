@@ -69,7 +69,7 @@ The pcbs were designed and then sent to www.jlcpcb.com for fabrication of PCB. T
 
 The delivered product is shown in Fig [7](#fig:Fabricated-PCB).
 
-![Fabricated PCB[\[fig:Fabricated-PCB\]]{#fig:Fabricated-PCB label="fig:Fabricated-PCB"}]({attach}Photos\Fabricated_PCB.jpg)
+![Fabricated PCB[\[fig:Fabricated-PCB\]]{#fig:Fabricated-PCB label="fig:Fabricated-PCB"}]({attach}Photos/Fabricated_PCB.jpg)
 
 The base was made in house using copper sheets which were cut using an angle grinder to the required measurements. The joints were fixed by brazing it with copper. The finished probe ends are seen in Fig [8](#fig:FabricatedBases).
 
