@@ -1,11 +1,12 @@
-Title: Superconductivity
+---
+Title:Notes on Superconductivity
 Date: 2019-06-06
 Modified:2019-06-20
 Category: Science,Superconductivity
 Tags: Superconductivity, spin, cooper pairs
 Slug: Superconductivity
 Summary: Short note on superconductivity
-
+---
 This post is my notes on Superconductivity from video lectures of [Sergey Frolov](https://www.youtube.com/channel/UCDBKb7qMyNXujTf7kKRdstg "Youtube Link") on Solid State Physics and other online sites such as http://www.superconductors.org
 
 
