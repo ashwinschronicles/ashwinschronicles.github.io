@@ -1,5 +1,128 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Ashwin's Chronicles</title><link href="https://ashwinschronicles.github.io/" rel="alternate"></link><link href="https://ashwinschronicles.github.io/feeds/all-en.atom.xml" rel="self"></link><id>https://ashwinschronicles.github.io/</id><updated>2020-08-07T13:47:30+05:30</updated><entry><title>Battery Management System for an xEV - Part 1</title><link href="https://ashwinschronicles.github.io/BMS_for_an_EV_intro" rel="alternate"></link><published>2020-05-25T00:00:00+05:30</published><updated>2020-06-10T00:00:00+05:30</updated><author><name>Ashwin</name></author><id>tag:ashwinschronicles.github.io,2020-05-25:/BMS_for_an_EV_intro</id><summary type="html">&lt;p&gt;This post is about information gathered on designing a &lt;span class="caps"&gt;BMS&lt;/span&gt; for a&amp;nbsp;xEV&lt;/p&gt;</summary><content type="html">&lt;p&gt;This is part 1 of a series on Battery management system&amp;nbsp;design.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Ashwin's Chronicles</title><link href="https://ashwinschronicles.github.io/" rel="alternate"></link><link href="https://ashwinschronicles.github.io/feeds/all-en.atom.xml" rel="self"></link><id>https://ashwinschronicles.github.io/</id><updated>2020-08-11T13:52:22+05:30</updated><entry><title>Producing Beamer slide shows from markdown using Pandoc</title><link href="https://ashwinschronicles.github.io/beamer-slides-using-markdown-and-pandoc" rel="alternate"></link><published>2020-07-01T13:40:03+05:30</published><updated>2020-08-11T13:52:22+05:30</updated><author><name>Ashwin Kumar K</name></author><id>tag:ashwinschronicles.github.io,2020-07-01:/beamer-slides-using-markdown-and-pandoc</id><summary type="html">&lt;p&gt;Short note on bueatiful Producing Beamer slide shows from markdown using&amp;nbsp;Pandoc&lt;/p&gt;</summary><content type="html">&lt;h1 id="producing-slide-shows-with-pandoc"&gt;Producing slide shows with pandoc&lt;a class="headerlink" href="#producing-slide-shows-with-pandoc" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h1&gt;
+&lt;p&gt;Pandoc is a Haskell library for converting from one markup format to another, and a command-line tool that uses this&amp;nbsp;library.&lt;/p&gt;
+&lt;p&gt;You can use pandoc to produce an &lt;span class="caps"&gt;HTML&lt;/span&gt; + JavaScript slide presentation that can be viewed via a web browser. There are five ways to do this, using &lt;a href="https://meyerweb.com/eric/tools/s5/"&gt;S5&lt;/a&gt;, &lt;a href="http://paulrouget.com/dzslides/"&gt;DZSlides&lt;/a&gt;, &lt;a href="https://www.w3.org/Talks/Tools/Slidy2/"&gt;Slidy&lt;/a&gt;, &lt;a href="https://goessner.net/articles/slideous/"&gt;Slideous&lt;/a&gt;, or &lt;a href="https://revealjs.com/"&gt;reveal.js&lt;/a&gt;. You can also produce a &lt;span class="caps"&gt;PDF&lt;/span&gt; slide show using LaTeX &lt;a href="https://ctan.org/pkg/beamer"&gt;&lt;code&gt;beamer&lt;/code&gt;&lt;/a&gt;, or slides shows in Microsoft &lt;a href="https://en.wikipedia.org/wiki/Microsoft_PowerPoint"&gt;PowerPoint&lt;/a&gt;&amp;nbsp;format.&lt;/p&gt;
+&lt;p&gt;Here&amp;rsquo;s the Markdown source for a simple slide show, &lt;code&gt;Demo.md&lt;/code&gt;:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;---
+title:
+&lt;span class="k"&gt;-&lt;/span&gt; AI Playground
+author:
+&lt;span class="k"&gt;-&lt;/span&gt; Ashwin Kumar K
+theme:
+&lt;span class="k"&gt;-&lt;/span&gt; Copenhagen
+date:
+&lt;span class="k"&gt;-&lt;/span&gt; March 22, 2020
+
+---
+
+
+
+&lt;span class="gh"&gt;#&lt;/span&gt; What's AI?
+
+&lt;span class="k"&gt;-&lt;/span&gt; Artificial Intelligence- The ability of machine to think and behave like humans.
+&lt;span class="k"&gt;-&lt;/span&gt; How does the machine learn on its own? - That is called Machine Learning. ML is the study of computer algorithms that improve automatically with experience.
+&lt;span class="k"&gt;-&lt;/span&gt; Just like humans learn with experience - Machines also learn with experience!
+&lt;span class="k"&gt;-&lt;/span&gt; Examples of common AI? Alexa, Siri, Google Home, Self Driving Cars, Robots etc.
+
+&lt;span class="gh"&gt;#&lt;/span&gt; What's out there?
+
+![&lt;span class="nt"&gt;Verticles&lt;/span&gt;](&lt;span class="na"&gt;img/Untitled.png&lt;/span&gt;)
+
+
+&lt;span class="gh"&gt;#&lt;/span&gt; How do computers make decisions?
+
+&lt;span class="k"&gt;-&lt;/span&gt; Conditional statements are used to perform different actions based on different conditions.
+&lt;span class="k"&gt;-&lt;/span&gt; In many programming languages, decisions (also called conditionals) take the form of an if-then construct. They start with a condition, which is then evaluated as either True or False.
+
+&lt;span class="gh"&gt;#&lt;/span&gt; How do computers make decisions?
+
+![&lt;span class="nt"&gt;Flow chart&lt;/span&gt;](&lt;span class="na"&gt;img/Untitled 1.png&lt;/span&gt;){ width=250px }
+
+&lt;span class="gh"&gt;#&lt;/span&gt; Let's Build that
+
+```jsx
+Bot.send("Are you going out to play?")
+async function respond(inputText){
+    if (inputText == "yes"){
+        Bot.send("Wear a hat");
+    }
+    else {
+        Bot.send("ok");
+    }
+
+ }
+\```     &amp;lt;REMOVE THE \&amp;gt;
+
+What we learned. - Bot.send() method - if else statements.
+
+&lt;span class="gh"&gt;#&lt;/span&gt; Build a basic greetings bot
+
+![&lt;span class="nt"&gt;Flow chart&lt;/span&gt;](&lt;span class="na"&gt;img/Untitled 2.png&lt;/span&gt;)
+
+
+
+&lt;span class="gh"&gt;#&lt;/span&gt; Benefits of AI Playground
+
+&lt;span class="k"&gt;-&lt;/span&gt; Streamlines a lot of back end operations, so that the you can just learn what AI is &amp;mdash; and can get immediate results!
+&lt;span class="k"&gt;-&lt;/span&gt; User friendly!
+&lt;span class="k"&gt;-&lt;/span&gt; Designed to suit students needs.
+&lt;span class="k"&gt;-&lt;/span&gt; Students can see and publish new projects and thus learn from each other.
+
+&lt;span class="gu"&gt;##&lt;/span&gt; How does learning AI help?
+
+&lt;span class="k"&gt;-&lt;/span&gt; Logical reasoning and Sequencing 
+&lt;span class="k"&gt;-&lt;/span&gt; Critical thinking
+&lt;span class="k"&gt;-&lt;/span&gt; Problem solving
+&lt;span class="k"&gt;-&lt;/span&gt; Mental Mathematics
+    &lt;span class="k"&gt;-&lt;/span&gt; The above skills are implicit skills that students learn along with AI. And this helps them in academics, life, etc.
+
+&lt;span class="gh"&gt;#&lt;/span&gt; Extra 
+
+The well known Pythagorean theorem $x^2 + y^2 = z^2$ was  proved to be invalid for other exponents. 
+Meaning the next equation has no integer solutions:
+$$x^n + y^n = z^n$$
+
+Can AI, help find near misses for this equation?
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;The slides generated from this markdown can bee seen &lt;a href="https://ashwinschronicles.github.io/pdfs/Demo.pdf"&gt;here&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;You can create a slide show broken up into sections by using the # and ## heading tags (you can also create a new slide without a header using a horizontal rule (&amp;mdash;-). You can also insert latex equations by going to math mode (Insert the equation in $ $&amp;nbsp;)&lt;/p&gt;
+&lt;p&gt;To produce an &lt;span class="caps"&gt;HTML&lt;/span&gt;/JavaScript slide show, simply&amp;nbsp;type&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;pandoc -t FORMAT -s Demo.txt -o Demo.html&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;where &lt;code&gt;FORMAT&lt;/code&gt; is either &lt;code&gt;s5&lt;/code&gt;, &lt;code&gt;slidy&lt;/code&gt;, &lt;code&gt;slideous&lt;/code&gt;, &lt;code&gt;dzslides&lt;/code&gt;, or &lt;code&gt;revealjs&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;For Slidy, Slideous, reveal.js, and S5, the file produced by pandoc with the &lt;a href="https://pandoc.org/MANUAL.html#option--standalone"&gt;&lt;code&gt;-s/--standalone&lt;/code&gt;&lt;/a&gt; option embeds a link to JavaScript and &lt;span class="caps"&gt;CSS&lt;/span&gt; files, which are assumed to be available at the relative path &lt;code&gt;s5/default&lt;/code&gt; (for S5), &lt;code&gt;slideous&lt;/code&gt; (for Slideous), &lt;code&gt;reveal.js&lt;/code&gt; (for reveal.js), or at the Slidy website at &lt;code&gt;w3.org&lt;/code&gt; (for Slidy). (These paths can be changed by setting the &lt;code&gt;slidy-url&lt;/code&gt;, &lt;code&gt;slideous-url&lt;/code&gt;, &lt;code&gt;revealjs-url&lt;/code&gt;, or &lt;code&gt;s5-url&lt;/code&gt; variables; see &lt;a href="https://pandoc.org/MANUAL.html#variables-for-html-slides"&gt;Variables for &lt;span class="caps"&gt;HTML&lt;/span&gt; slides&lt;/a&gt;, above.) For DZSlides, the (relatively short) JavaScript and &lt;span class="caps"&gt;CSS&lt;/span&gt; are included in the file by&amp;nbsp;default.&lt;/p&gt;
+&lt;p&gt;With all &lt;span class="caps"&gt;HTML&lt;/span&gt; slide formats, the &lt;a href="https://pandoc.org/MANUAL.html#option--self-contained"&gt;&lt;code&gt;--self-contained&lt;/code&gt;&lt;/a&gt; option can be used to produce a single file that contains all of the data necessary to display the slide show, including linked scripts, stylesheets, images, and&amp;nbsp;videos.&lt;/p&gt;
+&lt;p&gt;To produce a &lt;span class="caps"&gt;PDF&lt;/span&gt; slide show using beamer,&amp;nbsp;type&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;pandoc -t beamer Demo.txt -o Demo.pdf&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Note that a reveal.js slide show can also be converted to a &lt;span class="caps"&gt;PDF&lt;/span&gt; by printing it to a file from the&amp;nbsp;browser.&lt;/p&gt;
+&lt;p&gt;To produce a Powerpoint slide show,&amp;nbsp;type&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;pandoc Demo.txt -o Demo.pptx&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2 id="structuring-the-slide-show"&gt;Structuring the slide show&lt;a class="headerlink" href="#structuring-the-slide-show" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;By default, the &lt;em&gt;slide level&lt;/em&gt; is the highest heading level in the hierarchy that is followed immediately by content, and not another heading, somewhere in the document. In the example above, level-1 headings are always followed by level-2 headings, which are followed by content, so the slide level is 2. This default can be overridden using the &lt;a href="https://pandoc.org/MANUAL.html#option--slide-level"&gt;&lt;code&gt;--slide-level&lt;/code&gt;&lt;/a&gt;&amp;nbsp;option.&lt;/p&gt;
+&lt;p&gt;The document is carved up into slides according to the following&amp;nbsp;rules:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;A horizontal rule always starts a new&amp;nbsp;slide.&lt;/li&gt;
+&lt;li&gt;A heading at the slide level always starts a new&amp;nbsp;slide.&lt;/li&gt;
+&lt;li&gt;Headings &lt;em&gt;below&lt;/em&gt; the slide level in the hierarchy create headings &lt;em&gt;within&lt;/em&gt; a&amp;nbsp;slide.&lt;/li&gt;
+&lt;li&gt;Headings &lt;em&gt;above&lt;/em&gt; the slide level in the hierarchy create &amp;ldquo;title slides,&amp;rdquo; which just contain the section title and help to break the slide show into sections. Non-slide content under these headings will be included on the title slide (for &lt;span class="caps"&gt;HTML&lt;/span&gt; slide shows) or in a subsequent slide with the same title (for&amp;nbsp;beamer).&lt;/li&gt;
+&lt;li&gt;A title page is constructed automatically from the document&amp;rsquo;s title block, if present. (In the case of beamer, this can be disabled by commenting out some lines in the default&amp;nbsp;template.)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;These rules are designed to support many different styles of slide show. If you don&amp;rsquo;t care about structuring your slides into sections and subsections, you can just use level-1 headings for all each slide. (In that case, level-1 will be the slide level.) But you can also structure the slide show into sections, as in the example&amp;nbsp;above.&lt;/p&gt;
+&lt;p&gt;Note: in reveal.js slide shows, if slide level is 2, a two-dimensional layout will be produced, with level-1 headings building horizontally and level-2 headings building vertically. It is not recommended that you use deeper nesting of section levels with&amp;nbsp;reveal.js.&lt;/p&gt;
+&lt;h2 id="incremental-lists"&gt;Incremental lists&lt;a class="headerlink" href="#incremental-lists" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;By default, these writers produces lists that display [&amp;ldquo;[all at once.]{.quote}&amp;rdquo;]{.quote} If you want your lists to display incrementally (one item at a time), use the &lt;code class="literal"&gt;-i&lt;/code&gt; option. If you want aparticular list to depart from the default (that is, to display incrementally without the &lt;code class="literal"&gt;-i&lt;/code&gt; option and all at once with the &lt;code class="literal"&gt;-i&lt;/code&gt; option), put it in a block&amp;nbsp;quote:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;&amp;gt; - Eat spaghetti&lt;/span&gt;
+&lt;span class="err"&gt;&amp;gt; - Drink wine&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;In this way incremental and nonincremental lists can be mixed in a
+single&amp;nbsp;document.&lt;/p&gt;
+&lt;h2 id="styling-the-slides"&gt;Styling the slides&lt;a class="headerlink" href="#styling-the-slides" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;To style beamer slides, you can specify a beamer &amp;ldquo;theme&amp;rdquo; or &amp;ldquo;colortheme&amp;rdquo; using the &lt;code&gt;-V&lt;/code&gt; option:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;pandoc -t beamer Demo.txt -V theme:Warsaw -o Demo.pdf
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;for more settings visit&lt;a href="https://pandoc.org/MANUAL.html"&gt;Pandoc Manual&lt;/a&gt; and &lt;a href="https://bookdown.org/yihui/rmarkdown/beamer-presentation.html"&gt;bookdown.org&lt;/a&gt; &lt;/p&gt;</content><category term="Blog"></category><category term="Pandoc"></category><category term="slides"></category><category term="markdown"></category></entry><entry><title>Battery Management System for an xEV - Part 1</title><link href="https://ashwinschronicles.github.io/BMS_for_an_EV_intro" rel="alternate"></link><published>2020-05-25T00:00:00+05:30</published><updated>2020-06-10T00:00:00+05:30</updated><author><name>Ashwin</name></author><id>tag:ashwinschronicles.github.io,2020-05-25:/BMS_for_an_EV_intro</id><summary type="html">&lt;p&gt;This post is about information gathered on designing a &lt;span class="caps"&gt;BMS&lt;/span&gt; for a&amp;nbsp;xEV&lt;/p&gt;</summary><content type="html">&lt;p&gt;This is part 1 of a series on Battery management system&amp;nbsp;design.&lt;/p&gt;
 &lt;p&gt;The data presented here was  collected as a part of study based Internship at Kaynes Technology,&amp;nbsp;Mysore.&lt;/p&gt;
 &lt;p&gt;Most of the data here is my notes on the following&amp;nbsp;resources:&lt;/p&gt;
 &lt;ul&gt;
@@ -584,7 +707,7 @@ All of these have costs in dollars, weight and/or&amp;nbsp;volume&lt;/li&gt;
 &lt;li&gt;Article 3: Advanced methods for &lt;span class="caps"&gt;SOC&lt;/span&gt;&amp;nbsp;estimation&lt;/li&gt;
 &lt;li&gt;Article 4: &lt;span class="caps"&gt;SOH&lt;/span&gt;&amp;nbsp;estimation&lt;/li&gt;
 &lt;li&gt;Article 5: Balancing and power-limits&amp;nbsp;estimation&lt;/li&gt;
-&lt;/ul&gt;</content><category term="Engineering"></category><category term="BMS"></category><category term="EV"></category><category term="battery-terminologies"></category><category term="BMS-requirements"></category><category term="electrochemical-cell"></category><category term="Li-ion_working"></category><category term="ADC"></category><category term="Shunt-sensor"></category><category term="hall-effect current sensor"></category><category term="contactor"></category><category term="Isolation sensing"></category><category term="BMS protection"></category><category term="Charger control"></category><category term="Performance management"></category></entry><entry><title>Extending Desktop to another device over VNC</title><link href="https://ashwinschronicles.github.io/extending-desktop-to-another-device-over-vnc" rel="alternate"></link><published>2020-02-05T00:00:00+05:30</published><updated>2020-02-05T00:00:00+05:30</updated><author><name>Ashwin</name></author><id>tag:ashwinschronicles.github.io,2020-02-05:/extending-desktop-to-another-device-over-vnc</id><summary type="html">&lt;p&gt;This post details the procedure to Extending Desktop to another device over &lt;span class="caps"&gt;VNC&lt;/span&gt; or other protocol in&amp;nbsp;Linux&lt;/p&gt;</summary><content type="html">&lt;hr/&gt;
+&lt;/ul&gt;</content><category term="Lecture Notes"></category><category term="BMS"></category><category term="EV"></category><category term="battery-terminologies"></category><category term="BMS-requirements"></category><category term="electrochemical-cell"></category><category term="Li-ion_working"></category><category term="ADC"></category><category term="Shunt-sensor"></category><category term="hall-effect current sensor"></category><category term="contactor"></category><category term="Isolation sensing"></category><category term="BMS protection"></category><category term="Charger control"></category><category term="Performance management"></category></entry><entry><title>Extending Desktop to another device over VNC</title><link href="https://ashwinschronicles.github.io/extending-desktop-to-another-device-over-vnc" rel="alternate"></link><published>2020-02-05T00:00:00+05:30</published><updated>2020-02-05T00:00:00+05:30</updated><author><name>Ashwin</name></author><id>tag:ashwinschronicles.github.io,2020-02-05:/extending-desktop-to-another-device-over-vnc</id><summary type="html">&lt;p&gt;This post details the procedure to Extending Desktop to another device over &lt;span class="caps"&gt;VNC&lt;/span&gt; or other protocol in&amp;nbsp;Linux&lt;/p&gt;</summary><content type="html">&lt;hr/&gt;
 &lt;p&gt;If you have an old tablet or old laptop, you might want to put it to good use by using its display as a secondary screen to your primary laptop. If you are using windows on your primary laptop, you have a host of applications that does this for you (like Builtin windows Wireless display, Synergy) but if you are using linux you can follow the following&amp;nbsp;instructions.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Assumptions&lt;/strong&gt;
 I will list the steps on how to get it done wit the following&amp;nbsp;configuration:&lt;/p&gt;
@@ -1011,7 +1134,7 @@ x11vnc -clip 1920x1080+1920+0
 &lt;td&gt;52 / 60&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
-&lt;/table&gt;</content><category term="Engineering"></category><category term="Analog Discovery 2"></category><category term="LabVIEW"></category><category term="Review"></category></entry><entry><title>Notes on Superconductivity</title><link href="https://ashwinschronicles.github.io/Superconductivity" rel="alternate"></link><published>2019-06-07T14:02:48+05:30</published><updated>2020-08-07T13:47:30+05:30</updated><author><name>Ashwin Kumar K</name></author><id>tag:ashwinschronicles.github.io,2019-06-07:/Superconductivity</id><summary type="html">&lt;p&gt;Short note on&amp;nbsp;superconductivity&lt;/p&gt;</summary><content type="html">&lt;p&gt;This post is my notes on Superconductivity from video lectures of &lt;a href="https://www.youtube.com/channel/UCDBKb7qMyNXujTf7kKRdstg" title="Youtube Link"&gt;Sergey Frolov&lt;/a&gt; on Solid State Physics and other online sites such as&amp;nbsp;http://www.superconductors.org&lt;/p&gt;
+&lt;/table&gt;</content><category term="Engineering"></category><category term="Analog Discovery 2"></category><category term="LabVIEW"></category><category term="Review"></category></entry><entry><title>Notes on Superconductivity</title><link href="https://ashwinschronicles.github.io/Superconductivity" rel="alternate"></link><published>2019-06-07T14:02:48+05:30</published><updated>2020-08-11T13:52:22+05:30</updated><author><name>Ashwin Kumar K</name></author><id>tag:ashwinschronicles.github.io,2019-06-07:/Superconductivity</id><summary type="html">&lt;p&gt;Short note on&amp;nbsp;superconductivity&lt;/p&gt;</summary><content type="html">&lt;p&gt;This post is my notes on Superconductivity from video lectures of &lt;a href="https://www.youtube.com/channel/UCDBKb7qMyNXujTf7kKRdstg" title="Youtube Link"&gt;Sergey Frolov&lt;/a&gt; on Solid State Physics and other online sites such as&amp;nbsp;http://www.superconductors.org&lt;/p&gt;
 &lt;h1 id="properties"&gt;Properties&lt;a class="headerlink" href="#properties" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;
@@ -1315,7 +1438,7 @@ x11vnc -clip 1920x1080+1920+0
     (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
-&lt;/script&gt;</content><category term="Science"></category><category term="Superconductivity"></category><category term="spin"></category><category term="cooper pairs"></category></entry><entry><title>Quantum Hall Effect and related phenomena</title><link href="https://ashwinschronicles.github.io/qhe" rel="alternate"></link><published>2019-06-07T14:02:48+05:30</published><updated>2020-03-28T17:15:57+05:30</updated><author><name>Ashwin</name></author><id>tag:ashwinschronicles.github.io,2019-06-07:/qhe</id><summary type="html">&lt;p&gt;Notes on Quantum Hall Effect and related&amp;nbsp;phenomenon&lt;/p&gt;</summary><content type="html">&lt;h1 id="historical-aspects"&gt;Historical Aspects&lt;a class="headerlink" href="#historical-aspects" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h1&gt;
+&lt;/script&gt;</content><category term="Lecture Notes"></category><category term="Superconductivity"></category><category term="spin"></category><category term="cooper pairs"></category></entry><entry><title>Quantum Hall Effect and related phenomena</title><link href="https://ashwinschronicles.github.io/qhe" rel="alternate"></link><published>2019-06-07T14:02:48+05:30</published><updated>2020-03-28T17:15:57+05:30</updated><author><name>Ashwin</name></author><id>tag:ashwinschronicles.github.io,2019-06-07:/qhe</id><summary type="html">&lt;p&gt;Notes on Quantum Hall Effect and related&amp;nbsp;phenomenon&lt;/p&gt;</summary><content type="html">&lt;h1 id="historical-aspects"&gt;Historical Aspects&lt;a class="headerlink" href="#historical-aspects" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h1&gt;
 &lt;p&gt;The quantum Hall effect is a remarkable phenomenon discovered
 experimentally in which the Hall conductivity of a two dimensional
 system of electrons is found to have plateaus as a function of variables
