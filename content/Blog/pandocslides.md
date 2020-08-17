@@ -52,7 +52,7 @@ date:
 
 # Let's Build that
 
-```jsx
+​```jsx
 Bot.send("Are you going out to play?")
 async function respond(inputText){
 	if (inputText == "yes"){
@@ -145,7 +145,7 @@ Note: in reveal.js slide shows, if slide level is 2, a two-dimensional layout wi
 
 ## Incremental lists 
 
-By default, these writers produces lists that display ["[all at once.]{.quote}"]{.quote} If you want your lists to display incrementally (one item at a time), use the `-i`{.literal} option. If you want aparticular list to depart from the default (that is, to display incrementally without the `-i`{.literal} option and all at once with the `-i`{.literal} option), put it in a block quote:
+By default, these writers produces lists that display "all at once". If you want your lists to display incrementally (one item at a time), use the `-i`{.literal} option. If you want aparticular list to depart from the default (that is, to display incrementally without the `-i`{.literal} option and all at once with the `-i`{.literal} option), put it in a block quote:
 
 ```
 > - Eat spaghetti
@@ -168,5 +168,5 @@ pandoc -t beamer Demo.txt -V theme:Warsaw -o Demo.pdf
 
 
 
-for more settings visit[Pandoc Manual](https://pandoc.org/MANUAL.html) and [bookdown.org](https://bookdown.org/yihui/rmarkdown/beamer-presentation.html) 
+for more settings visit  [Pandoc Manual](https://pandoc.org/MANUAL.html) and [bookdown.org](https://bookdown.org/yihui/rmarkdown/beamer-presentation.html) 
 
