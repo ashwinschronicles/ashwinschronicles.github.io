@@ -1,1 +1,6 @@
-git add -A && git commit -a -m "$1" && git push --all
+#!/bin/bash
+read -p "Commit description: " desc
+git add . && \
+git add -u && \
+git commit -m "$desc" && \
+git push origin

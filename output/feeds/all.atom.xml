@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Ashwin's Chronicles</title><link href="https://ashwinschronicles.github.io/" rel="alternate"></link><link href="https://ashwinschronicles.github.io/feeds/all.atom.xml" rel="self"></link><id>https://ashwinschronicles.github.io/</id><updated>2020-08-11T13:52:22+05:30</updated><entry><title>Producing Beamer slide shows from markdown using Pandoc</title><link href="https://ashwinschronicles.github.io/beamer-slides-using-markdown-and-pandoc" rel="alternate"></link><published>2020-07-01T13:40:03+05:30</published><updated>2020-08-11T13:52:22+05:30</updated><author><name>Ashwin Kumar K</name></author><id>tag:ashwinschronicles.github.io,2020-07-01:/beamer-slides-using-markdown-and-pandoc</id><summary type="html">&lt;p&gt;Short note on bueatiful Producing Beamer slide shows from markdown using&amp;nbsp;Pandoc&lt;/p&gt;</summary><content type="html">&lt;h1 id="producing-slide-shows-with-pandoc"&gt;Producing slide shows with pandoc&lt;a class="headerlink" href="#producing-slide-shows-with-pandoc" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h1&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Ashwin's Chronicles</title><link href="/" rel="alternate"></link><link href="/feeds/all.atom.xml" rel="self"></link><id>/</id><updated>2020-06-20T00:00:00+05:30</updated><entry><title>Producing Beamer slide shows from markdown using Pandoc</title><link href="/beamer-slides-using-markdown-and-pandoc" rel="alternate"></link><published>2020-06-06T00:00:00+05:30</published><updated>2020-06-20T00:00:00+05:30</updated><author><name>Ashwin Kumar K</name></author><id>tag:None,2020-06-06:/beamer-slides-using-markdown-and-pandoc</id><summary type="html">&lt;p&gt;Short note on bueatiful Producing Beamer slide shows from markdown using&amp;nbsp;Pandoc&lt;/p&gt;</summary><content type="html">&lt;h1 id="producing-slide-shows-with-pandoc"&gt;Producing slide shows with pandoc&lt;a class="headerlink" href="#producing-slide-shows-with-pandoc" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h1&gt;
 &lt;p&gt;Pandoc is a Haskell library for converting from one markup format to another, and a command-line tool that uses this&amp;nbsp;library.&lt;/p&gt;
 &lt;p&gt;You can use pandoc to produce an &lt;span class="caps"&gt;HTML&lt;/span&gt; + JavaScript slide presentation that can be viewed via a web browser. There are five ways to do this, using &lt;a href="https://meyerweb.com/eric/tools/s5/"&gt;S5&lt;/a&gt;, &lt;a href="http://paulrouget.com/dzslides/"&gt;DZSlides&lt;/a&gt;, &lt;a href="https://www.w3.org/Talks/Tools/Slidy2/"&gt;Slidy&lt;/a&gt;, &lt;a href="https://goessner.net/articles/slideous/"&gt;Slideous&lt;/a&gt;, or &lt;a href="https://revealjs.com/"&gt;reveal.js&lt;/a&gt;. You can also produce a &lt;span class="caps"&gt;PDF&lt;/span&gt; slide show using LaTeX &lt;a href="https://ctan.org/pkg/beamer"&gt;&lt;code&gt;beamer&lt;/code&gt;&lt;/a&gt;, or slides shows in Microsoft &lt;a href="https://en.wikipedia.org/wiki/Microsoft_PowerPoint"&gt;PowerPoint&lt;/a&gt;&amp;nbsp;format.&lt;/p&gt;
 &lt;p&gt;Here&amp;rsquo;s the Markdown source for a simple slide show, &lt;code&gt;Demo.md&lt;/code&gt;:&lt;/p&gt;
@@ -40,7 +40,7 @@ date:
 
 &lt;span class="gh"&gt;#&lt;/span&gt; Let's Build that
 
-```jsx
+​```jsx
 Bot.send("Are you going out to play?")
 async function respond(inputText){
     if (inputText == "yes"){
@@ -90,9 +90,7 @@ Can AI, help find near misses for this equation?
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;pandoc -t FORMAT -s Demo.txt -o Demo.html&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;where &lt;code&gt;FORMAT&lt;/code&gt; is either &lt;code&gt;s5&lt;/code&gt;, &lt;code&gt;slidy&lt;/code&gt;, &lt;code&gt;slideous&lt;/code&gt;, &lt;code&gt;dzslides&lt;/code&gt;, or &lt;code&gt;revealjs&lt;/code&gt;.&lt;/p&gt;
-&lt;p&gt;For Slidy, Slideous, reveal.js, and S5, the file produced by pandoc with the &lt;a href="https://pandoc.org/MANUAL.html#option--standalone"&gt;&lt;code&gt;-s/--standalone&lt;/code&gt;&lt;/a&gt; option embeds a link to JavaScript and &lt;span class="caps"&gt;CSS&lt;/span&gt; files, which are assumed to be available at the relative path &lt;code&gt;s5/default&lt;/code&gt; (for S5), &lt;code&gt;slideous&lt;/code&gt; (for Slideous), &lt;code&gt;reveal.js&lt;/code&gt; (for reveal.js), or at the Slidy website at &lt;code&gt;w3.org&lt;/code&gt; (for Slidy). (These paths can be changed by setting the &lt;code&gt;slidy-url&lt;/code&gt;, &lt;code&gt;slideous-url&lt;/code&gt;, &lt;code&gt;revealjs-url&lt;/code&gt;, or &lt;code&gt;s5-url&lt;/code&gt; variables; see &lt;a href="https://pandoc.org/MANUAL.html#variables-for-html-slides"&gt;Variables for &lt;span class="caps"&gt;HTML&lt;/span&gt; slides&lt;/a&gt;, above.) For DZSlides, the (relatively short) JavaScript and &lt;span class="caps"&gt;CSS&lt;/span&gt; are included in the file by&amp;nbsp;default.&lt;/p&gt;
-&lt;p&gt;With all &lt;span class="caps"&gt;HTML&lt;/span&gt; slide formats, the &lt;a href="https://pandoc.org/MANUAL.html#option--self-contained"&gt;&lt;code&gt;--self-contained&lt;/code&gt;&lt;/a&gt; option can be used to produce a single file that contains all of the data necessary to display the slide show, including linked scripts, stylesheets, images, and&amp;nbsp;videos.&lt;/p&gt;
-&lt;p&gt;To produce a &lt;span class="caps"&gt;PDF&lt;/span&gt; slide show using beamer,&amp;nbsp;type&lt;/p&gt;
+&lt;p&gt;To produce a &lt;span class="caps"&gt;PDF&lt;/span&gt; slide show using  LaTeX &lt;a href="https://ctan.org/pkg/beamer"&gt;&lt;code&gt;beamer&lt;/code&gt;&lt;/a&gt;,&amp;nbsp;type&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;pandoc -t beamer Demo.txt -o Demo.pdf&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Note that a reveal.js slide show can also be converted to a &lt;span class="caps"&gt;PDF&lt;/span&gt; by printing it to a file from the&amp;nbsp;browser.&lt;/p&gt;
@@ -112,7 +110,7 @@ Can AI, help find near misses for this equation?
 &lt;p&gt;These rules are designed to support many different styles of slide show. If you don&amp;rsquo;t care about structuring your slides into sections and subsections, you can just use level-1 headings for all each slide. (In that case, level-1 will be the slide level.) But you can also structure the slide show into sections, as in the example&amp;nbsp;above.&lt;/p&gt;
 &lt;p&gt;Note: in reveal.js slide shows, if slide level is 2, a two-dimensional layout will be produced, with level-1 headings building horizontally and level-2 headings building vertically. It is not recommended that you use deeper nesting of section levels with&amp;nbsp;reveal.js.&lt;/p&gt;
 &lt;h2 id="incremental-lists"&gt;Incremental lists&lt;a class="headerlink" href="#incremental-lists" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;By default, these writers produces lists that display [&amp;ldquo;[all at once.]{.quote}&amp;rdquo;]{.quote} If you want your lists to display incrementally (one item at a time), use the &lt;code class="literal"&gt;-i&lt;/code&gt; option. If you want aparticular list to depart from the default (that is, to display incrementally without the &lt;code class="literal"&gt;-i&lt;/code&gt; option and all at once with the &lt;code class="literal"&gt;-i&lt;/code&gt; option), put it in a block&amp;nbsp;quote:&lt;/p&gt;
+&lt;p&gt;By default, these writers produces lists that display &amp;ldquo;all at once&amp;rdquo;. If you want your lists to display incrementally (one item at a time), use the &lt;code class="literal"&gt;-i&lt;/code&gt; option. If you want aparticular list to depart from the default (that is, to display incrementally without the &lt;code class="literal"&gt;-i&lt;/code&gt; option and all at once with the &lt;code class="literal"&gt;-i&lt;/code&gt; option), put it in a block&amp;nbsp;quote:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;&amp;gt; - Eat spaghetti&lt;/span&gt;
 &lt;span class="err"&gt;&amp;gt; - Drink wine&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
@@ -122,7 +120,7 @@ single&amp;nbsp;document.&lt;/p&gt;
 &lt;p&gt;To style beamer slides, you can specify a beamer &amp;ldquo;theme&amp;rdquo; or &amp;ldquo;colortheme&amp;rdquo; using the &lt;code&gt;-V&lt;/code&gt; option:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;pandoc -t beamer Demo.txt -V theme:Warsaw -o Demo.pdf
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;for more settings visit&lt;a href="https://pandoc.org/MANUAL.html"&gt;Pandoc Manual&lt;/a&gt; and &lt;a href="https://bookdown.org/yihui/rmarkdown/beamer-presentation.html"&gt;bookdown.org&lt;/a&gt; &lt;/p&gt;</content><category term="Blog"></category><category term="Pandoc"></category><category term="slides"></category><category term="markdown"></category></entry><entry><title>Battery Management System for an xEV - Part 1</title><link href="https://ashwinschronicles.github.io/BMS_for_an_EV_intro" rel="alternate"></link><published>2020-05-25T00:00:00+05:30</published><updated>2020-06-10T00:00:00+05:30</updated><author><name>Ashwin</name></author><id>tag:ashwinschronicles.github.io,2020-05-25:/BMS_for_an_EV_intro</id><summary type="html">&lt;p&gt;This post is about information gathered on designing a &lt;span class="caps"&gt;BMS&lt;/span&gt; for a&amp;nbsp;xEV&lt;/p&gt;</summary><content type="html">&lt;p&gt;This is part 1 of a series on Battery management system&amp;nbsp;design.&lt;/p&gt;
+&lt;p&gt;for more settings visit  &lt;a href="https://pandoc.org/MANUAL.html"&gt;Pandoc Manual&lt;/a&gt; and &lt;a href="https://bookdown.org/yihui/rmarkdown/beamer-presentation.html"&gt;bookdown.org&lt;/a&gt; &lt;/p&gt;</content><category term="Blog"></category><category term="Pandoc"></category><category term="slides"></category><category term="markdown"></category></entry><entry><title>Battery Management System for an xEV - Part 1</title><link href="/BMS_for_an_EV_intro" rel="alternate"></link><published>2020-05-25T00:00:00+05:30</published><updated>2020-06-10T00:00:00+05:30</updated><author><name>Ashwin</name></author><id>tag:None,2020-05-25:/BMS_for_an_EV_intro</id><summary type="html">&lt;p&gt;This post is about information gathered on designing a &lt;span class="caps"&gt;BMS&lt;/span&gt; for a&amp;nbsp;xEV&lt;/p&gt;</summary><content type="html">&lt;p&gt;This is part 1 of a series on Battery management system&amp;nbsp;design.&lt;/p&gt;
 &lt;p&gt;The data presented here was  collected as a part of study based Internship at Kaynes Technology,&amp;nbsp;Mysore.&lt;/p&gt;
 &lt;p&gt;Most of the data here is my notes on the following&amp;nbsp;resources:&lt;/p&gt;
 &lt;ul&gt;
@@ -159,7 +157,7 @@ single&amp;nbsp;document.&lt;/p&gt;
   (e.g., by providing power limits), control charger,&amp;nbsp;etc.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h1 id="basic-working-of-an-electrochemical-cell"&gt;Basic working of an electrochemical cell&lt;a class="headerlink" href="#basic-working-of-an-electrochemical-cell" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h1&gt;
-&lt;p&gt;&lt;img alt="Kaynes%20report%208f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled.png" src="https://ashwinschronicles.github.io/Kaynes report 8f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled.png"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Kaynes%20report%208f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled.png" src="/Kaynes report 8f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled.png"/&gt;&lt;/p&gt;
 &lt;h2 id="the-function-of-the-negative-electrode"&gt;The function of the negative electrode&lt;a class="headerlink" href="#the-function-of-the-negative-electrode" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;In an electrochemical cell, the negative electrode is often a metal or an alloy or hydrogen (lead metal or paste for&amp;nbsp;PbA)&lt;/p&gt;
 &lt;ul&gt;
@@ -176,7 +174,7 @@ electrons from circuit, is&amp;nbsp;reduced&lt;/li&gt;
 to external circuit, is&amp;nbsp;oxidized&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h1 id="li-ion-working-the-process-of-intercalation_1"&gt;Li-ion working (The process of intercalation)&lt;a class="headerlink" href="#li-ion-working-the-process-of-intercalation" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h1&gt;
-&lt;p&gt;&lt;img alt="Kaynes%20report%208f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled%201.png" src="https://ashwinschronicles.github.io/Kaynes report 8f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled 1.png"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Kaynes%20report%208f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled%201.png" src="/Kaynes report 8f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled 1.png"/&gt;&lt;/p&gt;
 &lt;p&gt;Discharge&amp;nbsp;process:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;During discharge, Li exits the surface of the negative-electrode
@@ -192,7 +190,7 @@ external circuit to positive&amp;nbsp;electrode&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;The active electrode materials are coated on both sides of metallic foils which act
 as the current collectors conducting the current into and out of the&amp;nbsp;cell&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Kaynes%20report%208f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled%202.png" src="https://ashwinschronicles.github.io/Kaynes report 8f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled 2.png"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Kaynes%20report%208f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled%202.png" src="/Kaynes report 8f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled 2.png"/&gt;&lt;/p&gt;
 &lt;h1 id="negative-electrodes-for-lithium-ion-cells"&gt;Negative electrodes for lithium-ion cells&lt;a class="headerlink" href="#negative-electrodes-for-lithium-ion-cells" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;Presently, essentially all commercial lithium-ion cells use some form of graphite
@@ -201,15 +199,15 @@ as the current collectors conducting the current into and out of the&amp;nbsp;ce
 structures that are tightly bonded These layers are loosely stacked and there is
 room for lithium to intercalate between&amp;nbsp;them&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img alt="Kaynes%20report%208f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled%203.png" src="https://ashwinschronicles.github.io/Kaynes report 8f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled 3.png"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Kaynes%20report%208f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled%203.png" src="/Kaynes report 8f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled 3.png"/&gt;&lt;/p&gt;
 &lt;h1 id="alternate-negative-electrode-material-lto"&gt;Alternate negative-electrode material &lt;span class="caps"&gt;LTO&lt;/span&gt;&lt;a class="headerlink" href="#alternate-negative-electrode-material-lto" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;Lithium titanate oxide (Li4 Ti5 O12 , &lt;span class="caps"&gt;LTO&lt;/span&gt;) is an alternative negative-electrode&amp;nbsp;material&lt;/li&gt;
 &lt;li&gt;Disadvantage: high open-circuit potential (making cell voltage low)
 Advantage: nearly indestructible &amp;mdash; very long&amp;nbsp;life&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img alt="Kaynes%20report%208f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled%204.png" src="https://ashwinschronicles.github.io/Kaynes report 8f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled 4.png"/&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Kaynes%20report%208f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled%205.png" src="https://ashwinschronicles.github.io/Kaynes report 8f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled 5.png"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Kaynes%20report%208f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled%204.png" src="/Kaynes report 8f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled 4.png"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Kaynes%20report%208f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled%205.png" src="/Kaynes report 8f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled 5.png"/&gt;&lt;/p&gt;
 &lt;h1 id="future-negative-electrode-material-silicon"&gt;Future negative-electrode material silicon&lt;a class="headerlink" href="#future-negative-electrode-material-silicon" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;Using graphite, one can store up to one Li per six C atoms;
@@ -232,7 +230,7 @@ in-between to allow for&amp;nbsp;expansion&lt;/li&gt;
 called a &amp;ldquo;layered&amp;nbsp;cathode&amp;rdquo;&lt;/li&gt;
 &lt;li&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img alt="Kaynes%20report%208f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled%206.png" src="https://ashwinschronicles.github.io/Kaynes report 8f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled 6.png"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Kaynes%20report%208f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled%206.png" src="/Kaynes report 8f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled 6.png"/&gt;&lt;/p&gt;
 &lt;p&gt;Disadavntages:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Cobalt is rare, toxic, and&amp;nbsp;expensive;&lt;/li&gt;
@@ -272,7 +270,7 @@ including conductive&amp;nbsp;additives&lt;/li&gt;
 &lt;li&gt;Olivine cathodes (&lt;span class="caps"&gt;LFP&lt;/span&gt;) have low voltage (and very little state information in their&amp;nbsp;voltage)&lt;/li&gt;
 &lt;li&gt;Spinel cathodes (&lt;span class="caps"&gt;LMO&lt;/span&gt;) are inexpensive and non-toxic, but can degrade&amp;nbsp;rapidly&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img alt="Kaynes%20report%208f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled%207.png" src="https://ashwinschronicles.github.io/Kaynes report 8f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled 7.png"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Kaynes%20report%208f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled%207.png" src="/Kaynes report 8f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled 7.png"/&gt;&lt;/p&gt;
 &lt;h1 id="what-are-the-primary-functions-of-a-bms_1"&gt;What are the primary functions of a &lt;span class="caps"&gt;BMS&lt;/span&gt;?&lt;a class="headerlink" href="#what-are-the-primary-functions-of-a-bms" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h1&gt;
 &lt;p&gt;A &lt;span class="caps"&gt;BMS&lt;/span&gt; has the following&amp;nbsp;priorities:&lt;/p&gt;
 &lt;ul&gt;
@@ -289,7 +287,7 @@ charger,&amp;nbsp;etc.&lt;/li&gt;
 &lt;h2 id="1-sensing-and-high-voltage-control"&gt;1. Sensing and high-voltage control&lt;a class="headerlink" href="#1-sensing-and-high-voltage-control" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Measure voltage, current,temperature; control contactor,
 pre-charge; ground-fault detection,thermal&amp;nbsp;management&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Kaynes%20report%208f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled%208.png" src="https://ashwinschronicles.github.io/Kaynes report 8f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled 8.png"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Kaynes%20report%208f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled%208.png" src="/Kaynes report 8f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled 8.png"/&gt;&lt;/p&gt;
 &lt;h2 id="2-protection-against"&gt;2. Protection against&lt;a class="headerlink" href="#2-protection-against" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Over-charge, over-discharge, over-current, short circuit, extreme&amp;nbsp;temperatures&lt;/p&gt;
 &lt;h2 id="3-interface"&gt;3. Interface&lt;a class="headerlink" href="#3-interface" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
@@ -304,7 +302,7 @@ all applications implement all&amp;nbsp;features&lt;/p&gt;
 &lt;h1 id="modular-design-of-bms"&gt;Modular design of &lt;span class="caps"&gt;BMS&lt;/span&gt;&lt;a class="headerlink" href="#modular-design-of-bms" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h1&gt;
 &lt;p&gt;Design extreme 1: Parallel-cell modules (&lt;span class="caps"&gt;PCM&lt;/span&gt;)
 Design extreme 2: Series-cell modules (&lt;span class="caps"&gt;SCM&lt;/span&gt;)&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Kaynes%20report%208f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled%209.png" src="https://ashwinschronicles.github.io/Kaynes report 8f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled 9.png"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Kaynes%20report%208f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled%209.png" src="/Kaynes report 8f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled 9.png"/&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;A modular battery pack suggests a hierarchical master&amp;ndash;slave
 &lt;span class="caps"&gt;BMS&lt;/span&gt; design as&amp;nbsp;well&lt;/li&gt;
@@ -322,7 +320,7 @@ wires&amp;mdash;minimizes wiring-harness&amp;nbsp;nightmare&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img alt="Kaynes%20report%208f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled%2010.png" src="https://ashwinschronicles.github.io/Kaynes report 8f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled 10.png"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Kaynes%20report%208f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled%2010.png" src="/Kaynes report 8f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled 10.png"/&gt;&lt;/p&gt;
 &lt;h1 id="bms-slave-role"&gt;&lt;span class="caps"&gt;BMS&lt;/span&gt; slave role&lt;a class="headerlink" href="#bms-slave-role" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h1&gt;
 &lt;p&gt;&lt;span class="caps"&gt;BMS&lt;/span&gt; slave needs&amp;nbsp;to:&lt;/p&gt;
 &lt;ul&gt;
@@ -401,7 +399,7 @@ expressed as&amp;nbsp;%)&lt;/li&gt;
 widths, expressed as &lt;span class="caps"&gt;ADC&lt;/span&gt;&amp;nbsp;counts)&lt;/li&gt;
 &lt;li&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img alt="Kaynes%20report%208f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled%2011.png" src="https://ashwinschronicles.github.io/Kaynes report 8f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled 11.png"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Kaynes%20report%208f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled%2011.png" src="/Kaynes report 8f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled 11.png"/&gt;&lt;/p&gt;
 &lt;h1 id="chipsets_1"&gt;Chipsets&lt;a class="headerlink" href="#chipsets" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h1&gt;
 &lt;p&gt;Special chipsets are made to aid high-voltage &lt;span class="caps"&gt;BMS&lt;/span&gt;&amp;nbsp;design&lt;/p&gt;
 &lt;ul&gt;
@@ -455,7 +453,7 @@ to one or more cells per module and calibrate internal&amp;nbsp;temperature&lt;/
 &lt;li&gt;Thermistor (uses voltage divider&amp;nbsp;circuit)&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Voltage-divider + thermistor&amp;nbsp;example&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Kaynes%20report%208f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled%2012.png" src="https://ashwinschronicles.github.io/Kaynes report 8f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled 12.png"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Kaynes%20report%208f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled%2012.png" src="/Kaynes report 8f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled 12.png"/&gt;&lt;/p&gt;
 &lt;h1 id="1c-battery-pack-sensing-current_1"&gt;1c. Battery-pack sensing: Current&lt;a class="headerlink" href="#1c-battery-pack-sensing-current" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h1&gt;
 &lt;p&gt;Battery pack electrical current must be measured to monitor
 safety, log abuse, and inform &lt;span class="caps"&gt;SOC&lt;/span&gt; and &lt;span class="caps"&gt;SOH&lt;/span&gt;&amp;nbsp;algorithms&lt;/p&gt;
@@ -463,13 +461,13 @@ safety, log abuse, and inform &lt;span class="caps"&gt;SOC&lt;/span&gt; and &lt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;Shunt current sensor (Kelvin&amp;nbsp;four-wire)&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Kaynes%20report%208f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled%2013.png" src="https://ashwinschronicles.github.io/Kaynes report 8f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled 13.png"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Kaynes%20report%208f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled%2013.png" src="/Kaynes report 8f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled 13.png"/&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Hall-effect current&amp;nbsp;sensing&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img alt="Kaynes%20report%208f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled%2014.png" src="https://ashwinschronicles.github.io/Kaynes report 8f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled 14.png"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Kaynes%20report%208f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled%2014.png" src="/Kaynes report 8f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled 14.png"/&gt;&lt;/p&gt;
 &lt;p&gt;Both methods have advantages and disadvantages and both are in common use in
 &lt;span class="caps"&gt;BMS&lt;/span&gt;&amp;nbsp;today&lt;/p&gt;
 &lt;h1 id="1d-high-voltage-contactor-control"&gt;1d: High-voltage contactor control&lt;a class="headerlink" href="#1d-high-voltage-contactor-control" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h1&gt;
@@ -485,9 +483,9 @@ simultaneously, enormous current would flow instantly,
 potentially welding the contactors closed or blowing a&amp;nbsp;fuse&lt;/li&gt;
 &lt;li&gt;So, a third &amp;ldquo;pre-charge&amp;rdquo; contactor is&amp;nbsp;used&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img alt="Kaynes%20report%208f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled%2015.png" src="https://ashwinschronicles.github.io/Kaynes report 8f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled 15.png"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Kaynes%20report%208f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled%2015.png" src="/Kaynes report 8f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled 15.png"/&gt;&lt;/p&gt;
 &lt;p&gt;Contactor&amp;nbsp;procedure:&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Kaynes%20report%208f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled%2016.png" src="https://ashwinschronicles.github.io/Kaynes report 8f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled 16.png"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Kaynes%20report%208f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled%2016.png" src="/Kaynes report 8f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled 16.png"/&gt;&lt;/p&gt;
 &lt;h1 id="1e-isolation-sensing"&gt;1e. Isolation sensing&lt;a class="headerlink" href="#1e-isolation-sensing" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h1&gt;
 &lt;p&gt;Isolation sensing detects presence of a ground&amp;nbsp;fault&lt;/p&gt;
 &lt;ul&gt;
@@ -501,13 +499,13 @@ either the positive or negative terminal of the battery
 pack via a direct&amp;nbsp;short&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Procedure: &lt;/p&gt;
-&lt;p&gt;&lt;img alt="Kaynes%20report%208f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled%2017.png" src="https://ashwinschronicles.github.io/Kaynes report 8f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled 17.png"/&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Kaynes%20report%208f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled%2018.png" src="https://ashwinschronicles.github.io/Kaynes report 8f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled 18.png"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Kaynes%20report%208f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled%2017.png" src="/Kaynes report 8f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled 17.png"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Kaynes%20report%208f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled%2018.png" src="/Kaynes report 8f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled 18.png"/&gt;&lt;/p&gt;
 &lt;p&gt;For fault on low&amp;nbsp;side &lt;/p&gt;
-&lt;p&gt;&lt;img alt="Kaynes%20report%208f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled%2019.png" src="https://ashwinschronicles.github.io/Kaynes report 8f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled 19.png"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Kaynes%20report%208f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled%2019.png" src="/Kaynes report 8f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled 19.png"/&gt;&lt;/p&gt;
 &lt;p&gt;Isolation is deemed sufficient if Ri&amp;gt;Vb /0.002 or R1 &amp;gt;&amp;nbsp;500Vb&lt;/p&gt;
 &lt;h1 id="1f-thermal-control"&gt;1f. Thermal control&lt;a class="headerlink" href="#1f-thermal-control" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h1&gt;
-&lt;p&gt;&lt;img alt="Kaynes%20report%208f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled%2020.png" src="https://ashwinschronicles.github.io/Kaynes report 8f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled 20.png"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Kaynes%20report%208f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled%2020.png" src="/Kaynes report 8f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled 20.png"/&gt;&lt;/p&gt;
 &lt;p&gt;Important to keep battery-pack cells at a &amp;ldquo;comfortable&amp;rdquo;temperature to ensure safety and to extend&amp;nbsp;life&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Also important to keep cells at a uniform temperature for consistent aging (also
@@ -544,7 +542,7 @@ circuitry must act quickly&amp;nbsp;state&lt;/li&gt;
 &lt;li&gt;Abuse&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id="overcurrentovertemperature-protection"&gt;Overcurrent/overtemperature protection&lt;a class="headerlink" href="#overcurrentovertemperature-protection" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;&lt;img alt="Kaynes%20report%208f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled%2021.png" src="https://ashwinschronicles.github.io/Kaynes report 8f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled 21.png"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Kaynes%20report%208f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled%2021.png" src="/Kaynes report 8f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled 21.png"/&gt;&lt;/p&gt;
 &lt;p&gt;When possible, fallback protection paths should be&amp;nbsp;implemented&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Red = cell-manufacturer specified region where cells
@@ -558,7 +556,7 @@ safe&amp;nbsp;region&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id="overvoltageovertemperature-protection"&gt;Overvoltage/overtemperature protection&lt;a class="headerlink" href="#overvoltageovertemperature-protection" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Similar for voltage&amp;nbsp;limits:&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Kaynes%20report%208f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled%2022.png" src="https://ashwinschronicles.github.io/Kaynes report 8f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled 22.png"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Kaynes%20report%208f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled%2022.png" src="/Kaynes report 8f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled 22.png"/&gt;&lt;/p&gt;
 &lt;p&gt;But, each protection device added into main current path increases battery impedance, reducing power delivered to load
 Examples of protection devices&amp;nbsp;include:&lt;/p&gt;
 &lt;ul&gt;
@@ -617,7 +615,7 @@ operate at two rates:&lt;ul&gt;
 &lt;li&gt;Control&amp;nbsp;signals&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;A typical packet(frame) in &lt;span class="caps"&gt;CAN&lt;/span&gt; bus looks like&amp;nbsp;: &lt;/p&gt;
-&lt;p&gt;&lt;img alt="Kaynes%20report%208f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled%2023.png" src="https://ashwinschronicles.github.io/Kaynes report 8f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled 23.png"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Kaynes%20report%208f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled%2023.png" src="/Kaynes report 8f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled 23.png"/&gt;&lt;/p&gt;
 &lt;p&gt;Abbreviations : &lt;span class="caps"&gt;SOF&lt;/span&gt; -  Start of frame; &lt;span class="caps"&gt;RTR&lt;/span&gt;- Ready to receive; &lt;span class="caps"&gt;CRC&lt;/span&gt; - cyclic redundancy check; &lt;span class="caps"&gt;ACK&lt;/span&gt;-acknowledgement&amp;nbsp;bit&lt;/p&gt;
 &lt;p&gt;Data frames are transmitted sequentially over the&amp;nbsp;bus.&lt;/p&gt;
 &lt;h2 id="3b-charger-control"&gt;3b. Charger control&lt;a class="headerlink" href="#3b-charger-control" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
@@ -688,7 +686,7 @@ Instead, must estimate these&amp;nbsp;values.&lt;/p&gt;
 &lt;/ul&gt;
 &lt;p&gt;But, cannot directly measure these parameters either! Therefore, must &lt;strong&gt;estimate&lt;/strong&gt; &lt;span class="caps"&gt;SOC&lt;/span&gt;, &lt;span class="caps"&gt;SOH&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;Available inputs include all cell voltages, pack current, and temperatures of cells or&amp;nbsp;modules.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Kaynes%20report%208f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled%2024.png" src="https://ashwinschronicles.github.io/Kaynes report 8f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled 24.png"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Kaynes%20report%208f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled%2024.png" src="/Kaynes report 8f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled 24.png"/&gt;&lt;/p&gt;
 &lt;p&gt;There are both good and poor methods to produce estimates:
 Poor methods are generally simpler to understand, code,
 and validate, but yield less-accurate&amp;nbsp;results&lt;/p&gt;
@@ -707,7 +705,7 @@ All of these have costs in dollars, weight and/or&amp;nbsp;volume&lt;/li&gt;
 &lt;li&gt;Article 3: Advanced methods for &lt;span class="caps"&gt;SOC&lt;/span&gt;&amp;nbsp;estimation&lt;/li&gt;
 &lt;li&gt;Article 4: &lt;span class="caps"&gt;SOH&lt;/span&gt;&amp;nbsp;estimation&lt;/li&gt;
 &lt;li&gt;Article 5: Balancing and power-limits&amp;nbsp;estimation&lt;/li&gt;
-&lt;/ul&gt;</content><category term="Lecture Notes"></category><category term="BMS"></category><category term="EV"></category><category term="battery-terminologies"></category><category term="BMS-requirements"></category><category term="electrochemical-cell"></category><category term="Li-ion_working"></category><category term="ADC"></category><category term="Shunt-sensor"></category><category term="hall-effect current sensor"></category><category term="contactor"></category><category term="Isolation sensing"></category><category term="BMS protection"></category><category term="Charger control"></category><category term="Performance management"></category></entry><entry><title>Extending Desktop to another device over VNC</title><link href="https://ashwinschronicles.github.io/extending-desktop-to-another-device-over-vnc" rel="alternate"></link><published>2020-02-05T00:00:00+05:30</published><updated>2020-02-05T00:00:00+05:30</updated><author><name>Ashwin</name></author><id>tag:ashwinschronicles.github.io,2020-02-05:/extending-desktop-to-another-device-over-vnc</id><summary type="html">&lt;p&gt;This post details the procedure to Extending Desktop to another device over &lt;span class="caps"&gt;VNC&lt;/span&gt; or other protocol in&amp;nbsp;Linux&lt;/p&gt;</summary><content type="html">&lt;hr/&gt;
+&lt;/ul&gt;</content><category term="Lecture Notes"></category><category term="BMS"></category><category term="EV"></category><category term="battery-terminologies"></category><category term="BMS-requirements"></category><category term="electrochemical-cell"></category><category term="Li-ion_working"></category><category term="ADC"></category><category term="Shunt-sensor"></category><category term="hall-effect current sensor"></category><category term="contactor"></category><category term="Isolation sensing"></category><category term="BMS protection"></category><category term="Charger control"></category><category term="Performance management"></category></entry><entry><title>Extending Desktop to another device over VNC</title><link href="/extending-desktop-to-another-device-over-vnc" rel="alternate"></link><published>2020-02-05T00:00:00+05:30</published><updated>2020-02-05T00:00:00+05:30</updated><author><name>Ashwin</name></author><id>tag:None,2020-02-05:/extending-desktop-to-another-device-over-vnc</id><summary type="html">&lt;p&gt;This post details the procedure to Extending Desktop to another device over &lt;span class="caps"&gt;VNC&lt;/span&gt; or other protocol in&amp;nbsp;Linux&lt;/p&gt;</summary><content type="html">&lt;hr/&gt;
 &lt;p&gt;If you have an old tablet or old laptop, you might want to put it to good use by using its display as a secondary screen to your primary laptop. If you are using windows on your primary laptop, you have a host of applications that does this for you (like Builtin windows Wireless display, Synergy) but if you are using linux you can follow the following&amp;nbsp;instructions.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Assumptions&lt;/strong&gt;
 I will list the steps on how to get it done wit the following&amp;nbsp;configuration:&lt;/p&gt;
@@ -752,7 +750,7 @@ xrandr --addmode VIRTUAL1 1920x1080_60.00
 xrandr --output VIRTUAL1 --mode 1920x1080_60.00 --right-of eDP1
 xrandr
 x11vnc -clip 1920x1080+1920+0 
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content><category term="Blog"></category><category term="VNC"></category><category term="Nomachine"></category><category term="Extend desktop"></category><category term="Linux"></category></entry><entry><title>Cryostat probe design and optimisation for transport measurement.</title><link href="https://ashwinschronicles.github.io/Cryostat-probe-design" rel="alternate"></link><published>2019-07-14T00:00:00+05:30</published><updated>2020-06-10T00:00:00+05:30</updated><author><name>Ashwin</name></author><id>tag:ashwinschronicles.github.io,2019-07-14:/Cryostat-probe-design</id><summary type="html">&lt;p&gt;This post is about a design of a cryostat probe which is optimised for transport&amp;nbsp;measurement.&lt;/p&gt;</summary><content type="html">&lt;h1 id="getting-to-know-the-cryostat"&gt;Getting to know the cryostat&lt;a class="headerlink" href="#getting-to-know-the-cryostat" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h1&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content><category term="Blog"></category><category term="VNC"></category><category term="Nomachine"></category><category term="Extend desktop"></category><category term="Linux"></category></entry><entry><title>Cryostat probe design and optimisation for transport measurement.</title><link href="/Cryostat-probe-design" rel="alternate"></link><published>2019-07-14T00:00:00+05:30</published><updated>2020-06-10T00:00:00+05:30</updated><author><name>Ashwin</name></author><id>tag:None,2019-07-14:/Cryostat-probe-design</id><summary type="html">&lt;p&gt;This post is about a design of a cryostat probe which is optimised for transport&amp;nbsp;measurement.&lt;/p&gt;</summary><content type="html">&lt;h1 id="getting-to-know-the-cryostat"&gt;Getting to know the cryostat&lt;a class="headerlink" href="#getting-to-know-the-cryostat" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h1&gt;
 &lt;p&gt;A cryostat is a device used to maintain low cryogenic temperatures of samples or devices mounted within the cryostat. The temperature range can be as low as few milli-kelvin in Dilution refrigerators. Most common ones are either liquid Helium based which can cool to below 10 K or are liquid Nitrogen based, which can cool to about 80 K which is Nitrogen&amp;rsquo;s boiling point. The sample is mounted on something called as the probe, which houses electrical wires connecting the sample to the instruments used for various measurements. Cryostats can be closed cycle ones, or continuous flow systems. In closed cycle cryostat the cold cryogen (refrigerant) is pumped to the sample chamber and the warm cryogen is extracted and cooled and then recycled into the system. Continuous-flow cryostats are cooled by liquid cryogens from a storage dewar. As the cryogen boils within the cryostat, it is continuously replenished by a steady flow from the storage&amp;nbsp;dewar.&lt;/p&gt;
 &lt;p&gt;The cryostat at Superconductivity Lab, &lt;span class="caps"&gt;NISER&lt;/span&gt;, for which I had to develop the probe tip, is a customised closed system cryostat provided by ColdEdge. The key features of this cryostat is large sample space and fast cooling. In the large sample space (aka sample well), helium gas is purged (at &amp;lt;0.5 psi pressure) which cools the sample by convection cooling methods. The helium gas is provided from an external gas cylinder. A 0.5 psi relief valve is present for safety in case the sample space becomes over&amp;nbsp;pressurised.&lt;/p&gt;
 &lt;p&gt;The cooling part of the system is called cold head. It removes heat from the compressors incoming gas by expansion through an internal displacer. The displacer is filled with regenerative material that also helps with the cooling of the&amp;nbsp;gas.&lt;/p&gt;
@@ -765,36 +763,36 @@ x11vnc -clip 1920x1080+1920+0
 &lt;h1 id="design-and-fabrication-of-probe"&gt;Design and Fabrication of Probe&lt;a class="headerlink" href="#design-and-fabrication-of-probe" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h1&gt;
 &lt;h2 id="design"&gt;Design&lt;a class="headerlink" href="#design" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;The probe design was made keeping in mind thermal equilibrium of sample and temperature sensor and to maximize the number of connections one can make in a sample. The company for the cryostat had given us a basic stick support structure for the dipstick, which looks like Fig&lt;a href="#fig:Basic-Probe"&gt;1&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img alt='Basic Probe{#fig:Basic-Probe label="fig:Basic-Probe"}' src="https://ashwinschronicles.github.io/Photos/BasicProbe.png"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt='Basic Probe{#fig:Basic-Probe label="fig:Basic-Probe"}' src="/Photos/BasicProbe.png"/&gt;&lt;/p&gt;
 &lt;p&gt;The lower end of this structure has a temperature sensor and a heater, so a probe tip had to be designed that can do measurements&amp;nbsp;efficiently.&lt;/p&gt;
 &lt;p&gt;The design finalized is as shown in Fig&lt;a href="#fig:Design"&gt;2&lt;/a&gt;. In this design, the brown square part is the copper sheet, the green sheet is an &lt;span class="caps"&gt;RC&lt;/span&gt; filter for all the input wires, and the sample is the purple one, the sample holder pcb can be connected and disconnected to the &lt;span class="caps"&gt;RC&lt;/span&gt; filter &lt;span class="caps"&gt;PCB&lt;/span&gt;, this is so that the sample holder can be removed and taken to the wire bonder etc. There are two versions of this support, the magnetic base (aka flat base)and the non magnetic base (aka square base). In both the case, the 10 pins of each side are connected in parallel. Hence in one go, one can measure at most 10 pads or 4 (2)&amp;nbsp;samples.&lt;/p&gt;
-&lt;p&gt;&lt;img alt='Design[[fig:Design]]{#fig:Design label="fig:Design"}' src="https://ashwinschronicles.github.io/Photos/Design.png"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt='Design[[fig:Design]]{#fig:Design label="fig:Design"}' src="/Photos/Design.png"/&gt;&lt;/p&gt;
 &lt;p&gt;Next we had to design the &lt;span class="caps"&gt;PCB&lt;/span&gt; which included an &lt;span class="caps"&gt;RC&lt;/span&gt; low pass filter and a sample holder, the design which was finalised is shown in Fig&lt;a href="#fig:PCB-Design"&gt;3&lt;/a&gt; it was designed using a free online service called www.easyeda.com . The &lt;span class="caps"&gt;RC&lt;/span&gt; filter parameters are &lt;span class="math"&gt;\(f_c\)&lt;/span&gt; = 1000Hz, R=150 ohm, C = 10 &lt;span class="math"&gt;\(\mu\)&lt;/span&gt;&amp;nbsp;F.&lt;/p&gt;
-&lt;p&gt;&lt;img alt='PCB Design[[fig:PCB-Design]]{#fig:PCB-Design label="fig:PCB-Design"}' src="https://ashwinschronicles.github.io/Photos/PCB.png"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt='PCB Design[[fig:PCB-Design]]{#fig:PCB-Design label="fig:PCB-Design"}' src="/Photos/PCB.png"/&gt;&lt;/p&gt;
 &lt;p&gt;Another version of the square support is the flat support which supports&amp;nbsp; using magnetic coils for magnetic measurements is as shown in fig&lt;a href="#fig:Magnetic-Base"&gt;3&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img alt='RC filter Circuit[[fig:RC-filter-Circuit]]{#fig:RC-filter-Circuit label="fig:RC-filter-Circuit"}' src="https://ashwinschronicles.github.io/Photos/MagneticBase.png"/&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img alt='RC filter Circuit[[fig:RC-filter-Circuit]]{#fig:RC-filter-Circuit label="fig:RC-filter-Circuit"}' src="https://ashwinschronicles.github.io/Photos/RC_Filter.png"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt='RC filter Circuit[[fig:RC-filter-Circuit]]{#fig:RC-filter-Circuit label="fig:RC-filter-Circuit"}' src="/Photos/MagneticBase.png"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt='RC filter Circuit[[fig:RC-filter-Circuit]]{#fig:RC-filter-Circuit label="fig:RC-filter-Circuit"}' src="/Photos/RC_Filter.png"/&gt;&lt;/p&gt;
 &lt;p&gt;The &lt;span class="caps"&gt;RC&lt;/span&gt; filter works by using capacitor and resistor to attenuate high frequency noise. A circuit diagram for the same can be seen in Fig &lt;a href="#fig:RC-filter-Circuit" reference="fig:RC-filter-Circuit" reference-type="ref"&gt;5&lt;/a&gt;. The characteristic bode plot expected for a functioning &lt;span class="caps"&gt;RC&lt;/span&gt; filter is shown in Fig &lt;a href="#fig:Expected-Bode-plot" reference="fig:Expected-Bode-plot" reference-type="ref"&gt;6&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;&lt;img alt='Expected Bode plot[[fig:Expected-Bode-plot]]{#fig:Expected-Bode-plot label="fig:Expected-Bode-plot"}' src="https://ashwinschronicles.github.io/Photos/RC_Bde.png"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt='Expected Bode plot[[fig:Expected-Bode-plot]]{#fig:Expected-Bode-plot label="fig:Expected-Bode-plot"}' src="/Photos/RC_Bde.png"/&gt;&lt;/p&gt;
 &lt;h2 id="fabrication"&gt;Fabrication&lt;a class="headerlink" href="#fabrication" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;The pcbs were designed and then sent to www.jlcpcb.com for fabrication of &lt;span class="caps"&gt;PCB&lt;/span&gt;. The electronic components required for the board were ordered from&amp;nbsp;www.lcsc.com. &lt;/p&gt;
 &lt;p&gt;The delivered product is shown in Fig &lt;a href="#fig:Fabricated-PCB"&gt;7&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;&lt;img alt='Fabricated PCB[[fig:Fabricated-PCB]]{#fig:Fabricated-PCB label="fig:Fabricated-PCB"}' src="https://ashwinschronicles.github.io/Photos/Fabricated_PCB.jpg"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt='Fabricated PCB[[fig:Fabricated-PCB]]{#fig:Fabricated-PCB label="fig:Fabricated-PCB"}' src="/Photos/Fabricated_PCB.jpg"/&gt;&lt;/p&gt;
 &lt;p&gt;The base was made in house using copper sheets which were cut using an angle grinder to the required measurements. The joints were fixed by brazing it with copper. The finished probe ends are seen in Fig &lt;a href="#fig:FabricatedBases"&gt;8&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Drawing_of_Magnetic_Base" src="https://ashwinschronicles.github.io/Photos/Drawing_of_Magnetic_Base.png"/&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Drawing_of_Non_Magnetic_Base" src="https://ashwinschronicles.github.io/Photos/Drawing_of_Non_Magnetic_Base.png"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Drawing_of_Magnetic_Base" src="/Photos/Drawing_of_Magnetic_Base.png"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Drawing_of_Non_Magnetic_Base" src="/Photos/Drawing_of_Non_Magnetic_Base.png"/&gt;&lt;/p&gt;
 &lt;p&gt;For measurement purpose, a sample of sputtered Nb thin film (55nm) was stuck on the copper base of the holder and wire bonding was done in 4 probe arrangement. The sample after wire-bonding is in fig&lt;a href="#fig:Sample-Holder"&gt;8&lt;/a&gt;&amp;nbsp;.&lt;/p&gt;
-&lt;p&gt;&lt;img alt='[[fig:Sample-Holder]]{#fig:Sample-Holder label="fig:Sample-Holder"}Sample Holder' src="https://ashwinschronicles.github.io/Photos/sample_holder.png"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt='[[fig:Sample-Holder]]{#fig:Sample-Holder label="fig:Sample-Holder"}Sample Holder' src="/Photos/sample_holder.png"/&gt;&lt;/p&gt;
 &lt;p&gt;The wiring for the probes were made with 37 gauge enameled copper wire twisted in pairs (Fig &lt;a href="#fig:Probe Wiring"&gt;9&lt;/a&gt;). The pin out for the connector can be found in Table &lt;a href="#tab:Connector-pin-out"&gt;1&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;&lt;img alt='[[fig:Probe Wiring]]{#fig:Probe Wiring label="fig:Probe Wiring"}Probe Wiring' src="https://ashwinschronicles.github.io/Photos/Connector_wiring.jpg"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt='[[fig:Probe Wiring]]{#fig:Probe Wiring label="fig:Probe Wiring"}Probe Wiring' src="/Photos/Connector_wiring.jpg"/&gt;&lt;/p&gt;
 &lt;p&gt;The pads of the sample are connected to the break out box (fig &lt;a href="#fig:breakoutbox"&gt;22&lt;/a&gt;).&lt;/p&gt;
 &lt;h1 id="software-for-data-acquisition_1"&gt;Software for data acquisition&lt;a class="headerlink" href="#software-for-data-acquisition" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h1&gt;
 &lt;p&gt;The signal from the sample is fed into the temperature controller and Source meter unit. The data from these instruments is gathered using a software written in Labview. A schematic of data flow is in Fig&lt;a href="#fig:Schematic"&gt;10&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;&lt;img alt='[[fig:Schematic]]{#fig:Schematic label="fig:Schematic"}Schematic' src="https://ashwinschronicles.github.io/Photos/Schematic.png"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt='[[fig:Schematic]]{#fig:Schematic label="fig:Schematic"}Schematic' src="/Photos/Schematic.png"/&gt;&lt;/p&gt;
 &lt;p&gt;All the software tools required for data acquisition is compiled into a Labview project file &amp;ldquo;MeasurementLibrary.lvproj&amp;rdquo;. A shortcut to this file is kept in desktop (Fig &lt;a href="#fig:Lv1"&gt;11&lt;/a&gt;).&lt;/p&gt;
-&lt;p&gt;&lt;img alt='[[fig:Lv1]]{#fig:Lv1 label="fig:Lv1"}Desktop shortcut' src="https://ashwinschronicles.github.io/Photos/Screenshots/Screenshot(2).png"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt='[[fig:Lv1]]{#fig:Lv1 label="fig:Lv1"}Desktop shortcut' src="/Photos/Screenshots/Screenshot(2).png"/&gt;&lt;/p&gt;
 &lt;p&gt;When the project file is opened, A list of all the available programs is shown (Fig &lt;a href="#fig:Measurement-Library" reference="fig:Measurement-Library" reference-type="ref"&gt;12&lt;/a&gt;)&lt;/p&gt;
-&lt;p&gt;&lt;img alt='[[fig:Measurement-Library]]{#fig:Measurement-Library label="fig:Measurement-Library"}Measurement Library' src="https://ashwinschronicles.github.io/Photos/Screenshots/Screenshot(3).png"/&gt; &lt;/p&gt;
+&lt;p&gt;&lt;img alt='[[fig:Measurement-Library]]{#fig:Measurement-Library label="fig:Measurement-Library"}Measurement Library' src="/Photos/Screenshots/Screenshot(3).png"/&gt; &lt;/p&gt;
 &lt;p&gt;This software suite consists&amp;nbsp;of&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
@@ -819,45 +817,45 @@ x11vnc -clip 1920x1080+1920+0
 &lt;p&gt;Let us look at the functioning of each program one by&amp;nbsp;one.&lt;/p&gt;
 &lt;h2 id="4-probe-resistance-measurement-interface"&gt;4 probe resistance measurement interface&lt;a class="headerlink" href="#4-probe-resistance-measurement-interface" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;The 4 probe resistance measurement interface is shown in Fig &lt;a href="#fig:4-probe-resistance" reference="fig:4-probe-resistance" reference-type="ref"&gt;13&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;&lt;img alt='[[fig:4-probe-resistance]]{#fig:4-probe-resistance label="fig:4-probe-resistance"}4 probe resistance measurement interface' src="https://ashwinschronicles.github.io/Photos/Screenshots/Screenshot(4).png"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt='[[fig:4-probe-resistance]]{#fig:4-probe-resistance label="fig:4-probe-resistance"}4 probe resistance measurement interface' src="/Photos/Screenshots/Screenshot(4).png"/&gt;&lt;/p&gt;
 &lt;p&gt;The software takes in the &lt;span class="caps"&gt;SMU&lt;/span&gt; &lt;span class="caps"&gt;VISA&lt;/span&gt; name (hardware address) and all the resistance measurement mode settings and does a single measurement. The hardware address for &lt;span class="caps"&gt;LS336&lt;/span&gt; is &lt;span class="caps"&gt;GPIB0&lt;/span&gt;::1::&lt;span class="caps"&gt;INSTR&lt;/span&gt; and that for the &lt;span class="caps"&gt;SMU&lt;/span&gt; is &lt;span class="caps"&gt;GPIB0&lt;/span&gt;::2::&lt;span class="caps"&gt;INSTR&lt;/span&gt; (or &lt;span class="caps"&gt;USB&lt;/span&gt;:xxxx in case it is connected via&amp;nbsp;serial).&lt;/p&gt;
-&lt;p&gt;&lt;img alt='[[fig:save changes]]{#fig:save changes label="fig:save changes"}Save changes dialogue' src="https://ashwinschronicles.github.io/Photos/Screenshots/Screenshot(5).png"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt='[[fig:save changes]]{#fig:save changes label="fig:save changes"}Save changes dialogue' src="/Photos/Screenshots/Screenshot(5).png"/&gt;&lt;/p&gt;
 &lt;p&gt;Note: If you change some parameter, when you close the program there might be a confirmation to save changes (Like Fig &lt;a href="#fig:save changes" reference="fig:save changes" reference-type="ref"&gt;14&lt;/a&gt;.) &lt;/p&gt;
 &lt;p&gt;&lt;span class="caps"&gt;ALWAYS&lt;/span&gt; &lt;span class="caps"&gt;CLICK&lt;/span&gt; &amp;ldquo;&lt;span class="caps"&gt;DONT&lt;/span&gt; &lt;span class="caps"&gt;SAVE&lt;/span&gt; &lt;span class="caps"&gt;ALL&lt;/span&gt;&amp;rdquo;, this is to ensure no pre-configured parameter gets changed by&amp;nbsp;accident.&lt;/p&gt;
 &lt;h2 id="basic-gpib-communication-tester"&gt;Basic &lt;span class="caps"&gt;GPIB&lt;/span&gt; communication tester&lt;a class="headerlink" href="#basic-gpib-communication-tester" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;The interface for Basic &lt;span class="caps"&gt;GPIB&lt;/span&gt; communication tester is shown in Fig &lt;a href="#fig:GPIB-tester-interface" reference="fig:GPIB-tester-interface" reference-type="ref"&gt;15&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;&lt;img alt='[[fig:GPIB-tester-interface]]{#fig:GPIB-tester-interface label="fig:GPIB-tester-interface"}GPIB tester interface' src="https://ashwinschronicles.github.io/Photos/Screenshots/Screenshot(7).png"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt='[[fig:GPIB-tester-interface]]{#fig:GPIB-tester-interface label="fig:GPIB-tester-interface"}GPIB tester interface' src="/Photos/Screenshots/Screenshot(7).png"/&gt;&lt;/p&gt;
 &lt;p&gt;This tool allows you to debug &lt;span class="caps"&gt;GPIB&lt;/span&gt; connections and to check the state of the instrument. After selecting the right Hardware address, (&lt;span class="caps"&gt;VISA&lt;/span&gt; Resource name) you can write any serial &lt;span class="caps"&gt;SCPI&lt;/span&gt; commands in the Write buffer and when you execute the program the instruments response is shown in read buffer. Typical serial &lt;span class="caps"&gt;SCPI&lt;/span&gt; commands&amp;nbsp;include:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;\*IDN? - Identify \*RST - Reset \*OPC? - Operation complete query \*CLS - Clear Status&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;.&lt;/p&gt;
 &lt;h2 id="ls336-heater-output-configuration-panel"&gt;&lt;span class="caps"&gt;LS336&lt;/span&gt; Heater Output Configuration Panel&lt;a class="headerlink" href="#ls336-heater-output-configuration-panel" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;The interface for &lt;span class="caps"&gt;LS336&lt;/span&gt; Heater Output Configuration Panel is shown in Fig &lt;a href="#fig:LS336-Heater-configuration" reference="fig:LS336-Heater-configuration" reference-type="ref"&gt;16&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;&lt;img alt='[[fig:LS336-Heater-configuration]]{#fig:LS336-Heater-configuration label="fig:LS336-Heater-configuration"}LS336 Heater configuration interface' src="https://ashwinschronicles.github.io/Photos/Screenshots/Screenshot(8).png"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt='[[fig:LS336-Heater-configuration]]{#fig:LS336-Heater-configuration label="fig:LS336-Heater-configuration"}LS336 Heater configuration interface' src="/Photos/Screenshots/Screenshot(8).png"/&gt;&lt;/p&gt;
 &lt;p&gt;This software initializes the instrument, allows the user to determine if heater output control parameters and setpoint values are sent, takes a single sensor reading, and then closes the&amp;nbsp;instrument.&lt;/p&gt;
 &lt;h2 id="ls336-temperature-logger"&gt;&lt;span class="caps"&gt;LS336&lt;/span&gt; Temperature Logger&lt;a class="headerlink" href="#ls336-temperature-logger" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;The interface for &lt;span class="caps"&gt;LS336&lt;/span&gt; Temperature Logger is shown in Fig &lt;a href="#fig:LS336-Temperature-Logger" reference="fig:LS336-Temperature-Logger" reference-type="ref"&gt;17&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;&lt;img alt='[[fig:LS336-Temperature-Logger]]{#fig:LS336-Temperature-Logger label="fig:LS336-Temperature-Logger"}LS336 Temperature Logger interface' src="https://ashwinschronicles.github.io/Photos/Screenshots/Screenshot(9).png"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt='[[fig:LS336-Temperature-Logger]]{#fig:LS336-Temperature-Logger label="fig:LS336-Temperature-Logger"}LS336 Temperature Logger interface' src="/Photos/Screenshots/Screenshot(9).png"/&gt;&lt;/p&gt;
 &lt;p&gt;This software logs the sensor reading (of two inputs), and then saves the data in a tab separated file specified by the&amp;nbsp;user.&lt;/p&gt;
 &lt;h2 id="basic-rttt-plotter"&gt;Basic &lt;span class="caps"&gt;RT&lt;/span&gt;,Tt Plotter&lt;a class="headerlink" href="#basic-rttt-plotter" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;The interface for Basic &lt;span class="caps"&gt;RT&lt;/span&gt;,Tt Plotter is shown in Fig &lt;a href="#fig:Basic-RT,Tt-Plotter" reference="fig:Basic-RT,Tt-Plotter" reference-type="ref"&gt;18&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;&lt;img alt='[[fig:Basic-RT,Tt-Plotter]]{#fig:Basic-RT,Tt-Plotter label="fig:Basic-RT,Tt-Plotter"}Basic RT,Tt Plotter interface' src="https://ashwinschronicles.github.io/Photos/Screenshots/Screenshot(10).png"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt='[[fig:Basic-RT,Tt-Plotter]]{#fig:Basic-RT,Tt-Plotter label="fig:Basic-RT,Tt-Plotter"}Basic RT,Tt Plotter interface' src="/Photos/Screenshots/Screenshot(10).png"/&gt;&lt;/p&gt;
 &lt;p&gt;The application takes in a tab separated text file containing data of index,V,I,R,&lt;span class="math"&gt;\(T_(coldhead)\)&lt;/span&gt;,&lt;span class="math"&gt;\(T_(sample)\)&lt;/span&gt; (obtained from temperature logger or &lt;span class="caps"&gt;RT&lt;/span&gt; Logger with Temperature controller )and then plots the &lt;span class="caps"&gt;RT&lt;/span&gt; , Tt graphs with T being the &lt;span class="math"&gt;\(T_(sample)\)&lt;/span&gt;&amp;nbsp;.&lt;/p&gt;
 &lt;h2 id="rt-logger-with-temperature-controller"&gt;&lt;span class="caps"&gt;RT&lt;/span&gt; Logger with Temperature controller&lt;a class="headerlink" href="#rt-logger-with-temperature-controller" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;The interface for &lt;span class="caps"&gt;RT&lt;/span&gt; Logger with Temperature controller is shown in Fig &lt;a href="#fig:RT-Logger-with" reference="fig:RT-Logger-with" reference-type="ref"&gt;19&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;&lt;img alt='[[fig:RT-Logger-with]]{#fig:RT-Logger-with label="fig:RT-Logger-with"}RT Logger with Temperature controller interface' src="https://ashwinschronicles.github.io/Photos/Screenshots/Screenshot(11).png"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt='[[fig:RT-Logger-with]]{#fig:RT-Logger-with label="fig:RT-Logger-with"}RT Logger with Temperature controller interface' src="/Photos/Screenshots/Screenshot(11).png"/&gt;&lt;/p&gt;
 &lt;p&gt;This application is basically all the above utilities put in one. There are two tabs, one for controls, the other for viewing the plots. In the control tab, one can set the parameters for &lt;span class="caps"&gt;SMU&lt;/span&gt; as well as Temperature controller. When the application is executed with the correct parameters set, the data of index,V,I,R,&lt;span class="math"&gt;\(T_(coldhead)\)&lt;/span&gt;,&lt;span class="math"&gt;\(T_(sample)\)&lt;/span&gt; are stored in a tab separated text file at user specified location. The controls on the temperature controller side might look daunting at first, however a quick glance of &lt;span class="caps"&gt;LS336&lt;/span&gt; manual clears up all the&amp;nbsp;parameters.&lt;/p&gt;
 &lt;h1 id="list-of-procedures_1"&gt;List of procedures&lt;a class="headerlink" href="#list-of-procedures" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h1&gt;
 &lt;h2 id="cryostat-connections"&gt;Cryostat connections.&lt;a class="headerlink" href="#cryostat-connections" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;The connections of Vacuum jacket, Vacuum pump, Pirani gauge, load lock and the valves can be made as shown in Fig &lt;a href="#fig:VacuumConnections" reference="fig:VacuumConnections" reference-type="ref"&gt;20&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;&lt;img alt='[[fig:VacuumConnections]]{#fig:VacuumConnections label="fig:VacuumConnections"}Vacuum Connections: 1) Load Lock Valve 2) Pirani Gauge 3)Cross Connector 4)To Vacuum Pump 5)Vacuum Valve 6) connector to vacuum jacket' src="https://ashwinschronicles.github.io/Photos/Connectors.jpg"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt='[[fig:VacuumConnections]]{#fig:VacuumConnections label="fig:VacuumConnections"}Vacuum Connections: 1) Load Lock Valve 2) Pirani Gauge 3)Cross Connector 4)To Vacuum Pump 5)Vacuum Valve 6) connector to vacuum jacket' src="/Photos/Connectors.jpg"/&gt;&lt;/p&gt;
 &lt;p&gt;The temperature sensor connections are to be made as in Fig &lt;a href="#fig:TempSensorConnections" reference="fig:TempSensorConnections" reference-type="ref"&gt;21&lt;/a&gt;. The temperature sensor on the probe needs to be connected to Input B and that of the Cold Head to Input C (This is needed as the proper curves are chosen for this particular arrangement). The heater on the probe needs to be connected to Output 2 (50W) and that of the Cold head to Output 1(100W). Both the heaters are 50 Ohm&amp;nbsp;heaters.&lt;/p&gt;
-&lt;p&gt;&lt;img alt='[[fig:TempSensorConnections]]{#fig:TempSensorConnections label="fig:TempSensorConnections"} Temperature Sensor connections' src="https://ashwinschronicles.github.io/Photos/TempController_backpanel.jpg"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt='[[fig:TempSensorConnections]]{#fig:TempSensorConnections label="fig:TempSensorConnections"} Temperature Sensor connections' src="/Photos/TempController_backpanel.jpg"/&gt;&lt;/p&gt;
 &lt;p&gt;The break out for the pads on the sample holder can be accessed through the break out box (Fig &lt;a href="#fig:breakoutbox" reference="fig:breakoutbox " reference-type="ref"&gt;22&lt;/a&gt;.)&lt;/p&gt;
-&lt;p&gt;&lt;img alt='[[fig:breakoutbox ]]{#fig:breakoutbox  label="fig:breakoutbox "} Break out box' src="https://ashwinschronicles.github.io/Photos/Junction_Box.jpg"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt='[[fig:breakoutbox ]]{#fig:breakoutbox  label="fig:breakoutbox "} Break out box' src="/Photos/Junction_Box.jpg"/&gt;&lt;/p&gt;
 &lt;p&gt;Each wire from the Hermetic connector is colour coded (as in Fig &lt;a href="#fig:Hermetic connector" reference="fig:Hermetic connector " reference-type="ref"&gt;23&lt;/a&gt;), the pin-out for the same is in Table&amp;nbsp;.&lt;/p&gt;
-&lt;p&gt;&lt;img alt='[[fig:Hermetic connector ]]{#fig:Hermetic connector  label="fig:Hermetic connector "} Hermetic connector' src="https://ashwinschronicles.github.io/Photos/Connector_wiring3.jpg"/&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Table" src="https://ashwinschronicles.github.io/Photos/Table.png"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt='[[fig:Hermetic connector ]]{#fig:Hermetic connector  label="fig:Hermetic connector "} Hermetic connector' src="/Photos/Connector_wiring3.jpg"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Table" src="/Photos/Table.png"/&gt;&lt;/p&gt;
 &lt;p&gt;&lt;span class="caps"&gt;NOTE&lt;/span&gt;: Never create vacuum in sample space, the rubber bellows can get torn under&amp;nbsp;vacuum.&lt;/p&gt;
 &lt;h2 id="check-connections-for-leaks"&gt;Check connections for leaks.&lt;a class="headerlink" href="#check-connections-for-leaks" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
 &lt;ul&gt;
@@ -870,11 +868,11 @@ x11vnc -clip 1920x1080+1920+0
 &lt;/ul&gt;
 &lt;h2 id="purging-the-interface"&gt;Purging the Interface.&lt;a class="headerlink" href="#purging-the-interface" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Before turning the system on (after a long gap) you will need to purge the interface to remove any air that is trapped inside the sample well. This step is not required in regular use. This step can also help in getting a clear view through view port ( Fig &lt;a href="#fig:View-Port" reference="fig:View-Port" reference-type="ref"&gt;24&lt;/a&gt;) by removing some&amp;nbsp;condensation.&lt;/p&gt;
-&lt;p&gt;&lt;img alt='[[fig:View-Port]]{#fig:View-Port label="fig:View-Port"}View Port' src="https://ashwinschronicles.github.io/Photos/ViewPort.jpg"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt='[[fig:View-Port]]{#fig:View-Port label="fig:View-Port"}View Port' src="/Photos/ViewPort.jpg"/&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Supply about \~0.5 psi of pressure to the gas inlet of the cryostat through the regulator. (&lt;span class="caps"&gt;NOTE&lt;/span&gt;: Supplying more than 20 psi to the Regulator may cause damage to the internal diaphragm.&amp;nbsp;)&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img alt='[[fig:Gas-Regulator]]{#fig:Gas-Regulator label="fig:Gas-Regulator"}Gas Regulator' src="https://ashwinschronicles.github.io/Photos/Gas_Regulator.jpg"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt='[[fig:Gas-Regulator]]{#fig:Gas-Regulator label="fig:Gas-Regulator"}Gas Regulator' src="/Photos/Gas_Regulator.jpg"/&gt;&lt;/p&gt;
 &lt;p&gt;&lt;span class="caps"&gt;NOTE&lt;/span&gt;: If the sample well is not free of moisture and/or air it will cause the gas inlet tube to freeze below liquid Nitrogen temperatures. When this occurs the sample well will start to create vacuum and will suck the bellows into the well, potentially ripping or forcing the bellows from it&amp;rsquo;s&amp;nbsp;clamp.&lt;/p&gt;
 &lt;h2 id="starting-the-system-cool-down"&gt;Starting the system (Cool Down).&lt;a class="headerlink" href="#starting-the-system-cool-down" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
 &lt;ul&gt;
@@ -899,7 +897,7 @@ x11vnc -clip 1920x1080+1920+0
 &lt;p&gt;Once the compressor is turned on, you will hear the Cryocooler begin to start pumping. The Cryocooler will take approximately 120 minutes to cool&amp;nbsp;down.&lt;/p&gt;
 &lt;p&gt;Now that the Cryocooler is running, maintaining the 0.5 psi pressure on the sample well will be critical for the sample to reach minimum temperature. If the cryostat is not able to reach its desired temperature then one of the reason can be empty cylinder. As the cooler gets colder it gets denser and falls to the bottom of the well. The interface will pull more gas into the system as it cools for this reason. Make sure the external gas cylinder has enough helium to supply the system with gas throughout the entire&amp;nbsp;run.&lt;/p&gt;
 &lt;h2 id="sample-insertion"&gt;Sample Insertion.&lt;a class="headerlink" href="#sample-insertion" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;&lt;img alt='[[fig:View-Port-1]]{#fig:View-Port-1 label="fig:View-Port-1"}Sample insertion. 1)Probe stick 2) Rotatable Gripper of probe 3) Clamp 4) Quick clamp (shipping cap)' src="https://ashwinschronicles.github.io/Photos/RotatableKnobofprobe.jpg"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt='[[fig:View-Port-1]]{#fig:View-Port-1 label="fig:View-Port-1"}Sample insertion. 1)Probe stick 2) Rotatable Gripper of probe 3) Clamp 4) Quick clamp (shipping cap)' src="/Photos/RotatableKnobofprobe.jpg"/&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;Replace the shipping cap with the quick clamp&amp;nbsp;.&lt;/p&gt;
@@ -956,21 +954,21 @@ x11vnc -clip 1920x1080+1920+0
 &lt;p&gt;Maintain small gas purge on the sample well while the system is warming to room temperature. This will assure that moisture does not collect inside the&amp;nbsp;well.&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img alt='Top view of sample space with load lock open with noticeable amount of water condensation at the bottom.[[fig:Top-view-ofsamplespace]]{#fig:Top-view-ofsamplespace label="fig:Top-view-ofsamplespace"}' src="https://ashwinschronicles.github.io/Photos/SampleSpace_topView_loadLockOpen.jpg"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt='Top view of sample space with load lock open with noticeable amount of water condensation at the bottom.[[fig:Top-view-ofsamplespace]]{#fig:Top-view-ofsamplespace label="fig:Top-view-ofsamplespace"}' src="/Photos/SampleSpace_topView_loadLockOpen.jpg"/&gt;&lt;/p&gt;
 &lt;h2 id="diagnostic-remark"&gt;Diagnostic remark&lt;a class="headerlink" href="#diagnostic-remark" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;&lt;img alt="table2" src="https://ashwinschronicles.github.io/Photos/table2.png"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="table2" src="/Photos/table2.png"/&gt;&lt;/p&gt;
 &lt;h1 id="measurement-results_1"&gt;Measurement Results&lt;a class="headerlink" href="#measurement-results" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h1&gt;
 &lt;p&gt;One of the very first measurement done was of the &lt;span class="caps"&gt;RC&lt;/span&gt; filter, which was tested using Analog Discovery 2 and the data is as in Fig&lt;a href="#fig:RC-Filter-Bode" reference="fig:RC-Filter-Bode" reference-type="ref"&gt;28&lt;/a&gt; and one can easily conclude that the &lt;span class="caps"&gt;RC&lt;/span&gt; filter was working as intended at the cut off of 1000Hz at room&amp;nbsp;temperature.&lt;/p&gt;
-&lt;p&gt;&lt;img alt='RC Filter Bode Plot[[fig:RC-Filter-Bode]]{#fig:RC-Filter-Bode label="fig:RC-Filter-Bode"}' src="https://ashwinschronicles.github.io/Photos/RC_BOde.png"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt='RC Filter Bode Plot[[fig:RC-Filter-Bode]]{#fig:RC-Filter-Bode label="fig:RC-Filter-Bode"}' src="/Photos/RC_BOde.png"/&gt;&lt;/p&gt;
 &lt;p&gt;It was suspected that the resistor and capacitors might not work reliably at low temperatures (since the resistor is made from thin film of a metal oxide and the capacitor is made of ceramic material). In order to test it, a resistor was mounted on a puck (Fig &lt;a href="#fig:Puck" reference="fig:Puck" reference-type="ref"&gt;29&lt;/a&gt;)and a &lt;span class="caps"&gt;RT&lt;/span&gt; graph was drawn using a &lt;span class="caps"&gt;PPMS&lt;/span&gt; made by Cryogenic Ltd which was present in the&amp;nbsp;lab.&lt;/p&gt;
-&lt;p&gt;&lt;img alt='Puck with the SMD Resistor[[fig:Puck]]{#fig:Puck label="fig:Puck"}' src="https://ashwinschronicles.github.io/Photos/ResistorTest.jpg"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt='Puck with the SMD Resistor[[fig:Puck]]{#fig:Puck label="fig:Puck"}' src="/Photos/ResistorTest.jpg"/&gt;&lt;/p&gt;
 &lt;p&gt;The results showed minimal change of resistance at low temperature (160 ohms at below 10 K). Hence the smd resistor worked fine at low temperatures. The cryogenic &lt;span class="caps"&gt;PPMS&lt;/span&gt; didnt have ready method to measure capacitance as a function of temperature. Hence this measurement was only possible after assembling the &lt;span class="caps"&gt;PCB&lt;/span&gt; and mounting it on the probe. This exercise revealed that the capacitance dropped to 10 nF below temperatures of 10 K and an &lt;span class="caps"&gt;RC&lt;/span&gt; plot showed the cut off frequency shift to 100KHz. Nullifying the use case of the &lt;span class="caps"&gt;RC&lt;/span&gt; filter. The bode plot for this trial is in Fig. &lt;a href="#fig:RC-Filter-Bode-1" reference="fig:RC-Filter-Bode-1" reference-type="ref"&gt;30&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img alt='RC Filter Bode Plot at 10 K[[fig:RC-Filter-Bode-1]]{#fig:RC-Filter-Bode-1 label="fig:RC-Filter-Bode-1"}' src="https://ashwinschronicles.github.io/Photos/RC_filter3.png"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt='RC Filter Bode Plot at 10 K[[fig:RC-Filter-Bode-1]]{#fig:RC-Filter-Bode-1 label="fig:RC-Filter-Bode-1"}' src="/Photos/RC_filter3.png"/&gt;&lt;/p&gt;
 &lt;p&gt;Finally, one trail to measure the superconducting transition of a 55nm thin-film of Nb was done using the&amp;nbsp;probe.&lt;/p&gt;
 &lt;p&gt;The &lt;span class="caps"&gt;RT&lt;/span&gt; graph of the Nb sample as obtained is as in Fig &lt;a href="#fig:Superconducting-Transition-of" reference="fig:Superconducting-Transition-of" reference-type="ref"&gt;31&lt;/a&gt;. From this graph we can conclude that the Tc for the given sample is 7.68&amp;nbsp;K.&lt;/p&gt;
-&lt;p&gt;&lt;img alt='Superconducting Transition of Nb(55nm) thin film[[fig:Superconducting-Transition-of]]{#fig:Superconducting-Transition-of label="fig:Superconducting-Transition-of"}' src="https://ashwinschronicles.github.io/Photos/pasted1.png"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt='Superconducting Transition of Nb(55nm) thin film[[fig:Superconducting-Transition-of]]{#fig:Superconducting-Transition-of label="fig:Superconducting-Transition-of"}' src="/Photos/pasted1.png"/&gt;&lt;/p&gt;
 &lt;p&gt;An attempt was made to fabricate a Nb|&lt;span class="math"&gt;\(Nb_2O_5\)&lt;/span&gt;|Nb Josephson Junction and to measure the &lt;span class="caps"&gt;IV&lt;/span&gt; graph of the same. The junction was made by taking two strands of Nb wire (50 &lt;span class="math"&gt;\(\mu\)&lt;/span&gt; M thick ) cleaned with 0.5 molar HCl. One strand was oxidized at 100 degree Celsius for a fixed time, and then the two wires were made to contact each other under tension provided by a stick with sharp edge (Fig &lt;a href="#fig:NbSISJunction" reference="fig:NbSISJunction" reference-type="ref"&gt;32&lt;/a&gt;). However not much success was&amp;nbsp;found.&lt;/p&gt;
-&lt;p&gt;&lt;img alt='Sample holder for Nb|\(Nb_2O_5\)|Nb Josephson Junction 1) Clean Nb wire 2) Nb wire oxidized in air 3) wooden stick for tension [[fig:NbSISJunction]]{#fig:NbSISJunction label="fig:NbSISJunction"}' src="https://ashwinschronicles.github.io/Photos/Mounted_sample_Junction.jpg"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt='Sample holder for Nb|\(Nb_2O_5\)|Nb Josephson Junction 1) Clean Nb wire 2) Nb wire oxidized in air 3) wooden stick for tension [[fig:NbSISJunction]]{#fig:NbSISJunction label="fig:NbSISJunction"}' src="/Photos/Mounted_sample_Junction.jpg"/&gt;&lt;/p&gt;
 &lt;h1 id="conclusions"&gt;Conclusions&lt;a class="headerlink" href="#conclusions" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h1&gt;
 &lt;p&gt;The probe was successfully fabricated according to the initial design. However many new modifications come into mind after going through the 2 month process. The first major draw back was the failure of the &lt;span class="caps"&gt;RC&lt;/span&gt; filter, which was caused by the &lt;span class="caps"&gt;SMD&lt;/span&gt; capacitor, one can modify the circuit for an inductor instead of capacitor, or one can replace the current &lt;span class="caps"&gt;SMD&lt;/span&gt; capacitor with a different class capacitor. The second draw back was the large thermal mass of the non magnetic base. To counter this, one can reduce the number of samples, thickness of Copper, Increase joint thermal conductivity (by applying thermal paste or indium sheet). Thirdly, the size of the probe is very close to the allowed limits of the system, hence a new design can have a smaller sample holder and adapter. Next, the problem of ease of changing adapter has to be addressed by modifying the entire design . One can also think of replacing the default shielding that the probe comes in with something like silica aerogel for better insulation. One of the major problem faced was that the Helium cylinder gets emptied very quickly, this can be because of helium escaping through the plastic tubing, one can fix this by replacing the tube with cooper piping. Also, &lt;span class="caps"&gt;PID&lt;/span&gt; values for both the heater have to be optimised, the current values of 10,20,10 give a moderately good result. Finally the LabVIEW program can be made more robust, the current program is as basic as it can get, more features such as automation of multiple trials using some form of sequence editor can be thought&amp;nbsp;of.&lt;/p&gt;
 &lt;p&gt;A pdf version of this page (with better formatting) is available &lt;a href="https://ashwinschronicles.github.io/pdfs/NISER_Report.pdf"&gt;here&lt;/a&gt;. And the LabVIEW software mentioned in the article is available &lt;a href="https://github.com/iamashwin99/Cryostat-Measurement-Library/tree/master/Final"&gt;here&lt;/a&gt; &lt;/p&gt;
@@ -1035,7 +1033,7 @@ x11vnc -clip 1920x1080+1920+0
     (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
-&lt;/script&gt;</content><category term="Science"></category><category term="cryostat"></category><category term="probe"></category><category term="transport measurement"></category><category term="rc filter"></category><category term="LabVIEW"></category><category term="internship"></category></entry><entry><title>Analog Discovery 2 + LabVIEW Home Bundle - Review</title><link href="https://ashwinschronicles.github.io/analog-discovery-2-labview-home-bundle-review" rel="alternate"></link><published>2019-07-13T00:00:00+05:30</published><updated>2019-07-13T00:00:00+05:30</updated><author><name>Ashwin</name></author><id>tag:ashwinschronicles.github.io,2019-07-13:/analog-discovery-2-labview-home-bundle-review</id><summary type="html">&lt;p&gt;This post is a review of the Analog Discovery 2 + LabVIEW Home Bundle in a lab&amp;nbsp;environment&lt;/p&gt;</summary><content type="html">&lt;p&gt;This post is a review of the Analog Discovery 2 + LabVIEW Home Bundle in a lab environment. It was originally posted &lt;a href="https://www.element14.com/community/roadTestReviews/3075/l/analog-discovery-2-labview-home-bundle-review"&gt;here&lt;/a&gt; as a part of element14&amp;rsquo;s RoadTest. I thank element14 for sending me the review&amp;nbsp;unit.&lt;/p&gt;
+&lt;/script&gt;</content><category term="Science"></category><category term="cryostat"></category><category term="probe"></category><category term="transport measurement"></category><category term="rc filter"></category><category term="LabVIEW"></category><category term="internship"></category></entry><entry><title>Analog Discovery 2 + LabVIEW Home Bundle - Review</title><link href="/analog-discovery-2-labview-home-bundle-review" rel="alternate"></link><published>2019-07-13T00:00:00+05:30</published><updated>2019-07-13T00:00:00+05:30</updated><author><name>Ashwin</name></author><id>tag:None,2019-07-13:/analog-discovery-2-labview-home-bundle-review</id><summary type="html">&lt;p&gt;This post is a review of the Analog Discovery 2 + LabVIEW Home Bundle in a lab&amp;nbsp;environment&lt;/p&gt;</summary><content type="html">&lt;p&gt;This post is a review of the Analog Discovery 2 + LabVIEW Home Bundle in a lab environment. It was originally posted &lt;a href="https://www.element14.com/community/roadTestReviews/3075/l/analog-discovery-2-labview-home-bundle-review"&gt;here&lt;/a&gt; as a part of element14&amp;rsquo;s RoadTest. I thank element14 for sending me the review&amp;nbsp;unit.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;strong&gt;Evaluation Type:&lt;/strong&gt; Test&amp;nbsp;Equipment&lt;/p&gt;
@@ -1134,7 +1132,7 @@ x11vnc -clip 1920x1080+1920+0
 &lt;td&gt;52 / 60&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
-&lt;/table&gt;</content><category term="Engineering"></category><category term="Analog Discovery 2"></category><category term="LabVIEW"></category><category term="Review"></category></entry><entry><title>Notes on Superconductivity</title><link href="https://ashwinschronicles.github.io/Superconductivity" rel="alternate"></link><published>2019-06-07T14:02:48+05:30</published><updated>2020-08-11T13:52:22+05:30</updated><author><name>Ashwin Kumar K</name></author><id>tag:ashwinschronicles.github.io,2019-06-07:/Superconductivity</id><summary type="html">&lt;p&gt;Short note on&amp;nbsp;superconductivity&lt;/p&gt;</summary><content type="html">&lt;p&gt;This post is my notes on Superconductivity from video lectures of &lt;a href="https://www.youtube.com/channel/UCDBKb7qMyNXujTf7kKRdstg" title="Youtube Link"&gt;Sergey Frolov&lt;/a&gt; on Solid State Physics and other online sites such as&amp;nbsp;http://www.superconductors.org&lt;/p&gt;
+&lt;/table&gt;</content><category term="Engineering"></category><category term="Analog Discovery 2"></category><category term="LabVIEW"></category><category term="Review"></category></entry><entry><title>Notes on Superconductivity</title><link href="/Superconductivity" rel="alternate"></link><published>2019-06-06T00:00:00+05:30</published><updated>2019-06-20T00:00:00+05:30</updated><author><name>Ashwin Kumar K</name></author><id>tag:None,2019-06-06:/Superconductivity</id><summary type="html">&lt;p&gt;Short note on&amp;nbsp;superconductivity&lt;/p&gt;</summary><content type="html">&lt;p&gt;This post is my notes on Superconductivity from video lectures of &lt;a href="https://www.youtube.com/channel/UCDBKb7qMyNXujTf7kKRdstg" title="Youtube Link"&gt;Sergey Frolov&lt;/a&gt; on Solid State Physics and other online sites such as&amp;nbsp;http://www.superconductors.org&lt;/p&gt;
 &lt;h1 id="properties"&gt;Properties&lt;a class="headerlink" href="#properties" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;
@@ -1438,7 +1436,322 @@ x11vnc -clip 1920x1080+1920+0
     (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
-&lt;/script&gt;</content><category term="Lecture Notes"></category><category term="Superconductivity"></category><category term="spin"></category><category term="cooper pairs"></category></entry><entry><title>Quantum Hall Effect and related phenomena</title><link href="https://ashwinschronicles.github.io/qhe" rel="alternate"></link><published>2019-06-07T14:02:48+05:30</published><updated>2020-03-28T17:15:57+05:30</updated><author><name>Ashwin</name></author><id>tag:ashwinschronicles.github.io,2019-06-07:/qhe</id><summary type="html">&lt;p&gt;Notes on Quantum Hall Effect and related&amp;nbsp;phenomenon&lt;/p&gt;</summary><content type="html">&lt;h1 id="historical-aspects"&gt;Historical Aspects&lt;a class="headerlink" href="#historical-aspects" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h1&gt;
+&lt;/script&gt;</content><category term="Lecture Notes"></category><category term="Superconductivity"></category><category term="spin"></category><category term="cooper pairs"></category></entry><entry><title>git cheat-sheet</title><link href="/git-cheat-sheet" rel="alternate"></link><published>2019-04-17T00:00:00+05:30</published><updated>2019-04-17T00:00:00+05:30</updated><author><name>Ashwin</name></author><id>tag:None,2019-04-17:/git-cheat-sheet</id><summary type="html">&lt;p&gt;This post is about&amp;nbsp;git&lt;/p&gt;</summary><content type="html">&lt;h1 id="quick-refresher"&gt;Quick Refresher&lt;a class="headerlink" href="#quick-refresher" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h1&gt;
+&lt;h2 id="initial-setup"&gt;Initial setup&lt;a class="headerlink" href="#initial-setup" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Open a terminal/shell and&amp;nbsp;type:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$ git config --global user.name &lt;span class="s2"&gt;"Your name here"&lt;/span&gt;
+$ git config --global user.email &lt;span class="s2"&gt;"your_email@example.com"&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;(Don&amp;rsquo;t type the &lt;code&gt;$&lt;/code&gt;; that just indicates that you&amp;rsquo;re doing this at the command&amp;nbsp;line.)&lt;/p&gt;
+&lt;p&gt;optionally&amp;nbsp;do:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$ git config --global color.ui &lt;span class="nb"&gt;true&lt;/span&gt;
+$ git config --global core.editor nano
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;The first of these will enable coloured output in the terminal; the second tells git that you want to use nano (a user friendly text editor). You can change the highlighted section with your editor of&amp;nbsp;choice!&lt;/p&gt;
+&lt;p&gt;Another way to do this is to edit the &lt;code&gt;.gitconfig&lt;/code&gt; file in your &lt;code&gt;home&lt;/code&gt; directory. The location of this file depends on the operating system you&amp;rsquo;re&amp;nbsp;using.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Set up ssh on your&amp;nbsp;computer. &lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Look to see if you have files &lt;code&gt;~/.ssh/id_rsa&lt;/code&gt; and &lt;code&gt;~/.ssh/id_rsa.pub&lt;/code&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;If not, create such public/private keys: Open a terminal/shell and&amp;nbsp;type:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;$ ssh-keygen -t rsa -C "your_email@example.com"&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Copy your public key (the contents of the newly-created &lt;code&gt;id_rsa.pub&lt;/code&gt; file) into your&amp;nbsp;clipboard.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Paste your ssh public key into your github account&amp;nbsp;settings.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Go to your github &lt;a href="https://github.com/settings/profile"&gt;Account&amp;nbsp;Settings&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Click &amp;ldquo;&lt;a href="https://github.com/settings/ssh"&gt;&lt;span class="caps"&gt;SSH&lt;/span&gt; Keys&lt;/a&gt;&amp;rdquo; on the&amp;nbsp;left.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Click &amp;ldquo;Add &lt;span class="caps"&gt;SSH&lt;/span&gt; Key&amp;rdquo; on the&amp;nbsp;right.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Add a label (like &amp;ldquo;My laptop&amp;rdquo;) and paste the public key into the big text&amp;nbsp;box.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;In a terminal/shell, type the following to test&amp;nbsp;it:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;$ ssh -T git@github.com&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;If it says something like the following, it&amp;nbsp;worked:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;Hi username! You've successfully authenticated, but Github does
+not provide shell access.&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="start-a-new-git-repository"&gt;Start a new git repository&lt;a class="headerlink" href="#start-a-new-git-repository" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Your first instinct, when you start to do something new, should be &lt;code&gt;git init&lt;/code&gt;. You&amp;rsquo;re starting to write a new paper, you&amp;rsquo;re writing a bit of code to do a computer simulation, you&amp;rsquo;re mucking around with some new data &amp;hellip; &lt;em&gt;anything&lt;/em&gt;: think &lt;code&gt;git init&lt;/code&gt;.&lt;/p&gt;
+&lt;h3 id="a-new-repo-from-scratch"&gt;A new repo from scratch&lt;a class="headerlink" href="#a-new-repo-from-scratch" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Say you&amp;rsquo;ve just got some data from a collaborator and are about to start exploring&amp;nbsp;it.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Create a directory to contain the&amp;nbsp;project.&lt;/li&gt;
+&lt;li&gt;Go into the new&amp;nbsp;directory.&lt;/li&gt;
+&lt;li&gt;Type &lt;code&gt;git init&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Write some&amp;nbsp;code.&lt;/li&gt;
+&lt;li&gt;Type &lt;code&gt;git add&lt;/code&gt; to add the files (see the &lt;a href="https://kbroman.org/github_tutorial/pages/routine.html"&gt;typical use page&lt;/a&gt;).&lt;/li&gt;
+&lt;li&gt;Type &lt;code&gt;git commit&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The first file to create (and add and commit) is probably a ReadMe file, either as plain text or with &lt;a href="https://daringfireball.net/projects/markdown/"&gt;Markdown&lt;/a&gt;, describing the&amp;nbsp;project.&lt;/p&gt;
+&lt;h3 id="a-new-repo-from-an-existing-project"&gt;A new repo from an existing project&lt;a class="headerlink" href="#a-new-repo-from-an-existing-project" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Say you&amp;rsquo;ve got an existing project that you want to start tracking with&amp;nbsp;git.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Go into the directory containing the&amp;nbsp;project.&lt;/li&gt;
+&lt;li&gt;Type &lt;code&gt;git init&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Type &lt;code&gt;git add&lt;/code&gt; to add all of the relevant&amp;nbsp;files.&lt;/li&gt;
+&lt;li&gt;You&amp;rsquo;ll probably want to create a &lt;code&gt;.gitignore&lt;/code&gt; file right away, to indicate all of the files you don&amp;rsquo;t want to track. Use &lt;code&gt;git add .gitignore&lt;/code&gt;,&amp;nbsp;too.&lt;/li&gt;
+&lt;li&gt;Type &lt;code&gt;git commit&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="connect-it-to-github"&gt;Connect it to github&lt;a class="headerlink" href="#connect-it-to-github" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;You&amp;rsquo;ve now got a local git repository. You can use git locally, like that, if you want. But if you want the thing to have a home on github, do the&amp;nbsp;following.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Go to &lt;a href="https://github.com/"&gt;github&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Log in to your&amp;nbsp;account.&lt;/li&gt;
+&lt;li&gt;Click the &lt;a href="https://github.com/new"&gt;new repository&lt;/a&gt; button in the top-right. You&amp;rsquo;ll have an option there to initialize the repository with a &lt;span class="caps"&gt;README&lt;/span&gt; file, but I suggest you  don&amp;rsquo;t do&amp;nbsp;it.&lt;/li&gt;
+&lt;li&gt;Click the &amp;ldquo;Create repository&amp;rdquo;&amp;nbsp;button.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Now, follow the second set of instructions shown on the screen, &amp;ldquo;Push an existing&amp;nbsp;repository&amp;hellip;&amp;rdquo;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$ git remote add origin git@github.com:username/new_repo
+$ git push -u origin master
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Actually, the first line of the instructions will usually&amp;nbsp;say&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$ git remote add origin https://github.com/username/new_repo
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;But I use &lt;code&gt;git@github.com:username/new_repo&lt;/code&gt; rather than &lt;code&gt;https://github.com/username/new_repo&lt;/code&gt;, as the former is for use with &lt;a href="https://en.wikipedia.org/wiki/Secure_Shell"&gt;ssh&lt;/a&gt;, if you set up ssh  then you won&amp;rsquo;t have to type your password every time you push things to github. If you use the latter construction, you&amp;rsquo;ll have to type your github password every time you push to&amp;nbsp;github.&lt;/p&gt;
+&lt;h2 id="often-used-commands_1"&gt;Often used commands&lt;a class="headerlink" href="#often-used-commands" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
+&lt;h3 id="add-and-commit"&gt;Add and commit&lt;a class="headerlink" href="#add-and-commit" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;After you&amp;rsquo;ve made some small modifications to your project and checked that they work, use &lt;code&gt;git add&lt;/code&gt; to indicate that they&amp;rsquo;re&amp;nbsp;ready.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$ git add R/modified.R man/modified.Rd
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Then use &lt;code&gt;git commit&lt;/code&gt; to add the modifications to the&amp;nbsp;repository.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$ git commit
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;A text editor (nano if you followed this tutorial) will open; add a short message describing the&amp;nbsp;changes.&lt;/p&gt;
+&lt;p&gt;To abandon your commit, exit the editor without adding text ( ctrl+x in case of nano&amp;nbsp;).&lt;/p&gt;
+&lt;p&gt;For a one-line commit message, you can just&amp;nbsp;type&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$ git commit -m &lt;span class="s2"&gt;"Fix such and such"&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;If you want to commit all of the modifications you&amp;rsquo;ve made, without having to explicitly &amp;ldquo;add&amp;rdquo; each file, you can skip the separate &lt;code&gt;add&lt;/code&gt; and &lt;code&gt;commit&lt;/code&gt; commands and just&amp;nbsp;type&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$ git commit -a
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3 id="push-to-github"&gt;Push to &lt;a href="https://github.com/"&gt;github&lt;/a&gt;&lt;a class="headerlink" href="#push-to-github" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;To push committed changes to github,&amp;nbsp;type&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$ git push
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;You don&amp;rsquo;t need to do this every time. Do it after you&amp;rsquo;ve completed a batch of changes that you&amp;rsquo;re thoroughly happy with and before you move on to something&amp;nbsp;else.&lt;/p&gt;
+&lt;p&gt;Once you&amp;rsquo;ve pushed a commit, it&amp;rsquo;s hard to take it away. If you&amp;rsquo;ve not pushed it yet, you &lt;em&gt;can&lt;/em&gt; go back and scrap it and not have it be part of your project&amp;rsquo;s&amp;nbsp;history.&lt;/p&gt;
+&lt;h3 id="status"&gt;Status&lt;a class="headerlink" href="#status" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;You&amp;rsquo;ve made some changes to a project, but you&amp;rsquo;re not sure what.&amp;nbsp;Type&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;git status&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;It&amp;rsquo;ll give you a list of files that have been changed, plus new files that haven&amp;rsquo;t been formally&amp;nbsp;added.&lt;/p&gt;
+&lt;h3 id="diff"&gt;Diff&lt;a class="headerlink" href="#diff" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Exactly what changes have you made?&amp;nbsp;Type&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;git diff&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Or to see your changes to a particular file,&amp;nbsp;type&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;git diff R/modified.R&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;It&amp;rsquo;ll show you which lines have been added and which have been&amp;nbsp;deleted.&lt;/p&gt;
+&lt;h3 id="gitignore"&gt;.gitignore&lt;a class="headerlink" href="#gitignore" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;The various files in your project directory that you&amp;rsquo;re not tracking in git should be indicated in a &lt;code&gt;.gitignore&lt;/code&gt; file.&lt;/p&gt;
+&lt;p&gt;You don&amp;rsquo;t &lt;em&gt;have&lt;/em&gt; to have a &lt;code&gt;.gitignore&lt;/code&gt; file, but if you don&amp;rsquo;t, those files will show up every time you type &lt;code&gt;git status&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Each subdirectory can have its own &lt;code&gt;.gitignore&lt;/code&gt; file,&amp;nbsp;too.&lt;/p&gt;
+&lt;p&gt;Also, you can have a global such in your home directory; I use &lt;code&gt;~/.gitignore_global&lt;/code&gt;, which&amp;nbsp;contains:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;*~&lt;/span&gt;
+&lt;span class="err"&gt;.*~&lt;/span&gt;
+&lt;span class="na"&gt;.DS_Store&lt;/span&gt;
+&lt;span class="na"&gt;.Rhistory&lt;/span&gt;
+&lt;span class="na"&gt;.RData&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;You have to tell git about the global &lt;code&gt;.gitignore&lt;/code&gt; file:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$ git config --global core.excludesfile ~/.gitignore_global
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Huge thanks to &lt;a href="https://kbroman.org/github_tutorial/"&gt;kbroman.org&lt;/a&gt; for his tutorials from where I have collated articles for this cheat sheet. you can check out his page for more detailed&amp;nbsp;workflow. &lt;/p&gt;</content><category term="Blog"></category><category term="git"></category><category term="github"></category></entry><entry><title>Make a Github Pages blog with Pelican</title><link href="/gh-pages-with-pelican" rel="alternate"></link><published>2019-01-01T00:00:00+05:30</published><updated>2019-01-01T00:00:00+05:30</updated><author><name>Ashwin</name></author><id>tag:None,2019-01-01:/gh-pages-with-pelican</id><summary type="html">&lt;p&gt;Wake your own webbsite using Pelican static site generator  and host it on github&amp;nbsp;pages&lt;/p&gt;</summary><content type="html">&lt;p&gt;Github, worlds leading  hosting service for Git repositories  offers a simple, elegant website solution. It allows its users to  store page content in a git repository along with their&amp;nbsp;code.&lt;/p&gt;
+&lt;p&gt;In this blog post ill walk you through the process of setting up a website by combining Pelican with Github Pages. Pelican is a simple python utility that lets you create beautiful weblogs using just text files. In other words its a static-site generator. I have chosen Pelican over other static-site generators as Pelican unlike its counter parts is based on python hence initial  setup takes literally no&amp;nbsp;time.&lt;/p&gt;
+&lt;h2 id="setting-up-a-githubio-page"&gt;Setting up a github.io page&lt;a class="headerlink" href="#setting-up-a-githubio-page" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;To create your Github user page, log in to Github and create a  new repositorie username.github.io, as explained on Github pages. (Use your Github username for these repositories.) The  username.github.io repository will contain the output &lt;span class="caps"&gt;HTML&lt;/span&gt; files Pelican generates. To add the output directory as a submodule, initialize it with a &lt;span class="caps"&gt;README&lt;/span&gt;&amp;nbsp;file.&lt;/p&gt;
+&lt;h2 id="installing-pelican"&gt;Installing Pelican&lt;a class="headerlink" href="#installing-pelican" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;We will first  create a virtual environment for Pelican via virtualenv before installing&amp;nbsp;Pelican.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;virtualenv website
+&lt;span class="nb"&gt;cd&lt;/span&gt; website
+&lt;span class="nb"&gt;source&lt;/span&gt; bin/activate
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;You can also do &lt;code&gt;workon website&lt;/code&gt; inplace of the last two.
+Once the virtual environment has been created and activated, Pelican can be installed via  prefixing with sudo if permissions&amp;nbsp;warrant:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;pip install pelican markdown typogrify ghp-import shovel&lt;/code&gt; &lt;br/&gt;
+Now clone the source repository you&amp;nbsp;created:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;git clone https://github.com/YOUR_USERNAME/YOUR_USERNAME.github.io.git web-sources&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Then change directory to the source&amp;nbsp;folder:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;cd web-sources&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Because of how Github Pages prefers to work, serving the files from the master branch, you have to put your source code in a new branch, preserving the &amp;ldquo;master&amp;rdquo; for the output of the static files generated by Pelican. To do that, you must create a new branch called&amp;nbsp;&amp;ldquo;source&amp;rdquo;:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;git checkout -b source&lt;/code&gt;&lt;/p&gt;
+&lt;h2 id="pelican-quickstart"&gt;Pelican quickstart&lt;a class="headerlink" href="#pelican-quickstart" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Pelican provides an excellent quickstart command. Run&amp;nbsp;it:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;pelican-quickstart&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;The quickstart will ask you various questions, which you can answer in turn. Before answering them, take a look at my answers&amp;nbsp;below:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;gt; Where &lt;span class="k"&gt;do&lt;/span&gt; you want to create your new web site? &lt;span class="o"&gt;[&lt;/span&gt;.&lt;span class="o"&gt;]&lt;/span&gt; ./
+&amp;gt; What will be the title of this web site? Ashwin&lt;span class="err"&gt;'&lt;/span&gt;s Chronicles
+&amp;gt; Who will be the author of this web site? Ashwin Kumar K
+&amp;gt; What will be the default language of this web site? &lt;span class="o"&gt;[&lt;/span&gt;pt&lt;span class="o"&gt;]&lt;/span&gt; en
+&amp;gt; Do you want to specify a URL prefix? e.g., http://example.com   &lt;span class="o"&gt;(&lt;/span&gt;Y/n&lt;span class="o"&gt;)&lt;/span&gt; n
+&amp;gt; Do you want to &lt;span class="nb"&gt;enable&lt;/span&gt; article pagination? &lt;span class="o"&gt;(&lt;/span&gt;Y/n&lt;span class="o"&gt;)&lt;/span&gt; y
+&amp;gt; How many articles per page &lt;span class="k"&gt;do&lt;/span&gt; you want? &lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="m"&gt;10&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt; &lt;span class="m"&gt;10&lt;/span&gt;
+&amp;gt; What is your &lt;span class="nb"&gt;time&lt;/span&gt; zone? &lt;span class="o"&gt;[&lt;/span&gt;Europe/Paris&lt;span class="o"&gt;]&lt;/span&gt; Asia/Calcutta
+&amp;gt; Do you want to generate a Fabfile/Makefile to automate generation and publishing? &lt;span class="o"&gt;(&lt;/span&gt;Y/n&lt;span class="o"&gt;)&lt;/span&gt; Y **# PAY ATTENTION TO THIS!**
+&amp;gt; Do you want an auto-reload &lt;span class="p"&gt;&amp;amp;&lt;/span&gt; simpleHTTP script to assist with theme and site development? &lt;span class="o"&gt;(&lt;/span&gt;Y/n&lt;span class="o"&gt;)&lt;/span&gt; n
+&amp;gt; Do you want to upload your website using FTP? &lt;span class="o"&gt;(&lt;/span&gt;y/N&lt;span class="o"&gt;)&lt;/span&gt; n
+&amp;gt; Do you want to upload your website using SSH? &lt;span class="o"&gt;(&lt;/span&gt;y/N&lt;span class="o"&gt;)&lt;/span&gt; n
+&amp;gt; Do you want to upload your website using Dropbox? &lt;span class="o"&gt;(&lt;/span&gt;y/N&lt;span class="o"&gt;)&lt;/span&gt; n
+&amp;gt; Do you want to upload your website using S3? &lt;span class="o"&gt;(&lt;/span&gt;y/N&lt;span class="o"&gt;)&lt;/span&gt; n
+&amp;gt; Do you want to upload your website using Rackspace Cloud Files? &lt;span class="o"&gt;(&lt;/span&gt;y/N&lt;span class="o"&gt;)&lt;/span&gt; n
+&amp;gt; Do you want to upload your website using GitHub Pages? &lt;span class="o"&gt;(&lt;/span&gt;y/N&lt;span class="o"&gt;)&lt;/span&gt; y
+&amp;gt; Is this your personal page &lt;span class="o"&gt;(&lt;/span&gt;username.github.io&lt;span class="o"&gt;)&lt;/span&gt;? &lt;span class="o"&gt;(&lt;/span&gt;y/N&lt;span class="o"&gt;)&lt;/span&gt; y
+Done. Your new project is available at YOUR_USERNAME.github.io
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Now, go ahead and create your first blog post! You might want to open the project folder on your favorite code editor and find the &amp;ldquo;content&amp;rdquo; folder inside it. Then, create a new file, which can be called my-first-post.md (Just for testing). The contents should begin with the metadata which identifies the Title, Date, Category and more from the post before you start with the content, like&amp;nbsp;this:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;Title&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;My&lt;/span&gt; &lt;span class="n"&gt;first&lt;/span&gt; &lt;span class="n"&gt;post&lt;/span&gt;
+&lt;span class="n"&gt;Date&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;2018&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;
+&lt;span class="n"&gt;Modified&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;2018&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;
+&lt;span class="n"&gt;Category&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;misc&lt;/span&gt;
+&lt;span class="n"&gt;Tags&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;first&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="n"&gt;misc&lt;/span&gt;
+&lt;span class="n"&gt;Slug&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;My&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;first&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;post&lt;/span&gt;
+&lt;span class="n"&gt;Authors&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;Your&lt;/span&gt; &lt;span class="n"&gt;name&lt;/span&gt;
+&lt;span class="n"&gt;Summary&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;What&lt;/span&gt; &lt;span class="n"&gt;does&lt;/span&gt; &lt;span class="n"&gt;your&lt;/span&gt; &lt;span class="n"&gt;post&lt;/span&gt; &lt;span class="n"&gt;talk&lt;/span&gt; &lt;span class="n"&gt;about&lt;/span&gt;&lt;span class="o"&gt;?&lt;/span&gt; &lt;span class="n"&gt;Write&lt;/span&gt; &lt;span class="n"&gt;here&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;
+
+&lt;span class="n"&gt;This&lt;/span&gt; &lt;span class="k"&gt;is&lt;/span&gt; &lt;span class="n"&gt;the&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;first&lt;/span&gt; &lt;span class="n"&gt;post&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="n"&gt;from&lt;/span&gt; &lt;span class="n"&gt;my&lt;/span&gt; &lt;span class="n"&gt;Pelican&lt;/span&gt; &lt;span class="n"&gt;blog&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt; &lt;span class="o"&gt;**&lt;/span&gt;&lt;span class="n"&gt;YAY&lt;/span&gt;&lt;span class="o"&gt;!**&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Let&amp;rsquo;s see how it&amp;nbsp;looks?&lt;/p&gt;
+&lt;p&gt;Go to the terminal, generate the static files and start the server. To do that, use the following&amp;nbsp;command:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;(venv)$ make html &amp;amp;&amp;amp; make serve&lt;/code&gt;
+While this command is running, you should be able to visit it on your favorite web browser by typing &lt;code&gt;localhost:8000&lt;/code&gt; on the address&amp;nbsp;bar.&lt;/p&gt;
+&lt;h2 id="a-little-touch-up"&gt;A little touch up&lt;a class="headerlink" href="#a-little-touch-up" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Now,  if you want to put an image in a post, a neat way is to first  create a &amp;lsquo;images&amp;rsquo; directory inside your content directory, where your posts are. Now, you have to tell Pelican to use it. Find the &lt;code&gt;pelicanconf.py&lt;/code&gt;, the file where you configure the system, and add a variable that contains the directory with your&amp;nbsp;images:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;STATIC_PATHS&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;'images'&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Save it. Go to your post and add the image this&amp;nbsp;way:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;![Write here a good description for people who can't see the image]({filename}/images/IMAGE_NAME.webp)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;You can interrupt the server at anytime pressing &lt;span class="caps"&gt;CTRL&lt;/span&gt;+C on the terminal. But you should start it again and check if the image is correct. Can you remember&amp;nbsp;how?&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;(venv)$ make html &amp;amp;&amp;amp; make serve&lt;/code&gt;
+One last step before your coding is &amp;ldquo;done&amp;rdquo;: you should make sure anyone can read your posts using &lt;span class="caps"&gt;ATOM&lt;/span&gt; or &lt;span class="caps"&gt;RSS&lt;/span&gt; feeds. Find the pelicanconf.py, the file where you configure the system, and edit the part about feed&amp;nbsp;generation:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;FEED_ALL_ATOM&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;'feeds/all.atom.xml'&lt;/span&gt;
+&lt;span class="n"&gt;FEED_ALL_RSS&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;'feeds/all.rss.xml'&lt;/span&gt;
+&lt;span class="n"&gt;AUTHOR_FEED_RSS&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;'feeds/&lt;/span&gt;&lt;span class="si"&gt;%s&lt;/span&gt;&lt;span class="s1"&gt;.rss.xml'&lt;/span&gt;
+&lt;span class="n"&gt;RSS_FEED_SUMMARY_ONLY&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kc"&gt;False&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Save everything so you can send the code to Github. You can do that by adding all files, committing it with a message (&amp;lsquo;first commit&amp;rsquo;) and using git push. You will be asked for your Github login and&amp;nbsp;password.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;$ git add -A &amp;amp;&amp;amp; git commit -a -m 'first commit' &amp;amp;&amp;amp; git push --all&lt;/code&gt;
+As I had said before you would be preserving the master branch for the output of the static files generated by Pelican. Now it&amp;rsquo;s time  to generate the&amp;nbsp;mater:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;$ make github&lt;/code&gt;
+You will be asked for your Github login and password again. And&amp;hellip; voil&amp;agrave;! Your new blog should be live on&amp;nbsp;https://YOUR_USERNAME.github.io.&lt;/p&gt;
+&lt;h1 id="whats-next_1"&gt;What&amp;rsquo;s next?&lt;a class="headerlink" href="#whats-next" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h1&gt;
+&lt;p&gt;You generated your first Pelican static website using Markdown and Jinja2. Additional modifications can be made to the Jinja2 templates and the content contained in the Markdown&amp;nbsp;files.&lt;/p&gt;
+&lt;h3 id="adding-gitignore"&gt;Adding .gitignore&lt;a class="headerlink" href="#adding-gitignore" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;.gitignore file contains a list of files and folder that git will ignore while syncing with the remote repository. Utilizing .gitignore wisely can reduce the amount of data you need to&amp;nbsp;upload.&lt;/p&gt;
+&lt;p&gt;make a file .gitignore in the web-sources file with the following&amp;nbsp;contents&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;#Custom&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="k"&gt;output&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="n"&gt;pelicanconf_local&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;py&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+
+&lt;span class="n"&gt;#Python&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;py&lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="n"&gt;cod&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+
+&lt;span class="err"&gt;#&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;C&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;extensions&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;so&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+
+&lt;span class="err"&gt;#&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Packages&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;egg&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;egg&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;info&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="n"&gt;dist&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="n"&gt;build&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="n"&gt;eggs&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="n"&gt;parts&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="n"&gt;bin&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="nf"&gt;var&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="n"&gt;sdist&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="n"&gt;develop&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;eggs&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;installed&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;cfg&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="n"&gt;lib&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="n"&gt;lib64&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+
+&lt;span class="err"&gt;#&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Installer&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;logs&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="n"&gt;pip&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="nf"&gt;log&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;txt&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+
+&lt;span class="err"&gt;#&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Unit&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;test&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;coverage&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;reports&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;coverage&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;tox&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="n"&gt;nosetests&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nc"&gt;xml&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+
+&lt;span class="err"&gt;#&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Translations&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;mo&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+
+&lt;span class="err"&gt;#&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Mr&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Developer&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;mr&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;developer&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;cfg&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;project&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;pydevproject&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3 id="automate-github-upload-process"&gt;Automate GitHub upload process&lt;a class="headerlink" href="#automate-github-upload-process" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Create a file &lt;code&gt;up.sh&lt;/code&gt; in the  &lt;code&gt;web-sources&lt;/code&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;git add -A &lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt; git commit -a -m &lt;span class="s2"&gt;""&lt;/span&gt;&lt;span class="nv"&gt;$1&lt;/span&gt;&lt;span class="s2"&gt;" &amp;amp;&amp;amp; git push --all&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Now whenever you want to upload sync the repo just do &lt;code&gt;bash up.sh "Comment"&lt;/code&gt; Note that the argument &amp;ldquo;Comment&amp;rdquo; should not contain&amp;nbsp;spaces.&lt;/p&gt;
+&lt;h3 id="download-themes"&gt;Download Themes&lt;a class="headerlink" href="#download-themes" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Clone pelican-themes&amp;nbsp;repository&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;git clone --recursive https://github.com/getpelican/pelican-themes themes&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;In &lt;code&gt;pelicanconf.py&lt;/code&gt; add the following&amp;nbsp;variables:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;THEME&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;'themes/bootstrap2'&lt;/span&gt;
+&lt;span class="n"&gt;OUTPUT_PATH&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;'output'&lt;/span&gt;
+&lt;span class="n"&gt;PATH&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;'content&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3 id="custom-home-page"&gt;Custom Home page&lt;a class="headerlink" href="#custom-home-page" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Add this variables to&amp;nbsp;pelicanconf.py&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="c1"&gt;# Custom Home page&lt;/span&gt;
+&lt;span class="n"&gt;DIRECT_TEMPLATES&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;((&lt;/span&gt;&lt;span class="s1"&gt;'index'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;'blog'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;'tags'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;'categories'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;'archives'&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+&lt;span class="n"&gt;PAGINATED_DIRECT_TEMPLATES&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;((&lt;/span&gt;&lt;span class="s1"&gt;'blog'&lt;/span&gt;&lt;span class="p"&gt;,))&lt;/span&gt;
+&lt;span class="n"&gt;TEMPLATE_PAGES&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="s1"&gt;'home.html'&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;'index.html'&lt;/span&gt;&lt;span class="p"&gt;,}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Duplicated the index.html to blog.html in your template folder and add this&amp;nbsp;lines:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;{% set active_page = "blog" %}
+{% block title %}{{ SITENAME }} - Blog{% endblock %}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Create home.html or use page override feature to use a Markdown page as your home&amp;nbsp;page.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;nano home.html&lt;/code&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;{% extends "base.html" %}
+{% block content %}
+&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;div&lt;/span&gt; &lt;span class="na"&gt;class&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;'page'&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;div&lt;/span&gt; &lt;span class="na"&gt;class&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;"page-header"&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;h1&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;Home&lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;h1&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;div&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;div&lt;/span&gt; &lt;span class="na"&gt;class&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;"page-content"&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;Content&lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;div&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;div&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+{% endblock %}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h1 id="process-for-new-articles_1"&gt;Process for new articles.&lt;a class="headerlink" href="#process-for-new-articles" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h1&gt;
+&lt;p&gt;Ones the setup is done, the contents of the folder &lt;code&gt;web-sources&lt;/code&gt; need not be generated again using the above procedure. All one has to do is place the article in the content folder then (after testing the website locally using &lt;code&gt;make devserver&lt;/code&gt;) then execute  &lt;code&gt;bash up.sh "Comment"&lt;/code&gt;  to sync the source branch and then do &lt;code&gt;make github&lt;/code&gt;&lt;/p&gt;
+&lt;h2 id="process-for-moving-to-a-different-machine"&gt;Process for moving to a different machine&lt;a class="headerlink" href="#process-for-moving-to-a-different-machine" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;If you are on a different machine or you have lost access to the &lt;code&gt;web-sources&lt;/code&gt; folder, you just have to make the virtual environment and then do git clone again.&amp;nbsp;i.e&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;virtualenv website  
+&lt;span class="nb"&gt;cd&lt;/span&gt; website
+&lt;span class="nb"&gt;source&lt;/span&gt; bin/activate
+pip install pelican markdown typogrify ghp-import shovel
+git clone https://github.com/YOUR_USERNAME/YOUR_USERNAME.github.io.git web-sources
+&lt;span class="nb"&gt;cd&lt;/span&gt; web-sources
+git checkout -b &lt;span class="nb"&gt;source&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;This article just touches upon getting a basic website up and running. More features that Pelican offers (like custom plugins)can be explored &lt;a href="http://docs.getpelican.com/en/3.6.3/content.html"&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;h1 id="faqs-and-tips_1"&gt;FAQs and Tips&lt;a class="headerlink" href="#faqs-and-tips" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Separate slug (&lt;span class="caps"&gt;URL&lt;/span&gt;) words with a hyphen, or an underscore?&lt;/strong&gt; you should use a &lt;strong&gt;hyphen&lt;/strong&gt; for your &lt;span class="caps"&gt;SEO&lt;/span&gt; &lt;strong&gt;URLs&lt;/strong&gt;. Google treats a &lt;strong&gt;hyphen&lt;/strong&gt; as a word separator, but does not treat an &lt;strong&gt;underscore&lt;/strong&gt; that way. Google treats and &lt;strong&gt;underscore&lt;/strong&gt; as a word joiner &amp;mdash; so github_pages is the same as githubpages to&amp;nbsp;Google.&lt;/li&gt;
+&lt;/ul&gt;</content><category term="Blog"></category><category term="Github"></category><category term="Pelican"></category><category term="gh-pages"></category></entry><entry><title>Quantum Hall Effect and related phenomena</title><link href="/qhe" rel="alternate"></link><published>2019-01-01T00:00:00+05:30</published><updated>2019-01-01T00:00:00+05:30</updated><author><name>Ashwin</name></author><id>tag:None,2019-01-01:/qhe</id><summary type="html">&lt;p&gt;Notes on Quantum Hall Effect and related&amp;nbsp;phenomenon&lt;/p&gt;</summary><content type="html">&lt;h1 id="historical-aspects"&gt;Historical Aspects&lt;a class="headerlink" href="#historical-aspects" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h1&gt;
 &lt;p&gt;The quantum Hall effect is a remarkable phenomenon discovered
 experimentally in which the Hall conductivity of a two dimensional
 system of electrons is found to have plateaus as a function of variables
@@ -1845,322 +2158,7 @@ intersects the boundary, and bounces off&amp;nbsp;it.&lt;/p&gt;
     (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
-&lt;/script&gt;</content><category term="Science"></category><category term="qhe"></category><category term="hall effect"></category><category term="landau levels"></category></entry><entry><title>git cheat-sheet</title><link href="https://ashwinschronicles.github.io/git-cheat-sheet" rel="alternate"></link><published>2019-04-17T00:00:00+05:30</published><updated>2019-04-17T00:00:00+05:30</updated><author><name>Ashwin</name></author><id>tag:ashwinschronicles.github.io,2019-04-17:/git-cheat-sheet</id><summary type="html">&lt;p&gt;This post is about&amp;nbsp;git&lt;/p&gt;</summary><content type="html">&lt;h1 id="quick-refresher"&gt;Quick Refresher&lt;a class="headerlink" href="#quick-refresher" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h1&gt;
-&lt;h2 id="initial-setup"&gt;Initial setup&lt;a class="headerlink" href="#initial-setup" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Open a terminal/shell and&amp;nbsp;type:&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$ git config --global user.name &lt;span class="s2"&gt;"Your name here"&lt;/span&gt;
-$ git config --global user.email &lt;span class="s2"&gt;"your_email@example.com"&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;(Don&amp;rsquo;t type the &lt;code&gt;$&lt;/code&gt;; that just indicates that you&amp;rsquo;re doing this at the command&amp;nbsp;line.)&lt;/p&gt;
-&lt;p&gt;optionally&amp;nbsp;do:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$ git config --global color.ui &lt;span class="nb"&gt;true&lt;/span&gt;
-$ git config --global core.editor nano
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;The first of these will enable coloured output in the terminal; the second tells git that you want to use nano (a user friendly text editor). You can change the highlighted section with your editor of&amp;nbsp;choice!&lt;/p&gt;
-&lt;p&gt;Another way to do this is to edit the &lt;code&gt;.gitconfig&lt;/code&gt; file in your &lt;code&gt;home&lt;/code&gt; directory. The location of this file depends on the operating system you&amp;rsquo;re&amp;nbsp;using.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;Set up ssh on your&amp;nbsp;computer. &lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Look to see if you have files &lt;code&gt;~/.ssh/id_rsa&lt;/code&gt; and &lt;code&gt;~/.ssh/id_rsa.pub&lt;/code&gt;.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;If not, create such public/private keys: Open a terminal/shell and&amp;nbsp;type:&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;$ ssh-keygen -t rsa -C "your_email@example.com"&lt;/code&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Copy your public key (the contents of the newly-created &lt;code&gt;id_rsa.pub&lt;/code&gt; file) into your&amp;nbsp;clipboard.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Paste your ssh public key into your github account&amp;nbsp;settings.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Go to your github &lt;a href="https://github.com/settings/profile"&gt;Account&amp;nbsp;Settings&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Click &amp;ldquo;&lt;a href="https://github.com/settings/ssh"&gt;&lt;span class="caps"&gt;SSH&lt;/span&gt; Keys&lt;/a&gt;&amp;rdquo; on the&amp;nbsp;left.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Click &amp;ldquo;Add &lt;span class="caps"&gt;SSH&lt;/span&gt; Key&amp;rdquo; on the&amp;nbsp;right.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Add a label (like &amp;ldquo;My laptop&amp;rdquo;) and paste the public key into the big text&amp;nbsp;box.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;In a terminal/shell, type the following to test&amp;nbsp;it:&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;$ ssh -T git@github.com&lt;/code&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;If it says something like the following, it&amp;nbsp;worked:&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;Hi username! You've successfully authenticated, but Github does
-not provide shell access.&lt;/code&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id="start-a-new-git-repository"&gt;Start a new git repository&lt;a class="headerlink" href="#start-a-new-git-repository" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;Your first instinct, when you start to do something new, should be &lt;code&gt;git init&lt;/code&gt;. You&amp;rsquo;re starting to write a new paper, you&amp;rsquo;re writing a bit of code to do a computer simulation, you&amp;rsquo;re mucking around with some new data &amp;hellip; &lt;em&gt;anything&lt;/em&gt;: think &lt;code&gt;git init&lt;/code&gt;.&lt;/p&gt;
-&lt;h3 id="a-new-repo-from-scratch"&gt;A new repo from scratch&lt;a class="headerlink" href="#a-new-repo-from-scratch" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h3&gt;
-&lt;p&gt;Say you&amp;rsquo;ve just got some data from a collaborator and are about to start exploring&amp;nbsp;it.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Create a directory to contain the&amp;nbsp;project.&lt;/li&gt;
-&lt;li&gt;Go into the new&amp;nbsp;directory.&lt;/li&gt;
-&lt;li&gt;Type &lt;code&gt;git init&lt;/code&gt;.&lt;/li&gt;
-&lt;li&gt;Write some&amp;nbsp;code.&lt;/li&gt;
-&lt;li&gt;Type &lt;code&gt;git add&lt;/code&gt; to add the files (see the &lt;a href="https://kbroman.org/github_tutorial/pages/routine.html"&gt;typical use page&lt;/a&gt;).&lt;/li&gt;
-&lt;li&gt;Type &lt;code&gt;git commit&lt;/code&gt;.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;The first file to create (and add and commit) is probably a ReadMe file, either as plain text or with &lt;a href="https://daringfireball.net/projects/markdown/"&gt;Markdown&lt;/a&gt;, describing the&amp;nbsp;project.&lt;/p&gt;
-&lt;h3 id="a-new-repo-from-an-existing-project"&gt;A new repo from an existing project&lt;a class="headerlink" href="#a-new-repo-from-an-existing-project" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h3&gt;
-&lt;p&gt;Say you&amp;rsquo;ve got an existing project that you want to start tracking with&amp;nbsp;git.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Go into the directory containing the&amp;nbsp;project.&lt;/li&gt;
-&lt;li&gt;Type &lt;code&gt;git init&lt;/code&gt;.&lt;/li&gt;
-&lt;li&gt;Type &lt;code&gt;git add&lt;/code&gt; to add all of the relevant&amp;nbsp;files.&lt;/li&gt;
-&lt;li&gt;You&amp;rsquo;ll probably want to create a &lt;code&gt;.gitignore&lt;/code&gt; file right away, to indicate all of the files you don&amp;rsquo;t want to track. Use &lt;code&gt;git add .gitignore&lt;/code&gt;,&amp;nbsp;too.&lt;/li&gt;
-&lt;li&gt;Type &lt;code&gt;git commit&lt;/code&gt;.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id="connect-it-to-github"&gt;Connect it to github&lt;a class="headerlink" href="#connect-it-to-github" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h3&gt;
-&lt;p&gt;You&amp;rsquo;ve now got a local git repository. You can use git locally, like that, if you want. But if you want the thing to have a home on github, do the&amp;nbsp;following.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Go to &lt;a href="https://github.com/"&gt;github&lt;/a&gt;.&lt;/li&gt;
-&lt;li&gt;Log in to your&amp;nbsp;account.&lt;/li&gt;
-&lt;li&gt;Click the &lt;a href="https://github.com/new"&gt;new repository&lt;/a&gt; button in the top-right. You&amp;rsquo;ll have an option there to initialize the repository with a &lt;span class="caps"&gt;README&lt;/span&gt; file, but I suggest you  don&amp;rsquo;t do&amp;nbsp;it.&lt;/li&gt;
-&lt;li&gt;Click the &amp;ldquo;Create repository&amp;rdquo;&amp;nbsp;button.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Now, follow the second set of instructions shown on the screen, &amp;ldquo;Push an existing&amp;nbsp;repository&amp;hellip;&amp;rdquo;&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$ git remote add origin git@github.com:username/new_repo
-$ git push -u origin master
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Actually, the first line of the instructions will usually&amp;nbsp;say&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$ git remote add origin https://github.com/username/new_repo
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;But I use &lt;code&gt;git@github.com:username/new_repo&lt;/code&gt; rather than &lt;code&gt;https://github.com/username/new_repo&lt;/code&gt;, as the former is for use with &lt;a href="https://en.wikipedia.org/wiki/Secure_Shell"&gt;ssh&lt;/a&gt;, if you set up ssh  then you won&amp;rsquo;t have to type your password every time you push things to github. If you use the latter construction, you&amp;rsquo;ll have to type your github password every time you push to&amp;nbsp;github.&lt;/p&gt;
-&lt;h2 id="often-used-commands_1"&gt;Often used commands&lt;a class="headerlink" href="#often-used-commands" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
-&lt;h3 id="add-and-commit"&gt;Add and commit&lt;a class="headerlink" href="#add-and-commit" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h3&gt;
-&lt;p&gt;After you&amp;rsquo;ve made some small modifications to your project and checked that they work, use &lt;code&gt;git add&lt;/code&gt; to indicate that they&amp;rsquo;re&amp;nbsp;ready.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$ git add R/modified.R man/modified.Rd
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Then use &lt;code&gt;git commit&lt;/code&gt; to add the modifications to the&amp;nbsp;repository.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$ git commit
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;A text editor (nano if you followed this tutorial) will open; add a short message describing the&amp;nbsp;changes.&lt;/p&gt;
-&lt;p&gt;To abandon your commit, exit the editor without adding text ( ctrl+x in case of nano&amp;nbsp;).&lt;/p&gt;
-&lt;p&gt;For a one-line commit message, you can just&amp;nbsp;type&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$ git commit -m &lt;span class="s2"&gt;"Fix such and such"&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;If you want to commit all of the modifications you&amp;rsquo;ve made, without having to explicitly &amp;ldquo;add&amp;rdquo; each file, you can skip the separate &lt;code&gt;add&lt;/code&gt; and &lt;code&gt;commit&lt;/code&gt; commands and just&amp;nbsp;type&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$ git commit -a
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h3 id="push-to-github"&gt;Push to &lt;a href="https://github.com/"&gt;github&lt;/a&gt;&lt;a class="headerlink" href="#push-to-github" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h3&gt;
-&lt;p&gt;To push committed changes to github,&amp;nbsp;type&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$ git push
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;You don&amp;rsquo;t need to do this every time. Do it after you&amp;rsquo;ve completed a batch of changes that you&amp;rsquo;re thoroughly happy with and before you move on to something&amp;nbsp;else.&lt;/p&gt;
-&lt;p&gt;Once you&amp;rsquo;ve pushed a commit, it&amp;rsquo;s hard to take it away. If you&amp;rsquo;ve not pushed it yet, you &lt;em&gt;can&lt;/em&gt; go back and scrap it and not have it be part of your project&amp;rsquo;s&amp;nbsp;history.&lt;/p&gt;
-&lt;h3 id="status"&gt;Status&lt;a class="headerlink" href="#status" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h3&gt;
-&lt;p&gt;You&amp;rsquo;ve made some changes to a project, but you&amp;rsquo;re not sure what.&amp;nbsp;Type&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;git status&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;It&amp;rsquo;ll give you a list of files that have been changed, plus new files that haven&amp;rsquo;t been formally&amp;nbsp;added.&lt;/p&gt;
-&lt;h3 id="diff"&gt;Diff&lt;a class="headerlink" href="#diff" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h3&gt;
-&lt;p&gt;Exactly what changes have you made?&amp;nbsp;Type&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;git diff&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Or to see your changes to a particular file,&amp;nbsp;type&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;git diff R/modified.R&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;It&amp;rsquo;ll show you which lines have been added and which have been&amp;nbsp;deleted.&lt;/p&gt;
-&lt;h3 id="gitignore"&gt;.gitignore&lt;a class="headerlink" href="#gitignore" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h3&gt;
-&lt;p&gt;The various files in your project directory that you&amp;rsquo;re not tracking in git should be indicated in a &lt;code&gt;.gitignore&lt;/code&gt; file.&lt;/p&gt;
-&lt;p&gt;You don&amp;rsquo;t &lt;em&gt;have&lt;/em&gt; to have a &lt;code&gt;.gitignore&lt;/code&gt; file, but if you don&amp;rsquo;t, those files will show up every time you type &lt;code&gt;git status&lt;/code&gt;.&lt;/p&gt;
-&lt;p&gt;Each subdirectory can have its own &lt;code&gt;.gitignore&lt;/code&gt; file,&amp;nbsp;too.&lt;/p&gt;
-&lt;p&gt;Also, you can have a global such in your home directory; I use &lt;code&gt;~/.gitignore_global&lt;/code&gt;, which&amp;nbsp;contains:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;*~&lt;/span&gt;
-&lt;span class="err"&gt;.*~&lt;/span&gt;
-&lt;span class="na"&gt;.DS_Store&lt;/span&gt;
-&lt;span class="na"&gt;.Rhistory&lt;/span&gt;
-&lt;span class="na"&gt;.RData&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;You have to tell git about the global &lt;code&gt;.gitignore&lt;/code&gt; file:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$ git config --global core.excludesfile ~/.gitignore_global
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Huge thanks to &lt;a href="https://kbroman.org/github_tutorial/"&gt;kbroman.org&lt;/a&gt; for his tutorials from where I have collated articles for this cheat sheet. you can check out his page for more detailed&amp;nbsp;workflow. &lt;/p&gt;</content><category term="Blog"></category><category term="git"></category><category term="github"></category></entry><entry><title>Make a Github Pages blog with Pelican</title><link href="https://ashwinschronicles.github.io/gh-pages-with-pelican" rel="alternate"></link><published>2018-12-29T23:20:09+05:30</published><updated>2020-06-16T11:24:11+05:30</updated><author><name>Ashwin</name></author><id>tag:ashwinschronicles.github.io,2018-12-29:/gh-pages-with-pelican</id><summary type="html">&lt;p&gt;Wake your own webbsite using Pelican static site generator  and host it on github&amp;nbsp;pages&lt;/p&gt;</summary><content type="html">&lt;p&gt;Github, worlds leading  hosting service for Git repositories  offers a simple, elegant website solution. It allows its users to  store page content in a git repository along with their&amp;nbsp;code.&lt;/p&gt;
-&lt;p&gt;In this blog post ill walk you through the process of setting up a website by combining Pelican with Github Pages. Pelican is a simple python utility that lets you create beautiful weblogs using just text files. In other words its a static-site generator. I have chosen Pelican over other static-site generators as Pelican unlike its counter parts is based on python hence initial  setup takes literally no&amp;nbsp;time.&lt;/p&gt;
-&lt;h2 id="setting-up-a-githubio-page"&gt;Setting up a github.io page&lt;a class="headerlink" href="#setting-up-a-githubio-page" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;To create your Github user page, log in to Github and create a  new repositorie username.github.io, as explained on Github pages. (Use your Github username for these repositories.) The  username.github.io repository will contain the output &lt;span class="caps"&gt;HTML&lt;/span&gt; files Pelican generates. To add the output directory as a submodule, initialize it with a &lt;span class="caps"&gt;README&lt;/span&gt;&amp;nbsp;file.&lt;/p&gt;
-&lt;h2 id="installing-pelican"&gt;Installing Pelican&lt;a class="headerlink" href="#installing-pelican" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;We will first  create a virtual environment for Pelican via virtualenv before installing&amp;nbsp;Pelican.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;virtualenv website
-&lt;span class="nb"&gt;cd&lt;/span&gt; website
-&lt;span class="nb"&gt;source&lt;/span&gt; bin/activate
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;You can also do &lt;code&gt;workon website&lt;/code&gt; inplace of the last two.
-Once the virtual environment has been created and activated, Pelican can be installed via  prefixing with sudo if permissions&amp;nbsp;warrant:&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;pip install pelican markdown typogrify ghp-import shovel&lt;/code&gt; &lt;br/&gt;
-Now clone the source repository you&amp;nbsp;created:&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;git clone https://github.com/YOUR_USERNAME/YOUR_USERNAME.github.io.git web-sources&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;Then change directory to the source&amp;nbsp;folder:&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;cd web-sources&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;Because of how Github Pages prefers to work, serving the files from the master branch, you have to put your source code in a new branch, preserving the &amp;ldquo;master&amp;rdquo; for the output of the static files generated by Pelican. To do that, you must create a new branch called&amp;nbsp;&amp;ldquo;source&amp;rdquo;:&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;git checkout -b source&lt;/code&gt;&lt;/p&gt;
-&lt;h2 id="pelican-quickstart"&gt;Pelican quickstart&lt;a class="headerlink" href="#pelican-quickstart" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;Pelican provides an excellent quickstart command. Run&amp;nbsp;it:&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;pelican-quickstart&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;The quickstart will ask you various questions, which you can answer in turn. Before answering them, take a look at my answers&amp;nbsp;below:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;gt; Where &lt;span class="k"&gt;do&lt;/span&gt; you want to create your new web site? &lt;span class="o"&gt;[&lt;/span&gt;.&lt;span class="o"&gt;]&lt;/span&gt; ./
-&amp;gt; What will be the title of this web site? Ashwin&lt;span class="err"&gt;'&lt;/span&gt;s Chronicles
-&amp;gt; Who will be the author of this web site? Ashwin Kumar K
-&amp;gt; What will be the default language of this web site? &lt;span class="o"&gt;[&lt;/span&gt;pt&lt;span class="o"&gt;]&lt;/span&gt; en
-&amp;gt; Do you want to specify a URL prefix? e.g., http://example.com   &lt;span class="o"&gt;(&lt;/span&gt;Y/n&lt;span class="o"&gt;)&lt;/span&gt; n
-&amp;gt; Do you want to &lt;span class="nb"&gt;enable&lt;/span&gt; article pagination? &lt;span class="o"&gt;(&lt;/span&gt;Y/n&lt;span class="o"&gt;)&lt;/span&gt; y
-&amp;gt; How many articles per page &lt;span class="k"&gt;do&lt;/span&gt; you want? &lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="m"&gt;10&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt; &lt;span class="m"&gt;10&lt;/span&gt;
-&amp;gt; What is your &lt;span class="nb"&gt;time&lt;/span&gt; zone? &lt;span class="o"&gt;[&lt;/span&gt;Europe/Paris&lt;span class="o"&gt;]&lt;/span&gt; Asia/Calcutta
-&amp;gt; Do you want to generate a Fabfile/Makefile to automate generation and publishing? &lt;span class="o"&gt;(&lt;/span&gt;Y/n&lt;span class="o"&gt;)&lt;/span&gt; Y **# PAY ATTENTION TO THIS!**
-&amp;gt; Do you want an auto-reload &lt;span class="p"&gt;&amp;amp;&lt;/span&gt; simpleHTTP script to assist with theme and site development? &lt;span class="o"&gt;(&lt;/span&gt;Y/n&lt;span class="o"&gt;)&lt;/span&gt; n
-&amp;gt; Do you want to upload your website using FTP? &lt;span class="o"&gt;(&lt;/span&gt;y/N&lt;span class="o"&gt;)&lt;/span&gt; n
-&amp;gt; Do you want to upload your website using SSH? &lt;span class="o"&gt;(&lt;/span&gt;y/N&lt;span class="o"&gt;)&lt;/span&gt; n
-&amp;gt; Do you want to upload your website using Dropbox? &lt;span class="o"&gt;(&lt;/span&gt;y/N&lt;span class="o"&gt;)&lt;/span&gt; n
-&amp;gt; Do you want to upload your website using S3? &lt;span class="o"&gt;(&lt;/span&gt;y/N&lt;span class="o"&gt;)&lt;/span&gt; n
-&amp;gt; Do you want to upload your website using Rackspace Cloud Files? &lt;span class="o"&gt;(&lt;/span&gt;y/N&lt;span class="o"&gt;)&lt;/span&gt; n
-&amp;gt; Do you want to upload your website using GitHub Pages? &lt;span class="o"&gt;(&lt;/span&gt;y/N&lt;span class="o"&gt;)&lt;/span&gt; y
-&amp;gt; Is this your personal page &lt;span class="o"&gt;(&lt;/span&gt;username.github.io&lt;span class="o"&gt;)&lt;/span&gt;? &lt;span class="o"&gt;(&lt;/span&gt;y/N&lt;span class="o"&gt;)&lt;/span&gt; y
-Done. Your new project is available at YOUR_USERNAME.github.io
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Now, go ahead and create your first blog post! You might want to open the project folder on your favorite code editor and find the &amp;ldquo;content&amp;rdquo; folder inside it. Then, create a new file, which can be called my-first-post.md (Just for testing). The contents should begin with the metadata which identifies the Title, Date, Category and more from the post before you start with the content, like&amp;nbsp;this:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;Title&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;My&lt;/span&gt; &lt;span class="n"&gt;first&lt;/span&gt; &lt;span class="n"&gt;post&lt;/span&gt;
-&lt;span class="n"&gt;Date&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;2018&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;
-&lt;span class="n"&gt;Modified&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;2018&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;
-&lt;span class="n"&gt;Category&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;misc&lt;/span&gt;
-&lt;span class="n"&gt;Tags&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;first&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="n"&gt;misc&lt;/span&gt;
-&lt;span class="n"&gt;Slug&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;My&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;first&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;post&lt;/span&gt;
-&lt;span class="n"&gt;Authors&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;Your&lt;/span&gt; &lt;span class="n"&gt;name&lt;/span&gt;
-&lt;span class="n"&gt;Summary&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;What&lt;/span&gt; &lt;span class="n"&gt;does&lt;/span&gt; &lt;span class="n"&gt;your&lt;/span&gt; &lt;span class="n"&gt;post&lt;/span&gt; &lt;span class="n"&gt;talk&lt;/span&gt; &lt;span class="n"&gt;about&lt;/span&gt;&lt;span class="o"&gt;?&lt;/span&gt; &lt;span class="n"&gt;Write&lt;/span&gt; &lt;span class="n"&gt;here&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;
-
-&lt;span class="n"&gt;This&lt;/span&gt; &lt;span class="k"&gt;is&lt;/span&gt; &lt;span class="n"&gt;the&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;first&lt;/span&gt; &lt;span class="n"&gt;post&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="n"&gt;from&lt;/span&gt; &lt;span class="n"&gt;my&lt;/span&gt; &lt;span class="n"&gt;Pelican&lt;/span&gt; &lt;span class="n"&gt;blog&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt; &lt;span class="o"&gt;**&lt;/span&gt;&lt;span class="n"&gt;YAY&lt;/span&gt;&lt;span class="o"&gt;!**&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Let&amp;rsquo;s see how it&amp;nbsp;looks?&lt;/p&gt;
-&lt;p&gt;Go to the terminal, generate the static files and start the server. To do that, use the following&amp;nbsp;command:&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;(venv)$ make html &amp;amp;&amp;amp; make serve&lt;/code&gt;
-While this command is running, you should be able to visit it on your favorite web browser by typing &lt;code&gt;localhost:8000&lt;/code&gt; on the address&amp;nbsp;bar.&lt;/p&gt;
-&lt;h2 id="a-little-touch-up"&gt;A little touch up&lt;a class="headerlink" href="#a-little-touch-up" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;Now,  if you want to put an image in a post, a neat way is to first  create a &amp;lsquo;images&amp;rsquo; directory inside your content directory, where your posts are. Now, you have to tell Pelican to use it. Find the &lt;code&gt;pelicanconf.py&lt;/code&gt;, the file where you configure the system, and add a variable that contains the directory with your&amp;nbsp;images:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;STATIC_PATHS&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;'images'&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Save it. Go to your post and add the image this&amp;nbsp;way:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;![Write here a good description for people who can't see the image]({filename}/images/IMAGE_NAME.webp)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;You can interrupt the server at anytime pressing &lt;span class="caps"&gt;CTRL&lt;/span&gt;+C on the terminal. But you should start it again and check if the image is correct. Can you remember&amp;nbsp;how?&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;(venv)$ make html &amp;amp;&amp;amp; make serve&lt;/code&gt;
-One last step before your coding is &amp;ldquo;done&amp;rdquo;: you should make sure anyone can read your posts using &lt;span class="caps"&gt;ATOM&lt;/span&gt; or &lt;span class="caps"&gt;RSS&lt;/span&gt; feeds. Find the pelicanconf.py, the file where you configure the system, and edit the part about feed&amp;nbsp;generation:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;FEED_ALL_ATOM&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;'feeds/all.atom.xml'&lt;/span&gt;
-&lt;span class="n"&gt;FEED_ALL_RSS&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;'feeds/all.rss.xml'&lt;/span&gt;
-&lt;span class="n"&gt;AUTHOR_FEED_RSS&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;'feeds/&lt;/span&gt;&lt;span class="si"&gt;%s&lt;/span&gt;&lt;span class="s1"&gt;.rss.xml'&lt;/span&gt;
-&lt;span class="n"&gt;RSS_FEED_SUMMARY_ONLY&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kc"&gt;False&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Save everything so you can send the code to Github. You can do that by adding all files, committing it with a message (&amp;lsquo;first commit&amp;rsquo;) and using git push. You will be asked for your Github login and&amp;nbsp;password.&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;$ git add -A &amp;amp;&amp;amp; git commit -a -m 'first commit' &amp;amp;&amp;amp; git push --all&lt;/code&gt;
-As I had said before you would be preserving the master branch for the output of the static files generated by Pelican. Now it&amp;rsquo;s time  to generate the&amp;nbsp;mater:&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;$ make github&lt;/code&gt;
-You will be asked for your Github login and password again. And&amp;hellip; voil&amp;agrave;! Your new blog should be live on&amp;nbsp;https://YOUR_USERNAME.github.io.&lt;/p&gt;
-&lt;h1 id="whats-next_1"&gt;What&amp;rsquo;s next?&lt;a class="headerlink" href="#whats-next" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h1&gt;
-&lt;p&gt;You generated your first Pelican static website using Markdown and Jinja2. Additional modifications can be made to the Jinja2 templates and the content contained in the Markdown&amp;nbsp;files.&lt;/p&gt;
-&lt;h3 id="adding-gitignore"&gt;Adding .gitignore&lt;a class="headerlink" href="#adding-gitignore" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h3&gt;
-&lt;p&gt;.gitignore file contains a list of files and folder that git will ignore while syncing with the remote repository. Utilizing .gitignore wisely can reduce the amount of data you need to&amp;nbsp;upload.&lt;/p&gt;
-&lt;p&gt;make a file .gitignore in the web-sources file with the following&amp;nbsp;contents&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;#Custom&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-&lt;span class="k"&gt;output&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-&lt;span class="n"&gt;pelicanconf_local&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;py&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-
-&lt;span class="n"&gt;#Python&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;py&lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="n"&gt;cod&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-
-&lt;span class="err"&gt;#&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;C&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;extensions&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;so&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-
-&lt;span class="err"&gt;#&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Packages&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;egg&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;egg&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;info&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-&lt;span class="n"&gt;dist&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-&lt;span class="n"&gt;build&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-&lt;span class="n"&gt;eggs&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-&lt;span class="n"&gt;parts&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-&lt;span class="n"&gt;bin&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-&lt;span class="nf"&gt;var&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-&lt;span class="n"&gt;sdist&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-&lt;span class="n"&gt;develop&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;eggs&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;installed&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;cfg&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-&lt;span class="n"&gt;lib&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-&lt;span class="n"&gt;lib64&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-
-&lt;span class="err"&gt;#&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Installer&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;logs&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-&lt;span class="n"&gt;pip&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="nf"&gt;log&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;txt&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-
-&lt;span class="err"&gt;#&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Unit&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;test&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;coverage&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;reports&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;coverage&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;tox&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-&lt;span class="n"&gt;nosetests&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nc"&gt;xml&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-
-&lt;span class="err"&gt;#&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Translations&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;mo&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-
-&lt;span class="err"&gt;#&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Mr&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Developer&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;mr&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;developer&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;cfg&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;project&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;pydevproject&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h3 id="automate-github-upload-process"&gt;Automate GitHub upload process&lt;a class="headerlink" href="#automate-github-upload-process" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h3&gt;
-&lt;p&gt;Create a file &lt;code&gt;up.sh&lt;/code&gt; in the  &lt;code&gt;web-sources&lt;/code&gt;&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;git add -A &lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt; git commit -a -m &lt;span class="s2"&gt;""&lt;/span&gt;&lt;span class="nv"&gt;$1&lt;/span&gt;&lt;span class="s2"&gt;" &amp;amp;&amp;amp; git push --all&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Now whenever you want to upload sync the repo just do &lt;code&gt;bash up.sh "Comment"&lt;/code&gt; Note that the argument &amp;ldquo;Comment&amp;rdquo; should not contain&amp;nbsp;spaces.&lt;/p&gt;
-&lt;h3 id="download-themes"&gt;Download Themes&lt;a class="headerlink" href="#download-themes" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h3&gt;
-&lt;p&gt;Clone pelican-themes&amp;nbsp;repository&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;git clone --recursive https://github.com/getpelican/pelican-themes themes&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;In &lt;code&gt;pelicanconf.py&lt;/code&gt; add the following&amp;nbsp;variables:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;THEME&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;'themes/bootstrap2'&lt;/span&gt;
-&lt;span class="n"&gt;OUTPUT_PATH&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;'output'&lt;/span&gt;
-&lt;span class="n"&gt;PATH&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;'content&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h3 id="custom-home-page"&gt;Custom Home page&lt;a class="headerlink" href="#custom-home-page" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h3&gt;
-&lt;p&gt;Add this variables to&amp;nbsp;pelicanconf.py&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="c1"&gt;# Custom Home page&lt;/span&gt;
-&lt;span class="n"&gt;DIRECT_TEMPLATES&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;((&lt;/span&gt;&lt;span class="s1"&gt;'index'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;'blog'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;'tags'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;'categories'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;'archives'&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
-&lt;span class="n"&gt;PAGINATED_DIRECT_TEMPLATES&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;((&lt;/span&gt;&lt;span class="s1"&gt;'blog'&lt;/span&gt;&lt;span class="p"&gt;,))&lt;/span&gt;
-&lt;span class="n"&gt;TEMPLATE_PAGES&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="s1"&gt;'home.html'&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;'index.html'&lt;/span&gt;&lt;span class="p"&gt;,}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Duplicated the index.html to blog.html in your template folder and add this&amp;nbsp;lines:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;{% set active_page = "blog" %}
-{% block title %}{{ SITENAME }} - Blog{% endblock %}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Create home.html or use page override feature to use a Markdown page as your home&amp;nbsp;page.&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;nano home.html&lt;/code&gt;&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;{% extends "base.html" %}
-{% block content %}
-&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;div&lt;/span&gt; &lt;span class="na"&gt;class&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;'page'&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
-  &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;div&lt;/span&gt; &lt;span class="na"&gt;class&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;"page-header"&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;h1&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;Home&lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;h1&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;div&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
-  &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;div&lt;/span&gt; &lt;span class="na"&gt;class&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;"page-content"&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;Content&lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;div&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
-&lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;div&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
-{% endblock %}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h1 id="process-for-new-articles_1"&gt;Process for new articles.&lt;a class="headerlink" href="#process-for-new-articles" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h1&gt;
-&lt;p&gt;Ones the setup is done, the contents of the folder &lt;code&gt;web-sources&lt;/code&gt; need not be generated again using the above procedure. All one has to do is place the article in the content folder then (after testing the website locally using &lt;code&gt;make devserver&lt;/code&gt;) then execute  &lt;code&gt;bash up.sh "Comment"&lt;/code&gt;  to sync the source branch and then do &lt;code&gt;make github&lt;/code&gt;&lt;/p&gt;
-&lt;h2 id="process-for-moving-to-a-different-machine"&gt;Process for moving to a different machine&lt;a class="headerlink" href="#process-for-moving-to-a-different-machine" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;If you are on a different machine or you have lost access to the &lt;code&gt;web-sources&lt;/code&gt; folder, you just have to make the virtual environment and then do git clone again.&amp;nbsp;i.e&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;virtualenv website  
-&lt;span class="nb"&gt;cd&lt;/span&gt; website
-&lt;span class="nb"&gt;source&lt;/span&gt; bin/activate
-pip install pelican markdown typogrify ghp-import shovel
-git clone https://github.com/YOUR_USERNAME/YOUR_USERNAME.github.io.git web-sources
-&lt;span class="nb"&gt;cd&lt;/span&gt; web-sources
-git checkout -b &lt;span class="nb"&gt;source&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;This article just touches upon getting a basic website up and running. More features that Pelican offers (like custom plugins)can be explored &lt;a href="http://docs.getpelican.com/en/3.6.3/content.html"&gt;here&lt;/a&gt;.&lt;/p&gt;
-&lt;h1 id="faqs-and-tips_1"&gt;FAQs and Tips&lt;a class="headerlink" href="#faqs-and-tips" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Separate slug (&lt;span class="caps"&gt;URL&lt;/span&gt;) words with a hyphen, or an underscore?&lt;/strong&gt; you should use a &lt;strong&gt;hyphen&lt;/strong&gt; for your &lt;span class="caps"&gt;SEO&lt;/span&gt; &lt;strong&gt;URLs&lt;/strong&gt;. Google treats a &lt;strong&gt;hyphen&lt;/strong&gt; as a word separator, but does not treat an &lt;strong&gt;underscore&lt;/strong&gt; that way. Google treats and &lt;strong&gt;underscore&lt;/strong&gt; as a word joiner &amp;mdash; so github_pages is the same as githubpages to&amp;nbsp;Google.&lt;/li&gt;
-&lt;/ul&gt;</content><category term="Blog"></category><category term="Github"></category><category term="Pelican"></category><category term="gh-pages"></category></entry><entry><title>A beginers IoT Project.</title><link href="https://ashwinschronicles.github.io/Intro-to-IoT" rel="alternate"></link><published>2018-07-12T00:00:00+05:30</published><updated>2018-07-12T00:00:00+05:30</updated><author><name>Ashwin</name></author><id>tag:ashwinschronicles.github.io,2018-07-12:/Intro-to-IoT</id><summary type="html">&lt;p&gt;In this post, we’ll be making a simple IoT project. Web page controlled &lt;span class="caps"&gt;LED&lt;/span&gt; strip using NodeMCU connected on a local&amp;nbsp;network.&lt;/p&gt;</summary><content type="html">&lt;p&gt;In this post, we&amp;rsquo;ll be making a simple IoT project. Web page controlled &lt;span class="caps"&gt;LED&lt;/span&gt; strip using NodeMCU connected on a local&amp;nbsp;network.&lt;/p&gt;
+&lt;/script&gt;</content><category term="Science"></category><category term="qhe"></category><category term="hall effect"></category><category term="landau levels"></category></entry><entry><title>A beginers IoT Project.</title><link href="/Intro-to-IoT" rel="alternate"></link><published>2018-07-12T00:00:00+05:30</published><updated>2018-07-12T00:00:00+05:30</updated><author><name>Ashwin</name></author><id>tag:None,2018-07-12:/Intro-to-IoT</id><summary type="html">&lt;p&gt;In this post, we’ll be making a simple IoT project. Web page controlled &lt;span class="caps"&gt;LED&lt;/span&gt; strip using NodeMCU connected on a local&amp;nbsp;network.&lt;/p&gt;</summary><content type="html">&lt;p&gt;In this post, we&amp;rsquo;ll be making a simple IoT project. Web page controlled &lt;span class="caps"&gt;LED&lt;/span&gt; strip using NodeMCU connected on a local&amp;nbsp;network.&lt;/p&gt;
 &lt;h2 id="outline"&gt;Outline:&lt;a class="headerlink" href="#outline" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Web page controlled &lt;span class="caps"&gt;LED&lt;/span&gt; strip is like the &amp;ldquo;Hello world&amp;rdquo; of IoT. In this post I will be detailing on the procedure I followed to set it up. The schematic of the project will be as&amp;nbsp;follows:&lt;/p&gt;
 &lt;p&gt;&lt;img alt="Schematic" src=".././images/IoT_1_schematic.webp"/&gt;&lt;/p&gt;
@@ -2230,7 +2228,7 @@ git checkout -b &lt;span class="nb"&gt;source&lt;/span&gt;
 &lt;p&gt;&lt;img alt="IoT_14_tes5" src="../images/IoT_14_tes5.gif"/&gt;&lt;/p&gt;
 &lt;p&gt;Vola! there&amp;rsquo;s our first&amp;nbsp;project!&lt;/p&gt;
 &lt;h2 id="whats-next"&gt;Whats next?&lt;a class="headerlink" href="#whats-next" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;We can add more feature to the project such as making it connect to a wifi router so that you can access the &lt;span class="caps"&gt;LED&lt;/span&gt; strip from anywhere in the world. We can convert this project to use the barebone &lt;span class="caps"&gt;ESP8266&lt;/span&gt; and &lt;span class="caps"&gt;FTDI&lt;/span&gt; programmer. We can use the power supply of the &lt;span class="caps"&gt;LED&lt;/span&gt; strip to power the &lt;span class="caps"&gt;ESP8266&lt;/span&gt; (Not recommended since most &lt;span class="caps"&gt;LED&lt;/span&gt; power supply have high &lt;span class="caps"&gt;AC&lt;/span&gt; noise as I found out in my case and hence can damage the &lt;span class="caps"&gt;ESP8266&lt;/span&gt; board).Add more devices for the &lt;span class="caps"&gt;ESP&lt;/span&gt; to control and much much more! All&amp;nbsp;that&lt;/p&gt;</content><category term="Engineering"></category><category term="IoT"></category></entry><entry><title>Interfacing Arduino Mega using LabVIEW</title><link href="https://ashwinschronicles.github.io/arduino-labview-review" rel="alternate"></link><published>2017-12-15T00:00:00+05:30</published><updated>2017-12-15T00:00:00+05:30</updated><author><name>Ashwin</name></author><id>tag:ashwinschronicles.github.io,2017-12-15:/arduino-labview-review</id><summary type="html">&lt;p&gt;This post is about Interfacing Arduino Mega with&amp;nbsp;LabVIEW&lt;/p&gt;</summary><content type="html">&lt;p&gt;This post is about Interfacing Arduino Mega using LabVIEW. It was originally posted &lt;a href="https://www.element14.com/community/roadTestReviews/2581/l/arduino-a000067-mega2560-rev3-development-board-review"&gt;here&lt;/a&gt; as a part of element14&amp;rsquo;s RoadTest. I thank element14 for sending me the review&amp;nbsp;unit.&lt;/p&gt;
+&lt;p&gt;We can add more feature to the project such as making it connect to a wifi router so that you can access the &lt;span class="caps"&gt;LED&lt;/span&gt; strip from anywhere in the world. We can convert this project to use the barebone &lt;span class="caps"&gt;ESP8266&lt;/span&gt; and &lt;span class="caps"&gt;FTDI&lt;/span&gt; programmer. We can use the power supply of the &lt;span class="caps"&gt;LED&lt;/span&gt; strip to power the &lt;span class="caps"&gt;ESP8266&lt;/span&gt; (Not recommended since most &lt;span class="caps"&gt;LED&lt;/span&gt; power supply have high &lt;span class="caps"&gt;AC&lt;/span&gt; noise as I found out in my case and hence can damage the &lt;span class="caps"&gt;ESP8266&lt;/span&gt; board).Add more devices for the &lt;span class="caps"&gt;ESP&lt;/span&gt; to control and much much more! All&amp;nbsp;that&lt;/p&gt;</content><category term="Engineering"></category><category term="IoT"></category></entry><entry><title>Interfacing Arduino Mega using LabVIEW</title><link href="/arduino-labview-review" rel="alternate"></link><published>2017-12-15T00:00:00+05:30</published><updated>2017-12-15T00:00:00+05:30</updated><author><name>Ashwin</name></author><id>tag:None,2017-12-15:/arduino-labview-review</id><summary type="html">&lt;p&gt;This post is about Interfacing Arduino Mega with&amp;nbsp;LabVIEW&lt;/p&gt;</summary><content type="html">&lt;p&gt;This post is about Interfacing Arduino Mega using LabVIEW. It was originally posted &lt;a href="https://www.element14.com/community/roadTestReviews/2581/l/arduino-a000067-mega2560-rev3-development-board-review"&gt;here&lt;/a&gt; as a part of element14&amp;rsquo;s RoadTest. I thank element14 for sending me the review&amp;nbsp;unit.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;strong&gt;Evaluation Type:&lt;/strong&gt; Independent&amp;nbsp;Products&lt;/p&gt;

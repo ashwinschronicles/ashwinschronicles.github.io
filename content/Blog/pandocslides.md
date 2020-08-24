@@ -109,11 +109,9 @@ pandoc -t FORMAT -s Demo.txt -o Demo.html
 
 where `FORMAT` is either `s5`, `slidy`, `slideous`, `dzslides`, or `revealjs`.
 
-For Slidy, Slideous, reveal.js, and S5, the file produced by pandoc with the [`-s/--standalone`](https://pandoc.org/MANUAL.html#option--standalone) option embeds a link to JavaScript and CSS files, which are assumed to be available at the relative path `s5/default` (for S5), `slideous` (for Slideous), `reveal.js` (for reveal.js), or at the Slidy website at `w3.org` (for Slidy). (These paths can be changed by setting the `slidy-url`, `slideous-url`, `revealjs-url`, or `s5-url` variables; see [Variables for HTML slides](https://pandoc.org/MANUAL.html#variables-for-html-slides), above.) For DZSlides, the (relatively short) JavaScript and CSS are included in the file by default.
 
-With all HTML slide formats, the [`--self-contained`](https://pandoc.org/MANUAL.html#option--self-contained) option can be used to produce a single file that contains all of the data necessary to display the slide show, including linked scripts, stylesheets, images, and videos.
 
-To produce a PDF slide show using beamer, type
+To produce a PDF slide show using  LaTeX [`beamer`](https://ctan.org/pkg/beamer),  type
 
 ```
 pandoc -t beamer Demo.txt -o Demo.pdf
