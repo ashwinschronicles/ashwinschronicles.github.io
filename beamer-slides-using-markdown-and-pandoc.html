@@ -25,7 +25,7 @@
 <meta property="og:site_name" content="Ashwin&#39;s Chronicles" />
 <meta property="og:article:author" content="Ashwin Kumar K" />
 <meta property="og:article:published_time" content="2020-07-01T13:40:03+05:30" />
-<meta property="og:article:modified_time" content="2020-08-17T09:14:57+05:30" />
+<meta property="og:article:modified_time" content="2020-08-24T11:29:51+05:30" />
 <meta name="twitter:title" content="Producing Beamer slide shows from markdown using Pandoc ">
 <meta name="twitter:description" content="Short note on bueatiful Producing Beamer slide shows from markdown using Pandoc">
 <meta property="og:image" content="/theme/images/final.png" />
@@ -203,9 +203,7 @@ Can AI, help find near misses for this equation?
 <div class="highlight"><pre><span></span><code><span class="err">pandoc -t FORMAT -s Demo.txt -o Demo.html</span>
 </code></pre></div>
 <p>where <code>FORMAT</code> is either <code>s5</code>, <code>slidy</code>, <code>slideous</code>, <code>dzslides</code>, or <code>revealjs</code>.</p>
-<p>For Slidy, Slideous, reveal.js, and S5, the file produced by pandoc with the <a href="https://pandoc.org/MANUAL.html#option--standalone"><code>-s/--standalone</code></a> option embeds a link to JavaScript and <span class="caps">CSS</span> files, which are assumed to be available at the relative path <code>s5/default</code> (for S5), <code>slideous</code> (for Slideous), <code>reveal.js</code> (for reveal.js), or at the Slidy website at <code>w3.org</code> (for Slidy). (These paths can be changed by setting the <code>slidy-url</code>, <code>slideous-url</code>, <code>revealjs-url</code>, or <code>s5-url</code> variables; see <a href="https://pandoc.org/MANUAL.html#variables-for-html-slides">Variables for <span class="caps">HTML</span> slides</a>, above.) For DZSlides, the (relatively short) JavaScript and <span class="caps">CSS</span> are included in the file by&nbsp;default.</p>
-<p>With all <span class="caps">HTML</span> slide formats, the <a href="https://pandoc.org/MANUAL.html#option--self-contained"><code>--self-contained</code></a> option can be used to produce a single file that contains all of the data necessary to display the slide show, including linked scripts, stylesheets, images, and&nbsp;videos.</p>
-<p>To produce a <span class="caps">PDF</span> slide show using beamer,&nbsp;type</p>
+<p>To produce a <span class="caps">PDF</span> slide show using  LaTeX <a href="https://ctan.org/pkg/beamer"><code>beamer</code></a>,&nbsp;type</p>
 <div class="highlight"><pre><span></span><code><span class="err">pandoc -t beamer Demo.txt -o Demo.pdf</span>
 </code></pre></div>
 <p>Note that a reveal.js slide show can also be converted to a <span class="caps">PDF</span> by printing it to a file from the&nbsp;browser.</p>
@@ -310,12 +308,10 @@ single&nbsp;document.</p>
             </aside>
         </div>
         <section id="article-sidebar" class="span2">
-    <h4>Reading Time</h4>
-    <p>~5 min read</p>
             <h4>Published</h4>
             <time itemprop="dateCreated" datetime="2020-07-01T13:40:03+05:30">Jul 01, 2020</time>
 <h4>Last Updated</h4>
-<time datetime="2020-08-17T09:14:57+05:30">Aug 17, 2020</time>
+<time datetime="2020-08-24T11:29:51+05:30">Aug 24, 2020</time>
 
             <h4>Category</h4>
             <a class="category-link" href="https://ashwinschronicles.github.io/categories#blog-ref">Blog</a>
