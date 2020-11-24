@@ -1,0 +1,2636 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2.5cm
+\topmargin 2.5cm
+\rightmargin 6cm
+\bottommargin 2.5cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+
+\series bold
+Roll No : 
+\bar under
+16CKT07 
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Name:
+\bar under
+ Ashwin Kumar K
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Total Marks:________
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Signature of the Evaluator:
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+
+\series bold
+EXPERIMENT NO: 1 Rolling a Belan on an inclined surface
+\end_layout
+
+\begin_layout Section
+Aim of the experiment
+\end_layout
+
+\begin_layout Enumerate
+To find the moment of inertia of belan
+\end_layout
+
+\begin_layout Enumerate
+To find the relation ship between rolling time and the inclination angle
+\end_layout
+
+\begin_layout Enumerate
+To find the coefficient of friction of the surface.
+\end_layout
+
+\begin_layout Enumerate
+To determine if rolling time is dependant of surface friction.
+\end_layout
+
+\begin_layout Section
+System description
+\end_layout
+
+\begin_layout Standard
+Consider the inclined plane in figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Rolling-Cylinder-on"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ .
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Fig1.png
+	width 40page%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Rolling Cylinder on an Inclined Plane
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Rolling-Cylinder-on"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+let's establish all the forces acting on this rolling body .
+ The force mg is acting in the downward direction and it has two components
+ one is parallel to the plank and there's one component which is perpendicular
+ to the plank and this in turn causes normal reaction and we call it 
+\begin_inset Formula $F_{n}$
+\end_inset
+
+ .
+ 
+\end_layout
+
+\begin_layout Standard
+We also have a force of friction which is acting opposite to the direction
+ of roll.
+ we are considering a situation where the body is not slipping down the
+ ramp it is smoothly rolling down the lamp so force of friction which is
+ static in nature is more than 
+\begin_inset Formula $mg\sin\theta$
+\end_inset
+
+ and it is not necessary that 
+\begin_inset Formula $f_{s}$
+\end_inset
+
+ here is 
+\begin_inset Formula $f_{s}max$
+\end_inset
+
+, so the moment 
+\begin_inset Formula $mg\sin\theta$
+\end_inset
+
+ exceeds 
+\begin_inset Formula $f_{s}max$
+\end_inset
+
+ the body will start slipping (i.e for smooth rolling 
+\begin_inset Formula $f_{s}>mg\sin\theta$
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Standard
+Lets write the equations of motion of this rolling body, first we'll write
+ the forces acting on the body considering its linear motion we can say
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+f_{s}-mg\sin\theta=ma_{x}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+We now notice that only 
+\begin_inset Formula $F_{s}$
+\end_inset
+
+can produce torque to the body as all other forces are going right through
+ the axis of rotation of the cylinder and therefore its distance from the
+ axis of rotation of the cylinder is zero .
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\tau=I\alpha
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+f_{s}R=I\alpha
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+a_{x}=R\alpha
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+f_{s}=Ia_{x}/R^{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+Ia_{x}/R^{2}-mg\sin\theta=ma_{x}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+a_{x}=\frac{g\sin\theta}{1+I/mR^{2}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The time taken for the cylinder to cover a distance S (along the inclination)
+ can be calculated from 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+t=\sqrt{(\frac{2S}{a_{x}})}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+t=\sqrt{\frac{2S(1+I/mR^{2})}{g\sin\theta}}\label{eq:time}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In the limiting case where frictional force can no longer support rolling
+ of the cylinder, thus the cylinder begins to slip.
+ Analysing this case, 
+\begin_inset Formula $f_{s}=\mu N=\mu mg\cos\theta$
+\end_inset
+
+ thus 
+\begin_inset Formula 
+\[
+\mu mg\cos\theta_{max}=Ia_{x}/R^{2}
+\]
+
+\end_inset
+
+ 
+\begin_inset Formula 
+\[
+\mu mg\cos\theta_{max}=\frac{Ig\sin\theta_{max}}{R^{2}+I/m}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\mu=\frac{I\tan\theta_{max}}{mR^{2}+I}\label{eq:mu}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Experimental Method
+\end_layout
+
+\begin_layout Enumerate
+Measure the dimensions such as lengths and radii of the Belan and record
+ them with percentage errors using the accuracy involved with measuring
+ tools
+\end_layout
+
+\begin_layout Enumerate
+Measure the bench parameters in a similar way.
+\end_layout
+
+\begin_layout Enumerate
+Calculate lift parameters ( vertical lift required for each degree).
+\end_layout
+
+\begin_layout Enumerate
+Lift one end the bench using a Car Jack along with some wooden planks (ensuring
+ the balance of the bench isn't disturbed).
+\end_layout
+
+\begin_layout Enumerate
+Plot t versus sin
+\begin_inset Formula $\theta$
+\end_inset
+
+ other quantities like t2, 1/t, 1/t2 etc.
+ and try to get a linear plot.
+ 
+\end_layout
+
+\begin_layout Enumerate
+find the moment of inertia of belan.
+\end_layout
+
+\begin_layout Enumerate
+To determine if rolling time is dependant of surface friction.
+\end_layout
+
+\begin_layout Enumerate
+Try find coefficient of friction.
+\end_layout
+
+\begin_layout Enumerate
+Try to replace the surface and determine if rolling time is dependant of
+ surface.
+\end_layout
+
+\begin_layout Section
+Observations & Measurements
+\end_layout
+
+\begin_layout Subsection
+Measurement of linear distances
+\end_layout
+
+\begin_layout Subsubsection
+Measurement of radii of belan
+\end_layout
+
+\begin_layout Standard
+In order to measure the radii of the belan, a thread was used cover the
+ circumference and a marking is done with a pen on both of the strings at
+ the same level as shown in Fig 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Circumference thread"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ and then the thread is placed on a ruler and the distance between the two
+ markings on the string is measured, as shown in Fig 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:CircumMeasure"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ .
+ The least count of scale is 0.05 cm for the smaller radius and 0.1cm for
+ bigger radius.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Videos/circumferenceig.jpg
+	lyxscale 10
+	width 40page%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Measuring circumference of larger radius
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Circumference thread"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Videos/circumMeasureBig.jpg
+	lyxscale 10
+	width 40page%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Measuring circumference of larger radius
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:CircumMeasure"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Videos/circum_small.jpg
+	lyxscale 10
+	width 40page%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Measuring circumference of smaller radius
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Circumference thread-1"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Videos/circumMeasureSmall.jpg
+	lyxscale 10
+	width 40page%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Measuring circumference of smaller radius
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:CircumMeasure-1"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="3">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Circumference of the smaller radius (in cm)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Circumference of the bigger radius (in cm)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Trial 1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4.5
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+11
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Trial 2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4.6
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+11.2
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Trial 3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4.6
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+11.2
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Mean value
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4.56
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+11.13
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Measured circumference data
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Thus the nominal values of radii are 0.73 cm and 1.77 cm (round to two decimal
+ places) respectively.
+\end_layout
+
+\begin_layout Standard
+we know that 
+\begin_inset Formula $c=2\pi r$
+\end_inset
+
+so, 
+\begin_inset Formula $\Delta r=r\Delta c/c$
+\end_inset
+
+ so the error in measurement of radius is 0.008 cm and 0.016 cm respectively.
+\end_layout
+
+\begin_layout Standard
+Therefore 
+\begin_inset Formula $R_{1}=0.73\pm0.01$
+\end_inset
+
+cm and 
+\begin_inset Formula $R_{2}=1.77\pm0.02$
+\end_inset
+
+cm (two significant figures).
+\end_layout
+
+\begin_layout Subsubsection
+Measurement of length of belan
+\end_layout
+
+\begin_layout Standard
+In order to measure the length of the belan, I placed the belan against
+ a wall and the height was recorded on top of a painters tape (Fig 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:BelanLegth1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ ), next we use a tape measure to measure the distance from ground to this
+ marking (Fig 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:BelanLegth2"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ ).
+\end_layout
+
+\begin_layout Standard
+The length of belan as measured using this procedure is 35.8 
+\begin_inset Formula $\pm$
+\end_inset
+
+0.1 cm (least count of tape measure is 0.1 cm)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Videos/belanHeght1.jpg
+	lyxscale 10
+	width 40page%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Measurement of length of belan
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:BelanLegth1"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Videos/belanHeght2.jpg
+	lyxscale 10
+	width 40page%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Measurement of length of belan
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:BelanLegth2"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Measurement of distance travelled by belan
+\end_layout
+
+\begin_layout Standard
+The bench used for the experiment has total length as 172cm (fig 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Belan Length"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ ).
+ However the belan can travel only part of the distance.
+ On either side, the shape of the belan prevents it from starting at the
+ very end (and reaching the lowest point) thus a tape has been put to keep
+ track of the start and the end point of the belan.
+ As seen from the Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Belan Length-left"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ & 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Belan Length-right"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ , the total length the belan can traverse is (166 - 4.3) = 161.7 cm.
+ The least count of the scale used here is 1mm.
+ Therefore the total length the belan can traverse is 161.7
+\begin_inset Formula $\pm$
+\end_inset
+
+ 0.1 cm.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Videos/measure_table_lenght.jpg
+	lyxscale 10
+	width 40page%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Measurement of distance travelled by belan
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Belan Length"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Videos/measure_right_lenght.jpg
+	lyxscale 10
+	width 40page%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Measurement of distance travelled by belan (right end)
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Belan Length-right"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Videos/measure_left_lenght.jpg
+	lyxscale 10
+	width 40page%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Measurement of distance travelled by belan (right end)
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Belan Length-left"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Measurement of vertical lift at one end
+\end_layout
+
+\begin_layout Standard
+The selected bench for measurement has maximum flat length as 172 cm.
+ We want to perform experiment at angles from 2 degree to 16 degree at an
+ interval of 2.
+ We can calculate the height required to be lifted at one end to reach the
+ given set of angles as 
+\begin_inset Formula $L=172\sin\theta$
+\end_inset
+
+.
+ This gives us the following table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:Measurement-of-vertical"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ .
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Tabular
+<lyxtabular version="3" rows="9" columns="3">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top" width="0pt">
+<column alignment="left" valignment="top" width="0pt">
+<column alignment="left" valignment="top" width="0pt">
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Angle(degree)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+lift required (cm)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+lift rounded to LC of scale (cm)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+6.003
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+6
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+11.998
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+12
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+6
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+17.979
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+18
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+8
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+23.938
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+24
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+10
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+29.867
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+30
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+12
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+35.761
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+35.8
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+14
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+41.611
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+41.6
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+16
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+47.410
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+47.4
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Measurement of vertical lift at one end 
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:Measurement-of-vertical"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+The Car Jack has been placed at the middle of one end of the bench (Fig
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Jack balance"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ ).
+ For larger lengths (20cm onward) a set of wooden planks are added to increase
+ the height (Fig 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Jack wood"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+).
+ The bench can be lifted higher by rotating the shaft of the car jack until
+ the required height is met (Fig ).
+ Since the height can be measured to 0.1cm accuracy (LC of the scale used)
+ this also translates into the accuracy for angle of the inclined plane.
+ While measuring height care must be taken that the scale is perpendicular
+ to ground and the height of the center of the bench leg is measured.
+ One can use a flat card as a pointer and to avoid parallax.
+ (Fig 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Jack measure"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Videos/measureJack.jpg
+	lyxscale 10
+	width 40page%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Measurement of vertical lift using scale and flat card.
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Jack measure"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Videos/jack on the bench.jpg
+	lyxscale 10
+	width 40page%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Placement of Car jack such that the bench is lifted and balanced.
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Jack balance"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Videos/jack+ane2.jpg
+	lyxscale 10
+	width 40page%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+A set of wooden planks are added to increase the height.
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Jack wood"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Measurement of time taken to roll down
+\end_layout
+
+\begin_layout Standard
+In order to measure the time taken for the belan to roll down, video of
+ the experiment was taken in a mobile phone.
+ The video recorded was then processed frame by frame to find the number
+ of frames between the starting and belan reaching the end.
+ This analysis was done on a mobile app named 
+\series bold
+
+\begin_inset Quotes eld
+\end_inset
+
+
+\begin_inset CommandInset href
+LatexCommand href
+name "Video Stopwatch"
+target "https://play.google.com/store/apps/details?id=us.secondscount&hl=en_IN"
+literal "false"
+
+\end_inset
+
+
+\begin_inset Quotes erd
+\end_inset
+
+
+\series default
+ (As seen in fig 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Screeenshot"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ ) .The video recorded had a 30 FPS (frames per second) thus each frame lasts
+ for 33.33 ms and this is our least count.
+ This exercises was done 3 times and the average was calculated.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Videos/Screenshot.png
+	lyxscale 10
+	width 40page%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Screenshot of the app
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Screeenshot"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Tabular
+<lyxtabular version="3" rows="9" columns="6">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top" width="0pt">
+<column alignment="left" valignment="top" width="0pt">
+<column alignment="left" valignment="top" width="0pt">
+<column alignment="left" valignment="top" width="0pt">
+<column alignment="left" valignment="top" width="0pt">
+<column alignment="left" valignment="top" width="0pt">
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Angle(degree)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+time (trial1) (in s)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+time (trial2) (in s)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+time (trial3) (in s)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Mean time (in s)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+lift of bench (cm)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3.5
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3.433
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3.433
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3.455
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+6
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2.567
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2.567
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2.567
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2.567
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+12
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+6
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2.067
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2.033
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2.033
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2.044
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+18
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+8
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.733
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.8
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.767
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.767
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+24
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+10
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.633
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.633
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.633
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.633
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+30
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+12
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.467
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.433
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.433
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.444
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+35.8
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+14
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.333
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.333
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.322
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+41.6
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+16
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.267
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.267
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.245
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+47.4
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Measurement of time taken to roll down
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+After these sets of measurement, a kitchen anti slip mat was added on top
+ of the bench surface.
+ The time taken to roll down is measured again for 6 degree and 8 degree.
+ The time measured thus is 2.033 s and 1.733 s respectively.
+ This is similar to the one without surface modification thus rolling time
+ is independent of surface (which is also clear from the formula for t Eq:
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:time"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Subsection
+Measurement of weight of belan
+\end_layout
+
+\begin_layout Standard
+The weight of the belan was calculated using a kitchen weighing scale.The
+ least count of the used measuring scale was 1g.
+ It was found that the weight of the belan used in this experiment is 172
+ 
+\begin_inset Formula $\pm$
+\end_inset
+
+1 g.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Videos/BelanWeight.jpg
+	lyxscale 10
+	width 40page%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Measurement of weight of belan
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:CircumMeasure-1-1"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Plots
+\end_layout
+
+\begin_layout Standard
+Attached outside the report in the form of 2 images.
+\end_layout
+
+\begin_layout Subsection
+Calculation of moment of inertia of the belan
+\end_layout
+
+\begin_layout Standard
+From eq 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:time"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+t=\sqrt{\frac{2S(1+I/mR^{2})}{g\sin\theta}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+so 
+\begin_inset Formula 
+\[
+I=mR^{2}(\frac{t^{2}g\sin\theta}{2S}-1)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+let us take R as the weighted mean of 
+\begin_inset Formula $R_{1}$
+\end_inset
+
+ and
+\begin_inset Formula $R_{2}$
+\end_inset
+
+.
+ The weights can be chosen (assumed) as the fraction of total length that
+ 
+\begin_inset Formula $R_{i}$
+\end_inset
+
+ appears in the cylinder.
+ The fraction of length with 
+\begin_inset Formula $R_{1}$
+\end_inset
+
+ is 17/35.8 and that for 
+\begin_inset Formula $R_{2}$
+\end_inset
+
+ is 18.8/35.8.
+\end_layout
+
+\begin_layout Standard
+Thus R using these weights become 
+\begin_inset Formula $\frac{aR_{1}+bR_{2}}{a+b}=1.28\pm(0.01+0.02)=1.28\pm0.03$
+\end_inset
+
+cm.
+\end_layout
+
+\begin_layout Standard
+Using theses values and the vales from 2 degree angle data, and g=9.81m
+\begin_inset Formula $/s^{2}$
+\end_inset
+
+ we calculate I as 0.0000074312 Kg
+\begin_inset Formula $m^{2}$
+\end_inset
+
+ = 74.312 g
+\begin_inset Formula $cm^{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{\Delta I}{I}=\frac{\Delta m}{m}+2\frac{\Delta R}{R}+2\frac{\Delta t}{t}+cos\theta\Delta\theta+\frac{\Delta S}{S}
+\]
+
+\end_inset
+
+ calculating these with the previously mentioned error fractions,
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{\Delta I}{I}=0.073410
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\Delta I=0.00000054552Kgm^{2}=5.45gcm^{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Therefore I = 74.312 
+\begin_inset Formula $\pm5.45gcm^{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Calculation of coefficient of friction 
+\end_layout
+
+\begin_layout Standard
+In the limiting case where frictional force can no longer support rolling
+ of the cylinder, thus the cylinder begins to slip.
+ In my case the 
+\begin_inset Formula $\theta max$
+\end_inset
+
+was found to be 55 degree.
+ Using eq
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:mu"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ 
+\begin_inset Formula 
+\[
+\mu=\frac{I\tan\theta_{max}}{mR^{2}+I}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+we get 
+\begin_inset Formula $\mu=0.298\sim0.3$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{\Delta\mu}{\mu}=\frac{\Delta I}{I}+2\frac{\Delta R}{R}+\frac{\Delta m}{m}+cot\theta\Delta\theta
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{\Delta\mu}{\mu}=0.15473
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Therefore 
+\begin_inset Formula $\Delta\mu=0.046,$
+\end_inset
+
+thus 
+\begin_inset Formula $\mu=0.298\pm0.046$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Results & Conclusion
+\end_layout
+
+\begin_layout Enumerate
+The moment of inertia of belan is found to be 74.312 
+\begin_inset Formula $\pm5.45gcm^{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+The relation ship between rolling time and the inclination angle is 
+\begin_inset Formula $t=\sqrt{\frac{2S(1+I/mR^{2})}{g\sin\theta}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+The coefficient of friction of the surface is found to be 
+\begin_inset Formula $\mu=0.298\pm0.046$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+The rolling time is independent of surface friction (as long as 
+\begin_inset Formula $f_{s}>mg\sin\theta$
+\end_inset
+
+).
+\end_layout
+
+\end_body
+\end_document

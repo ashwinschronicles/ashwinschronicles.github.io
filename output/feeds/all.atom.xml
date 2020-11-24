@@ -1,5 +1,251 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Ashwin's Chronicles</title><link href="/" rel="alternate"></link><link href="/feeds/all.atom.xml" rel="self"></link><id>/</id><updated>2020-06-20T00:00:00+05:30</updated><entry><title>Producing Beamer slide shows from markdown using Pandoc</title><link href="/beamer-slides-using-markdown-and-pandoc" rel="alternate"></link><published>2020-06-06T00:00:00+05:30</published><updated>2020-06-20T00:00:00+05:30</updated><author><name>Ashwin Kumar K</name></author><id>tag:None,2020-06-06:/beamer-slides-using-markdown-and-pandoc</id><summary type="html">&lt;p&gt;Short note on bueatiful Producing Beamer slide shows from markdown using&amp;nbsp;Pandoc&lt;/p&gt;</summary><content type="html">&lt;h1 id="producing-slide-shows-with-pandoc"&gt;Producing slide shows with pandoc&lt;a class="headerlink" href="#producing-slide-shows-with-pandoc" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h1&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Ashwin's Chronicles</title><link href="/" rel="alternate"></link><link href="/feeds/all.atom.xml" rel="self"></link><id>/</id><updated>2020-09-20T00:00:00+05:30</updated><entry><title>An experiment with a wooden Belan</title><link href="/an-experiment-with-a-wooden-belan" rel="alternate"></link><published>2020-09-20T00:00:00+05:30</published><updated>2020-09-20T00:00:00+05:30</updated><author><name>Ashwin</name></author><id>tag:None,2020-09-20:/an-experiment-with-a-wooden-belan</id><summary type="html">&lt;p&gt;This post is about the authors experiemnt with a&amp;nbsp;belan&lt;/p&gt;</summary><content type="html">&lt;h1 class="unnumbered" id="experiment-no-1-rolling-a-belan-on-an-inclined-surface"&gt;&lt;span class="caps"&gt;EXPERIMENT&lt;/span&gt; &lt;span class="caps"&gt;NO&lt;/span&gt;: 1 Rolling a Belan on an inclined surface&lt;a class="headerlink" href="#experiment-no-1-rolling-a-belan-on-an-inclined-surface" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h1&gt;
+&lt;h1 id="aim-of-the-experiment"&gt;Aim of the experiment&lt;a class="headerlink" href="#aim-of-the-experiment" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;To find the moment of inertia of&amp;nbsp;belan&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;To find the relation ship between rolling time and the inclination&amp;nbsp;angle&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;To find the coefficient of friction of the&amp;nbsp;surface.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;To determine if rolling time is dependant of surface&amp;nbsp;friction.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1 id="system-description"&gt;System description&lt;a class="headerlink" href="#system-description" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h1&gt;
+&lt;p&gt;Consider the inclined plane in figure &lt;a href="#fig:Rolling-Cylinder-on" reference="fig:Rolling-Cylinder-on" reference-type="ref"&gt;1&lt;/a&gt;&amp;nbsp;.&lt;/p&gt;
+&lt;p&gt;&lt;img alt='Rolling Cylinder on an Inclined Plane[[fig:Rolling-Cylinder-on]]{#fig:Rolling-Cylinder-on label="fig:Rolling-Cylinder-on"}' id="fig:Rolling-Cylinder-on" src="Fig1.png" width="0.4\paperwidth"/&gt;&lt;/p&gt;
+&lt;p&gt;let&amp;rsquo;s establish all the forces acting on this rolling body . The force mg is acting in the downward direction and it has two components one is parallel to the plank and there&amp;rsquo;s one component which is perpendicular to the plank and this in turn causes normal reaction and we call it &lt;span class="math"&gt;\(F_{n}\)&lt;/span&gt;&amp;nbsp;.&lt;/p&gt;
+&lt;p&gt;We also have a force of friction which is acting opposite to the direction of roll. we are considering a situation where the body is not slipping down the ramp it is smoothly rolling down the lamp so force of friction which is static in nature is more than &lt;span class="math"&gt;\(mg\sin\theta\)&lt;/span&gt; and it is not necessary that &lt;span class="math"&gt;\(f_{s}\)&lt;/span&gt; here is &lt;span class="math"&gt;\(f_{s}max\)&lt;/span&gt;, so the moment &lt;span class="math"&gt;\(mg\sin\theta\)&lt;/span&gt; exceeds &lt;span class="math"&gt;\(f_{s}max\)&lt;/span&gt; the body will start slipping (i.e for smooth rolling &lt;span class="math"&gt;\(f_{s}&amp;gt;mg\sin\theta\)&lt;/span&gt;)&lt;/p&gt;
+&lt;p&gt;Lets write the equations of motion of this rolling body, first we&amp;rsquo;ll write the forces acting on the body considering its linear motion we can&amp;nbsp;say&lt;/p&gt;
+&lt;div class="math"&gt;$$f_{s}-mg\sin\theta=ma_{x}$$&lt;/div&gt;
+&lt;p&gt;We now notice that only &lt;span class="math"&gt;\(F_{s}\)&lt;/span&gt;can produce torque to the body as all other forces are going right through the axis of rotation of the cylinder and therefore its distance from the axis of rotation of the cylinder is zero&amp;nbsp;.&lt;/p&gt;
+&lt;div class="math"&gt;$$\tau=I\alpha$$&lt;/div&gt;
+&lt;div class="math"&gt;$$f_{s}R=I\alpha$$&lt;/div&gt;
+&lt;div class="math"&gt;$$a_{x}=R\alpha$$&lt;/div&gt;
+&lt;div class="math"&gt;$$f_{s}=Ia_{x}/R^{2}$$&lt;/div&gt;
+&lt;div class="math"&gt;$$Ia_{x}/R^{2}-mg\sin\theta=ma_{x}$$&lt;/div&gt;
+&lt;div class="math"&gt;$$a_{x}=\frac{g\sin\theta}{1+I/mR^{2}}$$&lt;/div&gt;
+&lt;p&gt;The time taken for the cylinder to cover a distance S (along the inclination) can be calculated&amp;nbsp;from&lt;/p&gt;
+&lt;div class="math"&gt;$$t=\sqrt{(\frac{2S}{a_{x}})}$$&lt;/div&gt;
+&lt;div class="math"&gt;$$t=\sqrt{\frac{2S(1+I/mR^{2})}{g\sin\theta}}\label{eq:time}$$&lt;/div&gt;
+&lt;p&gt;In the limiting case where frictional force can no longer support rolling of the cylinder, thus the cylinder begins to slip. Analysing this case, &lt;span class="math"&gt;\(f_{s}=\mu N=\mu mg\cos\theta\)&lt;/span&gt;&amp;nbsp;thus &lt;/p&gt;
+&lt;div class="math"&gt;$$\mu mg\cos\theta_{max}=Ia_{x}/R^{2}$$&lt;/div&gt;
+&lt;div class="math"&gt;$$\mu mg\cos\theta_{max}=\frac{Ig\sin\theta_{max}}{R^{2}+I/m}$$&lt;/div&gt;
+&lt;div class="math"&gt;$$\mu=\frac{I\tan\theta_{max}}{mR^{2}+I}\label{eq:mu}$$&lt;/div&gt;
+&lt;h1 id="experimental-method"&gt;Experimental Method&lt;a class="headerlink" href="#experimental-method" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Measure the dimensions such as lengths and radii of the Belan and record them with percentage errors using the accuracy involved with measuring&amp;nbsp;tools&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Measure the bench parameters in a similar&amp;nbsp;way.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Calculate lift parameters ( vertical lift required for each&amp;nbsp;degree).&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Lift one end the bench using a Car Jack along with some wooden planks (ensuring the balance of the bench isn&amp;rsquo;t&amp;nbsp;disturbed).&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Plot t versus sin&lt;span class="math"&gt;\(\theta\)&lt;/span&gt; other quantities like t2, 1/t, 1/t2 etc. and try to get a linear&amp;nbsp;plot.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;find the moment of inertia of&amp;nbsp;belan.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;To determine if rolling time is dependant of surface&amp;nbsp;friction.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Try find coefficient of&amp;nbsp;friction.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Try to replace the surface and determine if rolling time is dependant of&amp;nbsp;surface.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1 id="observations-measurements"&gt;Observations &lt;span class="amp"&gt;&amp;amp;&lt;/span&gt; Measurements&lt;a class="headerlink" href="#observations-measurements" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h1&gt;
+&lt;h2 id="measurement-of-linear-distances"&gt;Measurement of linear distances&lt;a class="headerlink" href="#measurement-of-linear-distances" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
+&lt;h3 id="measurement-of-radii-of-belan"&gt;Measurement of radii of belan&lt;a class="headerlink" href="#measurement-of-radii-of-belan" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;In order to measure the radii of the belan, a thread was used cover the circumference and a marking is done with a pen on both of the strings at the same level as shown in Fig &lt;a href="#fig:Circumference thread" reference="fig:Circumference thread" reference-type="ref"&gt;2&lt;/a&gt; and then the thread is placed on a ruler and the distance between the two markings on the string is measured, as shown in Fig &lt;a href="#fig:CircumMeasure" reference="fig:CircumMeasure" reference-type="ref"&gt;3&lt;/a&gt; . The least count of scale is 0.05 cm for the smaller radius and 0.1cm for bigger&amp;nbsp;radius.&lt;/p&gt;
+&lt;p&gt;&lt;img alt='Measuring circumference of larger radius[[fig:Circumference thread]]{#fig:Circumference thread label="fig:Circumference thread"}' id="fig:Circumference" src="belan-images/circumferenceig.jpg" thread="thread" width="0.4\paperwidth"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt='Measuring circumference of larger radius[[fig:CircumMeasure]]{#fig:CircumMeasure label="fig:CircumMeasure"}' id="fig:CircumMeasure" src="belan-images/circumMeasureBig.jpg" width="0.4\paperwidth"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt='Measuring circumference of smaller radius[[fig:Circumference thread-1]]{#fig:Circumference thread-1 label="fig:Circumference thread-1"}' id="fig:Circumference" src="belan-images/circum_small.jpg" thread-1="thread-1" width="0.4\paperwidth"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt='Measuring circumference of smaller radius[[fig:CircumMeasure-1]]{#fig:CircumMeasure-1 label="fig:CircumMeasure-1"}' id="fig:CircumMeasure-1" src="belan-images/circumMeasureSmall.jpg" width="0.4\paperwidth"/&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;            Circumference of the smaller radius (in cm)   Circumference of the bigger radius (in cm)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;hr/&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;Trial 1                         4.5                                           11&lt;/span&gt;
+&lt;span class="err"&gt;Trial 2                         4.6                                          11.2&lt;/span&gt;
+&lt;span class="err"&gt;Trial 3                         4.6                                          11.2&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;dl&gt;
+&lt;dt&gt;Mean value                      4.56&amp;nbsp;11.13&lt;/dt&gt;
+&lt;dd&gt;
+&lt;p&gt;Measured circumference&amp;nbsp;data&lt;/p&gt;
+&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;p&gt;Thus the nominal values of radii are 0.73 cm and 1.77 cm (round to two decimal places)&amp;nbsp;respectively.&lt;/p&gt;
+&lt;p&gt;we know that &lt;span class="math"&gt;\(c=2\pi r\)&lt;/span&gt;so, &lt;span class="math"&gt;\(\Delta r=r\Delta c/c\)&lt;/span&gt; so the error in measurement of radius is 0.008 cm and 0.016 cm&amp;nbsp;respectively.&lt;/p&gt;
+&lt;p&gt;Therefore &lt;span class="math"&gt;\(R_{1}=0.73\pm0.01\)&lt;/span&gt;cm and &lt;span class="math"&gt;\(R_{2}=1.77\pm0.02\)&lt;/span&gt;cm (two significant&amp;nbsp;figures).&lt;/p&gt;
+&lt;h3 id="measurement-of-length-of-belan"&gt;Measurement of length of belan&lt;a class="headerlink" href="#measurement-of-length-of-belan" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;In order to measure the length of the belan, I placed the belan against a wall and the height was recorded on top of a painters tape (Fig &lt;a href="#fig:BelanLegth1" reference="fig:BelanLegth1" reference-type="ref"&gt;6&lt;/a&gt; ), next we use a tape measure to measure the distance from ground to this marking (Fig &lt;a href="#fig:BelanLegth2" reference="fig:BelanLegth2" reference-type="ref"&gt;7&lt;/a&gt;&amp;nbsp;).&lt;/p&gt;
+&lt;p&gt;The length of belan as measured using this procedure is 35.8 &lt;span class="math"&gt;\(\pm\)&lt;/span&gt;0.1 cm (least count of tape measure is 0.1&amp;nbsp;cm)&lt;/p&gt;
+&lt;p&gt;&lt;img alt='Measurement of length of belan[[fig:BelanLegth1]]{#fig:BelanLegth1 label="fig:BelanLegth1"}' id="fig:BelanLegth1" src="belan-images/belanHeght1.jpg" width="0.4\paperwidth"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt='Measurement of length of belan[[fig:BelanLegth2]]{#fig:BelanLegth2 label="fig:BelanLegth2"}' id="fig:BelanLegth2" src="belan-images/belanHeght2.jpg" width="0.4\paperwidth"/&gt;&lt;/p&gt;
+&lt;h3 id="measurement-of-distance-travelled-by-belan"&gt;Measurement of distance travelled by belan&lt;a class="headerlink" href="#measurement-of-distance-travelled-by-belan" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;The bench used for the experiment has total length as 172cm (fig &lt;a href="#fig:Belan Length" reference="fig:Belan Length" reference-type="ref"&gt;8&lt;/a&gt; ). However the belan can travel only part of the distance. On either side, the shape of the belan prevents it from starting at the very end (and reaching the lowest point) thus a tape has been put to keep track of the start and the end point of the belan. As seen from the Figure &lt;a href="#fig:Belan Length-left" reference="fig:Belan Length-left" reference-type="ref"&gt;10&lt;/a&gt; &lt;span class="amp"&gt;&amp;amp;&lt;/span&gt; &lt;a href="#fig:Belan Length-right" reference="fig:Belan Length-right" reference-type="ref"&gt;9&lt;/a&gt; , the total length the belan can traverse is (166 - 4.3) = 161.7 cm. The least count of the scale used here is 1mm. Therefore the total length the belan can traverse is 161.7&lt;span class="math"&gt;\(\pm\)&lt;/span&gt; 0.1&amp;nbsp;cm.&lt;/p&gt;
+&lt;p&gt;&lt;img alt='Measurement of distance travelled by belan[[fig:Belan Length]]{#fig:Belan Length label="fig:Belan Length"}' id="fig:Belan" length="Length" src="belan-images/measure_table_lenght.jpg" width="0.4\paperwidth"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt='Measurement of distance travelled by belan (right end)[[fig:Belan Length-right]]{#fig:Belan Length-right label="fig:Belan Length-right"}' id="fig:Belan" length-right="Length-right" src="belan-images/measure_right_lenght.jpg" width="0.4\paperwidth"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt='Measurement of distance travelled by belan (right end)[[fig:Belan Length-left]]{#fig:Belan Length-left label="fig:Belan Length-left"}' id="fig:Belan" length-left="Length-left" src="belan-images/measure_left_lenght.jpg" width="0.4\paperwidth"/&gt;&lt;/p&gt;
+&lt;h3 id="measurement-of-vertical-lift-at-one-end"&gt;Measurement of vertical lift at one end&lt;a class="headerlink" href="#measurement-of-vertical-lift-at-one-end" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;The selected bench for measurement has maximum flat length as 172 cm. We want to perform experiment at angles from 2 degree to 16 degree at an interval of 2. We can calculate the height required to be lifted at one end to reach the given set of angles as &lt;span class="math"&gt;\(L=172\sin\theta\)&lt;/span&gt;. This gives us the following table &lt;a href="#tab:Measurement-of-vertical" reference="tab:Measurement-of-vertical" reference-type="ref"&gt;1&lt;/a&gt;&amp;nbsp;.&lt;/p&gt;
+&lt;p&gt;::: {#tab:Measurement-of-vertical}
+  Angle(degree)   lift required (cm)   lift rounded to &lt;span class="caps"&gt;LC&lt;/span&gt; of scale&amp;nbsp;(cm)&lt;/p&gt;
+&lt;hr/&gt;
+&lt;dl&gt;
+&lt;dt&gt;2               6.003&amp;nbsp;6&lt;/dt&gt;
+&lt;dt&gt;  4               11.998&amp;nbsp;12&lt;/dt&gt;
+&lt;dt&gt;  6               17.979&amp;nbsp;18&lt;/dt&gt;
+&lt;dt&gt;  8               23.938&amp;nbsp;24&lt;/dt&gt;
+&lt;dt&gt;  10              29.867&amp;nbsp;30&lt;/dt&gt;
+&lt;dt&gt;  12              35.761&amp;nbsp;35.8&lt;/dt&gt;
+&lt;dt&gt;  14              41.611&amp;nbsp;41.6&lt;/dt&gt;
+&lt;dt&gt;  16              47.410&amp;nbsp;47.4&lt;/dt&gt;
+&lt;dd&gt;
+&lt;p&gt;Measurement of vertical lift at one end [[tab:Measurement-of-vertical]]{#tab:Measurement-of-vertical&amp;nbsp;label=&amp;rdquo;tab:Measurement-of-vertical&amp;rdquo;}&lt;/p&gt;
+&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;p&gt;:::&lt;/p&gt;
+&lt;p&gt;.&lt;/p&gt;
+&lt;p&gt;The Car Jack has been placed at the middle of one end of the bench (Fig&lt;a href="#fig:Jack balance" reference="fig:Jack balance" reference-type="ref"&gt;12&lt;/a&gt; ). For larger lengths (20cm onward) a set of wooden planks are added to increase the height (Fig &lt;a href="#fig:Jack wood" reference="fig:Jack wood" reference-type="ref"&gt;13&lt;/a&gt;). The bench can be lifted higher by rotating the shaft of the car jack until the required height is met (Fig ). Since the height can be measured to 0.1cm accuracy (&lt;span class="caps"&gt;LC&lt;/span&gt; of the scale used) this also translates into the accuracy for angle of the inclined plane. While measuring height care must be taken that the scale is perpendicular to ground and the height of the center of the bench leg is measured. One can use a flat card as a pointer and to avoid parallax. (Fig &lt;a href="#fig:Jack measure" reference="fig:Jack measure" reference-type="ref"&gt;11&lt;/a&gt;)&lt;/p&gt;
+&lt;p&gt;&lt;img alt='Measurement of vertical lift using scale and flat card.[[fig:Jack measure]]{#fig:Jack measure label="fig:Jack measure"}' id="fig:Jack" measure="measure" src="belan-images/measureJack.jpg" width="0.4\paperwidth"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt='Placement of Car jack such that the bench is lifted and balanced.[[fig:Jack balance]]{#fig:Jack balance label="fig:Jack balance"}' balance="balance" id="fig:Jack" src='\string"belan-images/jack on the bench\string".eps' width="0.4\paperwidth"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt='A set of wooden planks are added to increase the height.[[fig:Jack wood]]{#fig:Jack wood label="fig:Jack wood"}' id="fig:Jack" src="belan-images/jack+ane2.jpg" width="0.4\paperwidth" wood="wood"/&gt;&lt;/p&gt;
+&lt;h2 id="measurement-of-time-taken-to-roll-down_1"&gt;Measurement of time taken to roll down&lt;a class="headerlink" href="#measurement-of-time-taken-to-roll-down" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;In order to measure the time taken for the belan to roll down, video of the experiment was taken in a mobile phone. The video recorded was then processed frame by frame to find the number of frames between the starting and belan reaching the end. This analysis was done on a mobile app named &lt;strong&gt;&amp;ldquo;&lt;a href="https://play.google.com/store/apps/details?id=us.secondscount&amp;amp;hl=en_IN"&gt;Video Stopwatch&lt;/a&gt;&amp;rdquo;&lt;/strong&gt; (As seen in fig &lt;a href="#fig:Screeenshot" reference="fig:Screeenshot" reference-type="ref"&gt;14&lt;/a&gt; ) .The video recorded had a 30 &lt;span class="caps"&gt;FPS&lt;/span&gt; (frames per second) thus each frame lasts for 33.33 ms and this is our least count. This exercises was done 3 times and the average was&amp;nbsp;calculated.&lt;/p&gt;
+&lt;p&gt;&lt;img alt='Screenshot of the app[[fig:Screeenshot]]{#fig:Screeenshot label="fig:Screeenshot"}' id="fig:Screeenshot" src="belan-images/Screenshot.png" width="0.4\paperwidth"/&gt;&lt;/p&gt;
+&lt;p&gt;Angle(degree)   time (trial1) (in s)   time (trial2) (in s)   time (trial3) (in s)   Mean time (in s)   lift of bench&amp;nbsp;(cm)&lt;/p&gt;
+&lt;hr/&gt;
+&lt;dl&gt;
+&lt;dt&gt;2               3.5                    3.433                  3.433                  3.455&amp;nbsp;6&lt;/dt&gt;
+&lt;dt&gt;  4               2.567                  2.567                  2.567                  2.567&amp;nbsp;12&lt;/dt&gt;
+&lt;dt&gt;  6               2.067                  2.033                  2.033                  2.044&amp;nbsp;18&lt;/dt&gt;
+&lt;dt&gt;  8               1.733                  1.8                    1.767                  1.767&amp;nbsp;24&lt;/dt&gt;
+&lt;dt&gt;  10              1.633                  1.633                  1.633                  1.633&amp;nbsp;30&lt;/dt&gt;
+&lt;dt&gt;  12              1.467                  1.433                  1.433                  1.444&amp;nbsp;35.8&lt;/dt&gt;
+&lt;dt&gt;  14              1.3                    1.333                  1.333                  1.322&amp;nbsp;41.6&lt;/dt&gt;
+&lt;dt&gt;  16              1.267                  1.2                    1.267                  1.245&amp;nbsp;47.4&lt;/dt&gt;
+&lt;dd&gt;
+&lt;p&gt;Measurement of time taken to roll&amp;nbsp;down&lt;/p&gt;
+&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;p&gt;After these sets of measurement, a kitchen anti slip mat was added on top of the bench surface. The time taken to roll down is measured again for 6 degree and 8 degree. The time measured thus is 2.033 s and 1.733 s respectively. This is similar to the one without surface modification thus rolling time is independent of surface (which is also clear from the formula for t Eq: &lt;a href="#eq:time" reference="eq:time" reference-type="ref"&gt;[eq:time]&lt;/a&gt;).&lt;/p&gt;
+&lt;h2 id="measurement-of-weight-of-belan"&gt;Measurement of weight of belan&lt;a class="headerlink" href="#measurement-of-weight-of-belan" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;The weight of the belan was calculated using a kitchen weighing scale.The least count of the used measuring scale was 1g. It was found that the weight of the belan used in this experiment is 172 &lt;span class="math"&gt;\(\pm\)&lt;/span&gt;1&amp;nbsp;g.&lt;/p&gt;
+&lt;p&gt;&lt;img alt='Measurement of weight of belan[[fig:CircumMeasure-1-1]]{#fig:CircumMeasure-1-1 label="fig:CircumMeasure-1-1"}' id="fig:CircumMeasure-1-1" src="belan-images/BelanWeight.jpg" width="0.4\paperwidth"/&gt;&lt;/p&gt;
+&lt;h2 id="plots"&gt;Plots&lt;a class="headerlink" href="#plots" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Attached outside the report in the form of 2&amp;nbsp;images.&lt;/p&gt;
+&lt;h2 id="calculation-of-moment-of-inertia-of-the-belan"&gt;Calculation of moment of inertia of the belan&lt;a class="headerlink" href="#calculation-of-moment-of-inertia-of-the-belan" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;From eq &lt;a href="#eq:time" reference="eq:time" reference-type="ref"&gt;[eq:time]&lt;/a&gt; &lt;/p&gt;
+&lt;div class="math"&gt;$$t=\sqrt{\frac{2S(1+I/mR^{2})}{g\sin\theta}}$$&lt;/div&gt;
+&lt;p&gt;so &lt;/p&gt;
+&lt;div class="math"&gt;$$I=mR^{2}(\frac{t^{2}g\sin\theta}{2S}-1)$$&lt;/div&gt;
+&lt;p&gt;let us take R as the weighted mean of &lt;span class="math"&gt;\(R_{1}\)&lt;/span&gt; and&lt;span class="math"&gt;\(R_{2}\)&lt;/span&gt;. The weights can be chosen (assumed) as the fraction of total length that &lt;span class="math"&gt;\(R_{i}\)&lt;/span&gt; appears in the cylinder. The fraction of length with &lt;span class="math"&gt;\(R_{1}\)&lt;/span&gt; is 17/35.8 and that for &lt;span class="math"&gt;\(R_{2}\)&lt;/span&gt; is&amp;nbsp;18.8/35.8.&lt;/p&gt;
+&lt;p&gt;Thus R using these weights become &lt;span class="math"&gt;\(\frac{aR_{1}+bR_{2}}{a+b}=1.28\pm(0.01+0.02)=1.28\pm0.03\)&lt;/span&gt;cm.&lt;/p&gt;
+&lt;p&gt;Using theses values and the vales from 2 degree angle data, and g=9.81m&lt;span class="math"&gt;\(/s^{2}\)&lt;/span&gt; we calculate I as 0.0000074312 Kg&lt;span class="math"&gt;\(m^{2}\)&lt;/span&gt; = 74.312 g&lt;span class="math"&gt;\(cm^{2}\)&lt;/span&gt;&lt;/p&gt;
+&lt;div class="math"&gt;$$\frac{\Delta I}{I}=\frac{\Delta m}{m}+2\frac{\Delta R}{R}+2\frac{\Delta t}{t}+cos\theta\Delta\theta+\frac{\Delta S}{S}$$&lt;/div&gt;
+&lt;p&gt; calculating these with the previously mentioned error&amp;nbsp;fractions,&lt;/p&gt;
+&lt;div class="math"&gt;$$\frac{\Delta I}{I}=0.073410$$&lt;/div&gt;
+&lt;div class="math"&gt;$$\Delta I=0.00000054552Kgm^{2}=5.45gcm^{2}$$&lt;/div&gt;
+&lt;p&gt;Therefore I = 74.312 &lt;span class="math"&gt;\(\pm5.45gcm^{2}\)&lt;/span&gt;.&lt;/p&gt;
+&lt;h2 id="calculation-of-coefficient-of-friction"&gt;Calculation of coefficient of friction&lt;a class="headerlink" href="#calculation-of-coefficient-of-friction" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;In the limiting case where frictional force can no longer support rolling of the cylinder, thus the cylinder begins to slip. In my case the &lt;span class="math"&gt;\(\theta max\)&lt;/span&gt;was found to be 55 degree. Using eq&lt;a href="#eq:mu" reference="eq:mu" reference-type="ref"&gt;[eq:mu]&lt;/a&gt; &lt;/p&gt;
+&lt;div class="math"&gt;$$\mu=\frac{I\tan\theta_{max}}{mR^{2}+I}$$&lt;/div&gt;
+&lt;p&gt;we get &lt;span class="math"&gt;\(\mu=0.298\sim0.3\)&lt;/span&gt;&lt;/p&gt;
+&lt;div class="math"&gt;$$\frac{\Delta\mu}{\mu}=\frac{\Delta I}{I}+2\frac{\Delta R}{R}+\frac{\Delta m}{m}+cot\theta\Delta\theta$$&lt;/div&gt;
+&lt;div class="math"&gt;$$\frac{\Delta\mu}{\mu}=0.15473$$&lt;/div&gt;
+&lt;p&gt;Therefore &lt;span class="math"&gt;\(\Delta\mu=0.046,\)&lt;/span&gt;thus &lt;span class="math"&gt;\(\mu=0.298\pm0.046\)&lt;/span&gt;&lt;/p&gt;
+&lt;h1 id="results-conclusion_1"&gt;Results &lt;span class="amp"&gt;&amp;amp;&lt;/span&gt; Conclusion&lt;a class="headerlink" href="#results-conclusion" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;The moment of inertia of belan is found to be 74.312 &lt;span class="math"&gt;\(\pm5.45gcm^{2}\)&lt;/span&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;The relation ship between rolling time and the inclination angle is &lt;span class="math"&gt;\(t=\sqrt{\frac{2S(1+I/mR^{2})}{g\sin\theta}}\)&lt;/span&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;The coefficient of friction of the surface is found to be &lt;span class="math"&gt;\(\mu=0.298\pm0.046\)&lt;/span&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;The rolling time is independent of surface friction (as long as &lt;span class="math"&gt;\(f_{s}&amp;gt;mg\sin\theta\)&lt;/span&gt;).&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Note : The above article is part of the report generated for regional &lt;span class="caps"&gt;NAEST&lt;/span&gt;&amp;nbsp;Prelims.&lt;/p&gt;
+&lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width &lt; 768) ? "left" : align;
+        indent = (screen.width &lt; 768) ? "0em" : indent;
+        linebreak = (screen.width &lt; 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_CHTML';
+
+    var configscript = document.createElement('script');
+    configscript.type = 'text/x-mathjax-config';
+    configscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'none' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        availableFonts: ['STIX', 'TeX']," +
+        "        preferredFont: 'STIX'," +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+&lt;/script&gt;</content><category term="Science"></category><category term="belan"></category><category term="measurement"></category><category term="errors"></category></entry><entry><title>Producing Beamer slide shows from markdown using Pandoc</title><link href="/beamer-slides-using-markdown-and-pandoc" rel="alternate"></link><published>2020-06-06T00:00:00+05:30</published><updated>2020-06-20T00:00:00+05:30</updated><author><name>Ashwin Kumar K</name></author><id>tag:None,2020-06-06:/beamer-slides-using-markdown-and-pandoc</id><summary type="html">&lt;p&gt;Short note on bueatiful Producing Beamer slide shows from markdown using&amp;nbsp;Pandoc&lt;/p&gt;</summary><content type="html">&lt;h1 id="producing-slide-shows-with-pandoc"&gt;Producing slide shows with pandoc&lt;a class="headerlink" href="#producing-slide-shows-with-pandoc" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h1&gt;
 &lt;p&gt;Pandoc is a Haskell library for converting from one markup format to another, and a command-line tool that uses this&amp;nbsp;library.&lt;/p&gt;
 &lt;p&gt;You can use pandoc to produce an &lt;span class="caps"&gt;HTML&lt;/span&gt; + JavaScript slide presentation that can be viewed via a web browser. There are five ways to do this, using &lt;a href="https://meyerweb.com/eric/tools/s5/"&gt;S5&lt;/a&gt;, &lt;a href="http://paulrouget.com/dzslides/"&gt;DZSlides&lt;/a&gt;, &lt;a href="https://www.w3.org/Talks/Tools/Slidy2/"&gt;Slidy&lt;/a&gt;, &lt;a href="https://goessner.net/articles/slideous/"&gt;Slideous&lt;/a&gt;, or &lt;a href="https://revealjs.com/"&gt;reveal.js&lt;/a&gt;. You can also produce a &lt;span class="caps"&gt;PDF&lt;/span&gt; slide show using LaTeX &lt;a href="https://ctan.org/pkg/beamer"&gt;&lt;code&gt;beamer&lt;/code&gt;&lt;/a&gt;, or slides shows in Microsoft &lt;a href="https://en.wikipedia.org/wiki/Microsoft_PowerPoint"&gt;PowerPoint&lt;/a&gt;&amp;nbsp;format.&lt;/p&gt;
 &lt;p&gt;Here&amp;rsquo;s the Markdown source for a simple slide show, &lt;code&gt;Demo.md&lt;/code&gt;:&lt;/p&gt;
@@ -17,28 +263,28 @@ date:
 
 
 
-&lt;span class="gh"&gt;#&lt;/span&gt; What's AI?
+&lt;span class="gh"&gt;# What's AI?&lt;/span&gt;
 
 &lt;span class="k"&gt;-&lt;/span&gt; Artificial Intelligence- The ability of machine to think and behave like humans.
 &lt;span class="k"&gt;-&lt;/span&gt; How does the machine learn on its own? - That is called Machine Learning. ML is the study of computer algorithms that improve automatically with experience.
 &lt;span class="k"&gt;-&lt;/span&gt; Just like humans learn with experience - Machines also learn with experience!
 &lt;span class="k"&gt;-&lt;/span&gt; Examples of common AI? Alexa, Siri, Google Home, Self Driving Cars, Robots etc.
 
-&lt;span class="gh"&gt;#&lt;/span&gt; What's out there?
+&lt;span class="gh"&gt;# What's out there?&lt;/span&gt;
 
 ![&lt;span class="nt"&gt;Verticles&lt;/span&gt;](&lt;span class="na"&gt;img/Untitled.png&lt;/span&gt;)
 
 
-&lt;span class="gh"&gt;#&lt;/span&gt; How do computers make decisions?
+&lt;span class="gh"&gt;# How do computers make decisions?&lt;/span&gt;
 
 &lt;span class="k"&gt;-&lt;/span&gt; Conditional statements are used to perform different actions based on different conditions.
 &lt;span class="k"&gt;-&lt;/span&gt; In many programming languages, decisions (also called conditionals) take the form of an if-then construct. They start with a condition, which is then evaluated as either True or False.
 
-&lt;span class="gh"&gt;#&lt;/span&gt; How do computers make decisions?
+&lt;span class="gh"&gt;# How do computers make decisions?&lt;/span&gt;
 
 ![&lt;span class="nt"&gt;Flow chart&lt;/span&gt;](&lt;span class="na"&gt;img/Untitled 1.png&lt;/span&gt;){ width=250px }
 
-&lt;span class="gh"&gt;#&lt;/span&gt; Let's Build that
+&lt;span class="gh"&gt;# Let's Build that&lt;/span&gt;
 
 ​```jsx
 Bot.send("Are you going out to play?")
@@ -55,20 +301,20 @@ async function respond(inputText){
 
 What we learned. - Bot.send() method - if else statements.
 
-&lt;span class="gh"&gt;#&lt;/span&gt; Build a basic greetings bot
+&lt;span class="gh"&gt;# Build a basic greetings bot&lt;/span&gt;
 
 ![&lt;span class="nt"&gt;Flow chart&lt;/span&gt;](&lt;span class="na"&gt;img/Untitled 2.png&lt;/span&gt;)
 
 
 
-&lt;span class="gh"&gt;#&lt;/span&gt; Benefits of AI Playground
+&lt;span class="gh"&gt;# Benefits of AI Playground&lt;/span&gt;
 
 &lt;span class="k"&gt;-&lt;/span&gt; Streamlines a lot of back end operations, so that the you can just learn what AI is &amp;mdash; and can get immediate results!
 &lt;span class="k"&gt;-&lt;/span&gt; User friendly!
 &lt;span class="k"&gt;-&lt;/span&gt; Designed to suit students needs.
 &lt;span class="k"&gt;-&lt;/span&gt; Students can see and publish new projects and thus learn from each other.
 
-&lt;span class="gu"&gt;##&lt;/span&gt; How does learning AI help?
+&lt;span class="gu"&gt;## How does learning AI help?&lt;/span&gt;
 
 &lt;span class="k"&gt;-&lt;/span&gt; Logical reasoning and Sequencing 
 &lt;span class="k"&gt;-&lt;/span&gt; Critical thinking
@@ -76,7 +322,7 @@ What we learned. - Bot.send() method - if else statements.
 &lt;span class="k"&gt;-&lt;/span&gt; Mental Mathematics
     &lt;span class="k"&gt;-&lt;/span&gt; The above skills are implicit skills that students learn along with AI. And this helps them in academics, life, etc.
 
-&lt;span class="gh"&gt;#&lt;/span&gt; Extra 
+&lt;span class="gh"&gt;# Extra &lt;/span&gt;
 
 The well known Pythagorean theorem $x^2 + y^2 = z^2$ was  proved to be invalid for other exponents. 
 Meaning the next equation has no integer solutions:
