@@ -12,7 +12,9 @@ Pandoc is a Haskell library for converting from one markup format to another, an
 
 You can use pandoc to produce an HTML + JavaScript slide presentation that can be viewed via a web browser. There are five ways to do this, using [S5](https://meyerweb.com/eric/tools/s5/), [DZSlides](http://paulrouget.com/dzslides/), [Slidy](https://www.w3.org/Talks/Tools/Slidy2/), [Slideous](https://goessner.net/articles/slideous/), or [reveal.js](https://revealjs.com/). You can also produce a PDF slide show using LaTeX [`beamer`](https://ctan.org/pkg/beamer), or slides shows in Microsoft [PowerPoint](https://en.wikipedia.org/wiki/Microsoft_PowerPoint) format.
 
-Here’s the Markdown source for a simple slide show, `Demo.md`:
+This article mainly covers generating slides in LaTeX [`beamer`](https://ctan.org/pkg/beamer)  format, which is what is used extensively in academia. 
+
+If you are not familiar with markdown, you can take a look at the following markdown source for a simple beamer slide show, `Demo.md`:
 
 ```md
 ---
@@ -99,11 +101,13 @@ Can AI, help find near misses for this equation?
 ```
 The slides generated from this markdown can bee seen [here](https://ashwinschronicles.github.io/pdfs/Demo.pdf)
 
-You can create a slide show broken up into sections by using the # and ## heading tags (you can also create a new slide without a header using a horizontal rule (---). You can also insert latex equations by going to math mode (Insert the equation in $ $ )
+When you compare the source and the resulting pdf that it generates, you notice the general rules that a markdown document follows.
 
-To produce an HTML/JavaScript slide show, simply type
+For instance, you can create a slide show broken up into sections (slides) by using the # tag and you can use ##  tags for sub heading. You can also create a new slide without a header using a horizontal rule (---). You can insert latex equations by going to math mode (Insert the equation in $ $ )
 
-```
+To produce an HTML/JavaScript slide show, simply run the following command in your favourite terminal:
+
+```shell
 pandoc -t FORMAT -s Demo.txt -o Demo.html
 ```
 
@@ -113,7 +117,7 @@ where `FORMAT` is either `s5`, `slidy`, `slideous`, `dzslides`, or `revealjs`.
 
 To produce a PDF slide show using  LaTeX [`beamer`](https://ctan.org/pkg/beamer),  type
 
-```
+```shell
 pandoc -t beamer Demo.txt -o Demo.pdf
 ```
 
@@ -121,9 +125,11 @@ Note that a reveal.js slide show can also be converted to a PDF by printing it t
 
 To produce a Powerpoint slide show, type
 
-```
+```shell
 pandoc Demo.txt -o Demo.pptx
 ```
+
+You get the idea.
 
 ## Structuring the slide show
 
@@ -151,7 +157,7 @@ By default, these writers produces lists that display "all at once". If you want
 
 ```
 
-In this way incremental and nonincremental lists can be mixed in a
+In this way incremental and non-incremental lists can be mixed in a
 single document.
 
 
