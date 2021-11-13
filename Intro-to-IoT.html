@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="https://ashwinschronicles.github.io/theme/css/style.min.css?fc5adb95">
+<link rel="stylesheet" href="https://ashwinschronicles.github.io/theme/css/style.min.css?2fcac227">
 
         <link rel="dns-prefetch" href="//fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
@@ -44,6 +44,7 @@
         <link rel="apple-touch-icon" sizes="152x152" href="https://ashwinschronicles.github.io/theme/images/apple-touch-icon-152x152.png" type="image/png" />
         <link rel="apple-touch-icon" sizes="152x152" href="https://ashwinschronicles.github.io/theme/images/apple-touch-icon-180x180.png" type="image/png" />
         <link href="https://ashwinschronicles.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Ashwin&#39;s Chronicles - Full Atom Feed" />
+
 <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -106,82 +107,94 @@
     <div class="span2 table-of-content">
         <nav>
         <h4>Contents</h4>
-        <div id="toc"><ul><li><a class="toc-href" href="#" title="A beginers IoT&nbsp;Project.">A beginers IoT&nbsp;Project.</a><ul><li><a class="toc-href" href="#outline" title="Outline:&para;">Outline:&para;</a></li><li><a class="toc-href" href="#materials" title="Materials:&para;">Materials:&para;</a></li><li><a class="toc-href" href="#installing-nodemcu-board-package-in-arduino-ide" title="Installing NodeMCU Board Package in Arduino IDE:&para;">Installing NodeMCU Board Package in Arduino IDE:&para;</a></li><li><a class="toc-href" href="#pin-connections" title="Pin Connections:&para;">Pin Connections:&para;</a></li><li><a class="toc-href" href="#coding-part" title="Coding Part&para;">Coding Part&para;</a></li><li><a class="toc-href" href="#finale-testing" title="Finale testing:&para;">Finale testing:&para;</a></li><li><a class="toc-href" href="#final-connections" title="Final Connections:&para;">Final Connections:&para;</a></li><li><a class="toc-href" href="#whats-next" title="Whats next?&para;">Whats next?&para;</a></li></ul></li></ul></div>
+        <div class="toc">
+<ul>
+<li><a href="#outline">Outline:</a></li>
+<li><a href="#materials">Materials:</a></li>
+<li><a href="#installing-nodemcu-board-package-in-arduino-ide">Installing NodeMCU Board Package in Arduino <span class="caps">IDE</span>:</a></li>
+<li><a href="#pin-connections">Pin Connections:</a></li>
+<li><a href="#coding-part">Coding Part</a></li>
+<li><a href="#finale-testing">Finale testing:</a></li>
+<li><a href="#final-connections">Final Connections:</a></li>
+<li><a href="#whats-next">Whats next?</a></li>
+</ul>
+</div>
         </nav>
     </div>
     <div class="span8 article-content">
             
-            <p>In this post, we&rsquo;ll be making a simple IoT project. Web page controlled <span class="caps">LED</span> strip using NodeMCU connected on a local&nbsp;network.</p>
-<h2 id="outline">Outline:<a class="headerlink" href="#outline" title="Permanent link">&para;</a></h2>
-<p>Web page controlled <span class="caps">LED</span> strip is like the &ldquo;Hello world&rdquo; of IoT. In this post I will be detailing on the procedure I followed to set it up. The schematic of the project will be as&nbsp;follows:</p>
+            
+<p>In this post, we’ll be making a simple IoT project. Web page controlled <span class="caps">LED</span> strip using NodeMCU connected on a local network.</p>
+<h2 id="outline">Outline:<a class="headerlink" href="#outline" title="Permanent link">¶</a></h2>
+<p>Web page controlled <span class="caps">LED</span> strip is like the “Hello world” of IoT. In this post I will be detailing on the procedure I followed to set it up. The schematic of the project will be as follows:</p>
 <p><img alt="Schematic" src=".././images/IoT_1_schematic.webp"/></p>
-<p>So when we click a button on a web browser we can turn the led strip on or off using a relay which we control using the <span class="caps">ESP8266</span>&nbsp;board.</p>
-<h2 id="materials">Materials:<a class="headerlink" href="#materials" title="Permanent link">&para;</a></h2>
+<p>So when we click a button on a web browser we can turn the led strip on or off using a relay which we control using the <span class="caps">ESP8266</span> board.</p>
+<h2 id="materials">Materials:<a class="headerlink" href="#materials" title="Permanent link">¶</a></h2>
 <ul>
 <li>NodeMCU</li>
 </ul>
 <p><img alt="nodemcu" src=".././images/IoT_2_nodemcu.jpeg" style="zoom: 33%;"/></p>
 <ul>
-<li>5v&nbsp;Relay</li>
+<li>5v Relay</li>
 </ul>
 <p><img alt="relay" src=".././images/IoT_3_relay.jpeg" style="zoom: 50%;"/></p>
 <ul>
-<li><span class="caps">LED</span>&nbsp;strip</li>
-<li><span class="caps">LED</span> strip power supply (any generic 12V power&nbsp;supply)</li>
+<li><span class="caps">LED</span> strip</li>
+<li><span class="caps">LED</span> strip power supply (any generic 12V power supply)</li>
 </ul>
 <p><img alt="powersupply" src=".././images/IoT_4_powersupply.jpeg" style="zoom:33%;"/></p>
-<h2 id="installing-nodemcu-board-package-in-arduino-ide">Installing NodeMCU Board Package in Arduino <span class="caps">IDE</span>:<a class="headerlink" href="#installing-nodemcu-board-package-in-arduino-ide" title="Permanent link">&para;</a></h2>
+<h2 id="installing-nodemcu-board-package-in-arduino-ide">Installing NodeMCU Board Package in Arduino <span class="caps">IDE</span>:<a class="headerlink" href="#installing-nodemcu-board-package-in-arduino-ide" title="Permanent link">¶</a></h2>
 <ul>
-<li>Open up Arduino <span class="caps">IDE</span>. Go to Files-&gt; Preferences. Enter <code>http://arduino.esp8266.com/stable/package_esp8266com_index.json</code> into Additional Board Manager URLs&nbsp;field.</li>
+<li>Open up Arduino <span class="caps">IDE</span>. Go to Files-&gt; Preferences. Enter <code>http://arduino.esp8266.com/stable/package_esp8266com_index.json</code> into Additional Board Manager URLs field.</li>
 </ul>
 <p><img alt="IoT_5_preference" src="../images/IoT_5_preference.webp"/></p>
 <ul>
-<li>Now go to Tools-&gt;Boards-&gt;Board Manager, and search for <span class="caps">ESP8266</span> and install the&nbsp;package.</li>
+<li>Now go to Tools-&gt;Boards-&gt;Board Manager, and search for <span class="caps">ESP8266</span> and install the package.</li>
 </ul>
 <p><img alt="IoT_6_board" src="../images/IoT_6_board.webp"/></p>
 <ul>
-<li>If you have the same board as me (NodeMCU Amica) then you will have to install drivers for <span class="caps">CP2102</span> (<span class="caps">USB</span> to Serial&nbsp;Converter)</li>
+<li>If you have the same board as me (NodeMCU Amica) then you will have to install drivers for <span class="caps">CP2102</span> (<span class="caps">USB</span> to Serial Converter)</li>
 </ul>
 <p><code>[Note: some board come with CH340G chip in which case you dont need to follow this step.]</code></p>
-<p>Download drivers from <a href="https://www.silabs.com/products/mcu/Pages/USBtoUARTBridgeVCPDrivers.aspx">here </a>and install it. Connect the nodeMCU to your computer and install the downloaded drives when your system prompts to install the drivers for the newly connected <span class="caps">USB</span> device.Go to the device manager of your computer and note down the <span class="caps">COM</span> port allocated to the newly connected <span class="caps">USB</span>&nbsp;device.</p>
+<p>Download drivers from <a href="https://www.silabs.com/products/mcu/Pages/USBtoUARTBridgeVCPDrivers.aspx">here </a>and install it. Connect the nodeMCU to your computer and install the downloaded drives when your system prompts to install the drivers for the newly connected <span class="caps">USB</span> device.Go to the device manager of your computer and note down the <span class="caps">COM</span> port allocated to the newly connected <span class="caps">USB</span> device.</p>
 <p><img alt="IoT_7_deveicemanager" src="../images/IoT_7_deveicemanager.webp"/></p>
-<h2 id="pin-connections">Pin Connections:<a class="headerlink" href="#pin-connections" title="Permanent link">&para;</a></h2>
+<h2 id="pin-connections">Pin Connections:<a class="headerlink" href="#pin-connections" title="Permanent link">¶</a></h2>
 <p>Connect <strong>NodeMCU</strong> Ground (<strong><span class="caps">GND</span></strong>) pin to <strong>-ve</strong> pin of <strong>Relay</strong>.</p>
 <p>Connect <strong>NodeMCU</strong> Supply (<strong>Vin)</strong> pin to <strong>+ve</strong> pin of <strong>Relay</strong>.</p>
 <p>Connect <strong>NodeMCU</strong> Digital pin (<strong>D0</strong>) to <strong>Input</strong> pin of <strong>Relay</strong>.</p>
-<h2 id="coding-part">Coding Part<a class="headerlink" href="#coding-part" title="Permanent link">&para;</a></h2>
-<p>The code for the nodeMCU that I have uploaded is <a href="https://raw.githubusercontent.com/iamashwin26/Projs/master/Introduction to IoT/Source_code_hello_IoT.ino">here</a> . Replace the&nbsp;line</p>
-<div class="highlight"><pre><span></span><code><span class="err">WiFi.softAP("Hello_IoT", "ashwins12345678");</span>
+<h2 id="coding-part">Coding Part<a class="headerlink" href="#coding-part" title="Permanent link">¶</a></h2>
+<p>The code for the nodeMCU that I have uploaded is <a href="https://raw.githubusercontent.com/iamashwin26/Projs/master/Introduction to IoT/Source_code_hello_IoT.ino">here</a> . Replace the line</p>
+<div class="highlight"><pre><span></span><code>WiFi.softAP("Hello_IoT", "ashwins12345678");
 </code></pre></div>
-<p>with whatever <span class="caps">SSID</span> and password you want to&nbsp;put.</p>
-<div class="highlight"><pre><span></span><code><span class="err">NOTE. This sketch uses WiFi.softAP instead of the commonly used WiFi.begin, the reason is that when I use WiFi.begin() I can't find the SSID when I do WiFi scan, however, the SSID I do see is of the previous sketch where I used WiFi.softAP(). If you encounter the same problem while using WiFi.begin then using my code should fix it.</span>
+<p>with whatever <span class="caps">SSID</span> and password you want to put.</p>
+<div class="highlight"><pre><span></span><code><span class="nv">NOTE</span>. <span class="nv">This</span> <span class="nv">sketch</span> <span class="nv">uses</span> <span class="nv">WiFi</span>.<span class="nv">softAP</span> <span class="nv">instead</span> <span class="nv">of</span> <span class="nv">the</span> <span class="nv">commonly</span> <span class="nv">used</span> <span class="nv">WiFi</span>.<span class="nv">begin</span>, <span class="nv">the</span> <span class="nv">reason</span> <span class="nv">is</span> <span class="nv">that</span> <span class="nv">when</span> <span class="nv">I</span> <span class="nv">use</span> <span class="nv">WiFi</span>.<span class="nv">begin</span><span class="ss">()</span> <span class="nv">I</span> <span class="nv">can</span><span class="s1">'</span><span class="s">t find the SSID when I do WiFi scan, however, the SSID I do see is of the previous sketch where I used WiFi.softAP(). If you encounter the same problem while using WiFi.begin then using my code should fix it.</span>
 </code></pre></div>
 <p>When u have successfully built your connection and the code, you have to upload the code into the NodeMCU by using a micro <span class="caps">USB</span>.</p>
-<p>Now, go to Tools &gt; Board &gt; <span class="caps">ESP8266</span> Modules and you can see many options for <span class="caps">ESP8266</span>. Select &ldquo;NodeMCU 1.0 (<span class="caps">ESP</span>-12E Module). Next, select your port ( the same one you saw in the device manager previously ). If you cant recognize your port, go to the Control Panel &gt; System &gt; Device Manager &gt; Port and update your <span class="caps">USB</span>&nbsp;driver.</p>
-<p>Now upload the code to the&nbsp;board.</p>
+<p>Now, go to Tools &gt; Board &gt; <span class="caps">ESP8266</span> Modules and you can see many options for <span class="caps">ESP8266</span>. Select “NodeMCU 1.0 (<span class="caps">ESP</span>-12E Module). Next, select your port ( the same one you saw in the device manager previously ). If you cant recognize your port, go to the Control Panel &gt; System &gt; Device Manager &gt; Port and update your <span class="caps">USB</span> driver.</p>
+<p>Now upload the code to the board.</p>
 <p><img alt="IoT_8_upload" src="../images/IoT_8_upload.webp"/></p>
-<h2 id="finale-testing">Finale testing:<a class="headerlink" href="#finale-testing" title="Permanent link">&para;</a></h2>
+<h2 id="finale-testing">Finale testing:<a class="headerlink" href="#finale-testing" title="Permanent link">¶</a></h2>
 <ul>
 <li>Now open up your Serial Monitor, and note down the <span class="caps">URL</span>.</li>
 </ul>
 <p><img alt="IoT_9_serialmonitor" src="../images/IoT_9_serialmonitor.webp"/></p>
 <ul>
-<li>Now put the <span class="caps">URL</span> in your phone&rsquo;s browser( it usually defaults to&nbsp;192.168.4.1).</li>
+<li>Now put the <span class="caps">URL</span> in your phone’s browser( it usually defaults to 192.168.4.1).</li>
 <li>A page will open having two buttons <span class="caps">ON</span> and <span class="caps">OFF</span>.</li>
 </ul>
 <p><img alt="IoT_10_broser" src="../images/IoT_10_broser.jpeg" style="zoom:67%;"/></p>
 <ul>
-<li>If everything is correct when you press <span class="caps">ON</span> the <span class="caps">LED</span> will light up and when you press <span class="caps">OFF</span> the <span class="caps">LED</span> will turn&nbsp;off.</li>
+<li>If everything is correct when you press <span class="caps">ON</span> the <span class="caps">LED</span> will light up and when you press <span class="caps">OFF</span> the <span class="caps">LED</span> will turn off.</li>
 </ul>
 <p><img alt="IoT_11_test1" src="../images/IoT_11_test1.gif"/></p>
 <p><img alt="IoT_12_test2" src="../images/IoT_12_test2.gif"/></p>
-<h2 id="final-connections">Final Connections:<a class="headerlink" href="#final-connections" title="Permanent link">&para;</a></h2>
-<p>Now that we know our code and setup works let&rsquo;s connect the relay to the led strip power source as shown in the figure in the outline&nbsp;section.</p>
+<h2 id="final-connections">Final Connections:<a class="headerlink" href="#final-connections" title="Permanent link">¶</a></h2>
+<p>Now that we know our code and setup works let’s connect the relay to the led strip power source as shown in the figure in the outline section.</p>
 <p><img alt="IoT_13_test3" src="../images/IoT_13_test3.gif"/></p>
 <p><img alt="IoT_14_tes5" src="../images/IoT_14_tes5.gif"/></p>
-<p>Vola! there&rsquo;s our first&nbsp;project!</p>
-<h2 id="whats-next">Whats next?<a class="headerlink" href="#whats-next" title="Permanent link">&para;</a></h2>
-<p>We can add more feature to the project such as making it connect to a wifi router so that you can access the <span class="caps">LED</span> strip from anywhere in the world. We can convert this project to use the barebone <span class="caps">ESP8266</span> and <span class="caps">FTDI</span> programmer. We can use the power supply of the <span class="caps">LED</span> strip to power the <span class="caps">ESP8266</span> (Not recommended since most <span class="caps">LED</span> power supply have high <span class="caps">AC</span> noise as I found out in my case and hence can damage the <span class="caps">ESP8266</span> board).Add more devices for the <span class="caps">ESP</span> to control and much much more! All&nbsp;that</p>
+<p>Vola! there’s our first project!</p>
+<h2 id="whats-next">Whats next?<a class="headerlink" href="#whats-next" title="Permanent link">¶</a></h2>
+<p>We can add more feature to the project such as making it connect to a wifi router so that you can access the <span class="caps">LED</span> strip from anywhere in the world. We can convert this project to use the barebone <span class="caps">ESP8266</span> and <span class="caps">FTDI</span> programmer. We can use the power supply of the <span class="caps">LED</span> strip to power the <span class="caps">ESP8266</span> (Not recommended since most <span class="caps">LED</span> power supply have high <span class="caps">AC</span> noise as I found out in my case and hence can damage the <span class="caps">ESP8266</span> board).Add more devices for the <span class="caps">ESP</span> to control and much much more! All that</p>
 
 
              
@@ -251,7 +264,7 @@
             <nav>
             <ul class="articles-timeline">
                 <li class="previous-article">« <a href="https://ashwinschronicles.github.io/arduino-labview-review" title="Previous: Interfacing Arduino Mega using LabVIEW">Interfacing Arduino Mega using LabVIEW</a></li>
-                <li class="next-article"><a href="https://ashwinschronicles.github.io/gh-pages-with-pelican" title="Next: Make a Github Pages blog with Pelican">Make a Github Pages blog with Pelican</a> »</li>
+                <li class="next-article"><a href="https://ashwinschronicles.github.io/qhe" title="Next: Quantum Hall Effect and related phenomena">Quantum Hall Effect and related phenomena</a> »</li>
             </ul>
             </nav>
             </aside>

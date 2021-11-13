@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="https://ashwinschronicles.github.io/theme/css/style.min.css?fc5adb95">
+<link rel="stylesheet" href="https://ashwinschronicles.github.io/theme/css/style.min.css?2fcac227">
 
         <link rel="dns-prefetch" href="//fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
@@ -45,6 +45,7 @@
         <link rel="apple-touch-icon" sizes="152x152" href="https://ashwinschronicles.github.io/theme/images/apple-touch-icon-152x152.png" type="image/png" />
         <link rel="apple-touch-icon" sizes="152x152" href="https://ashwinschronicles.github.io/theme/images/apple-touch-icon-180x180.png" type="image/png" />
         <link href="https://ashwinschronicles.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Ashwin&#39;s Chronicles - Full Atom Feed" />
+
 <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -110,596 +111,671 @@
     <div class="span2 table-of-content">
         <nav>
         <h4>Contents</h4>
-        <div id="toc"><ul><li><a class="toc-href" href="#" title="Battery Management  System for an xEV - Part&nbsp;1">Battery Management  System for an xEV - Part&nbsp;1</a><ul><li><a class="toc-href" href="#basic-terminologies" title="Basic terminologies&para;">Basic terminologies&para;</a></li><li><a class="toc-href" href="#what-must-a-bms-do" title="What must a BMS do?&para;">What must a BMS do?&para;</a></li><li><a class="toc-href" href="#basic-working-of-an-electrochemical-cell" title="Basic working of an electrochemical cell&para;">Basic working of an electrochemical cell&para;</a><ul><li><a class="toc-href" href="#the-function-of-the-negative-electrode" title="The function of the negative electrode&para;">The function of the negative electrode&para;</a></li><li><a class="toc-href" href="#the-function-of-the-positive-electrode" title="The function of the positive electrode&para;">The function of the positive electrode&para;</a></li></ul></li><li><a class="toc-href" href="#li-ion-working-the-process-of-intercalation_1" title="Li-ion working (The process of intercalation)&para;">Li-ion working (The process of intercalation)&para;</a></li><li><a class="toc-href" href="#negative-electrodes-for-lithium-ion-cells" title="Negative electrodes for lithium-ion cells&para;">Negative electrodes for lithium-ion cells&para;</a></li><li><a class="toc-href" href="#alternate-negative-electrode-material-lto" title="Alternate negative-electrode material LTO&para;">Alternate negative-electrode material LTO&para;</a></li><li><a class="toc-href" href="#future-negative-electrode-material-silicon" title="Future negative-electrode material silicon&para;">Future negative-electrode material silicon&para;</a></li><li><a class="toc-href" href="#positive-electrodes-for-lithium-ion-cells" title="Positive electrodes for lithium-ion cells&para;">Positive electrodes for lithium-ion cells&para;</a><ul><li><a class="toc-href" href="#lithium-cobalt-oxide-lco" title="Lithium cobalt oxide (LCO)&para;">Lithium cobalt oxide (LCO)&para;</a></li><li><a class="toc-href" href="#spinel-cathodes" title="Spinel cathodes&para;">Spinel cathodes&para;</a></li><li><a class="toc-href" href="#olivine-cathodes" title="Olivine cathodes&para;">Olivine cathodes&para;</a></li><li><a class="toc-href" href="#in-summary" title="In summary&para;">In summary&para;</a></li></ul></li><li><a class="toc-href" href="#what-are-the-primary-functions-of-a-bms_1" title="What are the primary functions of a BMS?&para;">What are the primary functions of a BMS?&para;</a><ul><li><a class="toc-href" href="#1-sensing-and-high-voltage-control" title="1. Sensing and high-voltage control&para;">1. Sensing and high-voltage control&para;</a></li><li><a class="toc-href" href="#2-protection-against" title="2. Protection against&para;">2. Protection against&para;</a></li><li><a class="toc-href" href="#3-interface" title="3. Interface&para;">3. Interface&para;</a></li><li><a class="toc-href" href="#4-performance-management" title="4. Performance management&para;">4. Performance management&para;</a></li><li><a class="toc-href" href="#5-diagnostics" title="5. Diagnostics&para;">5. Diagnostics&para;</a></li></ul></li><li><a class="toc-href" href="#the-issue-of-cost_1" title="The issue of cost&para;">The issue of cost&para;</a></li><li><a class="toc-href" href="#modular-design-of-bms" title="Modular design of BMS&para;">Modular design of BMS&para;</a></li><li><a class="toc-href" href="#bms-slave-role" title="BMS slave role&para;">BMS slave role&para;</a></li><li><a class="toc-href" href="#bms-master-role" title="BMS master role&para;">BMS master role&para;</a></li><li><a class="toc-href" href="#1a-battery-pack-sensing-voltage" title="1a. Battery-pack sensing: Voltage&para;">1a. Battery-pack sensing: Voltage&para;</a><ul><li><a class="toc-href" href="#some-methods-for-analog-to-digital-conversion" title="Some methods for analog-to-digital conversion&para;">Some methods for analog-to-digital conversion&para;</a></li><li><a class="toc-href" href="#accuracy-of-an-adc" title="Accuracy of an ADC&para;">Accuracy of an ADC&para;</a></li></ul></li><li><a class="toc-href" href="#chipsets_1" title="Chipsets&para;">Chipsets&para;</a><ul><li><a class="toc-href" href="#example-chipset-ltc6811" title="Example chipset: LTC6811&para;">Example chipset: LTC6811&para;</a></li></ul></li><li><a class="toc-href" href="#selecting-a-chipset_1" title="Selecting a chipset&para;">Selecting a chipset&para;</a></li><li><a class="toc-href" href="#1b-battery-pack-sensing-temperature" title="1b. Battery-pack sensing: Temperature&para;">1b. Battery-pack sensing: Temperature&para;</a><ul><li><a class="toc-href" href="#measurement-devices" title="Measurement devices:&para;">Measurement devices:&para;</a></li></ul></li><li><a class="toc-href" href="#1c-battery-pack-sensing-current_1" title="1c. Battery-pack sensing: Current&para;">1c. Battery-pack sensing: Current&para;</a></li><li><a class="toc-href" href="#1d-high-voltage-contactor-control" title="1d: High-voltage contactor control&para;">1d: High-voltage contactor control&para;</a></li><li><a class="toc-href" href="#1e-isolation-sensing" title="1e. Isolation sensing&para;">1e. Isolation sensing&para;</a></li><li><a class="toc-href" href="#1f-thermal-control" title="1f. Thermal control&para;">1f. Thermal control&para;</a></li><li><a class="toc-href" href="#how-can-a-bms-protect-the-user-and-battery-pack" title="How can a BMS protect the user and battery pack?&para;">How can a BMS protect the user and battery pack?&para;</a><ul><li><a class="toc-href" href="#bms-requirement-2-protection" title="BMS requirement 2: Protection&para;">BMS requirement 2: Protection&para;</a></li><li><a class="toc-href" href="#what-to-protect-against" title="What to protect against&para;">What to protect against&para;</a></li><li><a class="toc-href" href="#overcurrentovertemperature-protection" title="Overcurrent/overtemperature protection&para;">Overcurrent/overtemperature protection&para;</a></li><li><a class="toc-href" href="#overvoltageovertemperature-protection" title="Overvoltage/overtemperature protection&para;">Overvoltage/overtemperature protection&para;</a></li><li><a class="toc-href" href="#fault-detectiontolerance" title="Fault detection/tolerance&para;">Fault detection/tolerance&para;</a></li><li><a class="toc-href" href="#standards" title="Standards&para;">Standards&para;</a></li></ul></li><li><a class="toc-href" href="#3-how-must-a-bms-interface-with-other-system-components_1" title="3 How must a BMS interface with other system components?&para;">3 How must a BMS interface with other system components?&para;</a><ul><li><a class="toc-href" href="#3a-communication-via-can-bus" title="3a. Communication via CAN bus&para;">3a. Communication via CAN bus&para;</a></li><li><a class="toc-href" href="#format-of-can-bus-packet" title="Format of CAN-bus packet&para;">Format of CAN-bus packet&para;</a></li><li><a class="toc-href" href="#3b-charger-control" title="3b. Charger control&para;">3b. Charger control&para;</a></li><li><a class="toc-href" href="#what-limits-fast-charging" title="What limits fast charging?&para;">What limits fast charging?&para;</a></li><li><a class="toc-href" href="#3c-log-book-function" title="3c. Log book function&para;">3c. Log book function&para;</a></li><li><a class="toc-href" href="#3d-range-estimation" title="3d. Range estimation&para;">3d. Range estimation&para;</a></li></ul></li><li><a class="toc-href" href="#bms-requirement-4-performance-management_1" title="BMS requirement 4: Performance management&para;">BMS requirement 4: Performance management&para;</a><ul><li><a class="toc-href" href="#why-must-we-estimate-energy-power" title="Why must we estimate energy, power?&para;">Why must we estimate energy, power?&para;</a></li></ul></li><li><a class="toc-href" href="#whats-left-to-explore_1" title="Whats left to explore ?&para;">Whats left to explore ?&para;</a></li></ul></li></ul></div>
+        <div class="toc">
+<ul>
+<li><a href="#basic-terminologies">Basic terminologies</a></li>
+<li><a href="#what-must-a-bms-do">What must a <span class="caps">BMS</span> do?</a></li>
+<li><a href="#basic-working-of-an-electrochemical-cell">Basic working of an electrochemical cell</a><ul>
+<li><a href="#the-function-of-the-negative-electrode">The function of the negative electrode</a></li>
+<li><a href="#the-function-of-the-positive-electrode">The function of the positive electrode</a></li>
+</ul>
+</li>
+<li><a href="#li-ion-working-the-process-of-intercalation">Li-ion working (The process of intercalation)</a></li>
+<li><a href="#negative-electrodes-for-lithium-ion-cells">Negative electrodes for lithium-ion cells</a></li>
+<li><a href="#alternate-negative-electrode-material-lto">Alternate negative-electrode material <span class="caps">LTO</span></a></li>
+<li><a href="#future-negative-electrode-material-silicon">Future negative-electrode material silicon</a></li>
+<li><a href="#positive-electrodes-for-lithium-ion-cells">Positive electrodes for lithium-ion cells</a><ul>
+<li><a href="#lithium-cobalt-oxide-lco">Lithium cobalt oxide (<span class="caps">LCO</span>)</a></li>
+<li><a href="#spinel-cathodes">Spinel cathodes</a></li>
+<li><a href="#olivine-cathodes">Olivine cathodes</a></li>
+<li><a href="#in-summary">In summary</a></li>
+</ul>
+</li>
+<li><a href="#what-are-the-primary-functions-of-a-bms">What are the primary functions of a <span class="caps">BMS</span>?</a><ul>
+<li><a href="#1-sensing-and-high-voltage-control">1. Sensing and high-voltage control</a></li>
+<li><a href="#2-protection-against">2. Protection against</a></li>
+<li><a href="#3-interface">3. Interface</a></li>
+<li><a href="#4-performance-management">4. Performance management</a></li>
+<li><a href="#5-diagnostics">5. Diagnostics</a></li>
+</ul>
+</li>
+<li><a href="#the-issue-of-cost">The issue of cost</a></li>
+<li><a href="#modular-design-of-bms">Modular design of <span class="caps">BMS</span></a></li>
+<li><a href="#bms-slave-role"><span class="caps">BMS</span> slave role</a></li>
+<li><a href="#bms-master-role"><span class="caps">BMS</span> master role</a></li>
+<li><a href="#1a-battery-pack-sensing-voltage">1a. Battery-pack sensing: Voltage</a><ul>
+<li><a href="#some-methods-for-analog-to-digital-conversion">Some methods for analog-to-digital conversion</a></li>
+<li><a href="#accuracy-of-an-adc">Accuracy of an <span class="caps">ADC</span></a></li>
+</ul>
+</li>
+<li><a href="#chipsets">Chipsets</a><ul>
+<li><a href="#example-chipset-ltc6811">Example chipset: <span class="caps">LTC6811</span></a></li>
+</ul>
+</li>
+<li><a href="#selecting-a-chipset">Selecting a chipset</a></li>
+<li><a href="#1b-battery-pack-sensing-temperature">1b. Battery-pack sensing: Temperature</a><ul>
+<li><a href="#measurement-devices">Measurement devices:</a></li>
+</ul>
+</li>
+<li><a href="#1c-battery-pack-sensing-current">1c. Battery-pack sensing: Current</a></li>
+<li><a href="#1d-high-voltage-contactor-control">1d: High-voltage contactor control</a></li>
+<li><a href="#1e-isolation-sensing">1e. Isolation sensing</a></li>
+<li><a href="#1f-thermal-control">1f. Thermal control</a></li>
+<li><a href="#how-can-a-bms-protect-the-user-and-battery-pack">How can a <span class="caps">BMS</span> protect the user and battery pack?</a><ul>
+<li><a href="#bms-requirement-2-protection"><span class="caps">BMS</span> requirement 2: Protection</a></li>
+<li><a href="#what-to-protect-against">What to protect against</a></li>
+<li><a href="#overcurrentovertemperature-protection">Overcurrent/overtemperature protection</a></li>
+<li><a href="#overvoltageovertemperature-protection">Overvoltage/overtemperature protection</a></li>
+<li><a href="#fault-detectiontolerance">Fault detection/tolerance</a></li>
+<li><a href="#standards">Standards</a></li>
+</ul>
+</li>
+<li><a href="#3-how-must-a-bms-interface-with-other-system-components">3 How must a <span class="caps">BMS</span> interface with other system components?</a><ul>
+<li><a href="#3a-communication-via-can-bus">3a. Communication via <span class="caps">CAN</span> bus</a></li>
+<li><a href="#format-of-can-bus-packet">Format of <span class="caps">CAN</span>-bus packet</a></li>
+<li><a href="#3b-charger-control">3b. Charger control</a></li>
+<li><a href="#what-limits-fast-charging">What limits fast charging?</a></li>
+<li><a href="#3c-log-book-function">3c. Log book function</a></li>
+<li><a href="#3d-range-estimation">3d. Range estimation</a></li>
+</ul>
+</li>
+<li><a href="#bms-requirement-4-performance-management"><span class="caps">BMS</span> requirement 4: Performance management</a><ul>
+<li><a href="#why-must-we-estimate-energy-power">Why must we estimate energy, power?</a></li>
+</ul>
+</li>
+<li><a href="#whats-left-to-explore">Whats left to explore ?</a></li>
+</ul>
+</div>
         </nav>
     </div>
     <div class="span8 article-content">
             
-            <p>This is part 1 of a series on Battery management system&nbsp;design.</p>
-<p>The data presented here was  collected as a part of study based Internship at Kaynes Technology,&nbsp;Mysore.</p>
-<p>Most of the data here is my notes on the following&nbsp;resources:</p>
+            
+<p>This is part 1 of a series on Battery management system design.</p>
+<p>The data presented here was  collected as a part of study based Internship at Kaynes Technology, Mysore.</p>
+<p>Most of the data here is my notes on the following resources:</p>
 <ul>
-<li><span class="dquo">&ldquo;</span>Battery Management Systems, Volume I <span class="amp">&amp;</span> <span class="caps">II</span>&rdquo; by Gregory L. Plett along with his&nbsp;course. </li>
-<li><span class="dquo">&ldquo;</span>Advances in Battery Technologies  for Electric Vehicles&rdquo; (Woodhead Publishing Series in Energy: Number&nbsp;80)</li>
-<li><span class="dquo">&ldquo;</span><span class="caps">ELECTRIC</span> <span class="caps">VEHICLE</span> <span class="caps">BATTERY</span> <span class="caps">SYSTEMS</span>&rdquo; by Sandeep&nbsp;Dhameja</li>
-<li><span class="dquo">&ldquo;</span>Battery Reference Book&rdquo; 3e by T.R&nbsp;Crompton.</li>
+<li><span class="dquo">“</span>Battery Management Systems, Volume I <span class="amp">&amp;</span> <span class="caps">II</span>” by Gregory L. Plett along with his course. </li>
+<li><span class="dquo">“</span>Advances in Battery Technologies  for Electric Vehicles” (Woodhead Publishing Series in Energy: Number 80)</li>
+<li><span class="dquo">“</span><span class="caps">ELECTRIC</span> <span class="caps">VEHICLE</span> <span class="caps">BATTERY</span> <span class="caps">SYSTEMS</span>” by Sandeep Dhameja</li>
+<li><span class="dquo">“</span>Battery Reference Book” 3e by T.R Crompton.</li>
 </ul>
-<h1 id="basic-terminologies">Basic terminologies<a class="headerlink" href="#basic-terminologies" title="Permanent link">&para;</a></h1>
+<h1 id="basic-terminologies">Basic terminologies<a class="headerlink" href="#basic-terminologies" title="Permanent link">¶</a></h1>
 <ul>
-<li>Batteries and battery packs are made up from groups of cells wired in series, parallel or a combination of&nbsp;them. </li>
-<li>Nominal Voltage is a representative voltage that depends on the combination of the active chamicals used. It dosent relate to the voltage under load, its more of an average or typical&nbsp;voltage.</li>
-<li>C rate is a relative measure of the cell electrical current eg. A 20 Ah cell should be able to deliver 20 A (&ldquo;1C&rdquo;) for 1 h or 2 A (&ldquo;C/10&rdquo;) for about 10 h (but, the relationship is not strictly&nbsp;linear)</li>
-<li>A cell stores energy in electrochemical form, which it can later release to do work, The energy release rate is the cell&rsquo;s instantaneous power (mW, W, or&nbsp;kW)</li>
-<li><strong>xEVs:</strong> Electric vehicles come in different categories and are abbreviated as&nbsp;xEVs </li>
+<li>Batteries and battery packs are made up from groups of cells wired in series, parallel or a combination of them. </li>
+<li>Nominal Voltage is a representative voltage that depends on the combination of the active chamicals used. It dosent relate to the voltage under load, its more of an average or typical voltage.</li>
+<li>C rate is a relative measure of the cell electrical current eg. A 20 Ah cell should be able to deliver 20 A (“1C”) for 1 h or 2 A (“C/10”) for about 10 h (but, the relationship is not strictly linear)</li>
+<li>A cell stores energy in electrochemical form, which it can later release to do work, The energy release rate is the cell’s instantaneous power (mW, W, or kW)</li>
+<li><strong>xEVs:</strong> Electric vehicles come in different categories and are abbreviated as xEVs </li>
 <li><strong>Hybrid-electric vehicles (HEVs)</strong> These vehicles have drive provided by an electric motor and one other source ( like petrol engine ). The battery pack in these systems store small amount of energy and are used only  for power boost when the vehicle must accelerate, or as a power sink when the vehicle must decelerate. They essentially have zero all-electric vehicle range and are never plugged in to recharge their battery pack; instead, the gasoline engine recharges the battery
-    when extra power is available. An example <span class="caps">HEV</span> is the Toyota&nbsp;Prius.</li>
+    when extra power is available. An example <span class="caps">HEV</span> is the Toyota Prius.</li>
 <li><strong>Plug-in hybrid-electric vehicles (PHEVs)</strong>. These vehicles are similar
     to HEVs but have a somewhat larger battery pack and motor. They
     can operate in electric-only mode under some operating conditions,
-    typically at lower speeds such as for residential or city&nbsp;driving</li>
-<li><strong>Extended-Range Electric Vehicle</strong>  (E-<span class="caps">REV</span>): Larger battery than <span class="caps">PHEV</span> allows some all-electric range under full-load&nbsp;conditions.</li>
-<li>Electric Vehicle (<span class="caps">EV</span>), a.k.a. Battery-Electric Vehicle (<span class="caps">BEV</span>): Battery  provides only motive&nbsp;power.</li>
+    typically at lower speeds such as for residential or city driving</li>
+<li><strong>Extended-Range Electric Vehicle</strong>  (E-<span class="caps">REV</span>): Larger battery than <span class="caps">PHEV</span> allows some all-electric range under full-load conditions.</li>
+<li>Electric Vehicle (<span class="caps">EV</span>), a.k.a. Battery-Electric Vehicle (<span class="caps">BEV</span>): Battery  provides only motive power.</li>
 </ul>
-<h1 id="what-must-a-bms-do">What must a <span class="caps">BMS</span> do?<a class="headerlink" href="#what-must-a-bms-do" title="Permanent link">&para;</a></h1>
-<p>The primary functions of a <span class="caps">BMS</span> are&nbsp;to:</p>
+<h1 id="what-must-a-bms-do">What must a <span class="caps">BMS</span> do?<a class="headerlink" href="#what-must-a-bms-do" title="Permanent link">¶</a></h1>
+<p>The primary functions of a <span class="caps">BMS</span> are to:</p>
 <ul>
-<li>Protect human safety of device&rsquo;s&nbsp;operator:</li>
-<li>Detect unsafe operating conditions and&nbsp;respond</li>
-<li>Protect cells of battery from damage in abuse/failure&nbsp;cases</li>
-<li>Prolong life of battery (normal operating&nbsp;cases)</li>
-<li>Maintain battery in a state in which it can fulfil its functional design&nbsp;requirements</li>
+<li>Protect human safety of device’s operator:</li>
+<li>Detect unsafe operating conditions and respond</li>
+<li>Protect cells of battery from damage in abuse/failure cases</li>
+<li>Prolong life of battery (normal operating cases)</li>
+<li>Maintain battery in a state in which it can fulfil its functional design requirements</li>
 <li>Inform the application controller how to make the best use of the pack right now
-  (e.g., by providing power limits), control charger,&nbsp;etc.</li>
+  (e.g., by providing power limits), control charger, etc.</li>
 </ul>
-<h1 id="basic-working-of-an-electrochemical-cell">Basic working of an electrochemical cell<a class="headerlink" href="#basic-working-of-an-electrochemical-cell" title="Permanent link">&para;</a></h1>
+<h1 id="basic-working-of-an-electrochemical-cell">Basic working of an electrochemical cell<a class="headerlink" href="#basic-working-of-an-electrochemical-cell" title="Permanent link">¶</a></h1>
 <p><img alt="Kaynes%20report%208f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled.png" src="https://ashwinschronicles.github.io/Kaynes report 8f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled.png"/></p>
-<h2 id="the-function-of-the-negative-electrode">The function of the negative electrode<a class="headerlink" href="#the-function-of-the-negative-electrode" title="Permanent link">&para;</a></h2>
-<p>In an electrochemical cell, the negative electrode is often a metal or an alloy or hydrogen (lead metal or paste for&nbsp;PbA)</p>
+<h2 id="the-function-of-the-negative-electrode">The function of the negative electrode<a class="headerlink" href="#the-function-of-the-negative-electrode" title="Permanent link">¶</a></h2>
+<p>In an electrochemical cell, the negative electrode is often a metal or an alloy or hydrogen (lead metal or paste for PbA)</p>
 <ul>
 <li>During discharge, it gives up electrons to external circuit, is oxidized (<span class="caps">OIL</span>)</li>
-<li>During charge, accepts electrons from external circuit, is&nbsp;reduced</li>
+<li>During charge, accepts electrons from external circuit, is reduced</li>
 </ul>
-<h2 id="the-function-of-the-positive-electrode">The function of the positive electrode<a class="headerlink" href="#the-function-of-the-positive-electrode" title="Permanent link">&para;</a></h2>
+<h2 id="the-function-of-the-positive-electrode">The function of the positive electrode<a class="headerlink" href="#the-function-of-the-positive-electrode" title="Permanent link">¶</a></h2>
 <p>In an electrochemical cell, the positive electrode is often a
-metallic oxide, sulfide, or oxygen (lead oxide for&nbsp;PbA)</p>
+metallic oxide, sulfide, or oxygen (lead oxide for PbA)</p>
 <ul>
 <li>During discharge, accepts
-electrons from circuit, is&nbsp;reduced</li>
+electrons from circuit, is reduced</li>
 <li>During charge, gives up electrons
-to external circuit, is&nbsp;oxidized</li>
+to external circuit, is oxidized</li>
 </ul>
-<h1 id="li-ion-working-the-process-of-intercalation_1">Li-ion working (The process of intercalation)<a class="headerlink" href="#li-ion-working-the-process-of-intercalation" title="Permanent link">&para;</a></h1>
+<h1 id="li-ion-working-the-process-of-intercalation">Li-ion working (The process of intercalation)<a class="headerlink" href="#li-ion-working-the-process-of-intercalation" title="Permanent link">¶</a></h1>
 <p><img alt="Kaynes%20report%208f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled%201.png" src="https://ashwinschronicles.github.io/Kaynes report 8f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled 1.png"/></p>
-<p>Discharge&nbsp;process:</p>
+<p>Discharge process:</p>
 <ul>
 <li>During discharge, Li exits the surface of the negative-electrode
-particles, gives up an electron, becoming Li in the&nbsp;electrolyte</li>
+particles, gives up an electron, becoming Li in the electrolyte</li>
 <li>Li diffuses outward from center of
 negative-electrode particles to
 equalize concentrations, replenishing
-Li at particle surface (over&nbsp;time)</li>
+Li at particle surface (over time)</li>
 <li>Meanwhile, electron travels through
-external circuit to positive&nbsp;electrode</li>
-<li>Li joins with the electron, and Li enters positive-electrode particles at their&nbsp;surface</li>
-<li>Li diffuses into positive-electrode particles to equalize concentration (over&nbsp;time)</li>
+external circuit to positive electrode</li>
+<li>Li joins with the electron, and Li enters positive-electrode particles at their surface</li>
+<li>Li diffuses into positive-electrode particles to equalize concentration (over time)</li>
 </ul>
 <p>The active electrode materials are coated on both sides of metallic foils which act
-as the current collectors conducting the current into and out of the&nbsp;cell</p>
+as the current collectors conducting the current into and out of the cell</p>
 <p><img alt="Kaynes%20report%208f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled%202.png" src="https://ashwinschronicles.github.io/Kaynes report 8f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled 2.png"/></p>
-<h1 id="negative-electrodes-for-lithium-ion-cells">Negative electrodes for lithium-ion cells<a class="headerlink" href="#negative-electrodes-for-lithium-ion-cells" title="Permanent link">&para;</a></h1>
+<h1 id="negative-electrodes-for-lithium-ion-cells">Negative electrodes for lithium-ion cells<a class="headerlink" href="#negative-electrodes-for-lithium-ion-cells" title="Permanent link">¶</a></h1>
 <ul>
 <li>Presently, essentially all commercial lithium-ion cells use some form of graphite
-(C6 ) for the negative-electrode&nbsp;material</li>
+(C6 ) for the negative-electrode material</li>
 <li>Graphite has graphene layers of C6
 structures that are tightly bonded These layers are loosely stacked and there is
-room for lithium to intercalate between&nbsp;them</li>
+room for lithium to intercalate between them</li>
 </ul>
 <p><img alt="Kaynes%20report%208f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled%203.png" src="https://ashwinschronicles.github.io/Kaynes report 8f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled 3.png"/></p>
-<h1 id="alternate-negative-electrode-material-lto">Alternate negative-electrode material <span class="caps">LTO</span><a class="headerlink" href="#alternate-negative-electrode-material-lto" title="Permanent link">&para;</a></h1>
+<h1 id="alternate-negative-electrode-material-lto">Alternate negative-electrode material <span class="caps">LTO</span><a class="headerlink" href="#alternate-negative-electrode-material-lto" title="Permanent link">¶</a></h1>
 <ul>
-<li>Lithium titanate oxide (Li4 Ti5 O12 , <span class="caps">LTO</span>) is an alternative negative-electrode&nbsp;material</li>
+<li>Lithium titanate oxide (Li4 Ti5 O12 , <span class="caps">LTO</span>) is an alternative negative-electrode material</li>
 <li>Disadvantage: high open-circuit potential (making cell voltage low)
-Advantage: nearly indestructible &mdash; very long&nbsp;life</li>
+Advantage: nearly indestructible — very long life</li>
 </ul>
 <p><img alt="Kaynes%20report%208f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled%204.png" src="https://ashwinschronicles.github.io/Kaynes report 8f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled 4.png"/></p>
 <p><img alt="Kaynes%20report%208f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled%205.png" src="https://ashwinschronicles.github.io/Kaynes report 8f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled 5.png"/></p>
-<h1 id="future-negative-electrode-material-silicon">Future negative-electrode material silicon<a class="headerlink" href="#future-negative-electrode-material-silicon" title="Permanent link">&para;</a></h1>
+<h1 id="future-negative-electrode-material-silicon">Future negative-electrode material silicon<a class="headerlink" href="#future-negative-electrode-material-silicon" title="Permanent link">¶</a></h1>
 <ul>
 <li>Using graphite, one can store up to one Li per six C atoms;
-using silicon, one can (in principle) store four Li per every Si&nbsp;atom!</li>
+using silicon, one can (in principle) store four Li per every Si atom!</li>
 <li>Unfortunately, while volume change for a charge/discharge cycle for graphite is
-around 10 %, it is around 400 % for&nbsp;silicon</li>
+around 10 %, it is around 400 % for silicon</li>
 <li>Therefore, silicon electrodes tend to fracture quickly
-and have short&nbsp;lives</li>
+and have short lives</li>
 <li>Possible workarounds: mix graphite with silicon, or
 build small forests of silicon nanowires with space
-in-between to allow for&nbsp;expansion</li>
+in-between to allow for expansion</li>
 </ul>
-<h1 id="positive-electrodes-for-lithium-ion-cells">Positive electrodes for lithium-ion cells<a class="headerlink" href="#positive-electrodes-for-lithium-ion-cells" title="Permanent link">&para;</a></h1>
-<h2 id="lithium-cobalt-oxide-lco">Lithium cobalt oxide (<span class="caps">LCO</span>)<a class="headerlink" href="#lithium-cobalt-oxide-lco" title="Permanent link">&para;</a></h2>
+<h1 id="positive-electrodes-for-lithium-ion-cells">Positive electrodes for lithium-ion cells<a class="headerlink" href="#positive-electrodes-for-lithium-ion-cells" title="Permanent link">¶</a></h1>
+<h2 id="lithium-cobalt-oxide-lco">Lithium cobalt oxide (<span class="caps">LCO</span>)<a class="headerlink" href="#lithium-cobalt-oxide-lco" title="Permanent link">¶</a></h2>
 <ul>
 <li>In 1980, John B. Goodenough discovered that Lix CoO2
-(<span class="caps">LCO</span>) was a viable material for lithium&nbsp;intercalation</li>
-<li>Li intercalates between the layers of CoO6&nbsp;octahedra</li>
+(<span class="caps">LCO</span>) was a viable material for lithium intercalation</li>
+<li>Li intercalates between the layers of CoO6 octahedra</li>
 <li><span class="caps">LCO</span> has layers, somewhat like graphite, so it is often
-called a &ldquo;layered&nbsp;cathode&rdquo;</li>
+called a “layered cathode”</li>
 <li></li>
 </ul>
 <p><img alt="Kaynes%20report%208f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled%206.png" src="https://ashwinschronicles.github.io/Kaynes report 8f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled 6.png"/></p>
 <p>Disadavntages:</p>
 <ul>
-<li>Cobalt is rare, toxic, and&nbsp;expensive;</li>
-<li>Only about half its theoretic capacity is useable (&ldquo;x&rdquo; can be min 0.5), else cell ages&nbsp;rapidly</li>
+<li>Cobalt is rare, toxic, and expensive;</li>
+<li>Only about half its theoretic capacity is useable (“x” can be min 0.5), else cell ages rapidly</li>
 </ul>
 <p><span class="caps">NCM</span> (a.k.a. <span class="caps">NMC</span>) is a blend of Ni, Co, and Mn, which
 retains the layered structure, and has properties from all
-three constituent metals; <span class="caps">NCA</span> is a blend of Ni, Co, and Al (used in tesla&nbsp;batteries)</p>
-<h2 id="spinel-cathodes">Spinel cathodes<a class="headerlink" href="#spinel-cathodes" title="Permanent link">&para;</a></h2>
+three constituent metals; <span class="caps">NCA</span> is a blend of Ni, Co, and Al (used in tesla batteries)</p>
+<h2 id="spinel-cathodes">Spinel cathodes<a class="headerlink" href="#spinel-cathodes" title="Permanent link">¶</a></h2>
 <ul>
 <li>In 1983, Goodenough and Thackery proposed LixMn2O4
 (<span class="caps">LMO</span>) as an alternate intercalation material: Mn sits in
-the octahedral sites, Li in the&nbsp;tetrahedral</li>
-<li>This material has a cubic &ldquo;spinel&rdquo; structure. It allows 3D
-diffusion (vs. 2D for layered and 1D for&nbsp;olivine)</li>
+the octahedral sites, Li in the tetrahedral</li>
+<li>This material has a cubic “spinel” structure. It allows 3D
+diffusion (vs. 2D for layered and 1D for olivine)</li>
 <li><span class="caps">LMO</span> is cheaper and safer than <span class="caps">LCO</span>, but can have short
 lifetime due to the manganese dissolving into the
-electrolyte under some&nbsp;conditions</li>
-<li>Additives can be added to help prevent this, but this &ldquo;art&rdquo;
-is presently well guarded by trade&nbsp;secrets</li>
+electrolyte under some conditions</li>
+<li>Additives can be added to help prevent this, but this “art”
+is presently well guarded by trade secrets</li>
 </ul>
-<h2 id="olivine-cathodes">Olivine cathodes<a class="headerlink" href="#olivine-cathodes" title="Permanent link">&para;</a></h2>
+<h2 id="olivine-cathodes">Olivine cathodes<a class="headerlink" href="#olivine-cathodes" title="Permanent link">¶</a></h2>
 <ul>
 <li>In 1997, Goodenough proposed olivine-style phosphates
 as a third major category of positive-electrode material
-LixFePO4 (<span class="caps">LFP</span>) is the most common in this&nbsp;family</li>
+LixFePO4 (<span class="caps">LFP</span>) is the most common in this family</li>
 <li>This material is low cost, and low toxicity, but also has low
 energy density due to a low open-circuit potential and low
-specific energy due to heaviness of&nbsp;Fe</li>
+specific energy due to heaviness of Fe</li>
 <li>1D structure tends to have high resistance, which can be
 overcome in part by using very small particles and
-including conductive&nbsp;additives</li>
+including conductive additives</li>
 </ul>
-<h2 id="in-summary">In summary<a class="headerlink" href="#in-summary" title="Permanent link">&para;</a></h2>
+<h2 id="in-summary">In summary<a class="headerlink" href="#in-summary" title="Permanent link">¶</a></h2>
 <ul>
-<li>Layered cathodes (<span class="caps">LCO</span>, <span class="caps">NMC</span>, <span class="caps">NCA</span>) can use only around half their theoretic&nbsp;capacity</li>
-<li>Olivine cathodes (<span class="caps">LFP</span>) have low voltage (and very little state information in their&nbsp;voltage)</li>
-<li>Spinel cathodes (<span class="caps">LMO</span>) are inexpensive and non-toxic, but can degrade&nbsp;rapidly</li>
+<li>Layered cathodes (<span class="caps">LCO</span>, <span class="caps">NMC</span>, <span class="caps">NCA</span>) can use only around half their theoretic capacity</li>
+<li>Olivine cathodes (<span class="caps">LFP</span>) have low voltage (and very little state information in their voltage)</li>
+<li>Spinel cathodes (<span class="caps">LMO</span>) are inexpensive and non-toxic, but can degrade rapidly</li>
 </ul>
 <p><img alt="Kaynes%20report%208f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled%207.png" src="https://ashwinschronicles.github.io/Kaynes report 8f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled 7.png"/></p>
-<h1 id="what-are-the-primary-functions-of-a-bms_1">What are the primary functions of a <span class="caps">BMS</span>?<a class="headerlink" href="#what-are-the-primary-functions-of-a-bms" title="Permanent link">&para;</a></h1>
-<p>A <span class="caps">BMS</span> has the following&nbsp;priorities:</p>
+<h1 id="what-are-the-primary-functions-of-a-bms">What are the primary functions of a <span class="caps">BMS</span>?<a class="headerlink" href="#what-are-the-primary-functions-of-a-bms" title="Permanent link">¶</a></h1>
+<p>A <span class="caps">BMS</span> has the following priorities:</p>
 <ul>
 <li>Protects safety of the operator of the host application;
-detects unsafe operating conditions and&nbsp;responds</li>
-<li>Protects cells of battery from damage in abuse/failure&nbsp;cases</li>
-<li>Prolongs life of battery (normal operating&nbsp;cases)</li>
+detects unsafe operating conditions and responds</li>
+<li>Protects cells of battery from damage in abuse/failure cases</li>
+<li>Prolongs life of battery (normal operating cases)</li>
 <li>Maintains battery in a state in which it can fulfill its functional
-design&nbsp;requirements</li>
+design requirements</li>
 <li>Informs the host-application control computer how to make the
 best use of the pack right now (e.g., power limits), control
-charger,&nbsp;etc.</li>
+charger, etc.</li>
 </ul>
-<h2 id="1-sensing-and-high-voltage-control">1. Sensing and high-voltage control<a class="headerlink" href="#1-sensing-and-high-voltage-control" title="Permanent link">&para;</a></h2>
+<h2 id="1-sensing-and-high-voltage-control">1. Sensing and high-voltage control<a class="headerlink" href="#1-sensing-and-high-voltage-control" title="Permanent link">¶</a></h2>
 <p>Measure voltage, current,temperature; control contactor,
-pre-charge; ground-fault detection,thermal&nbsp;management</p>
+pre-charge; ground-fault detection,thermal management</p>
 <p><img alt="Kaynes%20report%208f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled%208.png" src="https://ashwinschronicles.github.io/Kaynes report 8f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled 8.png"/></p>
-<h2 id="2-protection-against">2. Protection against<a class="headerlink" href="#2-protection-against" title="Permanent link">&para;</a></h2>
-<p>Over-charge, over-discharge, over-current, short circuit, extreme&nbsp;temperatures</p>
-<h2 id="3-interface">3. Interface<a class="headerlink" href="#3-interface" title="Permanent link">&para;</a></h2>
-<p>Range estimation, communications, data recording,&nbsp;reporting</p>
-<h2 id="4-performance-management">4. Performance management<a class="headerlink" href="#4-performance-management" title="Permanent link">&para;</a></h2>
-<p>State-of-charge (<span class="caps">SOC</span>) estimation,power-limit computation,balance/equalize&nbsp;cells</p>
-<h2 id="5-diagnostics">5. Diagnostics<a class="headerlink" href="#5-diagnostics" title="Permanent link">&para;</a></h2>
-<p>Abuse detection, state-of-health (<span class="caps">SOH</span>) estimation, state-of-life (<span class="caps">SOL</span>)&nbsp;estimation</p>
-<h1 id="the-issue-of-cost_1">The issue of cost<a class="headerlink" href="#the-issue-of-cost" title="Permanent link">&para;</a></h1>
+<h2 id="2-protection-against">2. Protection against<a class="headerlink" href="#2-protection-against" title="Permanent link">¶</a></h2>
+<p>Over-charge, over-discharge, over-current, short circuit, extreme temperatures</p>
+<h2 id="3-interface">3. Interface<a class="headerlink" href="#3-interface" title="Permanent link">¶</a></h2>
+<p>Range estimation, communications, data recording, reporting</p>
+<h2 id="4-performance-management">4. Performance management<a class="headerlink" href="#4-performance-management" title="Permanent link">¶</a></h2>
+<p>State-of-charge (<span class="caps">SOC</span>) estimation,power-limit computation,balance/equalize cells</p>
+<h2 id="5-diagnostics">5. Diagnostics<a class="headerlink" href="#5-diagnostics" title="Permanent link">¶</a></h2>
+<p>Abuse detection, state-of-health (<span class="caps">SOH</span>) estimation, state-of-life (<span class="caps">SOL</span>) estimation</p>
+<h1 id="the-issue-of-cost">The issue of cost<a class="headerlink" href="#the-issue-of-cost" title="Permanent link">¶</a></h1>
 <p>There is a cost associated with battery management, so not
-all applications implement all&nbsp;features</p>
-<h1 id="modular-design-of-bms">Modular design of <span class="caps">BMS</span><a class="headerlink" href="#modular-design-of-bms" title="Permanent link">&para;</a></h1>
+all applications implement all features</p>
+<h1 id="modular-design-of-bms">Modular design of <span class="caps">BMS</span><a class="headerlink" href="#modular-design-of-bms" title="Permanent link">¶</a></h1>
 <p>Design extreme 1: Parallel-cell modules (<span class="caps">PCM</span>)
 Design extreme 2: Series-cell modules (<span class="caps">SCM</span>)</p>
 <p><img alt="Kaynes%20report%208f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled%209.png" src="https://ashwinschronicles.github.io/Kaynes report 8f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled 9.png"/></p>
 <ul>
-<li>A modular battery pack suggests a hierarchical master&ndash;slave
-<span class="caps">BMS</span> design as&nbsp;well</li>
-<li>One &ldquo;slave&rdquo; <span class="caps">BMS</span> unit is associated with each module<ul>
-<li>Module&rsquo;s cells welded/bolted to slave <span class="caps">PCB</span>, minimizing wiring
-and wiring&nbsp;losses</li>
-<li>Slave has electronics for voltage measurement, cell&nbsp;balancing</li>
+<li>A modular battery pack suggests a hierarchical master–slave
+<span class="caps">BMS</span> design as well</li>
+<li>One “slave” <span class="caps">BMS</span> unit is associated with each module<ul>
+<li>Module’s cells welded/bolted to slave <span class="caps">PCB</span>, minimizing wiring
+and wiring losses</li>
+<li>Slave has electronics for voltage measurement, cell balancing</li>
 </ul>
 </li>
-<li>There is then normally a single &ldquo;master&rdquo; unit for each pack<ul>
-<li>Master measures pack current, controls&nbsp;contactors</li>
-<li>Communicates with slaves via daisy-chain or star&nbsp;architecture</li>
+<li>There is then normally a single “master” unit for each pack<ul>
+<li>Master measures pack current, controls contactors</li>
+<li>Communicates with slaves via daisy-chain or star architecture</li>
 <li>Master/slave communication uses few (e.g. two)
-wires&mdash;minimizes wiring-harness&nbsp;nightmare</li>
+wires—minimizes wiring-harness nightmare</li>
 </ul>
 </li>
 </ul>
 <p><img alt="Kaynes%20report%208f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled%2010.png" src="https://ashwinschronicles.github.io/Kaynes report 8f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled 10.png"/></p>
-<h1 id="bms-slave-role"><span class="caps">BMS</span> slave role<a class="headerlink" href="#bms-slave-role" title="Permanent link">&para;</a></h1>
-<p><span class="caps">BMS</span> slave needs&nbsp;to:</p>
+<h1 id="bms-slave-role"><span class="caps">BMS</span> slave role<a class="headerlink" href="#bms-slave-role" title="Permanent link">¶</a></h1>
+<p><span class="caps">BMS</span> slave needs to:</p>
 <ul>
-<li>Measure voltage of every cell within the&nbsp;module</li>
+<li>Measure voltage of every cell within the module</li>
 <li>Measure temperatures
 Ideally of every cell, but in many packs some temperatures
-are estimated, especially if the pack has cells in&nbsp;parallel</li>
+are estimated, especially if the pack has cells in parallel</li>
 <li>Balance the energy stored in every cell within the module
  this is needed as cells have different efficiencies, self-discharge
-rates,&nbsp;etc.</li>
-<li>Communicate this information to the&nbsp;master</li>
+rates, etc.</li>
+<li>Communicate this information to the master</li>
 <li>Is slave design reusable?<ul>
-<li>Often &ldquo;yes&rdquo;, assuming electronics flexible in terms of number
+<li>Often “yes”, assuming electronics flexible in terms of number
 of cells monitored, physical size matches different applications
 While electronics design may be reusable in most cases, may
 need to redesign <span class="caps">PCB</span> footprint to fit individual applications
 For high volumes there may be overall cost savings in
-developing a specific slave optimized for a given&nbsp;module</li>
+developing a specific slave optimized for a given module</li>
 </ul>
 </li>
 </ul>
-<h1 id="bms-master-role"><span class="caps">BMS</span> master role<a class="headerlink" href="#bms-master-role" title="Permanent link">&para;</a></h1>
-<p><span class="caps">BMS</span> master needs&nbsp;to</p>
+<h1 id="bms-master-role"><span class="caps">BMS</span> master role<a class="headerlink" href="#bms-master-role" title="Permanent link">¶</a></h1>
+<p><span class="caps">BMS</span> master needs to</p>
 <ul>
 <li>Control contactors that connect
-battery to&nbsp;load</li>
-<li>Monitor pack current,&nbsp;isolation</li>
+battery to load</li>
+<li>Monitor pack current, isolation</li>
 <li>Communicate with <span class="caps">BMS</span> slaves
 Communicate with host-
-application&nbsp;controller</li>
-<li>Control&nbsp;thermal-management</li>
+application controller</li>
+<li>Control thermal-management</li>
 <li>Is master design reusable?<ul>
 <li>More difficult than for slave designs
 Master needs to be more flexible; for example,
 Number and type of contactors it controls
 Types of current sensors used
-Ways it connects to charger, thermal management&nbsp;system</li>
+Ways it connects to charger, thermal management system</li>
 </ul>
 </li>
 </ul>
-<h1 id="1a-battery-pack-sensing-voltage">1a. Battery-pack sensing: Voltage<a class="headerlink" href="#1a-battery-pack-sensing-voltage" title="Permanent link">&para;</a></h1>
-<p>All cell voltages are measured in a lithium-ion&nbsp;pack</p>
+<h1 id="1a-battery-pack-sensing-voltage">1a. Battery-pack sensing: Voltage<a class="headerlink" href="#1a-battery-pack-sensing-voltage" title="Permanent link">¶</a></h1>
+<p>All cell voltages are measured in a lithium-ion pack</p>
 <ul>
-<li>Indicator of relative balance of&nbsp;cells</li>
-<li>Input to most <span class="caps">SOC</span> and <span class="caps">SOH</span> estimation&nbsp;algorithms</li>
-<li>Safety: overcharging a lithium-ion cell can lead to &ldquo;thermal
-runaway,&rdquo; so we cannot skip measuring any&nbsp;voltages</li>
+<li>Indicator of relative balance of cells</li>
+<li>Input to most <span class="caps">SOC</span> and <span class="caps">SOH</span> estimation algorithms</li>
+<li>Safety: overcharging a lithium-ion cell can lead to “thermal
+runaway,” so we cannot skip measuring any voltages</li>
 </ul>
-<h2 id="some-methods-for-analog-to-digital-conversion">Some methods for analog-to-digital conversion<a class="headerlink" href="#some-methods-for-analog-to-digital-conversion" title="Permanent link">&para;</a></h2>
-<p>At the most basic level, voltage is measured using an analog-o-digital&nbsp;converter </p>
-<p>There are several common <span class="caps">ADC</span> architectures; for&nbsp;example,</p>
+<h2 id="some-methods-for-analog-to-digital-conversion">Some methods for analog-to-digital conversion<a class="headerlink" href="#some-methods-for-analog-to-digital-conversion" title="Permanent link">¶</a></h2>
+<p>At the most basic level, voltage is measured using an analog-o-digital converter </p>
+<p>There are several common <span class="caps">ADC</span> architectures; for example,</p>
 <ul>
 <li>A direct-conversion or flash <span class="caps">ADC</span> uses a bank of comparators and fixed reference
-voltages, outputs code of closest reference (fast,&nbsp;expensive)</li>
+voltages, outputs code of closest reference (fast, expensive)</li>
 <li>Successive approximation compares input to output from <span class="caps">DAC</span> and uses feedback
-to modify <span class="caps">DAC</span> signal, resolving input to desired accuracy (slow,&nbsp;inexpensive)</li>
+to modify <span class="caps">DAC</span> signal, resolving input to desired accuracy (slow, inexpensive)</li>
 <li>Delta-sigma 
  uses oversampled 1-bit flash <span class="caps">ADC</span> to encode difference ( )
 between approximation and input, sums ( ) differences and filters to give final
-high-resolution result at desired slower sample rate (very&nbsp;popular)</li>
+high-resolution result at desired slower sample rate (very popular)</li>
 <li>The resolution of an <span class="caps">ADC</span> is the smallest change in the
 input signal that can be measured; it is also the step
-size between consecutive <span class="caps">ADC</span> output codes (typically 16bit adc has a resolution of&nbsp;76uV)</li>
-<li>Resolution for a M bit <span class="caps">ADC</span> is the full scale voltage difference divided by 2 to the power of&nbsp;M</li>
+size between consecutive <span class="caps">ADC</span> output codes (typically 16bit adc has a resolution of 76uV)</li>
+<li>Resolution for a M bit <span class="caps">ADC</span> is the full scale voltage difference divided by 2 to the power of M</li>
 </ul>
-<h2 id="accuracy-of-an-adc">Accuracy of an <span class="caps">ADC</span><a class="headerlink" href="#accuracy-of-an-adc" title="Permanent link">&para;</a></h2>
-<p>The accuracy of an <span class="caps">ADC</span> has to do with the absolute difference between the reported value and the true value:difference may be due to several&nbsp;sources</p>
+<h2 id="accuracy-of-an-adc">Accuracy of an <span class="caps">ADC</span><a class="headerlink" href="#accuracy-of-an-adc" title="Permanent link">¶</a></h2>
+<p>The accuracy of an <span class="caps">ADC</span> has to do with the absolute difference between the reported value and the true value:difference may be due to several sources</p>
 <ul>
-<li>Quantization error (unmeasurable value&nbsp;between)</li>
+<li>Quantization error (unmeasurable value between)</li>
 <li>Offset error (constant difference between ideal and
-measured value over whole measurement&nbsp;range)</li>
+measured value over whole measurement range)</li>
 <li>Gain error (difference between slope of ideal and
 measured value over whole measurement range,
-expressed as&nbsp;%)</li>
+expressed as %)</li>
 <li>Nonlinear error (deviation between actual and ideal step
-widths, expressed as <span class="caps">ADC</span>&nbsp;counts)</li>
+widths, expressed as <span class="caps">ADC</span> counts)</li>
 <li></li>
 </ul>
 <p><img alt="Kaynes%20report%208f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled%2011.png" src="https://ashwinschronicles.github.io/Kaynes report 8f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled 11.png"/></p>
-<h1 id="chipsets_1">Chipsets<a class="headerlink" href="#chipsets" title="Permanent link">&para;</a></h1>
-<p>Special chipsets are made to aid high-voltage <span class="caps">BMS</span>&nbsp;design</p>
+<h1 id="chipsets">Chipsets<a class="headerlink" href="#chipsets" title="Permanent link">¶</a></h1>
+<p>Special chipsets are made to aid high-voltage <span class="caps">BMS</span> design</p>
 <ul>
-<li>Low-cost &ldquo;dumb&rdquo; measurement chips used in modules,
-proximate to cells; high-cost computational processing in distant master&nbsp;unit</li>
+<li>Low-cost “dumb” measurement chips used in modules,
+proximate to cells; high-cost computational processing in distant master unit</li>
 <li>Special chips implement difficult task of highly accurate <span class="caps">A2D</span> voltage sensing with
 high common-mode rejection and fast response in high-<span class="caps">EMI</span>, high-heat,
-high-vibration&nbsp;environments</li>
+high-vibration environments</li>
 <li>Can often be placed in parallel for redundant fault-tolerant designs.
-Multiple vendors make chipsets (e.g., Analog Devices, Maxim, Texas&nbsp;Instruments)</li>
+Multiple vendors make chipsets (e.g., Analog Devices, Maxim, Texas Instruments)</li>
 </ul>
-<h2 id="example-chipset-ltc6811">Example chipset: <span class="caps">LTC6811</span><a class="headerlink" href="#example-chipset-ltc6811" title="Permanent link">&para;</a></h2>
+<h2 id="example-chipset-ltc6811">Example chipset: <span class="caps">LTC6811</span><a class="headerlink" href="#example-chipset-ltc6811" title="Permanent link">¶</a></h2>
 <p>example (<span class="caps">LTC6811</span>) designed by
-Analog Devices (formerly Linear&nbsp;Technology)</p>
+Analog Devices (formerly Linear Technology)</p>
 <ul>
 <li>Monitors up to 12 cells in series in a
-module, 100s of cells in series in&nbsp;pack</li>
+module, 100s of cells in series in pack</li>
 <li>Has built-in isolated communications
-between daisy-chained&nbsp;parts</li>
+between daisy-chained parts</li>
 <li>Supports internal or external cell-
-equalization&nbsp;circuitry</li>
-<li>Powered by module itself, or&nbsp;externally</li>
-<li>Measures up to five temperatures (more with some external&nbsp;circuitry)</li>
+equalization circuitry</li>
+<li>Powered by module itself, or externally</li>
+<li>Measures up to five temperatures (more with some external circuitry)</li>
 </ul>
-<h1 id="selecting-a-chipset_1">Selecting a chipset<a class="headerlink" href="#selecting-a-chipset" title="Permanent link">&para;</a></h1>
-<p>Points to be considered in a&nbsp;design:</p>
+<h1 id="selecting-a-chipset">Selecting a chipset<a class="headerlink" href="#selecting-a-chipset" title="Permanent link">¶</a></h1>
+<p>Points to be considered in a design:</p>
 <ul>
-<li>How many cells can each <span class="caps">IC</span>&nbsp;monitor?</li>
-<li>How many cells total can be&nbsp;monitored?</li>
-<li>Does it support passive/active&nbsp;balancing?</li>
-<li>What is the measurement&nbsp;accuracy?</li>
-<li>How many temperature measurements can be&nbsp;made?</li>
+<li>How many cells can each <span class="caps">IC</span> monitor?</li>
+<li>How many cells total can be monitored?</li>
+<li>Does it support passive/active balancing?</li>
+<li>What is the measurement accuracy?</li>
+<li>How many temperature measurements can be made?</li>
 <li>How many wires to communicate from <span class="caps">IC</span> to <span class="caps">IC</span>?</li>
-<li>What is chipset availability and cost, per&nbsp;cell?</li>
+<li>What is chipset availability and cost, per cell?</li>
 </ul>
-<h1 id="1b-battery-pack-sensing-temperature">1b. Battery-pack sensing: Temperature<a class="headerlink" href="#1b-battery-pack-sensing-temperature" title="Permanent link">&para;</a></h1>
+<h1 id="1b-battery-pack-sensing-temperature">1b. Battery-pack sensing: Temperature<a class="headerlink" href="#1b-battery-pack-sensing-temperature" title="Permanent link">¶</a></h1>
 <p>Battery cell operational characteristics and cell degradation
-rates are very strong functions of&nbsp;temperature</p>
+rates are very strong functions of temperature</p>
 <ul>
-<li>Don&rsquo;t charge at low temperature; control thermal management
-systems to keep temperature in &ldquo;safe&rdquo;&nbsp;region</li>
+<li>Don’t charge at low temperature; control thermal management
+systems to keep temperature in “safe” region</li>
 <li>Unexpected temperature changes can indicate cell failure or
-impending safety&nbsp;concern</li>
-<li>Ideally, we measure each cell&rsquo;s internal temperature; but,
+impending safety concern</li>
+<li>Ideally, we measure each cell’s internal temperature; but,
 With accurate pack thermal model, can place sensors external
-to one or more cells per module and calibrate internal&nbsp;temperature</li>
+to one or more cells per module and calibrate internal temperature</li>
 </ul>
-<h2 id="measurement-devices">Measurement devices:<a class="headerlink" href="#measurement-devices" title="Permanent link">&para;</a></h2>
+<h2 id="measurement-devices">Measurement devices:<a class="headerlink" href="#measurement-devices" title="Permanent link">¶</a></h2>
 <ul>
 <li>Thermocouple (uses amplifier and <span class="caps">ADC</span>)</li>
-<li>Thermistor (uses voltage divider&nbsp;circuit)</li>
+<li>Thermistor (uses voltage divider circuit)</li>
 </ul>
-<p>Voltage-divider + thermistor&nbsp;example</p>
+<p>Voltage-divider + thermistor example</p>
 <p><img alt="Kaynes%20report%208f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled%2012.png" src="https://ashwinschronicles.github.io/Kaynes report 8f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled 12.png"/></p>
-<h1 id="1c-battery-pack-sensing-current_1">1c. Battery-pack sensing: Current<a class="headerlink" href="#1c-battery-pack-sensing-current" title="Permanent link">&para;</a></h1>
+<h1 id="1c-battery-pack-sensing-current">1c. Battery-pack sensing: Current<a class="headerlink" href="#1c-battery-pack-sensing-current" title="Permanent link">¶</a></h1>
 <p>Battery pack electrical current must be measured to monitor
-safety, log abuse, and inform <span class="caps">SOC</span> and <span class="caps">SOH</span>&nbsp;algorithms</p>
-<p>Using&nbsp;:</p>
+safety, log abuse, and inform <span class="caps">SOC</span> and <span class="caps">SOH</span> algorithms</p>
+<p>Using :</p>
 <ul>
 <li>
-<p>Shunt current sensor (Kelvin&nbsp;four-wire)</p>
+<p>Shunt current sensor (Kelvin four-wire)</p>
 <p><img alt="Kaynes%20report%208f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled%2013.png" src="https://ashwinschronicles.github.io/Kaynes report 8f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled 13.png"/></p>
 </li>
 <li>
-<p>Hall-effect current&nbsp;sensing</p>
+<p>Hall-effect current sensing</p>
 </li>
 </ul>
 <p><img alt="Kaynes%20report%208f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled%2014.png" src="https://ashwinschronicles.github.io/Kaynes report 8f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled 14.png"/></p>
 <p>Both methods have advantages and disadvantages and both are in common use in
-<span class="caps">BMS</span>&nbsp;today</p>
-<h1 id="1d-high-voltage-contactor-control">1d: High-voltage contactor control<a class="headerlink" href="#1d-high-voltage-contactor-control" title="Permanent link">&para;</a></h1>
+<span class="caps">BMS</span> today</p>
+<h1 id="1d-high-voltage-contactor-control">1d: High-voltage contactor control<a class="headerlink" href="#1d-high-voltage-contactor-control" title="Permanent link">¶</a></h1>
 <p>When not in use, the battery pack internal high-voltage bus
-is completely disconnected from the load at both&nbsp;terminals</p>
+is completely disconnected from the load at both terminals</p>
 <ul>
 <li>Dis/connecting pack at both terminals requires two
-high-current capable relays or&nbsp;&ldquo;contactors&rdquo;</li>
+high-current capable relays or “contactors”</li>
 <li>A low-voltage/low-current signal activates the contactor,
-closing an internal switch that connects its main&nbsp;terminals</li>
+closing an internal switch that connects its main terminals</li>
 <li>As load is often capacitive, if both contactors were closed
 simultaneously, enormous current would flow instantly,
-potentially welding the contactors closed or blowing a&nbsp;fuse</li>
-<li>So, a third &ldquo;pre-charge&rdquo; contactor is&nbsp;used</li>
+potentially welding the contactors closed or blowing a fuse</li>
+<li>So, a third “pre-charge” contactor is used</li>
 </ul>
 <p><img alt="Kaynes%20report%208f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled%2015.png" src="https://ashwinschronicles.github.io/Kaynes report 8f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled 15.png"/></p>
-<p>Contactor&nbsp;procedure:</p>
+<p>Contactor procedure:</p>
 <p><img alt="Kaynes%20report%208f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled%2016.png" src="https://ashwinschronicles.github.io/Kaynes report 8f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled 16.png"/></p>
-<h1 id="1e-isolation-sensing">1e. Isolation sensing<a class="headerlink" href="#1e-isolation-sensing" title="Permanent link">&para;</a></h1>
-<p>Isolation sensing detects presence of a ground&nbsp;fault</p>
+<h1 id="1e-isolation-sensing">1e. Isolation sensing<a class="headerlink" href="#1e-isolation-sensing" title="Permanent link">¶</a></h1>
+<p>Isolation sensing detects presence of a ground fault</p>
 <ul>
 <li>Primary concern is safety: Is it safe to touch a battery
-terminal and chassis ground at the same&nbsp;time?</li>
-<li>Battery &ldquo;should&rdquo; be completely isolated from chassis
-ground, so &ldquo;should&rdquo; be no&nbsp;problem</li>
+terminal and chassis ground at the same time?</li>
+<li>Battery “should” be completely isolated from chassis
+ground, so “should” be no problem</li>
 <li><span class="caps">FMVSS</span> says isolation is sufficient if less than 2 mA of
 current will flow when connecting chassis ground to
 either the positive or negative terminal of the battery
-pack via a direct&nbsp;short</li>
+pack via a direct short</li>
 </ul>
 <p>Procedure: </p>
 <p><img alt="Kaynes%20report%208f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled%2017.png" src="https://ashwinschronicles.github.io/Kaynes report 8f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled 17.png"/></p>
 <p><img alt="Kaynes%20report%208f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled%2018.png" src="https://ashwinschronicles.github.io/Kaynes report 8f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled 18.png"/></p>
-<p>For fault on low&nbsp;side </p>
+<p>For fault on low side </p>
 <p><img alt="Kaynes%20report%208f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled%2019.png" src="https://ashwinschronicles.github.io/Kaynes report 8f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled 19.png"/></p>
-<p>Isolation is deemed sufficient if Ri&gt;Vb /0.002 or R1 &gt;&nbsp;500Vb</p>
-<h1 id="1f-thermal-control">1f. Thermal control<a class="headerlink" href="#1f-thermal-control" title="Permanent link">&para;</a></h1>
+<p>Isolation is deemed sufficient if Ri&gt;Vb /0.002 or R1 &gt; 500Vb</p>
+<h1 id="1f-thermal-control">1f. Thermal control<a class="headerlink" href="#1f-thermal-control" title="Permanent link">¶</a></h1>
 <p><img alt="Kaynes%20report%208f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled%2020.png" src="https://ashwinschronicles.github.io/Kaynes report 8f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled 20.png"/></p>
-<p>Important to keep battery-pack cells at a &ldquo;comfortable&rdquo;temperature to ensure safety and to extend&nbsp;life</p>
+<p>Important to keep battery-pack cells at a “comfortable”temperature to ensure safety and to extend life</p>
 <ul>
 <li>Also important to keep cells at a uniform temperature for consistent aging (also
-reduces need for many temperature&nbsp;sensors)</li>
+reduces need for many temperature sensors)</li>
 <li>Present commercial systems use either air or liquid systems, and some reports
-indicate that range and life are negatively impacted by air&nbsp;systems</li>
+indicate that range and life are negatively impacted by air systems</li>
 <li>Active heating and cooling while vehicle plugged in can extend life, shorten
-charge&nbsp;times</li>
+charge times</li>
 </ul>
-<h1 id="how-can-a-bms-protect-the-user-and-battery-pack">How can a <span class="caps">BMS</span> protect the user and battery pack?<a class="headerlink" href="#how-can-a-bms-protect-the-user-and-battery-pack" title="Permanent link">&para;</a></h1>
-<h2 id="bms-requirement-2-protection"><span class="caps">BMS</span> requirement 2: Protection<a class="headerlink" href="#bms-requirement-2-protection" title="Permanent link">&para;</a></h2>
-<p><span class="caps">BMS</span> must provide monitoring and control to&nbsp;protect:</p>
+<h1 id="how-can-a-bms-protect-the-user-and-battery-pack">How can a <span class="caps">BMS</span> protect the user and battery pack?<a class="headerlink" href="#how-can-a-bms-protect-the-user-and-battery-pack" title="Permanent link">¶</a></h1>
+<h2 id="bms-requirement-2-protection"><span class="caps">BMS</span> requirement 2: Protection<a class="headerlink" href="#bms-requirement-2-protection" title="Permanent link">¶</a></h2>
+<p><span class="caps">BMS</span> must provide monitoring and control to protect:</p>
 <ul>
-<li>Cells from out-of-tolerance ambient operating&nbsp;conditions</li>
-<li>User from consequences of battery&nbsp;failures</li>
+<li>Cells from out-of-tolerance ambient operating conditions</li>
+<li>User from consequences of battery failures</li>
 </ul>
-<p>High-energy storage batteries can be very&nbsp;dangerous:</p>
+<p>High-energy storage batteries can be very dangerous:</p>
 <ul>
-<li>If energy is released in an uncontrolled way (short circuit, physical damage), can have catastrophic&nbsp;consequences</li>
+<li>If energy is released in an uncontrolled way (short circuit, physical damage), can have catastrophic consequences</li>
 <li>In a short circuit, hundreds of amperes can develop in microseconds; protection
-circuitry must act quickly&nbsp;state</li>
+circuitry must act quickly state</li>
 </ul>
-<h2 id="what-to-protect-against">What to protect against<a class="headerlink" href="#what-to-protect-against" title="Permanent link">&para;</a></h2>
-<p>Different applications and different cell chemistries require different degrees of&nbsp;protection</p>
+<h2 id="what-to-protect-against">What to protect against<a class="headerlink" href="#what-to-protect-against" title="Permanent link">¶</a></h2>
+<p>Different applications and different cell chemistries require different degrees of protection</p>
 <ul>
-<li>Failure in a lithium-ion cell can be very serious:&nbsp;explosion/fire</li>
-<li>Protection is indispensable in automotive&nbsp;environment</li>
-<li>Protection must address following undesirable events or&nbsp;conditions:</li>
-<li>Excessive current during charging or&nbsp;discharging</li>
-<li>Short&nbsp;circuit</li>
-<li>Over voltage and under&nbsp;voltage</li>
-<li>High ambient temperature,&nbsp;overheating</li>
-<li>Loss of&nbsp;isolation</li>
+<li>Failure in a lithium-ion cell can be very serious: explosion/fire</li>
+<li>Protection is indispensable in automotive environment</li>
+<li>Protection must address following undesirable events or conditions:</li>
+<li>Excessive current during charging or discharging</li>
+<li>Short circuit</li>
+<li>Over voltage and under voltage</li>
+<li>High ambient temperature, overheating</li>
+<li>Loss of isolation</li>
 <li>Abuse</li>
 </ul>
-<h2 id="overcurrentovertemperature-protection">Overcurrent/overtemperature protection<a class="headerlink" href="#overcurrentovertemperature-protection" title="Permanent link">&para;</a></h2>
+<h2 id="overcurrentovertemperature-protection">Overcurrent/overtemperature protection<a class="headerlink" href="#overcurrentovertemperature-protection" title="Permanent link">¶</a></h2>
 <p><img alt="Kaynes%20report%208f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled%2021.png" src="https://ashwinschronicles.github.io/Kaynes report 8f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled 21.png"/></p>
-<p>When possible, fallback protection paths should be&nbsp;implemented</p>
+<p>When possible, fallback protection paths should be implemented</p>
 <ul>
 <li>Red = cell-manufacturer specified region where cells
-will most likely be subject to permanent&nbsp;damage</li>
-<li>Anywhere else &ldquo;okay&rdquo; but need a margin of&nbsp;error</li>
-<li>Generally design to limit cell&rsquo;s operating conditions to
-smaller &ldquo;safe&rdquo; region, shown here in&nbsp;green</li>
+will most likely be subject to permanent damage</li>
+<li>Anywhere else “okay” but need a margin of error</li>
+<li>Generally design to limit cell’s operating conditions to
+smaller “safe” region, shown here in green</li>
 <li>Safety devices are then specified to constrain cells to
-safe&nbsp;region</li>
-<li>White = safety&nbsp;margin</li>
+safe region</li>
+<li>White = safety margin</li>
 </ul>
-<h2 id="overvoltageovertemperature-protection">Overvoltage/overtemperature protection<a class="headerlink" href="#overvoltageovertemperature-protection" title="Permanent link">&para;</a></h2>
-<p>Similar for voltage&nbsp;limits:</p>
+<h2 id="overvoltageovertemperature-protection">Overvoltage/overtemperature protection<a class="headerlink" href="#overvoltageovertemperature-protection" title="Permanent link">¶</a></h2>
+<p>Similar for voltage limits:</p>
 <p><img alt="Kaynes%20report%208f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled%2022.png" src="https://ashwinschronicles.github.io/Kaynes report 8f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled 22.png"/></p>
 <p>But, each protection device added into main current path increases battery impedance, reducing power delivered to load
-Examples of protection devices&nbsp;include:</p>
+Examples of protection devices include:</p>
 <ul>
-<li>Thermal fuse: Opens contactor when the temperature exceeds&nbsp;limit.</li>
-<li>Conventional fuse: May not act quickly&nbsp;enough</li>
-<li>Active fault detection: <span class="caps">BMS</span> monitoring for fault&nbsp;conditions</li>
+<li>Thermal fuse: Opens contactor when the temperature exceeds limit.</li>
+<li>Conventional fuse: May not act quickly enough</li>
+<li>Active fault detection: <span class="caps">BMS</span> monitoring for fault conditions</li>
 </ul>
-<h2 id="fault-detectiontolerance">Fault detection/tolerance<a class="headerlink" href="#fault-detectiontolerance" title="Permanent link">&para;</a></h2>
+<h2 id="fault-detectiontolerance">Fault detection/tolerance<a class="headerlink" href="#fault-detectiontolerance" title="Permanent link">¶</a></h2>
 <ul>
-<li>Another aspect of protection is detecting, withstanding, and (when possible) rectifying&nbsp;faults</li>
+<li>Another aspect of protection is detecting, withstanding, and (when possible) rectifying faults</li>
 <li>State-of-art <span class="caps">BMS</span> use processors having dual CPUs that execute the same
-instructions at slightly different times on different cores, then compare&nbsp;results</li>
+instructions at slightly different times on different cores, then compare results</li>
 <li>Slaves often can detect most cell faults without intervention of the main processor<ul>
-<li>Cell over/under voltage, over/under temperature, redundant sensing,&nbsp;etc.</li>
-<li>Serious slave faults should be able to shut pack down without using master&nbsp;microprocessor</li>
+<li>Cell over/under voltage, over/under temperature, redundant sensing, etc.</li>
+<li>Serious slave faults should be able to shut pack down without using master microprocessor</li>
 </ul>
 </li>
-<li>Some more complex faults (for example isolation) must be detected by the&nbsp;software(Algorithm)</li>
-<li>The link between master and slaves must have high <span class="caps">EMI</span>&nbsp;immunity</li>
+<li>Some more complex faults (for example isolation) must be detected by the software(Algorithm)</li>
+<li>The link between master and slaves must have high <span class="caps">EMI</span> immunity</li>
 </ul>
-<h2 id="standards">Standards<a class="headerlink" href="#standards" title="Permanent link">&para;</a></h2>
-<p>Different applications have different standards for&nbsp;safety</p>
+<h2 id="standards">Standards<a class="headerlink" href="#standards" title="Permanent link">¶</a></h2>
+<p>Different applications have different standards for safety</p>
 <ul>
 <li>Passenger cars having maximum gross vehicle mass up to 3500 kg fall under <span class="caps">ISO26262</span>:2011</li>
 <li>Electric motorcycles fall under <span class="caps">ISO</span>/<span class="caps">PAS</span> 19695:2015 (similar to <span class="caps">ISO26262</span>)</li>
-<li>Larger trucks over 3500 kg, such as Ford F250, 350, Chevy Silverado 2500, as well as semis, buses, etc&hellip;) fall under <span class="caps">IEC61508</span></li>
+<li>Larger trucks over 3500 kg, such as Ford F250, 350, Chevy Silverado 2500, as well as semis, buses, etc…) fall under <span class="caps">IEC61508</span></li>
 <li>While these safety standards have the same goals they are different in application<ul>
-<li>Use different &ldquo;safety integrity levels&rdquo; (SILs), evaluated in different&nbsp;ways</li>
+<li>Use different “safety integrity levels” (SILs), evaluated in different ways</li>
 <li>Very difficult to design to all these standards simultaneously
-Standards are complex&mdash;require study of their own to understand how to comply most likely 40% of the code written for <span class="caps">BMS</span> is to ensure these&nbsp;standards.</li>
+Standards are complex—require study of their own to understand how to comply most likely 40% of the code written for <span class="caps">BMS</span> is to ensure these standards.</li>
 </ul>
 </li>
 </ul>
-<h1 id="3-how-must-a-bms-interface-with-other-system-components_1">3 How must a <span class="caps">BMS</span> interface with other system components?<a class="headerlink" href="#3-how-must-a-bms-interface-with-other-system-components" title="Permanent link">&para;</a></h1>
-<h2 id="3a-communication-via-can-bus">3a. Communication via <span class="caps">CAN</span> bus<a class="headerlink" href="#3a-communication-via-can-bus" title="Permanent link">&para;</a></h2>
+<h1 id="3-how-must-a-bms-interface-with-other-system-components">3 How must a <span class="caps">BMS</span> interface with other system components?<a class="headerlink" href="#3-how-must-a-bms-interface-with-other-system-components" title="Permanent link">¶</a></h1>
+<h2 id="3a-communication-via-can-bus">3a. Communication via <span class="caps">CAN</span> bus<a class="headerlink" href="#3a-communication-via-can-bus" title="Permanent link">¶</a></h2>
 <ul>
-<li>Control Area Network (<span class="caps">CAN</span>) bus is industry <span class="caps">ISO</span> standard foron-board vehicle&nbsp;communications</li>
+<li>Control Area Network (<span class="caps">CAN</span>) bus is industry <span class="caps">ISO</span> standard foron-board vehicle communications</li>
 <li>Designed to provide robust communications in the very harsh automotive operating
-environments with high levels of electrical&nbsp;noise</li>
+environments with high levels of electrical noise</li>
 <li>Two-wire serial bus designed to network intelligent sensors and actuators; can
 operate at two rates:<ul>
 <li>High speed (e.g., 1M Baud): Used for critical operations such as engine
-  management, vehicle stability, motion&nbsp;control</li>
+  management, vehicle stability, motion control</li>
 <li>Low speed (e.g., 100 kBaud): Simple switching and control of lighting, windows,
-  mirror adjustments, and instrument displays&nbsp;(etc.)</li>
+  mirror adjustments, and instrument displays (etc.)</li>
 </ul>
 </li>
 </ul>
-<h2 id="format-of-can-bus-packet">Format of <span class="caps">CAN</span>-bus packet<a class="headerlink" href="#format-of-can-bus-packet" title="Permanent link">&para;</a></h2>
-<p>The protocol defines the&nbsp;following:</p>
+<h2 id="format-of-can-bus-packet">Format of <span class="caps">CAN</span>-bus packet<a class="headerlink" href="#format-of-can-bus-packet" title="Permanent link">¶</a></h2>
+<p>The protocol defines the following:</p>
 <ul>
-<li>Method of addressing the devices connected to the&nbsp;bus</li>
-<li>Data format (the&nbsp;&ldquo;message&rdquo;)</li>
-<li>Transmission speed, priority settings, and&nbsp;sequence</li>
-<li>Error detection and&nbsp;handling</li>
-<li>Control&nbsp;signals</li>
+<li>Method of addressing the devices connected to the bus</li>
+<li>Data format (the “message”)</li>
+<li>Transmission speed, priority settings, and sequence</li>
+<li>Error detection and handling</li>
+<li>Control signals</li>
 </ul>
-<p>A typical packet(frame) in <span class="caps">CAN</span> bus looks like&nbsp;: </p>
+<p>A typical packet(frame) in <span class="caps">CAN</span> bus looks like : </p>
 <p><img alt="Kaynes%20report%208f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled%2023.png" src="https://ashwinschronicles.github.io/Kaynes report 8f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled 23.png"/></p>
-<p>Abbreviations : <span class="caps">SOF</span> -  Start of frame; <span class="caps">RTR</span>- Ready to receive; <span class="caps">CRC</span> - cyclic redundancy check; <span class="caps">ACK</span>-acknowledgement&nbsp;bit</p>
-<p>Data frames are transmitted sequentially over the&nbsp;bus.</p>
-<h2 id="3b-charger-control">3b. Charger control<a class="headerlink" href="#3b-charger-control" title="Permanent link">&para;</a></h2>
-<p>Battery packs are charged in two&nbsp;ways:</p>
+<p>Abbreviations : <span class="caps">SOF</span> -  Start of frame; <span class="caps">RTR</span>- Ready to receive; <span class="caps">CRC</span> - cyclic redundancy check; <span class="caps">ACK</span>-acknowledgement bit</p>
+<p>Data frames are transmitted sequentially over the bus.</p>
+<h2 id="3b-charger-control">3b. Charger control<a class="headerlink" href="#3b-charger-control" title="Permanent link">¶</a></h2>
+<p>Battery packs are charged in two ways:</p>
 <ul>
-<li>Random: Charge delivered in unpredictable patterns; e.g., regenerative braking and are Control by providing inverter power&nbsp;limits</li>
+<li>Random: Charge delivered in unpredictable patterns; e.g., regenerative braking and are Control by providing inverter power limits</li>
 <li>Plug-in: For <span class="caps">EV</span>/<span class="caps">PHEV</span>/E-<span class="caps">REV</span><ul>
-<li>Control charger current, voltage,&nbsp;balancing</li>
-<li>Often <span class="caps">CP</span>/<span class="caps">CV</span>; more exotic methods possible (in the research&nbsp;phase)</li>
-<li>Heating systems may be required to increase charge efficiency and to increase battery&nbsp;longevity</li>
+<li>Control charger current, voltage, balancing</li>
+<li>Often <span class="caps">CP</span>/<span class="caps">CV</span>; more exotic methods possible (in the research phase)</li>
+<li>Heating systems may be required to increase charge efficiency and to increase battery longevity</li>
 </ul>
 </li>
 </ul>
-<h2 id="what-limits-fast-charging">What limits fast charging?<a class="headerlink" href="#what-limits-fast-charging" title="Permanent link">&para;</a></h2>
-<p>Passenger vehicles require approximately 200&ndash;300 Wh /&nbsp;mile </p>
+<h2 id="what-limits-fast-charging">What limits fast charging?<a class="headerlink" href="#what-limits-fast-charging" title="Permanent link">¶</a></h2>
+<p>Passenger vehicles require approximately 200–300 Wh / mile </p>
 <ul>
-<li>For 300 mile range, 60&ndash;90 kWh capacity, charge in 3 min (typical petrol refill time) . requires a rate of up to 1.8 <span class="caps">MW</span>!</li>
-<li>Domestic 15 A 110 V (<span class="caps">US</span>) or 1 5 kW &ldquo;level 1&rdquo; service charges pack in 40&ndash;60&nbsp;h</li>
-<li>Domestic 30 A 220 V (<span class="caps">US</span>- high power sockets) or 6 6 kW &ldquo;level 2&rdquo; service charges pack in 10&ndash;15&nbsp;h</li>
-<li><span class="caps">DC</span> &ldquo;level 3&rdquo; (CHAdeMO) fast charging, 500 V, 125 A can provide up to 80 %
-charge in 30&nbsp;min</li>
-<li>Tesla &ldquo;level 3&rdquo; fast charging for model S can provide 50 % charge in 20 min
-So, limit is usually the electrical service, not the battery&nbsp;pack</li>
+<li>For 300 mile range, 60–90 kWh capacity, charge in 3 min (typical petrol refill time) . requires a rate of up to 1.8 <span class="caps">MW</span>!</li>
+<li>Domestic 15 A 110 V (<span class="caps">US</span>) or 1 5 kW “level 1” service charges pack in 40–60 h</li>
+<li>Domestic 30 A 220 V (<span class="caps">US</span>- high power sockets) or 6 6 kW “level 2” service charges pack in 10–15 h</li>
+<li><span class="caps">DC</span> “level 3” (CHAdeMO) fast charging, 500 V, 125 A can provide up to 80 %
+charge in 30 min</li>
+<li>Tesla “level 3” fast charging for model S can provide 50 % charge in 20 min
+So, limit is usually the electrical service, not the battery pack</li>
 </ul>
-<h2 id="3c-log-book-function">3c. Log book function<a class="headerlink" href="#3c-log-book-function" title="Permanent link">&para;</a></h2>
+<h2 id="3c-log-book-function">3c. Log book function<a class="headerlink" href="#3c-log-book-function" title="Permanent link">¶</a></h2>
 <ul>
 <li>For warranty and diagnostic purposes, <span class="caps">BMS</span> must store a log
 of atypical/abuse events<ul>
-<li>Abuse type: out of tolerance, voltage, current,&nbsp;temperature</li>
-<li>Duration and magnitude of&nbsp;abuse</li>
+<li>Abuse type: out of tolerance, voltage, current, temperature</li>
+<li>Duration and magnitude of abuse</li>
 </ul>
 </li>
 </ul>
-<p>Can also store diagnostic information&nbsp;regarding</p>
+<p>Can also store diagnostic information regarding</p>
 <ul>
-<li>Number of charge/discharge cycles&nbsp;completed</li>
+<li>Number of charge/discharge cycles completed</li>
 <li><span class="caps">SOH</span> estimates at the beginning of each driving cycle
-And much&nbsp;more&hellip;</li>
-<li>Data stored in nonvolatile (e.g., <span class="caps">FLASH</span>) memory and downloaded when&nbsp;required</li>
+And much more…</li>
+<li>Data stored in nonvolatile (e.g., <span class="caps">FLASH</span>) memory and downloaded when required</li>
 </ul>
-<h2 id="3d-range-estimation">3d. Range estimation<a class="headerlink" href="#3d-range-estimation" title="Permanent link">&para;</a></h2>
+<h2 id="3d-range-estimation">3d. Range estimation<a class="headerlink" href="#3d-range-estimation" title="Permanent link">¶</a></h2>
 <p>How far can I drive before available energy is depleted?
-Heavily influenced by environmental&nbsp;factors:</p>
+Heavily influenced by environmental factors:</p>
 <ul>
-<li>What are the vehicle&nbsp;characteristics?</li>
-<li>How is the vehicle being driven&nbsp;(gently/aggressively)?</li>
-<li>Are there a lot of hills, a lot of&nbsp;wind?</li>
-<li>Is it warm or cold&nbsp;out?</li>
-<li>At present, it appears that each <span class="caps">OEM</span> will have their own range&nbsp;algorithms</li>
+<li>What are the vehicle characteristics?</li>
+<li>How is the vehicle being driven (gently/aggressively)?</li>
+<li>Are there a lot of hills, a lot of wind?</li>
+<li>Is it warm or cold out?</li>
+<li>At present, it appears that each <span class="caps">OEM</span> will have their own range algorithms</li>
 </ul>
-<h1 id="bms-requirement-4-performance-management_1"><span class="caps">BMS</span> requirement 4: Performance management<a class="headerlink" href="#bms-requirement-4-performance-management" title="Permanent link">&para;</a></h1>
-<p>Battery applications need to know two battery&nbsp;quantities:</p>
+<h1 id="bms-requirement-4-performance-management"><span class="caps">BMS</span> requirement 4: Performance management<a class="headerlink" href="#bms-requirement-4-performance-management" title="Permanent link">¶</a></h1>
+<p>Battery applications need to know two battery quantities:</p>
 <ul>
-<li>How much energy is available in the battery&nbsp;pack</li>
-<li>How much power is available in the immediate&nbsp;future</li>
+<li>How much energy is available in the battery pack</li>
+<li>How much power is available in the immediate future</li>
 </ul>
 <p>Knowing <strong>energy</strong> is most important for applications such as <span class="caps">EV</span>:
 Tells me how far I can drive
 Knowing <strong>power</strong> is most important for applications such as <span class="caps">HEV</span>:
-Tells me whether I can accelerate or accept braking&nbsp;charge</p>
+Tells me whether I can accelerate or accept braking charge</p>
 <p>Both are important for applications such as E-<span class="caps">REV</span>/<span class="caps">PHEV</span></p>
-<h2 id="why-must-we-estimate-energy-power">Why must we estimate energy, power?<a class="headerlink" href="#why-must-we-estimate-energy-power" title="Permanent link">&para;</a></h2>
-<p>We Can&rsquo;t measure available energy or available power directly.
-Instead, must estimate these&nbsp;values.</p>
+<h2 id="why-must-we-estimate-energy-power">Why must we estimate energy, power?<a class="headerlink" href="#why-must-we-estimate-energy-power" title="Permanent link">¶</a></h2>
+<p>We Can’t measure available energy or available power directly.
+Instead, must estimate these values.</p>
 <ul>
-<li>To estimate energy, we must know (atleast) all cell states-of-charge Zk and capacities&nbsp;Qk</li>
-<li>To estimate power, we must know (atleast) all cell states-of-charge Zk and internal resistances&nbsp;Rk</li>
+<li>To estimate energy, we must know (atleast) all cell states-of-charge Zk and capacities Qk</li>
+<li>To estimate power, we must know (atleast) all cell states-of-charge Zk and internal resistances Rk</li>
 </ul>
 <p>But, cannot directly measure these parameters either! Therefore, must <strong>estimate</strong> <span class="caps">SOC</span>, <span class="caps">SOH</span></p>
-<p>Available inputs include all cell voltages, pack current, and temperatures of cells or&nbsp;modules.</p>
+<p>Available inputs include all cell voltages, pack current, and temperatures of cells or modules.</p>
 <p><img alt="Kaynes%20report%208f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled%2024.png" src="https://ashwinschronicles.github.io/Kaynes report 8f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled 24.png"/></p>
 <p>There are both good and poor methods to produce estimates:
 Poor methods are generally simpler to understand, code,
-and validate, but yield less-accurate&nbsp;results</p>
-<p>Impacts of a poor estimator can&nbsp;be:</p>
+and validate, but yield less-accurate results</p>
+<p>Impacts of a poor estimator can be:</p>
 <ul>
-<li>Abrupt corrections when voltage or current limits&nbsp;exceeded,</li>
-<li>leading to customer perception of poor drivability,&nbsp;or</li>
-<li>Overcharge or overdischarge, which damages cells,&nbsp;or</li>
+<li>Abrupt corrections when voltage or current limits exceeded,</li>
+<li>leading to customer perception of poor drivability, or</li>
+<li>Overcharge or overdischarge, which damages cells, or</li>
 <li>Compensating for uncertainty by overdesigning pack
-All of these have costs in dollars, weight and/or&nbsp;volume</li>
+All of these have costs in dollars, weight and/or volume</li>
 </ul>
-<p>A good way to do <span class="caps">SOC</span> estimate is to implement Kalman&nbsp;filter </p>
-<h1 id="whats-left-to-explore_1">Whats left to explore ?<a class="headerlink" href="#whats-left-to-explore" title="Permanent link">&para;</a></h1>
+<p>A good way to do <span class="caps">SOC</span> estimate is to implement Kalman filter </p>
+<h1 id="whats-left-to-explore">Whats left to explore ?<a class="headerlink" href="#whats-left-to-explore" title="Permanent link">¶</a></h1>
 <ul>
-<li>Article 2: How to model cells, needed by&nbsp;algorithms</li>
-<li>Article 3: Advanced methods for <span class="caps">SOC</span>&nbsp;estimation</li>
-<li>Article 4: <span class="caps">SOH</span>&nbsp;estimation</li>
-<li>Article 5: Balancing and power-limits&nbsp;estimation</li>
+<li>Article 2: How to model cells, needed by algorithms</li>
+<li>Article 3: Advanced methods for <span class="caps">SOC</span> estimation</li>
+<li>Article 4: <span class="caps">SOH</span> estimation</li>
+<li>Article 5: Balancing and power-limits estimation</li>
 </ul>
 
 
@@ -777,7 +853,7 @@ All of these have costs in dollars, weight and/or&nbsp;volume</li>
         </div>
         <section id="article-sidebar" class="span2">
     <h4>Reading Time</h4>
-    <p>~15 min read</p>
+    <p>~16 min read</p>
             <h4>Published</h4>
             <time itemprop="dateCreated" datetime="2020-05-25T00:00:00+05:30">May 25, 2020</time>
 <h4>Last Updated</h4>

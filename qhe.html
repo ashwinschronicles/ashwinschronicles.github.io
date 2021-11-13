@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="https://ashwinschronicles.github.io/theme/css/style.min.css?fc5adb95">
+<link rel="stylesheet" href="https://ashwinschronicles.github.io/theme/css/style.min.css?2fcac227">
 
         <link rel="dns-prefetch" href="//fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
@@ -24,8 +24,7 @@
 <meta property="og:description" content="Notes on Quantum Hall Effect and related phenomenon" />
 <meta property="og:site_name" content="Ashwin&#39;s Chronicles" />
 <meta property="og:article:author" content="Ashwin" />
-<meta property="og:article:published_time" content="2019-06-07T14:02:48+05:30" />
-<meta property="og:article:modified_time" content="2020-03-28T17:15:57+05:30" />
+<meta property="og:article:published_time" content="2019-01-01T00:00:00+05:30" />
 <meta name="twitter:title" content="Quantum Hall Effect and related phenomena ">
 <meta name="twitter:description" content="Notes on Quantum Hall Effect and related phenomenon">
 <meta property="og:image" content="/theme/images/final.png" />
@@ -45,6 +44,7 @@
         <link rel="apple-touch-icon" sizes="152x152" href="https://ashwinschronicles.github.io/theme/images/apple-touch-icon-152x152.png" type="image/png" />
         <link rel="apple-touch-icon" sizes="152x152" href="https://ashwinschronicles.github.io/theme/images/apple-touch-icon-180x180.png" type="image/png" />
         <link href="https://ashwinschronicles.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Ashwin&#39;s Chronicles - Full Atom Feed" />
+
 <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -107,50 +107,69 @@
     <div class="span2 table-of-content">
         <nav>
         <h4>Contents</h4>
-        <div id="toc"><ul><li><a class="toc-href" href="#" title="Quantum Hall Effect and related&nbsp;phenomena">Quantum Hall Effect and related&nbsp;phenomena</a><ul><li><a class="toc-href" href="#historical-aspects" title="Historical Aspects&para;">Historical Aspects&para;</a></li><li><a class="toc-href" href="#theoretical-aspects-86" title="Theoretical aspects [8,6]&para;">Theoretical aspects [8,6]&para;</a><ul><li><a class="toc-href" href="#the-classical-hall-effect" title="The Classical Hall Effect&para;">The Classical Hall Effect&para;</a><ul><li><a class="toc-href" href="#experimental-verification-of-hall-effect5" title="Experimental verification of hall effect.[5]&para;">Experimental verification of hall effect.[5]&para;</a></li></ul></li></ul></li><li><a class="toc-href" href="#quantum-hall-effects_2" title="Quantum Hall Effects&para;">Quantum Hall Effects&para;</a><ul><li><a class="toc-href" href="#classical-explanation3" title="Classical Explanation[3]&para;">Classical Explanation[3]&para;</a></li><li><a class="toc-href" href="#landau-levels2" title="Landau Levels[2]&para;">Landau Levels[2]&para;</a></li><li><a class="toc-href" href="#degeneracy-of-landau-levels62" title="Degeneracy of Landau levels[6,2]&para;">Degeneracy of Landau levels[6,2]&para;</a></li><li><a class="toc-href" href="#edge-modes4" title="Edge modes[4]&para;">Edge modes[4]&para;</a></li></ul></li></ul></li></ul></div>
+        <div class="toc">
+<ul>
+<li><a href="#historical-aspects">Historical Aspects</a></li>
+<li><a href="#theoretical-aspects-86">Theoretical aspects [8,6]</a><ul>
+<li><a href="#the-classical-hall-effect">The Classical Hall Effect</a><ul>
+<li><a href="#experimental-verification-of-hall-effect5">Experimental verification of hall effect.[5]</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#quantum-hall-effects">Quantum Hall Effects</a><ul>
+<li><a href="#classical-explanation3">Classical Explanation[3]</a></li>
+<li><a href="#landau-levels2">Landau Levels[2]</a></li>
+<li><a href="#degeneracy-of-landau-levels62">Degeneracy of Landau levels[6,2]</a></li>
+<li><a href="#edge-modes4">Edge modes[4]</a></li>
+</ul>
+</li>
+</ul>
+</div>
         </nav>
     </div>
     <div class="span8 article-content">
             
-            <h1 id="historical-aspects">Historical Aspects<a class="headerlink" href="#historical-aspects" title="Permanent link">&para;</a></h1>
+            
+<h1 id="historical-aspects">Historical Aspects<a class="headerlink" href="#historical-aspects" title="Permanent link">¶</a></h1>
 <p>The quantum Hall effect is a remarkable phenomenon discovered
 experimentally in which the Hall conductivity of a two dimensional
 system of electrons is found to have plateaus as a function of variables
-which determine the number of electrons participating in the&nbsp;effect.</p>
+which determine the number of electrons participating in the effect.</p>
 <p>The integer quantization of the Hall conductance was originally
 predicted by Ando, Matsumoto, and Uemura in 1975, on the basis of an
-approximate calculation which they themselves did not believe to be&nbsp;true![7]</p>
+approximate calculation which they themselves did not believe to be true![7]</p>
 <p>Several researchers subsequently observed the effect in experiments
 carried out on the inversion layer of MOSFETs. It was only in 1980 that
 Klaus von Klitzing, working at the high magnetic field laboratory in
 Grenoble with silicon-based samples developed by Michael Pepper and
 Gerhard Dorda, made the unexpected discovery that the Hall conductivity
 was exactly quantized. For this finding, von Klitzing was awarded the
-1985 Nobel Prize in&nbsp;Physics.</p>
+1985 Nobel Prize in Physics.</p>
 <p>What alerted von Klitzing to the effect was the insensitivity to the
-fine-tuning of the magnetic field strength. He &ldquo;switched on&rdquo; the field
+fine-tuning of the magnetic field strength. He “switched on” the field
 to apply it to a device through which a fixed current was flowing
 stabilized by a constant current source, and observed that when things
 stabilized, a digital voltmeter always showed the same Hall voltage
 across the sample to many significant figures. (The story is told that
 he first thought the voltmeter was broken!) Of course, each time the
-magnetic field was &ldquo;turned on&rdquo; was different, so the final field would
+magnetic field was “turned on” was different, so the final field would
 never have been the same on each run of the experiment, and certainly
-would never have &ldquo;accidentally&rdquo; taken the precise &ldquo;magic value&rdquo; of the
+would never have “accidentally” taken the precise “magic value” of the
 naive explanation. It is fortunate that von Klitzing switched on the
 magnetic field with a fixed current through the sample, rather than
 switched on the current at fixed field, as the coincidence of the
-unchanged digital voltmeter readings would then never have happened.&nbsp;[4]</p>
-<h1 id="theoretical-aspects-86">Theoretical aspects [8,6]<a class="headerlink" href="#theoretical-aspects-86" title="Permanent link">&para;</a></h1>
-<h2 id="the-classical-hall-effect">The Classical Hall Effect<a class="headerlink" href="#the-classical-hall-effect" title="Permanent link">&para;</a></h2>
+unchanged digital voltmeter readings would then never have happened. [4]</p>
+<h1 id="theoretical-aspects-86">Theoretical aspects [8,6]<a class="headerlink" href="#theoretical-aspects-86" title="Permanent link">¶</a></h1>
+<h2 id="the-classical-hall-effect">The Classical Hall Effect<a class="headerlink" href="#the-classical-hall-effect" title="Permanent link">¶</a></h2>
 <p>The original, classical Hall effect was discovered in 1879 by Edwin
 Hall. It is a simple consequence of the motion of charged particles in a
-magnetic&nbsp;field.</p>
+magnetic field.</p>
 <p>The setup for the same is as follows, consider a rectangular bar with
 thickness, t, Length L, and width W, as shown in Fig 1.
 Now a constant current along the <span class="math">\(x\)</span> axis is passed. When a magnetic
 field is applied along the <span class="math">\(z\)</span> axis (<span class="math">\(B_{z}\)</span>), the charges in the
-current experience a force (the Lorentz&nbsp;force).</p>
+current experience a force (the Lorentz force).</p>
 <p><img alt="Fig 1 Schematic diagram of the Hall effect measurement setup" src="../../images/Hall_Effect_Measurement_Setup_for_Electrons.webp"/></p>
 <p>In the absence <span class="math">\(B_{z}\)</span>, the charges follow approximately straight paths.
 However, when <span class="math">\(B_{z}\)</span> is applied, their paths get curved, in this way
@@ -164,104 +183,104 @@ This is called the Hall voltage <span class="math">\(V_{H}\)</span>.</p>
 that, in the steady-state condition, charges are not moving in the
 y-axis direction. <span class="math">\(\vec{{F}}=q(\vec{E}+\vec{vx\vec{B_{z}}})\)</span> , Now
 <span class="math">\(\vec{F}=0\implies0=E_{y}-v_{x}B_{z}\)</span> also <span class="math">\(E_y=-\frac{V_H}{w}\)</span> thus on
-substituting these values we get&nbsp;: </p>
+substituting these values we get : </p>
 <div class="math">$$\begin{aligned}
 V_{H} &amp; = &amp; v_{x}B_{z}w\end{aligned}$$</div>
 <p>
 This shows that <span class="math">\(V_{H}\)</span> is proportional to <span class="math">\(B_{z}\)</span>, this result is used
-in commercial hall sensors which are used to measure magnetic&nbsp;field.</p>
+in commercial hall sensors which are used to measure magnetic field.</p>
 <p>However one must note that the result drawn are for the the simple case
 with no impurities. Otherwise we will have to include the scattering
-effects. on doing so the previus equation gets modified&nbsp;as </p>
+effects. on doing so the previus equation gets modified as </p>
 <div class="math">$$\begin{aligned}
 E_{y} &amp; = &amp; \frac{-eB\tau}{m}E_{x}\end{aligned}$$</div>
 <p>where <span class="math">\(\tau\)</span> is called the scattering time. Thus <span class="math">\(R_{H}\)</span> called the Hall
-resistance is defined&nbsp;as </p>
+resistance is defined as </p>
 <div class="math">$$R_{H}=\frac{E_{y}}{j_{x}B}=-\frac{1}{ne}$$</div>
 <p>
-where n is the carrier&nbsp;constant.</p>
+where n is the carrier constant.</p>
 <p>Thus the measurement of Hall Coefficient gives the following information
-about the&nbsp;material</p>
+about the material</p>
 <ol>
 <li>
-<p>Carrier concentration ,&nbsp;n</p>
+<p>Carrier concentration , n</p>
 </li>
 <li>
-<p>The sign determines the carriers are holes or&nbsp;electrons.</p>
+<p>The sign determines the carriers are holes or electrons.</p>
 </li>
 </ol>
-<h3 id="experimental-verification-of-hall-effect5">Experimental verification of hall effect.[5]<a class="headerlink" href="#experimental-verification-of-hall-effect5" title="Permanent link">&para;</a></h3>
+<h3 id="experimental-verification-of-hall-effect5">Experimental verification of hall effect.[5]<a class="headerlink" href="#experimental-verification-of-hall-effect5" title="Permanent link">¶</a></h3>
 <p>An experiment was performed to measure the charge density of Germanium
 used as Hall Probe. The experiment was performed under the guidance of
-Sharvari Kulkarni&nbsp;P.</p>
+Sharvari Kulkarni P.</p>
 <p>The current passing through sample I, was kept constant at 10mA. The
 Hall Voltages <span class="math">\(V_{H}\)</span> were measured for different values of Magnetic
 field. For each value of magnetic field, four readings corresponding to
 different geometric orientations were considered. This is essential due
 to presence of other thermal and galvanometric transport effects . The
-data and graphs are as&nbsp;following:</p>
+data and graphs are as following:</p>
 <p><strong>Part-1:</strong> The value of magnetic field corresponding to particular
 current was determined and plotted. Two readings corresponding to single
 current value specifies the values during increment and decrement of
-current viz. to minimize the&nbsp;error.</p>
+current viz. to minimize the error.</p>
 <p><img alt="image" src="../../images/hall_data_table.webp" style="zoom:67%;"/></p>
 <p><img alt="Magnetic field vs Current " src="../../images/hall_data_graph.webp" style="zoom:50%;"/></p>
 <p><strong>Part-2:</strong> The values of Hall Voltages are measured for different
-geometrical combinations.The data obtained is as follows&nbsp;-</p>
+geometrical combinations.The data obtained is as follows -</p>
 <p><img alt="image" src="../../images/hall_data_table2.webp" style="zoom:67%;"/></p>
-<p>Corresponding graphs are plotted&nbsp;here.</p>
+<p>Corresponding graphs are plotted here.</p>
 <p><img alt="image" src="../../images/hall_data_graph2.webp" style="zoom: 67%;"/>
 <img alt="image" src="../../images/hall_data_graph3.webp" style="zoom:67%;"/>
 <img alt="image" src="../../images/hall_data_graph4.webp" style="zoom:67%;"/>
 <img alt="image" src="../../images/hall_data_graph5.webp" style="zoom:67%;"/></p>
 <p>From all these graphs, the average value of slope is <strong>0.03218
 <span class="math">\(\frac{mV}{Gauss}\)</span></strong> . We have sample current equal to 10mA and
-sample length as&nbsp;5mm.</p>
+sample length as 5mm.</p>
 <ol>
 <li>
 <p>Hence the value of Hall Coefficient is <strong>0.1609
     <span class="math">\(\frac{m^{3}}{C}\)</span>.</strong></p>
 </li>
 <li>
-<p>Positive sign implies that majority carriers are&nbsp;holes.</p>
+<p>Positive sign implies that majority carriers are holes.</p>
 </li>
 <li>
 <p>From this value, the carrier concentration can be calculated as
     <strong><span class="math">\(n=3.879x10^{19}m^{-3}\)</span></strong></p>
 </li>
 </ol>
-<h1 id="quantum-hall-effects_2">Quantum Hall Effects<a class="headerlink" href="#quantum-hall-effects" title="Permanent link">&para;</a></h1>
+<h1 id="quantum-hall-effects">Quantum Hall Effects<a class="headerlink" href="#quantum-hall-effects" title="Permanent link">¶</a></h1>
 <p>In the previous section we saw details about the Hall effect mainly that
-Hall Voltage is proportional to the magnetic&nbsp;field.</p>
+Hall Voltage is proportional to the magnetic field.</p>
 <p>Hall effect is easily observed in room temperature and relatively low
 magnetic field. If the same setup is now taken down to low temperatures
 (typically around 1-5 K) and high magnetic field (greater than few
 Tesla) we see a non linear relation between Hall conductance and
 Magnetic field. We see some sort of quantization of Hall conductance.
-The observed resistivity is shown in next&nbsp;figure.</p>
+The observed resistivity is shown in next figure.</p>
 <p><img alt="Hall resistance and longitudinal resistivity data as a function of the
 magnetic field for a GaAs/AlGaAs hetero-structures at 1.5 K" src="../../images/HallPvsB.webp" style="zoom:50%;"/>[8]</p>
 <p>On observing the graph and a little bit of theoretical calculations one
-can deduce the&nbsp;following:</p>
+can deduce the following:</p>
 <ul>
 <li>Both the Hall resistivity <span class="math">\(\rho_{xy}\)</span> and the longitudinal
-    resistivity <span class="math">\(\rho_{xx}\)</span> exhibit non linear&nbsp;behavior.</li>
+    resistivity <span class="math">\(\rho_{xx}\)</span> exhibit non linear behavior.</li>
 </ul>
 <p>For lower magnetic field Transverse resistance varies linearly but after
 certain limit it changes step-like with integer multiples of
-<span class="math">\(\frac{\hbar}{e^{2}}\)</span> with some plateau region in&nbsp;between.</p>
+<span class="math">\(\frac{\hbar}{e^{2}}\)</span> with some plateau region in between.</p>
 <ul>
-<li>On these plateau, the resistivity takes the&nbsp;value</li>
+<li>On these plateau, the resistivity takes the value</li>
 </ul>
 <div class="math">$$\rho_{xy}=\frac{\hbar}{e^{2}}\,\frac{1}{\nu}\;\quad\nu\epsilon\mathbf{Z}$$</div>
 <p>The value of <span class="math">\(\nu\)</span> is measured to be an integer to an extraordinary
-accuracy &mdash;- something like one part in <span class="math">\(10^{9}\)</span>&nbsp;.</p>
+accuracy —- something like one part in <span class="math">\(10^{9}\)</span> .</p>
 <p>The quantity<span class="math">\(\frac{\hbar}{e^{2}}\)</span> is called the quantum of resistivity
-(with value 25.8128075 k&nbsp;)</p>
+(with value 25.8128075 k )</p>
 <ul>
 <li>
 <p>The longitudinal resistance has zero value otherwise except at a
-    point where <span class="math">\(\rho_{xy}\)</span> jumps from one plateau to&nbsp;another.</p>
+    point where <span class="math">\(\rho_{xy}\)</span> jumps from one plateau to another.</p>
 </li>
 <li>
 <p>The center of each plateau occurs at a point when magnetic field
@@ -272,27 +291,27 @@ accuracy &mdash;- something like one part in <span class="math">\(10^{9}\)</span
 </ul>
 <p>Where, n is density of states of electrons and
 <span class="math">\(\phi_{0}=\frac{\hbar}{e^{2}}\)</span>as flux quantum. This is a value of
-Magnetic field at which number of Landau Levels are&nbsp;filled.</p>
+Magnetic field at which number of Landau Levels are filled.</p>
 <p>In order to see the Quantum Hall effect we need to suppress spin-flip
 scattering of the conduction electrons. Doing this requires us to do two
 things. The first one is to apply a magnetic field which is large enough
 to make the Zeeman energy big enough so that the up-spin and down-spin
 Landau levels do not overlap. Then we also need to make the temperature
 low enough so that only one of these spin-split Landau levels has a
-significant thermal&nbsp;occupation.</p>
+significant thermal occupation.</p>
 <p>Because the static magnetic fields that we have available to us in the
 laboratory are only strong enough to give Zeeman energies of order one
 degree Kelvin, we need to have temperatures of less than one degree
 Kelvin in order to see the Quantum Hall effect at all. And the lower we
-can make the temperature, the better the data will&nbsp;look.</p>
-<h3 id="classical-explanation3">Classical Explanation[3]<a class="headerlink" href="#classical-explanation3" title="Permanent link">&para;</a></h3>
-<p>One can explain the above phenomenon classically as&nbsp;follows.</p>
+can make the temperature, the better the data will look.</p>
+<h3 id="classical-explanation3">Classical Explanation[3]<a class="headerlink" href="#classical-explanation3" title="Permanent link">¶</a></h3>
+<p>One can explain the above phenomenon classically as follows.</p>
 <p>Consider the standard <span class="caps">2DEG</span> setup with four probes two along x axis and
 two along y axis similar to the arrangement in Fig1.
-Ohm&rsquo;s law can be written as <span class="math">\(J=\sigma E\)</span> .Where <span class="math">\(\sigma\)</span> is conductivity
+Ohm’s law can be written as <span class="math">\(J=\sigma E\)</span> .Where <span class="math">\(\sigma\)</span> is conductivity
 of the material. But in presence of Magnetic field B this <span class="math">\(\sigma\)</span>
 becomes a 2 x 2 tensor matrix. Hence the corresponding resistivity
-tensor can be written&nbsp;as</p>
+tensor can be written as</p>
 <div class="math">$$\begin{aligned}
 \sigma^{-1} &amp; = &amp; \rho\end{aligned}$$</div>
 <div class="math">$$\begin{pmatrix}\sigma_{xx} &amp; \sigma_{xy}\\
@@ -303,31 +322,31 @@ tensor can be written&nbsp;as</p>
 <p><span class="math">\(\therefore\)</span>
 </p>
 <div class="math">$$\sigma_{xx}=\frac{\rho_{xx}}{\rho_{xx}^{2}+\rho_{xy}^{2}}\quad and\quad\sigma_{xy}=-\frac{\rho_{xxy}}{\rho_{xx}^{2}+\rho_{xy}^{2}}$$</div>
-<p>This brings up the following&nbsp;cases</p>
+<p>This brings up the following cases</p>
 <ol>
 <li>
 <p><span class="math">\(\sigma_{xx}=0\)</span> <span class="math">\(\implies\sigma_{xy}=0\)</span> so
-    <span class="math">\(\sigma_{xx}=\frac{1}{\rho_{xx}}\)</span> this is the general&nbsp;solution</p>
+    <span class="math">\(\sigma_{xx}=\frac{1}{\rho_{xx}}\)</span> this is the general solution</p>
 </li>
 <li>
-<p><span class="math">\(\rho_{xy}\neq0\)</span> <span class="math">\(\implies\sigma_{xx}\)</span>and <span class="math">\(\sigma_{xy}\)</span>are non&nbsp;zero.</p>
+<p><span class="math">\(\rho_{xy}\neq0\)</span> <span class="math">\(\implies\sigma_{xx}\)</span>and <span class="math">\(\sigma_{xy}\)</span>are non zero.</p>
 </li>
 <li>
 <p><span class="math">\(\rho_{xx}=0\implies\sigma_{xx}=0\)</span></p>
 </li>
 </ol>
 <p>The third case is the one where we see the transition from one plateau
-to another&nbsp;plateau.</p>
-<p>This behavior can be explained with Drude&rsquo;s model of metals which
+to another plateau.</p>
+<p>This behavior can be explained with Drude’s model of metals which
 considers metals as free electron gas without any interaction between
 them.So between two collision electron behaves as a free particle.
-According to the Drude&rsquo;s Model
+According to the Drude’s Model
 <span class="math">\(\sigma_{xx}=\frac{\sigma_{0}}{1+\left(\tau\omega_{c}\right)^{2}}\)</span> where
 <span class="math">\(\tau\)</span> is the relaxation time and <span class="math">\(\sigma_{0}=\frac{ne^{2}\tau}{m}\)</span>.
 Thus <span class="math">\(\sigma_{xx}=0\)</span> implies that <span class="math">\(\tau\rightarrow\infty\)</span> or in other
-words, absence of&nbsp;scattering.</p>
+words, absence of scattering.</p>
 <p>In this particular case the current is flowing perpendicular to the
-field, it has the following&nbsp;form.</p>
+field, it has the following form.</p>
 <div class="math">$$\hat{E}=\begin{pmatrix}E_{x}\\
 E_{y}
 \end{pmatrix}=\begin{pmatrix}0 &amp; \rho_{xy}\\
@@ -342,44 +361,44 @@ j_{y}
 the charges is 0. Thus there is a steady current flowing in the sample.
 And hence no heat dissipation. Hence, <span class="math">\(\sigma_{xx}=0\)</span> means no current
 is flowing in longitudinal direction and <span class="math">\(\rho_{xx}=0\)</span> means there is no
-any dissipation of energy. We also see&nbsp;that
+any dissipation of energy. We also see that
 </p>
 <div class="math">$$\sigma_{xy}==\frac{-1}{\rho_{xy}}=\gamma\frac{e^{2}}{h}\qquad\gamma\rightarrow integer$$</div>
 <p>
-which is the same as the quantised hall value&nbsp;equation.</p>
-<h3 id="landau-levels2">Landau Levels[2]<a class="headerlink" href="#landau-levels2" title="Permanent link">&para;</a></h3>
+which is the same as the quantised hall value equation.</p>
+<h3 id="landau-levels2">Landau Levels[2]<a class="headerlink" href="#landau-levels2" title="Permanent link">¶</a></h3>
 <p>In presence of magnetic field, electrons follow circular trajectories
-called cyclotron&nbsp;orbits.</p>
+called cyclotron orbits.</p>
 <ul>
 <li>
 <p>The charged particles can only occupy orbits with discrete energy
-    values, called Landau&nbsp;levels.</p>
+    values, called Landau levels.</p>
 </li>
 <li>
 <p>The Landau levels are degenerate, with the number of electrons per
-    level directly proportional to the strength of the applied magnetic&nbsp;field.</p>
+    level directly proportional to the strength of the applied magnetic field.</p>
 </li>
 <li>
 <p>Landau quantization is directly responsible for oscillations in
     electronic properties of materials as a function of the applied
-    magnetic&nbsp;field.</p>
+    magnetic field.</p>
 </li>
 </ul>
 <p>Now lets look at the mathematical derivation of the above statement.
 Consider our previous model of two-dimensional electron gas system, say
 with charge q confined to an area A = <span class="math">\(L_{x}L_{y}\)</span> in the x-y plane. Let
-the magnetic field applied be <span class="math">\(\hat{B}=B_{z}\hat{z}\)</span>&nbsp;.</p>
-<p>Now the Hamiltonian of such a system will be given&nbsp;by
+the magnetic field applied be <span class="math">\(\hat{B}=B_{z}\hat{z}\)</span> .</p>
+<p>Now the Hamiltonian of such a system will be given by
 </p>
 <div class="math">$$\hat{H}=\frac{1}{2m}(\hat{\mathbf{p}}-q\hat{\mathbf{A}}/c)^{2}$$</div>
 <p>where <span class="math">\(\hat{p}\)</span> is the canonical momentum operator and <span class="math">\(\hat{A}\)</span> is the
-electromagnetic vector&nbsp;potential.</p>
+electromagnetic vector potential.</p>
 <p>There is some gauge freedom in the choice of vector potential for a
 given magnetic field which means that adding the gradient of a scalar
 field to <span class="math">\(\hat{A}\)</span> changes the overall phase of the wave function by an
 amount corresponding to the scalar field. But physical properties are
 not influenced by the specific choice of gauge. For simplicity in
-calculation, lets choose the Landau gauge, which&nbsp;is</p>
+calculation, lets choose the Landau gauge, which is</p>
 <div class="math">$${\displaystyle \hat{\mathbf{A}}=\begin{pmatrix}0\\
 B_{z}x\\
 0
@@ -391,52 +410,52 @@ operator <span class="math">\(\hat{y}\)</span> is absent by the choice of gauge.
 <span class="math">\(\hat{p}_{y}\)</span> can be replaced by its eigenvalue
 <span class="math">\(k_{y}\)</span>.</p>
 <p>The Hamiltonian can also be written more simply by noting that the
-cyclotron frequency is <span class="math">\(\omega_{c}=\frac{qB}{mc}\)</span>,&nbsp;giving</p>
+cyclotron frequency is <span class="math">\(\omega_{c}=\frac{qB}{mc}\)</span>, giving</p>
 <div class="math">$$\hat{H}=\frac{\hat{p}_{x}^{2}}{2m}+\frac{1}{2}m\omega_{c}^{2}\left(\hat{x}-\frac{\hbar k_{y}}{m\omega_{c}}\right)^{2}$$</div>
 <p>
 . This is the Hamiltonian one would encounter for the quantum harmonic
 oscillator problem as well, except with the minimum of the potential
-shifted in coordinate space&nbsp;by </p>
+shifted in coordinate space by </p>
 <div class="math">$$x_{0}=\frac{k_{y}}{m\omega_c}$$</div>
 <p>.</p>
 <p>To find the energies, note that translating the harmonic oscillator
 potential does not affect the energies. The energies of this system are
-thus identical to those of the standard quantum harmonic&nbsp;oscillator,</p>
+thus identical to those of the standard quantum harmonic oscillator,</p>
 <div class="math">$$E_{n}=\hbar\omega_{c}\left(n+\frac{1}{2}\right),\quad n\geq0$$</div>
 <p> . The
-energy does not depend on the quantum number <span class="math">\(k_{y}\)</span>, so there will be&nbsp;degeneracy.</p>
+energy does not depend on the quantum number <span class="math">\(k_{y}\)</span>, so there will be degeneracy.</p>
 <p>With this argument we can conclude that the state of the electron can
 uniquely determined by two by two quantum numbers, n and <span class="math">\(k_{y}\)</span>. Now
-let us focus on the degeneracy of Landau&nbsp;level.</p>
-<h3 id="degeneracy-of-landau-levels62">Degeneracy of Landau levels[6,2]<a class="headerlink" href="#degeneracy-of-landau-levels62" title="Permanent link">&para;</a></h3>
+let us focus on the degeneracy of Landau level.</p>
+<h3 id="degeneracy-of-landau-levels62">Degeneracy of Landau levels[6,2]<a class="headerlink" href="#degeneracy-of-landau-levels62" title="Permanent link">¶</a></h3>
 <p>Each set of wave functions with the same value of n is called a Landau
 level. Effects of Landau levels are only observed when the mean thermal
 energy is smaller than the energy level separation,
 <span class="math">\(kT &lt;&lt; \hbar \omega_c\)</span>,
-meaning low temperatures and strong magnetic&nbsp;fields.</p>
+meaning low temperatures and strong magnetic fields.</p>
 <p>Each Landau level is degenerate because of the second quantum number
 <span class="math">\(k_{y}\)</span>, which can take the values
-<span class="math">\({\displaystyle k_{y}={\frac{2\pi N}{L_{y}}}}\)</span>, where N is an&nbsp;integer.</p>
+<span class="math">\({\displaystyle k_{y}={\frac{2\pi N}{L_{y}}}}\)</span>, where N is an integer.</p>
 <p>The allowed values of N are further restricted by the condition that the
 center of force of the oscillator, <span class="math">\(x_{0}\)</span>, must physically lie within
-the system, <span class="math">\(0\le x0&lt;L_{x}\)</span>. This gives the following range for&nbsp;N,
+the system, <span class="math">\(0\le x0&lt;L_{x}\)</span>. This gives the following range for N,
 </p>
 <div class="math">$${\displaystyle 0\leq N&lt;{\frac{m\omega_{c}L_{x}L_{y}}{2\pi\hbar}}.}$$</div>
 <p>For particles with charge <span class="math">\(q=Ze\)</span>, the upper bound on N can be simply
-written as a ratio of&nbsp;fluxes,</p>
+written as a ratio of fluxes,</p>
 <div class="math">$${\displaystyle {\frac{ZBL_{x}L_{y}}{(hc/e)}}=Z{\frac{\Phi}{\Phi_{0}}},}$$</div>
 <p>
 where <span class="math">\(\Phi_{0}=hc/e\)</span> is the fundamental quantum of flux and <span class="math">\(\Phi=BA\)</span>
 is the flux through the system (with area <span class="math">\(A=L_{x}L_{y}\)</span>).</p>
 <p>Thus, for particles with spin S, the maximum number D of particles per
-Landau level&nbsp;is</p>
+Landau level is</p>
 <div class="math">$${\displaystyle D=Z(2S+1){\frac{\Phi}{\Phi_{0}}}~}$$</div>
-<h3 id="edge-modes4">Edge modes[4]<a class="headerlink" href="#edge-modes4" title="Permanent link">&para;</a></h3>
+<h3 id="edge-modes4">Edge modes[4]<a class="headerlink" href="#edge-modes4" title="Permanent link">¶</a></h3>
 <p>So far we have discussed the ideal <span class="caps">2DEG</span> scenario. The real samples,
 though comparatively clean, do not have the transnational invariance
 that makes each state in a given Landau level have exactly the same
 energy. Hence there is some sort of broadening of the Landau level. So
-what is the explanation in this case&nbsp;?</p>
+what is the explanation in this case ?</p>
 <p>The initial attempts to explain the effect focused on this effect of
 disorder, and found that, while two-dimensional electron systems with
 disorder generally have localized states, this is modified in a magnetic
@@ -448,16 +467,16 @@ orbits move along open snakelike paths, and the states at that energy
 are extended as opposed to localized. These edge states act as skipping
 orbits that precess around the boundary of the system in the opposite
 sense to that of the Landau orbits, when a particle in a Landau orbit
-intersects the boundary, and bounces off&nbsp;it.</p>
+intersects the boundary, and bounces off it.</p>
 <p><img alt="Edge states in a sample" src="../../images/edge.webp"/></p>
-<p>[1]:&rdquo;Wikipedia Entry on Hall Effect&rdquo;, En.Wikipedia.org (Retrieved 25 April&nbsp;2019).</p>
-<p>[2]:&rdquo;Wikipedia Entry on Landau quantization&rdquo;, En.Wikipedia.org (Retrieved 26 April&nbsp;2019).</p>
-<p>[3]:&rdquo;<span class="caps">NPTEL</span> :: Physics - <span class="caps">NOC</span>: Advanced Condensed matter physics&rdquo; (Retrieved 27 April&nbsp;2019).</p>
-<p>[4]:F. Duncan M. Haldane, &ldquo;Nobel Lecture: Topological quantum matter&rdquo;, Rev. Mod. Phys. 89 (2017), pp.&nbsp;040502.</p>
-<p>[5]:P Sharvari Kulkarni, &ldquo;Report on Quantum Hall Effect&rdquo; (April 18,&nbsp;2019).</p>
-<p>[6]:David Tong, Lectures on the Quantum Hall Effect&nbsp;().</p>
-<p>[7]:T. Ando; Y. Matsumoto; Y. Uemura, &ldquo;Theory of Hall effect in a two-dimensional electron system&rdquo;, Journal of the Physical Society of Japan 39, 2 (), pp.&nbsp;279&mdash;288.</p>
-<p>[8]:Klaus von Klitzing, Beno&icirc;t Dou&ccedil;ot, Vincent Pasquier, Bertrand Duplantier, Vincent Rivasseau, The Quantum Hall Effect vol. 45, (Birkh&auml;user Basel,&nbsp;).</p>
+<p>[1]:”Wikipedia Entry on Hall Effect”, En.Wikipedia.org (Retrieved 25 April 2019).</p>
+<p>[2]:”Wikipedia Entry on Landau quantization”, En.Wikipedia.org (Retrieved 26 April 2019).</p>
+<p>[3]:”<span class="caps">NPTEL</span> :: Physics - <span class="caps">NOC</span>: Advanced Condensed matter physics” (Retrieved 27 April 2019).</p>
+<p>[4]:F. Duncan M. Haldane, “Nobel Lecture: Topological quantum matter”, Rev. Mod. Phys. 89 (2017), pp. 040502.</p>
+<p>[5]:P Sharvari Kulkarni, “Report on Quantum Hall Effect” (April 18, 2019).</p>
+<p>[6]:David Tong, Lectures on the Quantum Hall Effect ().</p>
+<p>[7]:T. Ando; Y. Matsumoto; Y. Uemura, “Theory of Hall effect in a two-dimensional electron system”, Journal of the Physical Society of Japan 39, 2 (), pp. 279—288.</p>
+<p>[8]:Klaus von Klitzing, Benoît Douçot, Vincent Pasquier, Bertrand Duplantier, Vincent Rivasseau, The Quantum Hall Effect vol. 45, (Birkhäuser Basel, ).</p>
 <script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
     var align = "center",
         indent = "0em",
@@ -588,8 +607,8 @@ intersects the boundary, and bounces off&nbsp;it.</p>
             <aside>
             <nav>
             <ul class="articles-timeline">
-                <li class="previous-article">« <a href="https://ashwinschronicles.github.io/git-cheat-sheet" title="Previous: git cheat-sheet">git cheat-sheet</a></li>
-                <li class="next-article"><a href="https://ashwinschronicles.github.io/Superconductivity" title="Next: Notes on Superconductivity">Notes on Superconductivity</a> »</li>
+                <li class="previous-article">« <a href="https://ashwinschronicles.github.io/Intro-to-IoT" title="Previous: A beginers IoT Project.">A beginers IoT Project.</a></li>
+                <li class="next-article"><a href="https://ashwinschronicles.github.io/gh-pages-with-pelican" title="Next: Make a Github Pages blog with Pelican">Make a Github Pages blog with Pelican</a> »</li>
             </ul>
             </nav>
             </aside>
@@ -598,10 +617,7 @@ intersects the boundary, and bounces off&nbsp;it.</p>
     <h4>Reading Time</h4>
     <p>~10 min read</p>
             <h4>Published</h4>
-            <time itemprop="dateCreated" datetime="2019-06-07T14:02:48+05:30">Jun 07, 2019</time>
-<h4>Last Updated</h4>
-<time datetime="2020-03-28T17:15:57+05:30">Mar 28, 2020</time>
-
+            <time itemprop="dateCreated" datetime="2019-01-01T00:00:00+05:30">Jan 01, 2019</time>
             <h4>Category</h4>
             <a class="category-link" href="https://ashwinschronicles.github.io/categories#science-ref">Science</a>
             <h4>Tags</h4>
