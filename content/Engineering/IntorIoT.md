@@ -8,6 +8,7 @@ Author: Ashwin
 Summary: In this post, we’ll be making a simple IoT project. Web page controlled LED strip using NodeMCU connected on a local network.
 gittime: off
 ---
+[TOC]
 
 In this post, we’ll be making a simple IoT project. Web page controlled LED strip using NodeMCU connected on a local network.
 

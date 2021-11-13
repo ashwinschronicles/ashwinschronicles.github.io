@@ -8,6 +8,7 @@ Author: Ashwin
 Summary: This post is a review of the Analog Discovery 2 + LabVIEW Home Bundle in a lab environment
 gittime: off
 ---
+[TOC]
 
 This post is a review of the Analog Discovery 2 + LabVIEW Home Bundle in a lab environment. It was originally posted [here](https://www.element14.com/community/roadTestReviews/3075/l/analog-discovery-2-labview-home-bundle-review) as a part of element14's RoadTest. I thank element14 for sending me the review unit.
 

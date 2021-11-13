@@ -10,8 +10,9 @@ keywords: belan, measurement, errors,
 comments: true
 gittime: off
 ---
+[TOC]
 
-EXPERIMENT NO: 1 Rolling a Belan on an inclined surface {#experiment-no-1-rolling-a-belan-on-an-inclined-surface .unnumbered}
+Rolling a Belan on an inclined surface {#experiment-no-1-rolling-a-belan-on-an-inclined-surface .unnumbered}
 =======================================================
 
 Aim of the experiment
@@ -30,7 +31,7 @@ System description
 
 Consider the inclined plane in figure [1](#fig:Rolling-Cylinder-on).
 
-![Rolling Cylinder on an Inclined Plane[\[fig:Rolling-Cylinder-on\]]{#fig:Rolling-Cylinder-on label="fig:Rolling-Cylinder-on"}](Fig1.png){#fig:Rolling-Cylinder-on width="0.4\\paperwidth"}
+![Rolling Cylinder on an Inclined Plane[\[fig:Rolling-Cylinder-on\]]{#fig:Rolling-Cylinder-on label="fig:Rolling-Cylinder-on"}]({attach}Fig1.png){#fig:Rolling-Cylinder-on "}
 
 let's establish all the forces acting on this rolling body . The force mg is acting in the downward direction and it has two components one is parallel to the plank and there's one component which is perpendicular to the plank and this in turn causes normal reaction and we call it $F_{n}$ .
 
@@ -97,13 +98,13 @@ Measurement of linear distances
 
 In order to measure the radii of the belan, a thread was used cover the circumference and a marking is done with a pen on both of the strings at the same level as shown in Fig [2](#fig:Circumference thread) and then the thread is placed on a ruler and the distance between the two markings on the string is measured, as shown in Fig [3](#fig:CircumMeasure){reference-type="ref" reference="fig:CircumMeasure"} . The least count of scale is 0.05 cm for the smaller radius and 0.1cm for bigger radius.
 
-![Measuring circumference of larger radius[\[fig:Circumference thread\]]{#fig:Circumference thread label="fig:Circumference thread"}](belan-images/circumferenceig.jpg){#fig:Circumference thread width="0.4\\paperwidth"}
+![Measuring circumference of larger radius[\[fig:Circumference thread\]]{#fig:Circumference thread label="fig:Circumference thread"}]({attach}belan-images/circumferenceig.jpg){#fig:Circumference thread }
 
-![Measuring circumference of larger radius[\[fig:CircumMeasure\]]{#fig:CircumMeasure label="fig:CircumMeasure"}](belan-images/circumMeasureBig.jpg){#fig:CircumMeasure width="0.4\\paperwidth"}
+![Measuring circumference of larger radius[\[fig:CircumMeasure\]]{#fig:CircumMeasure label="fig:CircumMeasure"}]({attach}belan-images/circumMeasureBig.jpg){#fig:CircumMeasure }
 
-![Measuring circumference of smaller radius[\[fig:Circumference thread-1\]]{#fig:Circumference thread-1 label="fig:Circumference thread-1"}](belan-images/circum_small.jpg){#fig:Circumference thread-1 width="0.4\\paperwidth"}
+![Measuring circumference of smaller radius[\[fig:Circumference thread-1\]]{#fig:Circumference thread-1 label="fig:Circumference thread-1"}]({attach}belan-images/circum_small.jpg){#fig:Circumference thread-1 }
 
-![Measuring circumference of smaller radius[\[fig:CircumMeasure-1\]]{#fig:CircumMeasure-1 label="fig:CircumMeasure-1"}](belan-images/circumMeasureSmall.jpg){#fig:CircumMeasure-1 width="0.4\\paperwidth"}
+![Measuring circumference of smaller radius[\[fig:CircumMeasure-1\]]{#fig:CircumMeasure-1 label="fig:CircumMeasure-1"}]({attach}belan-images/circumMeasureSmall.jpg){#fig:CircumMeasure-1 }
 
                 Circumference of the smaller radius (in cm)   Circumference of the bigger radius (in cm)
 ------------ --------------------------------------------- --------------------------------------------
@@ -126,25 +127,24 @@ In order to measure the length of the belan, I placed the belan against a wall a
 
 The length of belan as measured using this procedure is 35.8 $\pm$0.1 cm (least count of tape measure is 0.1 cm)
 
-![Measurement of length of belan[\[fig:BelanLegth1\]]{#fig:BelanLegth1 label="fig:BelanLegth1"}](belan-images/belanHeght1.jpg){#fig:BelanLegth1 width="0.4\\paperwidth"}
+![Measurement of length of belan[\[fig:BelanLegth1\]]{#fig:BelanLegth1 label="fig:BelanLegth1"}]({attach}belan-images/belanHeght1.jpg){#fig:BelanLegth1 }
 
-![Measurement of length of belan[\[fig:BelanLegth2\]]{#fig:BelanLegth2 label="fig:BelanLegth2"}](belan-images/belanHeght2.jpg){#fig:BelanLegth2 width="0.4\\paperwidth"}
+![Measurement of length of belan[\[fig:BelanLegth2\]]{#fig:BelanLegth2 label="fig:BelanLegth2"}]({attach}belan-images/belanHeght2.jpg){#fig:BelanLegth2 }
 
 ### Measurement of distance travelled by belan
 
 The bench used for the experiment has total length as 172cm (fig [8](#fig:Belan Length){reference-type="ref" reference="fig:Belan Length"} ). However the belan can travel only part of the distance. On either side, the shape of the belan prevents it from starting at the very end (and reaching the lowest point) thus a tape has been put to keep track of the start and the end point of the belan. As seen from the Figure [10](#fig:Belan Length-left){reference-type="ref" reference="fig:Belan Length-left"} & [9](#fig:Belan Length-right){reference-type="ref" reference="fig:Belan Length-right"} , the total length the belan can traverse is (166 - 4.3) = 161.7 cm. The least count of the scale used here is 1mm. Therefore the total length the belan can traverse is 161.7$\pm$ 0.1 cm.
 
-![Measurement of distance travelled by belan[\[fig:Belan Length\]]{#fig:Belan Length label="fig:Belan Length"}](belan-images/measure_table_lenght.jpg){#fig:Belan Length width="0.4\\paperwidth"}
+![Measurement of distance travelled by belan[\[fig:Belan Length\]]{#fig:Belan Length label="fig:Belan Length"}]({attach}belan-images/measure_table_lenght.jpg){#fig:Belan Length }
 
-![Measurement of distance travelled by belan (right end)[\[fig:Belan Length-right\]]{#fig:Belan Length-right label="fig:Belan Length-right"}](belan-images/measure_right_lenght.jpg){#fig:Belan Length-right width="0.4\\paperwidth"}
+![Measurement of distance travelled by belan (right end)[\[fig:Belan Length-right\]]{#fig:Belan Length-right label="fig:Belan Length-right"}]({attach}belan-images/measure_right_lenght.jpg){#fig:Belan Length-right }
 
-![Measurement of distance travelled by belan (right end)[\[fig:Belan Length-left\]]{#fig:Belan Length-left label="fig:Belan Length-left"}](belan-images/measure_left_lenght.jpg){#fig:Belan Length-left width="0.4\\paperwidth"}
+![Measurement of distance travelled by belan (right end)[\[fig:Belan Length-left\]]{#fig:Belan Length-left label="fig:Belan Length-left"}]({attach}belan-images/measure_left_lenght.jpg){#fig:Belan Length-left }
 
 ### Measurement of vertical lift at one end
 
 The selected bench for measurement has maximum flat length as 172 cm. We want to perform experiment at angles from 2 degree to 16 degree at an interval of 2. We can calculate the height required to be lifted at one end to reach the given set of angles as $L=172\sin\theta$. This gives us the following table [1](#tab:Measurement-of-vertical){reference-type="ref" reference="tab:Measurement-of-vertical"} .
 
-::: {#tab:Measurement-of-vertical}
   Angle(degree)   lift required (cm)   lift rounded to LC of scale (cm)
 --------------- -------------------- ----------------------------------
   2               6.003                6
@@ -156,25 +156,25 @@ The selected bench for measurement has maximum flat length as 172 cm. We want to
   14              41.611               41.6
   16              47.410               47.4
 
-  : Measurement of vertical lift at one end [\[tab:Measurement-of-vertical\]]{#tab:Measurement-of-vertical label="tab:Measurement-of-vertical"}
-:::
+
 
 .
 
 The Car Jack has been placed at the middle of one end of the bench (Fig[12](#fig:Jack balance){reference-type="ref" reference="fig:Jack balance"} ). For larger lengths (20cm onward) a set of wooden planks are added to increase the height (Fig [13](#fig:Jack wood){reference-type="ref" reference="fig:Jack wood"}). The bench can be lifted higher by rotating the shaft of the car jack until the required height is met (Fig ). Since the height can be measured to 0.1cm accuracy (LC of the scale used) this also translates into the accuracy for angle of the inclined plane. While measuring height care must be taken that the scale is perpendicular to ground and the height of the center of the bench leg is measured. One can use a flat card as a pointer and to avoid parallax. (Fig [11](#fig:Jack measure){reference-type="ref" reference="fig:Jack measure"})
 
-![Measurement of vertical lift using scale and flat card.[\[fig:Jack measure\]]{#fig:Jack measure label="fig:Jack measure"}](belan-images/measureJack.jpg){#fig:Jack measure width="0.4\\paperwidth"}
+![Measurement of vertical lift using scale and flat card.[\[fig:Jack measure\]]{#fig:Jack measure label="fig:Jack measure"}]({attach}belan-images/measureJack.jpg){#fig:Jack measure }
 
-![Placement of Car jack such that the bench is lifted and balanced.[\[fig:Jack balance\]]{#fig:Jack balance label="fig:Jack balance"}](\string"belan-images/jack on the bench\string".eps){#fig:Jack balance width="0.4\\paperwidth"}
+![Placement of Car jack such that the bench is lifted and balanced.[\[fig:Jack balance\]]{#fig:Jack balance label="fig:Jack balance"}]({attach}\string"belan-images/jack on the bench\string".eps){#fig:Jack balance }
 
-![A set of wooden planks are added to increase the height.[\[fig:Jack wood\]]{#fig:Jack wood label="fig:Jack wood"}](belan-images/jack+ane2.jpg){#fig:Jack wood width="0.4\\paperwidth"}
+![A set of wooden planks are added to increase the height.[\[fig:Jack wood\]]{#fig:Jack wood label="fig:Jack wood"}]({attach}belan-images/jack+ane2.jpg){#fig:Jack wood }
 
 Measurement of time taken to roll down
 --------------------------------------
 
 In order to measure the time taken for the belan to roll down, video of the experiment was taken in a mobile phone. The video recorded was then processed frame by frame to find the number of frames between the starting and belan reaching the end. This analysis was done on a mobile app named **"[Video Stopwatch](https://play.google.com/store/apps/details?id=us.secondscount&hl=en_IN)"** (As seen in fig [14](#fig:Screeenshot){reference-type="ref" reference="fig:Screeenshot"} ) .The video recorded had a 30 FPS (frames per second) thus each frame lasts for 33.33 ms and this is our least count. This exercises was done 3 times and the average was calculated.
 
-![Screenshot of the app[\[fig:Screeenshot\]]{#fig:Screeenshot label="fig:Screeenshot"}](belan-images/Screenshot.png){#fig:Screeenshot width="0.4\\paperwidth"}
+![Screenshot of the app[\[fig:Screeenshot\]]{#fig:Screeenshot label="fig:Screeenshot"}]({attach}belan-images/Screenshot.png){#fig:Screeenshot }
+```
 
   Angle(degree)   time (trial1) (in s)   time (trial2) (in s)   time (trial3) (in s)   Mean time (in s)   lift of bench (cm)
 --------------- ---------------------- ---------------------- ---------------------- ------------------ --------------------
@@ -187,7 +187,7 @@ In order to measure the time taken for the belan to roll down, video of the expe
   14              1.3                    1.333                  1.333                  1.322              41.6
   16              1.267                  1.2                    1.267                  1.245              47.4
 
-  : Measurement of time taken to roll down
+```
 
 After these sets of measurement, a kitchen anti slip mat was added on top of the bench surface. The time taken to roll down is measured again for 6 degree and 8 degree. The time measured thus is 2.033 s and 1.733 s respectively. This is similar to the one without surface modification thus rolling time is independent of surface (which is also clear from the formula for t Eq: [\[eq:time\]](#eq:time){reference-type="ref" reference="eq:time"}).
 
@@ -196,7 +196,7 @@ Measurement of weight of belan
 
 The weight of the belan was calculated using a kitchen weighing scale.The least count of the used measuring scale was 1g. It was found that the weight of the belan used in this experiment is 172 $\pm$1 g.
 
-![Measurement of weight of belan[\[fig:CircumMeasure-1-1\]]{#fig:CircumMeasure-1-1 label="fig:CircumMeasure-1-1"}](belan-images/BelanWeight.jpg){#fig:CircumMeasure-1-1 width="0.4\\paperwidth"}
+![Measurement of weight of belan[\[fig:CircumMeasure-1-1\]]{#fig:CircumMeasure-1-1 label="fig:CircumMeasure-1-1"}]({attach}belan-images/BelanWeight.jpg){#fig:CircumMeasure-1-1 }
 
 Plots
 -----

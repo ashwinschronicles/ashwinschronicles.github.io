@@ -14,6 +14,7 @@ series: More in the series: BMS
 series_index: 1
 gittime: off
 ---
+[TOC]
 
 This is part 1 of a series on Battery management system design.
 

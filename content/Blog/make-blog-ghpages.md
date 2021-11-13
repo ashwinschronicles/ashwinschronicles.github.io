@@ -17,16 +17,17 @@ To create your Github user page, log in to Github and create a  new repositorie 
 
 ## Installing Pelican
 We will first  create a virtual environment for Pelican via virtualenv before installing Pelican.
+cd into the directory where you want to install the Pelican website and then run the following command:
 ~~~bash
-virtualenv website
-cd website
+python -m venv .
 source bin/activate
 ~~~
-You can also do `workon website` inplace of the last two.
+This essentially creates a virtual python environment where Pelican can be installed and any python package installed here wont affect the global python
+packages.
 Once the virtual environment has been created and activated, Pelican can be installed via  prefixing with sudo if permissions warrant:
 
 ```bash
-pip install pelican markdown typogrify ghp-import shovel
+pip install pelican markdown typogrify ghp-import shovel cssmin webassets
 ```
 
 Now clone the source repository you created:
@@ -259,7 +260,20 @@ git checkout -b source
 This article just touches upon getting a basic website up and running. More features that Pelican offers (like custom plugins)can be explored [here](http://docs.getpelican.com/en/3.6.3/content.html).
 
 
+# Upgrading Pelican
+Pelican is under constant development so it might happen that after sometime you will need to upgrade to a newer version.
+For instance when I wrote the tutorial initially pelican was on version 3.7 and the current version is 4.7 is it seemed like a good idea to upgrade.
 
+To upgrade and regenerate the content you need these twoo commands 
+```bash
+pip install --upgrade pelican
+pelican content
+```
+
+Then we need to update the local copies of the plugins and themes. If you have just cloned from the original git repos the nall you need to do is 
+```bash
+git pull origin
+```
 # FAQs and Tips
 
 * **Separate slug (URL) words with a hyphen, or an underscore?** you should use a **hyphen** for your SEO **URLs**. Google treats a **hyphen** as a word separator, but does not treat an **underscore** that way. Google treats and **underscore** as a word joiner — so github_pages is the same as githubpages to Google.

@@ -8,7 +8,7 @@ Summary: In which the author writes their first blog post.
 
 Thanks for joining me!
 
-I am Ashwin Kumar K, a Dual Degree BE – Int. MSc Physics at BITS Pilani KK Birla Goa campus (Batch of 2017).
+I am Ashwin Kumar K, a Dual Degree BE – Int. MSc Physics at BITS Pilani KK Birla Goa campus (Batch of 2017-22).
 
 This is the first post of this site where I intend to post some of my works related to the field of Science and Engineering.
 

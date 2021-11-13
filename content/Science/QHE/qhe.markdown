@@ -5,7 +5,7 @@ Category:Science
 Slug: qhe
 Author: Ashwin
 Summary: Notes on Quantum Hall Effect and related phenomenon
-
+[TOC]
 #Historical Aspects
 
 

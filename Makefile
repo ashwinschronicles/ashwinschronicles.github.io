@@ -1,4 +1,4 @@
-PY?=python
+PY?=python3
 PELICAN?=pelican
 PELICANOPTS=
 
@@ -20,6 +20,14 @@ RELATIVE ?= 0
 ifeq ($(RELATIVE), 1)
 	PELICANOPTS += --relative-urls
 endif
+
+# SERVER ?= "0.0.0.0"
+#
+# PORT ?= 0
+# ifneq ($(PORT), 0)
+# 	PELICANOPTS += -p $(PORT)
+# endif
+
 
 help:
 	@echo 'Makefile for a pelican Web site                                           '

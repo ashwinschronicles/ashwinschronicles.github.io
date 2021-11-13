@@ -11,6 +11,7 @@ keywords: VNC,Nomachine,Extend desktop,linux
 gittime: off
 
 ---
+[TOC]
 
 If you have an old tablet or old laptop, you might want to put it to good use by using its display as a secondary screen to your primary laptop. If you are using windows on your primary laptop, you have a host of applications that does this for you (like Builtin windows Wireless display, Synergy) but if you are using linux you can follow the following instructions.
 

@@ -51,7 +51,6 @@ MARKDOWN = {
 # Social widget
 SOCIAL = (('Git', 'https://github.com/iamashwin99/'),
           ('Email', 'ashwinkumar.k.rao@gmail.com', 'My Email Address'),
-          ('Git', 'https://github.com/iamashwin26/', "Old"),
           ("RSS", SITEURL + "/feeds/all.atom.xml"),
           ('Facebook', 'https://www.facebook.com/iamashwin99'),
           ('LinkedIn','https://www.linkedin.com/in/ashwin-k-4854b8121/'))
@@ -79,8 +78,8 @@ DEFAULT_PAGINATION = False
 #RELATIVE_URLS = True
 PLUGIN_PATHS = ['/home/ashwin/Data/Sandbox/website/plugins/']
 
-PLUGINS = ["tipue_search",
-           "pelican-toc",
+PLUGINS = [
+          "tipue_search",
            "neighbors",
            "render_math", 
            "sitemap",
@@ -96,7 +95,9 @@ PLUGINS = ["tipue_search",
            "series",
 #           "filetime_from_git",
            "extract_toc",
-           "assets"]
+           "assets"
+           ]
+           
 DIRECT_TEMPLATES = ["index", "tags", "categories", "archives", "search", "404"]
 
 

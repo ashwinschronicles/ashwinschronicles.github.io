@@ -9,6 +9,7 @@ summary: This post is about git
 keywords: git,github
 gittime: off
 ---
+[TOC]
 
 # Quick Refresher
 
