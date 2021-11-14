@@ -20,6 +20,6 @@ Take a trip down my memory lane. I hope to see you around!
 
 Here is my CV  :
 
-[Curriculum Vitae](https://ashwinschronicles.github.io/pdfs/Vitae.pdf)
+[Curriculum Vitae](https://raw.githack.com/iamashwin99/CV_lyx/master/VitaePosted.pdf)
 
-[Single page version](https://ashwinschronicles.github.io/pdfs/Academic_CV.pdf)
+[Single page version (old)](https://raw.githack.com/iamashwin99/1pageCV/master/Academic_CV.pdf)
