@@ -164,7 +164,7 @@ The Car Jack has been placed at the middle of one end of the bench (Fig[12](#fig
 
 ![Measurement of vertical lift using scale and flat card.[\[fig:Jack measure\]]{#fig:Jack measure label="fig:Jack measure"}]({attach}belan-images/measureJack.jpg){#fig:Jack measure }
 
-![Placement of Car jack such that the bench is lifted and balanced.[\[fig:Jack balance\]]{#fig:Jack balance label="fig:Jack balance"}]({attach}\string"belan-images/jack on the bench\string".eps){#fig:Jack balance }
+![Placement of Car jack such that the bench is lifted and balanced.[\[fig:Jack balance\]]{#fig:Jack balance label="fig:Jack balance"}]({attach}belan-images/jack-on-the-bench.jpg){#fig:Jack balance }
 
 ![A set of wooden planks are added to increase the height.[\[fig:Jack wood\]]{#fig:Jack wood label="fig:Jack wood"}]({attach}belan-images/jack+ane2.jpg){#fig:Jack wood }
 
