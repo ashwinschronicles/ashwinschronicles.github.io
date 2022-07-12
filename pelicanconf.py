@@ -3,7 +3,7 @@
 from __future__ import unicode_literals
 
 AUTHOR = u'Ashwin Kumar K'
-SITENAME = u"""<span style="color:#329A97;">Ashwin's</span> <span style="color:purple">Chronicles</span> """
+SITENAME = u"""<span style="color:#329A97;">Ashwin's</span> <span style="color:purple">Chronicles</span>🗞️ """
 SITEURL = ''
 #SITENAME = u"Ashwin's Chronicles"
 #SITEURL = 'https://ashwinschronicles.github.io/'
