@@ -5,8 +5,7 @@ from __future__ import unicode_literals
 AUTHOR = u'Ashwin Kumar K'
 SITENAME = u"""<span style="color:#329A97;">Ashwin's</span> <span style="color:purple">Chronicles</span>🗞️ """
 SITEURL = ''
-#SITENAME = u"Ashwin's Chronicles"
-#SITEURL = 'https://ashwinschronicles.github.io/'
+# SITEURL = 'https://ashwinschronicles.github.io/' # for production, moved to publishconf.py
 
 PATH = 'content'
 
@@ -76,10 +75,11 @@ DEFAULT_PAGINATION = False
 
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True
-PLUGIN_PATHS = ['/home/ashwin/Data/Sandbox/website/plugins/']
+PLUGIN_PATHS = ['../plugins/']
 
 PLUGINS = [
-          "tipue_search",
+          "search",
+          # "tipu_search",
            "neighbors",
            "render_math", 
            "sitemap",
@@ -92,13 +92,13 @@ PLUGINS = [
            "series", 
            "post_stats", 
            "pelican-js",
-           "series",
+           "series",which version of pelican works with tipue_search?
 #           "filetime_from_git",
            "extract_toc",
            "assets"
            ]
            
-DIRECT_TEMPLATES = ["index", "tags", "categories", "archives", "search", "404"]
+DIRECT_TEMPLATES = (('index', 'tags', 'categories','archives', 'search', '404'))  
 
 
 SITEMAP = {
@@ -174,3 +174,10 @@ DISQUS_FILTER = True
 UTTERANCES_FILTER = False
 COMMENTBOX_FILTER = True
 APPLAUSE_BUTTON = True
+
+
+# Site search plugin
+SEARCH_MODE = "output"
+SEARCH_HTML_SELECTOR = "article"
+
+
