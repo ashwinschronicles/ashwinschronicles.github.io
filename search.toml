@@ -1,0 +1,68 @@
+[input]
+base_directory = "/home/karnada/Sandbox/website/websources/output"
+html_selector = "article"
+
+[[input.files]]
+path = "AboutMe.html"
+url = "/AboutMe"
+title = "About Me"
+
+[[input.files]]
+path = "an-experiment-with-a-wooden-belan.html"
+url = "/an-experiment-with-a-wooden-belan"
+title = "An experiment with a wooden Belan"
+
+[[input.files]]
+path = "beamer-slides-using-markdown-and-pandoc.html"
+url = "/beamer-slides-using-markdown-and-pandoc"
+title = "Producing Beamer slide shows from markdown using Pandoc"
+
+[[input.files]]
+path = "BMS_for_an_EV_intro.html"
+url = "/BMS_for_an_EV_intro"
+title = "Battery Management System for an xEV - Part 1"
+
+[[input.files]]
+path = "extending-desktop-to-another-device-over-vnc.html"
+url = "/extending-desktop-to-another-device-over-vnc"
+title = "Extending Desktop to another device over VNC"
+
+[[input.files]]
+path = "Cryostat-probe-design.html"
+url = "/Cryostat-probe-design"
+title = "Cryostat probe design and optimisation for transport measurement."
+
+[[input.files]]
+path = "analog-discovery-2-labview-home-bundle-review.html"
+url = "/analog-discovery-2-labview-home-bundle-review"
+title = "Analog Discovery 2 + LabVIEW Home Bundle - Review"
+
+[[input.files]]
+path = "Superconductivity.html"
+url = "/Superconductivity"
+title = "Notes on Superconductivity"
+
+[[input.files]]
+path = "git-cheat-sheet.html"
+url = "/git-cheat-sheet"
+title = "git cheat-sheet"
+
+[[input.files]]
+path = "gh-pages-with-pelican.html"
+url = "/gh-pages-with-pelican"
+title = "Make a Github Pages blog with Pelican"
+
+[[input.files]]
+path = "qhe.html"
+url = "/qhe"
+title = "Quantum Hall Effect and related phenomena"
+
+[[input.files]]
+path = "Intro-to-IoT.html"
+url = "/Intro-to-IoT"
+title = "A beginers IoT Project."
+
+[[input.files]]
+path = "arduino-labview-review.html"
+url = "/arduino-labview-review"
+title = "Interfacing Arduino Mega using LabVIEW"
