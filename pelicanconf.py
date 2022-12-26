@@ -92,7 +92,7 @@ PLUGINS = [
            "series", 
            "post_stats", 
            "pelican-js",
-           "series",which version of pelican works with tipue_search?
+           "series", # which version of pelican works with tipue_search?
 #           "filetime_from_git",
            "extract_toc",
            "assets"
