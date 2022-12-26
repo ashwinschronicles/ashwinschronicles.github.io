@@ -43,6 +43,11 @@ url = "/Superconductivity"
 title = "Notes on Superconductivity"
 
 [[input.files]]
+path = "qhe.html"
+url = "/qhe"
+title = "Quantum Hall Effect and related phenomena"
+
+[[input.files]]
 path = "git-cheat-sheet.html"
 url = "/git-cheat-sheet"
 title = "git cheat-sheet"
@@ -51,11 +56,6 @@ title = "git cheat-sheet"
 path = "gh-pages-with-pelican.html"
 url = "/gh-pages-with-pelican"
 title = "Make a Github Pages blog with Pelican"
-
-[[input.files]]
-path = "qhe.html"
-url = "/qhe"
-title = "Quantum Hall Effect and related phenomena"
 
 [[input.files]]
 path = "Intro-to-IoT.html"
