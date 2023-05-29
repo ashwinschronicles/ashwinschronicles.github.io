@@ -4,12 +4,12 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="https://ashwinschronicles.github.io/theme/css/style.min.css?2fcac227">
+<link rel="stylesheet" href="/theme/css/style.min.css?2fcac227">
 
         <link rel="dns-prefetch" href="//fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
 
-        <meta name="google-site-verification" content="p61t4jkBXn4Wc7q3yIKCNSLcb7VC3Fay6dNkDefU3Ic" />        <meta name="author" content="Ashwin" />
+        <meta name="author" content="Ashwin" />
 
         <meta name="description" content="This post is about information gathered on designing a BMS for a xEV
 " />
@@ -20,7 +20,7 @@
 <meta name="keywords" content="BMS, EV, battery-terminologies, BMS-requirements, electrochemical-cell, Li-ion_working, ADC, Shunt-sensor, hall-effect current sensor, contactor, Isolation sensing, BMS protection, Charger control, Performance management, Lecture Notes, BMS,EV,NominalVoltage," />
 
 <meta property="og:title" content="Battery Management System for an xEV - Part 1  - Basic BMS requiremnets "/>
-<meta property="og:url" content="https://ashwinschronicles.github.io/BMS_for_an_EV_intro" />
+<meta property="og:url" content="/BMS_for_an_EV_intro" />
 <meta property="og:description" content="This post is about information gathered on designing a BMS for a xEV" />
 <meta property="og:site_name" content="Ashwin&#39;s Chronicles🗞️" />
 <meta property="og:article:author" content="Ashwin" />
@@ -33,32 +33,20 @@
 
         <title>Battery Management System for an xEV - Part 1  - Basic BMS requiremnets  · Ashwin&#39;s Chronicles🗞️
 </title>
-        <link rel="shortcut icon" href="https://ashwinschronicles.github.io/theme/images/favicon.ico" type="image/x-icon" />
-        <link rel="icon" href="https://ashwinschronicles.github.io/theme/images/apple-touch-icon-152x152.png" type="image/png" />
-        <link rel="apple-touch-icon" href="https://ashwinschronicles.github.io/theme/images/apple-touch-icon.png"  type="image/png" />
-        <link rel="apple-touch-icon" sizes="57x57" href="https://ashwinschronicles.github.io/theme/images/apple-touch-icon-57x57.png" type="image/png" />
-        <link rel="apple-touch-icon" sizes="72x72" href="https://ashwinschronicles.github.io/theme/images/apple-touch-icon-72x72.png" type="image/png" />
-        <link rel="apple-touch-icon" sizes="76x76" href="https://ashwinschronicles.github.io/theme/images/apple-touch-icon-76x76.png" type="image/png" />
-        <link rel="apple-touch-icon" sizes="114x114" href="https://ashwinschronicles.github.io/theme/images/apple-touch-icon-114x114.png" type="image/png" />
-        <link rel="apple-touch-icon" sizes="120x120" href="https://ashwinschronicles.github.io/theme/images/apple-touch-icon-120x120.png" type="image/png" />
-        <link rel="apple-touch-icon" sizes="144x144" href="https://ashwinschronicles.github.io/theme/images/apple-touch-icon-144x144.png" type="image/png" />
-        <link rel="apple-touch-icon" sizes="152x152" href="https://ashwinschronicles.github.io/theme/images/apple-touch-icon-152x152.png" type="image/png" />
-        <link rel="apple-touch-icon" sizes="152x152" href="https://ashwinschronicles.github.io/theme/images/apple-touch-icon-180x180.png" type="image/png" />
-        <link href="https://ashwinschronicles.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Ashwin&#39;s Chronicles🗞️ - Full Atom Feed" />
+        <link rel="shortcut icon" href="/theme/images/favicon.ico" type="image/x-icon" />
+        <link rel="icon" href="/theme/images/apple-touch-icon-152x152.png" type="image/png" />
+        <link rel="apple-touch-icon" href="/theme/images/apple-touch-icon.png"  type="image/png" />
+        <link rel="apple-touch-icon" sizes="57x57" href="/theme/images/apple-touch-icon-57x57.png" type="image/png" />
+        <link rel="apple-touch-icon" sizes="72x72" href="/theme/images/apple-touch-icon-72x72.png" type="image/png" />
+        <link rel="apple-touch-icon" sizes="76x76" href="/theme/images/apple-touch-icon-76x76.png" type="image/png" />
+        <link rel="apple-touch-icon" sizes="114x114" href="/theme/images/apple-touch-icon-114x114.png" type="image/png" />
+        <link rel="apple-touch-icon" sizes="120x120" href="/theme/images/apple-touch-icon-120x120.png" type="image/png" />
+        <link rel="apple-touch-icon" sizes="144x144" href="/theme/images/apple-touch-icon-144x144.png" type="image/png" />
+        <link rel="apple-touch-icon" sizes="152x152" href="/theme/images/apple-touch-icon-152x152.png" type="image/png" />
+        <link rel="apple-touch-icon" sizes="152x152" href="/theme/images/apple-touch-icon-180x180.png" type="image/png" />
+        <link href="/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Ashwin&#39;s Chronicles🗞️ - Full Atom Feed" />
 
-<script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-     m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-     })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-    ga('create', 'UA-161419840-1', 'auto');
-    ga('send', 'pageview');
-</script>
 
-<script>
-    window.heap=window.heap||[],heap.load=function(e,t){window.heap.appid=e,window.heap.config=t=t||{};var r=t.forceSSL||"https:"===document.location.protocol,a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=(r?"https:":"http:")+"//cdn.heapanalytics.com/js/heap-"+e+".js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n);for(var o=function(e){return function(){heap.push([e].concat(Array.prototype.slice.call(arguments,0)))}},p=["addEventProperties","addUserProperties","clearEventProperties","identify","resetIdentity","removeEventProperty","setEventProperties","track","unsetEventProperty"],c=0;c<p.length;c++)heap[p[c]]=o(p[c])};
-      heap.load("1155667143");
-</script>
 
     </head>
     <body>
@@ -71,19 +59,19 @@
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                         </a>
-                        <a class="brand" href="https://ashwinschronicles.github.io/"><span class=site-name><span style="color:#329A97;">Ashwin's</span> <span style="color:purple">Chronicles</span>🗞️ </span></a>
+                        <a class="brand" href="/"><span class=site-name><span style="color:#329A97;">Ashwin's</span> <span style="color:purple">Chronicles</span>🗞️ </span></a>
                         <div class="nav-collapse collapse">
                             <ul class="nav pull-right top-menu">
                                 <li >
                                     <a href=
-                                       https://ashwinschronicles.github.io
+                                       "/"
                                     >Home</a>
                                 </li>
-                                <li ><a href="https://ashwinschronicles.github.io/AboutMe">About&nbsp;Me</a></li>
-                                <li ><a href="https://ashwinschronicles.github.io/categories">Categories</a></li>
-                                <li ><a href="https://ashwinschronicles.github.io/tags">Tags</a></li>
-                                <li ><a href="https://ashwinschronicles.github.io/archives">Archives</a></li>
-                                <li><form class="navbar-search" action="https://ashwinschronicles.github.io/search" onsubmit="return validateForm(this.elements['q'].value);"> <input type="text" class="search-query" placeholder="Search" name="q" id="tipue_search_input"></form></li>
+                                <li ><a href="/AboutMe">About&nbsp;Me</a></li>
+                                <li ><a href="/categories">Categories</a></li>
+                                <li ><a href="/tags">Tags</a></li>
+                                <li ><a href="/archives">Archives</a></li>
+                                <li><form class="navbar-search" action="/search" onsubmit="return validateForm(this.elements['q'].value);"> <input type="text" class="search-query" placeholder="Search" name="q" id="tipue_search_input"></form></li>
                             </ul>
                         </div>
                     </div>
@@ -97,7 +85,7 @@
 <div class="row-fluid">
     <header class="page-header span10 offset2">
         <h1>
-            <a href="https://ashwinschronicles.github.io/BMS_for_an_EV_intro">
+            <a href="/BMS_for_an_EV_intro">
                 Battery Management  System for an xEV - Part&nbsp;1
                 <small class="subtitle">
                     Basic BMS requiremnets
@@ -190,7 +178,8 @@
     </div>
     <div class="span8 article-content">
             
-            
+            <main>
+                
 <p>This is part 1 of a series on Battery management system design.</p>
 <p>The data presented here was  collected as a part of study based Internship at Kaynes Technology, Mysore.</p>
 <p>Most of the data here is my notes on the following resources:</p>
@@ -228,7 +217,7 @@
   (e.g., by providing power limits), control charger, etc.</li>
 </ul>
 <h1 id="basic-working-of-an-electrochemical-cell">Basic working of an electrochemical cell<a class="headerlink" href="#basic-working-of-an-electrochemical-cell" title="Permanent link">¶</a></h1>
-<p><img alt="Kaynes%20report%208f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled.png" src="https://ashwinschronicles.github.io/Kaynes report 8f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled.png"/></p>
+<p><img alt="Kaynes%20report%208f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled.png" src="/Kaynes report 8f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled.png"/></p>
 <h2 id="the-function-of-the-negative-electrode">The function of the negative electrode<a class="headerlink" href="#the-function-of-the-negative-electrode" title="Permanent link">¶</a></h2>
 <p>In an electrochemical cell, the negative electrode is often a metal or an alloy or hydrogen (lead metal or paste for PbA)</p>
 <ul>
@@ -245,7 +234,7 @@ electrons from circuit, is reduced</li>
 to external circuit, is oxidized</li>
 </ul>
 <h1 id="li-ion-working-the-process-of-intercalation">Li-ion working (The process of intercalation)<a class="headerlink" href="#li-ion-working-the-process-of-intercalation" title="Permanent link">¶</a></h1>
-<p><img alt="Kaynes%20report%208f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled%201.png" src="https://ashwinschronicles.github.io/Kaynes report 8f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled 1.png"/></p>
+<p><img alt="Kaynes%20report%208f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled%201.png" src="/Kaynes report 8f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled 1.png"/></p>
 <p>Discharge process:</p>
 <ul>
 <li>During discharge, Li exits the surface of the negative-electrode
@@ -261,7 +250,7 @@ external circuit to positive electrode</li>
 </ul>
 <p>The active electrode materials are coated on both sides of metallic foils which act
 as the current collectors conducting the current into and out of the cell</p>
-<p><img alt="Kaynes%20report%208f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled%202.png" src="https://ashwinschronicles.github.io/Kaynes report 8f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled 2.png"/></p>
+<p><img alt="Kaynes%20report%208f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled%202.png" src="/Kaynes report 8f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled 2.png"/></p>
 <h1 id="negative-electrodes-for-lithium-ion-cells">Negative electrodes for lithium-ion cells<a class="headerlink" href="#negative-electrodes-for-lithium-ion-cells" title="Permanent link">¶</a></h1>
 <ul>
 <li>Presently, essentially all commercial lithium-ion cells use some form of graphite
@@ -270,15 +259,15 @@ as the current collectors conducting the current into and out of the cell</p>
 structures that are tightly bonded These layers are loosely stacked and there is
 room for lithium to intercalate between them</li>
 </ul>
-<p><img alt="Kaynes%20report%208f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled%203.png" src="https://ashwinschronicles.github.io/Kaynes report 8f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled 3.png"/></p>
+<p><img alt="Kaynes%20report%208f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled%203.png" src="/Kaynes report 8f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled 3.png"/></p>
 <h1 id="alternate-negative-electrode-material-lto">Alternate negative-electrode material <span class="caps">LTO</span><a class="headerlink" href="#alternate-negative-electrode-material-lto" title="Permanent link">¶</a></h1>
 <ul>
 <li>Lithium titanate oxide (Li4 Ti5 O12 , <span class="caps">LTO</span>) is an alternative negative-electrode material</li>
 <li>Disadvantage: high open-circuit potential (making cell voltage low)
 Advantage: nearly indestructible — very long life</li>
 </ul>
-<p><img alt="Kaynes%20report%208f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled%204.png" src="https://ashwinschronicles.github.io/Kaynes report 8f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled 4.png"/></p>
-<p><img alt="Kaynes%20report%208f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled%205.png" src="https://ashwinschronicles.github.io/Kaynes report 8f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled 5.png"/></p>
+<p><img alt="Kaynes%20report%208f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled%204.png" src="/Kaynes report 8f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled 4.png"/></p>
+<p><img alt="Kaynes%20report%208f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled%205.png" src="/Kaynes report 8f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled 5.png"/></p>
 <h1 id="future-negative-electrode-material-silicon">Future negative-electrode material silicon<a class="headerlink" href="#future-negative-electrode-material-silicon" title="Permanent link">¶</a></h1>
 <ul>
 <li>Using graphite, one can store up to one Li per six C atoms;
@@ -301,7 +290,7 @@ in-between to allow for expansion</li>
 called a “layered cathode”</li>
 <li></li>
 </ul>
-<p><img alt="Kaynes%20report%208f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled%206.png" src="https://ashwinschronicles.github.io/Kaynes report 8f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled 6.png"/></p>
+<p><img alt="Kaynes%20report%208f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled%206.png" src="/Kaynes report 8f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled 6.png"/></p>
 <p>Disadavntages:</p>
 <ul>
 <li>Cobalt is rare, toxic, and expensive;</li>
@@ -341,7 +330,7 @@ including conductive additives</li>
 <li>Olivine cathodes (<span class="caps">LFP</span>) have low voltage (and very little state information in their voltage)</li>
 <li>Spinel cathodes (<span class="caps">LMO</span>) are inexpensive and non-toxic, but can degrade rapidly</li>
 </ul>
-<p><img alt="Kaynes%20report%208f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled%207.png" src="https://ashwinschronicles.github.io/Kaynes report 8f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled 7.png"/></p>
+<p><img alt="Kaynes%20report%208f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled%207.png" src="/Kaynes report 8f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled 7.png"/></p>
 <h1 id="what-are-the-primary-functions-of-a-bms">What are the primary functions of a <span class="caps">BMS</span>?<a class="headerlink" href="#what-are-the-primary-functions-of-a-bms" title="Permanent link">¶</a></h1>
 <p>A <span class="caps">BMS</span> has the following priorities:</p>
 <ul>
@@ -358,7 +347,7 @@ charger, etc.</li>
 <h2 id="1-sensing-and-high-voltage-control">1. Sensing and high-voltage control<a class="headerlink" href="#1-sensing-and-high-voltage-control" title="Permanent link">¶</a></h2>
 <p>Measure voltage, current,temperature; control contactor,
 pre-charge; ground-fault detection,thermal management</p>
-<p><img alt="Kaynes%20report%208f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled%208.png" src="https://ashwinschronicles.github.io/Kaynes report 8f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled 8.png"/></p>
+<p><img alt="Kaynes%20report%208f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled%208.png" src="/Kaynes report 8f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled 8.png"/></p>
 <h2 id="2-protection-against">2. Protection against<a class="headerlink" href="#2-protection-against" title="Permanent link">¶</a></h2>
 <p>Over-charge, over-discharge, over-current, short circuit, extreme temperatures</p>
 <h2 id="3-interface">3. Interface<a class="headerlink" href="#3-interface" title="Permanent link">¶</a></h2>
@@ -373,7 +362,7 @@ all applications implement all features</p>
 <h1 id="modular-design-of-bms">Modular design of <span class="caps">BMS</span><a class="headerlink" href="#modular-design-of-bms" title="Permanent link">¶</a></h1>
 <p>Design extreme 1: Parallel-cell modules (<span class="caps">PCM</span>)
 Design extreme 2: Series-cell modules (<span class="caps">SCM</span>)</p>
-<p><img alt="Kaynes%20report%208f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled%209.png" src="https://ashwinschronicles.github.io/Kaynes report 8f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled 9.png"/></p>
+<p><img alt="Kaynes%20report%208f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled%209.png" src="/Kaynes report 8f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled 9.png"/></p>
 <ul>
 <li>A modular battery pack suggests a hierarchical master–slave
 <span class="caps">BMS</span> design as well</li>
@@ -391,7 +380,7 @@ wires—minimizes wiring-harness nightmare</li>
 </ul>
 </li>
 </ul>
-<p><img alt="Kaynes%20report%208f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled%2010.png" src="https://ashwinschronicles.github.io/Kaynes report 8f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled 10.png"/></p>
+<p><img alt="Kaynes%20report%208f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled%2010.png" src="/Kaynes report 8f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled 10.png"/></p>
 <h1 id="bms-slave-role"><span class="caps">BMS</span> slave role<a class="headerlink" href="#bms-slave-role" title="Permanent link">¶</a></h1>
 <p><span class="caps">BMS</span> slave needs to:</p>
 <ul>
@@ -470,7 +459,7 @@ expressed as %)</li>
 widths, expressed as <span class="caps">ADC</span> counts)</li>
 <li></li>
 </ul>
-<p><img alt="Kaynes%20report%208f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled%2011.png" src="https://ashwinschronicles.github.io/Kaynes report 8f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled 11.png"/></p>
+<p><img alt="Kaynes%20report%208f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled%2011.png" src="/Kaynes report 8f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled 11.png"/></p>
 <h1 id="chipsets">Chipsets<a class="headerlink" href="#chipsets" title="Permanent link">¶</a></h1>
 <p>Special chipsets are made to aid high-voltage <span class="caps">BMS</span> design</p>
 <ul>
@@ -524,7 +513,7 @@ to one or more cells per module and calibrate internal temperature</li>
 <li>Thermistor (uses voltage divider circuit)</li>
 </ul>
 <p>Voltage-divider + thermistor example</p>
-<p><img alt="Kaynes%20report%208f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled%2012.png" src="https://ashwinschronicles.github.io/Kaynes report 8f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled 12.png"/></p>
+<p><img alt="Kaynes%20report%208f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled%2012.png" src="/Kaynes report 8f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled 12.png"/></p>
 <h1 id="1c-battery-pack-sensing-current">1c. Battery-pack sensing: Current<a class="headerlink" href="#1c-battery-pack-sensing-current" title="Permanent link">¶</a></h1>
 <p>Battery pack electrical current must be measured to monitor
 safety, log abuse, and inform <span class="caps">SOC</span> and <span class="caps">SOH</span> algorithms</p>
@@ -532,13 +521,13 @@ safety, log abuse, and inform <span class="caps">SOC</span> and <span class="cap
 <ul>
 <li>
 <p>Shunt current sensor (Kelvin four-wire)</p>
-<p><img alt="Kaynes%20report%208f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled%2013.png" src="https://ashwinschronicles.github.io/Kaynes report 8f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled 13.png"/></p>
+<p><img alt="Kaynes%20report%208f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled%2013.png" src="/Kaynes report 8f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled 13.png"/></p>
 </li>
 <li>
 <p>Hall-effect current sensing</p>
 </li>
 </ul>
-<p><img alt="Kaynes%20report%208f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled%2014.png" src="https://ashwinschronicles.github.io/Kaynes report 8f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled 14.png"/></p>
+<p><img alt="Kaynes%20report%208f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled%2014.png" src="/Kaynes report 8f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled 14.png"/></p>
 <p>Both methods have advantages and disadvantages and both are in common use in
 <span class="caps">BMS</span> today</p>
 <h1 id="1d-high-voltage-contactor-control">1d: High-voltage contactor control<a class="headerlink" href="#1d-high-voltage-contactor-control" title="Permanent link">¶</a></h1>
@@ -554,9 +543,9 @@ simultaneously, enormous current would flow instantly,
 potentially welding the contactors closed or blowing a fuse</li>
 <li>So, a third “pre-charge” contactor is used</li>
 </ul>
-<p><img alt="Kaynes%20report%208f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled%2015.png" src="https://ashwinschronicles.github.io/Kaynes report 8f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled 15.png"/></p>
+<p><img alt="Kaynes%20report%208f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled%2015.png" src="/Kaynes report 8f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled 15.png"/></p>
 <p>Contactor procedure:</p>
-<p><img alt="Kaynes%20report%208f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled%2016.png" src="https://ashwinschronicles.github.io/Kaynes report 8f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled 16.png"/></p>
+<p><img alt="Kaynes%20report%208f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled%2016.png" src="/Kaynes report 8f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled 16.png"/></p>
 <h1 id="1e-isolation-sensing">1e. Isolation sensing<a class="headerlink" href="#1e-isolation-sensing" title="Permanent link">¶</a></h1>
 <p>Isolation sensing detects presence of a ground fault</p>
 <ul>
@@ -570,13 +559,13 @@ either the positive or negative terminal of the battery
 pack via a direct short</li>
 </ul>
 <p>Procedure: </p>
-<p><img alt="Kaynes%20report%208f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled%2017.png" src="https://ashwinschronicles.github.io/Kaynes report 8f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled 17.png"/></p>
-<p><img alt="Kaynes%20report%208f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled%2018.png" src="https://ashwinschronicles.github.io/Kaynes report 8f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled 18.png"/></p>
+<p><img alt="Kaynes%20report%208f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled%2017.png" src="/Kaynes report 8f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled 17.png"/></p>
+<p><img alt="Kaynes%20report%208f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled%2018.png" src="/Kaynes report 8f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled 18.png"/></p>
 <p>For fault on low side </p>
-<p><img alt="Kaynes%20report%208f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled%2019.png" src="https://ashwinschronicles.github.io/Kaynes report 8f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled 19.png"/></p>
+<p><img alt="Kaynes%20report%208f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled%2019.png" src="/Kaynes report 8f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled 19.png"/></p>
 <p>Isolation is deemed sufficient if Ri&gt;Vb /0.002 or R1 &gt; 500Vb</p>
 <h1 id="1f-thermal-control">1f. Thermal control<a class="headerlink" href="#1f-thermal-control" title="Permanent link">¶</a></h1>
-<p><img alt="Kaynes%20report%208f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled%2020.png" src="https://ashwinschronicles.github.io/Kaynes report 8f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled 20.png"/></p>
+<p><img alt="Kaynes%20report%208f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled%2020.png" src="/Kaynes report 8f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled 20.png"/></p>
 <p>Important to keep battery-pack cells at a “comfortable”temperature to ensure safety and to extend life</p>
 <ul>
 <li>Also important to keep cells at a uniform temperature for consistent aging (also
@@ -613,7 +602,7 @@ circuitry must act quickly state</li>
 <li>Abuse</li>
 </ul>
 <h2 id="overcurrentovertemperature-protection">Overcurrent/overtemperature protection<a class="headerlink" href="#overcurrentovertemperature-protection" title="Permanent link">¶</a></h2>
-<p><img alt="Kaynes%20report%208f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled%2021.png" src="https://ashwinschronicles.github.io/Kaynes report 8f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled 21.png"/></p>
+<p><img alt="Kaynes%20report%208f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled%2021.png" src="/Kaynes report 8f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled 21.png"/></p>
 <p>When possible, fallback protection paths should be implemented</p>
 <ul>
 <li>Red = cell-manufacturer specified region where cells
@@ -627,7 +616,7 @@ safe region</li>
 </ul>
 <h2 id="overvoltageovertemperature-protection">Overvoltage/overtemperature protection<a class="headerlink" href="#overvoltageovertemperature-protection" title="Permanent link">¶</a></h2>
 <p>Similar for voltage limits:</p>
-<p><img alt="Kaynes%20report%208f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled%2022.png" src="https://ashwinschronicles.github.io/Kaynes report 8f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled 22.png"/></p>
+<p><img alt="Kaynes%20report%208f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled%2022.png" src="/Kaynes report 8f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled 22.png"/></p>
 <p>But, each protection device added into main current path increases battery impedance, reducing power delivered to load
 Examples of protection devices include:</p>
 <ul>
@@ -686,7 +675,7 @@ operate at two rates:<ul>
 <li>Control signals</li>
 </ul>
 <p>A typical packet(frame) in <span class="caps">CAN</span> bus looks like : </p>
-<p><img alt="Kaynes%20report%208f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled%2023.png" src="https://ashwinschronicles.github.io/Kaynes report 8f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled 23.png"/></p>
+<p><img alt="Kaynes%20report%208f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled%2023.png" src="/Kaynes report 8f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled 23.png"/></p>
 <p>Abbreviations : <span class="caps">SOF</span> -  Start of frame; <span class="caps">RTR</span>- Ready to receive; <span class="caps">CRC</span> - cyclic redundancy check; <span class="caps">ACK</span>-acknowledgement bit</p>
 <p>Data frames are transmitted sequentially over the bus.</p>
 <h2 id="3b-charger-control">3b. Charger control<a class="headerlink" href="#3b-charger-control" title="Permanent link">¶</a></h2>
@@ -757,7 +746,7 @@ Instead, must estimate these values.</p>
 </ul>
 <p>But, cannot directly measure these parameters either! Therefore, must <strong>estimate</strong> <span class="caps">SOC</span>, <span class="caps">SOH</span></p>
 <p>Available inputs include all cell voltages, pack current, and temperatures of cells or modules.</p>
-<p><img alt="Kaynes%20report%208f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled%2024.png" src="https://ashwinschronicles.github.io/Kaynes report 8f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled 24.png"/></p>
+<p><img alt="Kaynes%20report%208f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled%2024.png" src="/Kaynes report 8f5f3fd08a764efe8f8e2e7b7ef051cf/Untitled 24.png"/></p>
 <p>There are both good and poor methods to produce estimates:
 Poor methods are generally simpler to understand, code,
 and validate, but yield less-accurate results</p>
@@ -777,23 +766,24 @@ All of these have costs in dollars, weight and/or volume</li>
 <li>Article 4: <span class="caps">SOH</span> estimation</li>
 <li>Article 5: Balancing and power-limits estimation</li>
 </ul>
+            </main>
 
 
              
 
 
 <div class="applause_button">
-    <applause-button url=https://ashwinschronicles.github.io/BMS_for_an_EV_intro> </applause-button>
+    <applause-button url=/BMS_for_an_EV_intro> </applause-button>
 </div>
 
  
                 <p id="post-share-links">
     Like this post? Share on:
-      <a href="https://twitter.com/intent/tweet?text=Battery%20Management%20%20System%20for%20an%20xEV%20-%20Part%C2%A01%20Basic%20BMS%20requiremnets&url=https%3A//ashwinschronicles.github.io/BMS_for_an_EV_intro&via=iamashwin99&hashtags=bms,ev,battery-terminologies,bms-requirements,electrochemical-cell,li-ion_working,adc,shunt-sensor,hall-effect-current-sensor,contactor,isolation-sensing,bms-protection,charger-control,performance-management" target="_blank" rel="nofollow noopener noreferrer" title="Share on Twitter">Twitter</a>
- ❄       <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A//ashwinschronicles.github.io/BMS_for_an_EV_intro" target="_blank" rel="nofollow noopener noreferrer" title="Share on Facebook">Facebook</a>
- ❄       <a href="https://www.reddit.com/submit?url=https%3A//ashwinschronicles.github.io/BMS_for_an_EV_intro&title=Battery%20Management%20%20System%20for%20an%20xEV%20-%20Part%C2%A01%20Basic%20BMS%20requiremnets" target="_blank" rel="nofollow noopener noreferrer" title="Share on Reddit">Reddit</a>
- ❄       <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A//ashwinschronicles.github.io/BMS_for_an_EV_intro&title=Battery%20Management%20%20System%20for%20an%20xEV%20-%20Part%C2%A01%20Basic%20BMS%20requiremnets&summary=This%20post%20is%20about%20information%20gathered%20on%20designing%20a%20BMS%20for%20a%C2%A0xEV&source=https%3A//ashwinschronicles.github.io/BMS_for_an_EV_intro" target="_blank" rel="nofollow noopener noreferrer" title="Share on LinkedIn">LinkedIn</a>
- ❄       <a href="mailto:?subject=Battery%20Management%20%20System%20for%20an%20xEV%20-%20Part%C2%A01%20Basic%20BMS%20requiremnets&amp;body=https%3A//ashwinschronicles.github.io/BMS_for_an_EV_intro" target="_blank" rel="nofollow noopener noreferrer" title="Share via Email">Email</a>
+      <a href="https://twitter.com/intent/tweet?text=Battery%20Management%20%20System%20for%20an%20xEV%20-%20Part%C2%A01%20Basic%20BMS%20requiremnets&url=/BMS_for_an_EV_intro&via=iamashwin99&hashtags=bms,ev,battery-terminologies,bms-requirements,electrochemical-cell,li-ion_working,adc,shunt-sensor,hall-effect-current-sensor,contactor,isolation-sensing,bms-protection,charger-control,performance-management" target="_blank" rel="nofollow noopener noreferrer" title="Share on Twitter">Twitter</a>
+ ❄       <a href="https://www.facebook.com/sharer/sharer.php?u=/BMS_for_an_EV_intro" target="_blank" rel="nofollow noopener noreferrer" title="Share on Facebook">Facebook</a>
+ ❄       <a href="https://www.reddit.com/submit?url=/BMS_for_an_EV_intro&title=Battery%20Management%20%20System%20for%20an%20xEV%20-%20Part%C2%A01%20Basic%20BMS%20requiremnets" target="_blank" rel="nofollow noopener noreferrer" title="Share on Reddit">Reddit</a>
+ ❄       <a href="https://www.linkedin.com/shareArticle?mini=true&url=/BMS_for_an_EV_intro&title=Battery%20Management%20%20System%20for%20an%20xEV%20-%20Part%C2%A01%20Basic%20BMS%20requiremnets&summary=This%20post%20is%20about%20information%20gathered%20on%20designing%20a%20BMS%20for%20a%C2%A0xEV&source=/BMS_for_an_EV_intro" target="_blank" rel="nofollow noopener noreferrer" title="Share on LinkedIn">LinkedIn</a>
+ ❄       <a href="mailto:?subject=Battery%20Management%20%20System%20for%20an%20xEV%20-%20Part%C2%A01%20Basic%20BMS%20requiremnets&amp;body=/BMS_for_an_EV_intro" target="_blank" rel="nofollow noopener noreferrer" title="Share via Email">Email</a>
 
             
             
@@ -814,7 +804,7 @@ All of these have costs in dollars, weight and/or volume</li>
                 <a class="accordion-toggle disqus-comment-count comment-count collapsed"
                    data-toggle="collapse"
                    data-parent="#accordion2"
-                   href="https://ashwinschronicles.github.io/BMS_for_an_EV_intro#comment_thread"
+                   href="/BMS_for_an_EV_intro#comment_thread"
                    id="comment-accordion-toggle">
                     Comments
                 </a>
@@ -825,7 +815,7 @@ All of these have costs in dollars, weight and/or volume</li>
 
                         <script src="https://utteranc.es/client.js"
         data-repo="ashwinschronicles/ashwinschronicles.github.io"
-        data-issue-term="https://ashwinschronicles.github.io/BMS_for_an_EV_intro"
+        data-issue-term="/BMS_for_an_EV_intro"
         data-label="💬Website-comments"
         data-theme=""
         crossorigin="anonymous"
@@ -845,8 +835,8 @@ All of these have costs in dollars, weight and/or volume</li>
             <aside>
             <nav>
             <ul class="articles-timeline">
-                <li class="previous-article">« <a href="https://ashwinschronicles.github.io/extending-desktop-to-another-device-over-vnc" title="Previous: Extending Desktop to another device over VNC - in Arch Linux">Extending Desktop to another device over VNC <small class="subtitle">in Arch Linux</small></a></li>
-                <li class="next-article"><a href="https://ashwinschronicles.github.io/beamer-slides-using-markdown-and-pandoc" title="Next: Producing Beamer slide shows from markdown using Pandoc">Producing Beamer slide shows from markdown using Pandoc</a> »</li>
+                <li class="previous-article">« <a href="/extending-desktop-to-another-device-over-vnc" title="Previous: Extending Desktop to another device over VNC - in Arch Linux">Extending Desktop to another device over VNC <small class="subtitle">in Arch Linux</small></a></li>
+                <li class="next-article"><a href="/beamer-slides-using-markdown-and-pandoc" title="Next: Producing Beamer slide shows from markdown using Pandoc">Producing Beamer slide shows from markdown using Pandoc</a> »</li>
             </ul>
             </nav>
             </aside>
@@ -866,49 +856,49 @@ All of these have costs in dollars, weight and/or volume</li>
             </li>
     </ul>
             <h4>Category</h4>
-            <a class="category-link" href="https://ashwinschronicles.github.io/categories#lecture-notes-ref">Lecture Notes</a>
+            <a class="category-link" href="/categories#lecture-notes-ref">Lecture Notes</a>
             <h4>Tags</h4>
             <ul class="list-of-tags tags-in-article">
-                <li><a href="https://ashwinschronicles.github.io/tags#adc-ref">ADC
+                <li><a href="/tags#adc-ref">ADC
                     <span class="superscript">1</span>
 </a></li>
-                <li><a href="https://ashwinschronicles.github.io/tags#battery-terminologies-ref">battery-terminologies
+                <li><a href="/tags#battery-terminologies-ref">battery-terminologies
                     <span class="superscript">1</span>
 </a></li>
-                <li><a href="https://ashwinschronicles.github.io/tags#bms-ref">BMS
+                <li><a href="/tags#bms-ref">BMS
                     <span class="superscript">1</span>
 </a></li>
-                <li><a href="https://ashwinschronicles.github.io/tags#bms-protection-ref">BMS protection
+                <li><a href="/tags#bms-protection-ref">BMS protection
                     <span class="superscript">1</span>
 </a></li>
-                <li><a href="https://ashwinschronicles.github.io/tags#bms-requirements-ref">BMS-requirements
+                <li><a href="/tags#bms-requirements-ref">BMS-requirements
                     <span class="superscript">1</span>
 </a></li>
-                <li><a href="https://ashwinschronicles.github.io/tags#charger-control-ref">Charger control
+                <li><a href="/tags#charger-control-ref">Charger control
                     <span class="superscript">1</span>
 </a></li>
-                <li><a href="https://ashwinschronicles.github.io/tags#contactor-ref">contactor
+                <li><a href="/tags#contactor-ref">contactor
                     <span class="superscript">1</span>
 </a></li>
-                <li><a href="https://ashwinschronicles.github.io/tags#electrochemical-cell-ref">electrochemical-cell
+                <li><a href="/tags#electrochemical-cell-ref">electrochemical-cell
                     <span class="superscript">1</span>
 </a></li>
-                <li><a href="https://ashwinschronicles.github.io/tags#ev-ref">EV
+                <li><a href="/tags#ev-ref">EV
                     <span class="superscript">1</span>
 </a></li>
-                <li><a href="https://ashwinschronicles.github.io/tags#hall-effect-current-sensor-ref">hall-effect current sensor
+                <li><a href="/tags#hall-effect-current-sensor-ref">hall-effect current sensor
                     <span class="superscript">1</span>
 </a></li>
-                <li><a href="https://ashwinschronicles.github.io/tags#isolation-sensing-ref">Isolation sensing
+                <li><a href="/tags#isolation-sensing-ref">Isolation sensing
                     <span class="superscript">1</span>
 </a></li>
-                <li><a href="https://ashwinschronicles.github.io/tags#li-ion_working-ref">Li-ion_working
+                <li><a href="/tags#li-ion_working-ref">Li-ion_working
                     <span class="superscript">1</span>
 </a></li>
-                <li><a href="https://ashwinschronicles.github.io/tags#performance-management-ref">Performance management
+                <li><a href="/tags#performance-management-ref">Performance management
                     <span class="superscript">1</span>
 </a></li>
-                <li><a href="https://ashwinschronicles.github.io/tags#shunt-sensor-ref">Shunt-sensor
+                <li><a href="/tags#shunt-sensor-ref">Shunt-sensor
                     <span class="superscript">1</span>
 </a></li>
             </ul>
@@ -1037,7 +1027,7 @@ All of these have costs in dollars, weight and/or volume</li>
     </div>
 </footer>            <script src="//code.jquery.com/jquery.min.js"></script>
         <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
-        <script src="https://ashwinschronicles.github.io/theme/js/elegant.prod.9e9d5ce754.js"></script>
+        <script src="/theme/js/elegant.prod.9e9d5ce754.js"></script>
         <script>
             function validateForm(query)
             {
@@ -1069,23 +1059,6 @@ All of these have costs in dollars, weight and/or volume</li>
     })
 </script>
 
-<!-- Start of StatCounter Code for Default Guide -->
-<script>
-var sc_project=12223345;
-var sc_invisible=1;
-var sc_security="c77ea628";
-var scJsHost = (("https:" == document.location.protocol) ?
-"https://secure." : "http://www.");
-document.write("<sc"+"ript type='text/javascript' src='" +
-scJsHost+
-"statcounter.com/counter/counter.js'></"+"script>");
-</script>
-<noscript><div class="statcounter"><a title="web analytics"
-href="http://statcounter.com/" target="_blank" rel="nofollow noopener noreferrer"><img
-class="statcounter"
-src="//c.statcounter.com/12223345/0/c77ea628/1/"
-alt="web analytics"></a></div></noscript>
-<!-- End of StatCounter Code for Default Guide -->
     </body>
     <!-- Theme: Elegant built for Pelican
         License : MIT -->
