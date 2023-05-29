@@ -181,3 +181,7 @@ SEARCH_MODE = "output"
 SEARCH_HTML_SELECTOR = "article"
 
 
+# search settings
+STORK_INPUT_OPTIONS = {
+    "html_selector": "main"
+}
