@@ -115,7 +115,7 @@ Josephson demonstrated that, for a short junction, the current that flows throug
 
 The DC Josephson effect is explained by a process known as Andreev reflection [@Tinkham-1]. A.F.Andreev explained the phenomenon in 1964 establishing the concept of the so-called Andreev reflection This reflection occurs at the interfaces between the superconductor S and a normal metal N. Andreev suggested that an electron that approaches the interface from the normal metal side can travel through the superconductor side by the formation of a Cooper pair with another electron with opposite momentum and spin on the superconductor side. At the same time, reflect a hole inside the normal metal region thus balancing the charge. As a result of this cycle, a pair of correlated electrons is transferred from one superconductor to another, creating a supercurrent flow across the junction. It explains how a normal current in the normal metal side becomes a supercurrent in the superconductor side. The AC Josephson relation in essence suggests that a Josephson junction can be a perfect voltage-to-frequency converter. The inverse is also possible by using a microwave frequency to induce a DC voltage in a Josephson junction, this phenomena is known as inverse AC Josephson effect.
 
-![Andreev Reflection process]({attach}Photos/andreev_reflection.webp)
+![Andreev Reflection process]({attach}Photos/{attach}Photos/andreev_reflection.webp.webp)
 
 #### RCSJ model
 
@@ -170,9 +170,9 @@ For device fabrication like, planar Josephson junction and planar SQUIDS, we nee
 
 In order to make the 2$\mu m$, we used photo lithography process with a pre-made mask. The mask contains the 2$\mu m$ line along with lines drawn on the contact pad at regular intervals. This allows us to make 7 devices at a time on the same sample. An image of the mask is shown in Fig [3](#fig:mask){reference-type="ref" reference="fig:mask"}.
 
-![Image of the mask that was used for lithography](pattern){#fig:mask width="5cm"}
+![Image of the mask that was used for lithography]({attach}Photos/pattern.webp)#{#fig:mask width="5cm"}
 
-![Image of the mask aligner that was used for lithography](maskAligner){#fig:mask-1 width="5cm"}
+![Image of the mask aligner that was used for lithography]({attach}Photos/maskAligner.webp)#{#fig:mask-1 width="5cm"}
 
 For the photo lithography process, $Si/$$SiO_{2}$wafer was cut in to several 5mm x 5mm substrate. after cleaning the substrates in the above mentioned process, a uniform layer of PMMA (+ve ) Photoresist was applied to the clean substrates and then spun rapidly using a spin coater at 3000 RPM to even out the photoresist layer, and then baked at 70$^{\circ}$C for 1 minute to evaporate the solvent. After the photoresist was applied, the mask was placed on Mask aligner and was exposed to the UV light for 30s to weaken the photoresist on the exposed area. Since these trilayer height were more than 300nm, there were difficulties while doing the liftoff process. The stress on the bottom layer creates an slanted edge on track. So while liftoff there is some possibilities that the 2$\mu m$ line come out because of the stress from outside photoresist. To avoid these circumstances we used the undercut process in the lithography, the undercut process helps us in making the photoresist edge in a convex shape as shown in Fig[5](#fig:The-different-profiles){reference-type="ref" reference="fig:The-different-profiles"}. Which would help us to make a discontinuity in the track height thus easing the liftoff process.
 
@@ -182,11 +182,11 @@ In the case of a positive photoresist, the UV radiation exposed region of the ph
 
 Image taken from optical microscope of the sample after the photolithography process is shown in Fig [6](#fig:Litho1){reference-type="ref" reference="fig:Litho1"}. One can clearly see the part where the photoresist is present (yellowish in colour) and where the photoresist is absent ( due to the $Si/$$SiO_{2}$substrate below).
 
-![Image taken from optical microscope of the sample after the photolithography process ](litho1){#fig:Litho1 width="5cm"}
+![Image taken from optical microscope of the sample after the photolithography process ]({attach}Photos/litho1.webp)#{#fig:Litho1 width="5cm"}
 
 During deposition, the material would cover these gaps and upon liftoff the material deposited on the photoresist would go away along with the resist leaving just the material at the desired place as shown in Fig [7](#fig:Litho2){reference-type="ref" reference="fig:Litho2"}.
 
-![Image taken from optical microscope of the sample after deposition and liftoff process ](Litho2){#fig:Litho2 width="5cm"}
+![Image taken from optical microscope of the sample after deposition and liftoff process ]({attach}Photos/Litho2.webp)#{#fig:Litho2 width="5cm"}
 
 ### Deposition 
 
@@ -194,7 +194,7 @@ Pt/Cu/Nb trilayer films were prepared on patterned substrates at ambient tempera
 
 The base pressure of the deposition chamber was of the order of $10^{-9}$mBar. At normal temperatures standard vacuum chambers have a tendency of holding $H_{2},H_{2}O$ and CO molecules by physical adsorption at the inner surface of the chamber and could take hours before they are pumped outside. By baking the chamber walls to 150$^{\circ}$C for about 12hrs and then cooling the contaminants could be pumped out further. A Residual Gas Analyser (RGA) was used to measure the pressure of contaminants. RGA is a small mass spectrometer typically used for contamination monitoring in vacuum systems. The RGA is able to effectively determines the chemical composition of the residual gas within the vacuum chamber, it works by ionising the residual gases present in the chamber to create ions of these gas molecules before determining their mass-to-charge ratio. It has a working range from $\approx5\times10^{-2}$ mbar to $5\times10^{-8}$ mbar.
 
-![The DC-magnetron sputtering setup present in superconductivity lab, NISER ](Sputter-Coater){#fig:The-DC-magnetron-sputtering width="10cm"}
+![The DC-magnetron sputtering setup present in superconductivity lab, NISER ]({attach}Photos/Sputter-Coater.webp)#{#fig:The-DC-magnetron-sputtering width="10cm"}
 
 The typical pressure of $N_{2},O_{2},H_{2}O$ in $10^{-8}mBar$ are 3,3,3.5. If the contaminant pressure is more than this base line, Titanium Sublimation pump (TSP) is used as many times as need to obtain the base line. A TSP works by heating a titanium filament wire to about 1300$^{\circ}$C by passing about 40A current for a minute. TSP is a type of vacuum pump used to remove residual gases in ultra-high vacuum systems. It has a titanium filament, when a sufficiently high current is passed, the filament reaches the sublimation temperature of titanium and which causes the surrounding walls of the vacuum chamber to gets coated with a layer of clean titanium. Due to the highly reactive nature of titanium, the gas molecules that collides with the titanium coated chamber walls are likely to chemically react with the titanium to form a stable, solid product. Thus reducing the gas pressure in the chamber. Pure Argon was then introduced to the chamber via a mass flow controller at the rate of 20SCCM. The argon helps in initiating the argon plasma across the target. The energetic ions are accelerated towards the target. The ions strike the target and atoms are ejected (or sputtered) from the surface. To initiate plasma generation, high voltage of constant power is applied between the cathode ( located directly behind the sputtering target ) and the anode (which is also connected to the chamber as electrical ground). Electrons which are present in the sputtering gas are accelerated away from the cathode causing collisions with nearby atoms of sputtering gas. These collisions cause an electrostatic repulsion which 'knock off' electrons from the sputtering gas atoms, causing ionization. The positively charged sputter gas atoms are now accelerated towards the negatively charged cathode, leading to high energy collisions with the surface of the target. Each of these collisions can cause atoms at the surface of the target to be ejected into the vacuum environment with enough kinetic energy to reach the surface of the substrate. In order to facilitate as many high energy collisions as possible -- leading to increased deposition rates -- the sputtering gas is typically chosen to be a high molecular weight gas such as argon or xenon. Strong magnets behind the cathode is used to confine the electrons in the plasma at or near the surface of the target. Confining the electrons leads to a higher density plasma and increased deposition rates. The target is cooled by water so that the heat generated will not build up to effect the magnets which keeps the plasma from spreading Shutter plates made of stainless steel is placed in front of target with a narrow opening in order to further improve the deposition. The sample stage is slowly rotated such that the substrates get slowly exposed to the plasma via the shutter plate opening thus enabling even deposition. The height from the substrate plate to the target, the plasma power, the plasma ignition pressure and the argon flow rate are all optimised for each material, previously for good quality deposition. Shutter plate opening width and sample stage rotation speed is optimised for deposition thickness for each target. The following table summarises the various optimisation parameters for the three targets:
 
@@ -214,25 +214,25 @@ Once the trilayer has been deposited and liftoff is done, we need to form the tr
 
 Another way to get to the required geometry is to use a subtractive manufacturing process like a Focused Ion Beam (FIB). A FIB is similar to and SEM in that it uses a beam of ions to image and directly modify or mill the specimen surface via the sputtering process. This milling can be controlled with nanometer precision. Crossbeam 340 from ZEISS, which uses gallium ions for the FIB is available in NISER and was used extensively for the fabrications of the Josephson junction samples. The Crossbeam 340 has a FESEM and gallium FIB guns mounted at $54^{\circlearrowleft}$ to each other. The sample and the stage is adjusted such that the focal axis of both FIB and SEM co-inside at the surface of the sample and is at a working distance of 5.12mm away from the gun tip. This alignment shown in Fig [10](#fig:Alignment-of-SEM){reference-type="ref" reference="fig:Alignment-of-SEM"} ensures that the imaging done by the SEM and the milling done by the FIB co-inside.
 
-![Alignment of SEM gun (grey) and FIB gun (brown) axis at the surface of the sample (purple) mounted on the stage (silver) ](secondRenderY){#fig:Alignment-of-SEM width="7cm"}
+![Alignment of SEM gun (grey) and FIB gun (brown) axis at the surface of the sample (purple) mounted on the stage (silver) ]({attach}Photos/secondRenderY.webp)#{#fig:Alignment-of-SEM width="7cm"}
 
 While milling, highly energised gallium ions strike the sample causing the target to sputter atoms from the surface. In this process gallium atoms will get embedded in the top few nano meters of the target surface, and the surface will become amorphous, this is known as gallium poisoning.
 
 There are two geometries in which the Josephson junction are fabricated using FIB, one is the vertical Junction (Fig [12](#fig:Vertical){reference-type="ref" reference="fig:Vertical"}), and the other is the planar Junction (Fig [11](#fig:Planar){reference-type="ref" reference="fig:Planar"}); both names describe the path the current takes through the trilayers. In the planar Junction, the current is in plane with the trilayers and in the case of the vertical junctions the current flows vertically through the trilayers.
 
-![Schematic of the Planar Josephson Junction, due the vertical FIB cut in the Niobium layer, the current travels in plane through first the Niobium layer then through the copper weaklink then finally through the other Niobium layer. The yellow arrowed line shows the direction of current flow](JJ-planar){#fig:Planar width="6cm"}
+![Schematic of the Planar Josephson Junction, due the vertical FIB cut in the Niobium layer, the current travels in plane through first the Niobium layer then through the copper weaklink then finally through the other Niobium layer. The yellow arrowed line shows the direction of current flow]({attach}Photos/JJ-planar.webp)#{#fig:Planar width="6cm"}
 
-![Schematic of the Vertical Josephson Junction, due to the nano pillar cuts on the left and the right, the current travels in plane through first the top Niobium layer then through the copper weaklink then finally through the other Niobium layer. The yellow arrowed line shows the direction of current flow](JJ-verical){#fig:Vertical width="6cm"}
+![Schematic of the Vertical Josephson Junction, due to the nano pillar cuts on the left and the right, the current travels in plane through first the top Niobium layer then through the copper weaklink then finally through the other Niobium layer. The yellow arrowed line shows the direction of current flow]({attach}Photos/JJ-verical.webp)#{#fig:Vertical width="6cm"}
 
 In order to do the Planar, cut the stage was tilted in such a way that the sample is perpendicular to the FIB gun, similar to the arrangement in Fig [10](#fig:Alignment-of-SEM){reference-type="ref" reference="fig:Alignment-of-SEM"}. Then a vertical cut is made to a controlled depth.In order to control the depth of the cut, exposure time had to be optimised. This was done by cutting several vertical lines away from the 2$\mu$ line with varying exposure time. Then Energy Dispersive Spectroscopy (EDAX) was done on these multiple cuts to see which exposure time first cuts the Niobium layer and thus exposing the Copper below it (Fig [13](#fig:Edax){reference-type="ref" reference="fig:Edax"}).
 
-![Energy Dispersive Spectroscopy (EDAX) of the multiple vertical cuts done in order to optimise the FIB cutting depth ](Edax){#fig:Edax width="7cm"}
+![Energy Dispersive Spectroscopy (EDAX) of the multiple vertical cuts done in order to optimise the FIB cutting depth ]({attach}Photos/Edax.webp)#{#fig:Edax width="7cm"}
 
 The basic principle of EDAX is as follows: During SEM microscopy, the primary electron beam sometimes removes electrons from the inner shells of an atom causing the outer electron to jump into the vacant spot by releasing energy in the form of X-rays. This energy difference is unique for each element and the element can be identified from it's characteristic X-ray. EDS measures these characteristic X-rays thus identifying the chemical composition of the sample.
 
 An image of the sample after milling with FIB as seen through an optical microscope is shown in Fig .
 
-![Image taken from optical microscope of the sample after milling with FIB, the devices are encircled](Litho-3){#fig:Litho3 width="5cm"}
+![Image taken from optical microscope of the sample after milling with FIB, the devices are encircled]({attach}Photos/Litho-3.webp)#{#fig:Litho3 width="5cm"}
 
 ### Wire bonding
 
@@ -262,7 +262,7 @@ Ultrasonic energy, when applied to metallic wire to be bonded, renders it tempor
 
 In wedge bonding, the wire come out through a 50 $\mu m$ hole at 45° angle and then under the needle tip which is shaped like a wedge as seen in Fig [\[fig:Image-of-wire\]](#fig:Image-of-wire){reference-type="ref" reference="fig:Image-of-wire"}.
 
-![image](\string"wedge tip\string".eps){width="5cm"}![image](\string"wedge tip2\string".eps){width="2.5cm"}
+![image]({attach}Photos/\string"wedge tip\string".eps.webp){width="5cm"}![image]({attach}Photos/\string"wedge tip2\string".eps.webp){width="2.5cm"}
 
 The quality of wire bonded is also sensitive to the height between the base plate and the needle tip when it is bonding, the wirebonder at NISER is setup such that this effective height is 76mm, at this height ultrasonic power and the bonding force are most effective, because the transducer is in surface and the bond tool stands perfectly vertical. Therefore the distance from base plate should always be fixed to this value.
 
@@ -294,7 +294,7 @@ In order to do analysis/characterisation of any material/nano device, one typica
 
 are most often used to characterise bulk and thinfilm samples. Superconductivity lab, NISER has a PPMS setup by Cryogenics that allows one to do low temperature characterisation of materials (1.6K - 300K) at different magnetic fields (upto 9 Tesla) and under different electric configuration of the sample. Fig[17](#fig:PPMS){reference-type="ref" reference="fig:PPMS"} shows the image of the PPMS system present in the lab.
 
-![Image of the PPMS system present at Superconductivity lab NISER](PPMS){#fig:PPMS width="5cm"}
+![Image of the PPMS system present at Superconductivity lab NISER]({attach}Photos/PPMS.webp)#{#fig:PPMS width="5cm"}
 
 The setup comprises of the following main components:
 
@@ -328,27 +328,27 @@ Prior to making the devices, magneto-transport measurements of the trilayer abov
 
 All the superconducting devices were first cooled to sub 2K, and then a 4 probe resistance vs temperature measurement was carried out with 1 - 10 $\mu$A by ramping the temperature slowly to 10K, in order to see the phase transitions. One such R-T graph is shown in Fig [18](#fig:RT-graph-for){reference-type="ref" reference="fig:RT-graph-for"}.
 
-![RT graph for a Cu(100nm)Nb(150nm) Josephson junction. The inset shows an SEM image of the measured JJ ](JJ){#fig:RT-graph-for width="10cm"}
+![RT graph for a Cu(100nm)Nb(150nm) Josephson junction. The inset shows an SEM image of the measured JJ ]({attach}Photos/JJ.webp)#{#fig:RT-graph-for width="10cm"}
 
 The first transition indicates the superconducting transition of the Niobium layer, and the second transition explains the proximitisation of the weak link. The resistance $R_{n}$ at 9K (above $T_{c}$) and $R_{L}$at 2K are noted and the sample is cooled back to sub 2K. $R_{n}$is the normal resistance and indicates that the device is out of the superconducting regime. Once the devices cool down to 2K the current-voltage characteristics of the device is measured by sweeping current from -$I_{n}$ to +$I_{n}$, where $I_{n}$ is the current for which the device yields the resistance $R_{n}$ at 2K, ie. the device switches to the normal regime. The I-V curves have the typical JJ/SQUID behaviour and is plotted in Fig [19](#fig:IV-graph-for){reference-type="ref" reference="fig:IV-graph-for"}.
 
-![IV graph for a Cu(100nm)Nb(150nm) Josephson junction ](\string"IV Pt20 CuNbJJ 2k\string".eps){#fig:IV-graph-for width="10cm"}
+![IV graph for a Cu(100nm)Nb(150nm) Josephson junction ]({attach}Photos/\string"IV Pt20 CuNbJJ 2k\string".eps.webp)#{#fig:IV-graph-for width="10cm"}
 
 $I_{c}$ of the device and the electrodes were extracted from this data by running through a python script that takes in the I-V data, calculates dV/dI, and applies a Savitzky--Golay filter of first-order to obtain $d^{2}I/d^{2}V$ and find the current ($I_{c}$) for which $d^{2}I/d^{2}V$ in both the positive and negative side and averages them. For normal Josephson junction the position of peak of $dI/dV$ is a good marker of the $I_{c}$, however in cases where the junction resistance is high, $dI/dV$ might not be clear enough to mitigate this peaks of $d^{2}I/d^{2}V$ is a better marker of $I_{c}$ A sample graph of $dI/dV$ and $d^{2}I/d^{2}V$ for a I vs V curve measured on a Josephson junction is shown in Fig [20](#fig:findIc){reference-type="ref" reference="fig:findIc"}.
 
-![A sample graph of $dI/dV$ and $d^{2}I/d^{2}V$ for a I vs V curve measured on a Josephson junction. The $I_{c}$ extracted from the graph is 140$\mu A$ ](samplePlot){#fig:findIc width="10cm"}
+![A sample graph of $dI/dV$ and $d^{2}I/d^{2}V$ for a I vs V curve measured on a Josephson junction. The $I_{c}$ extracted from the graph is 140$\mu A$ ]({attach}Photos/samplePlot.webp)#{#fig:findIc width="10cm"}
 
 The code for the python script is available [here](https://github.com/iamashwin99/JJ-Ic-finder) and a web app based on the same is hosted at [jj-ic-finder.herokuapp.com](https://jj-ic-finder.herokuapp.com/)
 
 In Fig [19](#fig:IV-graph-for){reference-type="ref" reference="fig:IV-graph-for"} the IV curve of a Nb/Cu Josephson Junction is shown. Once the device $I_{c}$ is found, the device is cooled to 2K and then supplied with $I_{c}$ current, and the junction voltage is measured while ramping the magnetic field from +250 Oe to -250 Oe ( positive cycle ) and then from -250Oe to 250Oe ( negative cycle ) at 2K. This gives us magnetoresistance as a function of the applied magnetic field. The magnetoresistance as a function of applied magnetic field is expected to have a diffraction pattern for JJs and SQUID oscillations imposed on top of the diffraction pattern for SQUID device as can be seen in Fig [21](#fig:V-H-graphSQUID){reference-type="ref" reference="fig:V-H-graphSQUID"} and Fig [22](#fig:V-H-graphSQUID-1){reference-type="ref" reference="fig:V-H-graphSQUID-1"}. This was explained in the theoretical sections above.
 
-![V H graph for a Cu(100nm)Nb(150nm) SQUID, SQUID oscillations and Fraunhofer pattern can be seen](\string"Squid VH\string".eps){#fig:V-H-graphSQUID width="10cm"}
+![V H graph for a Cu(100nm)Nb(150nm) SQUID, SQUID oscillations and Fraunhofer pattern can be seen]({attach}Photos/\string"Squid VH\string".eps.webp)#{#fig:V-H-graphSQUID width="10cm"}
 
-![Zoomed in graph of V H for a Cu(100nm)Nb(150nm) SQUID, The SQUID oscillations can be seen clearly](Squid-Oscilations){#fig:V-H-graphSQUID-1 width="10cm"}
+![Zoomed in graph of V H for a Cu(100nm)Nb(150nm) SQUID, The SQUID oscillations can be seen clearly]({attach}Photos/Squid-Oscilations.webp)#{#fig:V-H-graphSQUID-1 width="10cm"}
 
-![Magnetoresistance of the patterned Nb/Cu Josephson junction device in low magnetic fields for different values of junction currents](\string"VH CuNbJJ 2k\string".eps){#fig:Magnetoresistance-of-the width="10cm"}
+![Magnetoresistance of the patterned Nb/Cu Josephson junction device in low magnetic fields for different values of junction currents]({attach}Photos/\string"VH CuNbJJ 2k\string".eps.webp)#{#fig:Magnetoresistance-of-the width="10cm"}
 
-![Magnetoresistance of the patterned Nb/Cu Josephson junction device in low magnetic fields](\string"JJ VH\string".eps){#fig:Magnetoresistance-of-the-1 width="10cm"}
+![Magnetoresistance of the patterned Nb/Cu Josephson junction device in low magnetic fields]({attach}Photos/\string"JJ VH\string".eps.webp)#{#fig:Magnetoresistance-of-the-1 width="10cm"}
 
 In Fig [24](#fig:Magnetoresistance-of-the-1){reference-type="ref" reference="fig:Magnetoresistance-of-the-1"} , we examine the magnetoresistance of the patterned Nb/Cu Josephson junction device in low magnetic fields (\|H\| \< 300 Oe) and at its $I_{c}$. We find that the main lobe of the positive and the negative cycle overlap completely and there is no shift of the main lobe from origin as one would expect for a normal S-N-S junction. Fig [23](#fig:Magnetoresistance-of-the){reference-type="ref" reference="fig:Magnetoresistance-of-the"} is a plot of Junction voltage as a function of magnetic field for another patterned Nb/Cu Josephson junction device in low magnetic fields for different values of junction currents. Once can observe that higher currents increase the height of the lobes however the ratio of the first (main) lobe to the second lobe remains constant.
 
