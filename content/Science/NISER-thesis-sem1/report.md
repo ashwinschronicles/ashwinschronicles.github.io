@@ -115,7 +115,7 @@ Josephson demonstrated that, for a short junction, the current that flows throug
 
 The DC Josephson effect is explained by a process known as Andreev reflection [@Tinkham-1]. A.F.Andreev explained the phenomenon in 1964 establishing the concept of the so-called Andreev reflection This reflection occurs at the interfaces between the superconductor S and a normal metal N. Andreev suggested that an electron that approaches the interface from the normal metal side can travel through the superconductor side by the formation of a Cooper pair with another electron with opposite momentum and spin on the superconductor side. At the same time, reflect a hole inside the normal metal region thus balancing the charge. As a result of this cycle, a pair of correlated electrons is transferred from one superconductor to another, creating a supercurrent flow across the junction. It explains how a normal current in the normal metal side becomes a supercurrent in the superconductor side. The AC Josephson relation in essence suggests that a Josephson junction can be a perfect voltage-to-frequency converter. The inverse is also possible by using a microwave frequency to induce a DC voltage in a Josephson junction, this phenomena is known as inverse AC Josephson effect.
 
-![Andreev Reflection process]({attach}Photos/{attach}Photos/andreev_reflection.webp.webp)
+![Andreev Reflection process]({attach}Photos/andreev_reflection.webp)
 
 #### RCSJ model
 
