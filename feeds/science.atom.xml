@@ -1,0 +1,1431 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Ashwin's Chronicles🗞️ - Science</title><link href="https://ashwinschronicles.github.io/" rel="alternate"></link><link href="https://ashwinschronicles.github.io/feeds/science.atom.xml" rel="self"></link><id>https://ashwinschronicles.github.io/</id><updated>2023-06-11T00:00:00+05:30</updated><entry><title>Study of Josephson Junction.</title><link href="https://ashwinschronicles.github.io/josephson-junction-fabrication-and-characterisation" rel="alternate"></link><published>2021-12-15T00:00:00+05:30</published><updated>2023-06-11T00:00:00+05:30</updated><author><name>Ashwin</name></author><id>tag:ashwinschronicles.github.io,2021-12-15:/josephson-junction-fabrication-and-characterisation</id><summary type="html">&lt;p&gt;This post is about my masters thesis on Josephson Junction fabrication and&amp;nbsp;characterisation&lt;/p&gt;</summary><content type="html">
+&lt;h1 id="introduction"&gt;Introduction&lt;a class="headerlink" href="#introduction" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h1&gt;
+&lt;p&gt;This article is an adaptation of my Masters thesis report ( first semesters ), where I worked on the fabrications of Josephson Junctions and their charecterisation.
+In the next article ( second semesters ) I will be talking about  modelling the Josephson Junctions computationally and the results obtained from the simulations.
+At the beginning of this thesis, we introduce basic theoretical concepts that underlay the device we are trying to study, i.e. the Josephson Junction (&lt;span class="caps"&gt;JJ&lt;/span&gt;). We first study the postulates of superconductivity. Then we look at the Josephson effect, which describes the physics of a Superconductor-Insulator-Superconductor sandwich and then look at a popular model of a realistic Josephson junction, namely the &lt;span class="caps"&gt;RCSJ&lt;/span&gt; model. Later we will try to understand various aspects of fabrication and characterisation of such devices.&lt;/p&gt;
+&lt;h3 id="superconductivity"&gt;Superconductivity&lt;a class="headerlink" href="#superconductivity" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Heike Kamerlingh Onnes discovered the phenomenon of superconductivity in the Netherlands in 1911. He was the first to observe that the electrical resistance becomes exactly zero in certain materials and in temperatures below a specific critical value &lt;span class="math"&gt;\(T_{c}\)&lt;/span&gt; (Schrieffer and Tinkham 1999). Soon after this discovery, several other materials that showed superconducting behaviour were discovered, with different critical temperatures. Currently the highest temperature at which superconductivity was observed is in hydrogen sulphide (&lt;span class="math"&gt;\(H_{2}S\)&lt;/span&gt;), which has a &lt;span class="math"&gt;\(T_{c}\)&lt;/span&gt; reported as 203K, but at extremely high pressures (Drozdov et al. 2015). In 1933, Meissner and Ochsenfeld discovered that within a superconductor, the magnetic field completely vanishes i.r becomes zero, making the superconductor a perfect diamagnet. The expulsion of a magnetic field inside a superconductor is called the Meissner effect. Then the London brothers explained this effect, who proved that the magnetic field inside a superconductor has an exponential decay from the surface, with a decay length &lt;span class="math"&gt;\(\lambda\)&lt;/span&gt;, called London penetration depth. They explained that in order to facilitate this, the superconductor sets up electric currents on its surface, whose magnetic field opposes and cancels the applied magnetic field within the superconductor. The phenomenon of superconductivity was theoretically explained in 1957, almost 46 years after its initial discovery, by Bardeen, Cooper, and Schrieffer (Bardeen, Cooper, and Schrieffer 1957). They proposed the first microscopic theory of superconductivity, which was named the &lt;span class="caps"&gt;BCS&lt;/span&gt; theory, and received the Nobel Prize in Physics in 1972. They suggested that the electrons of a superconductor that are close to the Fermi surface attract indirectly through the crystal lattice, which is mediated by the exchange of phonons. This attraction overcomes the Coulomb repulsion between the two electrons and the electrons form pairs, which we now call as Cooper pairs. Cooper pairs feel no scattering, and thus lead to the formation of supercurrent. In &lt;span class="math"&gt;\(T&amp;gt;T_{c}\)&lt;/span&gt; though, the thermal vibration energy of the lattice becomes more significant than the pairing energy of the electrons, so the Cooper pair breaks, and thus the material becomes normal. It was later discovered that superconducting materials behave in different ways upon application of external magnetic fields. There are two major categories of superconductors which are type I and type &lt;span class="caps"&gt;II&lt;/span&gt;. A type I has only one critical field (keeping other parameters like current density and temperature constant) above which all superconductor properties are lost and while in superconducting state all magnetic field lines or magnetic flux are completely pushed out from the bulk of the material. In the case of a type &lt;span class="caps"&gt;II&lt;/span&gt; superconductor, there exists two separate critical field values between which a single flux quanta, &lt;span class="math"&gt;\(\phi_{0}\)&lt;/span&gt;, of the magnetic field is allowed to pass through the superconductor through isolated points and are called vortices. Currently one of the most used applications of superconductivity is to produce extremely high magnetic fields ranging into tens of teslas can trace it’s origin back to 1955 when &lt;span class="caps"&gt;G. B.&lt;/span&gt; Yntema created the first ever superconducting electromagnet using superconducting Nb wire windings with an iron-core, this setup was outputting a 0.7 T magnetic field&lt;/p&gt;
+&lt;h3 id="josephson-junctions"&gt;Josephson Junctions&lt;a class="headerlink" href="#josephson-junctions" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Prior to 1962, researchers were familiar with quantum mechanical tunnelling of normal electrons through a weak barrier; however, the probability of tunnelling of a cooper pair was thought to be insignificant given that the pair as a whole would have to tunnel through the barrier. In 1962 Brian David Josephson showed that this tunnelling probability is not low as previously thought. He predicted theoretically that two superconductors that are coupled (are in close proximity) by a weak link, which link may be made of a normal metal, an insulator, or a constriction of superconductivity, can still let the supercurrent flow through them (Josephson 1962). This macroscopic phenomenon was given the name Josephson effect.&lt;/p&gt;
+&lt;figure&gt;
+&lt;img alt="(a) The superconducting order parameter \Psi of a superconductor (S) penetrating into the normal metal (N) with a length scale of the superconducting coherence length,\xi. (b) Order parameters from two sides have an overlap in N, producing proximity Josephson coupling.(Lee and Lee 2018)" src="https://ashwinschronicles.github.io/Photos/a-The-superconducting-order-parameter-of-a-superconductor-S-penetrating-into-the.webp" style="width:8cm"/&gt;
+&lt;figcaption aria-hidden="true"&gt;(a) The superconducting order parameter &lt;span class="math inline"&gt;&lt;em&gt;Ψ&lt;/em&gt;&lt;/span&gt; of a superconductor (S) penetrating into the normal metal (N) with a length scale of the superconducting coherence length,&lt;span class="math inline"&gt;&lt;em&gt;ξ&lt;/em&gt;&lt;/span&gt;. (b) Order parameters from two sides have an overlap in N, producing proximity Josephson coupling.&lt;span class="citation" data-cites="SCFig"&gt;(Lee and Lee 2018)&lt;/span&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;p&gt;Josephson demonstrated that, for a short junction, the current that flows through the junction when no voltage bias is applied, and the phase difference &lt;span class="math"&gt;\(\phi\)&lt;/span&gt; across the junction, which is the difference in the phase factor between the order parameter of the two superconductors, are related through the relation: &lt;/p&gt;
+&lt;div class="math"&gt;$$I_{s}=I_{c}\,sin(\delta)\label{eq:JJ1}$$&lt;/div&gt;
+&lt;p&gt; Here, &lt;span class="math"&gt;\(I_{c}\)&lt;/span&gt; is the supercurrent amplitude and &lt;span class="math"&gt;\(\delta=\phi_{1}-\phi_{2}\)&lt;/span&gt; , where &lt;span class="math"&gt;\(\phi_{i}\)&lt;/span&gt; is the phase of each superconductor. This phenomenon is known as the &lt;span class="caps"&gt;DC&lt;/span&gt; Josephson effect. Josephson also showed &lt;span class="caps"&gt;AC&lt;/span&gt; Josephson effect where an applied constant voltage bias V on the junction leads to sinusoidal oscillations in the junction current and is governed by the equation: &lt;/p&gt;
+&lt;div class="math"&gt;$$V=\left(\Phi_{0}/2\pi\right)\dot{\delta}\label{eq:JJ2}$$&lt;/div&gt;
+&lt;p&gt; where &lt;span class="math"&gt;\(\Phi_{0}\approx2\times10^{-15}\)&lt;/span&gt; Weber is the flux quantum.&lt;/p&gt;
+&lt;p&gt;The &lt;span class="caps"&gt;DC&lt;/span&gt; Josephson effect is explained by a process known as Andreev reflection (Schrieffer and Tinkham 1999). &lt;span class="caps"&gt;A.F.&lt;/span&gt;Andreev explained the phenomenon in 1964 establishing the concept of the so-called Andreev reflection This reflection occurs at the interfaces between the superconductor S and a normal metal N. Andreev suggested that an electron that approaches the interface from the normal metal side can travel through the superconductor side by the formation of a Cooper pair with another electron with opposite momentum and spin on the superconductor side. At the same time, reflect a hole inside the normal metal region thus balancing the charge. As a result of this cycle, a pair of correlated electrons is transferred from one superconductor to another, creating a supercurrent flow across the junction. It explains how a normal current in the normal metal side becomes a supercurrent in the superconductor side. The &lt;span class="caps"&gt;AC&lt;/span&gt; Josephson relation in essence suggests that a Josephson junction can be a perfect voltage-to-frequency converter. The inverse is also possible by using a microwave frequency to induce a &lt;span class="caps"&gt;DC&lt;/span&gt; voltage in a Josephson junction, this phenomena is known as inverse &lt;span class="caps"&gt;AC&lt;/span&gt; Josephson effect.&lt;/p&gt;
+&lt;figure&gt;
+&lt;img alt="Andreev Reflection process" src="https://ashwinschronicles.github.io/Photos/andreev_reflection.webp" style="width:5cm"/&gt;
+&lt;figcaption aria-hidden="true"&gt;Andreev Reflection process&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;h4 id="rcsj-model"&gt;&lt;span class="caps"&gt;RCSJ&lt;/span&gt; model&lt;a class="headerlink" href="#rcsj-model" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;A Josephson junction, is typically composed of two superconducting electrodes separated by weaklink which is typically insulating, thus such a junction would have some unavoidable capacitance &lt;span class="math"&gt;\(C\)&lt;/span&gt; (Just like the parallel plate capacitor separated by a dielectric). If the junction current exceeds the critical current of the junction then quasi-particle excitations are generated. These quasi-particle currents are not superconducting and can be quite lossy just like a normal metal current, so we represent this as a normal resistor &lt;span class="math"&gt;\(R\)&lt;/span&gt;. This gives us the resistively and capacitivly shunted junction (&lt;span class="caps"&gt;RCSJ&lt;/span&gt;) model. This model helps us simulate the characteristics of a Josephson junction. A schematic representation of the same can be seen in Fig &lt;a data-reference="fig:Schematic-of-RCSJ" data-reference-type="ref" href="#fig:Schematic-of-RCSJ"&gt;1&lt;/a&gt;.&lt;/p&gt;
+&lt;figure&gt;
+&lt;img alt="A schematic representation of RCSJ model. Here I is the current through the device, I_{c} is the current through the capacitor I_{J} is the current through the Josephson Junction, I_{R} is the current through the resistance" id="fig:Schematic-of-RCSJ" src="https://ashwinschronicles.github.io/Photos/RCSJ.webp" style="width:5cm"/&gt;
+&lt;figcaption aria-hidden="true"&gt;A schematic representation of &lt;span class="caps"&gt;RCSJ&lt;/span&gt; model. Here &lt;span class="math inline"&gt;&lt;em&gt;I&lt;/em&gt;&lt;/span&gt; is the current through the device, &lt;span class="math inline"&gt;&lt;em&gt;I&lt;/em&gt;&lt;sub&gt;&lt;em&gt;c&lt;/em&gt;&lt;/sub&gt;&lt;/span&gt; is the current through the capacitor &lt;span class="math inline"&gt;&lt;em&gt;I&lt;/em&gt;&lt;sub&gt;&lt;em&gt;J&lt;/em&gt;&lt;/sub&gt;&lt;/span&gt; is the current through the Josephson Junction, &lt;span class="math inline"&gt;&lt;em&gt;I&lt;/em&gt;&lt;sub&gt;&lt;em&gt;R&lt;/em&gt;&lt;/sub&gt;&lt;/span&gt; is the current through the resistance&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;p&gt;Writing out Kirchov’s circuit laws for the &lt;span class="caps"&gt;RCSJ&lt;/span&gt; model (from Fig &lt;a data-reference="fig:Schematic-of-RCSJ" data-reference-type="ref" href="#fig:Schematic-of-RCSJ"&gt;1&lt;/a&gt;.)we can find&lt;/p&gt;
+&lt;div class="math"&gt;$$I_{c}+I_{J}+I_{R}=I$$&lt;/div&gt;
+&lt;div class="math"&gt;$$\frac{\Phi_{0}}{2\pi}C\ddot{\delta}+I_{c}\sin(\delta)+\frac{\Phi_{0}}{2\pi R}\dot{\delta}=I$$&lt;/div&gt;
+&lt;p&gt;or &lt;/p&gt;
+&lt;div class="math"&gt;$$\frac{\Phi_{0}}{2\pi}C\ddot{\delta}+\frac{\Phi_{0}}{2\pi R}\dot{\delta}=I-I_{c}\sin(\delta)$$&lt;/div&gt;
+&lt;p&gt; Rearranging as &lt;/p&gt;
+&lt;div class="math"&gt;$$\ddot{\delta}+\frac{1}{RC}\dot{\delta}=\left(\frac{2\pi}{C\Phi_{0}}\right)\left(I-I_{c}\sin(\delta)\right)\label{eq:dammpedeqn}$$&lt;/div&gt;
+&lt;p&gt; we can interpret Eq &lt;a data-reference="eq:dammpedeqn" data-reference-type="ref" href="#eq:dammpedeqn"&gt;[eq:dammpedeqn]&lt;/a&gt; as the dynamics of a damped particle with the following physical properties: &lt;/p&gt;
+&lt;div class="math"&gt;$$\begin{aligned}\text{ "effective mass" } &amp;amp; =C\\
+\text{ "coefficient of friction" } &amp;amp; =1/R\\
+\qquad\text{ "potential experienced by the particle" } &amp;amp; =-\left(2\pi/C\Phi_{0}\right)\left(I\delta+I_{c}\cos(\delta)\right).
+\end{aligned}$$&lt;/div&gt;
+&lt;p&gt;The dynamics of the Josephson junction phase difference in-terms of the damped particle can be described as follows: (Fig &lt;a data-reference="fig:washboard-potential" data-reference-type="ref" href="#fig:washboard-potential"&gt;2&lt;/a&gt;)&lt;/p&gt;
+&lt;figure&gt;
+&lt;img alt="Interpretation of the washboard potential(DanielSank, n.d.)" id="fig:washboard-potential" src="https://ashwinschronicles.github.io/Photos/JJ-IV.webp" style="width:13cm"/&gt;
+&lt;figcaption aria-hidden="true"&gt;Interpretation of the washboard potential&lt;span class="citation" data-cites="JJ-IVexpln"&gt;(DanielSank, n.d.)&lt;/span&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;When there is no junction current (at I=0) the junction experiences a purely cosine potential. At this stage the pseudo-particle sits trapped in one of the wells of the cosine, as indicated in Fig &lt;a data-reference="fig:washboard-potential" data-reference-type="ref" href="#fig:washboard-potential"&gt;2&lt;/a&gt;a. As we introduce some current we see the effect of an added linear term to the potential. The potential now resembles a tilted washboard, and hence is called as the &lt;em&gt;tilted washboard potential&lt;/em&gt;. If the bias current is less than &lt;span class="math"&gt;\(I_{C}\)&lt;/span&gt; there are still vallies in the potential and the ball remains trapped as indicated also in Fig &lt;a data-reference="fig:washboard-potential" data-reference-type="ref" href="#fig:washboard-potential"&gt;2&lt;/a&gt;a. Because the junction phase (i.e the pseudo-particle) is stuck at a fixed value of &lt;span class="math"&gt;\(\delta\)&lt;/span&gt;, the voltage is zero (as &lt;span class="math"&gt;\(V\propto\dot{\delta}\)&lt;/span&gt; ). This is the part of the &lt;span class="caps"&gt;IV&lt;/span&gt; curve where increase in junction current does not lead to increase in the junction voltage, as indicated in the horizontal blue line. At this stage since the junction element is still superconducting, all of the current flows through the tunnel element and none flows through the resistor thus the junction .&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;As we increase the current past &lt;span class="math"&gt;\(I_{c}\)&lt;/span&gt;, the linear term in the potential dominates the cosine part and the vallies start to disappear. The junction pseudo particle then rolls down hill as shown in Fig &lt;a data-reference="fig:washboard-potential" data-reference-type="ref" href="#fig:washboard-potential"&gt;2&lt;/a&gt;b. The pseudo particle now experiences a time varying phase, thus the junction voltage becomes non-zero and reaches to a finite value, this can be seen in the red line in Fig &lt;a data-reference="fig:washboard-potential" data-reference-type="ref" href="#fig:washboard-potential"&gt;2&lt;/a&gt;b&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Now, the current I exceeds the critical current of the tunnelling element and so the tunnelling element no longer behaves as a superconductor. Quasiparticles are generated, rendering the junction resistive. In other words nearly all of the current flows through the resistive element. Further increases in current show an accompanying linear increase in voltage according to &lt;span class="math"&gt;\(V=IR\)&lt;/span&gt;, similar to that of a normal metal as shown in Fig &lt;a data-reference="fig:washboard-potential" data-reference-type="ref" href="#fig:washboard-potential"&gt;2&lt;/a&gt;c, and by the green line marked Fig &lt;a data-reference="fig:washboard-potential" data-reference-type="ref" href="#fig:washboard-potential"&gt;2&lt;/a&gt;c.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;As the current is lowered, we travel back down the green line, as indicated by the mark Fig &lt;a data-reference="fig:washboard-potential" data-reference-type="ref" href="#fig:washboard-potential"&gt;2&lt;/a&gt;d. The rest of the process depends on how fast we are raising and lowering the current. As we lower the current below &lt;span class="math"&gt;\(I_{c}\)&lt;/span&gt;, the potential regains its cosine nature and regains vallies.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;If there were no dissipative forces as is the case when we sweep fast enough or when whatever dissipation remains can’t completely stop the particle, the particle would continue to roll down as it already has energy. Therefore, even as I is lowered below &lt;span class="math"&gt;\(I_{c}\)&lt;/span&gt; we still have time varying &lt;span class="math"&gt;\(\delta\)&lt;/span&gt; and therefore still have a measurable voltage. This can be concluded from Fig &lt;a data-reference="fig:washboard-potential" data-reference-type="ref" href="#fig:washboard-potential"&gt;2&lt;/a&gt;e and the pink line in Fig &lt;a data-reference="fig:washboard-potential" data-reference-type="ref" href="#fig:washboard-potential"&gt;2&lt;/a&gt;e&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;In the end, we go back to no bias case where the potential is again a cosine term and as we slowly sweep the voltage we slow down and finally stop the particle. Then as we increase the negative bias the process starts all over in reverse.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id="josephson-junctions-in-the-presence-of-a-magnetic-field"&gt;Josephson Junctions in the Presence of a Magnetic Field&lt;a class="headerlink" href="#josephson-junctions-in-the-presence-of-a-magnetic-field" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;In Eq&lt;a data-reference="eq:JJ1" data-reference-type="ref" href="#eq:JJ1"&gt;[eq:&lt;span class="caps"&gt;JJ1&lt;/span&gt;]&lt;/a&gt; we saw that he Josephson Junction current depends on the phase difference &lt;span class="math"&gt;\(\delta\)&lt;/span&gt; across the junction. When an external magnetic field is applied, the field influences the phase difference &lt;span class="math"&gt;\(\delta\)&lt;/span&gt;, this in turn causes interesting dynamics between the Josephson Junction current and the applied external magnetic fields. It can be shown that in the case of a small Josephson Junction this dependence follows the relation(Schrieffer and Tinkham 1999): &lt;/p&gt;
+&lt;div class="math"&gt;$$I_{J}=I_{0}\left|\frac{\sin\left(\pi\frac{\Phi_{J}}{\Phi_{0}}\right)}{\pi\frac{\Phi_{J}}{\Phi_{0}}}\right|$$&lt;/div&gt;
+&lt;p&gt;here &lt;span class="math"&gt;\(\Phi_{J}=\mu_{0}HLd\text{ is the magnetic flux linked to the whole barrier }\)&lt;/span&gt;. This is the standard from of the Fraunhofer pattern &lt;span class="math"&gt;\(F(x)=I_{0}\sin^{2}(\pi x)/(\pi x)^{2}\)&lt;/span&gt;and is seen as a unique characteristic confirmation of a Josephson junctions. For a &lt;span class="caps"&gt;SQUID&lt;/span&gt;, the critical current-magnetic field characteristic is similar to that of Josephson Junctions with the addition of &lt;span class="caps"&gt;SQUID&lt;/span&gt; oscillations superimposed on it. Both of these signatures are verified experimentally for the devices fabricated in lab in later sections.&lt;/p&gt;
+&lt;h1 id="experimental-details"&gt;Experimental Details&lt;a class="headerlink" href="#experimental-details" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h1&gt;
+&lt;h3 id="sample-preparation"&gt;Sample preparation&lt;a class="headerlink" href="#sample-preparation" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;For our Josephson junction device we chose the superconductor as Niobium and the weaklink as Copper, based on availability of sputter targets in the lab. These devices were prepared on a 5 x 5 &lt;span class="math"&gt;\(mm^{2}\)&lt;/span&gt; &lt;span class="math"&gt;\(Si/SiO_{2}\)&lt;/span&gt; substrate cut from a &lt;span class="math"&gt;\(Si/\)&lt;/span&gt;&lt;span class="math"&gt;\(SiO_{2}\)&lt;/span&gt; wafer. The substrates were cleaned with acetone and trichloroethylene both of which are de-greasing agents and &lt;span class="caps"&gt;IPA&lt;/span&gt; which removes any strains left from acetone, followed by &lt;span class="caps"&gt;DI&lt;/span&gt; water bath to remove the residue of the &lt;span class="math"&gt;\(SiO_{2}\)&lt;/span&gt; or Si on the substrates. Each process was carried out with ultrasonication for 5 minutes in a cleaned beaker. the substrates were then cleaned with the compressed air along with Some &lt;span class="caps"&gt;IPA&lt;/span&gt; in it. The air gun pressure was maintained at 4 &lt;span class="caps"&gt;PSI&lt;/span&gt;. We tried our best to minimise the interface roughness of the sample and to grow the thin-film uniformly.&lt;/p&gt;
+&lt;p&gt;In order to confirm the presence of magnetic moment in the presence of a &lt;span class="caps"&gt;SOC&lt;/span&gt; material at the weaklink of Josephson Junction and &lt;span class="caps"&gt;SQUID&lt;/span&gt;, we wanted to make Pt/Cu/Nb planar junction ( and &lt;span class="caps"&gt;SQUID&lt;/span&gt; ) where Pt is the bottom layer. We also wanted to observe the effect of varying thickness of the platinum layer and the copper layer. All the samples, thus essentially contain three layers : Nb (155nm), Cu ( varying between 30nm to 100nm), Nb (155nm). For planar Josephson junction the third layer made of Niobium was absent. For all of our requirement we optimized all the thickness of the material before using in trilayer study or making devices. All the instruments apart from the deposition system used in the fabrication process were used inside a clean room.&lt;/p&gt;
+&lt;h3 id="lithography"&gt;Lithography&lt;a class="headerlink" href="#lithography" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;For device fabrication like, planar Josephson junction and planar &lt;span class="caps"&gt;SQUIDS&lt;/span&gt;, we need a 2&lt;span class="math"&gt;\(\mu m\)&lt;/span&gt; width line made of Nb/Cu/Pt trilayer. For optimizing thickness and do the characterisation for all the layers individually, we did it on same 2&lt;span class="math"&gt;\(\mu m\)&lt;/span&gt; width track. The patterns were made with the mask aligner lithography machine (Midas &lt;span class="caps"&gt;MDA&lt;/span&gt;-400M) followed by a high precession speed controlled Spin coater.&lt;/p&gt;
+&lt;p&gt;In order to make the 2&lt;span class="math"&gt;\(\mu m\)&lt;/span&gt;, we used photo lithography process with a pre-made mask. The mask contains the 2&lt;span class="math"&gt;\(\mu m\)&lt;/span&gt; line along with lines drawn on the contact pad at regular intervals. This allows us to make 7 devices at a time on the same sample. An image of the mask is shown in Fig &lt;a data-reference="fig:mask" data-reference-type="ref" href="#fig:mask"&gt;3&lt;/a&gt;.&lt;/p&gt;
+&lt;figure&gt;
+&lt;img alt="Image of the mask that was used for lithography" id="fig:mask" src="https://ashwinschronicles.github.io/Photos/pattern.webp" style="width:5cm"/&gt;
+&lt;figcaption aria-hidden="true"&gt;Image of the mask that was used for lithography&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;figure&gt;
+&lt;img alt="Image of the mask aligner that was used for lithography" id="fig:mask-1" src="https://ashwinschronicles.github.io/Photos/maskAligner.webp" style="width:5cm"/&gt;
+&lt;figcaption aria-hidden="true"&gt;Image of the mask aligner that was used for lithography&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;p&gt;For the photo lithography process, &lt;span class="math"&gt;\(Si/\)&lt;/span&gt;&lt;span class="math"&gt;\(SiO_{2}\)&lt;/span&gt;wafer was cut in to several 5mm x 5mm substrate. after cleaning the substrates in the above mentioned process, a uniform layer of &lt;span class="caps"&gt;PMMA&lt;/span&gt; (+ve ) Photoresist was applied to the clean substrates and then spun rapidly using a spin coater at 3000 &lt;span class="caps"&gt;RPM&lt;/span&gt; to even out the photoresist layer, and then baked at 70&lt;span class="math"&gt;\(^{\circ}\)&lt;/span&gt;C for 1 minute to evaporate the solvent. After the photoresist was applied, the mask was placed on Mask aligner and was exposed to the &lt;span class="caps"&gt;UV&lt;/span&gt; light for 30s to weaken the photoresist on the exposed area. Since these trilayer height were more than 300nm, there were difficulties while doing the liftoff process. The stress on the bottom layer creates an slanted edge on track. So while liftoff there is some possibilities that the 2&lt;span class="math"&gt;\(\mu m\)&lt;/span&gt; line come out because of the stress from outside photoresist. To avoid these circumstances we used the undercut process in the lithography, the undercut process helps us in making the photoresist edge in a convex shape as shown in Fig&lt;a data-reference="fig:The-different-profiles" data-reference-type="ref" href="#fig:The-different-profiles"&gt;5&lt;/a&gt;. Which would help us to make a discontinuity in the track height thus easing the liftoff process.&lt;/p&gt;
+&lt;figure&gt;
+&lt;img alt="The different profiles achieved with (a) a single layer of resist, (b) resist soaked in chlorobenzene for few seconds and (c) a bilayer of electron sensitive resist (Ngo 2021)" id="fig:The-different-profiles" src="https://ashwinschronicles.github.io/Photos/photo-resist.webp" style="width:10cm"/&gt;
+&lt;figcaption aria-hidden="true"&gt;The different profiles achieved with (a) a single layer of resist, (b) resist soaked in chlorobenzene for few seconds and (c) a bilayer of electron sensitive resist &lt;span class="citation" data-cites="undercutImage"&gt;(Ngo 2021)&lt;/span&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;p&gt;In the case of a positive photoresist, the &lt;span class="caps"&gt;UV&lt;/span&gt; radiation exposed region of the photoresist becomes soluble in the developing solution (Sodium hydroxide solution). After the developing, the photoresist forms a negative image of the required pattern.&lt;/p&gt;
+&lt;p&gt;Image taken from optical microscope of the sample after the photolithography process is shown in Fig &lt;a data-reference="fig:Litho1" data-reference-type="ref" href="#fig:Litho1"&gt;6&lt;/a&gt;. One can clearly see the part where the photoresist is present (yellowish in colour) and where the photoresist is absent ( due to the &lt;span class="math"&gt;\(Si/\)&lt;/span&gt;&lt;span class="math"&gt;\(SiO_{2}\)&lt;/span&gt;substrate below).&lt;/p&gt;
+&lt;figure&gt;
+&lt;img alt="Image taken from optical microscope of the sample after the photolithography process " id="fig:Litho1" src="https://ashwinschronicles.github.io/Photos/litho1.webp" style="width:5cm"/&gt;
+&lt;figcaption aria-hidden="true"&gt;Image taken from optical microscope of the sample after the photolithography process &lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;p&gt;During deposition, the material would cover these gaps and upon liftoff the material deposited on the photoresist would go away along with the resist leaving just the material at the desired place as shown in Fig &lt;a data-reference="fig:Litho2" data-reference-type="ref" href="#fig:Litho2"&gt;7&lt;/a&gt;.&lt;/p&gt;
+&lt;figure&gt;
+&lt;img alt="Image taken from optical microscope of the sample after deposition and liftoff process " id="fig:Litho2" src="https://ashwinschronicles.github.io/Photos/Litho2.webp" style="width:5cm"/&gt;
+&lt;figcaption aria-hidden="true"&gt;Image taken from optical microscope of the sample after deposition and liftoff process &lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;h3 id="deposition"&gt;Deposition&lt;a class="headerlink" href="#deposition" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Pt/Cu/Nb trilayer films were prepared on patterned substrates at ambient temperature using &lt;span class="caps"&gt;DC&lt;/span&gt;-magnetron sputtering with high purity (99.99%) Pt,Cu and Nb targets. The &lt;span class="caps"&gt;DC&lt;/span&gt;-magnetron sputtering system present in superconductivity lab, &lt;span class="caps"&gt;NISER&lt;/span&gt; is shown in Fig &lt;a data-reference="fig:The-DC-magnetron-sputtering" data-reference-type="ref" href="#fig:The-DC-magnetron-sputtering"&gt;8&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;The base pressure of the deposition chamber was of the order of &lt;span class="math"&gt;\(10^{-9}\)&lt;/span&gt;mBar. At normal temperatures standard vacuum chambers have a tendency of holding &lt;span class="math"&gt;\(H_{2},H_{2}O\)&lt;/span&gt; and &lt;span class="caps"&gt;CO&lt;/span&gt; molecules by physical adsorption at the inner surface of the chamber and could take hours before they are pumped outside. By baking the chamber walls to 150&lt;span class="math"&gt;\(^{\circ}\)&lt;/span&gt;C for about 12hrs and then cooling the contaminants could be pumped out further. A Residual Gas Analyser (&lt;span class="caps"&gt;RGA&lt;/span&gt;) was used to measure the pressure of contaminants. &lt;span class="caps"&gt;RGA&lt;/span&gt; is a small mass spectrometer typically used for contamination monitoring in vacuum systems. The &lt;span class="caps"&gt;RGA&lt;/span&gt; is able to effectively determines the chemical composition of the residual gas within the vacuum chamber, it works by ionising the residual gases present in the chamber to create ions of these gas molecules before determining their mass-to-charge ratio. It has a working range from &lt;span class="math"&gt;\(\approx5\times10^{-2}\)&lt;/span&gt; mbar to &lt;span class="math"&gt;\(5\times10^{-8}\)&lt;/span&gt; mbar.&lt;/p&gt;
+&lt;figure&gt;
+&lt;img alt="The DC-magnetron sputtering setup present in superconductivity lab, NISER " id="fig:The-DC-magnetron-sputtering" src="https://ashwinschronicles.github.io/Photos/Sputter-Coater.webp" style="width:10cm"/&gt;
+&lt;figcaption aria-hidden="true"&gt;The &lt;span class="caps"&gt;DC&lt;/span&gt;-magnetron sputtering setup present in superconductivity lab, &lt;span class="caps"&gt;NISER&lt;/span&gt; &lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;p&gt;The typical pressure of &lt;span class="math"&gt;\(N_{2},O_{2},H_{2}O\)&lt;/span&gt; in &lt;span class="math"&gt;\(10^{-8}mBar\)&lt;/span&gt; are 3,3,3.5. If the contaminant pressure is more than this base line, Titanium Sublimation pump (&lt;span class="caps"&gt;TSP&lt;/span&gt;) is used as many times as need to obtain the base line. A &lt;span class="caps"&gt;TSP&lt;/span&gt; works by heating a titanium filament wire to about 1300&lt;span class="math"&gt;\(^{\circ}\)&lt;/span&gt;C by passing about 40A current for a minute. &lt;span class="caps"&gt;TSP&lt;/span&gt; is a type of vacuum pump used to remove residual gases in ultra-high vacuum systems. It has a titanium filament, when a sufficiently high current is passed, the filament reaches the sublimation temperature of titanium and which causes the surrounding walls of the vacuum chamber to gets coated with a layer of clean titanium. Due to the highly reactive nature of titanium, the gas molecules that collides with the titanium coated chamber walls are likely to chemically react with the titanium to form a stable, solid product. Thus reducing the gas pressure in the chamber. Pure Argon was then introduced to the chamber via a mass flow controller at the rate of &lt;span class="caps"&gt;20SCCM&lt;/span&gt;. The argon helps in initiating the argon plasma across the target. The energetic ions are accelerated towards the target. The ions strike the target and atoms are ejected (or sputtered) from the surface. To initiate plasma generation, high voltage of constant power is applied between the cathode ( located directly behind the sputtering target ) and the anode (which is also connected to the chamber as electrical ground). Electrons which are present in the sputtering gas are accelerated away from the cathode causing collisions with nearby atoms of sputtering gas. These collisions cause an electrostatic repulsion which ‘knock off’ electrons from the sputtering gas atoms, causing ionization. The positively charged sputter gas atoms are now accelerated towards the negatively charged cathode, leading to high energy collisions with the surface of the target. Each of these collisions can cause atoms at the surface of the target to be ejected into the vacuum environment with enough kinetic energy to reach the surface of the substrate. In order to facilitate as many high energy collisions as possible – leading to increased deposition rates – the sputtering gas is typically chosen to be a high molecular weight gas such as argon or xenon. Strong magnets behind the cathode is used to confine the electrons in the plasma at or near the surface of the target. Confining the electrons leads to a higher density plasma and increased deposition rates. The target is cooled by water so that the heat generated will not build up to effect the magnets which keeps the plasma from spreading Shutter plates made of stainless steel is placed in front of target with a narrow opening in order to further improve the deposition. The sample stage is slowly rotated such that the substrates get slowly exposed to the plasma via the shutter plate opening thus enabling even deposition. The height from the substrate plate to the target, the plasma power, the plasma ignition pressure and the argon flow rate are all optimised for each material, previously for good quality deposition. Shutter plate opening width and sample stage rotation speed is optimised for deposition thickness for each target. The following table summarises the various optimisation parameters for the three targets:&lt;/p&gt;
+&lt;table&gt;
+&lt;caption&gt;Optimisation parameters for different targets&lt;/caption&gt;
+&lt;thead&gt;
+&lt;tr class="header"&gt;
+&lt;th style="text-align: left;"&gt;Target&lt;/th&gt;
+&lt;th style="text-align: left;"&gt;Sputtering pressure&lt;/th&gt;
+&lt;th style="text-align: left;"&gt;Height of substrate from target&lt;/th&gt;
+&lt;th style="text-align: left;"&gt;Plasma power&lt;/th&gt;
+&lt;th style="text-align: left;"&gt;Argon flow rate&lt;/th&gt;
+&lt;th style="text-align: left;"&gt;Shutter plate opening width&lt;/th&gt;
+&lt;th style="text-align: left;"&gt;Sample stage rotation speed&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr class="odd"&gt;
+&lt;td style="text-align: left;"&gt;Nb&lt;/td&gt;
+&lt;td style="text-align: left;"&gt;&lt;span class="math display"&gt;1.08&lt;em&gt;x&lt;/em&gt;10&lt;sup&gt;−2&lt;/sup&gt;&lt;em&gt;m&lt;/em&gt;&lt;em&gt;b&lt;/em&gt;&lt;em&gt;a&lt;/em&gt;&lt;em&gt;r&lt;/em&gt;&lt;/span&gt;&lt;/td&gt;
+&lt;td style="text-align: left;"&gt;30 mm&lt;/td&gt;
+&lt;td style="text-align: left;"&gt;55 W&lt;/td&gt;
+&lt;td style="text-align: left;"&gt;&lt;span class="caps"&gt;20SCCM&lt;/span&gt;&lt;/td&gt;
+&lt;td style="text-align: left;"&gt;25.2 degree&lt;/td&gt;
+&lt;td style="text-align: left;"&gt;0.06 deg/min for 155nm&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class="even"&gt;
+&lt;td style="text-align: left;"&gt;Cu&lt;/td&gt;
+&lt;td style="text-align: left;"&gt;&lt;span class="math display"&gt;1.08&lt;em&gt;x&lt;/em&gt;10&lt;sup&gt;−2&lt;/sup&gt;&lt;em&gt;m&lt;/em&gt;&lt;em&gt;b&lt;/em&gt;&lt;em&gt;a&lt;/em&gt;&lt;em&gt;r&lt;/em&gt;&lt;/span&gt;&lt;/td&gt;
+&lt;td style="text-align: left;"&gt;30 mm&lt;/td&gt;
+&lt;td style="text-align: left;"&gt;50 W&lt;/td&gt;
+&lt;td style="text-align: left;"&gt;&lt;span class="caps"&gt;20SCCM&lt;/span&gt;&lt;/td&gt;
+&lt;td style="text-align: left;"&gt;10.8 degree&lt;/td&gt;
+&lt;td style="text-align: left;"&gt;0.1 deg/min for 100nm&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class="odd"&gt;
+&lt;td style="text-align: left;"&gt;Pt&lt;/td&gt;
+&lt;td style="text-align: left;"&gt;&lt;span class="math display"&gt;1.08&lt;em&gt;x&lt;/em&gt;10&lt;sup&gt;−2&lt;/sup&gt;&lt;em&gt;m&lt;/em&gt;&lt;em&gt;b&lt;/em&gt;&lt;em&gt;a&lt;/em&gt;&lt;em&gt;r&lt;/em&gt;&lt;/span&gt;&lt;/td&gt;
+&lt;td style="text-align: left;"&gt;30 mm&lt;/td&gt;
+&lt;td style="text-align: left;"&gt;50 W&lt;/td&gt;
+&lt;td style="text-align: left;"&gt;&lt;span class="caps"&gt;20SCCM&lt;/span&gt;&lt;/td&gt;
+&lt;td style="text-align: left;"&gt;10.8 degree&lt;/td&gt;
+&lt;td style="text-align: left;"&gt;1 deg/min for 20nm&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Optimisation parameters for different targets&lt;/p&gt;
+&lt;h3 id="fabrication-geometry"&gt;Fabrication geometry&lt;a class="headerlink" href="#fabrication-geometry" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Once the trilayer has been deposited and liftoff is done, we need to form the trilayer into the Josephson junction geometry. Josephson Junctions are typically fabricated via shadow deposition wherein a floating mask and angled deposition creates valleys such that the top and the bottom layers can be accessed separately. After the first angled deposition, controlled oxidation of the first layer leads to the formation of a very small insulating barrier. A schematic process diagram of the shadow deposition technique is shown in Fig &lt;a data-reference="fig:The-shadow-deposition" data-reference-type="ref" href="#fig:The-shadow-deposition"&gt;9&lt;/a&gt;.&lt;/p&gt;
+&lt;figure&gt;
+&lt;img alt="The shadow deposition technique for Josephson Junction fabrication (Wang 2015)" id="fig:The-shadow-deposition" src="https://ashwinschronicles.github.io/Photos/shadow-dep.webp" style="width:7cm"/&gt;
+&lt;figcaption aria-hidden="true"&gt;The shadow deposition technique for Josephson Junction fabrication &lt;span class="citation" data-cites="JJfab"&gt;(Wang 2015)&lt;/span&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;p&gt;Another way to get to the required geometry is to use a subtractive manufacturing process like a Focused Ion Beam (&lt;span class="caps"&gt;FIB&lt;/span&gt;). A &lt;span class="caps"&gt;FIB&lt;/span&gt; is similar to and &lt;span class="caps"&gt;SEM&lt;/span&gt; in that it uses a beam of ions to image and directly modify or mill the specimen surface via the sputtering process. This milling can be controlled with nanometer precision. Crossbeam 340 from &lt;span class="caps"&gt;ZEISS&lt;/span&gt;, which uses gallium ions for the &lt;span class="caps"&gt;FIB&lt;/span&gt; is available in &lt;span class="caps"&gt;NISER&lt;/span&gt; and was used extensively for the fabrications of the Josephson junction samples. The Crossbeam 340 has a &lt;span class="caps"&gt;FESEM&lt;/span&gt; and gallium &lt;span class="caps"&gt;FIB&lt;/span&gt; guns mounted at &lt;span class="math"&gt;\(54^{\circlearrowleft}\)&lt;/span&gt; to each other. The sample and the stage is adjusted such that the focal axis of both &lt;span class="caps"&gt;FIB&lt;/span&gt; and &lt;span class="caps"&gt;SEM&lt;/span&gt; co-inside at the surface of the sample and is at a working distance of 5.12mm away from the gun tip. This alignment shown in Fig &lt;a data-reference="fig:Alignment-of-SEM" data-reference-type="ref" href="#fig:Alignment-of-SEM"&gt;10&lt;/a&gt; ensures that the imaging done by the &lt;span class="caps"&gt;SEM&lt;/span&gt; and the milling done by the &lt;span class="caps"&gt;FIB&lt;/span&gt; co-inside.&lt;/p&gt;
+&lt;figure&gt;
+&lt;img alt="Alignment of SEM gun (grey) and FIB gun (brown) axis at the surface of the sample (purple) mounted on the stage (silver) " id="fig:Alignment-of-SEM" src="https://ashwinschronicles.github.io/Photos/secondRenderY.webp" style="width:7cm"/&gt;
+&lt;figcaption aria-hidden="true"&gt;Alignment of &lt;span class="caps"&gt;SEM&lt;/span&gt; gun (grey) and &lt;span class="caps"&gt;FIB&lt;/span&gt; gun (brown) axis at the surface of the sample (purple) mounted on the stage (silver) &lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;p&gt;While milling, highly energised gallium ions strike the sample causing the target to sputter atoms from the surface. In this process gallium atoms will get embedded in the top few nano meters of the target surface, and the surface will become amorphous, this is known as gallium poisoning.&lt;/p&gt;
+&lt;p&gt;There are two geometries in which the Josephson junction are fabricated using &lt;span class="caps"&gt;FIB&lt;/span&gt;, one is the vertical Junction (Fig &lt;a data-reference="fig:Vertical" data-reference-type="ref" href="#fig:Vertical"&gt;12&lt;/a&gt;), and the other is the planar Junction (Fig &lt;a data-reference="fig:Planar" data-reference-type="ref" href="#fig:Planar"&gt;11&lt;/a&gt;); both names describe the path the current takes through the trilayers. In the planar Junction, the current is in plane with the trilayers and in the case of the vertical junctions the current flows vertically through the trilayers.&lt;/p&gt;
+&lt;figure&gt;
+&lt;img alt="Schematic of the Planar Josephson Junction, due the vertical FIB cut in the Niobium layer, the current travels in plane through first the Niobium layer then through the copper weaklink then finally through the other Niobium layer. The yellow arrowed line shows the direction of current flow" id="fig:Planar" src="https://ashwinschronicles.github.io/Photos/JJ-planar.webp" style="width:6cm"/&gt;
+&lt;figcaption aria-hidden="true"&gt;Schematic of the Planar Josephson Junction, due the vertical &lt;span class="caps"&gt;FIB&lt;/span&gt; cut in the Niobium layer, the current travels in plane through first the Niobium layer then through the copper weaklink then finally through the other Niobium layer. The yellow arrowed line shows the direction of current flow&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;figure&gt;
+&lt;img alt="Schematic of the Vertical Josephson Junction, due to the nano pillar cuts on the left and the right, the current travels in plane through first the top Niobium layer then through the copper weaklink then finally through the other Niobium layer. The yellow arrowed line shows the direction of current flow" id="fig:Vertical" src="https://ashwinschronicles.github.io/Photos/JJ-verical.webp" style="width:6cm"/&gt;
+&lt;figcaption aria-hidden="true"&gt;Schematic of the Vertical Josephson Junction, due to the nano pillar cuts on the left and the right, the current travels in plane through first the top Niobium layer then through the copper weaklink then finally through the other Niobium layer. The yellow arrowed line shows the direction of current flow&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;p&gt;In order to do the Planar, cut the stage was tilted in such a way that the sample is perpendicular to the &lt;span class="caps"&gt;FIB&lt;/span&gt; gun, similar to the arrangement in Fig &lt;a data-reference="fig:Alignment-of-SEM" data-reference-type="ref" href="#fig:Alignment-of-SEM"&gt;10&lt;/a&gt;. Then a vertical cut is made to a controlled depth.In order to control the depth of the cut, exposure time had to be optimised. This was done by cutting several vertical lines away from the 2&lt;span class="math"&gt;\(\mu\)&lt;/span&gt; line with varying exposure time. Then Energy Dispersive Spectroscopy (&lt;span class="caps"&gt;EDAX&lt;/span&gt;) was done on these multiple cuts to see which exposure time first cuts the Niobium layer and thus exposing the Copper below it (Fig &lt;a data-reference="fig:Edax" data-reference-type="ref" href="#fig:Edax"&gt;13&lt;/a&gt;).&lt;/p&gt;
+&lt;figure&gt;
+&lt;img alt="Energy Dispersive Spectroscopy (EDAX) of the multiple vertical cuts done in order to optimise the FIB cutting depth " id="fig:Edax" src="https://ashwinschronicles.github.io/Photos/Edax.webp" style="width:7cm"/&gt;
+&lt;figcaption aria-hidden="true"&gt;Energy Dispersive Spectroscopy (&lt;span class="caps"&gt;EDAX&lt;/span&gt;) of the multiple vertical cuts done in order to optimise the &lt;span class="caps"&gt;FIB&lt;/span&gt; cutting depth &lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;p&gt;The basic principle of &lt;span class="caps"&gt;EDAX&lt;/span&gt; is as follows: During &lt;span class="caps"&gt;SEM&lt;/span&gt; microscopy, the primary electron beam sometimes removes electrons from the inner shells of an atom causing the outer electron to jump into the vacant spot by releasing energy in the form of X-rays. This energy difference is unique for each element and the element can be identified from it’s characteristic X-ray. &lt;span class="caps"&gt;EDS&lt;/span&gt; measures these characteristic X-rays thus identifying the chemical composition of the sample.&lt;/p&gt;
+&lt;p&gt;An image of the sample after milling with &lt;span class="caps"&gt;FIB&lt;/span&gt; as seen through an optical microscope is shown in Fig .&lt;/p&gt;
+&lt;figure&gt;
+&lt;img alt="Image taken from optical microscope of the sample after milling with FIB, the devices are encircled" id="fig:Litho3" src="https://ashwinschronicles.github.io/Photos/Litho-3.webp" style="width:5cm"/&gt;
+&lt;figcaption aria-hidden="true"&gt;Image taken from optical microscope of the sample after milling with &lt;span class="caps"&gt;FIB&lt;/span&gt;, the devices are encircled&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;h3 id="wire-bonding"&gt;Wire bonding&lt;a class="headerlink" href="#wire-bonding" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;After the sample is prepared, electrical connections need to be made for sending current, measuring voltage,etc. For this a wire bonding apparatus is used which uses 50&lt;span class="math"&gt;\(\mu m\)&lt;/span&gt; dia silicon doped aluminium wires for the connections. The needle through which the aluminium wire comes through, embeds the wire in the sample by vibrating at ultrasonic frequencies.&lt;/p&gt;
+&lt;p&gt;Ultrasonic bonding was discovered 1960 through a several experimental observation and has subsequently been developed into a highly controlled process. In recent years it has been used extensively for electrical interconnecting of semiconductor chips in the semiconductor fabrication industry and in material science research laboratories for making reliable conducting contacts on sample and pucks. There are four types of wire bonding:&lt;/p&gt;
+&lt;p&gt;Thermocompression Bonding&lt;br/&gt;
+A process which involves the use of force, time, and heat to join the two materials by inter- diffusion. This process uses gold wire.&lt;/p&gt;
+&lt;p&gt;Gold Ball Bonding&lt;br/&gt;
+Uses gold wire ultrasonicated at the surface to make the ball. This process uses heat force, time, and ultrasonics.&lt;/p&gt;
+&lt;p&gt;Wedge Bonding&lt;br/&gt;
+This process uses aluminium wire formed below a narrow metalic wedge. The wedge forces the wire on top of the sample and ultrasonicates therby making a metallic bond between aluminium and the sample. No heat is required in this process. This process is the one used all the sample preparation in regards to the current thesis.&lt;/p&gt;
+&lt;p&gt;Thermosonic Bonding&lt;br/&gt;
+This requires gold wire and capillaries. This process uses force, time. heat, and ultrasonics to make a ball. This process is accomplished by melting the wire to form a ball.&lt;/p&gt;
+&lt;h4 id="wedge-bonding"&gt;Wedge Bonding&lt;a class="headerlink" href="#wedge-bonding" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;Ultrasonic energy, when applied to metallic wire to be bonded, renders it temporarily soft and plastic. This causes the metal to flow under pressure. The acoustic energy frees the dislocation from their pinned positions which allows the metal to flow under the low compressive forces of the bond. Thus heat at the bond becomes a byproduct of the bonding process, and the heat becomes unnecessary to form the bond. The deformation of the wire will break up and sweep aside the contaminants in the weld area. This exposes extremely clean metallic surfaces which promotes the metallurgical bonds.&lt;/p&gt;
+&lt;p&gt;In wedge bonding, the wire come out through a 50 &lt;span class="math"&gt;\(\mu m\)&lt;/span&gt; hole at 45° angle and then under the needle tip which is shaped like a wedge as seen in Fig &lt;a data-reference="fig:Image-of-wire" data-reference-type="ref" href="#fig:Image-of-wire"&gt;[fig:Image-of-wire]&lt;/a&gt;.&lt;/p&gt;
+&lt;figure&gt;
+&lt;img src="https://ashwinschronicles.github.io/Photos/wedge tip.webp" style="width:5cm"/&gt;&lt;img src="https://ashwinschronicles.github.io/Photos/wedge tip2.webp" style="width:2.5cm"/&gt;
+&lt;/figure&gt;
+&lt;p&gt;The quality of wire bonded is also sensitive to the height between the base plate and the needle tip when it is bonding, the wirebonder at &lt;span class="caps"&gt;NISER&lt;/span&gt; is setup such that this effective height is 76mm, at this height ultrasonic power and the bonding force are most effective, because the transducer is in surface and the bond tool stands perfectly vertical. Therefore the distance from base plate should always be fixed to this value.&lt;/p&gt;
+&lt;p&gt;In case the Surface is higher, the bond will be affected when the tool touches the surface. At a surface height &amp;gt;78 mm the ultrasonic power and bonding force are less effective and most probably the parameters have to be increased. If the bonding surface is lower than 76 mm, the bond will be automatically activated at a height of 75.5 mm, even if the tool does not touch the surface. So it is impossible to bond at a lower height. The steps involved in making the two bonds are shown in Fig &lt;a data-reference="fig:wirebondersteps" data-reference-type="ref" href="#fig:wirebondersteps"&gt;15&lt;/a&gt;.&lt;/p&gt;
+&lt;figure&gt;
+&lt;img id="fig:wirebondersteps" src="https://ashwinschronicles.github.io/Photos/Wedge bonding process.webp" style="width:10cm"/&gt;
+&lt;figcaption aria-hidden="true"&gt;The steps involved in making a bond from the puck to the contact pads on the sample &lt;span class="citation" data-cites="wirebonder"&gt;(&lt;span class="caps"&gt;TPT&lt;/span&gt;, n.d.)&lt;/span&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;p&gt;A principle disadvantage of wedge bonding is the wire is fed at a 45° or 60° horizontal angle rather than perpendicular as in ball bonding. Also, wedge bonding is unidirectional.&lt;/p&gt;
+&lt;p&gt;This is slower than ball bonding which is multidirectional. Wedge bonding requires the circuit workpiece or the bonding head to rotate to allow for the wire to bond in the appropriate direction.&lt;/p&gt;
+&lt;figure&gt;
+&lt;img alt="Image of a bond site which was done by wedge bonding tool. (TPT, n.d.)" id="fig:wirebondersteps-1" src="https://ashwinschronicles.github.io/Photos/wedgeboding-surface.webp" style="width:10cm"/&gt;
+&lt;figcaption aria-hidden="true"&gt;Image of a bond site which was done by wedge bonding tool. &lt;span class="citation" data-cites="wirebonder"&gt;(&lt;span class="caps"&gt;TPT&lt;/span&gt;, n.d.)&lt;/span&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;h3 id="characterization"&gt;Characterization&lt;a class="headerlink" href="#characterization" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;h4 id="physical-property-measurement-system-ppms"&gt;Physical Property Measurement System (&lt;span class="caps"&gt;PPMS&lt;/span&gt;)&lt;a class="headerlink" href="#physical-property-measurement-system-ppms" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;In order to do analysis/characterisation of any material/nano device, one typically need measurement of several physical properties of &lt;span class="caps"&gt;DUT&lt;/span&gt;. Typical physical characteristics like,&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Resistance as a function of temperature&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Current voltage characteristics&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Magnetic susceptibility as a function of applied external magnetic field (&lt;span class="caps"&gt;VSM&lt;/span&gt;)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Magnetoresistance&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Other transport measurements like specific heat, magnetic &lt;span class="caps"&gt;AC&lt;/span&gt; and &lt;span class="caps"&gt;DC&lt;/span&gt; susceptibility and both electrical and thermal transport properties (like Hall Effect, thermoelectric figure of merit and Seebeck Effect) etc.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;are most often used to characterise bulk and thinfilm samples. Superconductivity lab, &lt;span class="caps"&gt;NISER&lt;/span&gt; has a &lt;span class="caps"&gt;PPMS&lt;/span&gt; setup by Cryogenics that allows one to do low temperature characterisation of materials (1.6K - 300K) at different magnetic fields (upto 9 Tesla) and under different electric configuration of the sample. Fig&lt;a data-reference="fig:PPMS" data-reference-type="ref" href="#fig:PPMS"&gt;17&lt;/a&gt; shows the image of the &lt;span class="caps"&gt;PPMS&lt;/span&gt; system present in the lab.&lt;/p&gt;
+&lt;figure&gt;
+&lt;img alt="Image of the PPMS system present at Superconductivity lab NISER" id="fig:PPMS" src="https://ashwinschronicles.github.io/Photos/PPMS.webp" style="width:5cm"/&gt;
+&lt;figcaption aria-hidden="true"&gt;Image of the &lt;span class="caps"&gt;PPMS&lt;/span&gt; system present at Superconductivity lab &lt;span class="caps"&gt;NISER&lt;/span&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;p&gt;The setup comprises of the following main components:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;A cryostat incorporating a cryocooler, superconducting magnet and a variable temperature sample space.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Rack incorporating electronics for control and monitoring of the cryostat and any measurement options.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Measurement system software for control of measurement instruments from a computer&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Sample probes for various measurement configuration (Transport measurement,a probe for vibrating sample magnetometer and a rotating stage for transport measurement).&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h5 id="cryocooler"&gt;Cryocooler&lt;a class="headerlink" href="#cryocooler" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h5&gt;
+&lt;p&gt;Cooling materials to such a low temperatures has traditionally used liquid cryogens (usually helium and nitrogen). The samples were essentially dipped in a dewar containg liquid Helium/Nitrogen. On the other hand cryocooler operate using a helium compressor, makes use of adiabatic expansion of these liquids to reach temperatures below the boiling point of these cryogens.&lt;/p&gt;
+&lt;p&gt;There are two types of cryocooler that are typically used, the Gifford McMahon (&lt;span class="caps"&gt;GM&lt;/span&gt;) cryocooler and the Pulse Tube (&lt;span class="caps"&gt;PT&lt;/span&gt;) cryocooler. The &lt;span class="caps"&gt;PPMS&lt;/span&gt; in our lab uses Pulse Tube type cryocooler. The &lt;span class="caps"&gt;GM&lt;/span&gt; cryocooler has the advantage of greater thermodynamic efficiency and reliable operation in any orientation.The &lt;span class="caps"&gt;PT&lt;/span&gt; cooler has no cold moving parts so is quieter and has longer service intervals. The &lt;span class="caps"&gt;PPMS&lt;/span&gt; has two cooling stages. The first one is through the circulation of compressed helium via the compressor and the second stage is via adiabatic expansion of the liquid helium stored in a He pot. The first stage produces about 50W of cooling power at about 40K and the second stage provides about 1.5W of cooling power. The second stage cools the sample space and the cryogenic superconducting magnets. The flow of the helium throught the close cycle can be understood interms of the following steps. Helium gas is stored at room temperature in a Helium dump vessel. An oil-free pump drives the circulation of the helium gas into the &lt;span class="caps"&gt;VTI&lt;/span&gt; circuit from the He dump. The gas first passes through a charcoal filter which removes any impurities within the gas. It then flows through the first stage heat exchanger which cools the gas to 40K. The gas then passes to the second stage of the Cryocooler where it is cooled further to below 4 K and condenses in the helium pot. The helium then flows across the needle valve, after which it expands and cools further to approximately 1.6K. It then travels through the &lt;span class="caps"&gt;VTI&lt;/span&gt; heat exchanger where the helium is warmed as necessary. Helium gas then flows up past the sample to the top of the &lt;span class="caps"&gt;VTI&lt;/span&gt; where it exits and travels back to the pump and dump. The sample space temperature is controlled by the cooling action of the helium and the heating action of the heater present in &lt;span class="caps"&gt;VTI&lt;/span&gt;. A &lt;span class="caps"&gt;PID&lt;/span&gt; controller is used to precisely reach any given set point. The cooling capacity of the system depends on the vapour pressure of the helium throught the needle valve thus careful adjustment of needle valve pressure is needed to maintain stable cooling. If the pressure is too low, the system will not cool to the lowest stable state and if the pressure is set too high the cooling power and the heater power would compete with each other thus rendering the system unstable. A pressure of 5-15 mbar is recommended by the manufacturer. However, if the flow rate is far too high, the amount of heat that needs to be extracted from the circulating helium exceeds the cooling power. So, the temperature of the 2nd stage, magnet and helium pot will increase which is bad for the system.&lt;/p&gt;
+&lt;h5 id="superconducting-magnets"&gt;Superconducting Magnets&lt;a class="headerlink" href="#superconducting-magnets" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h5&gt;
+&lt;p&gt;There two superconducting magnets in the system, one for low field (upto 25mT) and the other for high field. The magnet is a vertically oriented solenoid wound on niobium titanium (NbTi) superconducting wire. NbTi is specifically chosen because of its hight current carrying capacity before becoming normal. The coil is cooled by the cryocooler to an operating temperature of 3 — 4 K. If the temperature exceeds this range then what we call as quenching can happen, which is where a part of the coil becomes normal increasing the resistance considerably, thereby dissipating the energy flowing in the coil as heat which in turn propagates the normal region. This happens until the entire coil becomes normal and might cause degradation to the coil.&lt;/p&gt;
+&lt;h5 id="dc-resistivity-probe"&gt;&lt;span class="caps"&gt;DC&lt;/span&gt; Resistivity Probe&lt;a class="headerlink" href="#dc-resistivity-probe" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h5&gt;
+&lt;p&gt;In order to verify that the sputtering parameters yielded the expected thickness of the trilayers, a line was drawn on the substrate with a marker before deposition, and post-deposition washing the substrate with &lt;span class="caps"&gt;IPA&lt;/span&gt; introduced a cut in the sample that was then analysed with a contact step profilometer. The profilometer data agreed with the expected thickness.&lt;/p&gt;
+&lt;p&gt;Prior to making the devices, magneto-transport measurements of the trilayer above the critical temperature of Niobium showed no hysteretic signature, nor was any anomaly in the magnetoresistance observed. The trilayer also had a sharp superconducting transition (due to the Niobium layer) at 6-7 K indicating a good quality deposition.&lt;/p&gt;
+&lt;h3 id="results"&gt;Results&lt;a class="headerlink" href="#results" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;h4 id="measurements"&gt;Measurements&lt;a class="headerlink" href="#measurements" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;All the superconducting devices were first cooled to sub 2K, and then a 4 probe resistance vs temperature measurement was carried out with 1 - 10 &lt;span class="math"&gt;\(\mu\)&lt;/span&gt;A by ramping the temperature slowly to 10K, in order to see the phase transitions. One such R-T graph is shown in Fig &lt;a data-reference="fig:RT-graph-for" data-reference-type="ref" href="#fig:RT-graph-for"&gt;18&lt;/a&gt;.&lt;/p&gt;
+&lt;figure&gt;
+&lt;img alt="RT graph for a Cu(100nm)Nb(150nm) Josephson junction. The inset shows an SEM image of the measured JJ " id="fig:RT-graph-for" src="https://ashwinschronicles.github.io/Photos/JJ.webp" style="width:10cm"/&gt;
+&lt;figcaption aria-hidden="true"&gt;&lt;span class="caps"&gt;RT&lt;/span&gt; graph for a Cu(100nm)Nb(150nm) Josephson junction. The inset shows an &lt;span class="caps"&gt;SEM&lt;/span&gt; image of the measured &lt;span class="caps"&gt;JJ&lt;/span&gt; &lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;p&gt;The first transition indicates the superconducting transition of the Niobium layer, and the second transition explains the proximitisation of the weak link. The resistance &lt;span class="math"&gt;\(R_{n}\)&lt;/span&gt; at 9K (above &lt;span class="math"&gt;\(T_{c}\)&lt;/span&gt;) and &lt;span class="math"&gt;\(R_{L}\)&lt;/span&gt;at 2K are noted and the sample is cooled back to sub 2K. &lt;span class="math"&gt;\(R_{n}\)&lt;/span&gt;is the normal resistance and indicates that the device is out of the superconducting regime. Once the devices cool down to 2K the current-voltage characteristics of the device is measured by sweeping current from -&lt;span class="math"&gt;\(I_{n}\)&lt;/span&gt; to +&lt;span class="math"&gt;\(I_{n}\)&lt;/span&gt;, where &lt;span class="math"&gt;\(I_{n}\)&lt;/span&gt; is the current for which the device yields the resistance &lt;span class="math"&gt;\(R_{n}\)&lt;/span&gt; at 2K, ie. the device switches to the normal regime. The I-V curves have the typical &lt;span class="caps"&gt;JJ&lt;/span&gt;/&lt;span class="caps"&gt;SQUID&lt;/span&gt; behaviour and is plotted in Fig &lt;a data-reference="fig:IV-graph-for" data-reference-type="ref" href="#fig:IV-graph-for"&gt;19&lt;/a&gt;.&lt;/p&gt;
+&lt;figure&gt;
+&lt;img id="fig:IV-graph-for" src="https://ashwinschronicles.github.io/Photos/IV Pt20 CuNbJJ 2k.webp" style="width:10cm"/&gt;
+&lt;figcaption aria-hidden="true"&gt;&lt;span class="caps"&gt;IV&lt;/span&gt; graph for a Cu(100nm)Nb(150nm) Josephson junction &lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;p&gt;&lt;span class="math"&gt;\(I_{c}\)&lt;/span&gt; of the device and the electrodes were extracted from this data by running through a python script that takes in the I-V data, calculates dV/dI, and applies a Savitzky–Golay filter of first-order to obtain &lt;span class="math"&gt;\(d^{2}I/d^{2}V\)&lt;/span&gt; and find the current (&lt;span class="math"&gt;\(I_{c}\)&lt;/span&gt;) for which &lt;span class="math"&gt;\(d^{2}I/d^{2}V\)&lt;/span&gt; in both the positive and negative side and averages them. For normal Josephson junction the position of peak of &lt;span class="math"&gt;\(dI/dV\)&lt;/span&gt; is a good marker of the &lt;span class="math"&gt;\(I_{c}\)&lt;/span&gt;, however in cases where the junction resistance is high, &lt;span class="math"&gt;\(dI/dV\)&lt;/span&gt; might not be clear enough to mitigate this peaks of &lt;span class="math"&gt;\(d^{2}I/d^{2}V\)&lt;/span&gt; is a better marker of &lt;span class="math"&gt;\(I_{c}\)&lt;/span&gt; A sample graph of &lt;span class="math"&gt;\(dI/dV\)&lt;/span&gt; and &lt;span class="math"&gt;\(d^{2}I/d^{2}V\)&lt;/span&gt; for a I vs V curve measured on a Josephson junction is shown in Fig &lt;a data-reference="fig:findIc" data-reference-type="ref" href="#fig:findIc"&gt;20&lt;/a&gt;.&lt;/p&gt;
+&lt;figure&gt;
+&lt;img alt="A sample graph of dI/dV and d^{2}I/d^{2}V for a I vs V curve measured on a Josephson junction. The I_{c} extracted from the graph is 140\mu A " id="fig:findIc" src="https://ashwinschronicles.github.io/Photos/samplePlot.webp" style="width:10cm"/&gt;
+&lt;figcaption aria-hidden="true"&gt;A sample graph of &lt;span class="math inline"&gt;&lt;em&gt;d&lt;/em&gt;&lt;em&gt;I&lt;/em&gt;/&lt;em&gt;d&lt;/em&gt;&lt;em&gt;V&lt;/em&gt;&lt;/span&gt; and &lt;span class="math inline"&gt;&lt;em&gt;d&lt;/em&gt;&lt;sup&gt;2&lt;/sup&gt;&lt;em&gt;I&lt;/em&gt;/&lt;em&gt;d&lt;/em&gt;&lt;sup&gt;2&lt;/sup&gt;&lt;em&gt;V&lt;/em&gt;&lt;/span&gt; for a I vs V curve measured on a Josephson junction. The &lt;span class="math inline"&gt;&lt;em&gt;I&lt;/em&gt;&lt;sub&gt;&lt;em&gt;c&lt;/em&gt;&lt;/sub&gt;&lt;/span&gt; extracted from the graph is 140&lt;span class="math inline"&gt;&lt;em&gt;μ&lt;/em&gt;&lt;em&gt;A&lt;/em&gt;&lt;/span&gt; &lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;p&gt;The code for the python script is available &lt;a href="https://github.com/iamashwin99/JJ-Ic-finder"&gt;here&lt;/a&gt; and a web app based on the same is hosted at &lt;a href="https://jj-ic-finder.streamlit.app/"&gt;jj-ic-finder.streamlit.app&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;In Fig &lt;a data-reference="fig:IV-graph-for" data-reference-type="ref" href="#fig:IV-graph-for"&gt;19&lt;/a&gt; the &lt;span class="caps"&gt;IV&lt;/span&gt; curve of a Nb/Cu Josephson Junction is shown. Once the device &lt;span class="math"&gt;\(I_{c}\)&lt;/span&gt; is found, the device is cooled to 2K and then supplied with &lt;span class="math"&gt;\(I_{c}\)&lt;/span&gt; current, and the junction voltage is measured while ramping the magnetic field from +250 Oe to -250 Oe ( positive cycle ) and then from -250Oe to 250Oe ( negative cycle ) at 2K. This gives us magnetoresistance as a function of the applied magnetic field. The magnetoresistance as a function of applied magnetic field is expected to have a diffraction pattern for JJs and &lt;span class="caps"&gt;SQUID&lt;/span&gt; oscillations imposed on top of the diffraction pattern for &lt;span class="caps"&gt;SQUID&lt;/span&gt; device as can be seen in Fig &lt;a data-reference="fig:V-H-graphSQUID" data-reference-type="ref" href="#fig:V-H-graphSQUID"&gt;21&lt;/a&gt; and Fig &lt;a data-reference="fig:V-H-graphSQUID-1" data-reference-type="ref" href="#fig:V-H-graphSQUID-1"&gt;22&lt;/a&gt;. This was explained in the theoretical sections above.&lt;/p&gt;
+&lt;figure&gt;
+&lt;img id="fig:V-H-graphSQUID" src="https://ashwinschronicles.github.io/Photos/Squid VH.webp" style="width:10cm"/&gt;
+&lt;figcaption aria-hidden="true"&gt;V H graph for a Cu(100nm)Nb(150nm) &lt;span class="caps"&gt;SQUID&lt;/span&gt;, &lt;span class="caps"&gt;SQUID&lt;/span&gt; oscillations and Fraunhofer pattern can be seen&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;figure&gt;
+&lt;img alt="Zoomed in graph of V H for a Cu(100nm)Nb(150nm) SQUID, The SQUID oscillations can be seen clearly" id="fig:V-H-graphSQUID-1" src="https://ashwinschronicles.github.io/Photos/Squid-Oscilations.webp" style="width:10cm"/&gt;
+&lt;figcaption aria-hidden="true"&gt;Zoomed in graph of V H for a Cu(100nm)Nb(150nm) &lt;span class="caps"&gt;SQUID&lt;/span&gt;, The &lt;span class="caps"&gt;SQUID&lt;/span&gt; oscillations can be seen clearly&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;figure&gt;
+&lt;img id="fig:Magnetoresistance-of-the" src="https://ashwinschronicles.github.io/Photos/VH CuNbJJ 2k.webp" style="width:10cm"/&gt;
+&lt;figcaption aria-hidden="true"&gt;Magnetoresistance of the patterned Nb/Cu Josephson junction device in low magnetic fields for different values of junction currents&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;figure&gt;
+&lt;img id="fig:Magnetoresistance-of-the-1" src="https://ashwinschronicles.github.io/Photos/JJ VH.webp" style="width:10cm"/&gt;
+&lt;figcaption aria-hidden="true"&gt;Magnetoresistance of the patterned Nb/Cu Josephson junction device in low magnetic fields&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;p&gt;In Fig &lt;a data-reference="fig:Magnetoresistance-of-the-1" data-reference-type="ref" href="#fig:Magnetoresistance-of-the-1"&gt;24&lt;/a&gt; , we examine the magnetoresistance of the patterned Nb/Cu Josephson junction device in low magnetic fields (|H| &amp;lt; 300 Oe) and at its &lt;span class="math"&gt;\(I_{c}\)&lt;/span&gt;. We find that the main lobe of the positive and the negative cycle overlap completely and there is no shift of the main lobe from origin as one would expect for a normal S-N-S junction. Fig &lt;a data-reference="fig:Magnetoresistance-of-the" data-reference-type="ref" href="#fig:Magnetoresistance-of-the"&gt;23&lt;/a&gt; is a plot of Junction voltage as a function of magnetic field for another patterned Nb/Cu Josephson junction device in low magnetic fields for different values of junction currents. Once can observe that higher currents increase the height of the lobes however the ratio of the first (main) lobe to the second lobe remains constant.&lt;/p&gt;
+&lt;h3 id="discussion-and-conclusion"&gt;Discussion and Conclusion&lt;a class="headerlink" href="#discussion-and-conclusion" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;We were able to successfully fabricate vertical and planar Nb/Cu Josephson junctions and through its R-T, I-V, V-H signatures verified that the device works as expected. The R-T graph shoved the superconducting transition of the Niobium electrodes sub 7K and slow proximitisation of the weaklink thereafter. The I-V graph clearly shows the presence of a critical current &lt;span class="math"&gt;\(I_{c}\)&lt;/span&gt; beyond which the junction behaves resistively, the &lt;span class="math"&gt;\(I_{c}\)&lt;/span&gt; extraction was automated by analysing the second derivative of voltage with respect to applied current via a python script. The &lt;span class="caps"&gt;VH&lt;/span&gt; graph for Josephson junctions shows clear Fraunhofer like pattern and &lt;span class="caps"&gt;SQUID&lt;/span&gt; oscillations on top of Fraunhofer in the case of SQUIDs thus further confirming the quality of device thus formed. Future direction of the project would be to explore alternative materials for the weaklink of the Josephson junctions. Preliminary literature survey suggest that 0–&lt;span class="math"&gt;\(\pi\)&lt;/span&gt; oscillations in Superconductor/Ferromagnet/Superconductor junctions with varying thickness of Ferromagnet layer(Stoutimore et al. 2018). &lt;span class="math"&gt;\(\phi\)&lt;/span&gt; Josephson junctions are seen with topological insulator &lt;span class="math"&gt;\(Bi_{2}Se_{3}\)&lt;/span&gt; (Assouline et al. 2019)or &lt;span class="caps"&gt;2DEG&lt;/span&gt; formed at the surface of InAs layer(Strambini et al., n.d.). &lt;span class="math"&gt;\(\phi\)&lt;/span&gt; junctions are also observed in weaklinks with high spin orbit coupling. Further studies on the properties of such weaklinks might be carried out.&lt;/p&gt;
+&lt;h1 id="references"&gt;References&lt;a class="headerlink" href="#references" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h1&gt;
+&lt;p&gt;Assouline, Alexandre, Cheryl Feuillet-Palma, Nicolas Bergeal, Tianzhen Zhang, Alireza Mottaghizadeh, Alexandre Zimmers, Emmanuel Lhuillier, et al. 2019. “Spin-Orbit Induced Phase-Shift in Bi2Se3 Josephson Junctions.” &lt;em&gt;Nature Communications 2019 10:1&lt;/em&gt; 10 (January): 1–8. &lt;a href="https://doi.org/10.1038/s41467-018-08022-y"&gt;https://doi.org/10.1038/s41467-018-08022-y&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Bardeen, J., &lt;span class="caps"&gt;L. N.&lt;/span&gt; Cooper, and &lt;span class="caps"&gt;J. R.&lt;/span&gt; Schrieffer. 1957. “Theory of Superconductivity.” &lt;em&gt;Phys. Rev.&lt;/em&gt; 108 (December): 1175–1204. &lt;a href="https://doi.org/10.1103/PhysRev.108.1175"&gt;https://doi.org/10.1103/PhysRev.108.1175&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;DanielSank. n.d. “What Does the &lt;span class="math"&gt;\(I\)&lt;/span&gt;-&lt;span class="math"&gt;\(V\)&lt;/span&gt; Curve in Josephson Junction Mean?” Physics Stack Exchange. &lt;a href="https://physics.stackexchange.com/q/197150"&gt;https://physics.stackexchange.com/q/197150&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Drozdov, A. P., &lt;span class="caps"&gt;M. I.&lt;/span&gt; Eremets, &lt;span class="caps"&gt;I. A.&lt;/span&gt; Troyan, V. Ksenofontov, and &lt;span class="caps"&gt;S. I.&lt;/span&gt; Shylin. 2015. “Conventional Superconductivity at 203 Kelvin at High Pressures in the Sulfur Hydride System.” &lt;em&gt;Nature&lt;/em&gt; 525 (7567): 73–76. &lt;a href="https://doi.org/10.1038/nature14964"&gt;https://doi.org/10.1038/nature14964&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Josephson, &lt;span class="caps"&gt;B. D.&lt;/span&gt; 1962. “Possible New Effects in Superconductive Tunnelling.” &lt;em&gt;Physics Letters&lt;/em&gt; 1 (7): 251–53. &lt;a href="https://doi.org/10.1016/0031-9163(62)91369-0"&gt;https://doi.org/10.1016/0031-9163(62)91369-0&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Klenov, N, V Kornev, A Vedyayev, N Ryzhanova, N Pugach, and T Rumyantseva. 2008. “Examination of Logic Operations with Silent Phase Qubit.” &lt;em&gt;Journal of Physics: Conference Series&lt;/em&gt; 97 (February): 012037. &lt;a href="https://doi.org/10.1088/1742-6596/97/1/012037"&gt;https://doi.org/10.1088/1742-6596/97/1/012037&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Lee, Gil-Ho, and Hu-Jong Lee. 2018. “Proximity Coupling in Superconductor-Graphene Heterostructures.” &lt;em&gt;Reports on Progress in Physics&lt;/em&gt; 81 (5): 056502. &lt;a href="https://doi.org/10.1088/1361-6633/aaafe1"&gt;https://doi.org/10.1088/1361-6633/aaafe1&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Ngo, Duc-The. 2021. “Lorentz &lt;span class="caps"&gt;TEM&lt;/span&gt; Characterisation of Magnetic and Physical Structure of Nanostructure Magnetic Thin Films,” December.&lt;/p&gt;
+&lt;p&gt;Schrieffer, J. R., and M. Tinkham. 1999. “Superconductivity.” &lt;em&gt;Rev. Mod. Phys.&lt;/em&gt; 71 (March): S313–17. &lt;a href="https://doi.org/10.1103/RevModPhys.71.S313"&gt;https://doi.org/10.1103/RevModPhys.71.S313&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Stoutimore, M J A, A N Rossolenko, V V Bolginov, V A Oboznov, A Y Rusanov, D S Baranov, N Pugach, S M Frolov, V V Ryazanov, and D J Van Harlingen. 2018. “Second-Harmonic Current-Phase Relation in Josephson Junctions with Ferromagnetic Barriers.”&lt;/p&gt;
+&lt;p&gt;Strambini, Elia, Andrea Iorio, Ofelia Durante, Roberta Citro, Cristina Sanz-Fernández, Claudio Guarcello, Ilya V Tokatly, et al. n.d. “A Josephson Phase Battery.” &lt;em&gt;Nature Nanotechnology&lt;/em&gt;. &lt;a href="https://doi.org/10.1038/s41565-020-0712-7"&gt;https://doi.org/10.1038/s41565-020-0712-7&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;span class="caps"&gt;TPT&lt;/span&gt;. n.d. “&lt;span class="caps"&gt;HB&lt;/span&gt;-05 &lt;span class="caps"&gt;TPT&lt;/span&gt; Wire Bonder Manual.” In.&lt;/p&gt;
+&lt;p&gt;Wang, Lujun. 2015. “Fabrication Stability of Josephson Junctions for Superconducting Qubits.” In.&lt;/p&gt;
+&lt;p&gt;Yamashita, T., K. Tanikawa, S. Takahashi, and S. Maekawa. 2005. “Superconducting &lt;span class="math"&gt;\(\ensuremath{\pi}\)&lt;/span&gt; Qubit with a Ferromagnetic Josephson Junction.” &lt;em&gt;Phys. Rev. Lett.&lt;/em&gt; 95 (August): 097001. &lt;a href="https://doi.org/10.1103/PhysRevLett.95.097001"&gt;https://doi.org/10.1103/PhysRevLett.95.097001&lt;/a&gt;.&lt;/p&gt;
+&lt;h3 id="acknowledgements"&gt;Acknowledgements&lt;a class="headerlink" href="#acknowledgements" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;I wish to thank my project supervisors, Dr. Kartikeswar Senapati and Dr. Ram Shanker Patel for their immense support and help with the understanding of this project. I would like to express my deepest appreciation to Mr. Tapas Ranjan Senapati and Ms. Laxmipriya Nanda for all their help from mentoring on the fabrication techniques to usage of measurement systems and all the fruitful discussions. I wish to thank all the lab members of Superconductivity lab, &lt;span class="caps"&gt;NISER&lt;/span&gt; for all the brainstorming sessions which helped me greatly. Special thanks to Ms. Soheli Mukherjee who always supported me with all my endeavours. I would also like to extend my deepest gratitude to Dr. Dhavala Suri who always showered me with helpful advice. lastly, I am thankful to all my friends and family members for extending their love and support.&lt;/p&gt;
+&lt;h3 id="abbreviations"&gt;Abbreviations&lt;a class="headerlink" href="#abbreviations" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;span class="caps"&gt;AC&lt;/span&gt; :- Alternating current&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;span class="caps"&gt;RF&lt;/span&gt; :- Radio frequency&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;span class="caps"&gt;JJ&lt;/span&gt; :- Josephson Junction&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;span class="caps"&gt;SQUID&lt;/span&gt; :- Superconducting QUantum Interference Device&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;span class="caps"&gt;EDX&lt;/span&gt; :- Energy Dispersive X-ray spectroscopy&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;span class="caps"&gt;SEM&lt;/span&gt; :- Scanning Electron Microscope&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;span class="caps"&gt;FIB&lt;/span&gt; :- Focused Ion Beam&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;span class="caps"&gt;PPMS&lt;/span&gt; :- Physical Properties Measurement System&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Fig :- Figure&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;eV :- Electron Volt&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;KeV :- Kilo Electron Volt&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;MeV :- Mega/Million Electron Volt&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;et al :- And others (Latin)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;i.e. :- That is&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;etc :- Et cetera (Latin for ’and others of same kind’)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;T :- Tesla&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;SiO2:- Silicon dioxide&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;R-T :- Resistance Versus Temperature&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;I-V :- Current Versus Voltage&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;I-H :- Current Versus Magnetic field&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;V-H :- Voltage Versus Magnetic field&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Si :- Silicon&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;K :- kelvin&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;mm :- millimeter&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;mbar :- millibar&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;span class="caps"&gt;IPA&lt;/span&gt; :- Isopropyl alcohol&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;span class="caps"&gt;RPM&lt;/span&gt; :- Revolutions Per Minute&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;C :- Celsius&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Ar :- Argon&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;e.g. :- Example given&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;span class="caps"&gt;TSP&lt;/span&gt; :- Titanium Sublimation Pump&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;span class="caps"&gt;RGA&lt;/span&gt; :- Residual Gas Analyzers&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Cu :- Copper&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;span class="caps"&gt;BCS&lt;/span&gt; :- Bardeen–Cooper–Schrieffer&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Nb :- Niobium&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;span class="caps"&gt;DC&lt;/span&gt; :- Direct current&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;span class="caps"&gt;AC&lt;/span&gt; :- Alternating current&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;span class="math"&gt;\(\mu\)&lt;/span&gt;A :- Micro Ampere&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;span class="math"&gt;\(\Omega\)&lt;/span&gt;:- Ohm&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;nm :- Nano meter&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width &lt; 768) ? "left" : align;
+        indent = (screen.width &lt; 768) ? "0em" : indent;
+        linebreak = (screen.width &lt; 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_CHTML';
+
+    var configscript = document.createElement('script');
+    configscript.type = 'text/x-mathjax-config';
+    configscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'none' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        availableFonts: ['STIX', 'TeX']," +
+        "        preferredFont: 'STIX'," +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+&lt;/script&gt;</content><category term="Science"></category><category term="cryostat"></category><category term="probe"></category><category term="transport measurement"></category><category term="Josephson Junction"></category><category term="LabVIEW"></category><category term="NISER"></category><category term="Superconductivity"></category></entry><entry><title>An experiment with a wooden Belan</title><link href="https://ashwinschronicles.github.io/an-experiment-with-a-wooden-belan" rel="alternate"></link><published>2020-09-20T00:00:00+05:30</published><updated>2020-09-20T00:00:00+05:30</updated><author><name>Ashwin</name></author><id>tag:ashwinschronicles.github.io,2020-09-20:/an-experiment-with-a-wooden-belan</id><summary type="html">&lt;p&gt;This post is about the authors experiemnt with a&amp;nbsp;belan&lt;/p&gt;</summary><content type="html">
+&lt;h1 class="unnumbered" id="experiment-no-1-rolling-a-belan-on-an-inclined-surface"&gt;Rolling a Belan on an inclined surface&lt;a class="headerlink" href="#experiment-no-1-rolling-a-belan-on-an-inclined-surface" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h1&gt;
+&lt;h1 id="aim-of-the-experiment"&gt;Aim of the experiment&lt;a class="headerlink" href="#aim-of-the-experiment" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;To find the moment of inertia of belan&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;To find the relation ship between rolling time and the inclination angle&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;To find the coefficient of friction of the surface.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;To determine if rolling time is dependant of surface friction.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1 id="system-description"&gt;System description&lt;a class="headerlink" href="#system-description" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h1&gt;
+&lt;p&gt;Consider the inclined plane in figure &lt;a href="#fig:Rolling-Cylinder-on"&gt;1&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;img _='"' alt='Rolling Cylinder on an Inclined Plane[[fig:Rolling-Cylinder-on]]{#fig:Rolling-Cylinder-on label="fig:Rolling-Cylinder-on"}' id="fig:Rolling-Cylinder-on" src="https://ashwinschronicles.github.io/Fig1.png"/&gt;&lt;/p&gt;
+&lt;p&gt;let’s establish all the forces acting on this rolling body . The force mg is acting in the downward direction and it has two components one is parallel to the plank and there’s one component which is perpendicular to the plank and this in turn causes normal reaction and we call it &lt;span class="math"&gt;\(F_{n}\)&lt;/span&gt; .&lt;/p&gt;
+&lt;p&gt;We also have a force of friction which is acting opposite to the direction of roll. we are considering a situation where the body is not slipping down the ramp it is smoothly rolling down the lamp so force of friction which is static in nature is more than &lt;span class="math"&gt;\(mg\sin\theta\)&lt;/span&gt; and it is not necessary that &lt;span class="math"&gt;\(f_{s}\)&lt;/span&gt; here is &lt;span class="math"&gt;\(f_{s}max\)&lt;/span&gt;, so the moment &lt;span class="math"&gt;\(mg\sin\theta\)&lt;/span&gt; exceeds &lt;span class="math"&gt;\(f_{s}max\)&lt;/span&gt; the body will start slipping (i.e for smooth rolling &lt;span class="math"&gt;\(f_{s}&amp;gt;mg\sin\theta\)&lt;/span&gt;)&lt;/p&gt;
+&lt;p&gt;Lets write the equations of motion of this rolling body, first we’ll write the forces acting on the body considering its linear motion we can say&lt;/p&gt;
+&lt;div class="math"&gt;$$f_{s}-mg\sin\theta=ma_{x}$$&lt;/div&gt;
+&lt;p&gt;We now notice that only &lt;span class="math"&gt;\(F_{s}\)&lt;/span&gt;can produce torque to the body as all other forces are going right through the axis of rotation of the cylinder and therefore its distance from the axis of rotation of the cylinder is zero .&lt;/p&gt;
+&lt;div class="math"&gt;$$\tau=I\alpha$$&lt;/div&gt;
+&lt;div class="math"&gt;$$f_{s}R=I\alpha$$&lt;/div&gt;
+&lt;div class="math"&gt;$$a_{x}=R\alpha$$&lt;/div&gt;
+&lt;div class="math"&gt;$$f_{s}=Ia_{x}/R^{2}$$&lt;/div&gt;
+&lt;div class="math"&gt;$$Ia_{x}/R^{2}-mg\sin\theta=ma_{x}$$&lt;/div&gt;
+&lt;div class="math"&gt;$$a_{x}=\frac{g\sin\theta}{1+I/mR^{2}}$$&lt;/div&gt;
+&lt;p&gt;The time taken for the cylinder to cover a distance S (along the inclination) can be calculated from&lt;/p&gt;
+&lt;div class="math"&gt;$$t=\sqrt{(\frac{2S}{a_{x}})}$$&lt;/div&gt;
+&lt;div class="math"&gt;$$t=\sqrt{\frac{2S(1+I/mR^{2})}{g\sin\theta}}\label{eq:time}$$&lt;/div&gt;
+&lt;p&gt;In the limiting case where frictional force can no longer support rolling of the cylinder, thus the cylinder begins to slip. Analysing this case, &lt;span class="math"&gt;\(f_{s}=\mu N=\mu mg\cos\theta\)&lt;/span&gt; thus &lt;/p&gt;
+&lt;div class="math"&gt;$$\mu mg\cos\theta_{max}=Ia_{x}/R^{2}$$&lt;/div&gt;
+&lt;div class="math"&gt;$$\mu mg\cos\theta_{max}=\frac{Ig\sin\theta_{max}}{R^{2}+I/m}$$&lt;/div&gt;
+&lt;div class="math"&gt;$$\mu=\frac{I\tan\theta_{max}}{mR^{2}+I}\label{eq:mu}$$&lt;/div&gt;
+&lt;h1 id="experimental-method"&gt;Experimental Method&lt;a class="headerlink" href="#experimental-method" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Measure the dimensions such as lengths and radii of the Belan and record them with percentage errors using the accuracy involved with measuring tools&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Measure the bench parameters in a similar way.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Calculate lift parameters ( vertical lift required for each degree).&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Lift one end the bench using a Car Jack along with some wooden planks (ensuring the balance of the bench isn’t disturbed).&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Plot t versus sin&lt;span class="math"&gt;\(\theta\)&lt;/span&gt; other quantities like t2, 1/t, 1/t2 etc. and try to get a linear plot.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;find the moment of inertia of belan.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;To determine if rolling time is dependant of surface friction.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Try find coefficient of friction.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Try to replace the surface and determine if rolling time is dependant of surface.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1 id="observations-measurements"&gt;Observations &lt;span class="amp"&gt;&amp;amp;&lt;/span&gt; Measurements&lt;a class="headerlink" href="#observations-measurements" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h1&gt;
+&lt;h2 id="measurement-of-linear-distances"&gt;Measurement of linear distances&lt;a class="headerlink" href="#measurement-of-linear-distances" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;h3 id="measurement-of-radii-of-belan"&gt;Measurement of radii of belan&lt;a class="headerlink" href="#measurement-of-radii-of-belan" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;In order to measure the radii of the belan, a thread was used cover the circumference and a marking is done with a pen on both of the strings at the same level as shown in Fig &lt;a href="#fig:Circumference thread"&gt;2&lt;/a&gt; and then the thread is placed on a ruler and the distance between the two markings on the string is measured, as shown in Fig &lt;a href="#fig:CircumMeasure" reference="fig:CircumMeasure" reference-type="ref"&gt;3&lt;/a&gt; . The least count of scale is 0.05 cm for the smaller radius and 0.1cm for bigger radius.&lt;/p&gt;
+&lt;p&gt;&lt;img alt='Measuring circumference of larger radius[[fig:Circumference thread]]{#fig:Circumference thread label="fig:Circumference thread"}' id="fig:Circumference" src="https://ashwinschronicles.github.io/belan-images/circumferenceig.jpg" thread="thread"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt='Measuring circumference of larger radius[[fig:CircumMeasure]]{#fig:CircumMeasure label="fig:CircumMeasure"}' id="fig:CircumMeasure" src="https://ashwinschronicles.github.io/belan-images/circumMeasureBig.jpg"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt='Measuring circumference of smaller radius[[fig:Circumference thread-1]]{#fig:Circumference thread-1 label="fig:Circumference thread-1"}' id="fig:Circumference" src="https://ashwinschronicles.github.io/belan-images/circum_small.jpg" thread-1="thread-1"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt='Measuring circumference of smaller radius[[fig:CircumMeasure-1]]{#fig:CircumMeasure-1 label="fig:CircumMeasure-1"}' id="fig:CircumMeasure-1" src="https://ashwinschronicles.github.io/belan-images/circumMeasureSmall.jpg"/&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;            Circumference of the smaller radius (in cm)   Circumference of the bigger radius (in cm)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;hr/&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;Trial 1                         4.5                                           11
+Trial 2                         4.6                                          11.2
+Trial 3                         4.6                                          11.2
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;dl&gt;
+&lt;dt&gt;Mean value                      4.56 11.13&lt;/dt&gt;
+&lt;dd&gt;
+&lt;p&gt;Measured circumference data&lt;/p&gt;
+&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;p&gt;Thus the nominal values of radii are 0.73 cm and 1.77 cm (round to two decimal places) respectively.&lt;/p&gt;
+&lt;p&gt;we know that &lt;span class="math"&gt;\(c=2\pi r\)&lt;/span&gt;so, &lt;span class="math"&gt;\(\Delta r=r\Delta c/c\)&lt;/span&gt; so the error in measurement of radius is 0.008 cm and 0.016 cm respectively.&lt;/p&gt;
+&lt;p&gt;Therefore &lt;span class="math"&gt;\(R_{1}=0.73\pm0.01\)&lt;/span&gt;cm and &lt;span class="math"&gt;\(R_{2}=1.77\pm0.02\)&lt;/span&gt;cm (two significant figures).&lt;/p&gt;
+&lt;h3 id="measurement-of-length-of-belan"&gt;Measurement of length of belan&lt;a class="headerlink" href="#measurement-of-length-of-belan" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;In order to measure the length of the belan, I placed the belan against a wall and the height was recorded on top of a painters tape (Fig &lt;a href="#fig:BelanLegth1" reference="fig:BelanLegth1" reference-type="ref"&gt;6&lt;/a&gt; ), next we use a tape measure to measure the distance from ground to this marking (Fig &lt;a href="#fig:BelanLegth2" reference="fig:BelanLegth2" reference-type="ref"&gt;7&lt;/a&gt; ).&lt;/p&gt;
+&lt;p&gt;The length of belan as measured using this procedure is 35.8 &lt;span class="math"&gt;\(\pm\)&lt;/span&gt;0.1 cm (least count of tape measure is 0.1 cm)&lt;/p&gt;
+&lt;p&gt;&lt;img alt='Measurement of length of belan[[fig:BelanLegth1]]{#fig:BelanLegth1 label="fig:BelanLegth1"}' id="fig:BelanLegth1" src="https://ashwinschronicles.github.io/belan-images/belanHeght1.jpg"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt='Measurement of length of belan[[fig:BelanLegth2]]{#fig:BelanLegth2 label="fig:BelanLegth2"}' id="fig:BelanLegth2" src="https://ashwinschronicles.github.io/belan-images/belanHeght2.jpg"/&gt;&lt;/p&gt;
+&lt;h3 id="measurement-of-distance-travelled-by-belan"&gt;Measurement of distance travelled by belan&lt;a class="headerlink" href="#measurement-of-distance-travelled-by-belan" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;The bench used for the experiment has total length as 172cm (fig &lt;a href="#fig:Belan Length" reference="fig:Belan Length" reference-type="ref"&gt;8&lt;/a&gt; ). However the belan can travel only part of the distance. On either side, the shape of the belan prevents it from starting at the very end (and reaching the lowest point) thus a tape has been put to keep track of the start and the end point of the belan. As seen from the Figure &lt;a href="#fig:Belan Length-left" reference="fig:Belan Length-left" reference-type="ref"&gt;10&lt;/a&gt; &lt;span class="amp"&gt;&amp;amp;&lt;/span&gt; &lt;a href="#fig:Belan Length-right" reference="fig:Belan Length-right" reference-type="ref"&gt;9&lt;/a&gt; , the total length the belan can traverse is (166 - 4.3) = 161.7 cm. The least count of the scale used here is 1mm. Therefore the total length the belan can traverse is 161.7&lt;span class="math"&gt;\(\pm\)&lt;/span&gt; 0.1 cm.&lt;/p&gt;
+&lt;p&gt;&lt;img alt='Measurement of distance travelled by belan[[fig:Belan Length]]{#fig:Belan Length label="fig:Belan Length"}' id="fig:Belan" length="Length" src="https://ashwinschronicles.github.io/belan-images/measure_table_lenght.jpg"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt='Measurement of distance travelled by belan (right end)[[fig:Belan Length-right]]{#fig:Belan Length-right label="fig:Belan Length-right"}' id="fig:Belan" length-right="Length-right" src="https://ashwinschronicles.github.io/belan-images/measure_right_lenght.jpg"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt='Measurement of distance travelled by belan (right end)[[fig:Belan Length-left]]{#fig:Belan Length-left label="fig:Belan Length-left"}' id="fig:Belan" length-left="Length-left" src="https://ashwinschronicles.github.io/belan-images/measure_left_lenght.jpg"/&gt;&lt;/p&gt;
+&lt;h3 id="measurement-of-vertical-lift-at-one-end"&gt;Measurement of vertical lift at one end&lt;a class="headerlink" href="#measurement-of-vertical-lift-at-one-end" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;The selected bench for measurement has maximum flat length as 172 cm. We want to perform experiment at angles from 2 degree to 16 degree at an interval of 2. We can calculate the height required to be lifted at one end to reach the given set of angles as &lt;span class="math"&gt;\(L=172\sin\theta\)&lt;/span&gt;. This gives us the following table &lt;a href="#tab:Measurement-of-vertical" reference="tab:Measurement-of-vertical" reference-type="ref"&gt;1&lt;/a&gt; .&lt;/p&gt;
+&lt;p&gt;Angle(degree)   lift required (cm)   lift rounded to &lt;span class="caps"&gt;LC&lt;/span&gt; of scale (cm)&lt;/p&gt;
+&lt;hr/&gt;
+&lt;p&gt;2               6.003                6
+  4               11.998               12
+  6               17.979               18
+  8               23.938               24
+  10              29.867               30
+  12              35.761               35.8
+  14              41.611               41.6
+  16              47.410 47.4&lt;/p&gt;
+&lt;p&gt;.&lt;/p&gt;
+&lt;p&gt;The Car Jack has been placed at the middle of one end of the bench (Fig&lt;a href="#fig:Jack balance" reference="fig:Jack balance" reference-type="ref"&gt;12&lt;/a&gt; ). For larger lengths (20cm onward) a set of wooden planks are added to increase the height (Fig &lt;a href="#fig:Jack wood" reference="fig:Jack wood" reference-type="ref"&gt;13&lt;/a&gt;). The bench can be lifted higher by rotating the shaft of the car jack until the required height is met (Fig ). Since the height can be measured to 0.1cm accuracy (&lt;span class="caps"&gt;LC&lt;/span&gt; of the scale used) this also translates into the accuracy for angle of the inclined plane. While measuring height care must be taken that the scale is perpendicular to ground and the height of the center of the bench leg is measured. One can use a flat card as a pointer and to avoid parallax. (Fig &lt;a href="#fig:Jack measure" reference="fig:Jack measure" reference-type="ref"&gt;11&lt;/a&gt;)&lt;/p&gt;
+&lt;p&gt;&lt;img alt='Measurement of vertical lift using scale and flat card.[[fig:Jack measure]]{#fig:Jack measure label="fig:Jack measure"}' id="fig:Jack" measure="measure" src="https://ashwinschronicles.github.io/belan-images/measureJack.jpg"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt='Placement of Car jack such that the bench is lifted and balanced.[[fig:Jack balance]]{#fig:Jack balance label="fig:Jack balance"}' balance="balance" id="fig:Jack" src="https://ashwinschronicles.github.io/belan-images/jack-on-the-bench.jpg"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt='A set of wooden planks are added to increase the height.[[fig:Jack wood]]{#fig:Jack wood label="fig:Jack wood"}' id="fig:Jack" src="https://ashwinschronicles.github.io/belan-images/jack+ane2.jpg" wood="wood"/&gt;&lt;/p&gt;
+&lt;h2 id="measurement-of-time-taken-to-roll-down"&gt;Measurement of time taken to roll down&lt;a class="headerlink" href="#measurement-of-time-taken-to-roll-down" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;In order to measure the time taken for the belan to roll down, video of the experiment was taken in a mobile phone. The video recorded was then processed frame by frame to find the number of frames between the starting and belan reaching the end. This analysis was done on a mobile app named &lt;strong&gt;“&lt;a href="https://play.google.com/store/apps/details?id=us.secondscount&amp;amp;hl=en_IN"&gt;Video Stopwatch&lt;/a&gt;”&lt;/strong&gt; (As seen in fig &lt;a href="#fig:Screeenshot" reference="fig:Screeenshot" reference-type="ref"&gt;14&lt;/a&gt; ) .The video recorded had a 30 &lt;span class="caps"&gt;FPS&lt;/span&gt; (frames per second) thus each frame lasts for 33.33 ms and this is our least count. This exercises was done 3 times and the average was calculated.&lt;/p&gt;
+&lt;p&gt;&lt;img alt='Screenshot of the app[[fig:Screeenshot]]{#fig:Screeenshot label="fig:Screeenshot"}' id="fig:Screeenshot" src="https://ashwinschronicles.github.io/belan-images/Screenshot.png"/&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;  Angle(degree)   time (trial1) (in s)   time (trial2) (in s)   time (trial3) (in s)   Mean time (in s)   lift of bench (cm)
+--------------- ---------------------- ---------------------- ---------------------- ------------------ --------------------
+  2               3.5                    3.433                  3.433                  3.455              6
+  4               2.567                  2.567                  2.567                  2.567              12
+  6               2.067                  2.033                  2.033                  2.044              18
+  8               1.733                  1.8                    1.767                  1.767              24
+  10              1.633                  1.633                  1.633                  1.633              30
+  12              1.467                  1.433                  1.433                  1.444              35.8
+  14              1.3                    1.333                  1.333                  1.322              41.6
+  16              1.267                  1.2                    1.267                  1.245              47.4
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;After these sets of measurement, a kitchen anti slip mat was added on top of the bench surface. The time taken to roll down is measured again for 6 degree and 8 degree. The time measured thus is 2.033 s and 1.733 s respectively. This is similar to the one without surface modification thus rolling time is independent of surface (which is also clear from the formula for t Eq: &lt;a href="#eq:time" reference="eq:time" reference-type="ref"&gt;[eq:time]&lt;/a&gt;).&lt;/p&gt;
+&lt;h2 id="measurement-of-weight-of-belan"&gt;Measurement of weight of belan&lt;a class="headerlink" href="#measurement-of-weight-of-belan" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;The weight of the belan was calculated using a kitchen weighing scale.The least count of the used measuring scale was 1g. It was found that the weight of the belan used in this experiment is 172 &lt;span class="math"&gt;\(\pm\)&lt;/span&gt;1 g.&lt;/p&gt;
+&lt;p&gt;&lt;img alt='Measurement of weight of belan[[fig:CircumMeasure-1-1]]{#fig:CircumMeasure-1-1 label="fig:CircumMeasure-1-1"}' id="fig:CircumMeasure-1-1" src="https://ashwinschronicles.github.io/belan-images/BelanWeight.jpg"/&gt;&lt;/p&gt;
+&lt;h2 id="plots"&gt;Plots&lt;a class="headerlink" href="#plots" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Attached outside the report in the form of 2 images.&lt;/p&gt;
+&lt;h2 id="calculation-of-moment-of-inertia-of-the-belan"&gt;Calculation of moment of inertia of the belan&lt;a class="headerlink" href="#calculation-of-moment-of-inertia-of-the-belan" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;From eq &lt;a href="#eq:time" reference="eq:time" reference-type="ref"&gt;[eq:time]&lt;/a&gt; &lt;/p&gt;
+&lt;div class="math"&gt;$$t=\sqrt{\frac{2S(1+I/mR^{2})}{g\sin\theta}}$$&lt;/div&gt;
+&lt;p&gt;so &lt;/p&gt;
+&lt;div class="math"&gt;$$I=mR^{2}(\frac{t^{2}g\sin\theta}{2S}-1)$$&lt;/div&gt;
+&lt;p&gt;let us take R as the weighted mean of &lt;span class="math"&gt;\(R_{1}\)&lt;/span&gt; and&lt;span class="math"&gt;\(R_{2}\)&lt;/span&gt;. The weights can be chosen (assumed) as the fraction of total length that &lt;span class="math"&gt;\(R_{i}\)&lt;/span&gt; appears in the cylinder. The fraction of length with &lt;span class="math"&gt;\(R_{1}\)&lt;/span&gt; is 17/35.8 and that for &lt;span class="math"&gt;\(R_{2}\)&lt;/span&gt; is 18.8/35.8.&lt;/p&gt;
+&lt;p&gt;Thus R using these weights become &lt;span class="math"&gt;\(\frac{aR_{1}+bR_{2}}{a+b}=1.28\pm(0.01+0.02)=1.28\pm0.03\)&lt;/span&gt;cm.&lt;/p&gt;
+&lt;p&gt;Using theses values and the vales from 2 degree angle data, and g=9.81m&lt;span class="math"&gt;\(/s^{2}\)&lt;/span&gt; we calculate I as 0.0000074312 Kg&lt;span class="math"&gt;\(m^{2}\)&lt;/span&gt; = 74.312 g&lt;span class="math"&gt;\(cm^{2}\)&lt;/span&gt;&lt;/p&gt;
+&lt;div class="math"&gt;$$\frac{\Delta I}{I}=\frac{\Delta m}{m}+2\frac{\Delta R}{R}+2\frac{\Delta t}{t}+cos\theta\Delta\theta+\frac{\Delta S}{S}$$&lt;/div&gt;
+&lt;p&gt; calculating these with the previously mentioned error fractions,&lt;/p&gt;
+&lt;div class="math"&gt;$$\frac{\Delta I}{I}=0.073410$$&lt;/div&gt;
+&lt;div class="math"&gt;$$\Delta I=0.00000054552Kgm^{2}=5.45gcm^{2}$$&lt;/div&gt;
+&lt;p&gt;Therefore I = 74.312 &lt;span class="math"&gt;\(\pm5.45gcm^{2}\)&lt;/span&gt;.&lt;/p&gt;
+&lt;h2 id="calculation-of-coefficient-of-friction"&gt;Calculation of coefficient of friction&lt;a class="headerlink" href="#calculation-of-coefficient-of-friction" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;In the limiting case where frictional force can no longer support rolling of the cylinder, thus the cylinder begins to slip. In my case the &lt;span class="math"&gt;\(\theta max\)&lt;/span&gt;was found to be 55 degree. Using eq&lt;a href="#eq:mu" reference="eq:mu" reference-type="ref"&gt;[eq:mu]&lt;/a&gt; &lt;/p&gt;
+&lt;div class="math"&gt;$$\mu=\frac{I\tan\theta_{max}}{mR^{2}+I}$$&lt;/div&gt;
+&lt;p&gt;we get &lt;span class="math"&gt;\(\mu=0.298\sim0.3\)&lt;/span&gt;&lt;/p&gt;
+&lt;div class="math"&gt;$$\frac{\Delta\mu}{\mu}=\frac{\Delta I}{I}+2\frac{\Delta R}{R}+\frac{\Delta m}{m}+cot\theta\Delta\theta$$&lt;/div&gt;
+&lt;div class="math"&gt;$$\frac{\Delta\mu}{\mu}=0.15473$$&lt;/div&gt;
+&lt;p&gt;Therefore &lt;span class="math"&gt;\(\Delta\mu=0.046,\)&lt;/span&gt;thus &lt;span class="math"&gt;\(\mu=0.298\pm0.046\)&lt;/span&gt;&lt;/p&gt;
+&lt;h1 id="results-conclusion"&gt;Results &lt;span class="amp"&gt;&amp;amp;&lt;/span&gt; Conclusion&lt;a class="headerlink" href="#results-conclusion" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;The moment of inertia of belan is found to be 74.312 &lt;span class="math"&gt;\(\pm5.45gcm^{2}\)&lt;/span&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;The relation ship between rolling time and the inclination angle is &lt;span class="math"&gt;\(t=\sqrt{\frac{2S(1+I/mR^{2})}{g\sin\theta}}\)&lt;/span&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;The coefficient of friction of the surface is found to be &lt;span class="math"&gt;\(\mu=0.298\pm0.046\)&lt;/span&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;The rolling time is independent of surface friction (as long as &lt;span class="math"&gt;\(f_{s}&amp;gt;mg\sin\theta\)&lt;/span&gt;).&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Note : The above article is part of the report generated for regional &lt;span class="caps"&gt;NAEST&lt;/span&gt; Prelims.&lt;/p&gt;
+&lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width &lt; 768) ? "left" : align;
+        indent = (screen.width &lt; 768) ? "0em" : indent;
+        linebreak = (screen.width &lt; 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_CHTML';
+
+    var configscript = document.createElement('script');
+    configscript.type = 'text/x-mathjax-config';
+    configscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'none' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        availableFonts: ['STIX', 'TeX']," +
+        "        preferredFont: 'STIX'," +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+&lt;/script&gt;</content><category term="Science"></category><category term="belan"></category><category term="measurement"></category><category term="errors"></category></entry><entry><title>Cryostat probe design and optimisation for transport measurement.</title><link href="https://ashwinschronicles.github.io/Cryostat-probe-design" rel="alternate"></link><published>2019-07-14T00:00:00+05:30</published><updated>2020-06-10T00:00:00+05:30</updated><author><name>Ashwin</name></author><id>tag:ashwinschronicles.github.io,2019-07-14:/Cryostat-probe-design</id><summary type="html">&lt;p&gt;This post is about a design of a cryostat probe which is optimised for transport&amp;nbsp;measurement.&lt;/p&gt;</summary><content type="html">
+&lt;h1 id="getting-to-know-the-cryostat"&gt;Getting to know the cryostat&lt;a class="headerlink" href="#getting-to-know-the-cryostat" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h1&gt;
+&lt;p&gt;A cryostat is a device used to maintain low cryogenic temperatures of samples or devices mounted within the cryostat. The temperature range can be as low as few milli-kelvin in Dilution refrigerators. Most common ones are either liquid Helium based which can cool to below 10 K or are liquid Nitrogen based, which can cool to about 80 K which is Nitrogen’s boiling point. The sample is mounted on something called as the probe, which houses electrical wires connecting the sample to the instruments used for various measurements. Cryostats can be closed cycle ones, or continuous flow systems. In closed cycle cryostat the cold cryogen (refrigerant) is pumped to the sample chamber and the warm cryogen is extracted and cooled and then recycled into the system. Continuous-flow cryostats are cooled by liquid cryogens from a storage dewar. As the cryogen boils within the cryostat, it is continuously replenished by a steady flow from the storage dewar.&lt;/p&gt;
+&lt;p&gt;The cryostat at Superconductivity Lab, &lt;span class="caps"&gt;NISER&lt;/span&gt;, for which I had to develop the probe tip, is a customised closed system cryostat provided by ColdEdge. The key features of this cryostat is large sample space and fast cooling. In the large sample space (aka sample well), helium gas is purged (at &amp;lt;0.5 psi pressure) which cools the sample by convection cooling methods. The helium gas is provided from an external gas cylinder. A 0.5 psi relief valve is present for safety in case the sample space becomes over pressurised.&lt;/p&gt;
+&lt;p&gt;The cooling part of the system is called cold head. It removes heat from the compressors incoming gas by expansion through an internal displacer. The displacer is filled with regenerative material that also helps with the cooling of the gas.&lt;/p&gt;
+&lt;p&gt;The compressor is part of the cryo-cooler system which cycles helium gas to and from the cold head. It contains an absorber which is used to filter out impurities from the gas which may cause cool down problems for the cold head.&lt;/p&gt;
+&lt;p&gt;The sample space is attached directly to the cold head and achieves the temperature range (4 - 325K) of the cold head. The sample is attached to the probe which is plunged into cold helium gas inside the sample well. Since the interface remains cold and the probe stick can be removed from the cold interface without having to warm up and break vacuum, different samples can be examined quickly.&lt;/p&gt;
+&lt;p&gt;By default, the cryostat comes with two Cernox temperature sensors, one for the cold head and the other on the probe to measure sample temperature. Cernox is the best suitable sensor for such low temperature high magnetic field regions.&lt;/p&gt;
+&lt;p&gt;A vacuum jacket (aka vacuum shroud) is placed over the Cold Head and sample well, which acts as an insulator between the Cold Head and ambient room temperature. It will ensure that ice does not build up on the cooler. Power to the cold head is supplied through the compressor.&lt;/p&gt;
+&lt;p&gt;A load lock above the sample space, helps to insert the probe without having to warm up and break vacuum of sample space.&lt;/p&gt;
+&lt;p&gt;It is best to control the heater using the Cernox sensor on the outside of the well rather than using the Cernox sensor on the sample stick. Uniformly heating the outside of the well and adjusting the set point relative to the stick sensor will be much easier than trying to compensate for the convection currents internally in the well.&lt;/p&gt;
+&lt;h1 id="design-and-fabrication-of-probe"&gt;Design and Fabrication of Probe&lt;a class="headerlink" href="#design-and-fabrication-of-probe" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h1&gt;
+&lt;h2 id="design"&gt;Design&lt;a class="headerlink" href="#design" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;The probe design was made keeping in mind thermal equilibrium of sample and temperature sensor and to maximize the number of connections one can make in a sample. The company for the cryostat had given us a basic stick support structure for the dipstick, which looks like Fig&lt;a href="#fig:Basic-Probe"&gt;1&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt='Basic Probe{#fig:Basic-Probe label="fig:Basic-Probe"}' src="https://ashwinschronicles.github.io/Photos/BasicProbe.png"/&gt;&lt;/p&gt;
+&lt;p&gt;The lower end of this structure has a temperature sensor and a heater, so a probe tip had to be designed that can do measurements efficiently.&lt;/p&gt;
+&lt;p&gt;The design finalized is as shown in Fig&lt;a href="#fig:Design"&gt;2&lt;/a&gt;. In this design, the brown square part is the copper sheet, the green sheet is an &lt;span class="caps"&gt;RC&lt;/span&gt; filter for all the input wires, and the sample is the purple one, the sample holder pcb can be connected and disconnected to the &lt;span class="caps"&gt;RC&lt;/span&gt; filter &lt;span class="caps"&gt;PCB&lt;/span&gt;, this is so that the sample holder can be removed and taken to the wire bonder etc. There are two versions of this support, the magnetic base (aka flat base)and the non magnetic base (aka square base). In both the case, the 10 pins of each side are connected in parallel. Hence in one go, one can measure at most 10 pads or 4 (2) samples.&lt;/p&gt;
+&lt;p&gt;&lt;img alt='Design[[fig:Design]]{#fig:Design label="fig:Design"}' src="https://ashwinschronicles.github.io/Photos/Design.png"/&gt;&lt;/p&gt;
+&lt;p&gt;Next we had to design the &lt;span class="caps"&gt;PCB&lt;/span&gt; which included an &lt;span class="caps"&gt;RC&lt;/span&gt; low pass filter and a sample holder, the design which was finalised is shown in Fig&lt;a href="#fig:PCB-Design"&gt;3&lt;/a&gt; it was designed using a free online service called www.easyeda.com . The &lt;span class="caps"&gt;RC&lt;/span&gt; filter parameters are &lt;span class="math"&gt;\(f_c\)&lt;/span&gt; = 1000Hz, R=150 ohm, C = 10 &lt;span class="math"&gt;\(\mu\)&lt;/span&gt; F.&lt;/p&gt;
+&lt;p&gt;&lt;img alt='PCB Design[[fig:PCB-Design]]{#fig:PCB-Design label="fig:PCB-Design"}' src="https://ashwinschronicles.github.io/Photos/PCB.png"/&gt;&lt;/p&gt;
+&lt;p&gt;Another version of the square support is the flat support which supports  using magnetic coils for magnetic measurements is as shown in fig&lt;a href="#fig:Magnetic-Base"&gt;3&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt='RC filter Circuit[[fig:RC-filter-Circuit]]{#fig:RC-filter-Circuit label="fig:RC-filter-Circuit"}' src="https://ashwinschronicles.github.io/Photos/MagneticBase.png"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt='RC filter Circuit[[fig:RC-filter-Circuit]]{#fig:RC-filter-Circuit label="fig:RC-filter-Circuit"}' src="https://ashwinschronicles.github.io/Photos/RC_Filter.png"/&gt;&lt;/p&gt;
+&lt;p&gt;The &lt;span class="caps"&gt;RC&lt;/span&gt; filter works by using capacitor and resistor to attenuate high frequency noise. A circuit diagram for the same can be seen in Fig &lt;a href="#fig:RC-filter-Circuit" reference="fig:RC-filter-Circuit" reference-type="ref"&gt;5&lt;/a&gt;. The characteristic bode plot expected for a functioning &lt;span class="caps"&gt;RC&lt;/span&gt; filter is shown in Fig &lt;a href="#fig:Expected-Bode-plot" reference="fig:Expected-Bode-plot" reference-type="ref"&gt;6&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;img alt='Expected Bode plot[[fig:Expected-Bode-plot]]{#fig:Expected-Bode-plot label="fig:Expected-Bode-plot"}' src="https://ashwinschronicles.github.io/Photos/RC_Bde.png"/&gt;&lt;/p&gt;
+&lt;h2 id="fabrication"&gt;Fabrication&lt;a class="headerlink" href="#fabrication" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;The pcbs were designed and then sent to www.jlcpcb.com for fabrication of &lt;span class="caps"&gt;PCB&lt;/span&gt;. The electronic components required for the board were ordered from www.lcsc.com. &lt;/p&gt;
+&lt;p&gt;The delivered product is shown in Fig &lt;a href="#fig:Fabricated-PCB"&gt;7&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;img alt='Fabricated PCB[[fig:Fabricated-PCB]]{#fig:Fabricated-PCB label="fig:Fabricated-PCB"}' src="https://ashwinschronicles.github.io/Photos/Fabricated_PCB.jpg"/&gt;&lt;/p&gt;
+&lt;p&gt;The base was made in house using copper sheets which were cut using an angle grinder to the required measurements. The joints were fixed by brazing it with copper. The finished probe ends are seen in Fig &lt;a href="#fig:FabricatedBases"&gt;8&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Drawing_of_Magnetic_Base" src="https://ashwinschronicles.github.io/Photos/Drawing_of_Magnetic_Base.png"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Drawing_of_Non_Magnetic_Base" src="https://ashwinschronicles.github.io/Photos/Drawing_of_Non_Magnetic_Base.png"/&gt;&lt;/p&gt;
+&lt;p&gt;For measurement purpose, a sample of sputtered Nb thin film (55nm) was stuck on the copper base of the holder and wire bonding was done in 4 probe arrangement. The sample after wire-bonding is in fig&lt;a href="#fig:Sample-Holder"&gt;8&lt;/a&gt; .&lt;/p&gt;
+&lt;p&gt;&lt;img alt='[[fig:Sample-Holder]]{#fig:Sample-Holder label="fig:Sample-Holder"}Sample Holder' src="https://ashwinschronicles.github.io/Photos/sample_holder.png"/&gt;&lt;/p&gt;
+&lt;p&gt;The wiring for the probes were made with 37 gauge enameled copper wire twisted in pairs (Fig &lt;a href="#fig:Probe Wiring"&gt;9&lt;/a&gt;). The pin out for the connector can be found in Table &lt;a href="#tab:Connector-pin-out"&gt;1&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;img alt='[[fig:Probe Wiring]]{#fig:Probe Wiring label="fig:Probe Wiring"}Probe Wiring' src="https://ashwinschronicles.github.io/Photos/Connector_wiring.jpg"/&gt;&lt;/p&gt;
+&lt;p&gt;The pads of the sample are connected to the break out box (fig &lt;a href="#fig:breakoutbox"&gt;22&lt;/a&gt;).&lt;/p&gt;
+&lt;h1 id="software-for-data-acquisition"&gt;Software for data acquisition&lt;a class="headerlink" href="#software-for-data-acquisition" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h1&gt;
+&lt;p&gt;The signal from the sample is fed into the temperature controller and Source meter unit. The data from these instruments is gathered using a software written in Labview. A schematic of data flow is in Fig&lt;a href="#fig:Schematic"&gt;10&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;img alt='[[fig:Schematic]]{#fig:Schematic label="fig:Schematic"}Schematic' src="https://ashwinschronicles.github.io/Photos/Schematic.png"/&gt;&lt;/p&gt;
+&lt;p&gt;All the software tools required for data acquisition is compiled into a Labview project file “MeasurementLibrary.lvproj”. A shortcut to this file is kept in desktop (Fig &lt;a href="#fig:Lv1"&gt;11&lt;/a&gt;).&lt;/p&gt;
+&lt;p&gt;&lt;img alt='[[fig:Lv1]]{#fig:Lv1 label="fig:Lv1"}Desktop shortcut' src="https://ashwinschronicles.github.io/Photos/Screenshots/Screenshot(2).png"/&gt;&lt;/p&gt;
+&lt;p&gt;When the project file is opened, A list of all the available programs is shown (Fig &lt;a href="#fig:Measurement-Library" reference="fig:Measurement-Library" reference-type="ref"&gt;12&lt;/a&gt;)&lt;/p&gt;
+&lt;p&gt;&lt;img alt='[[fig:Measurement-Library]]{#fig:Measurement-Library label="fig:Measurement-Library"}Measurement Library' src="https://ashwinschronicles.github.io/Photos/Screenshots/Screenshot(3).png"/&gt; &lt;/p&gt;
+&lt;p&gt;This software suite consists of&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;4 probe resistance measurement interface (“B2912A_4probe_ohms.vi”)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Basic &lt;span class="caps"&gt;GPIB&lt;/span&gt; communication tester (“basic_gpib_write_and_read.vi”)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;span class="caps"&gt;LS336&lt;/span&gt; Heater Output Configuration Panel (“&lt;span class="caps"&gt;LS336&lt;/span&gt; Configure Heater Output Control Parameters and Acquire Single Reading.vi”)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;span class="caps"&gt;LS336&lt;/span&gt; Temperature Logger (“LS336_read_2temperature.vi”)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Basic &lt;span class="caps"&gt;RT&lt;/span&gt;,Tt Plotter (“Plot_RT_Graph.vi” and “Plot_Tvst.vi”)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;span class="caps"&gt;RT&lt;/span&gt; Logger with Temperature controller (“RT_measurement.vi”)&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Let us look at the functioning of each program one by one.&lt;/p&gt;
+&lt;h2 id="4-probe-resistance-measurement-interface"&gt;4 probe resistance measurement interface&lt;a class="headerlink" href="#4-probe-resistance-measurement-interface" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;The 4 probe resistance measurement interface is shown in Fig &lt;a href="#fig:4-probe-resistance" reference="fig:4-probe-resistance" reference-type="ref"&gt;13&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;img alt='[[fig:4-probe-resistance]]{#fig:4-probe-resistance label="fig:4-probe-resistance"}4 probe resistance measurement interface' src="https://ashwinschronicles.github.io/Photos/Screenshots/Screenshot(4).png"/&gt;&lt;/p&gt;
+&lt;p&gt;The software takes in the &lt;span class="caps"&gt;SMU&lt;/span&gt; &lt;span class="caps"&gt;VISA&lt;/span&gt; name (hardware address) and all the resistance measurement mode settings and does a single measurement. The hardware address for &lt;span class="caps"&gt;LS336&lt;/span&gt; is &lt;span class="caps"&gt;GPIB0&lt;/span&gt;::1::&lt;span class="caps"&gt;INSTR&lt;/span&gt; and that for the &lt;span class="caps"&gt;SMU&lt;/span&gt; is &lt;span class="caps"&gt;GPIB0&lt;/span&gt;::2::&lt;span class="caps"&gt;INSTR&lt;/span&gt; (or &lt;span class="caps"&gt;USB&lt;/span&gt;:xxxx in case it is connected via serial).&lt;/p&gt;
+&lt;p&gt;&lt;img alt='[[fig:save changes]]{#fig:save changes label="fig:save changes"}Save changes dialogue' src="https://ashwinschronicles.github.io/Photos/Screenshots/Screenshot(5).png"/&gt;&lt;/p&gt;
+&lt;p&gt;Note: If you change some parameter, when you close the program there might be a confirmation to save changes (Like Fig &lt;a href="#fig:save changes" reference="fig:save changes" reference-type="ref"&gt;14&lt;/a&gt;.) &lt;/p&gt;
+&lt;p&gt;&lt;span class="caps"&gt;ALWAYS&lt;/span&gt; &lt;span class="caps"&gt;CLICK&lt;/span&gt; “&lt;span class="caps"&gt;DONT&lt;/span&gt; &lt;span class="caps"&gt;SAVE&lt;/span&gt; &lt;span class="caps"&gt;ALL&lt;/span&gt;”, this is to ensure no pre-configured parameter gets changed by accident.&lt;/p&gt;
+&lt;h2 id="basic-gpib-communication-tester"&gt;Basic &lt;span class="caps"&gt;GPIB&lt;/span&gt; communication tester&lt;a class="headerlink" href="#basic-gpib-communication-tester" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;The interface for Basic &lt;span class="caps"&gt;GPIB&lt;/span&gt; communication tester is shown in Fig &lt;a href="#fig:GPIB-tester-interface" reference="fig:GPIB-tester-interface" reference-type="ref"&gt;15&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;img alt='[[fig:GPIB-tester-interface]]{#fig:GPIB-tester-interface label="fig:GPIB-tester-interface"}GPIB tester interface' src="https://ashwinschronicles.github.io/Photos/Screenshots/Screenshot(7).png"/&gt;&lt;/p&gt;
+&lt;p&gt;This tool allows you to debug &lt;span class="caps"&gt;GPIB&lt;/span&gt; connections and to check the state of the instrument. After selecting the right Hardware address, (&lt;span class="caps"&gt;VISA&lt;/span&gt; Resource name) you can write any serial &lt;span class="caps"&gt;SCPI&lt;/span&gt; commands in the Write buffer and when you execute the program the instruments response is shown in read buffer. Typical serial &lt;span class="caps"&gt;SCPI&lt;/span&gt; commands include:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;\*IDN? - Identify \*RST - Reset \*OPC? - Operation complete query \*CLS - Clear Status
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;.&lt;/p&gt;
+&lt;h2 id="ls336-heater-output-configuration-panel"&gt;&lt;span class="caps"&gt;LS336&lt;/span&gt; Heater Output Configuration Panel&lt;a class="headerlink" href="#ls336-heater-output-configuration-panel" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;The interface for &lt;span class="caps"&gt;LS336&lt;/span&gt; Heater Output Configuration Panel is shown in Fig &lt;a href="#fig:LS336-Heater-configuration" reference="fig:LS336-Heater-configuration" reference-type="ref"&gt;16&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;img alt='[[fig:LS336-Heater-configuration]]{#fig:LS336-Heater-configuration label="fig:LS336-Heater-configuration"}LS336 Heater configuration interface' src="https://ashwinschronicles.github.io/Photos/Screenshots/Screenshot(8).png"/&gt;&lt;/p&gt;
+&lt;p&gt;This software initializes the instrument, allows the user to determine if heater output control parameters and setpoint values are sent, takes a single sensor reading, and then closes the instrument.&lt;/p&gt;
+&lt;h2 id="ls336-temperature-logger"&gt;&lt;span class="caps"&gt;LS336&lt;/span&gt; Temperature Logger&lt;a class="headerlink" href="#ls336-temperature-logger" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;The interface for &lt;span class="caps"&gt;LS336&lt;/span&gt; Temperature Logger is shown in Fig &lt;a href="#fig:LS336-Temperature-Logger" reference="fig:LS336-Temperature-Logger" reference-type="ref"&gt;17&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;img alt='[[fig:LS336-Temperature-Logger]]{#fig:LS336-Temperature-Logger label="fig:LS336-Temperature-Logger"}LS336 Temperature Logger interface' src="https://ashwinschronicles.github.io/Photos/Screenshots/Screenshot(9).png"/&gt;&lt;/p&gt;
+&lt;p&gt;This software logs the sensor reading (of two inputs), and then saves the data in a tab separated file specified by the user.&lt;/p&gt;
+&lt;h2 id="basic-rttt-plotter"&gt;Basic &lt;span class="caps"&gt;RT&lt;/span&gt;,Tt Plotter&lt;a class="headerlink" href="#basic-rttt-plotter" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;The interface for Basic &lt;span class="caps"&gt;RT&lt;/span&gt;,Tt Plotter is shown in Fig &lt;a href="#fig:Basic-RT,Tt-Plotter" reference="fig:Basic-RT,Tt-Plotter" reference-type="ref"&gt;18&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;img alt='[[fig:Basic-RT,Tt-Plotter]]{#fig:Basic-RT,Tt-Plotter label="fig:Basic-RT,Tt-Plotter"}Basic RT,Tt Plotter interface' src="https://ashwinschronicles.github.io/Photos/Screenshots/Screenshot(10).png"/&gt;&lt;/p&gt;
+&lt;p&gt;The application takes in a tab separated text file containing data of index,V,I,R,&lt;span class="math"&gt;\(T_(coldhead)\)&lt;/span&gt;,&lt;span class="math"&gt;\(T_(sample)\)&lt;/span&gt; (obtained from temperature logger or &lt;span class="caps"&gt;RT&lt;/span&gt; Logger with Temperature controller )and then plots the &lt;span class="caps"&gt;RT&lt;/span&gt; , Tt graphs with T being the &lt;span class="math"&gt;\(T_(sample)\)&lt;/span&gt; .&lt;/p&gt;
+&lt;h2 id="rt-logger-with-temperature-controller"&gt;&lt;span class="caps"&gt;RT&lt;/span&gt; Logger with Temperature controller&lt;a class="headerlink" href="#rt-logger-with-temperature-controller" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;The interface for &lt;span class="caps"&gt;RT&lt;/span&gt; Logger with Temperature controller is shown in Fig &lt;a href="#fig:RT-Logger-with" reference="fig:RT-Logger-with" reference-type="ref"&gt;19&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;img alt='[[fig:RT-Logger-with]]{#fig:RT-Logger-with label="fig:RT-Logger-with"}RT Logger with Temperature controller interface' src="https://ashwinschronicles.github.io/Photos/Screenshots/Screenshot(11).png"/&gt;&lt;/p&gt;
+&lt;p&gt;This application is basically all the above utilities put in one. There are two tabs, one for controls, the other for viewing the plots. In the control tab, one can set the parameters for &lt;span class="caps"&gt;SMU&lt;/span&gt; as well as Temperature controller. When the application is executed with the correct parameters set, the data of index,V,I,R,&lt;span class="math"&gt;\(T_(coldhead)\)&lt;/span&gt;,&lt;span class="math"&gt;\(T_(sample)\)&lt;/span&gt; are stored in a tab separated text file at user specified location. The controls on the temperature controller side might look daunting at first, however a quick glance of &lt;span class="caps"&gt;LS336&lt;/span&gt; manual clears up all the parameters.&lt;/p&gt;
+&lt;h1 id="list-of-procedures"&gt;List of procedures&lt;a class="headerlink" href="#list-of-procedures" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h1&gt;
+&lt;h2 id="cryostat-connections"&gt;Cryostat connections.&lt;a class="headerlink" href="#cryostat-connections" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;The connections of Vacuum jacket, Vacuum pump, Pirani gauge, load lock and the valves can be made as shown in Fig &lt;a href="#fig:VacuumConnections" reference="fig:VacuumConnections" reference-type="ref"&gt;20&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;img alt='[[fig:VacuumConnections]]{#fig:VacuumConnections label="fig:VacuumConnections"}Vacuum Connections: 1) Load Lock Valve 2) Pirani Gauge 3)Cross Connector 4)To Vacuum Pump 5)Vacuum Valve 6) connector to vacuum jacket' src="https://ashwinschronicles.github.io/Photos/Connectors.jpg"/&gt;&lt;/p&gt;
+&lt;p&gt;The temperature sensor connections are to be made as in Fig &lt;a href="#fig:TempSensorConnections" reference="fig:TempSensorConnections" reference-type="ref"&gt;21&lt;/a&gt;. The temperature sensor on the probe needs to be connected to Input B and that of the Cold Head to Input C (This is needed as the proper curves are chosen for this particular arrangement). The heater on the probe needs to be connected to Output 2 (50W) and that of the Cold head to Output 1(100W). Both the heaters are 50 Ohm heaters.&lt;/p&gt;
+&lt;p&gt;&lt;img alt='[[fig:TempSensorConnections]]{#fig:TempSensorConnections label="fig:TempSensorConnections"} Temperature Sensor connections' src="https://ashwinschronicles.github.io/Photos/TempController_backpanel.jpg"/&gt;&lt;/p&gt;
+&lt;p&gt;The break out for the pads on the sample holder can be accessed through the break out box (Fig &lt;a href="#fig:breakoutbox" reference="fig:breakoutbox " reference-type="ref"&gt;22&lt;/a&gt;.)&lt;/p&gt;
+&lt;p&gt;&lt;img alt='[[fig:breakoutbox ]]{#fig:breakoutbox  label="fig:breakoutbox "} Break out box' src="https://ashwinschronicles.github.io/Photos/Junction_Box.jpg"/&gt;&lt;/p&gt;
+&lt;p&gt;Each wire from the Hermetic connector is colour coded (as in Fig &lt;a href="#fig:Hermetic connector" reference="fig:Hermetic connector " reference-type="ref"&gt;23&lt;/a&gt;), the pin-out for the same is in Table .&lt;/p&gt;
+&lt;p&gt;&lt;img alt='[[fig:Hermetic connector ]]{#fig:Hermetic connector  label="fig:Hermetic connector "} Hermetic connector' src="https://ashwinschronicles.github.io/Photos/Connector_wiring3.jpg"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Table" src="https://ashwinschronicles.github.io/Photos/Table.png"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class="caps"&gt;NOTE&lt;/span&gt;: Never create vacuum in sample space, the rubber bellows can get torn under vacuum.&lt;/p&gt;
+&lt;h2 id="check-connections-for-leaks"&gt;Check connections for leaks.&lt;a class="headerlink" href="#check-connections-for-leaks" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;After making the connections,vacuum the vacuum pipe( turn off the Load Lock Valve ,turn on the Pirani Gauge). now slowly turn on the Vacuum Valve and . Wait till 10E-3 Torr of vacuum is achieved.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Spray all joints with Isopropanol and watch for a spike in vacuum. If spraying Isopropanol over any joint causes a spike in vacuum, you know that you have a small leak. Re-grease 0- rings and recheck. Any debris on the O-ring or inside the O-ring groove will certainly cause a leak path and will be noticeable .&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="purging-the-interface"&gt;Purging the Interface.&lt;a class="headerlink" href="#purging-the-interface" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Before turning the system on (after a long gap) you will need to purge the interface to remove any air that is trapped inside the sample well. This step is not required in regular use. This step can also help in getting a clear view through view port ( Fig &lt;a href="#fig:View-Port" reference="fig:View-Port" reference-type="ref"&gt;24&lt;/a&gt;) by removing some condensation.&lt;/p&gt;
+&lt;p&gt;&lt;img alt='[[fig:View-Port]]{#fig:View-Port label="fig:View-Port"}View Port' src="https://ashwinschronicles.github.io/Photos/ViewPort.jpg"/&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Supply about \~0.5 psi of pressure to the gas inlet of the cryostat through the regulator. (&lt;span class="caps"&gt;NOTE&lt;/span&gt;: Supplying more than 20 psi to the Regulator may cause damage to the internal diaphragm. )&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img alt='[[fig:Gas-Regulator]]{#fig:Gas-Regulator label="fig:Gas-Regulator"}Gas Regulator' src="https://ashwinschronicles.github.io/Photos/Gas_Regulator.jpg"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class="caps"&gt;NOTE&lt;/span&gt;: If the sample well is not free of moisture and/or air it will cause the gas inlet tube to freeze below liquid Nitrogen temperatures. When this occurs the sample well will start to create vacuum and will suck the bellows into the well, potentially ripping or forcing the bellows from it’s clamp.&lt;/p&gt;
+&lt;h2 id="starting-the-system-cool-down"&gt;Starting the system (Cool Down).&lt;a class="headerlink" href="#starting-the-system-cool-down" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Turn on the water cooler (set at 15 degree Celsius) 30 minutes before hand.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;You can check if the cooler is turned on or not by feeling vibration of water moving through the pipe.&lt;/p&gt;
+&lt;p&gt;After few minutes both the pipes should feel cold to touch.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Make sure that there is no leak in any connections.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Turn the gas regulator to about 10psi.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Make sure that He is flowing in the sample chamber.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Turn On the compressor.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Once the compressor is turned on, you will hear the Cryocooler begin to start pumping. The Cryocooler will take approximately 120 minutes to cool down.&lt;/p&gt;
+&lt;p&gt;Now that the Cryocooler is running, maintaining the 0.5 psi pressure on the sample well will be critical for the sample to reach minimum temperature. If the cryostat is not able to reach its desired temperature then one of the reason can be empty cylinder. As the cooler gets colder it gets denser and falls to the bottom of the well. The interface will pull more gas into the system as it cools for this reason. Make sure the external gas cylinder has enough helium to supply the system with gas throughout the entire run.&lt;/p&gt;
+&lt;h2 id="sample-insertion"&gt;Sample Insertion.&lt;a class="headerlink" href="#sample-insertion" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;&lt;img alt='[[fig:View-Port-1]]{#fig:View-Port-1 label="fig:View-Port-1"}Sample insertion. 1)Probe stick 2) Rotatable Gripper of probe 3) Clamp 4) Quick clamp (shipping cap)' src="https://ashwinschronicles.github.io/Photos/RotatableKnobofprobe.jpg"/&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Replace the shipping cap with the quick clamp .&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Release the load Lock&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Loosen the gripper of the probe and slowly push the probe towards the cold end.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Make sure to push the probe in steps of 75 K so that no thermal shock is offered to the sample or probe.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Move only until the mark made by paper clip (\~34 inch above the tip of the probe). This is the point where the probe is just above the cold head.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="changing-a-sample"&gt;Changing a sample.&lt;a class="headerlink" href="#changing-a-sample" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Keep in mind that when changing the sample it is imperative to block out as much air from getting into the sample well as possible. Remember you have slightly positive pressure, so this will help keep air out.&lt;/p&gt;
+&lt;p&gt;No warm up of the system is needed during change of sample.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Loosen the gripper of the probe and slowly pull the probe towards the hot end.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Make sure to pull the probe in steps of 75 K so that no thermal shock is offered to the sample or probe.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Once the probe is above the load lock, close the load lock.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Use the &lt;span class="caps"&gt;LS&lt;/span&gt; 336 to heat up the coil on the probe to bring it to 300K (only do this after the probe gets to 280K or above).&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Once the temperature sensor on the probe reads about 300K, open the quick clamp to remove the probe.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Replace the quick clamp along with the shipping cap.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="shut-down"&gt;Shut down.&lt;a class="headerlink" href="#shut-down" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Once the experiment cycle is done or there is a requirement of shutdown for maintenance the following procedure may be followed:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Allow the cold head to warm up on its own. Opening the vacuum while the system is still cold will cause it to ice up, potentially damaging the sensors.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Once it warms above 200K, you may then open the vacuum,.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;For faster warm up, you can use the temperature controller to heat the system up to room temperature. If you decide to heat the system up like this, again, make sure the Cryocooler is running at all times. Allow the heat to stabilize for 15 or 20 minutes at room temperature then shut the temperature controller down along with the Cryocooler.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Maintain small gas purge on the sample well while the system is warming to room temperature. This will assure that moisture does not collect inside the well.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img alt='Top view of sample space with load lock open with noticeable amount of water condensation at the bottom.[[fig:Top-view-ofsamplespace]]{#fig:Top-view-ofsamplespace label="fig:Top-view-ofsamplespace"}' src="https://ashwinschronicles.github.io/Photos/SampleSpace_topView_loadLockOpen.jpg"/&gt;&lt;/p&gt;
+&lt;h2 id="diagnostic-remark"&gt;Diagnostic remark&lt;a class="headerlink" href="#diagnostic-remark" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;&lt;img alt="table2" src="https://ashwinschronicles.github.io/Photos/table2.png"/&gt;&lt;/p&gt;
+&lt;h1 id="measurement-results"&gt;Measurement Results&lt;a class="headerlink" href="#measurement-results" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h1&gt;
+&lt;p&gt;One of the very first measurement done was of the &lt;span class="caps"&gt;RC&lt;/span&gt; filter, which was tested using Analog Discovery 2 and the data is as in Fig&lt;a href="#fig:RC-Filter-Bode" reference="fig:RC-Filter-Bode" reference-type="ref"&gt;28&lt;/a&gt; and one can easily conclude that the &lt;span class="caps"&gt;RC&lt;/span&gt; filter was working as intended at the cut off of 1000Hz at room temperature.&lt;/p&gt;
+&lt;p&gt;&lt;img alt='RC Filter Bode Plot[[fig:RC-Filter-Bode]]{#fig:RC-Filter-Bode label="fig:RC-Filter-Bode"}' src="https://ashwinschronicles.github.io/Photos/RC_BOde.png"/&gt;&lt;/p&gt;
+&lt;p&gt;It was suspected that the resistor and capacitors might not work reliably at low temperatures (since the resistor is made from thin film of a metal oxide and the capacitor is made of ceramic material). In order to test it, a resistor was mounted on a puck (Fig &lt;a href="#fig:Puck" reference="fig:Puck" reference-type="ref"&gt;29&lt;/a&gt;)and a &lt;span class="caps"&gt;RT&lt;/span&gt; graph was drawn using a &lt;span class="caps"&gt;PPMS&lt;/span&gt; made by Cryogenic Ltd which was present in the lab.&lt;/p&gt;
+&lt;p&gt;&lt;img alt='Puck with the SMD Resistor[[fig:Puck]]{#fig:Puck label="fig:Puck"}' src="https://ashwinschronicles.github.io/Photos/ResistorTest.jpg"/&gt;&lt;/p&gt;
+&lt;p&gt;The results showed minimal change of resistance at low temperature (160 ohms at below 10 K). Hence the smd resistor worked fine at low temperatures. The cryogenic &lt;span class="caps"&gt;PPMS&lt;/span&gt; didnt have ready method to measure capacitance as a function of temperature. Hence this measurement was only possible after assembling the &lt;span class="caps"&gt;PCB&lt;/span&gt; and mounting it on the probe. This exercise revealed that the capacitance dropped to 10 nF below temperatures of 10 K and an &lt;span class="caps"&gt;RC&lt;/span&gt; plot showed the cut off frequency shift to 100KHz. Nullifying the use case of the &lt;span class="caps"&gt;RC&lt;/span&gt; filter. The bode plot for this trial is in Fig. &lt;a href="#fig:RC-Filter-Bode-1" reference="fig:RC-Filter-Bode-1" reference-type="ref"&gt;30&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt='RC Filter Bode Plot at 10 K[[fig:RC-Filter-Bode-1]]{#fig:RC-Filter-Bode-1 label="fig:RC-Filter-Bode-1"}' src="https://ashwinschronicles.github.io/Photos/RC_filter3.png"/&gt;&lt;/p&gt;
+&lt;p&gt;Finally, one trail to measure the superconducting transition of a 55nm thin-film of Nb was done using the probe.&lt;/p&gt;
+&lt;p&gt;The &lt;span class="caps"&gt;RT&lt;/span&gt; graph of the Nb sample as obtained is as in Fig &lt;a href="#fig:Superconducting-Transition-of" reference="fig:Superconducting-Transition-of" reference-type="ref"&gt;31&lt;/a&gt;. From this graph we can conclude that the Tc for the given sample is 7.68 K.&lt;/p&gt;
+&lt;p&gt;&lt;img alt='Superconducting Transition of Nb(55nm) thin film[[fig:Superconducting-Transition-of]]{#fig:Superconducting-Transition-of label="fig:Superconducting-Transition-of"}' src="https://ashwinschronicles.github.io/Photos/pasted1.png"/&gt;&lt;/p&gt;
+&lt;p&gt;An attempt was made to fabricate a Nb|&lt;span class="math"&gt;\(Nb_2O_5\)&lt;/span&gt;|Nb Josephson Junction and to measure the &lt;span class="caps"&gt;IV&lt;/span&gt; graph of the same. The junction was made by taking two strands of Nb wire (50 &lt;span class="math"&gt;\(\mu\)&lt;/span&gt; M thick ) cleaned with 0.5 molar HCl. One strand was oxidized at 100 degree Celsius for a fixed time, and then the two wires were made to contact each other under tension provided by a stick with sharp edge (Fig &lt;a href="#fig:NbSISJunction" reference="fig:NbSISJunction" reference-type="ref"&gt;32&lt;/a&gt;). However not much success was found.&lt;/p&gt;
+&lt;p&gt;&lt;img alt='Sample holder for Nb|\(Nb_2O_5\)|Nb Josephson Junction 1) Clean Nb wire 2) Nb wire oxidized in air 3) wooden stick for tension [[fig:NbSISJunction]]{#fig:NbSISJunction label="fig:NbSISJunction"}' src="https://ashwinschronicles.github.io/Photos/Mounted_sample_Junction.jpg"/&gt;&lt;/p&gt;
+&lt;h1 id="conclusions"&gt;Conclusions&lt;a class="headerlink" href="#conclusions" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h1&gt;
+&lt;p&gt;The probe was successfully fabricated according to the initial design. However many new modifications come into mind after going through the 2 month process. The first major draw back was the failure of the &lt;span class="caps"&gt;RC&lt;/span&gt; filter, which was caused by the &lt;span class="caps"&gt;SMD&lt;/span&gt; capacitor, one can modify the circuit for an inductor instead of capacitor, or one can replace the current &lt;span class="caps"&gt;SMD&lt;/span&gt; capacitor with a different class capacitor. The second draw back was the large thermal mass of the non magnetic base. To counter this, one can reduce the number of samples, thickness of Copper, Increase joint thermal conductivity (by applying thermal paste or indium sheet). Thirdly, the size of the probe is very close to the allowed limits of the system, hence a new design can have a smaller sample holder and adapter. Next, the problem of ease of changing adapter has to be addressed by modifying the entire design . One can also think of replacing the default shielding that the probe comes in with something like silica aerogel for better insulation. One of the major problem faced was that the Helium cylinder gets emptied very quickly, this can be because of helium escaping through the plastic tubing, one can fix this by replacing the tube with cooper piping. Also, &lt;span class="caps"&gt;PID&lt;/span&gt; values for both the heater have to be optimised, the current values of 10,20,10 give a moderately good result. Finally the LabVIEW program can be made more robust, the current program is as basic as it can get, more features such as automation of multiple trials using some form of sequence editor can be thought of.&lt;/p&gt;
+&lt;p&gt;A pdf version of this page (with better formatting) is available &lt;a href="https://ashwinschronicles.github.io/pdfs/NISER_Report.pdf"&gt;here&lt;/a&gt;. And the LabVIEW software mentioned in the article is available &lt;a href="https://github.com/iamashwin99/Cryostat-Measurement-Library/tree/master/Final"&gt;here&lt;/a&gt; &lt;/p&gt;
+&lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width &lt; 768) ? "left" : align;
+        indent = (screen.width &lt; 768) ? "0em" : indent;
+        linebreak = (screen.width &lt; 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_CHTML';
+
+    var configscript = document.createElement('script');
+    configscript.type = 'text/x-mathjax-config';
+    configscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'none' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        availableFonts: ['STIX', 'TeX']," +
+        "        preferredFont: 'STIX'," +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+&lt;/script&gt;</content><category term="Science"></category><category term="cryostat"></category><category term="probe"></category><category term="transport measurement"></category><category term="rc filter"></category><category term="LabVIEW"></category><category term="internship"></category></entry><entry><title>Quantum Hall Effect and related phenomena</title><link href="https://ashwinschronicles.github.io/qhe" rel="alternate"></link><published>2019-01-01T00:00:00+05:30</published><updated>2019-01-01T00:00:00+05:30</updated><author><name>Ashwin</name></author><id>tag:ashwinschronicles.github.io,2019-01-01:/qhe</id><summary type="html">&lt;p&gt;Notes on Quantum Hall Effect and related&amp;nbsp;phenomenon&lt;/p&gt;</summary><content type="html">
+&lt;h1 id="historical-aspects"&gt;Historical Aspects&lt;a class="headerlink" href="#historical-aspects" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h1&gt;
+&lt;p&gt;The quantum Hall effect is a remarkable phenomenon discovered
+experimentally in which the Hall conductivity of a two dimensional
+system of electrons is found to have plateaus as a function of variables
+which determine the number of electrons participating in the effect.&lt;/p&gt;
+&lt;p&gt;The integer quantization of the Hall conductance was originally
+predicted by Ando, Matsumoto, and Uemura in 1975, on the basis of an
+approximate calculation which they themselves did not believe to be true![7]&lt;/p&gt;
+&lt;p&gt;Several researchers subsequently observed the effect in experiments
+carried out on the inversion layer of MOSFETs. It was only in 1980 that
+Klaus von Klitzing, working at the high magnetic field laboratory in
+Grenoble with silicon-based samples developed by Michael Pepper and
+Gerhard Dorda, made the unexpected discovery that the Hall conductivity
+was exactly quantized. For this finding, von Klitzing was awarded the
+1985 Nobel Prize in Physics.&lt;/p&gt;
+&lt;p&gt;What alerted von Klitzing to the effect was the insensitivity to the
+fine-tuning of the magnetic field strength. He “switched on” the field
+to apply it to a device through which a fixed current was flowing
+stabilized by a constant current source, and observed that when things
+stabilized, a digital voltmeter always showed the same Hall voltage
+across the sample to many significant figures. (The story is told that
+he first thought the voltmeter was broken!) Of course, each time the
+magnetic field was “turned on” was different, so the final field would
+never have been the same on each run of the experiment, and certainly
+would never have “accidentally” taken the precise “magic value” of the
+naive explanation. It is fortunate that von Klitzing switched on the
+magnetic field with a fixed current through the sample, rather than
+switched on the current at fixed field, as the coincidence of the
+unchanged digital voltmeter readings would then never have happened. [4]&lt;/p&gt;
+&lt;h1 id="theoretical-aspects-86"&gt;Theoretical aspects [8,6]&lt;a class="headerlink" href="#theoretical-aspects-86" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h1&gt;
+&lt;h2 id="the-classical-hall-effect"&gt;The Classical Hall Effect&lt;a class="headerlink" href="#the-classical-hall-effect" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;The original, classical Hall effect was discovered in 1879 by Edwin
+Hall. It is a simple consequence of the motion of charged particles in a
+magnetic field.&lt;/p&gt;
+&lt;p&gt;The setup for the same is as follows, consider a rectangular bar with
+thickness, t, Length L, and width W, as shown in Fig 1.
+Now a constant current along the &lt;span class="math"&gt;\(x\)&lt;/span&gt; axis is passed. When a magnetic
+field is applied along the &lt;span class="math"&gt;\(z\)&lt;/span&gt; axis (&lt;span class="math"&gt;\(B_{z}\)&lt;/span&gt;), the charges in the
+current experience a force (the Lorentz force).&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Fig 1 Schematic diagram of the Hall effect measurement setup" src="../../images/Hall_Effect_Measurement_Setup_for_Electrons.webp"/&gt;&lt;/p&gt;
+&lt;p&gt;In the absence &lt;span class="math"&gt;\(B_{z}\)&lt;/span&gt;, the charges follow approximately straight paths.
+However, when &lt;span class="math"&gt;\(B_{z}\)&lt;/span&gt; is applied, their paths get curved, in this way
+moving charges aggregate on one face of the material. This leaves equal
+and opposite charges exposed on the other face, where there is a
+scarcity of mobile charges. The separation of charge establishes an
+electric field that opposes the migration of further charge, so a steady
+electric potential is established for as long as the charge is flowing.
+This is called the Hall voltage &lt;span class="math"&gt;\(V_{H}\)&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;The Hall voltage &lt;span class="math"&gt;\(V_{H}\)&lt;/span&gt; can be derived by using the Lorentz force given
+that, in the steady-state condition, charges are not moving in the
+y-axis direction. &lt;span class="math"&gt;\(\vec{{F}}=q(\vec{E}+\vec{vx\vec{B_{z}}})\)&lt;/span&gt; , Now
+&lt;span class="math"&gt;\(\vec{F}=0\implies0=E_{y}-v_{x}B_{z}\)&lt;/span&gt; also &lt;span class="math"&gt;\(E_y=-\frac{V_H}{w}\)&lt;/span&gt; thus on
+substituting these values we get : &lt;/p&gt;
+&lt;div class="math"&gt;$$\begin{aligned}
+V_{H} &amp;amp; = &amp;amp; v_{x}B_{z}w\end{aligned}$$&lt;/div&gt;
+&lt;p&gt;
+This shows that &lt;span class="math"&gt;\(V_{H}\)&lt;/span&gt; is proportional to &lt;span class="math"&gt;\(B_{z}\)&lt;/span&gt;, this result is used
+in commercial hall sensors which are used to measure magnetic field.&lt;/p&gt;
+&lt;p&gt;However one must note that the result drawn are for the the simple case
+with no impurities. Otherwise we will have to include the scattering
+effects. on doing so the previus equation gets modified as &lt;/p&gt;
+&lt;div class="math"&gt;$$\begin{aligned}
+E_{y} &amp;amp; = &amp;amp; \frac{-eB\tau}{m}E_{x}\end{aligned}$$&lt;/div&gt;
+&lt;p&gt;where &lt;span class="math"&gt;\(\tau\)&lt;/span&gt; is called the scattering time. Thus &lt;span class="math"&gt;\(R_{H}\)&lt;/span&gt; called the Hall
+resistance is defined as &lt;/p&gt;
+&lt;div class="math"&gt;$$R_{H}=\frac{E_{y}}{j_{x}B}=-\frac{1}{ne}$$&lt;/div&gt;
+&lt;p&gt;
+where n is the carrier constant.&lt;/p&gt;
+&lt;p&gt;Thus the measurement of Hall Coefficient gives the following information
+about the material&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Carrier concentration , n&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;The sign determines the carriers are holes or electrons.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id="experimental-verification-of-hall-effect5"&gt;Experimental verification of hall effect.[5]&lt;a class="headerlink" href="#experimental-verification-of-hall-effect5" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;An experiment was performed to measure the charge density of Germanium
+used as Hall Probe. The experiment was performed under the guidance of
+Sharvari Kulkarni P.&lt;/p&gt;
+&lt;p&gt;The current passing through sample I, was kept constant at 10mA. The
+Hall Voltages &lt;span class="math"&gt;\(V_{H}\)&lt;/span&gt; were measured for different values of Magnetic
+field. For each value of magnetic field, four readings corresponding to
+different geometric orientations were considered. This is essential due
+to presence of other thermal and galvanometric transport effects . The
+data and graphs are as following:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Part-1:&lt;/strong&gt; The value of magnetic field corresponding to particular
+current was determined and plotted. Two readings corresponding to single
+current value specifies the values during increment and decrement of
+current viz. to minimize the error.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="image" src="../../images/hall_data_table.webp" style="zoom:67%;"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Magnetic field vs Current " src="../../images/hall_data_graph.webp" style="zoom:50%;"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Part-2:&lt;/strong&gt; The values of Hall Voltages are measured for different
+geometrical combinations.The data obtained is as follows -&lt;/p&gt;
+&lt;p&gt;&lt;img alt="image" src="../../images/hall_data_table2.webp" style="zoom:67%;"/&gt;&lt;/p&gt;
+&lt;p&gt;Corresponding graphs are plotted here.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="image" src="../../images/hall_data_graph2.webp" style="zoom: 67%;"/&gt;
+&lt;img alt="image" src="../../images/hall_data_graph3.webp" style="zoom:67%;"/&gt;
+&lt;img alt="image" src="../../images/hall_data_graph4.webp" style="zoom:67%;"/&gt;
+&lt;img alt="image" src="../../images/hall_data_graph5.webp" style="zoom:67%;"/&gt;&lt;/p&gt;
+&lt;p&gt;From all these graphs, the average value of slope is &lt;strong&gt;0.03218
+&lt;span class="math"&gt;\(\frac{mV}{Gauss}\)&lt;/span&gt;&lt;/strong&gt; . We have sample current equal to 10mA and
+sample length as 5mm.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Hence the value of Hall Coefficient is &lt;strong&gt;0.1609
+    &lt;span class="math"&gt;\(\frac{m^{3}}{C}\)&lt;/span&gt;.&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Positive sign implies that majority carriers are holes.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;From this value, the carrier concentration can be calculated as
+    &lt;strong&gt;&lt;span class="math"&gt;\(n=3.879x10^{19}m^{-3}\)&lt;/span&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1 id="quantum-hall-effects"&gt;Quantum Hall Effects&lt;a class="headerlink" href="#quantum-hall-effects" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h1&gt;
+&lt;p&gt;In the previous section we saw details about the Hall effect mainly that
+Hall Voltage is proportional to the magnetic field.&lt;/p&gt;
+&lt;p&gt;Hall effect is easily observed in room temperature and relatively low
+magnetic field. If the same setup is now taken down to low temperatures
+(typically around 1-5 K) and high magnetic field (greater than few
+Tesla) we see a non linear relation between Hall conductance and
+Magnetic field. We see some sort of quantization of Hall conductance.
+The observed resistivity is shown in next figure.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Hall resistance and longitudinal resistivity data as a function of the
+magnetic field for a GaAs/AlGaAs hetero-structures at 1.5 K" src="../../images/HallPvsB.webp" style="zoom:50%;"/&gt;[8]&lt;/p&gt;
+&lt;p&gt;On observing the graph and a little bit of theoretical calculations one
+can deduce the following:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Both the Hall resistivity &lt;span class="math"&gt;\(\rho_{xy}\)&lt;/span&gt; and the longitudinal
+    resistivity &lt;span class="math"&gt;\(\rho_{xx}\)&lt;/span&gt; exhibit non linear behavior.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;For lower magnetic field Transverse resistance varies linearly but after
+certain limit it changes step-like with integer multiples of
+&lt;span class="math"&gt;\(\frac{\hbar}{e^{2}}\)&lt;/span&gt; with some plateau region in between.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;On these plateau, the resistivity takes the value&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="math"&gt;$$\rho_{xy}=\frac{\hbar}{e^{2}}\,\frac{1}{\nu}\;\quad\nu\epsilon\mathbf{Z}$$&lt;/div&gt;
+&lt;p&gt;The value of &lt;span class="math"&gt;\(\nu\)&lt;/span&gt; is measured to be an integer to an extraordinary
+accuracy —- something like one part in &lt;span class="math"&gt;\(10^{9}\)&lt;/span&gt; .&lt;/p&gt;
+&lt;p&gt;The quantity&lt;span class="math"&gt;\(\frac{\hbar}{e^{2}}\)&lt;/span&gt; is called the quantum of resistivity
+(with value 25.8128075 k )&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;The longitudinal resistance has zero value otherwise except at a
+    point where &lt;span class="math"&gt;\(\rho_{xy}\)&lt;/span&gt; jumps from one plateau to another.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;The center of each plateau occurs at a point when magnetic field
+    takes a value
+    &lt;div class="math"&gt;$$B=\frac{hn}{\gamma e}=\left(\frac{n}{\gamma}\right)\phi_{0}$$&lt;/div&gt;
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Where, n is density of states of electrons and
+&lt;span class="math"&gt;\(\phi_{0}=\frac{\hbar}{e^{2}}\)&lt;/span&gt;as flux quantum. This is a value of
+Magnetic field at which number of Landau Levels are filled.&lt;/p&gt;
+&lt;p&gt;In order to see the Quantum Hall effect we need to suppress spin-flip
+scattering of the conduction electrons. Doing this requires us to do two
+things. The first one is to apply a magnetic field which is large enough
+to make the Zeeman energy big enough so that the up-spin and down-spin
+Landau levels do not overlap. Then we also need to make the temperature
+low enough so that only one of these spin-split Landau levels has a
+significant thermal occupation.&lt;/p&gt;
+&lt;p&gt;Because the static magnetic fields that we have available to us in the
+laboratory are only strong enough to give Zeeman energies of order one
+degree Kelvin, we need to have temperatures of less than one degree
+Kelvin in order to see the Quantum Hall effect at all. And the lower we
+can make the temperature, the better the data will look.&lt;/p&gt;
+&lt;h3 id="classical-explanation3"&gt;Classical Explanation[3]&lt;a class="headerlink" href="#classical-explanation3" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;One can explain the above phenomenon classically as follows.&lt;/p&gt;
+&lt;p&gt;Consider the standard &lt;span class="caps"&gt;2DEG&lt;/span&gt; setup with four probes two along x axis and
+two along y axis similar to the arrangement in Fig1.
+Ohm’s law can be written as &lt;span class="math"&gt;\(J=\sigma E\)&lt;/span&gt; .Where &lt;span class="math"&gt;\(\sigma\)&lt;/span&gt; is conductivity
+of the material. But in presence of Magnetic field B this &lt;span class="math"&gt;\(\sigma\)&lt;/span&gt;
+becomes a 2 x 2 tensor matrix. Hence the corresponding resistivity
+tensor can be written as&lt;/p&gt;
+&lt;div class="math"&gt;$$\begin{aligned}
+\sigma^{-1} &amp;amp; = &amp;amp; \rho\end{aligned}$$&lt;/div&gt;
+&lt;div class="math"&gt;$$\begin{pmatrix}\sigma_{xx} &amp;amp; \sigma_{xy}\\
+-\sigma_{xy} &amp;amp; \sigma_{yy}
+\end{pmatrix}^{-1}=\begin{pmatrix}\rho_{xx} &amp;amp; \rho_{xy}\\
+-\rho_{xy} &amp;amp; \rho_{yy}
+\end{pmatrix}$$&lt;/div&gt;
+&lt;p&gt;&lt;span class="math"&gt;\(\therefore\)&lt;/span&gt;
+&lt;/p&gt;
+&lt;div class="math"&gt;$$\sigma_{xx}=\frac{\rho_{xx}}{\rho_{xx}^{2}+\rho_{xy}^{2}}\quad and\quad\sigma_{xy}=-\frac{\rho_{xxy}}{\rho_{xx}^{2}+\rho_{xy}^{2}}$$&lt;/div&gt;
+&lt;p&gt;This brings up the following cases&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;span class="math"&gt;\(\sigma_{xx}=0\)&lt;/span&gt; &lt;span class="math"&gt;\(\implies\sigma_{xy}=0\)&lt;/span&gt; so
+    &lt;span class="math"&gt;\(\sigma_{xx}=\frac{1}{\rho_{xx}}\)&lt;/span&gt; this is the general solution&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;span class="math"&gt;\(\rho_{xy}\neq0\)&lt;/span&gt; &lt;span class="math"&gt;\(\implies\sigma_{xx}\)&lt;/span&gt;and &lt;span class="math"&gt;\(\sigma_{xy}\)&lt;/span&gt;are non zero.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;span class="math"&gt;\(\rho_{xx}=0\implies\sigma_{xx}=0\)&lt;/span&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;The third case is the one where we see the transition from one plateau
+to another plateau.&lt;/p&gt;
+&lt;p&gt;This behavior can be explained with Drude’s model of metals which
+considers metals as free electron gas without any interaction between
+them.So between two collision electron behaves as a free particle.
+According to the Drude’s Model
+&lt;span class="math"&gt;\(\sigma_{xx}=\frac{\sigma_{0}}{1+\left(\tau\omega_{c}\right)^{2}}\)&lt;/span&gt; where
+&lt;span class="math"&gt;\(\tau\)&lt;/span&gt; is the relaxation time and &lt;span class="math"&gt;\(\sigma_{0}=\frac{ne^{2}\tau}{m}\)&lt;/span&gt;.
+Thus &lt;span class="math"&gt;\(\sigma_{xx}=0\)&lt;/span&gt; implies that &lt;span class="math"&gt;\(\tau\rightarrow\infty\)&lt;/span&gt; or in other
+words, absence of scattering.&lt;/p&gt;
+&lt;p&gt;In this particular case the current is flowing perpendicular to the
+field, it has the following form.&lt;/p&gt;
+&lt;div class="math"&gt;$$\hat{E}=\begin{pmatrix}E_{x}\\
+E_{y}
+\end{pmatrix}=\begin{pmatrix}0 &amp;amp; \rho_{xy}\\
+-\rho_{xy} &amp;amp; 0
+\end{pmatrix}\begin{pmatrix}j_{x}\\
+j_{y}
+\end{pmatrix}=\begin{pmatrix}\rho_{xy}j_{y}\\
+-\rho_{xy}j_{x}
+\end{pmatrix}$$&lt;/div&gt;
+&lt;p&gt; This shows that E and J are perpendicular. Thus
+&lt;span class="math"&gt;\(\hat{E}\cdot\hat{J}\)&lt;/span&gt;=0. This means that the work done in accelerating
+the charges is 0. Thus there is a steady current flowing in the sample.
+And hence no heat dissipation. Hence, &lt;span class="math"&gt;\(\sigma_{xx}=0\)&lt;/span&gt; means no current
+is flowing in longitudinal direction and &lt;span class="math"&gt;\(\rho_{xx}=0\)&lt;/span&gt; means there is no
+any dissipation of energy. We also see that
+&lt;/p&gt;
+&lt;div class="math"&gt;$$\sigma_{xy}==\frac{-1}{\rho_{xy}}=\gamma\frac{e^{2}}{h}\qquad\gamma\rightarrow integer$$&lt;/div&gt;
+&lt;p&gt;
+which is the same as the quantised hall value equation.&lt;/p&gt;
+&lt;h3 id="landau-levels2"&gt;Landau Levels[2]&lt;a class="headerlink" href="#landau-levels2" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;In presence of magnetic field, electrons follow circular trajectories
+called cyclotron orbits.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;The charged particles can only occupy orbits with discrete energy
+    values, called Landau levels.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;The Landau levels are degenerate, with the number of electrons per
+    level directly proportional to the strength of the applied magnetic field.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Landau quantization is directly responsible for oscillations in
+    electronic properties of materials as a function of the applied
+    magnetic field.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Now lets look at the mathematical derivation of the above statement.
+Consider our previous model of two-dimensional electron gas system, say
+with charge q confined to an area A = &lt;span class="math"&gt;\(L_{x}L_{y}\)&lt;/span&gt; in the x-y plane. Let
+the magnetic field applied be &lt;span class="math"&gt;\(\hat{B}=B_{z}\hat{z}\)&lt;/span&gt; .&lt;/p&gt;
+&lt;p&gt;Now the Hamiltonian of such a system will be given by
+&lt;/p&gt;
+&lt;div class="math"&gt;$$\hat{H}=\frac{1}{2m}(\hat{\mathbf{p}}-q\hat{\mathbf{A}}/c)^{2}$$&lt;/div&gt;
+&lt;p&gt;where &lt;span class="math"&gt;\(\hat{p}\)&lt;/span&gt; is the canonical momentum operator and &lt;span class="math"&gt;\(\hat{A}\)&lt;/span&gt; is the
+electromagnetic vector potential.&lt;/p&gt;
+&lt;p&gt;There is some gauge freedom in the choice of vector potential for a
+given magnetic field which means that adding the gradient of a scalar
+field to &lt;span class="math"&gt;\(\hat{A}\)&lt;/span&gt; changes the overall phase of the wave function by an
+amount corresponding to the scalar field. But physical properties are
+not influenced by the specific choice of gauge. For simplicity in
+calculation, lets choose the Landau gauge, which is&lt;/p&gt;
+&lt;div class="math"&gt;$${\displaystyle \hat{\mathbf{A}}=\begin{pmatrix}0\\
+B_{z}x\\
+0
+\end{pmatrix}.}$$&lt;/div&gt;
+&lt;div class="math"&gt;$${\displaystyle \hat{H}=\frac{\hat{p}_{x}^{2}}{2m}+\frac{1}{2m}\left(\hat{p}_{y}-\frac{qB\hat{x}}{c}\right)^{2}}$$&lt;/div&gt;
+&lt;p&gt;
+The operator &lt;span class="math"&gt;\(\hat{p}_{y}\)&lt;/span&gt; commutes with this Hamiltonian, since the
+operator &lt;span class="math"&gt;\(\hat{y}\)&lt;/span&gt; is absent by the choice of gauge. Thus the operator
+&lt;span class="math"&gt;\(\hat{p}_{y}\)&lt;/span&gt; can be replaced by its eigenvalue
+&lt;span class="math"&gt;\(k_{y}\)&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;The Hamiltonian can also be written more simply by noting that the
+cyclotron frequency is &lt;span class="math"&gt;\(\omega_{c}=\frac{qB}{mc}\)&lt;/span&gt;, giving&lt;/p&gt;
+&lt;div class="math"&gt;$$\hat{H}=\frac{\hat{p}_{x}^{2}}{2m}+\frac{1}{2}m\omega_{c}^{2}\left(\hat{x}-\frac{\hbar k_{y}}{m\omega_{c}}\right)^{2}$$&lt;/div&gt;
+&lt;p&gt;
+. This is the Hamiltonian one would encounter for the quantum harmonic
+oscillator problem as well, except with the minimum of the potential
+shifted in coordinate space by &lt;/p&gt;
+&lt;div class="math"&gt;$$x_{0}=\frac{k_{y}}{m\omega_c}$$&lt;/div&gt;
+&lt;p&gt;.&lt;/p&gt;
+&lt;p&gt;To find the energies, note that translating the harmonic oscillator
+potential does not affect the energies. The energies of this system are
+thus identical to those of the standard quantum harmonic oscillator,&lt;/p&gt;
+&lt;div class="math"&gt;$$E_{n}=\hbar\omega_{c}\left(n+\frac{1}{2}\right),\quad n\geq0$$&lt;/div&gt;
+&lt;p&gt; . The
+energy does not depend on the quantum number &lt;span class="math"&gt;\(k_{y}\)&lt;/span&gt;, so there will be degeneracy.&lt;/p&gt;
+&lt;p&gt;With this argument we can conclude that the state of the electron can
+uniquely determined by two by two quantum numbers, n and &lt;span class="math"&gt;\(k_{y}\)&lt;/span&gt;. Now
+let us focus on the degeneracy of Landau level.&lt;/p&gt;
+&lt;h3 id="degeneracy-of-landau-levels62"&gt;Degeneracy of Landau levels[6,2]&lt;a class="headerlink" href="#degeneracy-of-landau-levels62" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Each set of wave functions with the same value of n is called a Landau
+level. Effects of Landau levels are only observed when the mean thermal
+energy is smaller than the energy level separation,
+&lt;span class="math"&gt;\(kT &amp;lt;&amp;lt; \hbar \omega_c\)&lt;/span&gt;,
+meaning low temperatures and strong magnetic fields.&lt;/p&gt;
+&lt;p&gt;Each Landau level is degenerate because of the second quantum number
+&lt;span class="math"&gt;\(k_{y}\)&lt;/span&gt;, which can take the values
+&lt;span class="math"&gt;\({\displaystyle k_{y}={\frac{2\pi N}{L_{y}}}}\)&lt;/span&gt;, where N is an integer.&lt;/p&gt;
+&lt;p&gt;The allowed values of N are further restricted by the condition that the
+center of force of the oscillator, &lt;span class="math"&gt;\(x_{0}\)&lt;/span&gt;, must physically lie within
+the system, &lt;span class="math"&gt;\(0\le x0&amp;lt;L_{x}\)&lt;/span&gt;. This gives the following range for N,
+&lt;/p&gt;
+&lt;div class="math"&gt;$${\displaystyle 0\leq N&amp;lt;{\frac{m\omega_{c}L_{x}L_{y}}{2\pi\hbar}}.}$$&lt;/div&gt;
+&lt;p&gt;For particles with charge &lt;span class="math"&gt;\(q=Ze\)&lt;/span&gt;, the upper bound on N can be simply
+written as a ratio of fluxes,&lt;/p&gt;
+&lt;div class="math"&gt;$${\displaystyle {\frac{ZBL_{x}L_{y}}{(hc/e)}}=Z{\frac{\Phi}{\Phi_{0}}},}$$&lt;/div&gt;
+&lt;p&gt;
+where &lt;span class="math"&gt;\(\Phi_{0}=hc/e\)&lt;/span&gt; is the fundamental quantum of flux and &lt;span class="math"&gt;\(\Phi=BA\)&lt;/span&gt;
+is the flux through the system (with area &lt;span class="math"&gt;\(A=L_{x}L_{y}\)&lt;/span&gt;).&lt;/p&gt;
+&lt;p&gt;Thus, for particles with spin S, the maximum number D of particles per
+Landau level is&lt;/p&gt;
+&lt;div class="math"&gt;$${\displaystyle D=Z(2S+1){\frac{\Phi}{\Phi_{0}}}~}$$&lt;/div&gt;
+&lt;h3 id="edge-modes4"&gt;Edge modes[4]&lt;a class="headerlink" href="#edge-modes4" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;So far we have discussed the ideal &lt;span class="caps"&gt;2DEG&lt;/span&gt; scenario. The real samples,
+though comparatively clean, do not have the transnational invariance
+that makes each state in a given Landau level have exactly the same
+energy. Hence there is some sort of broadening of the Landau level. So
+what is the explanation in this case ?&lt;/p&gt;
+&lt;p&gt;The initial attempts to explain the effect focused on this effect of
+disorder, and found that, while two-dimensional electron systems with
+disorder generally have localized states, this is modified in a magnetic
+field. Here, the centers of the Landau orbits slowly precess (in
+opposite senses) around either local minima or local maxima of the
+potential, corresponding to localized states, but there is an energy at
+the center of the broadened Landau level at which the centers of the
+orbits move along open snakelike paths, and the states at that energy
+are extended as opposed to localized. These edge states act as skipping
+orbits that precess around the boundary of the system in the opposite
+sense to that of the Landau orbits, when a particle in a Landau orbit
+intersects the boundary, and bounces off it.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Edge states in a sample" src="../../images/edge.webp"/&gt;&lt;/p&gt;
+&lt;p&gt;[1]:”Wikipedia Entry on Hall Effect”, En.Wikipedia.org (Retrieved 25 April 2019).&lt;/p&gt;
+&lt;p&gt;[2]:”Wikipedia Entry on Landau quantization”, En.Wikipedia.org (Retrieved 26 April 2019).&lt;/p&gt;
+&lt;p&gt;[3]:”&lt;span class="caps"&gt;NPTEL&lt;/span&gt; :: Physics - &lt;span class="caps"&gt;NOC&lt;/span&gt;: Advanced Condensed matter physics” (Retrieved 27 April 2019).&lt;/p&gt;
+&lt;p&gt;[4]:F. Duncan M. Haldane, “Nobel Lecture: Topological quantum matter”, Rev. Mod. Phys. 89 (2017), pp. 040502.&lt;/p&gt;
+&lt;p&gt;[5]:P Sharvari Kulkarni, “Report on Quantum Hall Effect” (April 18, 2019).&lt;/p&gt;
+&lt;p&gt;[6]:David Tong, Lectures on the Quantum Hall Effect ().&lt;/p&gt;
+&lt;p&gt;[7]:T. Ando; Y. Matsumoto; Y. Uemura, “Theory of Hall effect in a two-dimensional electron system”, Journal of the Physical Society of Japan 39, 2 (), pp. 279—288.&lt;/p&gt;
+&lt;p&gt;[8]:Klaus von Klitzing, Benoît Douçot, Vincent Pasquier, Bertrand Duplantier, Vincent Rivasseau, The Quantum Hall Effect vol. 45, (Birkhäuser Basel, ).&lt;/p&gt;
+&lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width &lt; 768) ? "left" : align;
+        indent = (screen.width &lt; 768) ? "0em" : indent;
+        linebreak = (screen.width &lt; 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_CHTML';
+
+    var configscript = document.createElement('script');
+    configscript.type = 'text/x-mathjax-config';
+    configscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'none' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        availableFonts: ['STIX', 'TeX']," +
+        "        preferredFont: 'STIX'," +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+&lt;/script&gt;</content><category term="Science"></category><category term="qhe"></category><category term="hall effect"></category><category term="landau levels"></category></entry></feed>
