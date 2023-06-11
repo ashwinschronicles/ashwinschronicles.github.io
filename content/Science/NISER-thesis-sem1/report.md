@@ -6,7 +6,7 @@ category: Science
 slug:josephson-junction-fabrication-and-characterisation
 author: Ashwin
 summary: This post is about my masters thesis on Josephson Junction fabrication and characterisation
-subtitle: Sem I: Fabrication and characterisation
+subtitle: I: Fabrication and characterisation
 keywords: cryostat,probe,transport measurement,Josephson Junction,LabVIEW,NISER, Superconductivity,
 modified: 2023-06-11
 gittime: off
