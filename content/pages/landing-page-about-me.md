@@ -12,7 +12,7 @@ Thanks for joining me!
 
 I am Ashwin Kumar Karnad, a Research Software Engineer at the Max Planck Institute for the Structure and Dynamics of Matter (MPSD) in Hamburg. 
 
-I studied Dual Majored in B.E Electronics and Instrumentation & Int. MSc Physics at BITS Pilani KK Birla Goa campus, India (Batch of 2017-22).
+I Dual Majored in B.E Electronics and Instrumentation & Int. MSc Physics at BITS Pilani KK Birla Goa campus, India (Batch of 2017-22).
 
 I had always wanted to publish some of my projects and experiments on a public platform so that people working on similar projects can give and take ideas. It also serves as a way to showcase the experience that I have gained while doing such projects.
 
