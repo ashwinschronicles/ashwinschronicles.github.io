@@ -58,7 +58,7 @@ The quickstart will ask you various questions, which you can answer in turn. Bef
 ```bash
 > Where do you want to create your new web site? [.] ./
 > What will be the title of this web site? Ashwin's Chronicles
-> Who will be the author of this web site? Ashwin Kumar K
+> Who will be the author of this web site? Ashwin Kumar Karnad
 > What will be the default language of this web site? [pt] en
 > Do you want to specify a URL prefix? e.g., http://example.com   (Y/n) n
 > Do you want to enable article pagination? (Y/n) y

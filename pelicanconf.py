@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*- #
 from __future__ import unicode_literals
 
-AUTHOR = u'Ashwin Kumar K'
+AUTHOR = u'Ashwin Kumar Karnad'
 SITENAME = u"""<span style="color:#329A97;">Ashwin's</span> <span style="color:purple">Chronicles</span>🗞️ """
 SITEURL = ''
 # SITEURL = 'https://ashwinschronicles.github.io/' # for production, moved to publishconf.py
@@ -166,7 +166,7 @@ PROJECTS = [
 
 LANDING_PAGE_TITLE = "The Journey Begins"
 # SEO
-SITE_DESCRIPTION = u'Im Ashwin Kumar K,currently dual majoring in Physics and Electronics and Instrumentation from BITS Pilani Goa Campus. This is my personal blog.'
+SITE_DESCRIPTION = u'Im Ashwin Kumar Karnad,currently dual majoring in Physics and Electronics and Instrumentation from BITS Pilani Goa Campus. This is my personal blog.'
 
 
 #MISC

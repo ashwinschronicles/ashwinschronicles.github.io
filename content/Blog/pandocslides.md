@@ -21,7 +21,7 @@ If you are not familiar with markdown, you can take a look at the following mark
 title:
 - AI Playground
 author:
-- Ashwin Kumar K
+- Ashwin Kumar Karnad
 theme:
 - Copenhagen
 date:

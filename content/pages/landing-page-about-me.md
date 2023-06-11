@@ -10,7 +10,7 @@ slug: landing-page-about-hidden
 
 Thanks for joining me!
 
-I am Ashwin Kumar K, a Dual Major (B.E Electronics and Instrumentation & Int. MSc Physics) student at BITS Pilani KK Birla Goa campus (Batch of 2017-22)
+I am Ashwin Kumar Karnad, a Dual Major (B.E Electronics and Instrumentation & Int. MSc Physics) student at BITS Pilani KK Birla Goa campus (Batch of 2017-22)
 
 I had always wanted to publish some of my projects and experiments on a public platform so that people working on similar projects can give and take ideas. It also serves as a way to showcase the experience that I have gained while doing such projects.
 
