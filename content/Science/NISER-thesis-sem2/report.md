@@ -403,7 +403,7 @@ conditions for $\phi$ and $\mathring{\phi}$ in Fig
 data-reference="fig:ODE-relaxation-as">3</a>.
 
 <figure>
-<img src="{attach}Photos/ODE-relaxation.webp" id="fig:ODE-relaxation-as" style="width:10cm"
+<img src="{attach}Photos/ODE-relaxation.webp" id="fig:ODE-relaxation-as" style="width:15cm"
 alt="ODE solution as a function of time (in \tau) for different initial conditions for \phi and \mathring{\phi}" />
 <figcaption aria-hidden="true">ODE solution as a function of time (in
 <span class="math inline"><em>τ</em></span>) for different initial
@@ -472,7 +472,7 @@ data-reference="fig:Plots-of-IV-Q0.5">6</a> &
 data-reference="fig:Plots-of-IV-Q1.5">8</a>.
 
 <figure>
-<img src="{attach}Photos/IV-Q1.5-1st.webp" id="fig:Plots-of-IV-Q0.5" style="width:10cm"
+<img src="{attach}Photos/IV-Q1.5-1st.webp" id="fig:Plots-of-IV-Q0.5" style="width:15cm"
 alt="Plots of IV for simulation with parameter Q=1.5 (under damped) and only first harmonics (top) and with second harmonics (bottom)" />
 <figcaption aria-hidden="true">Plots of <span
 class="math inline"><em>I</em><em>V</em></span> for simulation with
@@ -481,7 +481,7 @@ second harmonics (bottom)</figcaption>
 </figure>
 
 <figure>
-<img src="{attach}Photos/IV-Q1.5-2nd.webp" id="fig:Plots-of-IV-Q0.5" style="width:10cm"
+<img src="{attach}Photos/IV-Q1.5-2nd.webp" id="fig:Plots-of-IV-Q0.5" style="width:15cm"
 alt="Plots of IV for simulation with parameter Q=1.5 (under damped) and only first harmonics (top) and with second harmonics (bottom)" />
 <figcaption aria-hidden="true">Plots of <span
 class="math inline"><em>I</em><em>V</em></span> for simulation with
@@ -490,7 +490,7 @@ second harmonics (bottom)</figcaption>
 </figure>
 
 <figure>
-<img src="{attach}Photos/IV-Q0.5-1st.webp" id="fig:Plots-of-IV-Q1.5" style="width:10cm"
+<img src="{attach}Photos/IV-Q0.5-1st.webp" id="fig:Plots-of-IV-Q1.5" style="width:15cm"
 alt="Plots of IV for simulation with parameter Q=0.5 (over damped) and only first harmonics (top) and with second harmonics (bottom)" />
 <figcaption aria-hidden="true">Plots of <span
 class="math inline"><em>I</em><em>V</em></span> for simulation with
@@ -499,7 +499,7 @@ second harmonics (bottom)</figcaption>
 </figure>
 
 <figure>
-<img src="{attach}Photos/IV-Q0.5-2nd.webp" id="fig:Plots-of-IV-Q1.5" style="width:10cm"
+<img src="{attach}Photos/IV-Q0.5-2nd.webp" id="fig:Plots-of-IV-Q1.5" style="width:15cm"
 alt="Plots of IV for simulation with parameter Q=0.5 (over damped) and only first harmonics (top) and with second harmonics (bottom)" />
 <figcaption aria-hidden="true">Plots of <span
 class="math inline"><em>I</em><em>V</em></span> for simulation with
@@ -657,7 +657,7 @@ data-reference="fig:IV-graph-for">17</a>.
 <figure>
 <img
 src="{attach}Photos/IV Pt20 CuNbJJ 2k.png"
-id="fig:IV-graph-for" style="width:10cm"
+id="fig:IV-graph-for" style="width:15cm"
 alt="IV graph for a Cu(100nm)Nb(150nm) Josephson junction " />
 <figcaption aria-hidden="true">IV graph for a Cu(100nm)Nb(150nm)
 Josephson junction </figcaption>
@@ -682,7 +682,7 @@ This was explained in the theoretical sections above.
 <figure>
 <img
 src="{attach}Photos/VH CuNbJJ 2k.png"
-id="fig:Magnetoresistance-of-the-1" style="width:10cm"
+id="fig:Magnetoresistance-of-the-1" style="width:15cm"
 alt="Magnetoresistance of the patterned Nb/Cu Josephson junction device in low magnetic fields for different values of junction currents" />
 <figcaption aria-hidden="true">Magnetoresistance of the patterned Nb/Cu
 Josephson junction device in low magnetic fields for different values of
@@ -692,7 +692,7 @@ junction currents</figcaption>
 <figure>
 <img
 src="{attach}Photos/JJ VH.png"
-id="fig:Magnetoresistance-of-the-1" style="width:10cm"
+id="fig:Magnetoresistance-of-the-1" style="width:15cm"
 alt="Magnetoresistance of the patterned Nb/Cu Josephson junction device in low magnetic fields" />
 <figcaption aria-hidden="true">Magnetoresistance of the patterned Nb/Cu
 Josephson junction device in low magnetic fields</figcaption>
@@ -786,7 +786,7 @@ Fig<a href="#fig:iv-viz" data-reference-type="ref"
 data-reference="fig:iv-viz">21</a>.
 
 <figure>
-<img src="{attach}Photos/web-app-sc.webp" id="fig:iv-viz" style="width:10cm"
+<img src="{attach}Photos/web-app-sc.webp" id="fig:iv-viz" style="width:15cm"
 alt="A screenshot of the web-app in use for visualizing the scatter plot of Josephson junctions IV " />
 <figcaption aria-hidden="true">A screenshot of the web-app in use for
 visualizing the scatter plot of Josephson junctions IV </figcaption>
@@ -819,7 +819,7 @@ out the Fraunhofer like pattern in both plots at the same magnetic field
 points, the main lobe width and the secondary lobe width are identical.
 
 <figure>
-<img src="{attach}Photos/IcH-JJ4.webp" id="fig:jj4" style="width:10cm"
+<img src="{attach}Photos/IcH-JJ4.webp" id="fig:jj4" style="width:15cm"
 alt="Plots of I_{C}H (analyzed from data) and VH(directly measured) for a Niobium/Copper/Platinum Josephson junction (Sample no 4 from run SP169) One can make out the Fraunhofer like pattern in both plots at the same magnetic field points. " />
 <figcaption aria-hidden="true">Plots of <span
 class="math inline"><em>I</em><sub><em>C</em></sub><em>H</em></span>
@@ -832,7 +832,7 @@ magnetic field points. </figcaption>
 </figure>
 
 <figure>
-<img src="{attach}Photos/VH-JJ4.webp" id="fig:jj4" style="width:10cm"
+<img src="{attach}Photos/VH-JJ4.webp" id="fig:jj4" style="width:15cm"
 alt="Plots of I_{C}H (analyzed from data) and VH(directly measured) for a Niobium/Copper/Platinum Josephson junction (Sample no 4 from run SP169) One can make out the Fraunhofer like pattern in both plots at the same magnetic field points. " />
 <figcaption aria-hidden="true">Plots of <span
 class="math inline"><em>I</em><sub><em>C</em></sub><em>H</em></span>
@@ -845,7 +845,7 @@ magnetic field points. </figcaption>
 </figure>
 
 <figure>
-<img src="{attach}Photos/IcH-JJ5.webp" id="fig:jj4-1" style="width:10cm"
+<img src="{attach}Photos/IcH-JJ5.webp" id="fig:jj4-1" style="width:15cm"
 alt="Plots of I_{C}H (analyzed from data) and VH(directly measured) for a Niobium/Copper/Platinum Josephson junction (Sample no 5 from run SP169) One can make out the Fraunhofer like pattern in both plots at the same magnetic field points. " />
 <figcaption aria-hidden="true">Plots of <span
 class="math inline"><em>I</em><sub><em>C</em></sub><em>H</em></span>
@@ -858,7 +858,7 @@ magnetic field points. </figcaption>
 </figure>
 
 <figure>
-<img src="{attach}Photos/VH-JJ5.webp" id="fig:jj4-1" style="width:10cm"
+<img src="{attach}Photos/VH-JJ5.webp" id="fig:jj4-1" style="width:15cm"
 alt="Plots of I_{C}H (analyzed from data) and VH(directly measured) for a Niobium/Copper/Platinum Josephson junction (Sample no 5 from run SP169) One can make out the Fraunhofer like pattern in both plots at the same magnetic field points. " />
 <figcaption aria-hidden="true">Plots of <span
 class="math inline"><em>I</em><sub><em>C</em></sub><em>H</em></span>
@@ -889,7 +889,7 @@ and Reliable Resistance Measurements in Low Power and Low Voltage
 Applications Tektronix” n.d.)
 
 <figure>
-<img src="{attach}Photos/dcon-6221.webp" id="fig:dcon" style="width:10cm"
+<img src="{attach}Photos/dcon-6221.webp" id="fig:dcon" style="width:15cm"
 alt="A plot of the applied current bias in the differential conductance setup(“Achieving Accurate and Reliable Resistance Measurements in Low Power and Low Voltage Applications  Tektronix” n.d.)" />
 <figcaption aria-hidden="true">A plot of the applied current bias in the
 differential conductance setup<span class="citation"
