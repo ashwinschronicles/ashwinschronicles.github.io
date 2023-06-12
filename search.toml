@@ -8,6 +8,11 @@ url = "/AboutMe"
 title = "About Me"
 
 [[input.files]]
+path = "josephson-junction-simulation-and-analysis.html"
+url = "/josephson-junction-simulation-and-analysis"
+title = "Study of Josephson Junction."
+
+[[input.files]]
 path = "josephson-junction-fabrication-and-characterisation.html"
 url = "/josephson-junction-fabrication-and-characterisation"
 title = "Study of Josephson Junction."

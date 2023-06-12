@@ -5,42 +5,42 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://ashwinschronicles.github.io/</loc>
-<lastmod>2023-06-11T16:31:37-00:00</lastmod>
+<lastmod>2023-06-12T15:08:29-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://ashwinschronicles.github.io/tags</loc>
-<lastmod>2023-06-11T16:31:37-00:00</lastmod>
+<lastmod>2023-06-12T15:08:29-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://ashwinschronicles.github.io/categories</loc>
-<lastmod>2023-06-11T16:31:37-00:00</lastmod>
+<lastmod>2023-06-12T15:08:29-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://ashwinschronicles.github.io/archives</loc>
-<lastmod>2023-06-11T16:31:37-00:00</lastmod>
+<lastmod>2023-06-12T15:08:29-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://ashwinschronicles.github.io/search</loc>
-<lastmod>2023-06-11T16:31:37-00:00</lastmod>
+<lastmod>2023-06-12T15:08:29-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://ashwinschronicles.github.io/404.html</loc>
-<lastmod>2023-06-11T16:31:37-00:00</lastmod>
+<lastmod>2023-06-12T15:08:29-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -48,6 +48,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>https://ashwinschronicles.github.io/AboutMe</loc>
 <lastmod>2018-06-18T00:00:00+05:30</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://ashwinschronicles.github.io/josephson-junction-simulation-and-analysis</loc>
+<lastmod>2023-06-11T00:00:00+05:30</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>

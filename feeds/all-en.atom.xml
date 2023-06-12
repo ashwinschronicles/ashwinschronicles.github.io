@@ -1,5 +1,1044 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Ashwin's Chronicles🗞️</title><link href="https://ashwinschronicles.github.io/" rel="alternate"></link><link href="https://ashwinschronicles.github.io/feeds/all-en.atom.xml" rel="self"></link><id>https://ashwinschronicles.github.io/</id><updated>2023-06-11T00:00:00+05:30</updated><entry><title>Study of Josephson Junction.</title><link href="https://ashwinschronicles.github.io/josephson-junction-fabrication-and-characterisation" rel="alternate"></link><published>2021-12-15T00:00:00+05:30</published><updated>2023-06-11T00:00:00+05:30</updated><author><name>Ashwin</name></author><id>tag:ashwinschronicles.github.io,2021-12-15:/josephson-junction-fabrication-and-characterisation</id><summary type="html">&lt;p&gt;This post is about my masters thesis on Josephson Junction fabrication and&amp;nbsp;characterisation&lt;/p&gt;</summary><content type="html">
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Ashwin's Chronicles🗞️</title><link href="https://ashwinschronicles.github.io/" rel="alternate"></link><link href="https://ashwinschronicles.github.io/feeds/all-en.atom.xml" rel="self"></link><id>https://ashwinschronicles.github.io/</id><updated>2023-06-11T00:00:00+05:30</updated><entry><title>Study of Josephson Junction.</title><link href="https://ashwinschronicles.github.io/josephson-junction-simulation-and-analysis" rel="alternate"></link><published>2022-04-15T00:00:00+05:30</published><updated>2023-06-11T00:00:00+05:30</updated><author><name>Ashwin</name></author><id>tag:ashwinschronicles.github.io,2022-04-15:/josephson-junction-simulation-and-analysis</id><summary type="html">&lt;p&gt;This post is about my masters thesis on Josephson Junction fabrication and&amp;nbsp;characterisation&lt;/p&gt;</summary><content type="html">
+&lt;h1 id="introduction"&gt;Introduction&lt;a class="headerlink" href="#introduction" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h1&gt;
+&lt;p&gt;This article is an adaptation of my Masters thesis report ( second semesters ), where I worked on the modelling and simuation of Josephson Junctions. The previous article talked about the  the fabrications of Josephson Junctions and their charecterisation ( first semester ).
+At the beginning of this thesis, we introduce basic theoretical concepts
+that underlay the device we are trying to study, i.e. the Josephson
+Junction (&lt;span class="caps"&gt;JJ&lt;/span&gt;). The theorey of superconductivity was breifly described in the previous article. We first look at the Josephson effect, which describes the physics of a
+Superconductor-Insulator-Superconductor sandwich and then look at a
+popular model of a realistic Josephson junction, namely the &lt;span class="caps"&gt;RCSJ&lt;/span&gt; model.
+Later we will try to understand various aspects of fabrication and
+characterisation of such devices.&lt;/p&gt;
+&lt;h3 id="josephson-junctions"&gt;Josephson Junctions&lt;a class="headerlink" href="#josephson-junctions" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Prior to 1962, researchers were familiar with quantum mechanical
+tunneling of normal electrons through a weak barrier; however, the
+probability of tunneling of a cooper pair was thought to be
+insignificant given that the pair as a whole would have to tunnel
+through the barrier. In 1962 Brian David Josephson showed that this
+tunneling probability is not low as previously thought. He predicted
+theoretically that two superconductors that are coupled (are in close
+proximity) by a weak link, which link may be made of a normal metal, an
+insulator, or a constriction of superconductivity, can still let the
+super current flow through them (Josephson 1962). This macroscopic
+phenomenon was given the name Josephson effect.&lt;/p&gt;
+&lt;figure&gt;
+&lt;img alt="(a) The superconducting order parameter \Psi of a superconductor (S) penetrating into the normal metal (N) with a length scale of the superconducting coherence length,\xi. (b) Order parameters from two sides have an overlap in N, producing proximity Josephson coupling.(Lee and Lee 2018)" src="https://ashwinschronicles.github.io/Photos/a-The-superconducting-order-parameter-of-a-superconductor-S-penetrating-into-the.webp" style="width:12cm"/&gt;
+&lt;figcaption aria-hidden="true"&gt;(a) The superconducting order parameter
+&lt;span class="math inline"&gt;&lt;em&gt;Ψ&lt;/em&gt;&lt;/span&gt; of a superconductor (S)
+penetrating into the normal metal (N) with a length scale of the
+superconducting coherence length,&lt;span class="math inline"&gt;&lt;em&gt;ξ&lt;/em&gt;&lt;/span&gt;. (b) Order parameters from two
+sides have an overlap in N, producing proximity Josephson coupling.&lt;span class="citation" data-cites="SCFig"&gt;(Lee and Lee
+2018)&lt;/span&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;p&gt;Josephson demonstrated that, for a short junction, the current that
+flows through the junction when no voltage bias is applied, and the
+phase difference &lt;span class="math"&gt;\(\phi\)&lt;/span&gt; across the junction, which is the difference in
+the phase factor between the order parameter of the two superconductors,
+are related through the relation:
+&lt;/p&gt;
+&lt;div class="math"&gt;$$I_{s}=I_{c}\,sin(\delta)\label{eq:JJ1}$$&lt;/div&gt;
+&lt;p&gt; Here, &lt;span class="math"&gt;\(I_{c}\)&lt;/span&gt; is the super
+current amplitude and &lt;span class="math"&gt;\(\delta=\phi_{1}-\phi_{2}\)&lt;/span&gt; , where &lt;span class="math"&gt;\(\phi_{i}\)&lt;/span&gt; is
+the phase of each superconductor. This phenomenon is known as the &lt;span class="caps"&gt;DC&lt;/span&gt;
+Josephson effect. Josephson also showed &lt;span class="caps"&gt;AC&lt;/span&gt; Josephson effect where an
+applied constant voltage bias V on the junction leads to sinusoidal
+oscillations in the junction current and is governed by the equation:
+&lt;/p&gt;
+&lt;div class="math"&gt;$$V=\left(\Phi_{0}/2\pi\right)\dot{\delta}\label{eq:JJ2}$$&lt;/div&gt;
+&lt;p&gt; where
+&lt;span class="math"&gt;\(\Phi_{0}\approx2\times10^{-15}\)&lt;/span&gt; Weber is the flux quantum.&lt;/p&gt;
+&lt;p&gt;The &lt;span class="caps"&gt;DC&lt;/span&gt; Josephson effect is explained by a process known as Andreev
+reflection (Schrieffer and Tinkham 1999). &lt;span class="caps"&gt;A.F.&lt;/span&gt;Andreev explained the
+phenomenon in 1964 establishing the concept of the so-called Andreev
+reflection This reflection occurs at the interfaces between the
+superconductor S and a normal metal N. Andreev suggested that an
+electron that approaches the interface from the normal metal side can
+travel through the superconductor side by the formation of a Cooper pair
+with another electron with opposite momentum and spin on the
+superconductor side. At the same time, reflect a hole inside the normal
+metal region thus balancing the charge. As a result of this cycle, a
+pair of correlated electrons is transferred from one superconductor to
+another, creating a super current flow across the junction. It explains
+how a normal current in the normal metal side becomes a super current in
+the superconductor side. The &lt;span class="caps"&gt;AC&lt;/span&gt; Josephson relation in essence suggests
+that a Josephson junction can be a perfect voltage-to-frequency
+converter. The inverse is also possible by using a microwave frequency
+to induce a &lt;span class="caps"&gt;DC&lt;/span&gt; voltage in a Josephson junction, this phenomena is known
+as inverse &lt;span class="caps"&gt;AC&lt;/span&gt; Josephson effect.&lt;/p&gt;
+&lt;figure&gt;
+&lt;img alt="Andreev Reflection process" src="https://ashwinschronicles.github.io/Photos/andreev_reflection.webp" style="width:5cm"/&gt;
+&lt;figcaption aria-hidden="true"&gt;Andreev Reflection process&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;h4 id="rcsj-model"&gt;&lt;span class="caps"&gt;RCSJ&lt;/span&gt; model&lt;span id="subsec:RCSJ-model" label="subsec:RCSJ-model"&gt;&lt;/span&gt;&lt;a class="headerlink" href="#rcsj-model" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;A Josephson junction, is typically composed of two superconducting
+electrodes separated by weaklink which is typically insulating, thus
+such a junction would have some unavoidable capacitance &lt;span class="math"&gt;\(C\)&lt;/span&gt; (Just like
+the parallel plate capacitor separated by a dielectric). If the junction
+current exceeds the critical current of the junction then quasi-particle
+excitations are generated. These quasi-particle currents are not
+superconducting and can be quite lossy just like a normal metal current,
+so we represent this as a normal resistor &lt;span class="math"&gt;\(R\)&lt;/span&gt;. This gives us the
+resistively and capacitivly shunted junction (&lt;span class="caps"&gt;RCSJ&lt;/span&gt;) model. This model
+helps us simulate the characteristics of a Josephson junction. A
+schematic representation of the same can be seen in Fig
+&lt;a data-reference="fig:Schematic-of-RCSJ" data-reference-type="ref" href="#fig:Schematic-of-RCSJ"&gt;1&lt;/a&gt;.&lt;/p&gt;
+&lt;figure&gt;
+&lt;img alt="A schematic representation of RCSJ model. Here I is the current through the device, I_{c} is the current through the capacitor I_{J} is the current through the Josephson Junction, I_{R} is the current through the resistance" id="fig:Schematic-of-RCSJ" src="https://ashwinschronicles.github.io/Photos/RCSJ.webp" style="width:5cm"/&gt;
+&lt;figcaption aria-hidden="true"&gt;A schematic representation of &lt;span class="caps"&gt;RCSJ&lt;/span&gt; model.
+Here &lt;span class="math inline"&gt;&lt;em&gt;I&lt;/em&gt;&lt;/span&gt; is the current through
+the device, &lt;span class="math inline"&gt;&lt;em&gt;I&lt;/em&gt;&lt;sub&gt;&lt;em&gt;c&lt;/em&gt;&lt;/sub&gt;&lt;/span&gt; is the
+current through the capacitor &lt;span class="math inline"&gt;&lt;em&gt;I&lt;/em&gt;&lt;sub&gt;&lt;em&gt;J&lt;/em&gt;&lt;/sub&gt;&lt;/span&gt; is the
+current through the Josephson Junction, &lt;span class="math inline"&gt;&lt;em&gt;I&lt;/em&gt;&lt;sub&gt;&lt;em&gt;R&lt;/em&gt;&lt;/sub&gt;&lt;/span&gt; is the
+current through the resistance&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;p&gt;Writing out Kirchov’s circuit laws for the &lt;span class="caps"&gt;RCSJ&lt;/span&gt; model (from Fig
+&lt;a data-reference="fig:Schematic-of-RCSJ" data-reference-type="ref" href="#fig:Schematic-of-RCSJ"&gt;1&lt;/a&gt;.)we can find&lt;/p&gt;
+&lt;div class="math"&gt;$$I_{c}+I_{J}+I_{R}=I$$&lt;/div&gt;
+&lt;div class="math"&gt;$$\frac{\Phi_{0}}{2\pi}C\ddot{\delta}+I_{c}\sin(\delta)+\frac{\Phi_{0}}{2\pi R}\dot{\delta}=I$$&lt;/div&gt;
+&lt;p&gt;or
+&lt;/p&gt;
+&lt;div class="math"&gt;$$\frac{\Phi_{0}}{2\pi}C\ddot{\delta}+\frac{\Phi_{0}}{2\pi R}\dot{\delta}=I-I_{c}\sin(\delta)$$&lt;/div&gt;
+&lt;p&gt;
+Rearranging as
+&lt;/p&gt;
+&lt;div class="math"&gt;$$\ddot{\delta}+\frac{1}{RC}\dot{\delta}=\left(\frac{2\pi}{C\Phi_{0}}\right)\left(I-I_{c}\sin(\delta)\right)\label{eq:dammpedeqn}$$&lt;/div&gt;
+&lt;p&gt;
+we can interpret Eq &lt;a data-reference="eq:dammpedeqn" data-reference-type="ref" href="#eq:dammpedeqn"&gt;[eq:dammpedeqn]&lt;/a&gt; as the dynamics of a
+damped particle with the following physical properties:
+&lt;/p&gt;
+&lt;div class="math"&gt;$$\begin{aligned}\text{ "effective mass" } &amp;amp; =C\\
+\text{ "coefficient of friction" } &amp;amp; =1/R\\
+\qquad\text{ "potential experienced by the particle" } &amp;amp; =-\left(2\pi/C\Phi_{0}\right)\left(I\delta+I_{c}\cos(\delta)\right).
+\end{aligned}$$&lt;/div&gt;
+&lt;p&gt;The dynamics of the Josephson junction phase difference in-terms of the
+damped particle can be described as follows: (Fig
+&lt;a data-reference="fig:washboard-potential" data-reference-type="ref" href="#fig:washboard-potential"&gt;2&lt;/a&gt;)&lt;/p&gt;
+&lt;figure&gt;
+&lt;img alt="Interpretation of the washboard potential(DanielSank, n.d.)" id="fig:washboard-potential" src="https://ashwinschronicles.github.io/Photos/JJ-IV.webp" style="width:13cm"/&gt;
+&lt;figcaption aria-hidden="true"&gt;Interpretation of the washboard
+potential&lt;span class="citation" data-cites="JJ-IVexpln"&gt;(DanielSank,
+n.d.)&lt;/span&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;The junction has a simple cosine potential when there is no junction
+    current (at I=0). At this point, the pseudo-particle is caught in
+    one of the cosine’s wells, as shown in Fig
+    &lt;a data-reference="fig:washboard-potential" data-reference-type="ref" href="#fig:washboard-potential"&gt;2&lt;/a&gt;a. We can observe the
+    effect of an extra linear term to the potential as we introduce some
+    current. Because the potential now resembles a tilted washboard,
+    it’s known as the &lt;em&gt;tilted washboard potential&lt;/em&gt;. There are still
+    vallies in the potential if the bias current is less than &lt;span class="math"&gt;\(I_{c}\)&lt;/span&gt;,
+    and the ball remains stuck, as shown in. Fig
+    &lt;a data-reference="fig:washboard-potential" data-reference-type="ref" href="#fig:washboard-potential"&gt;2&lt;/a&gt;a. Because the
+    junction phase (i.e the pseudo-particle) is stuck at a fixed value
+    of &lt;span class="math"&gt;\(\delta\)&lt;/span&gt;, the voltage is zero (as &lt;span class="math"&gt;\(V\propto\dot{\delta}\)&lt;/span&gt; ). As
+    demonstrated by the horizontal blue line, this is the section of the
+    &lt;span class="caps"&gt;IV&lt;/span&gt; curve where an increase in junction current does not result in an
+    increase in junction voltage. Because the junction element is still
+    superconducting, all current flows through the tunnel element and
+    none through the resistor at this point, resulting in the junction.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;As the current is increased past &lt;span class="math"&gt;\(I_{c}\)&lt;/span&gt;, the linear term in the
+    potential begins to dominate the cosine part, and the vallies fade
+    away. As demonstrated in Fig
+    &lt;a data-reference="fig:washboard-potential" data-reference-type="ref" href="#fig:washboard-potential"&gt;2&lt;/a&gt;b the junction pseudo
+    particle then rolls downhill. The pseudo particle is now in a
+    time-varying phase, and the junction voltage is non-zero and
+    approaches a finite value, as shown by the red line in Fig
+    &lt;a data-reference="fig:washboard-potential" data-reference-type="ref" href="#fig:washboard-potential"&gt;2&lt;/a&gt;b&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Because the current I now exceeds the tunneling element’s critical
+    current, the tunneling element no longer acts as a superconductor.
+    The formation of quasi-particles makes the connection resistant. In
+    other words, the resistive element carries practically all of the
+    current. Further increases in current result in a linear increase in
+    voltage, identical to that of a typical metal, as indicated by
+    &lt;span class="math"&gt;\(V=IR\)&lt;/span&gt;, as shown in Fig
+    &lt;a data-reference="fig:washboard-potential" data-reference-type="ref" href="#fig:washboard-potential"&gt;2&lt;/a&gt;c, and by the green
+    line marked Fig
+    &lt;a data-reference="fig:washboard-potential" data-reference-type="ref" href="#fig:washboard-potential"&gt;2&lt;/a&gt;c.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;As the current is reduced, we return to the green line, as shown by
+    the mark Fig
+    &lt;a data-reference="fig:washboard-potential" data-reference-type="ref" href="#fig:washboard-potential"&gt;2&lt;/a&gt;d. The rest of the
+    process depends on how fast we are raising and lowering the current.
+    The potential regains its cosine nature and regains vallies, as we
+    lower the current below &lt;span class="math"&gt;\(I_{c}\)&lt;/span&gt; .&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;If there were no dissipative forces as is the case when we sweep
+    fast enough or when whatever dissipation remains can’t completely
+    stop the particle, the particle would continue to roll down as it
+    already has energy. Therefore, even as I is lowered below &lt;span class="math"&gt;\(I_{c}\)&lt;/span&gt; we
+    still have time varying &lt;span class="math"&gt;\(\delta\)&lt;/span&gt; and therefore still have a
+    measurable voltage. This can be concluded from Fig
+    &lt;a data-reference="fig:washboard-potential" data-reference-type="ref" href="#fig:washboard-potential"&gt;2&lt;/a&gt;e and the pink line in
+    Fig &lt;a data-reference="fig:washboard-potential" data-reference-type="ref" href="#fig:washboard-potential"&gt;2&lt;/a&gt;e&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;In the end, we go back to no bias case where the potential is again
+    a cosine term and as we slowly sweep the voltage we slow down and
+    finally stop the particle. Then as we increase the negative bias the
+    process starts all over in reverse.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id="josephson-junctions-in-the-presence-of-a-magnetic-field"&gt;Josephson Junctions in the Presence of a Magnetic Field&lt;a class="headerlink" href="#josephson-junctions-in-the-presence-of-a-magnetic-field" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;In Eq&lt;a data-reference="eq:JJ1" data-reference-type="ref" href="#eq:JJ1"&gt;[eq:&lt;span class="caps"&gt;JJ1&lt;/span&gt;]&lt;/a&gt; we saw that he Josephson Junction
+current depends on the phase difference &lt;span class="math"&gt;\(\delta\)&lt;/span&gt; across the junction.
+When an external magnetic field is applied, the field influences the
+phase difference &lt;span class="math"&gt;\(\delta\)&lt;/span&gt;, this in turn causes interesting dynamics
+between the Josephson Junction current and the applied external magnetic
+fields. It can be shown that in the case of a small Josephson Junction
+this dependence follows the relation(Schrieffer and Tinkham 1999):
+&lt;/p&gt;
+&lt;div class="math"&gt;$$I_{J}=I_{0}\left|\dfrac{\sin\left(\pi\frac{\Phi_{J}}{\Phi_{0}}\right)}{\pi\frac{\Phi_{J}}{\Phi_{0}}}\right|$$&lt;/div&gt;
+&lt;p&gt;&lt;br/&gt;
+here
+&lt;span class="math"&gt;\(\Phi_{J}=\mu_{0}Hw(d+\lambda_{1}+\lambda_{2})\text{ is the magnetic flux linked to the whole barrier }\)&lt;/span&gt;with
+&lt;span class="math"&gt;\(w\)&lt;/span&gt; being the width of the barrier, &lt;span class="math"&gt;\(d\)&lt;/span&gt; the barrier thickness,
+&lt;span class="math"&gt;\(\lambda_{1},\lambda_{2},\)&lt;/span&gt;the penetration depths of the two
+superconductors.&lt;br/&gt;
+This behavior was first experimentally found by Rodwel (Rowell 1963), in
+a Pb-I-Pb junction at 1.3 K. This is the standard from of the Fraunhofer
+pattern &lt;span class="math"&gt;\(F(x)=I_{0}\sin^{2}(\pi x)/(\pi x)^{2}\)&lt;/span&gt;and is seen as a unique
+characteristic confirmation of a Josephson junctions. This
+Fraunhofer-like result, which is akin to diffraction of monochromatic,
+coherent light passing through a slit, provides a validation of the
+sinusoidal current phase relation (&lt;span class="caps"&gt;CPR&lt;/span&gt;).&lt;br/&gt;
+For a &lt;span class="caps"&gt;SQUID&lt;/span&gt;, the critical current-magnetic field characteristic is
+similar to that of Josephson Junctions with the addition of &lt;span class="caps"&gt;SQUID&lt;/span&gt;
+oscillations superimposed on it. Both of these signatures are in the
+simulations done in the later section.&lt;br/&gt;
+In case of junctions with ferromagnetic behavior, at certain temperature
+and barrier width, a &lt;span class="math"&gt;\(\pi\)&lt;/span&gt;junctions could be observed. This is due to
+exchange field-induced oscillations of the order parameter and is very
+sensitive to the temperature and the ferromagnetic layer thickness. In
+such materials the &lt;span class="caps"&gt;CPR&lt;/span&gt; could be written as &lt;span class="math"&gt;\(I(\phi)=I_{0}sin(\phi+\pi)\)&lt;/span&gt;,
+and doubling of periodicity in &lt;span class="math"&gt;\(I_{c}\)&lt;/span&gt;vs &lt;span class="math"&gt;\(H\)&lt;/span&gt; is observed(Frolov et al.
+2004). In materials with broken time-reversal and broken parity
+symmetries (this can be obtained in systems with both a Zeemanfield and
+a Rashba spin-orbit coupling(Assouline et al. 2019; Strambini et al.,
+n.d.)), the &lt;span class="caps"&gt;CPR&lt;/span&gt; could take the form of &lt;span class="math"&gt;\(I(\phi)=I_{0}sin(\phi+\phi_{0})\)&lt;/span&gt;
+(Assouline et al. 2019), in Josephson junctions this term leads to the
+anomalous phase shift, which could manifest as the presence of second
+harmonics in the critical current - phase relation (Stoutimore et al.
+2018). This system is also simulated as a part of the thesis, where in
+the &lt;span class="math"&gt;\(I_{C}H\)&lt;/span&gt; behavior is replaced with the following:&lt;/p&gt;
+&lt;div class="math"&gt;$$\begin{array}{cc}
+I_{c}=I_{c1}\left|\dfrac{\sin\left(\pi\frac{\Phi_{J}}{\Phi_{0}}\right)}{\pi\frac{\Phi_{J}}{\Phi_{0}}}\right| &amp;amp; \mathrm{first\,harmonics}\\
+\\
+I_{c}=I_{c1}\left|\dfrac{\sin\left(\pi\frac{\Phi_{J}}{\Phi_{0}}\right)}{\pi\frac{\Phi_{J}}{\Phi_{0}}}\right|+I_{c2}\left|\dfrac{\sin\left(2\pi\frac{\Phi_{J}}{\Phi_{0}}\right)}{2\pi\frac{\Phi_{J}}{\Phi_{0}}}\right| &amp;amp; \mathrm{with\,second\,}\mathrm{harmonics}
+\end{array}\label{eq: IcH 2}$$&lt;/div&gt;
+&lt;h1 id="simulation-details"&gt;Simulation Details&lt;a class="headerlink" href="#simulation-details" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h1&gt;
+&lt;p&gt;The characteristic signature of a Josephson junction, apart from its
+current voltage relation (&lt;span class="caps"&gt;IV&lt;/span&gt;) is the Critical current &lt;span class="math"&gt;\(I_{c}\)&lt;/span&gt;dependence
+on the applied magnetic field H ( &lt;span class="math"&gt;\(I_{C}\)&lt;/span&gt;vs H or &lt;span class="math"&gt;\(I_{C}H\)&lt;/span&gt;).&lt;/p&gt;
+&lt;p&gt;The &lt;span class="caps"&gt;PPMS&lt;/span&gt; in the lab has builtin recipes only for &lt;span class="caps"&gt;DC&lt;/span&gt; measurement and as
+such &lt;span class="caps"&gt;DC&lt;/span&gt; measurements like &lt;span class="caps"&gt;IV&lt;/span&gt; are relatively slower (1 &lt;span class="caps"&gt;IV&lt;/span&gt; scan in 10-15
+minutes on good resolution). Thus getting data for &lt;span class="math"&gt;\(I_{c}H\)&lt;/span&gt; would
+require multiple IVs to be measured at a sweep of magnetic field H. This
+would take almost a day per device on a decent resolution and thus cant
+be done frequently. The more easier measurement would be to set and
+constant current (say the &lt;span class="math"&gt;\(Ic\)&lt;/span&gt; at zero magnetic field) then measure the
+Voltage as a function of changing magnetic field ( V vs H or &lt;span class="caps"&gt;VH&lt;/span&gt; )
+however, there is little literature regarding the characteristics of &lt;span class="caps"&gt;VH&lt;/span&gt;
+relation (or magneto resistance ) of a Josephson junction.&lt;/p&gt;
+&lt;p&gt;Thus the main goal of the thesis is to verify the correlation between
+the &lt;span class="math"&gt;\(I_{C}H\)&lt;/span&gt; and &lt;span class="math"&gt;\(VH\)&lt;/span&gt; signatures of a Josephson junction via simulation.
+simulation part of the thesis is to first setup the numerical solution
+to the &lt;span class="caps"&gt;ODE&lt;/span&gt; &lt;a data-reference="eq:dammpedeqn" data-reference-type="ref" href="#eq:dammpedeqn"&gt;[eq:dammpedeqn]&lt;/a&gt; , then simulate an
+I - V measurement, Iterate the &lt;span class="caps"&gt;IV&lt;/span&gt; sweep over multiple magnetic fields
+linearly spaced between &lt;span class="math"&gt;\(-2\frac{\phi}{\phi_{0}}\)&lt;/span&gt; and
+&lt;span class="math"&gt;\(2\frac{\phi}{\phi_{0}}\)&lt;/span&gt; . This would give us the data of all
+permissible sets junction current &lt;span class="math"&gt;\(I_{J},\)&lt;/span&gt;junction voltage &lt;span class="math"&gt;\(V_{J}\)&lt;/span&gt; and
+the applied magnetic field &lt;span class="math"&gt;\(H\)&lt;/span&gt; that are the possible states of the given
+Josephson Junction. Finally, one could correlate the simulation with
+experimental data for junctions with and without second harmonics from
+&lt;span class="math"&gt;\(I_{c}H\)&lt;/span&gt; and &lt;span class="math"&gt;\(VH\)&lt;/span&gt; measurements. First lets us try to understand the
+systems &lt;span class="caps"&gt;ODE&lt;/span&gt;.&lt;/p&gt;
+&lt;h3 id="modeling-the-ode"&gt;Modeling the &lt;span class="caps"&gt;ODE&lt;/span&gt;&lt;a class="headerlink" href="#modeling-the-ode" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;We model the Josephson junction using the &lt;span class="caps"&gt;RCSJ&lt;/span&gt; model as described in
+sec&lt;a data-reference="subsec:RCSJ-model" data-reference-type="ref" href="#subsec:RCSJ-model"&gt;[subsec:&lt;span class="caps"&gt;RCSJ&lt;/span&gt;-model]&lt;/a&gt;:he total
+current running through the network is &lt;/p&gt;
+&lt;div class="math"&gt;$$\begin{aligned}
+I(t)= &amp;amp; I_{s}(t)+I_{R}(t)+I_{C}(t)\\
+I(t)= &amp;amp; I_{c}\sin(\phi)+\frac{V}{R}+C\frac{dV}{dt}\\
+V(t)= &amp;amp; \frac{\hbar}{2e}\frac{d\phi}{dt},\;\frac{dV}{dt}=\frac{\hbar}{2e}\frac{d^{2}\phi}{dt^{2}}\\
+\rightarrow I(t)= &amp;amp; I_{c}\sin(\phi)+\frac{\hbar}{2eR}\frac{d\phi}{dt}+\frac{\hbar C}{2e}\frac{d^{2}\phi}{dt^{2}}\label{eq:ODE}
+\end{aligned}$$&lt;/div&gt;
+&lt;p&gt; Due to quasiparticle tunnelling, the resistance in
+reality relies on both the temperature and the voltage across the
+junction as described by this equation: &lt;/p&gt;
+&lt;div class="math"&gt;$$\begin{aligned}
+R(V,T)=\begin{cases}
+R_{sg}(T)\; &amp;amp; {\rm for\;}|V|\leq2\Delta(T)/e\\
+R_{n}\; &amp;amp; {\rm for\;}|V|\geq2\Delta(T)/e
+\end{cases}
+\end{aligned}$$&lt;/div&gt;
+&lt;p&gt; where typically &lt;span class="math"&gt;\(R_{sg}\gg R_{n}\)&lt;/span&gt;. The characteristic
+voltage of the junction is accordingly defined as &lt;span class="math"&gt;\(V_{c}=I_{c}R_{n}\)&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;The current-phase relation (&lt;span class="caps"&gt;CPR&lt;/span&gt;) &lt;span class="math"&gt;\(I_{s}(t)=I_{c}\sin(\phi)\)&lt;/span&gt; describes
+the supercurrent via a Josephson junction (&lt;span class="caps"&gt;JJ&lt;/span&gt;), where &lt;span class="math"&gt;\(I_{c}\)&lt;/span&gt; is the
+critical current and &lt;span class="math"&gt;\(\phi\)&lt;/span&gt; is the junction phase-difference. The &lt;span class="caps"&gt;CPR&lt;/span&gt;
+can be stated in more broad terms as (Pal et al. 2014; Tanaka and
+Kashiwaya 1997)
+&lt;/p&gt;
+&lt;div class="math"&gt;$$I_{s}(t)=\sum_{\mathrm{n}\geq1}I_{\mathrm{c}_{\mathrm{n}}}\sin(\mathrm{n}\phi)$$&lt;/div&gt;
+&lt;p&gt;
+, and when the first harmonic is suppressed (for example, at a 0 –&lt;span class="math"&gt;\(\pi\)&lt;/span&gt;
+transition)(Sellier et al. 2004), the second harmonic may become
+apparent. We try to determine the influence of adding a second harmonic
+&lt;span class="caps"&gt;CPR&lt;/span&gt; in the I c H and V H behavior in this thesis by simulation.&lt;/p&gt;
+&lt;p&gt;Before we try to solve the &lt;span class="caps"&gt;ODE&lt;/span&gt;
+&lt;a data-reference="eq:ODE" data-reference-type="ref" href="#eq:ODE"&gt;[eq:&lt;span class="caps"&gt;ODE&lt;/span&gt;]&lt;/a&gt;, we can try to simplify the &lt;span class="caps"&gt;ODE&lt;/span&gt; by
+normalising the equation.&lt;/p&gt;
+&lt;p&gt;This helps in minimizing the round off errors, for instance if one
+variable has the value 24582 (units a) the other variable could be in
+the order 0.001861(units b). The significance of the second variable
+could be irreversibly lost while executing any operation pertinent to
+these variables, such as multiplication. One technique to assist limit
+these possible losses is to normalise the variables first. The equation
+is simplified with normalized time ( unitless ) via the plasma
+frequency, &lt;span class="math"&gt;\(\tau=\omega_{p}t\)&lt;/span&gt; where
+&lt;span class="math"&gt;\(\omega_{p}=\left(2eI_{c0}/\hbar C\right)^{1/2}\)&lt;/span&gt;:(Schrieffer and Tinkham 1999)&lt;/p&gt;
+&lt;p&gt;&lt;span class="math"&gt;\(\omega_{p}=\frac{1}{\tau_{p}}=\frac{1}{\sqrt{L_{c}C}}=\sqrt{\frac{2eI_{c}}{\hbar C}}\)&lt;/span&gt;
+and
+&lt;span class="math"&gt;\(dt=\frac{1}{\omega_{p}}d\tau\rightarrow\frac{d^{n}}{dt}=\omega_{p}^{n}\frac{d^{n}}{\tau}\)&lt;/span&gt;,
+applying these factors we get&lt;/p&gt;
+&lt;div class="math"&gt;$$\frac{I}{I_{c}}-\sin(\phi)=\underbrace{\frac{\hbar}{2eI_{c}R}\sqrt{\frac{2eI_{c}}{\hbar C}}}_{\sqrt{\frac{\hbar C}{2eI_{c}}}\frac{1}{RC}\equiv Q^{-1}}\frac{\phi}{\tau}+\underbrace{\frac{\hbar C}{2eI_{c}}\frac{2eI_{c}}{\hbar C}}_{1}\frac{d^{2}\phi}{d\tau^{2}}$$&lt;/div&gt;
+&lt;div class="math"&gt;$$\Longrightarrow\frac{d^{2}\phi}{d\tau^{2}}=\frac{I}{I_{c}}-\sin(\phi)-\frac{1}{Q}\frac{d\phi}{d\tau}\label{eq:FinalODE}$$&lt;/div&gt;
+&lt;p&gt;In this eq &lt;a data-reference="eq:FinalODE" data-reference-type="ref" href="#eq:FinalODE"&gt;[eq:FinalODE]&lt;/a&gt; Q is the damping factor
+(or quality factor) which depends on the inherent resistive and
+capacitive components of the &lt;span class="caps"&gt;RCSJ&lt;/span&gt; model. This Q is identical with
+&lt;span class="math"&gt;\(\beta_{c}^{1/2}\)&lt;/span&gt;, where &lt;span class="math"&gt;\(\beta_{c}\)&lt;/span&gt; is a frequently used damping
+parameter that was introduced by Stewart and McCumber. In the case of
+heavy damping &lt;span class="math"&gt;\((Q\ll1)\)&lt;/span&gt; we see the same &lt;span class="caps"&gt;IV&lt;/span&gt; behavior for increasing and
+decreasing current, however in the case of under damped junction
+(&lt;span class="math"&gt;\(Q\gg1)\)&lt;/span&gt;, while decreasing the current, we see that the junction
+remains in the non zero voltage range below &lt;span class="math"&gt;\(I_{c}\)&lt;/span&gt;. This behavior is
+also explored in the simulations.&lt;/p&gt;
+&lt;p&gt;The &lt;span class="math"&gt;\(I_{c}\)&lt;/span&gt;in eq &lt;a data-reference="eq:FinalODE" data-reference-type="ref" href="#eq:FinalODE"&gt;[eq:FinalODE]&lt;/a&gt;, is the critical current
+and its dependence with magnetic field is to be incorporated separately
+in the simulation based on Eq
+&lt;a data-reference="eq: IcH 2" data-reference-type="ref" href="#eq: IcH 2"&gt;[eq: IcH 2]&lt;/a&gt;.&lt;/p&gt;
+&lt;h3 id="simulation-parameters"&gt;Simulation parameters&lt;a class="headerlink" href="#simulation-parameters" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;The &lt;span class="caps"&gt;ODE&lt;/span&gt; &lt;a data-reference="eq:FinalODE" data-reference-type="ref" href="#eq:FinalODE"&gt;[eq:FinalODE]&lt;/a&gt; can be converted to a
+system of first order ordinary differential equations, and then it can
+be passed on to a &lt;span class="caps"&gt;ODE&lt;/span&gt; solver like &lt;em&gt;scipy.integrate.odeint&lt;/em&gt; with the
+initial values.&lt;/p&gt;
+&lt;div class="math"&gt;$$\begin{array}{ccc}
+\mathring{y_{0}}=\frac{d\phi}{d\tau} &amp;amp; \,\,with &amp;amp; y_{0}=\phi\\
+\\
+\mathring{y_{1}}=\frac{I}{I_{c}}-\sin(\phi)-\frac{y_{0}}{Q} &amp;amp; \,\,with &amp;amp; y_{1}=\mathring{\phi}
+\end{array}$$&lt;/div&gt;
+&lt;p&gt;The result one such &lt;span class="caps"&gt;ODE&lt;/span&gt; solve is &lt;span class="math"&gt;\(\phi\)&lt;/span&gt; and &lt;span class="math"&gt;\(\mathring{\phi}\)&lt;/span&gt; as a
+function of time for the given initial conditions of &lt;span class="math"&gt;\(\phi\)&lt;/span&gt; ,
+&lt;span class="math"&gt;\(\mathring{\phi}\)&lt;/span&gt; and &lt;span class="math"&gt;\(I\)&lt;/span&gt;. The dynamics of such a system depend vastly
+on the initial condition given to the &lt;span class="caps"&gt;ODE&lt;/span&gt;. As an example consider the
+&lt;span class="caps"&gt;ODE&lt;/span&gt; solution as a function of time (in &lt;span class="math"&gt;\(\tau\)&lt;/span&gt;) for different initial
+conditions for &lt;span class="math"&gt;\(\phi\)&lt;/span&gt; and &lt;span class="math"&gt;\(\mathring{\phi}\)&lt;/span&gt; in Fig
+&lt;a data-reference="fig:ODE-relaxation-as" data-reference-type="ref" href="#fig:ODE-relaxation-as"&gt;3&lt;/a&gt;.&lt;/p&gt;
+&lt;figure&gt;
+&lt;img alt="ODE solution as a function of time (in \tau) for different initial conditions for \phi and \mathring{\phi}" id="fig:ODE-relaxation-as" src="https://ashwinschronicles.github.io/Photos/ODE-relaxation.webp" style="width:15cm"/&gt;
+&lt;figcaption aria-hidden="true"&gt;&lt;span class="caps"&gt;ODE&lt;/span&gt; solution as a function of time (in
+&lt;span class="math inline"&gt;&lt;em&gt;τ&lt;/em&gt;&lt;/span&gt;) for different initial
+conditions for &lt;span class="math inline"&gt;&lt;em&gt;ϕ&lt;/em&gt;&lt;/span&gt; and &lt;span class="math inline"&gt;&lt;em&gt;ϕ̊&lt;/em&gt;&lt;/span&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;p&gt;For the first iteration of the simulation (0 current and 0 phase
+difference) starting point for &lt;span class="math"&gt;\(\phi\)&lt;/span&gt; and &lt;span class="math"&gt;\(\mathring{\phi}\)&lt;/span&gt; should be
+set to zero as any &lt;span class="math"&gt;\(\mathring{\phi}\)&lt;/span&gt; would have to start from the moment
+a superconducting phase sets up and gradually evolves with time to reach equilibrium.&lt;/p&gt;
+&lt;p&gt;After the system evolves for a certain amount of time steps (which needs
+to be adjusted depending on Q), the voltage is calculated by averaging
+over the last cycle (detected as a percentage of the entire time solve).
+If there’s no voltage cycle, the voltage gets set to zero. The initial
+condition for the next run (next current value in the &lt;span class="caps"&gt;IV&lt;/span&gt; seep) is the
+final state of that previous one.&lt;/p&gt;
+&lt;p&gt;The percentage of final cycle and the number of cycles to be run is
+determined for each range of Q (below 0.1, below 1 below 10, below 100)
+and kept in a function called &lt;em&gt;timeparams.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;The entire process is then iterated over the given range of given
+currents. It must be noted that since the simulation for current depends
+on the previous relaxed values for &lt;span class="math"&gt;\(\phi\)&lt;/span&gt; and &lt;span class="math"&gt;\(\mathring{\phi}\)&lt;/span&gt;, the
+voltage values for a given I depend on whether the current is a part of
+the increasing I cycle or decreasing I cycle. Thus one could clearly
+differentiate between the over damped &lt;span class="caps"&gt;IV&lt;/span&gt; and under damped &lt;span class="caps"&gt;IV&lt;/span&gt; based on
+the presence of re-trapping current. See fig
+&lt;a data-reference="fig:IV-Q" data-reference-type="ref" href="#fig:IV-Q"&gt;4&lt;/a&gt;. In the case of heavy damping &lt;span class="math"&gt;\((Q\ll1)\)&lt;/span&gt;
+we see the same &lt;span class="caps"&gt;IV&lt;/span&gt; behavior for increasing and decreasing current,
+however in the case of under damped junction (&lt;span class="math"&gt;\(Q\gg1)\)&lt;/span&gt;, while decreasing
+the current, we see that the junction remains in the non zero voltage
+range below &lt;span class="math"&gt;\(I_{c}\)&lt;/span&gt;.&lt;/p&gt;
+&lt;figure&gt;
+&lt;img alt="IV sweep (both cycles) for selected under damped and over damped Q’s. Low damping (Q\gg1) results in substantial hysteresis with an almost linear retrapping branch, whereas the IV for high damping (Q\ll1) is without any hysteresis. " id="fig:IV-Q" src="https://ashwinschronicles.github.io/Photos/IV-VaryingQ.webp" style="width:7cm"/&gt;
+&lt;figcaption aria-hidden="true"&gt;&lt;span class="caps"&gt;IV&lt;/span&gt; sweep (both cycles) for selected under
+damped and over damped Q’s. Low damping &lt;span class="math inline"&gt;(&lt;em&gt;Q&lt;/em&gt;≫1)&lt;/span&gt; results in substantial
+hysteresis with an almost linear retrapping branch, whereas the &lt;span class="caps"&gt;IV&lt;/span&gt; for
+high damping &lt;span class="math inline"&gt;(&lt;em&gt;Q&lt;/em&gt;≪1)&lt;/span&gt; is without
+any hysteresis. &lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;p&gt;The overall architecture for setting up the simulation including several
+functions have been referenced from (Schmidt 2017).&lt;/p&gt;
+&lt;h3 id="simulation-results"&gt;Simulation Results&lt;a class="headerlink" href="#simulation-results" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;After plotting the &lt;span class="caps"&gt;IV&lt;/span&gt; sweeps for various Q as in Fig
+&lt;a data-reference="fig:IV-Q" data-reference-type="ref" href="#fig:IV-Q"&gt;4&lt;/a&gt;, it was found out that Q value between 1
+and 5 has the closest resemblance to experimental &lt;span class="caps"&gt;IV&lt;/span&gt;. Thus all further
+simulation were made with Q=1.5 and Q=0.5 for checking the over damped
+and under damped cases.&lt;/p&gt;
+&lt;p&gt;Plots of the simulations are showing in
+Fig&lt;a data-reference="fig:Plots-of-IV-Q0.5" data-reference-type="ref" href="#fig:Plots-of-IV-Q0.5"&gt;6&lt;/a&gt; &lt;span class="amp"&gt;&amp;amp;&lt;/span&gt;
+&lt;a data-reference="fig:Plots-of-IV-Q1.5" data-reference-type="ref" href="#fig:Plots-of-IV-Q1.5"&gt;8&lt;/a&gt;.&lt;/p&gt;
+&lt;figure&gt;
+&lt;img alt="Plots of IV for simulation with parameter Q=1.5 (under damped) and only first harmonics (top) and with second harmonics (bottom)" id="fig:Plots-of-IV-Q0.5" src="https://ashwinschronicles.github.io/Photos/IV-Q1.5-1st.webp" style="width:15cm"/&gt;
+&lt;figcaption aria-hidden="true"&gt;Plots of &lt;span class="math inline"&gt;&lt;em&gt;I&lt;/em&gt;&lt;em&gt;V&lt;/em&gt;&lt;/span&gt; for simulation with
+parameter Q=1.5 (under damped) and only first harmonics (top) and with
+second harmonics (bottom)&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;figure&gt;
+&lt;img alt="Plots of IV for simulation with parameter Q=1.5 (under damped) and only first harmonics (top) and with second harmonics (bottom)" id="fig:Plots-of-IV-Q0.5" src="https://ashwinschronicles.github.io/Photos/IV-Q1.5-2nd.webp" style="width:15cm"/&gt;
+&lt;figcaption aria-hidden="true"&gt;Plots of &lt;span class="math inline"&gt;&lt;em&gt;I&lt;/em&gt;&lt;em&gt;V&lt;/em&gt;&lt;/span&gt; for simulation with
+parameter Q=1.5 (under damped) and only first harmonics (top) and with
+second harmonics (bottom)&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;figure&gt;
+&lt;img alt="Plots of IV for simulation with parameter Q=0.5 (over damped) and only first harmonics (top) and with second harmonics (bottom)" id="fig:Plots-of-IV-Q1.5" src="https://ashwinschronicles.github.io/Photos/IV-Q0.5-1st.webp" style="width:15cm"/&gt;
+&lt;figcaption aria-hidden="true"&gt;Plots of &lt;span class="math inline"&gt;&lt;em&gt;I&lt;/em&gt;&lt;em&gt;V&lt;/em&gt;&lt;/span&gt; for simulation with
+parameter Q=0.5 (over damped) and only first harmonics (top) and with
+second harmonics (bottom)&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;figure&gt;
+&lt;img alt="Plots of IV for simulation with parameter Q=0.5 (over damped) and only first harmonics (top) and with second harmonics (bottom)" id="fig:Plots-of-IV-Q1.5" src="https://ashwinschronicles.github.io/Photos/IV-Q0.5-2nd.webp" style="width:15cm"/&gt;
+&lt;figcaption aria-hidden="true"&gt;Plots of &lt;span class="math inline"&gt;&lt;em&gt;I&lt;/em&gt;&lt;em&gt;V&lt;/em&gt;&lt;/span&gt; for simulation with
+parameter Q=0.5 (over damped) and only first harmonics (top) and with
+second harmonics (bottom)&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;p&gt;In the case of heavy damping &lt;span class="math"&gt;\((Q=0.5)\)&lt;/span&gt; we see the same &lt;span class="caps"&gt;IV&lt;/span&gt; behavior for
+increasing and decreasing current, however in the case of under damped
+junction (&lt;span class="math"&gt;\(Q=1.5)\)&lt;/span&gt;, while decreasing the current, we see that the
+junction remains in the non zero voltage range below &lt;span class="math"&gt;\(I_{c}\)&lt;/span&gt;which is as
+expected. The variation in the &lt;span class="math"&gt;\(I_{c}\)&lt;/span&gt;as a function of applied magnetic
+field &lt;span class="math"&gt;\(H\)&lt;/span&gt; is also evident.&lt;/p&gt;
+&lt;p&gt;The next part of the analysis is to compute the &lt;span class="math"&gt;\(I_{C}H\)&lt;/span&gt; data and &lt;span class="math"&gt;\(VH\)&lt;/span&gt;
+data from these simulations in both the first harmonics case as well as
+the second harmonics case.&lt;/p&gt;
+&lt;p&gt;In Fig&lt;a data-reference="fig:Plots-of-VHs-1.5" data-reference-type="ref" href="#fig:Plots-of-VHs-1.5"&gt;10&lt;/a&gt;, we see the plots of
+&lt;span class="math"&gt;\(I_{c}H\)&lt;/span&gt; (top) and log plot of &lt;span class="math"&gt;\(VH\)&lt;/span&gt; (bottom) from simulation with
+parameter Q=1.5 and second harmonics enabled. The &lt;span class="math"&gt;\(I_{c}H\)&lt;/span&gt; and &lt;span class="math"&gt;\(VH\)&lt;/span&gt;
+plots have similar shape at the key magnetic field points. ie the main
+lobe width and the side lobe widths are same. The characteristic second
+harmonic kinks appear at the same positions as well thus confirming the
+hypothesis that &lt;span class="math"&gt;\(I_{c}H\)&lt;/span&gt;and &lt;span class="math"&gt;\(VH\)&lt;/span&gt; (magnetoresistance) have similar
+characteristics for a Josephson junction. Fig
+&lt;a data-reference="fig:Plots-of-VHs-1.5-1" data-reference-type="ref" href="#fig:Plots-of-VHs-1.5-1"&gt;12&lt;/a&gt; is the same plots of
+&lt;span class="math"&gt;\(I_{c}H\)&lt;/span&gt;and &lt;span class="math"&gt;\(VH\)&lt;/span&gt; for Q-1.5 but with only the first harmonics included.
+Here too the &lt;span class="math"&gt;\(I_{c}H\)&lt;/span&gt;and &lt;span class="math"&gt;\(VH\)&lt;/span&gt; (magnetoresistance) have similar
+characteristics further confirming the hypothesis.&lt;/p&gt;
+&lt;figure&gt;
+&lt;img alt="Plots of I_{c}H (top) and VH (bottom) from simulation with parameter Q=1.5 and second harmonics added " id="fig:Plots-of-VHs-1.5" src="https://ashwinschronicles.github.io/Photos/IcH-Q1.5-2nd.webp" style="width:18cm;height:10cm"/&gt;
+&lt;figcaption aria-hidden="true"&gt;Plots of &lt;span class="math inline"&gt;&lt;em&gt;I&lt;/em&gt;&lt;sub&gt;&lt;em&gt;c&lt;/em&gt;&lt;/sub&gt;&lt;em&gt;H&lt;/em&gt;&lt;/span&gt;
+(top) and &lt;span class="math inline"&gt;&lt;em&gt;V&lt;/em&gt;&lt;em&gt;H&lt;/em&gt;&lt;/span&gt; (bottom)
+from simulation with parameter Q=1.5 and second harmonics added
+&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;figure&gt;
+&lt;img alt="Plots of I_{c}H (top) and VH (bottom) from simulation with parameter Q=1.5 and second harmonics added " id="fig:Plots-of-VHs-1.5" src="https://ashwinschronicles.github.io/Photos/VH-Q1.5-2nd-log.webp" style="width:18cm"/&gt;
+&lt;figcaption aria-hidden="true"&gt;Plots of &lt;span class="math inline"&gt;&lt;em&gt;I&lt;/em&gt;&lt;sub&gt;&lt;em&gt;c&lt;/em&gt;&lt;/sub&gt;&lt;em&gt;H&lt;/em&gt;&lt;/span&gt;
+(top) and &lt;span class="math inline"&gt;&lt;em&gt;V&lt;/em&gt;&lt;em&gt;H&lt;/em&gt;&lt;/span&gt; (bottom)
+from simulation with parameter Q=1.5 and second harmonics added
+&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;figure&gt;
+&lt;img alt="Plots of I_{c}H (top) and VH (bottom) from simulation with parameter Q=1.5 and only first harmonics being kept " id="fig:Plots-of-VHs-1.5-1" src="https://ashwinschronicles.github.io/Photos/IcH-Q1.5-1stpng.webp" style="width:18cm"/&gt;
+&lt;figcaption aria-hidden="true"&gt;Plots of &lt;span class="math inline"&gt;&lt;em&gt;I&lt;/em&gt;&lt;sub&gt;&lt;em&gt;c&lt;/em&gt;&lt;/sub&gt;&lt;em&gt;H&lt;/em&gt;&lt;/span&gt;
+(top) and &lt;span class="math inline"&gt;&lt;em&gt;V&lt;/em&gt;&lt;em&gt;H&lt;/em&gt;&lt;/span&gt; (bottom)
+from simulation with parameter Q=1.5 and only first harmonics being kept
+&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;figure&gt;
+&lt;img alt="Plots of I_{c}H (top) and VH (bottom) from simulation with parameter Q=1.5 and only first harmonics being kept " id="fig:Plots-of-VHs-1.5-1" src="https://ashwinschronicles.github.io/Photos/VH-Q1.5-first-log.webp" style="width:18cm"/&gt;
+&lt;figcaption aria-hidden="true"&gt;Plots of &lt;span class="math inline"&gt;&lt;em&gt;I&lt;/em&gt;&lt;sub&gt;&lt;em&gt;c&lt;/em&gt;&lt;/sub&gt;&lt;em&gt;H&lt;/em&gt;&lt;/span&gt;
+(top) and &lt;span class="math inline"&gt;&lt;em&gt;V&lt;/em&gt;&lt;em&gt;H&lt;/em&gt;&lt;/span&gt; (bottom)
+from simulation with parameter Q=1.5 and only first harmonics being kept
+&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;p&gt;One must notice that the &lt;span class="math"&gt;\(VH\)&lt;/span&gt; plots in bot the above figures have y axis
+in log scale. The reason for this is that for the selected Q=1.5 the
+junction resistance turns out to be extreamly large at 120&lt;span class="math"&gt;\(\Omega\)&lt;/span&gt;, the
+typical resistnace of a junction lies in the milli ohm range, thus the
+reported Voltages for the same current would be magnitudes higher, thus
+a log plot is taken inorder to correct this.&lt;/p&gt;
+&lt;figure&gt;
+&lt;img alt="Plots of VH from simulation with parameter Q=1.5 and y-axis not log normalised" id="fig:vh-notlog" src="https://ashwinschronicles.github.io/Photos/VH-Q1.5-2nd.webp" style="width:18cm"/&gt;
+&lt;figcaption aria-hidden="true"&gt;Plots of &lt;span class="math inline"&gt;&lt;em&gt;V&lt;/em&gt;&lt;em&gt;H&lt;/em&gt;&lt;/span&gt; from simulation with
+parameter Q=1.5 and y-axis not log normalised&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;h4 id="experimental-measurements"&gt;Experimental Measurements&lt;a class="headerlink" href="#experimental-measurements" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;There are two geometries in which the Josephson junction are fabricated
+using &lt;span class="caps"&gt;FIB&lt;/span&gt;, one is the vertical Junction (Fig
+&lt;a data-reference="fig:Vertical" data-reference-type="ref" href="#fig:Vertical"&gt;15&lt;/a&gt;), and the other is the planar
+Junction (Fig &lt;a data-reference="fig:Planar" data-reference-type="ref" href="#fig:Planar"&gt;14&lt;/a&gt;); both names describe the path the
+current takes through the trilayers. In the planar Junction, the current
+is in plane with the trilayers and in the case of the vertical junctions
+the current flows vertically through the trilayers.&lt;/p&gt;
+&lt;figure&gt;
+&lt;img alt="Schematic of the Planar Josephson Junction, due the vertical FIB cut in the Niobium layer, the current travels in plane through first the Niobium layer then through the copper weaklink then finally through the other Niobium layer. The yellow arrowed line shows the direction of current flow" id="fig:Planar" src="https://ashwinschronicles.github.io/Photos/JJ-planar.webp" style="width:6cm"/&gt;
+&lt;figcaption aria-hidden="true"&gt;Schematic of the Planar Josephson
+Junction, due the vertical &lt;span class="caps"&gt;FIB&lt;/span&gt; cut in the Niobium layer, the current
+travels in plane through first the Niobium layer then through the copper
+weaklink then finally through the other Niobium layer. The yellow
+arrowed line shows the direction of current flow&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;figure&gt;
+&lt;img alt="Schematic of the Vertical Josephson Junction, due to the nano pillar cuts on the left and the right, the current travels in plane through first the top Niobium layer then through the copper weaklink then finally through the other Niobium layer. The yellow arrowed line shows the direction of current flow" id="fig:Vertical" src="https://ashwinschronicles.github.io/Photos/JJ-verical.webp" style="width:6cm"/&gt;
+&lt;figcaption aria-hidden="true"&gt;Schematic of the Vertical Josephson
+Junction, due to the nano pillar cuts on the left and the right, the
+current travels in plane through first the top Niobium layer then
+through the copper weaklink then finally through the other Niobium
+layer. The yellow arrowed line shows the direction of current
+flow&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;p&gt;All the superconducting devices were first cooled to sub 2K, and then a
+4 probe resistance vs temperature measurement was carried out with 1 -
+10 &lt;span class="math"&gt;\(\mu\)&lt;/span&gt;A by ramping the temperature slowly to 10K, in order to see the
+phase transitions. One such R-T graph is shown in Fig
+&lt;a data-reference="fig:RT-graph-for" data-reference-type="ref" href="#fig:RT-graph-for"&gt;16&lt;/a&gt;.&lt;/p&gt;
+&lt;figure&gt;
+&lt;img alt="RT graph for a Cu(100nm)Nb(150nm) Josephson junction. The inset shows an SEM image of the measured JJ " id="fig:RT-graph-for" src="https://ashwinschronicles.github.io/Photos/JJ.png" style="width:15cm"/&gt;
+&lt;figcaption aria-hidden="true"&gt;&lt;span class="caps"&gt;RT&lt;/span&gt; graph for a Cu(100nm)Nb(150nm)
+Josephson junction. The inset shows an &lt;span class="caps"&gt;SEM&lt;/span&gt; image of the measured &lt;span class="caps"&gt;JJ&lt;/span&gt;
+&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;p&gt;The first transition indicates the superconducting transition of the
+Niobium layer, and the second transition explains the proximitisation of
+the weak link. The resistance &lt;span class="math"&gt;\(R_{n}\)&lt;/span&gt; at 9K (above &lt;span class="math"&gt;\(T_{c}\)&lt;/span&gt;) and
+&lt;span class="math"&gt;\(R_{L}\)&lt;/span&gt;at 2K are noted and the sample is cooled back to sub 2K.
+&lt;span class="math"&gt;\(R_{n}\)&lt;/span&gt;is the normal resistance and indicates that the device is out of
+the superconducting regime. Once the devices cool down to 2K the
+current-voltage characteristics of the device is measured by sweeping
+current from -&lt;span class="math"&gt;\(I_{n}\)&lt;/span&gt; to +&lt;span class="math"&gt;\(I_{n}\)&lt;/span&gt;, where &lt;span class="math"&gt;\(I_{n}\)&lt;/span&gt; is the current for
+which the device yields the resistance &lt;span class="math"&gt;\(R_{n}\)&lt;/span&gt; at 2K, ie. the device
+switches to the normal regime. The I-V curves have the typical &lt;span class="caps"&gt;JJ&lt;/span&gt;
+behavior and is plotted in Fig
+&lt;a data-reference="fig:IV-graph-for" data-reference-type="ref" href="#fig:IV-graph-for"&gt;17&lt;/a&gt;.&lt;/p&gt;
+&lt;figure&gt;
+&lt;img alt="IV graph for a Cu(100nm)Nb(150nm) Josephson junction " id="fig:IV-graph-for" src="https://ashwinschronicles.github.io/Photos/IV Pt20 CuNbJJ 2k.png" style="width:15cm"/&gt;
+&lt;figcaption aria-hidden="true"&gt;&lt;span class="caps"&gt;IV&lt;/span&gt; graph for a Cu(100nm)Nb(150nm)
+Josephson junction &lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;p&gt;&lt;span class="math"&gt;\(I_{c}\)&lt;/span&gt; of the device and the electrodes were extracted using the python
+scripts mentioned in section
+&lt;a data-reference="subsec:Automation-of-" data-reference-type="ref" href="#subsec:Automation-of-"&gt;[subsec:Automation-of-]&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;In Fig &lt;a data-reference="fig:IV-graph-for" data-reference-type="ref" href="#fig:IV-graph-for"&gt;17&lt;/a&gt; the &lt;span class="caps"&gt;IV&lt;/span&gt; curve of a Nb/Cu
+Josephson Junction is shown. Once the device &lt;span class="math"&gt;\(I_{c}\)&lt;/span&gt; is found, the
+device is cooled to 2K and then supplied with &lt;span class="math"&gt;\(I_{c}\)&lt;/span&gt; current, and the
+junction voltage is measured while ramping the magnetic field from +250
+Oe to -250 Oe ( positive cycle ) and then from -250Oe to 250Oe (
+negative cycle ) at 2K. This gives us magnetoresistance as a function of
+the applied magnetic field. The magnetoresistance as a function of
+applied magnetic field is expected to have a diffraction pattern for &lt;span class="caps"&gt;JJ&lt;/span&gt;.
+This was explained in the theoretical sections above.&lt;/p&gt;
+&lt;figure&gt;
+&lt;img alt="Magnetoresistance of the patterned Nb/Cu Josephson junction device in low magnetic fields for different values of junction currents" id="fig:Magnetoresistance-of-the-1" src="https://ashwinschronicles.github.io/Photos/VH CuNbJJ 2k.png" style="width:15cm"/&gt;
+&lt;figcaption aria-hidden="true"&gt;Magnetoresistance of the patterned Nb/Cu
+Josephson junction device in low magnetic fields for different values of
+junction currents&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;figure&gt;
+&lt;img alt="Magnetoresistance of the patterned Nb/Cu Josephson junction device in low magnetic fields" id="fig:Magnetoresistance-of-the-1" src="https://ashwinschronicles.github.io/Photos/JJ VH.png" style="width:15cm"/&gt;
+&lt;figcaption aria-hidden="true"&gt;Magnetoresistance of the patterned Nb/Cu
+Josephson junction device in low magnetic fields&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;p&gt;In Fig
+&lt;a data-reference="fig:Magnetoresistance-of-the-1" data-reference-type="ref" href="#fig:Magnetoresistance-of-the-1"&gt;19&lt;/a&gt; , we examine the
+magnetoresistance of the patterned Nb/Cu Josephson junction device in
+low magnetic fields (|H| &amp;lt; 300 Oe) and at its &lt;span class="math"&gt;\(I_{c}\)&lt;/span&gt;. We find that
+the main lobe of the positive and the negative cycle overlap completely
+and there is no shift of the main lobe from origin as one would expect
+for a normal S-N-S junction. Fig
+&lt;a data-reference="fig:Magnetoresistance-of-the-1" data-reference-type="ref" href="#fig:Magnetoresistance-of-the-1"&gt;19&lt;/a&gt; is a plot of
+Junction voltage as a function of magnetic field for another patterned
+Nb/Cu Josephson junction device in low magnetic fields for different
+values of junction currents. One can observe that higher currents
+increase the height of the lobes however the ratio of the first (main)
+lobe to the second lobe remains constant. This pattern was also
+confirmed with the simulation results.&lt;/p&gt;
+&lt;h4 id="comparing-simulation-with-experimental-data"&gt;Comparing simulation with experimental data&lt;a class="headerlink" href="#comparing-simulation-with-experimental-data" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;In Fig
+&lt;a data-reference="fig:Magnetoresistance-of-the-1" data-reference-type="ref" href="#fig:Magnetoresistance-of-the-1"&gt;19&lt;/a&gt;.
+Magnetoresistance of the patterned Nb/Cu Josephson junction device
+(which exhibits first harmonics only) in low magnetic fields for
+different values of junction currents is plotted. This plot is similar
+to the &lt;span class="math"&gt;\(VH\)&lt;/span&gt; plot obtained from the simulation for Q=1.5 with only first
+harmonics enabled (Fig
+&lt;a data-reference="fig:Plots-of-VHs-1.5-1" data-reference-type="ref" href="#fig:Plots-of-VHs-1.5-1"&gt;12&lt;/a&gt; (bottom) ). This further
+confirms the equivalence between &lt;span class="math"&gt;\(VH\)&lt;/span&gt; plot obtained experimentally and
+&lt;span class="math"&gt;\(VH\)&lt;/span&gt; plot obtained from simulations, Thus establishing that the &lt;span class="math"&gt;\(VH\)&lt;/span&gt;
+plot obtained experimentally confirms the typical characteristic of the
+Josephson junction.&lt;/p&gt;
+&lt;h3 id="processing-experimental-data"&gt;Processing experimental data&lt;a class="headerlink" href="#processing-experimental-data" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;h4 id="automation-of-i_c-extraction"&gt;Automation of &lt;span class="math"&gt;\(I_{c}\)&lt;/span&gt; extraction&lt;span id="subsec:Automation-of-" label="subsec:Automation-of-"&gt;&lt;/span&gt;&lt;a class="headerlink" href="#automation-of-i_c-extraction" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;Once the &lt;span class="caps"&gt;IV&lt;/span&gt; simulation is done, in order to aggregate data for &lt;span class="math"&gt;\(I_{c}\)&lt;/span&gt;as
+a function of applied magnetic field &lt;span class="math"&gt;\(H\)&lt;/span&gt; (&lt;span class="math"&gt;\(I_{c}H)\)&lt;/span&gt; and Junction voltage
+at as a function of applied magnetic field &lt;span class="math"&gt;\(H\)&lt;/span&gt; (&lt;span class="math"&gt;\(VH\)&lt;/span&gt;), One must first
+set the process for identifying &lt;span class="math"&gt;\(I_{c}\)&lt;/span&gt;. In case of simulations, since
+the data is quite smooth, we could choose a junction voltage which
+corresponds to Ic for one run and find the current value for that
+particular voltage on other runs. This is essentially a horizontal slice
+of the &lt;span class="caps"&gt;IV&lt;/span&gt; curve in Fig &lt;a data-reference="fig:IV-Q" data-reference-type="ref" href="#fig:IV-Q"&gt;4&lt;/a&gt;. For experimental data, there is another
+way to define the &lt;span class="math"&gt;\(I_{c}\)&lt;/span&gt;of a given &lt;span class="caps"&gt;PPMS&lt;/span&gt; data.&lt;/p&gt;
+&lt;p&gt;&lt;span class="math"&gt;\(I_{c}\)&lt;/span&gt; of the junction were extracted from this data by running through
+a python script that takes in the I-V data, calculates dV/dI, and
+applies a Savitzky–Golay filter of first-order to obtain &lt;span class="math"&gt;\(d^{2}I/d^{2}V\)&lt;/span&gt;
+and find the current (&lt;span class="math"&gt;\(I_{c}\)&lt;/span&gt;) for which &lt;span class="math"&gt;\(d^{2}I/d^{2}V\)&lt;/span&gt; in both the
+positive and negative side and averages them. For normal Josephson
+junction the position of peak of &lt;span class="math"&gt;\(dI/dV\)&lt;/span&gt; is a good marker of the
+&lt;span class="math"&gt;\(I_{c}\)&lt;/span&gt;, however in cases where the junction resistance is high, &lt;span class="math"&gt;\(dI/dV\)&lt;/span&gt;
+might not be clear enough to mitigate this peaks of &lt;span class="math"&gt;\(d^{2}I/d^{2}V\)&lt;/span&gt; is a
+better marker of &lt;span class="math"&gt;\(I_{c}\)&lt;/span&gt; A sample graph of &lt;span class="math"&gt;\(dI/dV\)&lt;/span&gt; and &lt;span class="math"&gt;\(d^{2}I/d^{2}V\)&lt;/span&gt;
+for a I vs V curve measured on a Josephson junction is shown in Fig
+&lt;a data-reference="fig:findIc" data-reference-type="ref" href="#fig:findIc"&gt;20&lt;/a&gt;.&lt;/p&gt;
+&lt;figure&gt;
+&lt;img alt="A sample graph of dI/dV and d^{2}I/d^{2}V for a I vs V curve measured on a Josephson junction. The I_{c} extracted from the graph is 140\mu A " id="fig:findIc" src="https://ashwinschronicles.github.io/Photos/samplePlot.webp" style="width:15cm"/&gt;
+&lt;figcaption aria-hidden="true"&gt;A sample graph of &lt;span class="math inline"&gt;&lt;em&gt;d&lt;/em&gt;&lt;em&gt;I&lt;/em&gt;/&lt;em&gt;d&lt;/em&gt;&lt;em&gt;V&lt;/em&gt;&lt;/span&gt; and
+&lt;span class="math inline"&gt;&lt;em&gt;d&lt;/em&gt;&lt;sup&gt;2&lt;/sup&gt;&lt;em&gt;I&lt;/em&gt;/&lt;em&gt;d&lt;/em&gt;&lt;sup&gt;2&lt;/sup&gt;&lt;em&gt;V&lt;/em&gt;&lt;/span&gt;
+for a I vs V curve measured on a Josephson junction. The &lt;span class="math inline"&gt;&lt;em&gt;I&lt;/em&gt;&lt;sub&gt;&lt;em&gt;c&lt;/em&gt;&lt;/sub&gt;&lt;/span&gt; extracted
+from the graph is 140&lt;span class="math inline"&gt;&lt;em&gt;μ&lt;/em&gt;&lt;em&gt;A&lt;/em&gt;&lt;/span&gt; &lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;p&gt;The code for the python script is available
+&lt;a href="https://github.com/iamashwin99/JJ-Ic-finder"&gt;here&lt;/a&gt; and a web app based
+on the same is hosted at
+&lt;a href="https://jj-ic-finder.herokuapp.com/"&gt;jj-ic-finder.herokuapp.com&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;The web app also provides quick access to multiple data visualizations
+like area plot,bar plot,line plot, hist plot, scatter plot etc. A
+screenshot of the web-app in use for visualizing the &lt;span class="caps"&gt;IV&lt;/span&gt; of an
+experimental data of &lt;span class="caps"&gt;JJ&lt;/span&gt; is shown in
+Fig&lt;a data-reference="fig:iv-viz" data-reference-type="ref" href="#fig:iv-viz"&gt;21&lt;/a&gt;.&lt;/p&gt;
+&lt;figure&gt;
+&lt;img alt="A screenshot of the web-app in use for visualizing the scatter plot of Josephson junctions IV " id="fig:iv-viz" src="https://ashwinschronicles.github.io/Photos/web-app-sc.webp" style="width:15cm"/&gt;
+&lt;figcaption aria-hidden="true"&gt;A screenshot of the web-app in use for
+visualizing the scatter plot of Josephson junctions &lt;span class="caps"&gt;IV&lt;/span&gt; &lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;h4 id="inferring-i_c-behavior-via-repetitive-iv-measurement"&gt;Inferring &lt;span class="math"&gt;\(I_{c}\)&lt;/span&gt; behavior via repetitive &lt;span class="caps"&gt;IV&lt;/span&gt; measurement&lt;a class="headerlink" href="#inferring-i_c-behavior-via-repetitive-iv-measurement" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;The characteristic signature of a Josephson junction, apart from its
+current voltage relation (&lt;span class="caps"&gt;IV&lt;/span&gt;) is the Critical current &lt;span class="math"&gt;\(I_{c}\)&lt;/span&gt;dependence
+on the applied magnetic field H ( &lt;span class="math"&gt;\(I_{C}\)&lt;/span&gt;vs H or &lt;span class="math"&gt;\(I_{C}H\)&lt;/span&gt;).&lt;/p&gt;
+&lt;p&gt;The &lt;span class="caps"&gt;PPMS&lt;/span&gt; in the lab has builtin recipes only for &lt;span class="caps"&gt;DC&lt;/span&gt; measurement and as
+such &lt;span class="caps"&gt;DC&lt;/span&gt; measurements like &lt;span class="caps"&gt;IV&lt;/span&gt; are relatively slower (1 &lt;span class="caps"&gt;IV&lt;/span&gt; scan in 10-15
+minutes on good resolution). Thus getting data for &lt;span class="math"&gt;\(I_{c}H\)&lt;/span&gt; would
+require multiple IVs to be measured at a sweep of magnetic field H. This
+would take almost a day per device on a decent resolution and thus cant
+be done frequently. The more easier measurement would be to set and
+constant current (say the &lt;span class="math"&gt;\(Ic\)&lt;/span&gt; at zero magnetic field) then measure the
+Voltage as a function of changing magnetic field ( V vs H or &lt;span class="caps"&gt;VH&lt;/span&gt; )
+however, there is little literature regarding the &lt;span class="caps"&gt;VH&lt;/span&gt; relation (or
+magneto resistance ) of a Josephson junction. In order to verify the
+correlation between the &lt;span class="math"&gt;\(I_{C}H\)&lt;/span&gt; and &lt;span class="math"&gt;\(VH\)&lt;/span&gt; signatures of a Josephson
+junction, apart from the simulation methods, multiple &lt;span class="caps"&gt;IV&lt;/span&gt; seeps of a
+Josephson Junction were setup at varying magnetic field were taken, and
+a python script mentioned in the previous sub section was used to
+identify the &lt;span class="math"&gt;\(I_{C}\)&lt;/span&gt; for each &lt;span class="math"&gt;\(H\)&lt;/span&gt;. The plots of these &lt;span class="math"&gt;\(I_{C}H\)&lt;/span&gt; and &lt;span class="math"&gt;\(VH\)&lt;/span&gt;
+data is shown in Fig . The &lt;span class="caps"&gt;VH&lt;/span&gt; data for these junctions have some parts
+which are offset due to random phase jumps. On comparison, one can make
+out the Fraunhofer like pattern in both plots at the same magnetic field
+points, the main lobe width and the secondary lobe width are identical.&lt;/p&gt;
+&lt;figure&gt;
+&lt;img alt="Plots of I_{C}H (analyzed from data) and VH(directly measured) for a Niobium/Copper/Platinum Josephson junction (Sample no 4 from run SP169) One can make out the Fraunhofer like pattern in both plots at the same magnetic field points. " id="fig:jj4" src="https://ashwinschronicles.github.io/Photos/IcH-JJ4.webp" style="width:15cm"/&gt;
+&lt;figcaption aria-hidden="true"&gt;Plots of &lt;span class="math inline"&gt;&lt;em&gt;I&lt;/em&gt;&lt;sub&gt;&lt;em&gt;C&lt;/em&gt;&lt;/sub&gt;&lt;em&gt;H&lt;/em&gt;&lt;/span&gt;
+(analyzed from data) and &lt;span class="math inline"&gt;&lt;em&gt;V&lt;/em&gt;&lt;em&gt;H&lt;/em&gt;&lt;/span&gt;(directly measured) for a
+Niobium/Copper/Platinum Josephson junction (Sample no 4 from run
+&lt;span class="caps"&gt;SP169&lt;/span&gt;)&lt;br/&gt;
+One can make out the Fraunhofer like pattern in both plots at the same
+magnetic field points. &lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;figure&gt;
+&lt;img alt="Plots of I_{C}H (analyzed from data) and VH(directly measured) for a Niobium/Copper/Platinum Josephson junction (Sample no 4 from run SP169) One can make out the Fraunhofer like pattern in both plots at the same magnetic field points. " id="fig:jj4" src="https://ashwinschronicles.github.io/Photos/VH-JJ4.webp" style="width:15cm"/&gt;
+&lt;figcaption aria-hidden="true"&gt;Plots of &lt;span class="math inline"&gt;&lt;em&gt;I&lt;/em&gt;&lt;sub&gt;&lt;em&gt;C&lt;/em&gt;&lt;/sub&gt;&lt;em&gt;H&lt;/em&gt;&lt;/span&gt;
+(analyzed from data) and &lt;span class="math inline"&gt;&lt;em&gt;V&lt;/em&gt;&lt;em&gt;H&lt;/em&gt;&lt;/span&gt;(directly measured) for a
+Niobium/Copper/Platinum Josephson junction (Sample no 4 from run
+&lt;span class="caps"&gt;SP169&lt;/span&gt;)&lt;br/&gt;
+One can make out the Fraunhofer like pattern in both plots at the same
+magnetic field points. &lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;figure&gt;
+&lt;img alt="Plots of I_{C}H (analyzed from data) and VH(directly measured) for a Niobium/Copper/Platinum Josephson junction (Sample no 5 from run SP169) One can make out the Fraunhofer like pattern in both plots at the same magnetic field points. " id="fig:jj4-1" src="https://ashwinschronicles.github.io/Photos/IcH-JJ5.webp" style="width:15cm"/&gt;
+&lt;figcaption aria-hidden="true"&gt;Plots of &lt;span class="math inline"&gt;&lt;em&gt;I&lt;/em&gt;&lt;sub&gt;&lt;em&gt;C&lt;/em&gt;&lt;/sub&gt;&lt;em&gt;H&lt;/em&gt;&lt;/span&gt;
+(analyzed from data) and &lt;span class="math inline"&gt;&lt;em&gt;V&lt;/em&gt;&lt;em&gt;H&lt;/em&gt;&lt;/span&gt;(directly measured) for a
+Niobium/Copper/Platinum Josephson junction (Sample no 5 from run
+&lt;span class="caps"&gt;SP169&lt;/span&gt;)&lt;br/&gt;
+One can make out the Fraunhofer like pattern in both plots at the same
+magnetic field points. &lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;figure&gt;
+&lt;img alt="Plots of I_{C}H (analyzed from data) and VH(directly measured) for a Niobium/Copper/Platinum Josephson junction (Sample no 5 from run SP169) One can make out the Fraunhofer like pattern in both plots at the same magnetic field points. " id="fig:jj4-1" src="https://ashwinschronicles.github.io/Photos/VH-JJ5.webp" style="width:15cm"/&gt;
+&lt;figcaption aria-hidden="true"&gt;Plots of &lt;span class="math inline"&gt;&lt;em&gt;I&lt;/em&gt;&lt;sub&gt;&lt;em&gt;C&lt;/em&gt;&lt;/sub&gt;&lt;em&gt;H&lt;/em&gt;&lt;/span&gt;
+(analyzed from data) and &lt;span class="math inline"&gt;&lt;em&gt;V&lt;/em&gt;&lt;em&gt;H&lt;/em&gt;&lt;/span&gt;(directly measured) for a
+Niobium/Copper/Platinum Josephson junction (Sample no 5 from run
+&lt;span class="caps"&gt;SP169&lt;/span&gt;)&lt;br/&gt;
+One can make out the Fraunhofer like pattern in both plots at the same
+magnetic field points. &lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;p&gt;Apart from this measurement, an attempt was made to setup Keithley
+6221 - &lt;span class="caps"&gt;AC&lt;/span&gt; current source and Keithley 2182a - Nanovoltmeter in
+differential conductance mode.&lt;/p&gt;
+&lt;p&gt;This method involves sweeping a linear staircase profile with an
+alternating current. The differential current, dI, is the amplitude of
+the alternating portion of the current as shown in Fig
+&lt;a data-reference="fig:dcon" data-reference-type="ref" href="#fig:dcon"&gt;26&lt;/a&gt;. Throughout the test, the differential
+current remains constant. A Trigger Link cable synchronises the current
+source with the nanovoltmeter. The nanovoltmeter calculates the delta
+voltage between consecutive steps after measuring the voltage at each
+current step. To determine the differential voltage, dV, each delta
+voltage is averaged with the previous delta voltage. dI/dV may now be
+used to calculate the differential conductance, dG. (“Achieving Accurate
+and Reliable Resistance Measurements in Low Power and Low Voltage
+Applications Tektronix” n.d.)&lt;/p&gt;
+&lt;figure&gt;
+&lt;img alt="A plot of the applied current bias in the differential conductance setup(“Achieving Accurate and Reliable Resistance Measurements in Low Power and Low Voltage Applications  Tektronix” n.d.)" id="fig:dcon" src="https://ashwinschronicles.github.io/Photos/dcon-6221.webp" style="width:15cm"/&gt;
+&lt;figcaption aria-hidden="true"&gt;A plot of the applied current bias in the
+differential conductance setup&lt;span class="citation" data-cites="kiethley-dcon"&gt;(&lt;span&gt;“Achieving &lt;span&gt;Accurate&lt;/span&gt; and
+&lt;span&gt;Reliable&lt;/span&gt; &lt;span&gt;Resistance&lt;/span&gt; &lt;span&gt;Measurements&lt;/span&gt;
+in &lt;span&gt;Low&lt;/span&gt; &lt;span&gt;Power&lt;/span&gt; and &lt;span&gt;Low&lt;/span&gt;
+&lt;span&gt;Voltage&lt;/span&gt; &lt;span&gt;Applications&lt;/span&gt; &lt;span&gt;&lt;/span&gt;
+&lt;span&gt;Tektronix&lt;/span&gt;”&lt;/span&gt; n.d.)&lt;/span&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;p&gt;The Labview program provided by the instrument manufacturer required the
+connection to the 6221 via a &lt;span class="caps"&gt;GPIB&lt;/span&gt; interface, however the 6221 was
+connected to a system with no &lt;span class="caps"&gt;GPIB&lt;/span&gt; port. In order to over come this,
+communication was setup serially via the Ethernet ports and python
+serial communication library. A graphical user interface (&lt;span class="caps"&gt;GUI&lt;/span&gt;) was built
+built to control the communication and perform the differential
+conductance as shown in Fig
+&lt;a data-reference="fig:A-GUI-setup" data-reference-type="ref" href="#fig:A-GUI-setup"&gt;27&lt;/a&gt;.&lt;/p&gt;
+&lt;figure&gt;
+&lt;img alt="A GUI setup to control the differential conductance setup" id="fig:A-GUI-setup" src="https://ashwinschronicles.github.io/Photos/dcon-gui.webp" style="width:13cm"/&gt;
+&lt;figcaption aria-hidden="true"&gt;A &lt;span class="caps"&gt;GUI&lt;/span&gt; setup to control the differential
+conductance setup&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;p&gt;The data provided by the instrument is differential conductance, dG as a
+function of applied current. The experiment needed dG as a function of
+junction voltage and the data acquired by the device was quite
+unreliable and noisy, thus this method was not used further. A better
+way to do differential conductance would be to use a lock-in amplifier.&lt;/p&gt;
+&lt;h3 id="conclusion"&gt;Conclusion&lt;a class="headerlink" href="#conclusion" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;The main goal of the thesis was to establish equivalence between the
+&lt;span class="math"&gt;\(I_{c}H\)&lt;/span&gt;and &lt;span class="math"&gt;\(VH\)&lt;/span&gt; (magnetoresistance) characteristics of a Josephson
+junction ( with and without the second harmonics), then further
+establish the experimental &lt;span class="math"&gt;\(VH\)&lt;/span&gt; plot and the simulated &lt;span class="math"&gt;\(VH\)&lt;/span&gt; plot.&lt;/p&gt;
+&lt;p&gt;For the first part, the simulation was setup by solving the &lt;span class="caps"&gt;ODE&lt;/span&gt; with
+input similar to the experimental input of, sweeping the current while
+equilibrating the system at each step and then repeating this over
+multiple magnetic field, then further analysing this data to obtain
+&lt;span class="math"&gt;\(I_{c}H\)&lt;/span&gt;and &lt;span class="math"&gt;\(VH\)&lt;/span&gt; plots. For the second part, experimental data was
+gathered similar to the simulation steps (calculating &lt;span class="caps"&gt;IV&lt;/span&gt; data for
+multiple magnetic field ) and then analysed to to obtain &lt;span class="math"&gt;\(I_{c}H\)&lt;/span&gt;and
+&lt;span class="math"&gt;\(VH\)&lt;/span&gt; plots, the results obtained from this was matched with the
+simulation results.&lt;/p&gt;
+&lt;p&gt;In both of the above method, the equivalence between the &lt;span class="math"&gt;\(I_{c}H\)&lt;/span&gt;and
+&lt;span class="math"&gt;\(VH\)&lt;/span&gt; (magnetoresistance) characteristics of a Josephson junction was
+confirmed and was also matched with the experimental results. One could
+carry out the study further by:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Carrying out a simulation analysis with respect to &lt;span class="math"&gt;\(\beta_{c}\)&lt;/span&gt;and
+    compare it with the results obtained through Q&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Simulation of other exotic &lt;span class="caps"&gt;CPR&lt;/span&gt; such as sin(&lt;span class="math"&gt;\(\phi/2\)&lt;/span&gt;)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;The simulation currently takes about 2hrs for sweeping magnetic
+    fields linearly spaced between &lt;span class="math"&gt;\(-2\frac{\phi}{\phi_{0}}\)&lt;/span&gt; and
+    &lt;span class="math"&gt;\(2\frac{\phi}{\phi_{0}}\)&lt;/span&gt; . An improvement in the
+    simulation/integration time by using numba decorators for
+    numpy-python modules could be made, for instance Scipy’s odeint
+    integration will be slow if the right-hand side of an &lt;span class="caps"&gt;ODE&lt;/span&gt;
+    integration is slow. The numba package, which translates python code
+    into machine code using &lt;span class="caps"&gt;LLVM&lt;/span&gt; - which means it’s very fast, it can
+    speed up the right-hand side. Even a very simple &lt;span class="caps"&gt;ODE&lt;/span&gt; can be sped up
+    by several factors.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;A study could be done on finding the Q value of the experimental
+    junction, by fitting the &lt;span class="caps"&gt;IV&lt;/span&gt; with Q as a parameter&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;The differential conductance measurement could be setup using a
+    lockin amplifier.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="references"&gt;References&lt;a class="headerlink" href="#references" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;“Achieving Accurate and Reliable Resistance Measurements in Low Power
+and Low Voltage Applications Tektronix.” n.d. Accessed May 9, 2022.
+&lt;a href="https://www.tek.com/en/documents/whitepaper/achieving-accurate-and-reliable-resistance-measurements-low-power-and-low-voltag"&gt;https://www.tek.com/en/documents/whitepaper/achieving-accurate-and-reliable-resistance-measurements-low-power-and-low-voltag&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Assouline, Alexandre, Cheryl Feuillet-Palma, Nicolas Bergeal, Tianzhen
+Zhang, Alireza Mottaghizadeh, Alexandre Zimmers, Emmanuel Lhuillier, et
+al. 2019. “Spin-Orbit Induced Phase-Shift in Bi2Se3 Josephson
+Junctions.” &lt;em&gt;Nature Communications 2019 10:1&lt;/em&gt; 10 (January): 1–8.
+&lt;a href="https://doi.org/10.1038/s41467-018-08022-y"&gt;https://doi.org/10.1038/s41467-018-08022-y&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Bardeen, J., &lt;span class="caps"&gt;L. N.&lt;/span&gt; Cooper, and &lt;span class="caps"&gt;J. R.&lt;/span&gt; Schrieffer. 1957. “Theory of
+Superconductivity.” &lt;em&gt;Phys. Rev.&lt;/em&gt; 108 (December): 1175–1204.
+&lt;a href="https://doi.org/10.1103/PhysRev.108.1175"&gt;https://doi.org/10.1103/PhysRev.108.1175&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;DanielSank. n.d. “What Does the &lt;span class="math"&gt;\(I\)&lt;/span&gt;-&lt;span class="math"&gt;\(V\)&lt;/span&gt; Curve in Josephson Junction
+Mean?” Physics Stack Exchange.
+&lt;a href="https://physics.stackexchange.com/q/197150"&gt;https://physics.stackexchange.com/q/197150&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Drozdov, A. P., &lt;span class="caps"&gt;M. I.&lt;/span&gt; Eremets, &lt;span class="caps"&gt;I. A.&lt;/span&gt; Troyan, V. Ksenofontov, and &lt;span class="caps"&gt;S. I.
+&lt;/span&gt;Shylin. 2015. “Conventional Superconductivity at 203 Kelvin at High
+Pressures in the Sulfur Hydride System.” &lt;em&gt;Nature&lt;/em&gt; 525 (7567): 73–76.
+&lt;a href="https://doi.org/10.1038/nature14964"&gt;https://doi.org/10.1038/nature14964&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Frolov, S. M., &lt;span class="caps"&gt;D. J.&lt;/span&gt; Van Harlingen, &lt;span class="caps"&gt;V. A.&lt;/span&gt; Oboznov, &lt;span class="caps"&gt;V. V.&lt;/span&gt; Bolginov, and
+&lt;span class="caps"&gt;V. V.&lt;/span&gt; Ryazanov. 2004. “Measurement of the Current-Phase Relation of
+Superconductor/Ferromagnet/Superconductor Pi Josephson Junctions.”
+&lt;em&gt;Phys. Rev. B&lt;/em&gt; 70 (October): 144505.
+&lt;a href="https://doi.org/10.1103/PhysRevB.70.144505"&gt;https://doi.org/10.1103/PhysRevB.70.144505&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Josephson, &lt;span class="caps"&gt;B. D.&lt;/span&gt; 1962. “Possible New Effects in Superconductive
+Tunnelling.” &lt;em&gt;Physics Letters&lt;/em&gt; 1 (7): 251–53.
+&lt;a href="https://doi.org/10.1016/0031-9163(62)91369-0"&gt;https://doi.org/10.1016/0031-9163(62)91369-0&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Khan, Jamal Akhtar, and M. Shahabuddin. 2009. “Simulation Study of
+Effect of Magnetic Field over i-v Characteristic of Intrinsic Stacked
+Josephson Junctions.” &lt;em&gt;International Journal of Nanomanufacturing&lt;/em&gt; 4
+(1/2/3/4): 342. &lt;a href="https://doi.org/10.1504/ijnm.2009.028142"&gt;https://doi.org/10.1504/ijnm.2009.028142&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Klenov, N, V Kornev, A Vedyayev, N Ryzhanova, N Pugach, and T
+Rumyantseva. 2008. “Examination of Logic Operations with Silent Phase
+Qubit.” &lt;em&gt;Journal of Physics: Conference Series&lt;/em&gt; 97 (February): 012037.
+&lt;a href="https://doi.org/10.1088/1742-6596/97/1/012037"&gt;https://doi.org/10.1088/1742-6596/97/1/012037&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Lee, Gil-Ho, and Hu-Jong Lee. 2018. “Proximity Coupling in
+Superconductor-Graphene Heterostructures.” &lt;em&gt;Reports on Progress in
+Physics&lt;/em&gt; 81 (5): 056502. &lt;a href="https://doi.org/10.1088/1361-6633/aaafe1"&gt;https://doi.org/10.1088/1361-6633/aaafe1&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Ngo, Duc-The. 2021. “Lorentz &lt;span class="caps"&gt;TEM&lt;/span&gt; Characterisation of Magnetic and
+Physical Structure of Nanostructure Magnetic Thin Films,” December.&lt;/p&gt;
+&lt;p&gt;Pal, Avradeep, &lt;span class="caps"&gt;Z. H.&lt;/span&gt; Barber, &lt;span class="caps"&gt;J. W. A.&lt;/span&gt; Robinson, and &lt;span class="caps"&gt;M. G.&lt;/span&gt; Blamire. 2014.
+“Pure Second Harmonic Current-Phase Relation in Spin-Filter Josephson
+Junctions.” &lt;em&gt;Nature Communications&lt;/em&gt; 5 (1).
+&lt;a href="https://doi.org/10.1038/ncomms4340"&gt;https://doi.org/10.1038/ncomms4340&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Rowell, &lt;span class="caps"&gt;J. M.&lt;/span&gt; 1963. “Magnetic Field Dependence of the Josephson Tunnel
+Current.” &lt;em&gt;Phys. Rev. Lett.&lt;/em&gt; 11 (September): 200–202.
+&lt;a href="https://doi.org/10.1103/PhysRevLett.11.200"&gt;https://doi.org/10.1103/PhysRevLett.11.200&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Schmidt, &lt;span class="caps"&gt;F. E.&lt;/span&gt; 2017. “&lt;span class="caps"&gt;RCSJ&lt;/span&gt;.” &lt;a href="https://github.com/feschmidt/rcsj"&gt;https://github.com/feschmidt/rcsj&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Schrieffer, J. R., and M. Tinkham. 1999. “Superconductivity.” &lt;em&gt;Rev. Mod.
+Phys.&lt;/em&gt; 71 (March): S313–17.
+&lt;a href="https://doi.org/10.1103/RevModPhys.71.S313"&gt;https://doi.org/10.1103/RevModPhys.71.S313&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Sellier, Hermann, Claire Baraduc, François Lefloch, and Roberto
+Calemczuk. 2004. “Half-Integer Shapiro Steps at the 0-Pi Crossover of a
+Ferromagnetic Josephson Junction.” &lt;em&gt;Phys. Rev. Lett.&lt;/em&gt; 92 (25 Pt 1): 257005.&lt;/p&gt;
+&lt;p&gt;Stoutimore, M J A, A N Rossolenko, V V Bolginov, V A Oboznov, A Y
+Rusanov, D S Baranov, N Pugach, S M Frolov, V V Ryazanov, and D J Van
+Harlingen. 2018. “Second-Harmonic Current-Phase Relation in Josephson
+Junctions with Ferromagnetic Barriers.”&lt;/p&gt;
+&lt;p&gt;Strambini, Elia, Andrea Iorio, Ofelia Durante, Roberta Citro, Cristina
+Sanz-Fernández, Claudio Guarcello, Ilya V Tokatly, et al. n.d. “A
+Josephson Phase Battery.” &lt;em&gt;Nature Nanotechnology&lt;/em&gt;.
+&lt;a href="https://doi.org/10.1038/s41565-020-0712-7"&gt;https://doi.org/10.1038/s41565-020-0712-7&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Tanaka, Yukio, and Satoshi Kashiwaya. 1997. “Theory of Josephson Effects
+in Anisotropic Superconductors.” &lt;em&gt;Phys. Rev. B&lt;/em&gt; 56 (July): 892–912.
+&lt;a href="https://doi.org/10.1103/PhysRevB.56.892"&gt;https://doi.org/10.1103/PhysRevB.56.892&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Wang, Lujun. 2015. “Fabrication Stability of Josephson Junctions for
+Superconducting Qubits.” In.&lt;/p&gt;
+&lt;p&gt;Yamashita, T., K. Tanikawa, S. Takahashi, and S. Maekawa. 2005.
+“Superconducting &lt;span class="math"&gt;\(\ensuremath{\pi}\)&lt;/span&gt; Qubit with a Ferromagnetic Josephson
+Junction.” &lt;em&gt;Phys. Rev. Lett.&lt;/em&gt; 95 (August): 097001.
+&lt;a href="https://doi.org/10.1103/PhysRevLett.95.097001"&gt;https://doi.org/10.1103/PhysRevLett.95.097001&lt;/a&gt;.&lt;/p&gt;
+&lt;h3 id="acknowledgments"&gt;Acknowledgments&lt;a class="headerlink" href="#acknowledgments" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;I wish to thank my project supervisors, Dr. Kartikeswar Senapati and Dr.
+Ramesha C K for their immense support and help with the understanding of
+this project. I would like to express my deepest appreciation to Mr.
+Tapas Ranjan Senapati and Ms. Laxmipriya Nanda for all their help from
+mentoring on the fabrication techniques to usage of measurement systems
+and all the fruitful discussions. I wish to thank all the lab members of
+Superconductivity lab, &lt;span class="caps"&gt;NISER&lt;/span&gt; for all the brainstorming sessions which
+helped me greatly. Special thanks to Ms. Soheli Mukherjee who always
+supported me with all my endeavors. I would also like to extend my
+deepest gratitude to Dr. Dhavala Suri who always showered me with
+helpful advice. Lastly, I am thankful to all my friends and family
+members for extending their love and support.&lt;/p&gt;
+&lt;h3 id="abbreviations"&gt;Abbreviations&lt;a class="headerlink" href="#abbreviations" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;span class="caps"&gt;AC&lt;/span&gt; :- Alternating current&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;span class="caps"&gt;RF&lt;/span&gt; :- Radio frequency&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;span class="caps"&gt;JJ&lt;/span&gt; :- Josephson Junction&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;span class="caps"&gt;SQUID&lt;/span&gt; :- Superconducting QUantum Interference Device&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;span class="caps"&gt;EDX&lt;/span&gt; :- Energy Dispersive X-ray spectroscopy&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;span class="caps"&gt;SEM&lt;/span&gt; :- Scanning Electron Microscope&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;span class="caps"&gt;FIB&lt;/span&gt; :- Focused Ion Beam&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;span class="caps"&gt;PPMS&lt;/span&gt; :- Physical Properties Measurement System&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Fig :- Figure&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;eV :- Electron Volt&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;KeV :- Kilo Electron Volt&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;MeV :- Mega/Million Electron Volt&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;et al :- And others (Latin)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;i.e. :- That is&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;etc :- Et cetera (Latin for ’and others of same kind’)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;T :- Tesla&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;SiO2:- Silicon dioxide&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;R-T :- Resistance Versus Temperature&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;I-V :- Current Versus Voltage&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;I-H :- Current Versus Magnetic field&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;V-H :- Voltage Versus Magnetic field&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Si :- Silicon&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;K :- kelvin&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;mm :- millimeter&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;mbar :- millibar&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;span class="caps"&gt;IPA&lt;/span&gt; :- Isopropyl alcohol&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;span class="caps"&gt;RPM&lt;/span&gt; :- Revolutions Per Minute&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;C :- Celsius&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Ar :- Argon&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;e.g. :- Example given&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;span class="caps"&gt;TSP&lt;/span&gt; :- Titanium Sublimation Pump&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;span class="caps"&gt;RGA&lt;/span&gt; :- Residual Gas Analyzers&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Cu :- Copper&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;span class="caps"&gt;BCS&lt;/span&gt; :- Bardeen–Cooper–Schrieffer&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Nb :- Niobium&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;span class="caps"&gt;DC&lt;/span&gt; :- Direct current&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;span class="caps"&gt;AC&lt;/span&gt; :- Alternating current&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;span class="math"&gt;\(\mu\)&lt;/span&gt;A :- Micro Ampere&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;span class="math"&gt;\(\Omega\)&lt;/span&gt;:- Ohm&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;nm :- Nano meter&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width &lt; 768) ? "left" : align;
+        indent = (screen.width &lt; 768) ? "0em" : indent;
+        linebreak = (screen.width &lt; 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_CHTML';
+
+    var configscript = document.createElement('script');
+    configscript.type = 'text/x-mathjax-config';
+    configscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'none' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        availableFonts: ['STIX', 'TeX']," +
+        "        preferredFont: 'STIX'," +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+&lt;/script&gt;</content><category term="Science"></category><category term="cryostat"></category><category term="probe"></category><category term="transport measurement"></category><category term="Josephson Junction"></category><category term="LabVIEW"></category><category term="NISER"></category><category term="Superconductivity"></category><category term="simulation"></category><category term="josim"></category><category term="RCSJ"></category><category term="Josephson Junction simulation"></category></entry><entry><title>Study of Josephson Junction.</title><link href="https://ashwinschronicles.github.io/josephson-junction-fabrication-and-characterisation" rel="alternate"></link><published>2021-12-15T00:00:00+05:30</published><updated>2023-06-11T00:00:00+05:30</updated><author><name>Ashwin</name></author><id>tag:ashwinschronicles.github.io,2021-12-15:/josephson-junction-fabrication-and-characterisation</id><summary type="html">&lt;p&gt;This post is about my masters thesis on Josephson Junction fabrication and&amp;nbsp;characterisation&lt;/p&gt;</summary><content type="html">
 &lt;h1 id="introduction"&gt;Introduction&lt;a class="headerlink" href="#introduction" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h1&gt;
 &lt;p&gt;This article is an adaptation of my Masters thesis report ( first semesters ), where I worked on the fabrications of Josephson Junctions and their charecterisation.
 In the next article ( second semesters ) I will be talking about  modelling the Josephson Junctions computationally and the results obtained from the simulations.
