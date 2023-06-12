@@ -776,7 +776,7 @@ class="math inline"><em>μ</em><em>A</em></span> </figcaption>
 The code for the python script is available
 [here](https://github.com/iamashwin99/JJ-Ic-finder) and a web app based
 on the same is hosted at
-[jj-ic-finder.herokuapp.com](https://jj-ic-finder.herokuapp.com/)
+[jj-ic-finder.streamlit.app](https://jj-ic-finder.streamlit.app/)
 
 The web app also provides quick access to multiple data visualizations
 like area plot,bar plot,line plot, hist plot, scatter plot etc. A
