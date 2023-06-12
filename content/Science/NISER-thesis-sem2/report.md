@@ -13,7 +13,7 @@ gittime: off
 bibliography: report.bib
 ---
 
-
+[TOC]
 
 # Introduction
 This article is an adaptation of my Masters thesis report ( second semesters ), where I worked on the modelling and simuation of Josephson Junctions. The previous article talked about the  the fabrications of Josephson Junctions and their charecterisation ( first semester ).
@@ -41,7 +41,7 @@ phenomenon was given the name Josephson effect.
 
 <figure>
 <img src="{attach}Photos/a-The-superconducting-order-parameter-of-a-superconductor-S-penetrating-into-the.webp"
-style="width:8cm"
+style="width:12cm"
 alt="(a) The superconducting order parameter \Psi of a superconductor (S) penetrating into the normal metal (N) with a length scale of the superconducting coherence length,\xi. (b) Order parameters from two sides have an overlap in N, producing proximity Josephson coupling.(Lee and Lee 2018)" />
 <figcaption aria-hidden="true">(a) The superconducting order parameter
 <span class="math inline"><em>Ψ</em></span> of a superconductor (S)
@@ -535,7 +535,7 @@ characteristics further confirming the hypothesis.
 
 <figure>
 <img src="{attach}Photos/IcH-Q1.5-2nd.webp" id="fig:Plots-of-VHs-1.5"
-style="width:12cm;height:10cm"
+style="width:18cm;height:10cm"
 alt="Plots of I_{c}H (top) and VH (bottom) from simulation with parameter Q=1.5 and second harmonics added " />
 <figcaption aria-hidden="true">Plots of <span
 class="math inline"><em>I</em><sub><em>c</em></sub><em>H</em></span>
@@ -545,7 +545,7 @@ from simulation with parameter Q=1.5 and second harmonics added
 </figure>
 
 <figure>
-<img src="{attach}Photos/VH-Q1.5-2nd-log.webp" id="fig:Plots-of-VHs-1.5" style="width:12cm"
+<img src="{attach}Photos/VH-Q1.5-2nd-log.webp" id="fig:Plots-of-VHs-1.5" style="width:18cm"
 alt="Plots of I_{c}H (top) and VH (bottom) from simulation with parameter Q=1.5 and second harmonics added " />
 <figcaption aria-hidden="true">Plots of <span
 class="math inline"><em>I</em><sub><em>c</em></sub><em>H</em></span>
@@ -556,7 +556,7 @@ from simulation with parameter Q=1.5 and second harmonics added
 
 <figure>
 <img src="{attach}Photos/IcH-Q1.5-1stpng.webp" id="fig:Plots-of-VHs-1.5-1"
-style="width:12cm"
+style="width:18cm"
 alt="Plots of I_{c}H (top) and VH (bottom) from simulation with parameter Q=1.5 and only first harmonics being kept " />
 <figcaption aria-hidden="true">Plots of <span
 class="math inline"><em>I</em><sub><em>c</em></sub><em>H</em></span>
@@ -567,7 +567,7 @@ from simulation with parameter Q=1.5 and only first harmonics being kept
 
 <figure>
 <img src="{attach}Photos/VH-Q1.5-first-log.webp" id="fig:Plots-of-VHs-1.5-1"
-style="width:12cm"
+style="width:18cm"
 alt="Plots of I_{c}H (top) and VH (bottom) from simulation with parameter Q=1.5 and only first harmonics being kept " />
 <figcaption aria-hidden="true">Plots of <span
 class="math inline"><em>I</em><sub><em>c</em></sub><em>H</em></span>
@@ -584,7 +584,7 @@ reported Voltages for the same current would be magnitudes higher, thus
 a log plot is taken inorder to correct this.
 
 <figure>
-<img src="{attach}Photos/VH-Q1.5-2nd.webp" id="fig:vh-notlog" style="width:12cm"
+<img src="{attach}Photos/VH-Q1.5-2nd.webp" id="fig:vh-notlog" style="width:18cm"
 alt="Plots of VH from simulation with parameter Q=1.5 and y-axis not log normalised" />
 <figcaption aria-hidden="true">Plots of <span
 class="math inline"><em>V</em><em>H</em></span> from simulation with
@@ -1076,8 +1076,6 @@ supported me with all my endeavors. I would also like to extend my
 deepest gratitude to Dr. Dhavala Suri who always showered me with
 helpful advice. Lastly, I am thankful to all my friends and family
 members for extending their love and support.
-
-### 
 
 ### Abbreviations
 
