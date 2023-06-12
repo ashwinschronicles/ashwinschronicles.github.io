@@ -40,8 +40,7 @@ super current flow through them (Josephson 1962). This macroscopic
 phenomenon was given the name Josephson effect.
 
 <figure>
-<img
-src="a-The-superconducting-order-parameter-of-a-superconductor-S-penetrating-into-the"
+<img src="{attach}Photos/a-The-superconducting-order-parameter-of-a-superconductor-S-penetrating-into-the.webp"
 style="width:8cm"
 alt="(a) The superconducting order parameter \Psi of a superconductor (S) penetrating into the normal metal (N) with a length scale of the superconducting coherence length,\xi. (b) Order parameters from two sides have an overlap in N, producing proximity Josephson coupling.(Lee and Lee 2018)" />
 <figcaption aria-hidden="true">(a) The superconducting order parameter
@@ -88,7 +87,7 @@ to induce a DC voltage in a Josephson junction, this phenomena is known
 as inverse AC Josephson effect.
 
 <figure>
-<img src="andreev_reflection" style="width:5cm"
+<img src="{attach}Photos/andreev_reflection.webp" style="width:5cm"
 alt="Andreev Reflection process" />
 <figcaption aria-hidden="true">Andreev Reflection process</figcaption>
 </figure>
@@ -110,7 +109,7 @@ schematic representation of the same can be seen in Fig
 data-reference="fig:Schematic-of-RCSJ">1</a>.
 
 <figure>
-<img src="RCSJ" id="fig:Schematic-of-RCSJ" style="width:5cm"
+<img src="{attach}Photos/RCSJ.webp" id="fig:Schematic-of-RCSJ" style="width:5cm"
 alt="A schematic representation of RCSJ model. Here I is the current through the device, I_{c} is the current through the capacitor I_{J} is the current through the Josephson Junction, I_{R} is the current through the resistance" />
 <figcaption aria-hidden="true">A schematic representation of RCSJ model.
 Here <span class="math inline"><em>I</em></span> is the current through
@@ -149,7 +148,7 @@ damped particle can be described as follows: (Fig
 data-reference="fig:washboard-potential">2</a>)
 
 <figure>
-<img src="JJ-IV" id="fig:washboard-potential" style="width:13cm"
+<img src="{attach}Photos/JJ-IV.webp" id="fig:washboard-potential" style="width:13cm"
 alt="Interpretation of the washboard potential(DanielSank, n.d.)" />
 <figcaption aria-hidden="true">Interpretation of the washboard
 potential<span class="citation" data-cites="JJ-IVexpln">(DanielSank,
@@ -404,7 +403,7 @@ conditions for $\phi$ and $\mathring{\phi}$ in Fig
 data-reference="fig:ODE-relaxation-as">3</a>.
 
 <figure>
-<img src="ODE-relaxation" id="fig:ODE-relaxation-as" style="width:10cm"
+<img src="{attach}Photos/ODE-relaxation.webp" id="fig:ODE-relaxation-as" style="width:10cm"
 alt="ODE solution as a function of time (in \tau) for different initial conditions for \phi and \mathring{\phi}" />
 <figcaption aria-hidden="true">ODE solution as a function of time (in
 <span class="math inline"><em>τ</em></span>) for different initial
@@ -444,7 +443,7 @@ the current, we see that the junction remains in the non zero voltage
 range below $I_{c}$.
 
 <figure>
-<img src="IV-VaryingQ" id="fig:IV-Q" style="width:7cm"
+<img src="{attach}Photos/IV-VaryingQ.webp" id="fig:IV-Q" style="width:7cm"
 alt="IV sweep (both cycles) for selected under damped and over damped Q’s. Low damping (Q\gg1) results in substantial hysteresis with an almost linear retrapping branch, whereas the IV for high damping (Q\ll1) is without any hysteresis. " />
 <figcaption aria-hidden="true">IV sweep (both cycles) for selected under
 damped and over damped Q’s. Low damping <span
@@ -473,7 +472,7 @@ data-reference="fig:Plots-of-IV-Q0.5">6</a> &
 data-reference="fig:Plots-of-IV-Q1.5">8</a>.
 
 <figure>
-<img src="IV-Q1.5-1st" id="fig:Plots-of-IV-Q0.5" style="width:10cm"
+<img src="{attach}Photos/IV-Q1.5-1st.webp" id="fig:Plots-of-IV-Q0.5" style="width:10cm"
 alt="Plots of IV for simulation with parameter Q=1.5 (under damped) and only first harmonics (top) and with second harmonics (bottom)" />
 <figcaption aria-hidden="true">Plots of <span
 class="math inline"><em>I</em><em>V</em></span> for simulation with
@@ -482,7 +481,7 @@ second harmonics (bottom)</figcaption>
 </figure>
 
 <figure>
-<img src="IV-Q1.5-2nd" id="fig:Plots-of-IV-Q0.5" style="width:10cm"
+<img src="{attach}Photos/IV-Q1.5-2nd.webp" id="fig:Plots-of-IV-Q0.5" style="width:10cm"
 alt="Plots of IV for simulation with parameter Q=1.5 (under damped) and only first harmonics (top) and with second harmonics (bottom)" />
 <figcaption aria-hidden="true">Plots of <span
 class="math inline"><em>I</em><em>V</em></span> for simulation with
@@ -491,7 +490,7 @@ second harmonics (bottom)</figcaption>
 </figure>
 
 <figure>
-<img src="IV-Q0.5-1st" id="fig:Plots-of-IV-Q1.5" style="width:10cm"
+<img src="{attach}Photos/IV-Q0.5-1st.webp" id="fig:Plots-of-IV-Q1.5" style="width:10cm"
 alt="Plots of IV for simulation with parameter Q=0.5 (over damped) and only first harmonics (top) and with second harmonics (bottom)" />
 <figcaption aria-hidden="true">Plots of <span
 class="math inline"><em>I</em><em>V</em></span> for simulation with
@@ -500,7 +499,7 @@ second harmonics (bottom)</figcaption>
 </figure>
 
 <figure>
-<img src="IV-Q0.5-2nd" id="fig:Plots-of-IV-Q1.5" style="width:10cm"
+<img src="{attach}Photos/IV-Q0.5-2nd.webp" id="fig:Plots-of-IV-Q1.5" style="width:10cm"
 alt="Plots of IV for simulation with parameter Q=0.5 (over damped) and only first harmonics (top) and with second harmonics (bottom)" />
 <figcaption aria-hidden="true">Plots of <span
 class="math inline"><em>I</em><em>V</em></span> for simulation with
@@ -535,7 +534,7 @@ Here too the $I_{c}H$and $VH$ (magnetoresistance) have similar
 characteristics further confirming the hypothesis.
 
 <figure>
-<img src="IcH-Q1.5-2nd" id="fig:Plots-of-VHs-1.5"
+<img src="{attach}Photos/IcH-Q1.5-2nd.webp" id="fig:Plots-of-VHs-1.5"
 style="width:12cm;height:10cm"
 alt="Plots of I_{c}H (top) and VH (bottom) from simulation with parameter Q=1.5 and second harmonics added " />
 <figcaption aria-hidden="true">Plots of <span
@@ -546,7 +545,7 @@ from simulation with parameter Q=1.5 and second harmonics added
 </figure>
 
 <figure>
-<img src="VH-Q1.5-2nd-log" id="fig:Plots-of-VHs-1.5" style="width:12cm"
+<img src="{attach}Photos/VH-Q1.5-2nd-log.webp" id="fig:Plots-of-VHs-1.5" style="width:12cm"
 alt="Plots of I_{c}H (top) and VH (bottom) from simulation with parameter Q=1.5 and second harmonics added " />
 <figcaption aria-hidden="true">Plots of <span
 class="math inline"><em>I</em><sub><em>c</em></sub><em>H</em></span>
@@ -556,7 +555,7 @@ from simulation with parameter Q=1.5 and second harmonics added
 </figure>
 
 <figure>
-<img src="IcH-Q1.5-1stpng" id="fig:Plots-of-VHs-1.5-1"
+<img src="{attach}Photos/IcH-Q1.5-1stpng.webp" id="fig:Plots-of-VHs-1.5-1"
 style="width:12cm"
 alt="Plots of I_{c}H (top) and VH (bottom) from simulation with parameter Q=1.5 and only first harmonics being kept " />
 <figcaption aria-hidden="true">Plots of <span
@@ -567,7 +566,7 @@ from simulation with parameter Q=1.5 and only first harmonics being kept
 </figure>
 
 <figure>
-<img src="VH-Q1.5-first-log" id="fig:Plots-of-VHs-1.5-1"
+<img src="{attach}Photos/VH-Q1.5-first-log.webp" id="fig:Plots-of-VHs-1.5-1"
 style="width:12cm"
 alt="Plots of I_{c}H (top) and VH (bottom) from simulation with parameter Q=1.5 and only first harmonics being kept " />
 <figcaption aria-hidden="true">Plots of <span
@@ -585,7 +584,7 @@ reported Voltages for the same current would be magnitudes higher, thus
 a log plot is taken inorder to correct this.
 
 <figure>
-<img src="VH-Q1.5-2nd" id="fig:vh-notlog" style="width:12cm"
+<img src="{attach}Photos/VH-Q1.5-2nd.webp" id="fig:vh-notlog" style="width:12cm"
 alt="Plots of VH from simulation with parameter Q=1.5 and y-axis not log normalised" />
 <figcaption aria-hidden="true">Plots of <span
 class="math inline"><em>V</em><em>H</em></span> from simulation with
@@ -605,7 +604,7 @@ is in plane with the trilayers and in the case of the vertical junctions
 the current flows vertically through the trilayers.
 
 <figure>
-<img src="JJ-planar" id="fig:Planar" style="width:6cm"
+<img src="{attach}Photos/JJ-planar.webp" id="fig:Planar" style="width:6cm"
 alt="Schematic of the Planar Josephson Junction, due the vertical FIB cut in the Niobium layer, the current travels in plane through first the Niobium layer then through the copper weaklink then finally through the other Niobium layer. The yellow arrowed line shows the direction of current flow" />
 <figcaption aria-hidden="true">Schematic of the Planar Josephson
 Junction, due the vertical FIB cut in the Niobium layer, the current
@@ -615,7 +614,7 @@ arrowed line shows the direction of current flow</figcaption>
 </figure>
 
 <figure>
-<img src="JJ-verical" id="fig:Vertical" style="width:6cm"
+<img src="{attach}Photos/JJ-verical.webp" id="fig:Vertical" style="width:6cm"
 alt="Schematic of the Vertical Josephson Junction, due to the nano pillar cuts on the left and the right, the current travels in plane through first the top Niobium layer then through the copper weaklink then finally through the other Niobium layer. The yellow arrowed line shows the direction of current flow" />
 <figcaption aria-hidden="true">Schematic of the Vertical Josephson
 Junction, due to the nano pillar cuts on the left and the right, the
@@ -633,9 +632,8 @@ phase transitions. One such R-T graph is shown in Fig
 data-reference="fig:RT-graph-for">16</a>.
 
 <figure>
-<img
-src="/run/media/ashwin/Data/Sandbox/Ash_docs/NISER/Thesis/Sem1-report/JJ.jpg"
-id="fig:RT-graph-for" style="width:10cm"
+<img src="{attach}Photos/JJ.png"
+id="fig:RT-graph-for" style="width:15cm"
 alt="RT graph for a Cu(100nm)Nb(150nm) Josephson junction. The inset shows an SEM image of the measured JJ " />
 <figcaption aria-hidden="true">RT graph for a Cu(100nm)Nb(150nm)
 Josephson junction. The inset shows an SEM image of the measured JJ
@@ -658,7 +656,7 @@ data-reference="fig:IV-graph-for">17</a>.
 
 <figure>
 <img
-src="/run/media/ashwin/Data/Sandbox/Ash_docs/NISER/Thesis/Sem1-report/IV Pt20 CuNbJJ 2k.jpg"
+src="{attach}Photos/IV Pt20 CuNbJJ 2k.png"
 id="fig:IV-graph-for" style="width:10cm"
 alt="IV graph for a Cu(100nm)Nb(150nm) Josephson junction " />
 <figcaption aria-hidden="true">IV graph for a Cu(100nm)Nb(150nm)
@@ -683,7 +681,7 @@ This was explained in the theoretical sections above.
 
 <figure>
 <img
-src="/run/media/ashwin/Data/Sandbox/Ash_docs/NISER/Thesis/Sem1-report/VH CuNbJJ 2k.jpg"
+src="{attach}Photos/VH CuNbJJ 2k.png"
 id="fig:Magnetoresistance-of-the-1" style="width:10cm"
 alt="Magnetoresistance of the patterned Nb/Cu Josephson junction device in low magnetic fields for different values of junction currents" />
 <figcaption aria-hidden="true">Magnetoresistance of the patterned Nb/Cu
@@ -693,7 +691,7 @@ junction currents</figcaption>
 
 <figure>
 <img
-src="/run/media/ashwin/Data/Sandbox/Ash_docs/NISER/Thesis/Sem1-report/JJ VH.jpg"
+src="{attach}Photos/JJ VH.png"
 id="fig:Magnetoresistance-of-the-1" style="width:10cm"
 alt="Magnetoresistance of the patterned Nb/Cu Josephson junction device in low magnetic fields" />
 <figcaption aria-hidden="true">Magnetoresistance of the patterned Nb/Cu
@@ -763,7 +761,7 @@ for a I vs V curve measured on a Josephson junction is shown in Fig
 data-reference="fig:findIc">20</a>.
 
 <figure>
-<img src="samplePlot" id="fig:findIc" style="width:15cm"
+<img src="{attach}Photos/samplePlot.webp" id="fig:findIc" style="width:15cm"
 alt="A sample graph of dI/dV and d^{2}I/d^{2}V for a I vs V curve measured on a Josephson junction. The I_{c} extracted from the graph is 140\mu A " />
 <figcaption aria-hidden="true">A sample graph of <span
 class="math inline"><em>d</em><em>I</em>/<em>d</em><em>V</em></span> and
@@ -788,7 +786,7 @@ Fig<a href="#fig:iv-viz" data-reference-type="ref"
 data-reference="fig:iv-viz">21</a>.
 
 <figure>
-<img src="web-app-sc" id="fig:iv-viz" style="width:10cm"
+<img src="{attach}Photos/web-app-sc.webp" id="fig:iv-viz" style="width:10cm"
 alt="A screenshot of the web-app in use for visualizing the scatter plot of Josephson junctions IV " />
 <figcaption aria-hidden="true">A screenshot of the web-app in use for
 visualizing the scatter plot of Josephson junctions IV </figcaption>
@@ -821,7 +819,7 @@ out the Fraunhofer like pattern in both plots at the same magnetic field
 points, the main lobe width and the secondary lobe width are identical.
 
 <figure>
-<img src="IcH-JJ4" id="fig:jj4" style="width:10cm"
+<img src="{attach}Photos/IcH-JJ4.webp" id="fig:jj4" style="width:10cm"
 alt="Plots of I_{C}H (analyzed from data) and VH(directly measured) for a Niobium/Copper/Platinum Josephson junction (Sample no 4 from run SP169) One can make out the Fraunhofer like pattern in both plots at the same magnetic field points. " />
 <figcaption aria-hidden="true">Plots of <span
 class="math inline"><em>I</em><sub><em>C</em></sub><em>H</em></span>
@@ -834,7 +832,7 @@ magnetic field points. </figcaption>
 </figure>
 
 <figure>
-<img src="VH-JJ4" id="fig:jj4" style="width:10cm"
+<img src="{attach}Photos/VH-JJ4.webp" id="fig:jj4" style="width:10cm"
 alt="Plots of I_{C}H (analyzed from data) and VH(directly measured) for a Niobium/Copper/Platinum Josephson junction (Sample no 4 from run SP169) One can make out the Fraunhofer like pattern in both plots at the same magnetic field points. " />
 <figcaption aria-hidden="true">Plots of <span
 class="math inline"><em>I</em><sub><em>C</em></sub><em>H</em></span>
@@ -847,7 +845,7 @@ magnetic field points. </figcaption>
 </figure>
 
 <figure>
-<img src="IcH-JJ5" id="fig:jj4-1" style="width:10cm"
+<img src="{attach}Photos/IcH-JJ5.webp" id="fig:jj4-1" style="width:10cm"
 alt="Plots of I_{C}H (analyzed from data) and VH(directly measured) for a Niobium/Copper/Platinum Josephson junction (Sample no 5 from run SP169) One can make out the Fraunhofer like pattern in both plots at the same magnetic field points. " />
 <figcaption aria-hidden="true">Plots of <span
 class="math inline"><em>I</em><sub><em>C</em></sub><em>H</em></span>
@@ -860,7 +858,7 @@ magnetic field points. </figcaption>
 </figure>
 
 <figure>
-<img src="VH-JJ5" id="fig:jj4-1" style="width:10cm"
+<img src="{attach}Photos/VH-JJ5.webp" id="fig:jj4-1" style="width:10cm"
 alt="Plots of I_{C}H (analyzed from data) and VH(directly measured) for a Niobium/Copper/Platinum Josephson junction (Sample no 5 from run SP169) One can make out the Fraunhofer like pattern in both plots at the same magnetic field points. " />
 <figcaption aria-hidden="true">Plots of <span
 class="math inline"><em>I</em><sub><em>C</em></sub><em>H</em></span>
@@ -891,7 +889,7 @@ and Reliable Resistance Measurements in Low Power and Low Voltage
 Applications Tektronix” n.d.)
 
 <figure>
-<img src="dcon-6221" id="fig:dcon" style="width:10cm"
+<img src="{attach}Photos/dcon-6221.webp" id="fig:dcon" style="width:10cm"
 alt="A plot of the applied current bias in the differential conductance setup(“Achieving Accurate and Reliable Resistance Measurements in Low Power and Low Voltage Applications  Tektronix” n.d.)" />
 <figcaption aria-hidden="true">A plot of the applied current bias in the
 differential conductance setup<span class="citation"
@@ -913,7 +911,7 @@ conductance as shown in Fig
 data-reference="fig:A-GUI-setup">27</a>.
 
 <figure>
-<img src="dcon-gui" id="fig:A-GUI-setup" style="width:13cm"
+<img src="{attach}Photos/dcon-gui.webp" id="fig:A-GUI-setup" style="width:13cm"
 alt="A GUI setup to control the differential conductance setup" />
 <figcaption aria-hidden="true">A GUI setup to control the differential
 conductance setup</figcaption>
@@ -970,6 +968,7 @@ carry out the study further by:
     lockin amplifier.
 
 ### References
+
 “Achieving Accurate and Reliable Resistance Measurements in Low Power
 and Low Voltage Applications Tektronix.” n.d. Accessed May 9, 2022.
 <https://www.tek.com/en/documents/whitepaper/achieving-accurate-and-reliable-resistance-measurements-low-power-and-low-voltag>.
