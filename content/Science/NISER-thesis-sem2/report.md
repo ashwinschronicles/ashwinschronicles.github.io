@@ -16,7 +16,9 @@ bibliography: report.bib
 [TOC]
 
 # Introduction
-This article is an adaptation of my Masters thesis report ( second semesters ), where I worked on the modelling and simuation of Josephson Junctions. The previous article talked about the  the fabrications of Josephson Junctions and their charecterisation ( first semester ).
+This article is an adaptation of my Masters thesis report ( second semesters ), where I worked on the modelling and simuation of Josephson Junctions. 
+All the codes and data used in this article can be found in the [github repository](https://github.com/iamashwin99/Phase-biased-Josephson-Junction).
+The previous article talked about the  the fabrications of Josephson Junctions and their charecterisation ( first semester ).
 At the beginning of this thesis, we introduce basic theoretical concepts
 that underlay the device we are trying to study, i.e. the Josephson
 Junction (JJ). The theorey of superconductivity was breifly described in the previous article. We first look at the Josephson effect, which describes the physics of a
