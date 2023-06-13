@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom"><title>Ashwin's Chronicles🗞️ - Science</title><link href="https://ashwinschronicles.github.io/" rel="alternate"></link><link href="https://ashwinschronicles.github.io/feeds/science.atom.xml" rel="self"></link><id>https://ashwinschronicles.github.io/</id><updated>2023-06-11T00:00:00+05:30</updated><entry><title>Study of Josephson Junction.</title><link href="https://ashwinschronicles.github.io/josephson-junction-simulation-and-analysis" rel="alternate"></link><published>2022-04-15T00:00:00+05:30</published><updated>2023-06-11T00:00:00+05:30</updated><author><name>Ashwin</name></author><id>tag:ashwinschronicles.github.io,2022-04-15:/josephson-junction-simulation-and-analysis</id><summary type="html">&lt;p&gt;This post is about my masters thesis on Josephson Junction fabrication and&amp;nbsp;characterisation&lt;/p&gt;</summary><content type="html">
 &lt;h1 id="introduction"&gt;Introduction&lt;a class="headerlink" href="#introduction" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h1&gt;
-&lt;p&gt;This article is an adaptation of my Masters thesis report ( second semesters ), where I worked on the modelling and simuation of Josephson Junctions. The previous article talked about the  the fabrications of Josephson Junctions and their charecterisation ( first semester ).
+&lt;p&gt;This article is an adaptation of my Masters thesis report ( second semesters ), where I worked on the modelling and simuation of Josephson Junctions. 
+All the codes and data used in this article can be found in the &lt;a href="https://github.com/iamashwin99/Phase-biased-Josephson-Junction"&gt;github repository&lt;/a&gt;.
+The previous article talked about the  the fabrications of Josephson Junctions and their charecterisation ( first semester ).
 At the beginning of this thesis, we introduce basic theoretical concepts
 that underlay the device we are trying to study, i.e. the Josephson
 Junction (&lt;span class="caps"&gt;JJ&lt;/span&gt;). The theorey of superconductivity was breifly described in the previous article. We first look at the Josephson effect, which describes the physics of a
@@ -611,7 +613,7 @@ from the graph is 140&lt;span class="math inline"&gt;&lt;em&gt;μ&lt;/em&gt;&lt;
 &lt;p&gt;The code for the python script is available
 &lt;a href="https://github.com/iamashwin99/JJ-Ic-finder"&gt;here&lt;/a&gt; and a web app based
 on the same is hosted at
-&lt;a href="https://jj-ic-finder.herokuapp.com/"&gt;jj-ic-finder.herokuapp.com&lt;/a&gt;&lt;/p&gt;
+&lt;a href="https://jj-ic-finder.streamlit.app/"&gt;jj-ic-finder.streamlit.app&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;The web app also provides quick access to multiple data visualizations
 like area plot,bar plot,line plot, hist plot, scatter plot etc. A
 screenshot of the web-app in use for visualizing the &lt;span class="caps"&gt;IV&lt;/span&gt; of an
