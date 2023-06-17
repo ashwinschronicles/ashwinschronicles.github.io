@@ -109,7 +109,17 @@
         <h4>Contents</h4>
         <div class="toc">
 <ul>
+<li><a href="#detailed-review">Detailed Review:</a><ul>
+<li><a href="#part-1-installing-labview-and-ni-visa">Part 1: Installing LabVIEW and <span class="caps">NI</span>-<span class="caps">VISA</span>.</a><ul>
+<li><a href="#uploading-labview-interface-for-arduino-firmware">Uploading LabView Interface for Arduino Firmware</a></li>
+</ul>
+</li>
+<li><a href="#part-2-interfacing-and-controlling-an-led-using-labview-arduino-and-lifa"><span class="caps">PART</span> 2: Interfacing and Controlling an <span class="caps">LED</span> using LabVIEW, Arduino and <span class="caps">LIFA</span></a><ul>
 <li><a href="#scoring">Scoring</a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 </div>
         </nav>
@@ -118,7 +128,7 @@
             
             <main>
                 
-<p>This post is about Interfacing Arduino Mega using LabVIEW. It was originally posted <a href="https://www.element14.com/community/roadTestReviews/2581/l/arduino-a000067-mega2560-rev3-development-board-review">here</a> as a part of element14’s RoadTest. I thank element14 for sending me the review unit.</p>
+<p>This post is about Interfacing Arduino Mega using LabVIEW. It was originally posted <a href="https://community.element14.com/products/roadtest/rv/roadtest_reviews/233/arduino_a000067_mega_3">here</a> as a part of element14’s RoadTest. I thank element14 for sending me the review unit.</p>
 <ul>
 <li>
 <p><strong>Evaluation Type:</strong> Independent Products</p>
@@ -132,46 +142,43 @@
 <li>
 <p><strong>What were the biggest problems encountered?:</strong> When arduino ide is running, other programs such as Labview cant programme the mega.This is true in general of all arduino device.The only solution i found was to close arduino ide , log off and then log back in.</p>
 </li>
-<li></li>
-<li>
-<p>Detailed Review:</p>
-</li>
 </ul>
+<h1 id="detailed-review">Detailed Review:<a class="headerlink" href="#detailed-review" title="Permanent link">¶</a></h1>
 <p>Arduino Mega the big brother of Arduino Uno has 54 digital I/O pins, 16 analogue inputs. That’s a whopping difference of 40 digital and 10 analogue pins.the closest to it in the Arduino family is the Arduino Due.</p>
 <p>Arduino mega is generally used for projects that require a high number of I/O and memory thus they are commonly found in 3D printers and robotics projects.</p>
 <p>LabView is a system-design platform that allows you to visually write a program.It is generally used by engineers and scientists to create programs to automate the process of data acquisition from lab instruments. In this review, i try to Arduino mega to interface between the LabVIEW software and an instrument.</p>
-<p>## Part 1: Installing LabVIEW and <span class="caps">NI</span>-<span class="caps">VISA</span>.</p>
-<p>Go to <a href="https://www.element14.com/community/external-link.jspa?url=http%3A%2F%2Fwww.ni.com%2Ftrylabview">www.ni.com/trylabview</a></p>
+<h2 id="part-1-installing-labview-and-ni-visa">Part 1: Installing LabVIEW and <span class="caps">NI</span>-<span class="caps">VISA</span>.<a class="headerlink" href="#part-1-installing-labview-and-ni-visa" title="Permanent link">¶</a></h2>
+<p>Go to <a href="https://www.ni.com/trylabview">www.ni.com/trylabview</a></p>
 <p>Click on Download LabVIEW.</p>
 <p>Right-Click and then run LabVIEW Setup as administrator.</p>
 <p>Follow the instructions and wait for the installation to finish</p>
 <p>Note: You might get an error while installing Click on decline support as you do not have any device drivers. We have to download driver later.</p>
 <p>LabVIEW 2017 is successfully installed.</p>
 <p>Restart system later if prompted for a restart.</p>
-<p>To download <span class="caps">NI</span>-<span class="caps">VISA</span> driver for serial communication go to <a href="https://www.element14.com/community/external-link.jspa?url=https%3A%2F%2Fwww.ni.com%2Fvisa%2F">https://www.ni.com/visa/</a> and download the appropriate version of the software, Install it in the same way as before.</p>
+<p>To download <span class="caps">NI</span>-<span class="caps">VISA</span> driver for serial communication go to <a href="https://www.ni.com/visa/">https://www.ni.com/visa/</a> and download the appropriate version of the software, Install it in the same way as before.</p>
 <p>Labview has so many addons both by a 3rd party and <span class="caps">NI</span> itself that by default the software comes with a few basic tool set. This set can be expanded by installing add-ons, we shall now look into the process of installing the Arduino interfacing addon.</p>
 <p>Open the <span class="caps">VI</span> Package Manager and wait for it to download all the repository (this could take several minutes depending on your bandwidth)</p>
 <p>Search for “Arduino” in the search bar.</p>
 <p>Install Digilent <span class="caps">LINX</span> and “LabVIEW Interface for Arduino”.</p>
 <p>Once the installation is done without any errors you should Notice an “installed” symbol to the left of Digilent <span class="caps">LINX</span> toolbox, click finish.</p>
-<p><a href="https://www.element14.com/community/servlet/JiveServlet/showImage/293607990-2581-494997/Screenshot+(2).webp"><img alt="img" src="https://www.element14.com/community/servlet/JiveServlet/downloadImage/293607990-2581-494997/Screenshot+%282%29.webp"/></a></p>
+<p><a href="https://community.element14.com/resized-image/__size/620x420/__key/roadtestreviewfiles/3d1f57c289b548ca8213f35134702654/5557.contentimage_5F00_158984.png"><img alt="img" src="https://community.element14.com/resized-image/__size/620x420/__key/roadtestreviewfiles/3d1f57c289b548ca8213f35134702654/5557.contentimage_5F00_158984.png"/></a></p>
 <p>In order to verify if all softwares are installed correctly, Open LabVIEW.Click on File &gt; New <span class="caps">VI</span>.</p>
 <p>On one the panels, click on Window &gt; Tile Left and Right. Right-click on the block diagram, scroll down to see that Arduino (LabView interface for Arduino: <span class="caps">LIFA</span>) and <span class="caps">LINX</span> is installed.</p>
-<p>### <strong>Uploading LabView Interface for Arduino Firmware</strong></p>
+<h3 id="uploading-labview-interface-for-arduino-firmware"><strong>Uploading LabView Interface for Arduino Firmware</strong><a class="headerlink" href="#uploading-labview-interface-for-arduino-firmware" title="Permanent link">¶</a></h3>
 <p>In order to interface Arduino with the LabView, we need to upload a sketch that acts as a firmware.</p>
 <p>For that make sure that you have Arduino ide already installed</p>
 <p>Open the arduino ide and upload the sketch that has the path:</p>
 <p>C:\Program Files (x86)\ National Instruments\</p>
 <p>LabVIEW 2017\ vi.lib\ LabVIEW Interface for Arduino\ Firmware\ LIFA_Base\ LIFA_Base.ino</p>
-<p><a href="https://www.element14.com/community/servlet/JiveServlet/showImage/293607990-2581-494998/Screenshot+(4).webp"><img alt="img" src="https://www.element14.com/community/servlet/JiveServlet/downloadImage/293607990-2581-494998/Screenshot+%284%29.webp"/></a></p>
+<p><a href="https://community.element14.com/resized-image/__size/620x335/__key/roadtestreviewfiles/3d1f57c289b548ca8213f35134702654/0743.contentimage_5F00_158985.png"><img alt="img" src="https://community.element14.com/resized-image/__size/620x335/__key/roadtestreviewfiles/3d1f57c289b548ca8213f35134702654/0743.contentimage_5F00_158985.png"/></a></p>
 <p>(adjust the path based on the installation location of the LabView)</p>
 <p>Check for Board type and <span class="caps">COM</span> Port under Tools menu</p>
 <p><span class="caps">NOTE</span>: Do not upload any code to Arduino Board</p>
 <p>hereafter. Arduino Board with LIFA_Base firmware is now ready to be used with LabVIEW 2017.</p>
-<p>## <strong><span class="caps">PART</span> 2: Interfacing and Controlling an <span class="caps">LED</span> using LabVIEW, Arduino and <span class="caps">LIFA</span></strong></p>
+<h2 id="part-2-interfacing-and-controlling-an-led-using-labview-arduino-and-lifa"><strong><span class="caps">PART</span> 2: Interfacing and Controlling an <span class="caps">LED</span> using LabVIEW, Arduino and <span class="caps">LIFA</span></strong><a class="headerlink" href="#part-2-interfacing-and-controlling-an-led-using-labview-arduino-and-lifa" title="Permanent link">¶</a></h2>
 <p>The hello world equivalent in Arduino is an <span class="caps">LED</span> blink sketch, let us look at the implementation of led blink in LabView. Every program in LabVIEW is called a <span class="caps">VI</span> it ends with an extension dot <span class="caps">VI</span> click.</p>
 <p>On creating a new project in Labview you will see two windows opening the first one has a front panel and the second one is the block diagram</p>
-<p><a href="https://www.element14.com/community/servlet/JiveServlet/showImage/293607990-2581-495107/Screenshot+(3).webp"><img alt="img" src="https://www.element14.com/community/servlet/JiveServlet/downloadImage/293607990-2581-495107/Screenshot+%283%29.webp"/></a></p>
+<p><a href="https://community.element14.com/cfs-file/__key/roadtestreviewfiles/3d1f57c289b548ca8213f35134702654/3580.contentimage_5F00_158986.png"><img alt="img" src="https://community.element14.com/cfs-file/__key/roadtestreviewfiles/3d1f57c289b548ca8213f35134702654/3580.contentimage_5F00_158986.png"/></a></p>
 <p>the front panel will usually house all kinds of numeric controls knobs dials meters gauge</p>
 <p>boolean buttons <span class="caps">LED</span> graphs charts indicators and the block diagram will have all programming tools structures numeric functions like addition subtraction boolean functions etc.</p>
 <p>now what we have to start with is right click on the block diagram scroll down to Arduino.</p>
@@ -182,7 +189,7 @@
 <p>second, you specify the baud rate (whatever is in the bracket is by default so</p>
 <p>you don’t have to specify it again) Board type would be Mega.</p>
 <p>Now let us think about the flow of the program, first the led will be initialised as output then its is set high and then the loop continues till an event triggers the end. We represent the flow of the program in LabView in the same way. The following would be the possible connection in the flow.</p>
-<p><a href="https://www.element14.com/community/servlet/JiveServlet/showImage/293607990-2581-495108/Screenshot+(6).webp"><img alt="img" src="https://www.element14.com/community/servlet/JiveServlet/downloadImage/293607990-2581-495108/Screenshot+%286%29.webp"/></a></p>
+<p><a href="https://community.element14.com/cfs-file/__key/roadtestreviewfiles/3d1f57c289b548ca8213f35134702654/0336.contentimage_5F00_158987.png"><img alt="img" src="https://community.element14.com/cfs-file/__key/roadtestreviewfiles/3d1f57c289b548ca8213f35134702654/0336.contentimage_5F00_158987.png"/></a></p>
 <p>Error out pin of initialisation module is wired in series to an error in pin of digital pin mode and digital write and finally the close module. The same arrangement is made with Arduino resource pin of each module.</p>
 <p>the pin number is set by creating a constant at the io pin of the pinmode module and setting its value to 13 and output.The value of 0 1 at the value point in digital write module is equivalent to the High and Low mode.</p>
 <p>Now to set the loop right click go to programming &gt; structure find the while loop module and draw a square around the digitalwrite module (the one we want to repeat). set the constitutional terminal to a boolean control such as a button in the front end editor.</p>
