@@ -10,7 +10,7 @@ gittime: off
 ---
 [TOC]
 
-This post is about Interfacing Arduino Mega using LabVIEW. It was originally posted [here](https://www.element14.com/community/roadTestReviews/2581/l/arduino-a000067-mega2560-rev3-development-board-review) as a part of element14’s RoadTest. I thank element14 for sending me the review unit.
+This post is about Interfacing Arduino Mega using LabVIEW. It was originally posted [here](https://community.element14.com/products/roadtest/rv/roadtest_reviews/233/arduino_a000067_mega_3) as a part of element14’s RoadTest. I thank element14 for sending me the review unit.
 
 - **Evaluation Type:** Independent Products
 
@@ -20,9 +20,8 @@ This post is about Interfacing Arduino Mega using LabVIEW. It was originally pos
 
 - **What were the biggest problems encountered?:** When arduino ide is running, other programs such as Labview cant programme the mega.This is true in general of all arduino device.The only solution i found was to close arduino ide , log off and then log back in.
 
-- 
 
-- Detailed Review:
+# Detailed Review:
 
   Arduino Mega the big brother of Arduino Uno has 54 digital I/O pins, 16 analogue inputs. That's a whopping difference of 40 digital and 10 analogue pins.the closest to it in the Arduino family is the Arduino Due.
 
@@ -35,14 +34,11 @@ This post is about Interfacing Arduino Mega using LabVIEW. It was originally pos
    
 
    
+## Part 1: Installing LabVIEW and NI-VISA.
 
    
 
-  ## Part 1: Installing LabVIEW and NI-VISA.
-
-   
-
-  Go to [www.ni.com/trylabview](https://www.element14.com/community/external-link.jspa?url=http%3A%2F%2Fwww.ni.com%2Ftrylabview)
+  Go to [www.ni.com/trylabview](https://www.ni.com/trylabview)
 
    
 
@@ -70,7 +66,7 @@ This post is about Interfacing Arduino Mega using LabVIEW. It was originally pos
 
    
 
-  To download NI-VISA driver for serial communication go to [https://www.ni.com/visa/](https://www.element14.com/community/external-link.jspa?url=https%3A%2F%2Fwww.ni.com%2Fvisa%2F) and download the appropriate version of the software, Install it in the same way as before.
+  To download NI-VISA driver for serial communication go to [https://www.ni.com/visa/](https://www.ni.com/visa/) and download the appropriate version of the software, Install it in the same way as before.
 
    
 
@@ -92,7 +88,7 @@ This post is about Interfacing Arduino Mega using LabVIEW. It was originally pos
 
   Once the installation is done without any errors you should Notice an "installed" symbol to the left of Digilent LINX toolbox, click finish.
 
-  [![img](https://www.element14.com/community/servlet/JiveServlet/downloadImage/293607990-2581-494997/Screenshot+%282%29.webp)](https://www.element14.com/community/servlet/JiveServlet/showImage/293607990-2581-494997/Screenshot+(2).webp)
+  [![img](https://community.element14.com/resized-image/__size/620x420/__key/roadtestreviewfiles/3d1f57c289b548ca8213f35134702654/5557.contentimage_5F00_158984.png)](https://community.element14.com/resized-image/__size/620x420/__key/roadtestreviewfiles/3d1f57c289b548ca8213f35134702654/5557.contentimage_5F00_158984.png)
 
   In order to verify if all softwares are installed correctly, Open LabVIEW.Click on File > New VI.
 
@@ -100,7 +96,7 @@ This post is about Interfacing Arduino Mega using LabVIEW. It was originally pos
 
    
 
-  ### **Uploading LabView Interface for Arduino Firmware**
+### **Uploading LabView Interface for Arduino Firmware**
 
   In order to interface Arduino with the LabView, we need to upload a sketch that acts as a firmware.
 
@@ -114,7 +110,7 @@ This post is about Interfacing Arduino Mega using LabVIEW. It was originally pos
 
   LabVIEW 2017\ vi.lib\ LabVIEW Interface for Arduino\ Firmware\ LIFA_Base\ LIFA_Base.ino
 
-  [![img](https://www.element14.com/community/servlet/JiveServlet/downloadImage/293607990-2581-494998/Screenshot+%284%29.webp)](https://www.element14.com/community/servlet/JiveServlet/showImage/293607990-2581-494998/Screenshot+(4).webp)
+  [![img](https://community.element14.com/resized-image/__size/620x335/__key/roadtestreviewfiles/3d1f57c289b548ca8213f35134702654/0743.contentimage_5F00_158985.png)](https://community.element14.com/resized-image/__size/620x335/__key/roadtestreviewfiles/3d1f57c289b548ca8213f35134702654/0743.contentimage_5F00_158985.png)
 
   (adjust the path based on the installation location of the LabView)
 
@@ -128,13 +124,13 @@ This post is about Interfacing Arduino Mega using LabVIEW. It was originally pos
 
    
 
-  ## **PART 2: Interfacing and Controlling an LED using LabVIEW, Arduino and LIFA**
+## **PART 2: Interfacing and Controlling an LED using LabVIEW, Arduino and LIFA**
 
   The hello world equivalent in Arduino is an LED blink sketch, let us look at the implementation of led blink in LabView. Every program in LabVIEW is called a VI it ends with an extension dot VI click.
 
   On creating a new project in Labview you will see two windows opening the first one has a front panel and the second one is the block diagram
 
-  [![img](https://www.element14.com/community/servlet/JiveServlet/downloadImage/293607990-2581-495107/Screenshot+%283%29.webp)](https://www.element14.com/community/servlet/JiveServlet/showImage/293607990-2581-495107/Screenshot+(3).webp)
+  [![img](https://community.element14.com/cfs-file/__key/roadtestreviewfiles/3d1f57c289b548ca8213f35134702654/3580.contentimage_5F00_158986.png)](https://community.element14.com/cfs-file/__key/roadtestreviewfiles/3d1f57c289b548ca8213f35134702654/3580.contentimage_5F00_158986.png)
 
   the front panel will usually house all kinds of numeric controls knobs dials meters gauge
 
@@ -160,7 +156,7 @@ This post is about Interfacing Arduino Mega using LabVIEW. It was originally pos
 
   Now let us think about the flow of the program, first the led will be initialised as output then its is set high and then the loop continues till an event triggers the end. We represent the flow of the program in LabView in the same way. The following would be the possible connection in the flow.
 
-  [![img](https://www.element14.com/community/servlet/JiveServlet/downloadImage/293607990-2581-495108/Screenshot+%286%29.webp)](https://www.element14.com/community/servlet/JiveServlet/showImage/293607990-2581-495108/Screenshot+(6).webp)
+  [![img](https://community.element14.com/cfs-file/__key/roadtestreviewfiles/3d1f57c289b548ca8213f35134702654/0336.contentimage_5F00_158987.png)](https://community.element14.com/cfs-file/__key/roadtestreviewfiles/3d1f57c289b548ca8213f35134702654/0336.contentimage_5F00_158987.png)
 
   Error out pin of initialisation module is wired in series to an error in pin of digital pin mode and digital write and finally the close module. The same arrangement is made with Arduino resource pin of each module.
 
