@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="/theme/css/style.min.css?2fcac227">
+
+        <link rel="dns-prefetch" href="//fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+
+        <meta name="author" content="Ashwin" />
+
+        <meta name="description" content="This post talks about construction of a novel stove stand that harnesses energy wasted during cooking.
+" />
+        <meta name="twitter:creator" content="@iamashwin99">
+        <meta property="og:type" content="article" />
+        <meta name="twitter:card" content="summary">
+
+<meta name="keywords" content="Seebeck effect, stove, cooking, energy, thermoelectric, Engineering, " />
+
+<meta property="og:title" content="A Novel Stove Stand  - A way to harness energy wasted during cooking "/>
+<meta property="og:url" content="/a-novel-stove-stand" />
+<meta property="og:description" content="This post talks about construction of a novel stove stand that harnesses energy wasted during cooking." />
+<meta property="og:site_name" content="Ashwin&#39;s Chronicles🗞️" />
+<meta property="og:article:author" content="Ashwin" />
+<meta property="og:article:published_time" content="2014-11-13T00:00:00+05:30" />
+<meta name="twitter:title" content="A Novel Stove Stand  - A way to harness energy wasted during cooking ">
+<meta name="twitter:description" content="This post talks about construction of a novel stove stand that harnesses energy wasted during cooking.">
+<meta property="og:image" content="/theme/images/final.png" />
+<meta name="twitter:image" content="/theme/images/final.png" >
+
+        <title>A Novel Stove Stand  - A way to harness energy wasted during cooking  · Ashwin&#39;s Chronicles🗞️
+</title>
+        <link rel="shortcut icon" href="/theme/images/favicon.ico" type="image/x-icon" />
+        <link rel="icon" href="/theme/images/apple-touch-icon-152x152.png" type="image/png" />
+        <link rel="apple-touch-icon" href="/theme/images/apple-touch-icon.png"  type="image/png" />
+        <link rel="apple-touch-icon" sizes="57x57" href="/theme/images/apple-touch-icon-57x57.png" type="image/png" />
+        <link rel="apple-touch-icon" sizes="72x72" href="/theme/images/apple-touch-icon-72x72.png" type="image/png" />
+        <link rel="apple-touch-icon" sizes="76x76" href="/theme/images/apple-touch-icon-76x76.png" type="image/png" />
+        <link rel="apple-touch-icon" sizes="114x114" href="/theme/images/apple-touch-icon-114x114.png" type="image/png" />
+        <link rel="apple-touch-icon" sizes="120x120" href="/theme/images/apple-touch-icon-120x120.png" type="image/png" />
+        <link rel="apple-touch-icon" sizes="144x144" href="/theme/images/apple-touch-icon-144x144.png" type="image/png" />
+        <link rel="apple-touch-icon" sizes="152x152" href="/theme/images/apple-touch-icon-152x152.png" type="image/png" />
+        <link rel="apple-touch-icon" sizes="152x152" href="/theme/images/apple-touch-icon-180x180.png" type="image/png" />
+        <link href="/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Ashwin&#39;s Chronicles🗞️ - Full Atom Feed" />
+
+
+
+    </head>
+    <body>
+        <div id="content">
+            <div class="navbar navbar-static-top">
+                <div class="navbar-inner">
+                    <div class="container-fluid">
+                        <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </a>
+                        <a class="brand" href="/"><span class=site-name><span style="color:#329A97;">Ashwin's</span> <span style="color:purple">Chronicles</span>🗞️ </span></a>
+                        <div class="nav-collapse collapse">
+                            <ul class="nav pull-right top-menu">
+                                <li >
+                                    <a href=
+                                       "/"
+                                    >Home</a>
+                                </li>
+                                <li ><a href="/AboutMe">About&nbsp;Me</a></li>
+                                <li ><a href="/categories">Categories</a></li>
+                                <li ><a href="/tags">Tags</a></li>
+                                <li ><a href="/archives">Archives</a></li>
+                                <li><form class="navbar-search" action="/search" onsubmit="return validateForm(this.elements['q'].value);"> <input type="text" class="search-query" placeholder="Search" name="q" id="tipue_search_input"></form></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid">
+                <div class="row-fluid">
+                    <div class="span1"></div>
+                    <div class="span10">
+<article itemscope>
+<div class="row-fluid">
+    <header class="page-header span10 offset2">
+        <h1>
+            <a href="/a-novel-stove-stand">
+                A Novel Stove&nbsp;Stand
+                <small class="subtitle">
+                    A way to harness energy wasted during cooking
+                </small>
+            </a>
+        </h1>
+    </header>
+</div>
+
+<div class="row-fluid">
+    <div class="span2 table-of-content">
+        <nav>
+        <h4>Contents</h4>
+        <div class="toc">
+<ul>
+<li><a href="#introduction">Introduction</a><ul>
+<li><a href="#the-problem">The problem</a></li>
+<li><a href="#the-solution">The solution</a></li>
+</ul>
+</li>
+<li><a href="#model-1-the-first-prototype">Model 1 : The first prototype</a><ul>
+<li><a href="#1-scientific-principle-involved">1. Scientific principle involved</a><ul>
+<li><a href="#working-principle-of-thermoelectric-generator-teg">Working Principle of thermoelectric generator (<span class="caps">TEG</span>)</a></li>
+</ul>
+</li>
+<li><a href="#experimental-method">Experimental method</a><ul>
+<li><a href="#basic-model-of-a-novel-stove-stand">Basic model of a Novel Stove Stand</a></li>
+<li><a href="#improvised-model-of-novel-stove-stand">Improvised model of Novel stove stand</a></li>
+<li><a href="#observation-and-results">Observation and Results</a></li>
+<li><a href="#conclusion">Conclusion:</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#model-2-the-second-prototype">Model 2 : The second prototype</a><ul>
+<li><a href="#aim-objective">Aim / Objective</a></li>
+<li><a href="#materials-methods-experimentation">Materials <span class="amp">&amp;</span> Methods / Experimentation</a><ul>
+<li><a href="#matierls-and-methods">Matierls and Methods</a></li>
+<li><a href="#experimentation">Experimentation</a></li>
+</ul>
+</li>
+<li><a href="#calculations">Calculations</a></li>
+<li><a href="#results-observation-findings">Results / Observation / Findings</a><ul>
+<li><a href="#1-voltage-based-calculations">1) Voltage based calculations</a></li>
+<li><a href="#2-temperature-based-calculations">2) Temperature based calculations</a><ul>
+<li><a href="#to-find-conversion-ratio">To find conversion ratio</a></li>
+</ul>
+</li>
+<li><a href="#2-to-find-the-effect-on-cooking">2) To find the effect on cooking</a></li>
+<li><a href="#significance-conclusion">Significance / Conclusion</a></li>
+<li><a href="#innovation-novelty">Innovation / Novelty</a></li>
+<li><a href="#data-source">Data source</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+        </nav>
+    </div>
+    <div class="span8 article-content">
+            
+            <main>
+                
+<p>This post is about the construction of a novel stove stand that harnesses energy wasted during cooking. It was originally a experimental project from my school days (developed from 9th - 12th grade). I have tried to document it as best as I can. It has won over many science exhibitions. I hope you find it interesting.</p>
+<h1 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">¶</a></h1>
+<p>Today there is energy crisis every where. Even small amount of energy that we can conserve is of great importance. But we are wasting a large amount of heat energy in stove, furnaces in various industries etc.
+Growing technology have tried to conserve as much of energy as possible. But there is still a large opportunity to conserve energy. In this project work we have applied the principle of thermoelectric effect to utilize waste heat from gas stove and store it for later use.</p>
+<h2 id="the-problem">The problem<a class="headerlink" href="#the-problem" title="Permanent link">¶</a></h2>
+<p>The primary prblem we are trying to solve today is that of the <span class="caps">LPG</span> gas stove.</p>
+<div style="border: 1px solid black; padding: 5px;width:30%;">
+<img alt="Example of an LPG stove at Indian households" src="/novel-stove-images/stove-at-home.jpg"/>
+<p style="text-align: center;">Example of an <span class="caps">LPG</span> stove at Indian households</p>
+</div>
+<p>The <span class="caps">LPG</span> gas stove is a very common device used in every household. It is used for cooking food. The <span class="caps">LPG</span> gas stove is a very inefficient device. It wastes a lot of heat energy. The heat energy is wasted in two ways. One is the heat energy that is wasted by the flame. The other is the heat energy that is wasted by the utensil. The heat energy that is wasted by the flame is very high.
+The flame not only heats the utensil but also the surrounding air. This can easily be felt as cooking in the kitchen for a long time makes the kitchen very hot. This heat energy is wasted.  This is also very evident in the case of street food vendors also common in India.
+<!-- <img alt="Example of a street food vendor" src="/novel-stove-images/chat-seller.jpg" /> -->
+<div style="border: 1px solid black; padding: 5px;width:60%;">
+<img alt="Example of a street food vendor" src="/novel-stove-images/chat-seller.jpg"/>
+<p style="text-align: center;">Example of a street food vendor</p>
+</div></p>
+<h2 id="the-solution">The solution<a class="headerlink" href="#the-solution" title="Permanent link">¶</a></h2>
+<h1 id="model-1-the-first-prototype">Model 1 : The first prototype<a class="headerlink" href="#model-1-the-first-prototype" title="Permanent link">¶</a></h1>
+<h2 id="1-scientific-principle-involved">1. Scientific principle involved<a class="headerlink" href="#1-scientific-principle-involved" title="Permanent link">¶</a></h2>
+<p><strong>Seebeck effect :</strong> This project work is based on the principle of Seebeck effect. The Seebeck effect is the conversion of temperature differences directly into electricity and is named after Thomas Johann Seebeck. Metals respond to the temperature difference in different ways, creating a current loop and a magnetic field. The Seebeck effect is a classic example of an electromotive force (emf) and leads to measurable currents or voltages in the same way as any other emf.</p>
+<p>Electromotive force <span class="math">\(Emf = Sc * T\)</span> (in joule).</p>
+<p>Where Sc - Seebeck coefficient a property of the local material, T - Gradient in temperature <strong>.</strong></p>
+<p>The Seebeck coefficients generally vary as function of temperature, and depend strongly on the composition of the conductor. Thermoelectric generators are used for creating power from heat differentials.</p>
+<h3 id="working-principle-of-thermoelectric-generator-teg">Working Principle of thermoelectric generator (<span class="caps">TEG</span>)<a class="headerlink" href="#working-principle-of-thermoelectric-generator-teg" title="Permanent link">¶</a></h3>
+<p>Thermoelectric generators are solid-state heat engines that operate according to the Seebeck Effect. A thermoelectric generator is made of many pairs of p-type and n-type elements. The p-type and n-type have positive and negative Sc respectively. Connecting a p-type element to an n-type element creates a voltage potential across the junction. This voltage potential is proportional to the differences in the Sc in each element and the temperature of the junction. Soon, each hole and electron that “switch sides” will be in equilibrium and act like a barrier, preventing more electrons or holes from migrating. This is called the depletion zone. Heating this depletion zone area and cooling other ends of the element can break down this depletion zone. The mobile holes in the p-type are excited by the heat and move further into the element with the extra kinetic energy. The same happens to the mobile electrons in the n-type material. The net effect: many of the holes pile up at the cold end of the p-type element and many of the electrons pile up at the cold end of the n-type element, thereby creating a voltage potential across the p-n junction. By placing an electrical load or wire from the cold end of the p-type element to the n-type element, the electrons from the n-type element will flow at towards the end of the p-type element . In response, a hole from the p-type element will migrate towards n-type. The end effect is current flow across a voltage potential (from the p-n junction), and electrical power is created. This power is a function of many things such as temperature difference, Sc, and the electrical load that connects the sides.
+<div style="border: 1px solid black; padding: 5px;width:60%;">
+<img alt="Explanation of the thermoelectric generator" src="/novel-stove-images/principle-teg.jpg"/>
+<p style="text-align: center;">Explanation of the thermoelectric generator</p>
+</div></p>
+<h2 id="experimental-method">Experimental method<a class="headerlink" href="#experimental-method" title="Permanent link">¶</a></h2>
+<h3 id="basic-model-of-a-novel-stove-stand">Basic model of a Novel Stove Stand<a class="headerlink" href="#basic-model-of-a-novel-stove-stand" title="Permanent link">¶</a></h3>
+<p>This is a practical application of thermoelectric effect. Circuit of copper - copper oxide junction on the hot wire and an opposing copper oxide - copper junction on the cold wireis connected. Copper oxide, also acts like a thermistor with a very high negative temperature coefficient. Even the “cold” wire still gets hot enough that the resistance of the copper oxide drops relatively to a very low value - enabling current to flow.</p>
+<div style="border: 1px solid black; padding: 5px;width:60%;">
+<img alt="The first prototype of the Cu-CuO based stove stand" src="/novel-stove-images/first-prototype.jpg"/>
+<p style="text-align: center;">The first prototype of the Cu-CuO based stove stand</p>
+</div>
+<p><strong>The current also depends on the following factors</strong></p>
+<ul>
+<li>the thickness of copper wire used</li>
+<li>the hot copper oxide conductor not touching its neighbour</li>
+<li>the no. of junction in series</li>
+<li>the distance between the hot and cold junctions</li>
+</ul>
+<h3 id="improvised-model-of-novel-stove-stand">Improvised model of Novel stove stand<a class="headerlink" href="#improvised-model-of-novel-stove-stand" title="Permanent link">¶</a></h3>
+<p>This is practical application of thermoelectric effect. Four sets of <span class="caps">TEG</span> connected in a series to an aluminum metal box around the stove and the heat energy is converted into electrical energy.
+This is presented as “Model 2 : The second prototype” below.
+<div style="border: 1px solid black; padding: 5px;width:60%;">
+<img alt="Example of a TEG device" src="/novel-stove-images/teg.jpg"/>
+<p style="text-align: center;">Example of a <span class="caps">TEG</span> device</p>
+</div></p>
+<h3 id="observation-and-results">Observation and Results<a class="headerlink" href="#observation-and-results" title="Permanent link">¶</a></h3>
+<p>The energy generated by the Cu-CuO based stove stand is not sufficient to charge a mobile phone. But it can be used to light up a <span class="caps">LED</span>.  but it is not efficient to capture all the wated energy, a more efficient device design is required to capture the extra flames and a better heat to electricity device must be employed (<span class="caps">TEG</span> or <span class="caps">TEC</span>). This is presented as “Model 2 : The second prototype” below.</p>
+<h3 id="conclusion">Conclusion:<a class="headerlink" href="#conclusion" title="Permanent link">¶</a></h3>
+<p>Using this novel stove stand, the heat energy that was being wasted can be converted into electrical energy which can be further utilized for charging the devices viz., mobile charger and other electrical applications.</p>
+<h1 id="model-2-the-second-prototype">Model 2 : The second prototype<a class="headerlink" href="#model-2-the-second-prototype" title="Permanent link">¶</a></h1>
+<h2 id="aim-objective">Aim / Objective<a class="headerlink" href="#aim-objective" title="Permanent link">¶</a></h2>
+<p>Converting waste heat energy liberated into useful electrical energy using a device called thermoelectric generator and powering various electrical gadgets. These energy wasted may be from sources like heat wasted during cooking food in gas stove in house, hotels and in other everyday situations like furnaces etc.
+This prototype was desinged keeping in mind the flaws from the first design where the flames were not captured efficiently and the device was not efficient enough to convert the heat energy into electrical energy.</p>
+<h2 id="materials-methods-experimentation">Materials <span class="amp">&amp;</span> Methods / Experimentation<a class="headerlink" href="#materials-methods-experimentation" title="Permanent link">¶</a></h2>
+<h3 id="matierls-and-methods">Matierls and Methods<a class="headerlink" href="#matierls-and-methods" title="Permanent link">¶</a></h3>
+<p>In this model four sets of TECs used as makeshift thermoelectric generator  are connected in series to a zinc metal box around the stove and the heat energy is converted into electrical energy. The output is about 5.5 V against a 10 ohm load resistor, the electricity is stored into a power bank and its output is taken to charge a mobile phone or other light gadgets.</p>
+<p>The device can be made in two versions viz. economic and efficient.
+<img alt="Fig1: The model" src="/novel-stove-images/model.jpg"/></p>
+<p>The efficient version includes four <span class="caps">TEG</span>’s (Thermoelectric generator) which are rated for its, high temperature to electricity conversion efficiency and can operate over greater temperature ranges.</p>
+<p>The economic version include a cheaper but less efficient device called thermoelectric cooler (<span class="caps">TEC</span>) which can be made to work in the same way as a thermoelectric generator (a reverse application of <span class="caps">TEC</span>). We are taking the latter version in the model.</p>
+<h3 id="experimentation">Experimentation<a class="headerlink" href="#experimentation" title="Permanent link">¶</a></h3>
+<p>This project work is based on the principle of Seebeck effect. The Seebeck effect is the conversion of temperature differences directly into electricity and is named after Thomas Johann Seebeck. The Seebeck effect is a classic example of an electromotive force and leads to measurable currents or voltages in the same way as any other emf.</p>
+<p>A thermoelectric generator is used in this device. Thermoelectric generators are solid-state heat engines that operate according to the Seebeck Effect.</p>
+<p>Schematically the model can be represented as in fig 2
+<!-- <img alt="Fig2: The schematic diagram of the model" src="/novel-stove-images/schmeaticdia.jpg" /> -->
+<div style="border: 1px solid black; padding: 5px;width:50%;">
+<img alt="Fig2: The schematic diagram of the model" src="/novel-stove-images/schmeaticdia.jpg"/>
+<p style="text-align: center;">Fig2: The schematic diagram of the model</p>
+</div></p>
+<ul>
+<li>
+<p>Here “A” represents the burner. The device is built with the burner as the center.</p>
+</li>
+<li>
+<p><span class="dquo">“</span>B” here is the heart of the device. It is the thermoelectric generator, it is sandwiched between the wall “C” and the aluminum heat sink (the one which has saw like teeth).The device receives its heat from “C” and the heat sink cools it from the other side. Each Thermoelectric device has two leads coming out of it. One positive and the other negative. All the <span class="caps">TEG</span> are connected in series.</p>
+</li>
+<li>
+<p><span class="dquo">“</span>C” represents the walls of the device which is made of zinc sheet.</p>
+</li>
+<li>
+<p><span class="dquo">“</span>E ” represents the wire inter connecting all the four TEGs in series</p>
+</li>
+<li>
+<p><span class="dquo">“</span>D” is the final wire connecting the first and the fourth <span class="caps">TEG</span>, One here is positive and the other is the negative wire. The output is taken from these leads.</p>
+</li>
+</ul>
+<p>The device is to be kept beside the flame of the stove (or if possible integrate the device into the stove itself.) and the utensil is kept inside the walls of the device. When cooking starts, the flames from “A” heat up the plates “C” and that of the utensil. This heat is absorbed by the plates “C” and is transmitted to the <span class="caps">TEG</span> (“B”) by conduction. <span class="caps">TEG</span> converts this heat in to electricity and is outputted through the leads (E). Since they are all connected in series the voltage add up to the final voltage in “D”. The aluminum heat sink helps cool the other side of the <span class="caps">TEG</span> to increase the temperature gradient .The output through “D” can be feed into the gadgets required like <span class="caps">LED</span> lamp or a mobile phone charger etc. through a stabilizing circuit (as per requirement).</p>
+<h2 id="calculations">Calculations<a class="headerlink" href="#calculations" title="Permanent link">¶</a></h2>
+<p>A plot of Volts (under a constant load resistor) vs. Time is made by using the average of two observations done on two different days.</p>
+<p>To find the power captured by the walls of the device (which would have been dissipated into the atmosphere if the device wasn’t kept.) a plot Temperature vs. Time graph is made, data for which is taken from the above two experiment and is then averaged. At the equilibrium point the energy absorbed by metal sheet is equal to the energy radiated out thus a temperature equilibrium is achieved. A slope of the graph at this point gives us instantaneous rate change of temperature with respect to time i.e. . Then using the formula given below (eq1) which is the absorbed heat is calculated. The equation eq 1 is obtained by differentiating Q = m S ΔT Where Q is heat; m is the mass; S is the specific heat; and ΔT is the change in temperature</p>
+<p><span class="math">\(\frac{dQ}{dt}=mS\frac{dT}{dt}\)</span></p>
+<h2 id="results-observation-findings">Results / Observation / Findings<a class="headerlink" href="#results-observation-findings" title="Permanent link">¶</a></h2>
+<p>The observations have been divided into two types of calculation.
+- 1) Voltage based and
+- 2) temperature based.</p>
+<h3 id="1-voltage-based-calculations">1) Voltage based calculations<a class="headerlink" href="#1-voltage-based-calculations" title="Permanent link">¶</a></h3>
+<p>The energy produced by each of the device is calculated based on observed data (for <span class="caps">TEC</span>) and collected data (for <span class="caps">TEG</span>). The table and graph below shows the results and calculation. Here energy saved is calculated using <span class="math">\(E = V^2 t/ R.\)</span></p>
+<p>Graph 1 shows a curve that initially increases sharply and then stabilises at around 5.5 V. First the energy saved by a home which uses this device for two hours a day is calculated then for a month and a year. Next Energy saved by a City with 10,000 families using this device in a year is taken into consideration.</p>
+<p>The economical version (<span class="caps">TEC</span> type) of the device can generate 3.025 W but its fabrication cost comes out to be Rs 750. However the efficient version (<span class="caps">TEG</span> type) could generate 20 W of power with the cost of production coming at around Rs 4000 ($48).
+<!-- <img alt="Graph 1: A graph showing output voltage versus time" src="/novel-stove-images/graph1.jpg" /> -->
+<div style="border: 1px solid black; padding: 5px;width:70%;">
+<img alt="Graph 1: A graph showing output voltage versus time" src="/novel-stove-images/graph1.jpg"/>
+<p style="text-align: center;">Graph 1: A graph showing output voltage versus time</p>
+</div></p>
+<table>
+<thead>
+<tr>
+<th>Table          1. Showing the comparison on the energy saved by the two devices</th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>Energy          saved the by economic version                (<span class="caps">TEC</span>)</td>
+<td>Energy          saved by more efficient version (<span class="caps">TEG</span>)   (expected results **ref             1           )</td>
+</tr>
+<tr>
+<td>Electricity             produced by the model</td>
+<td>5.5V            (under 10 ohm load resistor)</td>
+<td>21.2V           , 1 A</td>
+</tr>
+<tr>
+<td>Energy          saved by a home which uses this device for two hours a day</td>
+<td>2.17x<span class="math">\(10^4\)</span> J</td>
+<td>1.526x105           J</td>
+</tr>
+<tr>
+<td>Energy          saved by them in a month</td>
+<td>6.53x<span class="math">\(10^5\)</span>             J</td>
+<td>4.579           x <span class="math">\(10^6\)</span>            J</td>
+</tr>
+<tr>
+<td>Energy          saved by them in a year</td>
+<td>8.74            x <span class="math">\(10^6\)</span>            J</td>
+<td>5.571x          <span class="math">\(10^7\)</span>          J</td>
+</tr>
+<tr>
+<td>Energy          saved by a city with 10,000 families using this device (in 1 year)</td>
+<td>8.74            x <span class="math">\(10^{10}\)</span>             J</td>
+<td>5.571x          <span class="math">\(10^{11}\)</span>           J</td>
+</tr>
+</tbody>
+</table>
+<h3 id="2-temperature-based-calculations"><strong>2) Temperature based calculations</strong><a class="headerlink" href="#2-temperature-based-calculations" title="Permanent link">¶</a></h3>
+<p>These calculations are made to find out the feasibility of the device. I.e. to know the input output ratio and to know the effect of the device on heating.</p>
+<h4 id="to-find-conversion-ratio">To find conversion ratio<a class="headerlink" href="#to-find-conversion-ratio" title="Permanent link">¶</a></h4>
+<p>Consider the following Temperature vs Time plot.
+<!-- <img alt="Graph 2: A graph showing temperature versus time" src="/novel-stove-images/graph2.jpg" /> -->
+<div style="border: 1px solid black; padding: 5px;width:70%;">
+<img alt="Graph 2: A graph showing temperature versus time" src="/novel-stove-images/graph2.jpg"/>
+<p style="text-align: center;">Graph 2: A graph showing temperature versus time</p>
+</div></p>
+<p>At equilibrium point (just before temperature becomes constant) the slope was found to be 0.3. Thus using Eq 1 and taking <span class="math">\(m = 0.052 kg\)</span> (calculated value); <span class="math">\(S = 0.093 kcal/kg {}^{\circ}C\)</span> (** ref 2) and <span class="math">\(\frac{dT}{dt}\)</span> as 0.3 (from graph). We get <span class="math">\(\frac{dQ}{dt} = 0.052 *93*0.3 = 1.4508 cal/s = 6.07 watts\)</span>. Further average power expended by the aluminium heat sink as P = mSΔT/Δt and taking m = 0.952 kg; ΔT= 29.5; Δt = 130 s (calculated values) and <span class="math">\(S = 0.22 kcal/kg {}^{\circ}C\)</span> (** ref 2).</p>
+<p>So <span class="math">\(P = (0.952*220*29.5)/130 = 47.52 cal/s = 198.98\)</span> watt. <span class="math">\(P_{(total)} = 198.98+6.07 = 205.05\)</span> watt.</p>
+<p>So out of 205.05 watt absorbed only 3.025 watt is converted to electrical energy implying 1.475% efficiency which is quite low but still significant and is in accordance with the specs of a <span class="caps">TEC</span>.</p>
+<h3 id="2-to-find-the-effect-on-cooking">2) To find the effect on cooking<a class="headerlink" href="#2-to-find-the-effect-on-cooking" title="Permanent link">¶</a></h3>
+<p>To study the effect of the device on the cooking process, we measured the time taken to boil 100mL of water in two scenarios one without the device and one with the device.</p>
+<p>Table 2: Table showing boiling time of water with and without the device</p>
+<table>
+<thead>
+<tr>
+<th>Sl.no</th>
+<th>Water boiled</th>
+<th>Time taken</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Without the device</td>
+<td>1 min 35 s</td>
+</tr>
+<tr>
+<td>2</td>
+<td>With the device</td>
+<td>1 min</td>
+</tr>
+</tbody>
+</table>
+<p>The data confirms that the device doesn’t hinder the cooking process rather helps cook faster. The decreased time in cooking is due to the fact that those heat waves which would have escaped to the atmosphere are now confined by the walls of the device thus more waves heat up the utensil thus decreasing the cooking time.</p>
+<h3 id="significance-conclusion">Significance / Conclusion<a class="headerlink" href="#significance-conclusion" title="Permanent link">¶</a></h3>
+<p>Using this novel stove stand, the heat energy that was being wasted can be converted into electrical energy which can be further utilized for charging the devices viz., mobile charger and other electrical applications.</p>
+<p>People who involve in cooking activities for a long time have a great use for this device. These include but not limited to</p>
+<ul>
+<li>
+<p>Cooks at hotels</p>
+</li>
+<li>
+<p>Street vendors like chat vendors or tea seller</p>
+</li>
+<li>
+<p>People with a 24x7 fireplace and anywhere else where too much of waste heat is generated. However the design of the model has to be adjusted suit the size of the above application.</p>
+</li>
+</ul>
+<h3 id="innovation-novelty">Innovation / Novelty<a class="headerlink" href="#innovation-novelty" title="Permanent link">¶</a></h3>
+<p>It’s an innovative device to save energy from heat wasted while cooking. The device could be made built inside the stove itself for the generation of electricity which can be stored inside a battery for later use. Ideally the output could be directly connected with a <span class="caps">LED</span> lamp to light up the kitchen and when not required, the energy would be stored in a battery.</p>
+<h3 id="data-source">Data source<a class="headerlink" href="#data-source" title="Permanent link">¶</a></h3>
+<p>**ref 1 <a href="http://www.customthermoelectric.com/powergen.html">http://www.customthermoelectric.com/powergen.html</a></p>
+<p>**ref 2 http://www.engineeringtoolbox.com/specific-heat-metals-d_152.html</p>
+<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width < 768) ? "left" : align;
+        indent = (screen.width < 768) ? "0em" : indent;
+        linebreak = (screen.width < 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_CHTML';
+
+    var configscript = document.createElement('script');
+    configscript.type = 'text/x-mathjax-config';
+    configscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'none' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        availableFonts: ['STIX', 'TeX']," +
+        "        preferredFont: 'STIX'," +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+</script>
+            </main>
+
+
+             
+
+
+<div class="applause_button">
+    <applause-button url=/a-novel-stove-stand> </applause-button>
+</div>
+
+ 
+                <p id="post-share-links">
+    Like this post? Share on:
+      <a href="https://twitter.com/intent/tweet?text=A%20Novel%20Stove%C2%A0Stand%20A%20way%20to%20harness%20energy%20wasted%20during%20cooking&url=/a-novel-stove-stand&via=iamashwin99&hashtags=seebeck-effect,stove,cooking,energy,thermoelectric" target="_blank" rel="nofollow noopener noreferrer" title="Share on Twitter">Twitter</a>
+ ❄       <a href="https://www.facebook.com/sharer/sharer.php?u=/a-novel-stove-stand" target="_blank" rel="nofollow noopener noreferrer" title="Share on Facebook">Facebook</a>
+ ❄       <a href="https://www.reddit.com/submit?url=/a-novel-stove-stand&title=A%20Novel%20Stove%C2%A0Stand%20A%20way%20to%20harness%20energy%20wasted%20during%20cooking" target="_blank" rel="nofollow noopener noreferrer" title="Share on Reddit">Reddit</a>
+ ❄       <a href="https://www.linkedin.com/shareArticle?mini=true&url=/a-novel-stove-stand&title=A%20Novel%20Stove%C2%A0Stand%20A%20way%20to%20harness%20energy%20wasted%20during%20cooking&summary=This%20post%20talks%20about%20construction%20of%20a%20novel%20stove%20stand%20that%20harnesses%20energy%20wasted%20during%C2%A0cooking.&source=/a-novel-stove-stand" target="_blank" rel="nofollow noopener noreferrer" title="Share on LinkedIn">LinkedIn</a>
+ ❄       <a href="mailto:?subject=A%20Novel%20Stove%C2%A0Stand%20A%20way%20to%20harness%20energy%20wasted%20during%20cooking&amp;body=/a-novel-stove-stand" target="_blank" rel="nofollow noopener noreferrer" title="Share via Email">Email</a>
+
+            
+            
+
+
+
+
+
+
+
+<section>
+    <h6 style="display:none;">Comments</h6>
+    <p id="comment-message">So what do you think? Did I miss something? Is any part unclear? Leave your comments below. </p>
+
+    <div class="accordion" id="accordion2">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                <a class="accordion-toggle disqus-comment-count comment-count collapsed"
+                   data-toggle="collapse"
+                   data-parent="#accordion2"
+                   href="/a-novel-stove-stand#comment_thread"
+                   id="comment-accordion-toggle">
+                    Comments
+                </a>
+            </div>
+            <div id="comment_thread" class="accordion-body collapse">
+                <div class="accordion-inner">
+                    <div class="comments">
+
+                        <script src="https://utteranc.es/client.js"
+        data-repo="ashwinschronicles/ashwinschronicles.github.io"
+        data-issue-term="/a-novel-stove-stand"
+        data-label="💬Website-comments"
+        data-theme=""
+        crossorigin="anonymous"
+        async>
+</script>
+
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+            <hr/>
+            <aside>
+            <nav>
+            <ul class="articles-timeline">
+                <li class="next-article"><a href="/arduino-labview-review" title="Next: Interfacing Arduino Mega using LabVIEW">Interfacing Arduino Mega using LabVIEW</a> »</li>
+            </ul>
+            </nav>
+            </aside>
+        </div>
+        <section id="article-sidebar" class="span2">
+    <h4>Reading Time</h4>
+    <p>~11 min read</p>
+            <h4>Published</h4>
+            <time itemprop="dateCreated" datetime="2014-11-13T00:00:00+05:30">Nov 13, 2014</time>
+            <h4>Category</h4>
+            <a class="category-link" href="/categories#engineering-ref">Engineering</a>
+            <h4>Tags</h4>
+            <ul class="list-of-tags tags-in-article">
+                <li><a href="/tags#cooking-ref">cooking
+                    <span class="superscript">1</span>
+</a></li>
+                <li><a href="/tags#energy-ref">energy
+                    <span class="superscript">1</span>
+</a></li>
+                <li><a href="/tags#seebeck-effect-ref">Seebeck effect
+                    <span class="superscript">1</span>
+</a></li>
+                <li><a href="/tags#stove-ref">stove
+                    <span class="superscript">1</span>
+</a></li>
+                <li><a href="/tags#thermoelectric-ref">thermoelectric
+                    <span class="superscript">1</span>
+</a></li>
+            </ul>
+<h4>Stay in Touch</h4>
+<div id="sidebar-social-link">
+    <a href="mailto:ashwinkumar.k.rao@gmail.com" title="My Email Address" target="_blank" rel="nofollow noopener noreferrer">
+        <svg xmlns="http://www.w3.org/2000/svg" aria-label="Mail" role="img" viewBox="0 0 512 512"><rect width="512" height="512" rx="15%" fill="#328cff"/><path d="m250 186c-46 0-69 35-69 74 0 44 29 72 68 72 43 0 73-32 73-75 0-44-34-71-72-71zm-1-37c30 0 57 13 77 33 0-22 35-22 35 1v150c-1 10 10 16 16 9 25-25 54-128-14-187-64-56-149-47-195-15-48 33-79 107-49 175 33 76 126 99 182 76 28-12 41 26 12 39-45 19-168 17-225-82-38-68-36-185 67-248 78-46 182-33 244 32 66 69 62 197-2 246-28 23-71 1-71-32v-11c-20 20-47 32-77 32-57 0-108-51-108-108 0-58 51-110 108-110" fill="#fff"/></svg>
+    </a>
+    <a href="/feeds/all.atom.xml" title="" target="_blank" rel="nofollow noopener noreferrer">
+        <svg xmlns="http://www.w3.org/2000/svg" aria-label="RSS" role="img" viewBox="0 0 512 512"><rect width="512" height="512" rx="15%" fill="#f80"/><circle cx="145" cy="367" r="35" fill="#fff"/><path fill="none" stroke="#fff" stroke-width="60" d="M109 241c89 0 162 73 162 162M109 127c152 0 276 124 276 276"/></svg>
+    </a>
+    <a href="https://www.facebook.com/iamashwin99" title="" target="_blank" rel="nofollow noopener noreferrer">
+        <svg xmlns="http://www.w3.org/2000/svg" aria-label="Facebook" role="img" viewBox="0 0 512 512"><rect width="512" height="512" rx="15%" fill="#1877f2"/><path d="M355.6 330l11.4-74h-71v-48c0-20.2 9.9-40 41.7-40H370v-63s-29.3-5-57.3-5c-58.5 0-96.7 35.4-96.7 99.6V256h-65v74h65v182h80V330h59.6z" fill="#fff"/></svg>
+    </a>
+    <a href="https://www.linkedin.com/in/ashwin-k-4854b8121/" title="" target="_blank" rel="nofollow noopener noreferrer">
+        <svg xmlns="http://www.w3.org/2000/svg" aria-label="LinkedIn" role="img" viewBox="0 0 512 512" fill="#fff"><rect width="512" height="512" rx="15%" fill="#0077b5"/><circle cx="142" cy="138" r="37"/><path stroke="#fff" stroke-width="66" d="M244 194v198M142 194v198"/><path d="M276 282c0-20 13-40 36-40 24 0 33 18 33 45v105h66V279c0-61-32-89-76-89-34 0-51 19-59 32"/></svg>
+    </a>
+</div>
+            
+
+
+
+
+
+            
+
+
+
+<div id="mc-embed-signup">
+<!-- BEGIN FreeLists WEB FORM -->
+<form action="https://www.freelists.org/list/ashwinschronicles@freelists.org" target="_blank">
+<h4>Get New Release Alert</h4>
+  <input type="submit" value="Notify me" class="button">
+</form>
+<!-- END FreeLists WEB FORM -->
+</div>
+
+
+
+        </section>
+</div>
+</article>
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe.
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides.
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo https://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>                    </div>
+                    <div class="span1"></div>
+                </div>
+            </div>
+        </div>
+<footer>
+    <div>
+        All articles written by me in this website are licensed under <a rel="license" 
+    href="http://creativecommons.org/licenses/by/4.0/">
+    Creative Commons Attribution 4.0 International License</a>.
+    </div>
+
+
+
+
+    <div id="fpowered">
+        Powered by: <a href="http://getpelican.com/" title="Pelican Home Page" target="_blank" rel="nofollow noopener noreferrer">Pelican</a>
+        Theme: <a href="https://elegant.oncrashreboot.com/" title="Theme Elegant Home Page" target="_blank" rel="nofollow noopener noreferrer">Elegant</a>
+    </div>
+</footer>            <script src="//code.jquery.com/jquery.min.js"></script>
+        <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+        <script src="/theme/js/elegant.prod.9e9d5ce754.js"></script>
+        <script>
+            function validateForm(query)
+            {
+                return (query.length > 0);
+            }
+        </script>
+
+    <script>
+    (function () {
+        if (window.location.hash.match(/^#comment-\d+$/)) {
+            $('#comment_thread').collapse('show');
+        }
+    })();
+    window.onhashchange=function(){
+        if (window.location.hash.match(/^#comment-\d+$/))
+            window.location.reload(true);
+    }
+    $('#comment_thread').on('shown', function () {
+        var link = document.getElementById('comment-accordion-toggle');
+        var old_innerHTML = link.innerHTML;
+        $(link).fadeOut(200, function() {
+            $(this).text('Click here to hide comments').fadeIn(200);
+        });
+        $('#comment_thread').on('hidden', function () {
+            $(link).fadeOut(200, function() {
+                $(this).text(old_innerHTML).fadeIn(200);
+            });
+        })
+    })
+</script>
+
+    </body>
+    <!-- Theme: Elegant built for Pelican
+        License : MIT -->
+</html>

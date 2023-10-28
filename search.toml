@@ -76,3 +76,8 @@ title = "A beginers IoT Project."
 path = "arduino-labview-review.html"
 url = "/arduino-labview-review"
 title = "Interfacing Arduino Mega using LabVIEW"
+
+[[input.files]]
+path = "a-novel-stove-stand.html"
+url = "/a-novel-stove-stand"
+title = "A Novel Stove Stand"
