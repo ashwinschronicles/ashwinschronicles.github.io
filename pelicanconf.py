@@ -81,24 +81,24 @@ PLUGINS = [
           "search",
           # "tipu_search",
            "neighbors",
-           "render_math", 
+           "render_math",
            "sitemap",
            "more_categories",
            "liquid_tags.include_code",
            "liquid_tags.img",
            "neighbors",
-           "related_posts", 
+           "related_posts",
            "share_post",
-           "series", 
-           "post_stats", 
+           "series",
+           "post_stats",
            "pelican-js",
            "series", # which version of pelican works with tipue_search?
 #           "filetime_from_git",
            "extract_toc",
            "assets"
            ]
-           
-DIRECT_TEMPLATES = (('index', 'tags', 'categories','archives', 'search', '404'))  
+
+DIRECT_TEMPLATES = (('index', 'tags', 'categories','archives', 'search', '404'))
 
 
 SITEMAP = {
@@ -135,10 +135,10 @@ FEATURED_IMAGE = SITEURL + "/theme/images/final.png"
 SHARE_LINKS = [("twitter", "Twitter"), ("facebook", "Facebook"),("reddit","Reddit"),("linkedin","LinkedIn"), ("email", "Email")]
 
 # Legal
-SITE_LICENSE = """All articles written by me in this website are licensed under <a rel="license" 
+SITE_LICENSE = """All articles written by me in this website are licensed under <a rel="license"
     href="http://creativecommons.org/licenses/by/4.0/">
-    Creative Commons Attribution 4.0 International License</a>.""" 
-    
+    Creative Commons Attribution 4.0 International License</a>."""
+
 # Landing Page
 PROJECTS = [
   {
@@ -166,7 +166,7 @@ PROJECTS = [
 
 LANDING_PAGE_TITLE = "The Journey Begins"
 # SEO
-SITE_DESCRIPTION = u'Im Ashwin Kumar Karnad,currently dual majoring in Physics and Electronics and Instrumentation from BITS Pilani Goa Campus. This is my personal blog.'
+SITE_DESCRIPTION = u'Im Ashwin Kumar Karnad, currently a Research Software engineer at Max Planck Institute for structure and dynamics of matter, Hamburg. This is my personal blog.'
 
 
 #MISC
