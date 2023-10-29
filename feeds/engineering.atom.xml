@@ -1,0 +1,548 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Ashwin's Chronicles🗞️ - Engineering</title><link href="https://ashwinschronicles.github.io/" rel="alternate"></link><link href="https://ashwinschronicles.github.io/feeds/engineering.atom.xml" rel="self"></link><id>https://ashwinschronicles.github.io/</id><updated>2019-07-13T00:00:00+05:30</updated><entry><title>Analog Discovery 2 + LabVIEW Home Bundle - Review</title><link href="https://ashwinschronicles.github.io/analog-discovery-2-labview-home-bundle-review" rel="alternate"></link><published>2019-07-13T00:00:00+05:30</published><updated>2019-07-13T00:00:00+05:30</updated><author><name>Ashwin</name></author><id>tag:ashwinschronicles.github.io,2019-07-13:/analog-discovery-2-labview-home-bundle-review</id><summary type="html">&lt;p&gt;This post is a review of the Analog Discovery 2 + LabVIEW Home Bundle in a lab&amp;nbsp;environment&lt;/p&gt;</summary><content type="html">
+&lt;p&gt;This post is a review of the Analog Discovery 2 + LabVIEW Home Bundle in a lab environment. It was originally posted &lt;a href="https://www.element14.com/community/roadTestReviews/3075/l/analog-discovery-2-labview-home-bundle-review"&gt;here&lt;/a&gt; as a part of element14’s RoadTest. I thank element14 for sending me the review unit.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Evaluation Type:&lt;/strong&gt; Test Equipment&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Was everything in the box required?:&lt;/strong&gt; Yes&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Comparable Products/Other parts you considered:&lt;/strong&gt; &lt;span class="caps"&gt;ADALM1000&lt;/span&gt;,SainSmart &lt;span class="caps"&gt;DDS140&lt;/span&gt;,Hantek iDSO 1070A,Link Instruments &lt;span class="caps"&gt;MSO&lt;/span&gt;-28&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;What were the biggest problems encountered?:&lt;/strong&gt; Low power supply capability, coupling between Ch1 and Ch2 of the oscilloscope, it has bandwidth limitations and voltage input limitation, the device gets disconnected often(probably faulty cable)&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="detailed-review"&gt;Detailed Review:&lt;a class="headerlink" href="#detailed-review" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;h5 id="typical-use-case-of-labview-in-research-labs"&gt;Typical Use case of LabVIEW in research labs.&lt;a class="headerlink" href="#typical-use-case-of-labview-in-research-labs" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h5&gt;
+&lt;p&gt;Scientists around the world use LabVIEW and National Instruments products to design and control instruments. The lab that I currently work in does electrical and magnetic measurements of specific samples at liquid helium temperature (4 K). I wanted to interface all the instruments using LabVIEW. The system I’m using comprises of a Cryostat, Temperature controller, Source meter Unit. The cryostat uses a liquid helium compressor to cool down the chamber where the sample will be kept. The sample is kept on a sample holder that is designed in house, keeping in mind of all the sample space constraints and to maximise the thermal conductivity between cooler and the sample. An image of the sample holder with the sample can be seen here.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="AnD2_1" src="../images/AnD2_1.webp"/&gt;&lt;/p&gt;
+&lt;p&gt;The sample you see is connected thermally to a heater and a temperature sensor (cernox sensor). Wires from the sample, temperature sensor and the heater come out of the cooler to a breakout box. One can connect any instruments to this break outbox using banana pin wires. Currently, Lakeshore 336 (&lt;span class="caps"&gt;LS336&lt;/span&gt;) temperature controller, &lt;span class="caps"&gt;B2912A&lt;/span&gt; Source meters (&lt;span class="caps"&gt;SMU&lt;/span&gt;) are connected in the photo below.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="AnD2_2_analogdiscovery2" src="../images/AnD2_2_analogdiscovery2.webp" style="zoom: 25%;"/&gt;&lt;/p&gt;
+&lt;p&gt;A schematic of the setup is&lt;/p&gt;
+&lt;p&gt;&lt;img alt="AnD2_3_pastedImage_3" src="../images/AnD2_3_pastedImage_3.webp" style="zoom:100%;"/&gt;&lt;/p&gt;
+&lt;p&gt;I wanted to use LabVIEW to make a program to automate data acquisition of resistance of the sample as a function of sample temperature.&lt;/p&gt;
+&lt;p&gt;In Labview, such software are what are called &lt;span class="caps"&gt;VI&lt;/span&gt;’s which stands for virtual instrument. There are 2 parts to any &lt;span class="caps"&gt;VI&lt;/span&gt;, the front panel, where you put all the user-controllable elements like buttons tet bar etc and logical back panel/ where all the logic for the program is written using “G” programming language.&lt;/p&gt;
+&lt;p&gt;To get started with designing such software, typically one needs to install the instrumentation driver and look into example program. Luckily both &lt;span class="caps"&gt;LS336&lt;/span&gt; and &lt;span class="caps"&gt;SMU&lt;/span&gt; had instrument drivers available.&lt;/p&gt;
+&lt;p&gt;Once installed, one can find example codes by going to &lt;span class="caps"&gt;HELP&lt;/span&gt;&amp;gt;&lt;span class="caps"&gt;FIND&lt;/span&gt; &lt;span class="caps"&gt;EXAMPLE&lt;/span&gt;&amp;gt; and searching the model number. In the case of &lt;span class="caps"&gt;LS336&lt;/span&gt;, “Lakeshore 336 Configure heater output control parameters and acquire single reading.vi” example was just what I needed. It had all the features I wanted to control from that instrument. Heres an image of that vi.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Front Panel&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="AnD2_4_pastedImage_5" src="../images/AnD2_4_pastedImage_5.webp"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Back panel&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Now, however, &lt;span class="caps"&gt;SMU&lt;/span&gt;’s examples didn’t work well for me, in such a case, one would make a new &lt;span class="caps"&gt;VI&lt;/span&gt;, right-click on the block diagram and go to&lt;/p&gt;
+&lt;p&gt;&lt;img alt="AnD2_5_pastedImage_9" src="../images/AnD2_5_pastedImage_9.webp"/&gt;&lt;/p&gt;
+&lt;p&gt;The back panel (block diagram) actually contain many sub-&lt;span class="caps"&gt;VI&lt;/span&gt;’s that act as functions so one can use them in their own program. So, in the end, I combined parts from &lt;span class="caps"&gt;LS336&lt;/span&gt;’s example and &lt;span class="caps"&gt;SMU&lt;/span&gt;’s &lt;span class="caps"&gt;VI&lt;/span&gt; tree in a way that is suitable for the current requirement of measuring Resistance as a function of sample temperature. I also added functions to write the obtained data in a systematic format.&lt;/p&gt;
+&lt;p&gt;In the end, this is what was achieved.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="AnD2_6_pastedImage_9" src="../images/AnD2_6_pastedImage_9.webp"/&gt;&lt;/p&gt;
+&lt;p&gt;I would love to show you the block diagram but even 5 different images coudnt capture the entire block diagram (yes it was that messy!) so I have uploaded the source code at the end if anyone wants to take a look at it.&lt;/p&gt;
+&lt;p&gt;One of the better measurements I was able to do with this system was to measure superconducting transition temperature of Nb thin film, a graph of the same is attached here.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="AnD2_7_pastedImage_11" src="../images/AnD2_7_pastedImage_11.webp"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;A preliminary test of Analog Discovery 2!&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;My main objective of using analog discovery(&lt;span class="caps"&gt;AD&lt;/span&gt;) is to build a vibration sample magnetometer (&lt;span class="caps"&gt;VSM&lt;/span&gt;) and use &lt;span class="caps"&gt;AD2&lt;/span&gt; to source power and acquire measurements.&lt;/p&gt;
+&lt;p&gt;But before I show you how I did that, I can want to show few of the preliminary tests that I did with &lt;span class="caps"&gt;AD2&lt;/span&gt;, and show you where it succeeds and where it fails.&lt;/p&gt;
+&lt;p&gt;As a part of developing the sample holder for the above project, I designed 20 low pass &lt;span class="caps"&gt;RC&lt;/span&gt; filters. The &lt;span class="caps"&gt;PCB&lt;/span&gt; design and the fabricated &lt;span class="caps"&gt;PCB&lt;/span&gt; images :&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://www.element14.com/community/servlet/JiveServlet/showImage/293607990-3075-737752/pastedImage_2.webp"&gt;&lt;img alt="img" src="../images/AnD2_8_pastedImage_2.webp"/&gt;&lt;/a&gt;&lt;a href="https://www.element14.com/community/servlet/JiveServlet/showImage/293607990-3075-737753/pastedImage_3.webp"&gt;&lt;img alt="img" src="../images/AnD2_9_pastedImage_3.webp"/&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;And in order to test them, I used the bode plot feature of &lt;span class="caps"&gt;AD2&lt;/span&gt;. The waveforms software that comes up with this device has a tab called Network analyser. The connections to the input and output side of the filter is connected as follows:e the WaveGen 1 output and Oscilloscope Channel 1 input of the device is connected to the filter input, while the Oscilloscope Channel 2 is connected to the filter output, as shown in the picture below. (taken from digilentinc.com)&lt;/p&gt;
+&lt;p&gt;&lt;img alt="AnD2_10_pastedImage_4" src="../images/AnD2_10_pastedImage_4.webp"/&gt;&lt;/p&gt;
+&lt;p&gt;When the instrument is started, the bode plot is shown in the program and it was verified that the &lt;span class="caps"&gt;RC&lt;/span&gt; filters are working with the cutoff at 1KHz just as designed. A screenshot of the program is shown&lt;/p&gt;
+&lt;p&gt;&lt;img alt="AnD2_11_RC_filter2" src="../images/AnD2_11_RC_filter2.webp"/&gt;&lt;/p&gt;
+&lt;p&gt;The &lt;span class="caps"&gt;RC&lt;/span&gt; filter was supposed to be used inside the cooler mentioned previously, so it would have to work at 4 K as well. But to our disappointment, at 4 K the cutoff shifted to 100KHz dues to high change in capacitance from 10uF to 12nF it is notable that the smd thin film resistor only changed values from 150ohm at room temperature to 160ohm. So the &lt;span class="caps"&gt;AD2&lt;/span&gt; was an extremely handy tool. Typical lab network analysers are pretty expensive.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="AnD2_11_RC_filter3" src="../images/AnD2_11_RC_filter3.webp"/&gt;&lt;/p&gt;
+&lt;p&gt;Another notable thing is that the &lt;span class="caps"&gt;AD2&lt;/span&gt; gives unreliable results beyond 1MHz as can be seen in the above image.&lt;/p&gt;
+&lt;p&gt;I also noticed a coupling between Ch1 and &lt;span class="caps"&gt;CH2&lt;/span&gt; of the oscilloscope, when WaveGen1 and Oscilloscope 1 wires were connected and wave gen was set to generate a random sine wave. This can be seen in the image below.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="AnD2_13_Signal_scope" src="../images/AnD2_13_Signal_scope.webp"/&gt;&lt;/p&gt;
+&lt;p&gt;With the same image, one can also notice the significant change in the shape of the sine curve. This only tells me that either WaveGen or Oscilloscope or both cant be used in an environment which requires precision and accuracy. Another image showing the same phenomenon is bellow where a 1Hz frequency was sourced.
+&lt;img alt="AnD2_14_Signal_wavegen_1Hz" src="../images/AnD2_14_Signal_wavegen_1Hz.webp"/&gt;&lt;/p&gt;
+&lt;p&gt;and in the following image where 17Hz is sourced on a 4 ohm speaker load.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="AnD2_15_Signal_wavegen_17Hz" src="../images/AnD2_15_Signal_wavegen_17Hz.webp"/&gt;&lt;/p&gt;
+&lt;p&gt;Another problem I faced a lot with my particular unit was frequent disconnection from the waveforms software but when checking the list of devices it is present. I suspect that the long cable provided with &lt;span class="caps"&gt;AD2&lt;/span&gt; has considerable resistance and whenever &lt;span class="caps"&gt;AD2&lt;/span&gt; draws some significant current through the laptop, the source voltage falls below the threshold and the device disconnects momentarily. This also posed a problem for me.&lt;/p&gt;
+&lt;p&gt;So with all these preliminary tests, I’m unsure of using &lt;span class="caps"&gt;AD2&lt;/span&gt; to gather data for my research purpose. However ill do the &lt;span class="caps"&gt;VSM&lt;/span&gt; anyway just to see how it goes. I have already wound the 600 turn pickup coil whose signal will be captured by &lt;span class="caps"&gt;AD2&lt;/span&gt; and the Fe sample is mounted on a 4 ohm speaker which will be driven by &lt;span class="caps"&gt;AD2&lt;/span&gt; at 17Hz. Im just on the lookout for a suitable electromagnet. Earlier I thought of using &lt;span class="caps"&gt;AD2&lt;/span&gt; to power a small diameter electromagnet, however, the magnetic field produced by it is around 10 Gauss, which is very small. The &lt;span class="caps"&gt;VSM&lt;/span&gt; would need at least 100 Gauss or above, which may be achieved by and external power supply circuitry whose strength can be controlled by some signal from &lt;span class="caps"&gt;AD2&lt;/span&gt;. Ill be sure to update this post as soon as I get some update&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Conclusion&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;The Analog Discovery 2 can very well be called as the Swiss Army Knife of Test Equipments. Everything about it is really well documented and there are video tutorials to get you started too, so it’s easy to figure out the whole capabilities of the device. The capabilities easily make this the best tool for learning and testing electronics for hobbyists to experienced. Its an extremely versatile tool to have in your lab shelf. However, this is certainly not a high-performance measurement unit, if you need accurate, precise and more control over the data acquisition or for research purpose, the device is not the go-to choice.&lt;/p&gt;
+&lt;p&gt;LabVIEW is no doubt the industry standard for interfacing instruments, however, its Graphical programming ideology sometimes gets messy and daunting to work with.&lt;/p&gt;
+&lt;h3 id="scoring"&gt;Scoring&lt;a class="headerlink" href="#scoring" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;&lt;strong&gt;Product Performed to Expectations:&lt;/strong&gt;&lt;/th&gt;
+&lt;th&gt;6&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Specifications were sufficient to design with:&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;7&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Demo Software was of good quality:&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;10&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Product was easy to use:&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;10&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Support materials were available:&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;10&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;The price to performance ratio was good:&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;9&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;TotalScore:&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;52 / 60&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;</content><category term="Engineering"></category><category term="Analog Discovery 2"></category><category term="LabVIEW"></category><category term="Review"></category></entry><entry><title>A beginers IoT Project.</title><link href="https://ashwinschronicles.github.io/Intro-to-IoT" rel="alternate"></link><published>2018-07-12T00:00:00+05:30</published><updated>2018-07-12T00:00:00+05:30</updated><author><name>Ashwin</name></author><id>tag:ashwinschronicles.github.io,2018-07-12:/Intro-to-IoT</id><summary type="html">&lt;p&gt;In this post, we’ll be making a simple IoT project. Web page controlled &lt;span class="caps"&gt;LED&lt;/span&gt; strip using NodeMCU connected on a local&amp;nbsp;network.&lt;/p&gt;</summary><content type="html">
+&lt;p&gt;In this post, we’ll be making a simple IoT project. Web page controlled &lt;span class="caps"&gt;LED&lt;/span&gt; strip using NodeMCU connected on a local network.&lt;/p&gt;
+&lt;h2 id="outline"&gt;Outline:&lt;a class="headerlink" href="#outline" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Web page controlled &lt;span class="caps"&gt;LED&lt;/span&gt; strip is like the “Hello world” of IoT. In this post I will be detailing on the procedure I followed to set it up. The schematic of the project will be as follows:&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Schematic" src=".././images/IoT_1_schematic.webp"/&gt;&lt;/p&gt;
+&lt;p&gt;So when we click a button on a web browser we can turn the led strip on or off using a relay which we control using the &lt;span class="caps"&gt;ESP8266&lt;/span&gt; board.&lt;/p&gt;
+&lt;h2 id="materials"&gt;Materials:&lt;a class="headerlink" href="#materials" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;NodeMCU&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img alt="nodemcu" src=".././images/IoT_2_nodemcu.jpeg" style="zoom: 33%;"/&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;5v Relay&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img alt="relay" src=".././images/IoT_3_relay.jpeg" style="zoom: 50%;"/&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class="caps"&gt;LED&lt;/span&gt; strip&lt;/li&gt;
+&lt;li&gt;&lt;span class="caps"&gt;LED&lt;/span&gt; strip power supply (any generic 12V power supply)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img alt="powersupply" src=".././images/IoT_4_powersupply.jpeg" style="zoom:33%;"/&gt;&lt;/p&gt;
+&lt;h2 id="installing-nodemcu-board-package-in-arduino-ide"&gt;Installing NodeMCU Board Package in Arduino &lt;span class="caps"&gt;IDE&lt;/span&gt;:&lt;a class="headerlink" href="#installing-nodemcu-board-package-in-arduino-ide" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Open up Arduino &lt;span class="caps"&gt;IDE&lt;/span&gt;. Go to Files-&amp;gt; Preferences. Enter &lt;code&gt;http://arduino.esp8266.com/stable/package_esp8266com_index.json&lt;/code&gt; into Additional Board Manager URLs field.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img alt="IoT_5_preference" src="../images/IoT_5_preference.webp"/&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Now go to Tools-&amp;gt;Boards-&amp;gt;Board Manager, and search for &lt;span class="caps"&gt;ESP8266&lt;/span&gt; and install the package.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img alt="IoT_6_board" src="../images/IoT_6_board.webp"/&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;If you have the same board as me (NodeMCU Amica) then you will have to install drivers for &lt;span class="caps"&gt;CP2102&lt;/span&gt; (&lt;span class="caps"&gt;USB&lt;/span&gt; to Serial Converter)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;code&gt;[Note: some board come with CH340G chip in which case you dont need to follow this step.]&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Download drivers from &lt;a href="https://www.silabs.com/products/mcu/Pages/USBtoUARTBridgeVCPDrivers.aspx"&gt;here &lt;/a&gt;and install it. Connect the nodeMCU to your computer and install the downloaded drives when your system prompts to install the drivers for the newly connected &lt;span class="caps"&gt;USB&lt;/span&gt; device.Go to the device manager of your computer and note down the &lt;span class="caps"&gt;COM&lt;/span&gt; port allocated to the newly connected &lt;span class="caps"&gt;USB&lt;/span&gt; device.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="IoT_7_deveicemanager" src="../images/IoT_7_deveicemanager.webp"/&gt;&lt;/p&gt;
+&lt;h2 id="pin-connections"&gt;Pin Connections:&lt;a class="headerlink" href="#pin-connections" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Connect &lt;strong&gt;NodeMCU&lt;/strong&gt; Ground (&lt;strong&gt;&lt;span class="caps"&gt;GND&lt;/span&gt;&lt;/strong&gt;) pin to &lt;strong&gt;-ve&lt;/strong&gt; pin of &lt;strong&gt;Relay&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Connect &lt;strong&gt;NodeMCU&lt;/strong&gt; Supply (&lt;strong&gt;Vin)&lt;/strong&gt; pin to &lt;strong&gt;+ve&lt;/strong&gt; pin of &lt;strong&gt;Relay&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Connect &lt;strong&gt;NodeMCU&lt;/strong&gt; Digital pin (&lt;strong&gt;D0&lt;/strong&gt;) to &lt;strong&gt;Input&lt;/strong&gt; pin of &lt;strong&gt;Relay&lt;/strong&gt;.&lt;/p&gt;
+&lt;h2 id="coding-part"&gt;Coding Part&lt;a class="headerlink" href="#coding-part" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;The code for the nodeMCU that I have uploaded is &lt;a href="https://raw.githubusercontent.com/iamashwin26/Projs/master/Introduction to IoT/Source_code_hello_IoT.ino"&gt;here&lt;/a&gt; . Replace the line&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;WiFi.softAP("Hello_IoT", "ashwins12345678");
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;with whatever &lt;span class="caps"&gt;SSID&lt;/span&gt; and password you want to put.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="nv"&gt;NOTE&lt;/span&gt;.&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nv"&gt;This&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nv"&gt;sketch&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nv"&gt;uses&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nv"&gt;WiFi&lt;/span&gt;.&lt;span class="nv"&gt;softAP&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nv"&gt;instead&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nv"&gt;of&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nv"&gt;the&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nv"&gt;commonly&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nv"&gt;used&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nv"&gt;WiFi&lt;/span&gt;.&lt;span class="nv"&gt;begin&lt;/span&gt;,&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nv"&gt;the&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nv"&gt;reason&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nv"&gt;is&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nv"&gt;that&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nv"&gt;when&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nv"&gt;I&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nv"&gt;use&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nv"&gt;WiFi&lt;/span&gt;.&lt;span class="nv"&gt;begin&lt;/span&gt;&lt;span class="ss"&gt;()&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nv"&gt;I&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nv"&gt;can&lt;/span&gt;&lt;span class="err"&gt;'t find the SSID when I do WiFi scan, however, the SSID I do see is of the previous sketch where I used WiFi.softAP(). If you encounter the same problem while using WiFi.begin then using my code should fix it.&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;When u have successfully built your connection and the code, you have to upload the code into the NodeMCU by using a micro &lt;span class="caps"&gt;USB&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;Now, go to Tools &amp;gt; Board &amp;gt; &lt;span class="caps"&gt;ESP8266&lt;/span&gt; Modules and you can see many options for &lt;span class="caps"&gt;ESP8266&lt;/span&gt;. Select “NodeMCU 1.0 (&lt;span class="caps"&gt;ESP&lt;/span&gt;-12E Module). Next, select your port ( the same one you saw in the device manager previously ). If you cant recognize your port, go to the Control Panel &amp;gt; System &amp;gt; Device Manager &amp;gt; Port and update your &lt;span class="caps"&gt;USB&lt;/span&gt; driver.&lt;/p&gt;
+&lt;p&gt;Now upload the code to the board.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="IoT_8_upload" src="../images/IoT_8_upload.webp"/&gt;&lt;/p&gt;
+&lt;h2 id="finale-testing"&gt;Finale testing:&lt;a class="headerlink" href="#finale-testing" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Now open up your Serial Monitor, and note down the &lt;span class="caps"&gt;URL&lt;/span&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img alt="IoT_9_serialmonitor" src="../images/IoT_9_serialmonitor.webp"/&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Now put the &lt;span class="caps"&gt;URL&lt;/span&gt; in your phone’s browser( it usually defaults to 192.168.4.1).&lt;/li&gt;
+&lt;li&gt;A page will open having two buttons &lt;span class="caps"&gt;ON&lt;/span&gt; and &lt;span class="caps"&gt;OFF&lt;/span&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img alt="IoT_10_broser" src="../images/IoT_10_broser.jpeg" style="zoom:67%;"/&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;If everything is correct when you press &lt;span class="caps"&gt;ON&lt;/span&gt; the &lt;span class="caps"&gt;LED&lt;/span&gt; will light up and when you press &lt;span class="caps"&gt;OFF&lt;/span&gt; the &lt;span class="caps"&gt;LED&lt;/span&gt; will turn off.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img alt="IoT_11_test1" src="../images/IoT_11_test1.gif"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="IoT_12_test2" src="../images/IoT_12_test2.gif"/&gt;&lt;/p&gt;
+&lt;h2 id="final-connections"&gt;Final Connections:&lt;a class="headerlink" href="#final-connections" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Now that we know our code and setup works let’s connect the relay to the led strip power source as shown in the figure in the outline section.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="IoT_13_test3" src="../images/IoT_13_test3.gif"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="IoT_14_tes5" src="../images/IoT_14_tes5.gif"/&gt;&lt;/p&gt;
+&lt;p&gt;Vola! there’s our first project!&lt;/p&gt;
+&lt;h2 id="whats-next"&gt;Whats next?&lt;a class="headerlink" href="#whats-next" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;We can add more feature to the project such as making it connect to a wifi router so that you can access the &lt;span class="caps"&gt;LED&lt;/span&gt; strip from anywhere in the world. We can convert this project to use the barebone &lt;span class="caps"&gt;ESP8266&lt;/span&gt; and &lt;span class="caps"&gt;FTDI&lt;/span&gt; programmer. We can use the power supply of the &lt;span class="caps"&gt;LED&lt;/span&gt; strip to power the &lt;span class="caps"&gt;ESP8266&lt;/span&gt; (Not recommended since most &lt;span class="caps"&gt;LED&lt;/span&gt; power supply have high &lt;span class="caps"&gt;AC&lt;/span&gt; noise as I found out in my case and hence can damage the &lt;span class="caps"&gt;ESP8266&lt;/span&gt; board).Add more devices for the &lt;span class="caps"&gt;ESP&lt;/span&gt; to control and much much more! All that&lt;/p&gt;</content><category term="Engineering"></category><category term="IoT"></category></entry><entry><title>Interfacing Arduino Mega using LabVIEW</title><link href="https://ashwinschronicles.github.io/arduino-labview-review" rel="alternate"></link><published>2017-12-15T00:00:00+05:30</published><updated>2017-12-15T00:00:00+05:30</updated><author><name>Ashwin</name></author><id>tag:ashwinschronicles.github.io,2017-12-15:/arduino-labview-review</id><summary type="html">&lt;p&gt;This post is about Interfacing Arduino Mega with&amp;nbsp;LabVIEW&lt;/p&gt;</summary><content type="html">
+&lt;p&gt;This post is about Interfacing Arduino Mega using LabVIEW. It was originally posted &lt;a href="https://community.element14.com/products/roadtest/rv/roadtest_reviews/233/arduino_a000067_mega_3"&gt;here&lt;/a&gt; as a part of element14’s RoadTest. I thank element14 for sending me the review unit.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Evaluation Type:&lt;/strong&gt; Independent Products&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Was everything in the box required?:&lt;/strong&gt; Yes&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Comparable Products/Other parts you considered:&lt;/strong&gt; Arduino due , Raspberry Pi&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;What were the biggest problems encountered?:&lt;/strong&gt; When arduino ide is running, other programs such as Labview cant programme the mega.This is true in general of all arduino device.The only solution i found was to close arduino ide , log off and then log back in.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id="detailed-review"&gt;Detailed Review:&lt;a class="headerlink" href="#detailed-review" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h1&gt;
+&lt;p&gt;Arduino Mega the big brother of Arduino Uno has 54 digital I/O pins, 16 analogue inputs. That’s a whopping difference of 40 digital and 10 analogue pins.the closest to it in the Arduino family is the Arduino Due.&lt;/p&gt;
+&lt;p&gt;Arduino mega is generally used for projects that require a high number of I/O and memory thus they are commonly found in 3D printers and robotics projects.&lt;/p&gt;
+&lt;p&gt;LabView is a system-design platform that allows you to visually write a program.It is generally used by engineers and scientists to create programs to automate the process of data acquisition from lab instruments. In this review, i try to Arduino mega to interface between the LabVIEW software and an instrument.&lt;/p&gt;
+&lt;h2 id="part-1-installing-labview-and-ni-visa"&gt;Part 1: Installing LabVIEW and &lt;span class="caps"&gt;NI&lt;/span&gt;-&lt;span class="caps"&gt;VISA&lt;/span&gt;.&lt;a class="headerlink" href="#part-1-installing-labview-and-ni-visa" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Go to &lt;a href="https://www.ni.com/trylabview"&gt;www.ni.com/trylabview&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Click on Download LabVIEW.&lt;/p&gt;
+&lt;p&gt;Right-Click and then run LabVIEW Setup as administrator.&lt;/p&gt;
+&lt;p&gt;Follow the instructions and wait for the installation to finish&lt;/p&gt;
+&lt;p&gt;Note: You might get an error while installing Click on decline support as you do not have any device drivers. We have to download driver later.&lt;/p&gt;
+&lt;p&gt;LabVIEW 2017 is successfully installed.&lt;/p&gt;
+&lt;p&gt;Restart system later if prompted for a restart.&lt;/p&gt;
+&lt;p&gt;To download &lt;span class="caps"&gt;NI&lt;/span&gt;-&lt;span class="caps"&gt;VISA&lt;/span&gt; driver for serial communication go to &lt;a href="https://www.ni.com/visa/"&gt;https://www.ni.com/visa/&lt;/a&gt; and download the appropriate version of the software, Install it in the same way as before.&lt;/p&gt;
+&lt;p&gt;Labview has so many addons both by a 3rd party and &lt;span class="caps"&gt;NI&lt;/span&gt; itself that by default the software comes with a few basic tool set. This set can be expanded by installing add-ons, we shall now look into the process of installing the Arduino interfacing addon.&lt;/p&gt;
+&lt;p&gt;Open the &lt;span class="caps"&gt;VI&lt;/span&gt; Package Manager and wait for it to download all the repository (this could take several minutes depending on your bandwidth)&lt;/p&gt;
+&lt;p&gt;Search for “Arduino” in the search bar.&lt;/p&gt;
+&lt;p&gt;Install Digilent &lt;span class="caps"&gt;LINX&lt;/span&gt; and “LabVIEW Interface for Arduino”.&lt;/p&gt;
+&lt;p&gt;Once the installation is done without any errors you should Notice an “installed” symbol to the left of Digilent &lt;span class="caps"&gt;LINX&lt;/span&gt; toolbox, click finish.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://community.element14.com/resized-image/__size/620x420/__key/roadtestreviewfiles/3d1f57c289b548ca8213f35134702654/5557.contentimage_5F00_158984.png"&gt;&lt;img alt="img" src="https://community.element14.com/resized-image/__size/620x420/__key/roadtestreviewfiles/3d1f57c289b548ca8213f35134702654/5557.contentimage_5F00_158984.png"/&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;In order to verify if all softwares are installed correctly, Open LabVIEW.Click on File &amp;gt; New &lt;span class="caps"&gt;VI&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;On one the panels, click on Window &amp;gt; Tile Left and Right. Right-click on the block diagram, scroll down to see that Arduino (LabView interface for Arduino: &lt;span class="caps"&gt;LIFA&lt;/span&gt;) and &lt;span class="caps"&gt;LINX&lt;/span&gt; is installed.&lt;/p&gt;
+&lt;h3 id="uploading-labview-interface-for-arduino-firmware"&gt;&lt;strong&gt;Uploading LabView Interface for Arduino Firmware&lt;/strong&gt;&lt;a class="headerlink" href="#uploading-labview-interface-for-arduino-firmware" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;In order to interface Arduino with the LabView, we need to upload a sketch that acts as a firmware.&lt;/p&gt;
+&lt;p&gt;For that make sure that you have Arduino ide already installed&lt;/p&gt;
+&lt;p&gt;Open the arduino ide and upload the sketch that has the path:&lt;/p&gt;
+&lt;p&gt;C:\Program Files (x86)\ National Instruments\&lt;/p&gt;
+&lt;p&gt;LabVIEW 2017\ vi.lib\ LabVIEW Interface for Arduino\ Firmware\ LIFA_Base\ LIFA_Base.ino&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://community.element14.com/resized-image/__size/620x335/__key/roadtestreviewfiles/3d1f57c289b548ca8213f35134702654/0743.contentimage_5F00_158985.png"&gt;&lt;img alt="img" src="https://community.element14.com/resized-image/__size/620x335/__key/roadtestreviewfiles/3d1f57c289b548ca8213f35134702654/0743.contentimage_5F00_158985.png"/&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;(adjust the path based on the installation location of the LabView)&lt;/p&gt;
+&lt;p&gt;Check for Board type and &lt;span class="caps"&gt;COM&lt;/span&gt; Port under Tools menu&lt;/p&gt;
+&lt;p&gt;&lt;span class="caps"&gt;NOTE&lt;/span&gt;: Do not upload any code to Arduino Board&lt;/p&gt;
+&lt;p&gt;hereafter. Arduino Board with LIFA_Base firmware is now ready to be used with LabVIEW 2017.&lt;/p&gt;
+&lt;h2 id="part-2-interfacing-and-controlling-an-led-using-labview-arduino-and-lifa"&gt;&lt;strong&gt;&lt;span class="caps"&gt;PART&lt;/span&gt; 2: Interfacing and Controlling an &lt;span class="caps"&gt;LED&lt;/span&gt; using LabVIEW, Arduino and &lt;span class="caps"&gt;LIFA&lt;/span&gt;&lt;/strong&gt;&lt;a class="headerlink" href="#part-2-interfacing-and-controlling-an-led-using-labview-arduino-and-lifa" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;The hello world equivalent in Arduino is an &lt;span class="caps"&gt;LED&lt;/span&gt; blink sketch, let us look at the implementation of led blink in LabView. Every program in LabVIEW is called a &lt;span class="caps"&gt;VI&lt;/span&gt; it ends with an extension dot &lt;span class="caps"&gt;VI&lt;/span&gt; click.&lt;/p&gt;
+&lt;p&gt;On creating a new project in Labview you will see two windows opening the first one has a front panel and the second one is the block diagram&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://community.element14.com/cfs-file/__key/roadtestreviewfiles/3d1f57c289b548ca8213f35134702654/3580.contentimage_5F00_158986.png"&gt;&lt;img alt="img" src="https://community.element14.com/cfs-file/__key/roadtestreviewfiles/3d1f57c289b548ca8213f35134702654/3580.contentimage_5F00_158986.png"/&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;the front panel will usually house all kinds of numeric controls knobs dials meters gauge&lt;/p&gt;
+&lt;p&gt;boolean buttons &lt;span class="caps"&gt;LED&lt;/span&gt; graphs charts indicators and the block diagram will have all programming tools structures numeric functions like addition subtraction boolean functions etc.&lt;/p&gt;
+&lt;p&gt;now what we have to start with is right click on the block diagram scroll down to Arduino.&lt;/p&gt;
+&lt;p&gt;For this particular program, we need four major functions to control led. Initialization, Set digital pin mode (analogous to pinMode), digital write and Close.&lt;/p&gt;
+&lt;p&gt;to know what each of these functions does or what each of these blocks does click on it and press on the question mark on the right corner which is called as context help context help will explain what each of these blocks does and what has to be connected to each of these terminals.&lt;/p&gt;
+&lt;p&gt;For example, in initialization, the first option is visa resource that is where you specify which&lt;/p&gt;
+&lt;p&gt;communication port your Arduino is connected to say &lt;span class="caps"&gt;COM4&lt;/span&gt; port for example&lt;/p&gt;
+&lt;p&gt;second, you specify the baud rate (whatever is in the bracket is by default so&lt;/p&gt;
+&lt;p&gt;you don’t have to specify it again) Board type would be Mega.&lt;/p&gt;
+&lt;p&gt;Now let us think about the flow of the program, first the led will be initialised as output then its is set high and then the loop continues till an event triggers the end. We represent the flow of the program in LabView in the same way. The following would be the possible connection in the flow.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://community.element14.com/cfs-file/__key/roadtestreviewfiles/3d1f57c289b548ca8213f35134702654/0336.contentimage_5F00_158987.png"&gt;&lt;img alt="img" src="https://community.element14.com/cfs-file/__key/roadtestreviewfiles/3d1f57c289b548ca8213f35134702654/0336.contentimage_5F00_158987.png"/&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Error out pin of initialisation module is wired in series to an error in pin of digital pin mode and digital write and finally the close module. The same arrangement is made with Arduino resource pin of each module.&lt;/p&gt;
+&lt;p&gt;the pin number is set by creating a constant at the io pin of the pinmode module and setting its value to 13 and output.The value of 0 1 at the value point in digital write module is equivalent to the High and Low mode.&lt;/p&gt;
+&lt;p&gt;Now to set the loop right click go to programming &amp;gt; structure find the while loop module and draw a square around the digitalwrite module (the one we want to repeat). set the constitutional terminal to a boolean control such as a button in the front end editor.&lt;/p&gt;
+&lt;p&gt;Now the program is complete. Click on run program.&lt;/p&gt;
+&lt;p&gt;This exercise demonstrates how Arduino can be used to interface a device(an led in this case) using Labview.&lt;/p&gt;
+&lt;h3 id="scoring"&gt;Scoring&lt;a class="headerlink" href="#scoring" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;&lt;strong&gt;Product Performed to Expectations:&lt;/strong&gt;&lt;/th&gt;
+&lt;th&gt;10&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Specifications were sufficient to design with:&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;10&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Demo Software was of good quality:&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;10&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Product was easy to use:&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;10&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Support materials were available:&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;10&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;The price to performance ratio was good:&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;9&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;TotalScore:&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;59 / 60&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;</content><category term="Engineering"></category><category term="Arduino"></category><category term="LabVIEW"></category><category term="Review"></category></entry><entry><title>A Novel Stove Stand</title><link href="https://ashwinschronicles.github.io/a-novel-stove-stand" rel="alternate"></link><published>2014-11-13T00:00:00+05:30</published><updated>2014-11-13T00:00:00+05:30</updated><author><name>Ashwin</name></author><id>tag:ashwinschronicles.github.io,2014-11-13:/a-novel-stove-stand</id><summary type="html">&lt;p&gt;This post talks about construction of a novel stove stand that harnesses energy wasted during&amp;nbsp;cooking.&lt;/p&gt;</summary><content type="html">
+&lt;p&gt;This post is about the construction of a novel stove stand that harnesses energy wasted during cooking. It was originally a experimental project from my school days (developed from 9th - 12th grade). I have tried to document it as best as I can. It has won over many science exhibitions. I hope you find it interesting.&lt;/p&gt;
+&lt;h1 id="introduction"&gt;Introduction&lt;a class="headerlink" href="#introduction" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h1&gt;
+&lt;p&gt;Today there is energy crisis every where. Even small amount of energy that we can conserve is of great importance. But we are wasting a large amount of heat energy in stove, furnaces in various industries etc.
+Growing technology have tried to conserve as much of energy as possible. But there is still a large opportunity to conserve energy. In this project work we have applied the principle of thermoelectric effect to utilize waste heat from gas stove and store it for later use.&lt;/p&gt;
+&lt;h2 id="the-problem"&gt;The problem&lt;a class="headerlink" href="#the-problem" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;The primary prblem we are trying to solve today is that of the &lt;span class="caps"&gt;LPG&lt;/span&gt; gas stove.&lt;/p&gt;
+&lt;div style="border: 1px solid black; padding: 5px;width:30%;"&gt;
+&lt;img alt="Example of an LPG stove at Indian households" src="https://ashwinschronicles.github.io/novel-stove-images/stove-at-home.jpg"/&gt;
+&lt;p style="text-align: center;"&gt;Example of an &lt;span class="caps"&gt;LPG&lt;/span&gt; stove at Indian households&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;The &lt;span class="caps"&gt;LPG&lt;/span&gt; gas stove is a very common device used in every household. It is used for cooking food. The &lt;span class="caps"&gt;LPG&lt;/span&gt; gas stove is a very inefficient device. It wastes a lot of heat energy. The heat energy is wasted in two ways. One is the heat energy that is wasted by the flame. The other is the heat energy that is wasted by the utensil. The heat energy that is wasted by the flame is very high.
+The flame not only heats the utensil but also the surrounding air. This can easily be felt as cooking in the kitchen for a long time makes the kitchen very hot. This heat energy is wasted.  This is also very evident in the case of street food vendors also common in India.
+&lt;!-- &lt;img alt="Example of a street food vendor" src="https://ashwinschronicles.github.io/novel-stove-images/chat-seller.jpg" /&gt; --&gt;
+&lt;div style="border: 1px solid black; padding: 5px;width:60%;"&gt;
+&lt;img alt="Example of a street food vendor" src="https://ashwinschronicles.github.io/novel-stove-images/chat-seller.jpg"/&gt;
+&lt;p style="text-align: center;"&gt;Example of a street food vendor&lt;/p&gt;
+&lt;/div&gt;&lt;/p&gt;
+&lt;h2 id="the-solution"&gt;The solution&lt;a class="headerlink" href="#the-solution" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;h1 id="model-1-the-first-prototype"&gt;Model 1 : The first prototype&lt;a class="headerlink" href="#model-1-the-first-prototype" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h1&gt;
+&lt;h2 id="1-scientific-principle-involved"&gt;1. Scientific principle involved&lt;a class="headerlink" href="#1-scientific-principle-involved" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Seebeck effect :&lt;/strong&gt; This project work is based on the principle of Seebeck effect. The Seebeck effect is the conversion of temperature differences directly into electricity and is named after Thomas Johann Seebeck. Metals respond to the temperature difference in different ways, creating a current loop and a magnetic field. The Seebeck effect is a classic example of an electromotive force (emf) and leads to measurable currents or voltages in the same way as any other emf.&lt;/p&gt;
+&lt;p&gt;Electromotive force &lt;span class="math"&gt;\(Emf = Sc * T\)&lt;/span&gt; (in joule).&lt;/p&gt;
+&lt;p&gt;Where Sc - Seebeck coefficient a property of the local material, T - Gradient in temperature &lt;strong&gt;.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;The Seebeck coefficients generally vary as function of temperature, and depend strongly on the composition of the conductor. Thermoelectric generators are used for creating power from heat differentials.&lt;/p&gt;
+&lt;h3 id="working-principle-of-thermoelectric-generator-teg"&gt;Working Principle of thermoelectric generator (&lt;span class="caps"&gt;TEG&lt;/span&gt;)&lt;a class="headerlink" href="#working-principle-of-thermoelectric-generator-teg" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Thermoelectric generators are solid-state heat engines that operate according to the Seebeck Effect. A thermoelectric generator is made of many pairs of p-type and n-type elements. The p-type and n-type have positive and negative Sc respectively. Connecting a p-type element to an n-type element creates a voltage potential across the junction. This voltage potential is proportional to the differences in the Sc in each element and the temperature of the junction. Soon, each hole and electron that “switch sides” will be in equilibrium and act like a barrier, preventing more electrons or holes from migrating. This is called the depletion zone. Heating this depletion zone area and cooling other ends of the element can break down this depletion zone. The mobile holes in the p-type are excited by the heat and move further into the element with the extra kinetic energy. The same happens to the mobile electrons in the n-type material. The net effect: many of the holes pile up at the cold end of the p-type element and many of the electrons pile up at the cold end of the n-type element, thereby creating a voltage potential across the p-n junction. By placing an electrical load or wire from the cold end of the p-type element to the n-type element, the electrons from the n-type element will flow at towards the end of the p-type element . In response, a hole from the p-type element will migrate towards n-type. The end effect is current flow across a voltage potential (from the p-n junction), and electrical power is created. This power is a function of many things such as temperature difference, Sc, and the electrical load that connects the sides.
+&lt;div style="border: 1px solid black; padding: 5px;width:60%;"&gt;
+&lt;img alt="Explanation of the thermoelectric generator" src="https://ashwinschronicles.github.io/novel-stove-images/principle-teg.jpg"/&gt;
+&lt;p style="text-align: center;"&gt;Explanation of the thermoelectric generator&lt;/p&gt;
+&lt;/div&gt;&lt;/p&gt;
+&lt;h2 id="experimental-method"&gt;Experimental method&lt;a class="headerlink" href="#experimental-method" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;h3 id="basic-model-of-a-novel-stove-stand"&gt;Basic model of a Novel Stove Stand&lt;a class="headerlink" href="#basic-model-of-a-novel-stove-stand" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;This is a practical application of thermoelectric effect. Circuit of copper - copper oxide junction on the hot wire and an opposing copper oxide - copper junction on the cold wireis connected. Copper oxide, also acts like a thermistor with a very high negative temperature coefficient. Even the “cold” wire still gets hot enough that the resistance of the copper oxide drops relatively to a very low value - enabling current to flow.&lt;/p&gt;
+&lt;div style="border: 1px solid black; padding: 5px;width:60%;"&gt;
+&lt;img alt="The first prototype of the Cu-CuO based stove stand" src="https://ashwinschronicles.github.io/novel-stove-images/first-prototype.jpg"/&gt;
+&lt;p style="text-align: center;"&gt;The first prototype of the Cu-CuO based stove stand&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;The current also depends on the following factors&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;the thickness of copper wire used&lt;/li&gt;
+&lt;li&gt;the hot copper oxide conductor not touching its neighbour&lt;/li&gt;
+&lt;li&gt;the no. of junction in series&lt;/li&gt;
+&lt;li&gt;the distance between the hot and cold junctions&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="improvised-model-of-novel-stove-stand"&gt;Improvised model of Novel stove stand&lt;a class="headerlink" href="#improvised-model-of-novel-stove-stand" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;This is practical application of thermoelectric effect. Four sets of &lt;span class="caps"&gt;TEG&lt;/span&gt; connected in a series to an aluminum metal box around the stove and the heat energy is converted into electrical energy.
+This is presented as “Model 2 : The second prototype” below.
+&lt;div style="border: 1px solid black; padding: 5px;width:60%;"&gt;
+&lt;img alt="Example of a TEG device" src="https://ashwinschronicles.github.io/novel-stove-images/teg.jpg"/&gt;
+&lt;p style="text-align: center;"&gt;Example of a &lt;span class="caps"&gt;TEG&lt;/span&gt; device&lt;/p&gt;
+&lt;/div&gt;&lt;/p&gt;
+&lt;h3 id="observation-and-results"&gt;Observation and Results&lt;a class="headerlink" href="#observation-and-results" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;The energy generated by the Cu-CuO based stove stand is not sufficient to charge a mobile phone. But it can be used to light up a &lt;span class="caps"&gt;LED&lt;/span&gt;.  but it is not efficient to capture all the wated energy, a more efficient device design is required to capture the extra flames and a better heat to electricity device must be employed (&lt;span class="caps"&gt;TEG&lt;/span&gt; or &lt;span class="caps"&gt;TEC&lt;/span&gt;). This is presented as “Model 2 : The second prototype” below.&lt;/p&gt;
+&lt;h3 id="conclusion"&gt;Conclusion:&lt;a class="headerlink" href="#conclusion" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Using this novel stove stand, the heat energy that was being wasted can be converted into electrical energy which can be further utilized for charging the devices viz., mobile charger and other electrical applications.&lt;/p&gt;
+&lt;h1 id="model-2-the-second-prototype"&gt;Model 2 : The second prototype&lt;a class="headerlink" href="#model-2-the-second-prototype" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h1&gt;
+&lt;h2 id="aim-objective"&gt;Aim / Objective&lt;a class="headerlink" href="#aim-objective" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Converting waste heat energy liberated into useful electrical energy using a device called thermoelectric generator and powering various electrical gadgets. These energy wasted may be from sources like heat wasted during cooking food in gas stove in house, hotels and in other everyday situations like furnaces etc.
+This prototype was desinged keeping in mind the flaws from the first design where the flames were not captured efficiently and the device was not efficient enough to convert the heat energy into electrical energy.&lt;/p&gt;
+&lt;h2 id="materials-methods-experimentation"&gt;Materials &lt;span class="amp"&gt;&amp;amp;&lt;/span&gt; Methods / Experimentation&lt;a class="headerlink" href="#materials-methods-experimentation" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;h3 id="matierls-and-methods"&gt;Matierls and Methods&lt;a class="headerlink" href="#matierls-and-methods" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;In this model four sets of TECs used as makeshift thermoelectric generator  are connected in series to a zinc metal box around the stove and the heat energy is converted into electrical energy. The output is about 5.5 V against a 10 ohm load resistor, the electricity is stored into a power bank and its output is taken to charge a mobile phone or other light gadgets.&lt;/p&gt;
+&lt;p&gt;The device can be made in two versions viz. economic and efficient.
+&lt;img alt="Fig1: The model" src="https://ashwinschronicles.github.io/novel-stove-images/model.jpg"/&gt;&lt;/p&gt;
+&lt;p&gt;The efficient version includes four &lt;span class="caps"&gt;TEG&lt;/span&gt;’s (Thermoelectric generator) which are rated for its, high temperature to electricity conversion efficiency and can operate over greater temperature ranges.&lt;/p&gt;
+&lt;p&gt;The economic version include a cheaper but less efficient device called thermoelectric cooler (&lt;span class="caps"&gt;TEC&lt;/span&gt;) which can be made to work in the same way as a thermoelectric generator (a reverse application of &lt;span class="caps"&gt;TEC&lt;/span&gt;). We are taking the latter version in the model.&lt;/p&gt;
+&lt;h3 id="experimentation"&gt;Experimentation&lt;a class="headerlink" href="#experimentation" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;This project work is based on the principle of Seebeck effect. The Seebeck effect is the conversion of temperature differences directly into electricity and is named after Thomas Johann Seebeck. The Seebeck effect is a classic example of an electromotive force and leads to measurable currents or voltages in the same way as any other emf.&lt;/p&gt;
+&lt;p&gt;A thermoelectric generator is used in this device. Thermoelectric generators are solid-state heat engines that operate according to the Seebeck Effect.&lt;/p&gt;
+&lt;p&gt;Schematically the model can be represented as in fig 2
+&lt;!-- &lt;img alt="Fig2: The schematic diagram of the model" src="https://ashwinschronicles.github.io/novel-stove-images/schmeaticdia.jpg" /&gt; --&gt;
+&lt;div style="border: 1px solid black; padding: 5px;width:50%;"&gt;
+&lt;img alt="Fig2: The schematic diagram of the model" src="https://ashwinschronicles.github.io/novel-stove-images/schmeaticdia.jpg"/&gt;
+&lt;p style="text-align: center;"&gt;Fig2: The schematic diagram of the model&lt;/p&gt;
+&lt;/div&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Here “A” represents the burner. The device is built with the burner as the center.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;span class="dquo"&gt;“&lt;/span&gt;B” here is the heart of the device. It is the thermoelectric generator, it is sandwiched between the wall “C” and the aluminum heat sink (the one which has saw like teeth).The device receives its heat from “C” and the heat sink cools it from the other side. Each Thermoelectric device has two leads coming out of it. One positive and the other negative. All the &lt;span class="caps"&gt;TEG&lt;/span&gt; are connected in series.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;span class="dquo"&gt;“&lt;/span&gt;C” represents the walls of the device which is made of zinc sheet.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;span class="dquo"&gt;“&lt;/span&gt;E ” represents the wire inter connecting all the four TEGs in series&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;span class="dquo"&gt;“&lt;/span&gt;D” is the final wire connecting the first and the fourth &lt;span class="caps"&gt;TEG&lt;/span&gt;, One here is positive and the other is the negative wire. The output is taken from these leads.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The device is to be kept beside the flame of the stove (or if possible integrate the device into the stove itself.) and the utensil is kept inside the walls of the device. When cooking starts, the flames from “A” heat up the plates “C” and that of the utensil. This heat is absorbed by the plates “C” and is transmitted to the &lt;span class="caps"&gt;TEG&lt;/span&gt; (“B”) by conduction. &lt;span class="caps"&gt;TEG&lt;/span&gt; converts this heat in to electricity and is outputted through the leads (E). Since they are all connected in series the voltage add up to the final voltage in “D”. The aluminum heat sink helps cool the other side of the &lt;span class="caps"&gt;TEG&lt;/span&gt; to increase the temperature gradient .The output through “D” can be feed into the gadgets required like &lt;span class="caps"&gt;LED&lt;/span&gt; lamp or a mobile phone charger etc. through a stabilizing circuit (as per requirement).&lt;/p&gt;
+&lt;h2 id="calculations"&gt;Calculations&lt;a class="headerlink" href="#calculations" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;A plot of Volts (under a constant load resistor) vs. Time is made by using the average of two observations done on two different days.&lt;/p&gt;
+&lt;p&gt;To find the power captured by the walls of the device (which would have been dissipated into the atmosphere if the device wasn’t kept.) a plot Temperature vs. Time graph is made, data for which is taken from the above two experiment and is then averaged. At the equilibrium point the energy absorbed by metal sheet is equal to the energy radiated out thus a temperature equilibrium is achieved. A slope of the graph at this point gives us instantaneous rate change of temperature with respect to time i.e. . Then using the formula given below (eq1) which is the absorbed heat is calculated. The equation eq 1 is obtained by differentiating Q = m S ΔT Where Q is heat; m is the mass; S is the specific heat; and ΔT is the change in temperature&lt;/p&gt;
+&lt;p&gt;&lt;span class="math"&gt;\(\frac{dQ}{dt}=mS\frac{dT}{dt}\)&lt;/span&gt;&lt;/p&gt;
+&lt;h2 id="results-observation-findings"&gt;Results / Observation / Findings&lt;a class="headerlink" href="#results-observation-findings" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;The observations have been divided into two types of calculation.
+- 1) Voltage based and
+- 2) temperature based.&lt;/p&gt;
+&lt;h3 id="1-voltage-based-calculations"&gt;1) Voltage based calculations&lt;a class="headerlink" href="#1-voltage-based-calculations" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;The energy produced by each of the device is calculated based on observed data (for &lt;span class="caps"&gt;TEC&lt;/span&gt;) and collected data (for &lt;span class="caps"&gt;TEG&lt;/span&gt;). The table and graph below shows the results and calculation. Here energy saved is calculated using &lt;span class="math"&gt;\(E = V^2 t/ R.\)&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Graph 1 shows a curve that initially increases sharply and then stabilises at around 5.5 V. First the energy saved by a home which uses this device for two hours a day is calculated then for a month and a year. Next Energy saved by a City with 10,000 families using this device in a year is taken into consideration.&lt;/p&gt;
+&lt;p&gt;The economical version (&lt;span class="caps"&gt;TEC&lt;/span&gt; type) of the device can generate 3.025 W but its fabrication cost comes out to be Rs 750. However the efficient version (&lt;span class="caps"&gt;TEG&lt;/span&gt; type) could generate 20 W of power with the cost of production coming at around Rs 4000 ($48).
+&lt;!-- &lt;img alt="Graph 1: A graph showing output voltage versus time" src="https://ashwinschronicles.github.io/novel-stove-images/graph1.jpg" /&gt; --&gt;
+&lt;div style="border: 1px solid black; padding: 5px;width:70%;"&gt;
+&lt;img alt="Graph 1: A graph showing output voltage versus time" src="https://ashwinschronicles.github.io/novel-stove-images/graph1.jpg"/&gt;
+&lt;p style="text-align: center;"&gt;Graph 1: A graph showing output voltage versus time&lt;/p&gt;
+&lt;/div&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Table          1. Showing the comparison on the energy saved by the two devices&lt;/th&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Energy          saved the by economic version                (&lt;span class="caps"&gt;TEC&lt;/span&gt;)&lt;/td&gt;
+&lt;td&gt;Energy          saved by more efficient version (&lt;span class="caps"&gt;TEG&lt;/span&gt;)   (expected results **ref             1           )&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Electricity             produced by the model&lt;/td&gt;
+&lt;td&gt;5.5V            (under 10 ohm load resistor)&lt;/td&gt;
+&lt;td&gt;21.2V           , 1 A&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Energy          saved by a home which uses this device for two hours a day&lt;/td&gt;
+&lt;td&gt;2.17x&lt;span class="math"&gt;\(10^4\)&lt;/span&gt; J&lt;/td&gt;
+&lt;td&gt;1.526x105           J&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Energy          saved by them in a month&lt;/td&gt;
+&lt;td&gt;6.53x&lt;span class="math"&gt;\(10^5\)&lt;/span&gt;             J&lt;/td&gt;
+&lt;td&gt;4.579           x &lt;span class="math"&gt;\(10^6\)&lt;/span&gt;            J&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Energy          saved by them in a year&lt;/td&gt;
+&lt;td&gt;8.74            x &lt;span class="math"&gt;\(10^6\)&lt;/span&gt;            J&lt;/td&gt;
+&lt;td&gt;5.571x          &lt;span class="math"&gt;\(10^7\)&lt;/span&gt;          J&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Energy          saved by a city with 10,000 families using this device (in 1 year)&lt;/td&gt;
+&lt;td&gt;8.74            x &lt;span class="math"&gt;\(10^{10}\)&lt;/span&gt;             J&lt;/td&gt;
+&lt;td&gt;5.571x          &lt;span class="math"&gt;\(10^{11}\)&lt;/span&gt;           J&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id="2-temperature-based-calculations"&gt;&lt;strong&gt;2) Temperature based calculations&lt;/strong&gt;&lt;a class="headerlink" href="#2-temperature-based-calculations" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;These calculations are made to find out the feasibility of the device. I.e. to know the input output ratio and to know the effect of the device on heating.&lt;/p&gt;
+&lt;h4 id="to-find-conversion-ratio"&gt;To find conversion ratio&lt;a class="headerlink" href="#to-find-conversion-ratio" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;Consider the following Temperature vs Time plot.
+&lt;!-- &lt;img alt="Graph 2: A graph showing temperature versus time" src="https://ashwinschronicles.github.io/novel-stove-images/graph2.jpg" /&gt; --&gt;
+&lt;div style="border: 1px solid black; padding: 5px;width:70%;"&gt;
+&lt;img alt="Graph 2: A graph showing temperature versus time" src="https://ashwinschronicles.github.io/novel-stove-images/graph2.jpg"/&gt;
+&lt;p style="text-align: center;"&gt;Graph 2: A graph showing temperature versus time&lt;/p&gt;
+&lt;/div&gt;&lt;/p&gt;
+&lt;p&gt;At equilibrium point (just before temperature becomes constant) the slope was found to be 0.3. Thus using Eq 1 and taking &lt;span class="math"&gt;\(m = 0.052 kg\)&lt;/span&gt; (calculated value); &lt;span class="math"&gt;\(S = 0.093 kcal/kg {}^{\circ}C\)&lt;/span&gt; (** ref 2) and &lt;span class="math"&gt;\(\frac{dT}{dt}\)&lt;/span&gt; as 0.3 (from graph). We get &lt;span class="math"&gt;\(\frac{dQ}{dt} = 0.052 *93*0.3 = 1.4508 cal/s = 6.07 watts\)&lt;/span&gt;. Further average power expended by the aluminium heat sink as P = mSΔT/Δt and taking m = 0.952 kg; ΔT= 29.5; Δt = 130 s (calculated values) and &lt;span class="math"&gt;\(S = 0.22 kcal/kg {}^{\circ}C\)&lt;/span&gt; (** ref 2).&lt;/p&gt;
+&lt;p&gt;So &lt;span class="math"&gt;\(P = (0.952*220*29.5)/130 = 47.52 cal/s = 198.98\)&lt;/span&gt; watt. &lt;span class="math"&gt;\(P_{(total)} = 198.98+6.07 = 205.05\)&lt;/span&gt; watt.&lt;/p&gt;
+&lt;p&gt;So out of 205.05 watt absorbed only 3.025 watt is converted to electrical energy implying 1.475% efficiency which is quite low but still significant and is in accordance with the specs of a &lt;span class="caps"&gt;TEC&lt;/span&gt;.&lt;/p&gt;
+&lt;h3 id="2-to-find-the-effect-on-cooking"&gt;2) To find the effect on cooking&lt;a class="headerlink" href="#2-to-find-the-effect-on-cooking" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;To study the effect of the device on the cooking process, we measured the time taken to boil 100mL of water in two scenarios one without the device and one with the device.&lt;/p&gt;
+&lt;p&gt;Table 2: Table showing boiling time of water with and without the device&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Sl.no&lt;/th&gt;
+&lt;th&gt;Water boiled&lt;/th&gt;
+&lt;th&gt;Time taken&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;Without the device&lt;/td&gt;
+&lt;td&gt;1 min 35 s&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;2&lt;/td&gt;
+&lt;td&gt;With the device&lt;/td&gt;
+&lt;td&gt;1 min&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;The data confirms that the device doesn’t hinder the cooking process rather helps cook faster. The decreased time in cooking is due to the fact that those heat waves which would have escaped to the atmosphere are now confined by the walls of the device thus more waves heat up the utensil thus decreasing the cooking time.&lt;/p&gt;
+&lt;h3 id="significance-conclusion"&gt;Significance / Conclusion&lt;a class="headerlink" href="#significance-conclusion" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Using this novel stove stand, the heat energy that was being wasted can be converted into electrical energy which can be further utilized for charging the devices viz., mobile charger and other electrical applications.&lt;/p&gt;
+&lt;p&gt;People who involve in cooking activities for a long time have a great use for this device. These include but not limited to&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Cooks at hotels&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Street vendors like chat vendors or tea seller&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;People with a 24x7 fireplace and anywhere else where too much of waste heat is generated. However the design of the model has to be adjusted suit the size of the above application.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="innovation-novelty"&gt;Innovation / Novelty&lt;a class="headerlink" href="#innovation-novelty" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;It’s an innovative device to save energy from heat wasted while cooking. The device could be made built inside the stove itself for the generation of electricity which can be stored inside a battery for later use. Ideally the output could be directly connected with a &lt;span class="caps"&gt;LED&lt;/span&gt; lamp to light up the kitchen and when not required, the energy would be stored in a battery.&lt;/p&gt;
+&lt;h3 id="data-source"&gt;Data source&lt;a class="headerlink" href="#data-source" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;**ref 1 &lt;a href="http://www.customthermoelectric.com/powergen.html"&gt;http://www.customthermoelectric.com/powergen.html&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;**ref 2 http://www.engineeringtoolbox.com/specific-heat-metals-d_152.html&lt;/p&gt;
+&lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width &lt; 768) ? "left" : align;
+        indent = (screen.width &lt; 768) ? "0em" : indent;
+        linebreak = (screen.width &lt; 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_CHTML';
+
+    var configscript = document.createElement('script');
+    configscript.type = 'text/x-mathjax-config';
+    configscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'none' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        availableFonts: ['STIX', 'TeX']," +
+        "        preferredFont: 'STIX'," +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+&lt;/script&gt;</content><category term="Engineering"></category><category term="Seebeck effect"></category><category term="stove"></category><category term="cooking"></category><category term="energy"></category><category term="thermoelectric"></category></entry></feed>
