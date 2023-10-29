@@ -16,7 +16,7 @@ bibliography: report.bib
 [TOC]
 
 # Introduction
-This article is an adaptation of my Masters thesis report ( second semesters ), where I worked on the modelling and simuation of Josephson Junctions. 
+This article is an adaptation of my Masters thesis report ( second semesters ), where I worked on the modelling and simuation of Josephson Junctions.
 All the codes and data used in this article can be found in the [github repository](https://github.com/iamashwin99/Phase-biased-Josephson-Junction).
 The previous article talked about the  the fabrications of Josephson Junctions and their charecterisation ( first semester ).
 At the beginning of this thesis, we introduce basic theoretical concepts
@@ -235,23 +235,23 @@ phase difference $\delta$, this in turn causes interesting dynamics
 between the Josephson Junction current and the applied external magnetic
 fields. It can be shown that in the case of a small Josephson Junction
 this dependence follows the relation(Schrieffer and Tinkham 1999):
-$$I_{J}=I_{0}\left|\dfrac{\sin\left(\pi\frac{\Phi_{J}}{\Phi_{0}}\right)}{\pi\frac{\Phi_{J}}{\Phi_{0}}}\right|$$  
+$$I_{J}=I_{0}\left|\dfrac{\sin\left(\pi\frac{\Phi_{J}}{\Phi_{0}}\right)}{\pi\frac{\Phi_{J}}{\Phi_{0}}}\right|$$
 here
 $\Phi_{J}=\mu_{0}Hw(d+\lambda_{1}+\lambda_{2})\text{ is the magnetic flux linked to the whole barrier }$with
 $w$ being the width of the barrier, $d$ the barrier thickness,
 $\lambda_{1},\lambda_{2},$the penetration depths of the two
-superconductors.  
+superconductors.
 This behavior was first experimentally found by Rodwel (Rowell 1963), in
 a Pb-I-Pb junction at 1.3 K. This is the standard from of the Fraunhofer
 pattern $F(x)=I_{0}\sin^{2}(\pi x)/(\pi x)^{2}$and is seen as a unique
 characteristic confirmation of a Josephson junctions. This
 Fraunhofer-like result, which is akin to diffraction of monochromatic,
 coherent light passing through a slit, provides a validation of the
-sinusoidal current phase relation (CPR).  
+sinusoidal current phase relation (CPR).
 For a SQUID, the critical current-magnetic field characteristic is
 similar to that of Josephson Junctions with the addition of SQUID
 oscillations superimposed on it. Both of these signatures are in the
-simulations done in the later section.  
+simulations done in the later section.
 In case of junctions with ferromagnetic behavior, at certain temperature
 and barrier width, a $\pi$junctions could be observed. This is due to
 exchange field-induced oscillations of the order parameter and is very
