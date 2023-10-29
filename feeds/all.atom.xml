@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom"><title>Ashwin's Chronicles🗞️</title><link href="https://ashwinschronicles.github.io/" rel="alternate"></link><link href="https://ashwinschronicles.github.io/feeds/all.atom.xml" rel="self"></link><id>https://ashwinschronicles.github.io/</id><updated>2023-06-11T00:00:00+05:30</updated><entry><title>Study of Josephson Junction.</title><link href="https://ashwinschronicles.github.io/josephson-junction-simulation-and-analysis" rel="alternate"></link><published>2022-04-15T00:00:00+05:30</published><updated>2023-06-11T00:00:00+05:30</updated><author><name>Ashwin</name></author><id>tag:ashwinschronicles.github.io,2022-04-15:/josephson-junction-simulation-and-analysis</id><summary type="html">&lt;p&gt;This post is about my masters thesis on Josephson Junction fabrication and&amp;nbsp;characterisation&lt;/p&gt;</summary><content type="html">
 &lt;h1 id="introduction"&gt;Introduction&lt;a class="headerlink" href="#introduction" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h1&gt;
-&lt;p&gt;This article is an adaptation of my Masters thesis report ( second semesters ), where I worked on the modelling and simuation of Josephson Junctions. 
+&lt;p&gt;This article is an adaptation of my Masters thesis report ( second semesters ), where I worked on the modelling and simuation of Josephson Junctions.
 All the codes and data used in this article can be found in the &lt;a href="https://github.com/iamashwin99/Phase-biased-Josephson-Junction"&gt;github repository&lt;/a&gt;.
 The previous article talked about the  the fabrications of Josephson Junctions and their charecterisation ( first semester ).
 At the beginning of this thesis, we introduce basic theoretical concepts
@@ -198,23 +198,23 @@ fields. It can be shown that in the case of a small Josephson Junction
 this dependence follows the relation(Schrieffer and Tinkham 1999):
 &lt;/p&gt;
 &lt;div class="math"&gt;$$I_{J}=I_{0}\left|\dfrac{\sin\left(\pi\frac{\Phi_{J}}{\Phi_{0}}\right)}{\pi\frac{\Phi_{J}}{\Phi_{0}}}\right|$$&lt;/div&gt;
-&lt;p&gt;&lt;br/&gt;
+&lt;p&gt;
 here
 &lt;span class="math"&gt;\(\Phi_{J}=\mu_{0}Hw(d+\lambda_{1}+\lambda_{2})\text{ is the magnetic flux linked to the whole barrier }\)&lt;/span&gt;with
 &lt;span class="math"&gt;\(w\)&lt;/span&gt; being the width of the barrier, &lt;span class="math"&gt;\(d\)&lt;/span&gt; the barrier thickness,
 &lt;span class="math"&gt;\(\lambda_{1},\lambda_{2},\)&lt;/span&gt;the penetration depths of the two
-superconductors.&lt;br/&gt;
+superconductors.
 This behavior was first experimentally found by Rodwel (Rowell 1963), in
 a Pb-I-Pb junction at 1.3 K. This is the standard from of the Fraunhofer
 pattern &lt;span class="math"&gt;\(F(x)=I_{0}\sin^{2}(\pi x)/(\pi x)^{2}\)&lt;/span&gt;and is seen as a unique
 characteristic confirmation of a Josephson junctions. This
 Fraunhofer-like result, which is akin to diffraction of monochromatic,
 coherent light passing through a slit, provides a validation of the
-sinusoidal current phase relation (&lt;span class="caps"&gt;CPR&lt;/span&gt;).&lt;br/&gt;
+sinusoidal current phase relation (&lt;span class="caps"&gt;CPR&lt;/span&gt;).
 For a &lt;span class="caps"&gt;SQUID&lt;/span&gt;, the critical current-magnetic field characteristic is
 similar to that of Josephson Junctions with the addition of &lt;span class="caps"&gt;SQUID&lt;/span&gt;
 oscillations superimposed on it. Both of these signatures are in the
-simulations done in the later section.&lt;br/&gt;
+simulations done in the later section.
 In case of junctions with ferromagnetic behavior, at certain temperature
 and barrier width, a &lt;span class="math"&gt;\(\pi\)&lt;/span&gt;junctions could be observed. This is due to
 exchange field-induced oscillations of the order parameter and is very
