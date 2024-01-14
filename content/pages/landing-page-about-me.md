@@ -10,7 +10,7 @@ slug: landing-page-about-hidden
 
 Thanks for joining me!
 
-I am Ashwin Kumar Karnad, a Research Software Engineer at the Max Planck Institute for the Structure and Dynamics of Matter (MPSD) in Hamburg. 
+I am Ashwin Kumar Karnad, a Research Software Engineer at the Max Planck Institute for the Structure and Dynamics of Matter (MPSD) in Hamburg.
 
 I Dual Majored in B.E Electronics and Instrumentation & Int. MSc Physics at BITS Pilani KK Birla Goa campus, India (Batch of 2017-22).
 
@@ -22,7 +22,7 @@ Take a trip down my memory lane. I hope to see you around!
 
 Here is my CV  :
 
-[Curriculum Vitae](https://raw.githack.com/iamashwin99/CV_lyx/master/VitaePosted.pdf)
+[Curriculum Vitae](https://iamashwin99.github.io/CV_lyx/VitaePosted.pdf)
 
-[Single page version (old)](https://raw.githack.com/iamashwin99/1pageCV/master/Academic_CV.pdf)
+[Single page version (old)](https://iamashwin99.github.io/1pageCV/Academic_CV.pdf)
 
