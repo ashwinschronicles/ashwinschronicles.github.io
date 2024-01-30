@@ -111,7 +111,7 @@ In order to make the 2$\mu m$, we used photo lithography process with a pre-made
 <figcaption aria-hidden="true">Image of the mask aligner that was used for lithography</figcaption>
 </figure>
 
-For the photo lithography process, $Si/$$SiO_{2}$wafer was cut in to several 5mm x 5mm substrate. after cleaning the substrates in the above mentioned process, a uniform layer of PMMA (+ve ) Photoresist was applied to the clean substrates and then spun rapidly using a spin coater at 3000 RPM to even out the photoresist layer, and then baked at 70$^{\circ}$C for 1 minute to evaporate the solvent. After the photoresist was applied, the mask was placed on Mask aligner and was exposed to the UV light for 30s to weaken the photoresist on the exposed area. Since these trilayer height were more than 300nm, there were difficulties while doing the liftoff process. The stress on the bottom layer creates an slanted edge on track. So while liftoff there is some possibilities that the 2$\mu m$ line come out because of the stress from outside photoresist. To avoid these circumstances we used the undercut process in the lithography, the undercut process helps us in making the photoresist edge in a convex shape as shown in Fig<a href="#fig:The-different-profiles" data-reference-type="ref" data-reference="fig:The-different-profiles">5</a>. Which would help us to make a discontinuity in the track height thus easing the liftoff process.
+For the photo lithography process, $Si/$$SiO_{2}$wafer was cut in to several 5mm x 5mm substrate. after cleaning the substrates in the above mentioned process, a uniform layer of ma-N microresist (+ve ) Photoresist was applied to the clean substrates and then spun rapidly using a spin coater at 3000 RPM to even out the photoresist layer, and then baked at 70$^{\circ}$C for 1 minute to evaporate the solvent. After the photoresist was applied, the mask was placed on Mask aligner and was exposed to the UV light for 30s to weaken the photoresist on the exposed area. Since these trilayer height were more than 300nm, there were difficulties while doing the liftoff process. The stress on the bottom layer creates an slanted edge on track. So while liftoff there is some possibilities that the 2$\mu m$ line come out because of the stress from outside photoresist. To avoid these circumstances we used the undercut process in the lithography, the undercut process helps us in making the photoresist edge in a convex shape as shown in Fig<a href="#fig:The-different-profiles" data-reference-type="ref" data-reference="fig:The-different-profiles">5</a>. Which would help us to make a discontinuity in the track height thus easing the liftoff process.
 
 <figure>
 <img src="{attach}Photos/photo-resist.webp" id="fig:The-different-profiles" style="width:10cm" alt="The different profiles achieved with (a) a single layer of resist, (b) resist soaked in chlorobenzene for few seconds and (c) a bilayer of electron sensitive resist (Ngo 2021)" />
@@ -134,7 +134,7 @@ During deposition, the material would cover these gaps and upon liftoff the mate
 <figcaption aria-hidden="true">Image taken from optical microscope of the sample after deposition and liftoff process </figcaption>
 </figure>
 
-### Deposition 
+### Deposition
 
 Pt/Cu/Nb trilayer films were prepared on patterned substrates at ambient temperature using DC-magnetron sputtering with high purity (99.99%) Pt,Cu and Nb targets. The DC-magnetron sputtering system present in superconductivity lab, NISER is shown in Fig <a href="#fig:The-DC-magnetron-sputtering" data-reference-type="ref" data-reference="fig:The-DC-magnetron-sputtering">8</a>.
 
@@ -193,7 +193,7 @@ The typical pressure of $N_{2},O_{2},H_{2}O$ in $10^{-8}mBar$ are 3,3,3.5. If th
 
 Optimisation parameters for different targets
 
-### Fabrication geometry 
+### Fabrication geometry
 
 Once the trilayer has been deposited and liftoff is done, we need to form the trilayer into the Josephson junction geometry. Josephson Junctions are typically fabricated via shadow deposition wherein a floating mask and angled deposition creates valleys such that the top and the bottom layers can be accessed separately. After the first angled deposition, controlled oxidation of the first layer leads to the formation of a very small insulating barrier. A schematic process diagram of the shadow deposition technique is shown in Fig <a href="#fig:The-shadow-deposition" data-reference-type="ref" data-reference="fig:The-shadow-deposition">9</a>.
 
@@ -245,16 +245,16 @@ After the sample is prepared, electrical connections need to be made for sending
 
 Ultrasonic bonding was discovered 1960 through a several experimental observation and has subsequently been developed into a highly controlled process. In recent years it has been used extensively for electrical interconnecting of semiconductor chips in the semiconductor fabrication industry and in material science research laboratories for making reliable conducting contacts on sample and pucks. There are four types of wire bonding:
 
-Thermocompression Bonding  
+Thermocompression Bonding
 A process which involves the use of force, time, and heat to join the two materials by inter- diffusion. This process uses gold wire.
 
-Gold Ball Bonding  
+Gold Ball Bonding
 Uses gold wire ultrasonicated at the surface to make the ball. This process uses heat force, time, and ultrasonics.
 
-Wedge Bonding  
+Wedge Bonding
 This process uses aluminium wire formed below a narrow metalic wedge. The wedge forces the wire on top of the sample and ultrasonicates therby making a metallic bond between aluminium and the sample. No heat is required in this process. This process is the one used all the sample preparation in regards to the current thesis.
 
-Thermosonic Bonding  
+Thermosonic Bonding
 This requires gold wire and capillaries. This process uses force, time. heat, and ultrasonics to make a ball. This process is accomplished by melting the wire to form a ball.
 
 #### Wedge Bonding

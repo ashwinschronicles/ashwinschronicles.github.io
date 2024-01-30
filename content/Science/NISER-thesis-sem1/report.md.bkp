@@ -94,7 +94,7 @@ In order to make the 2$\mu m$, we used photo lithography process with a pre-made
 
 ![Image of the mask aligner that was used for lithography]({attach}Photos/maskAligner.webp)#{#fig:mask-1}
 
-For the photo lithography process, $Si/$$SiO_{2}$wafer was cut in to several 5mm x 5mm substrate. after cleaning the substrates in the above mentioned process, a uniform layer of PMMA (+ve ) Photoresist was applied to the clean substrates and then spun rapidly using a spin coater at 3000 RPM to even out the photoresist layer, and then baked at 70$^{\circ}$C for 1 minute to evaporate the solvent. After the photoresist was applied, the mask was placed on Mask aligner and was exposed to the UV light for 30s to weaken the photoresist on the exposed area. Since these trilayer height were more than 300nm, there were difficulties while doing the liftoff process. The stress on the bottom layer creates an slanted edge on track. So while liftoff there is some possibilities that the 2$\mu m$ line come out because of the stress from outside photoresist. To avoid these circumstances we used the undercut process in the lithography, the undercut process helps us in making the photoresist edge in a convex shape as shown in Fig[5](#fig:The-different-profiles){reference-type="ref" reference="fig:The-different-profiles"}. Which would help us to make a discontinuity in the track height thus easing the liftoff process.
+For the photo lithography process, $Si/$$SiO_{2}$wafer was cut in to several 5mm x 5mm substrate. after cleaning the substrates in the above mentioned process, a uniform layer of ma-N microresist (+ve ) Photoresist was applied to the clean substrates and then spun rapidly using a spin coater at 3000 RPM to even out the photoresist layer, and then baked at 70$^{\circ}$C for 1 minute to evaporate the solvent. After the photoresist was applied, the mask was placed on Mask aligner and was exposed to the UV light for 30s to weaken the photoresist on the exposed area. Since these trilayer height were more than 300nm, there were difficulties while doing the liftoff process. The stress on the bottom layer creates an slanted edge on track. So while liftoff there is some possibilities that the 2$\mu m$ line come out because of the stress from outside photoresist. To avoid these circumstances we used the undercut process in the lithography, the undercut process helps us in making the photoresist edge in a convex shape as shown in Fig[5](#fig:The-different-profiles){reference-type="ref" reference="fig:The-different-profiles"}. Which would help us to make a discontinuity in the track height thus easing the liftoff process.
 
 ![The different profiles achieved with (a) a single layer of resist, (b) resist soaked in chlorobenzene for few seconds and (c) a bilayer of electron sensitive resist [@undercutImage]]({attach}Photos/photo-resist.webp){#fig:The-different-profiles}
 
@@ -108,7 +108,7 @@ During deposition, the material would cover these gaps and upon liftoff the mate
 
 ![Image taken from optical microscope of the sample after deposition and liftoff process ]({attach}Photos/Litho2.webp)#{#fig:Litho2 }
 
-### Deposition 
+### Deposition
 
 Pt/Cu/Nb trilayer films were prepared on patterned substrates at ambient temperature using DC-magnetron sputtering with high purity (99.99%) Pt,Cu and Nb targets. The DC-magnetron sputtering system present in superconductivity lab, NISER is shown in Fig [8](#fig:The-DC-magnetron-sputtering){reference-type="ref" reference="fig:The-DC-magnetron-sputtering"}.
 
@@ -164,7 +164,7 @@ class="math display">1.08<em>x</em>10<sup>−2</sup><em>m</em><em>b</em><em>a</e
 </tr>
 </tbody>
 </table>
-### Fabrication geometry 
+### Fabrication geometry
 
 Once the trilayer has been deposited and liftoff is done, we need to form the trilayer into the Josephson junction geometry. Josephson Junctions are typically fabricated via shadow deposition wherein a floating mask and angled deposition creates valleys such that the top and the bottom layers can be accessed separately. After the first angled deposition, controlled oxidation of the first layer leads to the formation of a very small insulating barrier. A schematic process diagram of the shadow deposition technique is shown in Fig [9](#fig:The-shadow-deposition){reference-type="ref" reference="fig:The-shadow-deposition"}.
 
