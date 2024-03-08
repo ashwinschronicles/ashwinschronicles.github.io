@@ -20,7 +20,7 @@ Take a trip down my memory lane. I hope to see you around!
 
 Here is my CV  :
 
-[Curriculum Vitae](https://iamashwin99.github.io/CV_lyx/VitaePosted.pdf)
+[Curriculum Vitae](https://iamashwin99.github.io/CV_lyx/CV-AshwinKumarKarnad.pdf)
 
 [Single page version (old)](https://iamashwin99.github.io/1pageCV/Academic_CV.pdf)
 
