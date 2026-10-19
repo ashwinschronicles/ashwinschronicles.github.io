@@ -85,3 +85,14 @@ def gh_pages(c):
     c.run('ghp-import -b {github_pages_branch} '
           '-m {commit_message} '
           '{deploy_path} -p'.format(**CONFIG))
+
+@task
+def github(c):
+    """Publish to GitHub Pages (alias for gh_pages)"""
+    gh_pages(c)
+
+@task
+def deploy(c):
+    """Publish to GitHub Pages (alias for gh_pages)"""
+    gh_pages(c)
+

@@ -80,12 +80,14 @@ else
 endif
 
 publish:
-	@if [ -f ../publish_cred_env.sh ]; then . ../publish_cred_env.sh; fi
 	$(PELICAN) $(INPUTDIR) -o $(OUTPUTDIR) -s $(PUBLISHCONF) $(PELICANOPTS)
 
 github: publish
 	ghp-import -m "Generate Pelican site" -b $(GITHUB_PAGES_BRANCH) $(OUTPUTDIR)
 	git push origin $(GITHUB_PAGES_BRANCH)
 
+ghpage: github
+ghpages: github
+deploy: github
 
-.PHONY: html help clean regenerate serve serve-global devserver stopserver publish github
+.PHONY: html help clean regenerate serve serve-global devserver stopserver publish github ghpage ghpages deploy
