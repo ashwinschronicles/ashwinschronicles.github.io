@@ -217,8 +217,9 @@ typing-extensions==4.16.0
     #   referencing
 typogrify==2.1.0
     # via ashwinschronicles-github-io
-tzdata==2026.5 ; sys_platform == 'win32'
+tzdata==2026.5
     # via
+    #   ashwinschronicles-github-io
     #   feedgenerator
     #   pelican
 unidecode==1.4.0

@@ -15,10 +15,11 @@ jobs:
     container:
       image: ghcr.io/astral-sh/uv:debian-slim
     steps:
-      - name: Install git and ca-certificates
+      - name: Install git, ca-certificates, and tzdata
         run: |
-          apt-get update && apt-get install -y --no-install-recommends git ca-certificates
+          apt-get update && apt-get install -y --no-install-recommends git ca-certificates tzdata
           git config --global --add safe.directory "$GITHUB_WORKSPACE"
+
 
       - name: Checkout source and submodules
         uses: actions/checkout@v4
