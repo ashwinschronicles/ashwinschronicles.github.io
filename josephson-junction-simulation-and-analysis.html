@@ -9,7 +9,7 @@
         <link rel="dns-prefetch" href="//fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
 
-        <meta name="google-site-verification" content="p61t4jkBXn4Wc7q3yIKCNSLcb7VC3Fay6dNkDefU3Ic" />        <meta name="author" content="Ashwin" />
+        <meta name="author" content="Ashwin" />
 
         <meta name="description" content="This post is about my masters thesis on Josephson Junction fabrication and characterisation
 " />
@@ -45,20 +45,16 @@
         <link rel="apple-touch-icon" sizes="152x152" href="https://ashwinschronicles.github.io/theme/images/apple-touch-icon-152x152.png" type="image/png" />
         <link rel="apple-touch-icon" sizes="152x152" href="https://ashwinschronicles.github.io/theme/images/apple-touch-icon-180x180.png" type="image/png" />
         <link href="https://ashwinschronicles.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Ashwin&#39;s Chronicles🗞️ - Full Atom Feed" />
-
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-E1G9M6CRCM"></script>
 <script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-     m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-     })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-    ga('create', 'UA-161419840-1', 'auto');
-    ga('send', 'pageview');
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-E1G9M6CRCM');
 </script>
 
-<script>
-    window.heap=window.heap||[],heap.load=function(e,t){window.heap.appid=e,window.heap.config=t=t||{};var r=t.forceSSL||"https:"===document.location.protocol,a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=(r?"https:":"http:")+"//cdn.heapanalytics.com/js/heap-"+e+".js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n);for(var o=function(e){return function(){heap.push([e].concat(Array.prototype.slice.call(arguments,0)))}},p=["addEventProperties","addUserProperties","clearEventProperties","identify","resetIdentity","removeEventProperty","setEventProperties","track","unsetEventProperty"],c=0;c<p.length;c++)heap[p[c]]=o(p[c])};
-      heap.load("1155667143");
-</script>
+
 
     </head>
     <body>
@@ -146,8 +142,7 @@
     </div>
     <div class="span8 article-content">
             
-            <main>
-                
+            
 <h1 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">¶</a></h1>
 <p>This article is an adaptation of my Masters thesis report ( second semesters ), where I worked on the modelling and simuation of Josephson Junctions.
 All the codes and data used in this article can be found in the <a href="https://github.com/iamashwin99/Phase-biased-Josephson-Junction">github repository</a>.
@@ -182,13 +177,13 @@ sides have an overlap in N, producing proximity Josephson coupling.<span class="
 </figure>
 <p>Josephson demonstrated that, for a short junction, the current that
 flows through the junction when no voltage bias is applied, and the
-phase difference <span class="math">\(\phi\)</span> across the junction, which is the difference in
+phase difference <span class="math">\(\phi\)</span> across the junction, which is the difference in
 the phase factor between the order parameter of the two superconductors,
 are related through the relation:
 </p>
 <div class="math">$$I_{s}=I_{c}\,sin(\delta)\label{eq:JJ1}$$</div>
 <p> Here, <span class="math">\(I_{c}\)</span> is the super
-current amplitude and <span class="math">\(\delta=\phi_{1}-\phi_{2}\)</span> , where <span class="math">\(\phi_{i}\)</span> is
+current amplitude and <span class="math">\(\delta=\phi_{1}-\phi_{2}\)</span> , where <span class="math">\(\phi_{i}\)</span> is
 the phase of each superconductor. This phenomenon is known as the <span class="caps">DC</span>
 Josephson effect. Josephson also showed <span class="caps">AC</span> Josephson effect where an
 applied constant voltage bias V on the junction leads to sinusoidal
@@ -222,12 +217,12 @@ as inverse <span class="caps">AC</span> Josephson effect.</p>
 <h4 id="rcsj-model"><span class="caps">RCSJ</span> model<span id="subsec:RCSJ-model" label="subsec:RCSJ-model"></span><a class="headerlink" href="#rcsj-model" title="Permanent link">¶</a></h4>
 <p>A Josephson junction, is typically composed of two superconducting
 electrodes separated by weaklink which is typically insulating, thus
-such a junction would have some unavoidable capacitance <span class="math">\(C\)</span> (Just like
+such a junction would have some unavoidable capacitance <span class="math">\(C\)</span> (Just like
 the parallel plate capacitor separated by a dielectric). If the junction
 current exceeds the critical current of the junction then quasi-particle
 excitations are generated. These quasi-particle currents are not
 superconducting and can be quite lossy just like a normal metal current,
-so we represent this as a normal resistor <span class="math">\(R\)</span>. This gives us the
+so we represent this as a normal resistor <span class="math">\(R\)</span>. This gives us the
 resistively and capacitivly shunted junction (<span class="caps">RCSJ</span>) model. This model
 helps us simulate the characteristics of a Josephson junction. A
 schematic representation of the same can be seen in Fig
@@ -278,11 +273,10 @@ n.d.)</span></figcaption>
     effect of an extra linear term to the potential as we introduce some
     current. Because the potential now resembles a tilted washboard,
     it’s known as the <em>tilted washboard potential</em>. There are still
-    vallies in the potential if the bias current is less than <span class="math">\(I_{c}\)</span>,
+    vallies in the potential if the bias current is less than <span class="math">\(I_{c}\)</span>,
     and the ball remains stuck, as shown in. Fig
     <a data-reference="fig:washboard-potential" data-reference-type="ref" href="#fig:washboard-potential">2</a>a. Because the
-    junction phase (i.e the pseudo-particle) is stuck at a fixed value
-    of <span class="math">\(\delta\)</span>, the voltage is zero (as <span class="math">\(V\propto\dot{\delta}\)</span> ). As
+    junction phase (i.e the pseudo-particle) is stuck at a fixed value of <span class="math">\(\delta\)</span>, the voltage is zero (as <span class="math">\(V\propto\dot{\delta}\)</span> ). As
     demonstrated by the horizontal blue line, this is the section of the
     <span class="caps">IV</span> curve where an increase in junction current does not result in an
     increase in junction voltage. Because the junction element is still
@@ -290,7 +284,7 @@ n.d.)</span></figcaption>
     none through the resistor at this point, resulting in the junction.</p>
 </li>
 <li>
-<p>As the current is increased past <span class="math">\(I_{c}\)</span>, the linear term in the
+<p>As the current is increased past <span class="math">\(I_{c}\)</span>, the linear term in the
     potential begins to dominate the cosine part, and the vallies fade
     away. As demonstrated in Fig
     <a data-reference="fig:washboard-potential" data-reference-type="ref" href="#fig:washboard-potential">2</a>b the junction pseudo
@@ -305,7 +299,7 @@ n.d.)</span></figcaption>
     The formation of quasi-particles makes the connection resistant. In
     other words, the resistive element carries practically all of the
     current. Further increases in current result in a linear increase in
-    voltage, identical to that of a typical metal, as indicated by
+    voltage, identical to that of a typical metal, as indicated by
     <span class="math">\(V=IR\)</span>, as shown in Fig
     <a data-reference="fig:washboard-potential" data-reference-type="ref" href="#fig:washboard-potential">2</a>c, and by the green
     line marked Fig
@@ -317,14 +311,14 @@ n.d.)</span></figcaption>
     <a data-reference="fig:washboard-potential" data-reference-type="ref" href="#fig:washboard-potential">2</a>d. The rest of the
     process depends on how fast we are raising and lowering the current.
     The potential regains its cosine nature and regains vallies, as we
-    lower the current below <span class="math">\(I_{c}\)</span> .</p>
+    lower the current below <span class="math">\(I_{c}\)</span> .</p>
 </li>
 <li>
 <p>If there were no dissipative forces as is the case when we sweep
     fast enough or when whatever dissipation remains can’t completely
     stop the particle, the particle would continue to roll down as it
-    already has energy. Therefore, even as I is lowered below <span class="math">\(I_{c}\)</span> we
-    still have time varying <span class="math">\(\delta\)</span> and therefore still have a
+    already has energy. Therefore, even as I is lowered below <span class="math">\(I_{c}\)</span> we
+    still have time varying <span class="math">\(\delta\)</span> and therefore still have a
     measurable voltage. This can be concluded from Fig
     <a data-reference="fig:washboard-potential" data-reference-type="ref" href="#fig:washboard-potential">2</a>e and the pink line in
     Fig <a data-reference="fig:washboard-potential" data-reference-type="ref" href="#fig:washboard-potential">2</a>e</p>
@@ -338,9 +332,9 @@ n.d.)</span></figcaption>
 </ul>
 <h4 id="josephson-junctions-in-the-presence-of-a-magnetic-field">Josephson Junctions in the Presence of a Magnetic Field<a class="headerlink" href="#josephson-junctions-in-the-presence-of-a-magnetic-field" title="Permanent link">¶</a></h4>
 <p>In Eq<a data-reference="eq:JJ1" data-reference-type="ref" href="#eq:JJ1">[eq:<span class="caps">JJ1</span>]</a> we saw that he Josephson Junction
-current depends on the phase difference <span class="math">\(\delta\)</span> across the junction.
+current depends on the phase difference <span class="math">\(\delta\)</span> across the junction.
 When an external magnetic field is applied, the field influences the
-phase difference <span class="math">\(\delta\)</span>, this in turn causes interesting dynamics
+phase difference <span class="math">\(\delta\)</span>, this in turn causes interesting dynamics
 between the Josephson Junction current and the applied external magnetic
 fields. It can be shown that in the case of a small Josephson Junction
 this dependence follows the relation(Schrieffer and Tinkham 1999):
@@ -349,12 +343,11 @@ this dependence follows the relation(Schrieffer and Tinkham 1999):
 <p>
 here
 <span class="math">\(\Phi_{J}=\mu_{0}Hw(d+\lambda_{1}+\lambda_{2})\text{ is the magnetic flux linked to the whole barrier }\)</span>with
-<span class="math">\(w\)</span> being the width of the barrier, <span class="math">\(d\)</span> the barrier thickness,
+<span class="math">\(w\)</span> being the width of the barrier, <span class="math">\(d\)</span> the barrier thickness,
 <span class="math">\(\lambda_{1},\lambda_{2},\)</span>the penetration depths of the two
 superconductors.
 This behavior was first experimentally found by Rodwel (Rowell 1963), in
-a Pb-I-Pb junction at 1.3 K. This is the standard from of the Fraunhofer
-pattern <span class="math">\(F(x)=I_{0}\sin^{2}(\pi x)/(\pi x)^{2}\)</span>and is seen as a unique
+a Pb-I-Pb junction at 1.3 K. This is the standard from of the Fraunhofer pattern <span class="math">\(F(x)=I_{0}\sin^{2}(\pi x)/(\pi x)^{2}\)</span>and is seen as a unique
 characteristic confirmation of a Josephson junctions. This
 Fraunhofer-like result, which is akin to diffraction of monochromatic,
 coherent light passing through a slit, provides a validation of the
@@ -364,20 +357,19 @@ similar to that of Josephson Junctions with the addition of <span class="caps">S
 oscillations superimposed on it. Both of these signatures are in the
 simulations done in the later section.
 In case of junctions with ferromagnetic behavior, at certain temperature
-and barrier width, a <span class="math">\(\pi\)</span>junctions could be observed. This is due to
+and barrier width, a <span class="math">\(\pi\)</span>junctions could be observed. This is due to
 exchange field-induced oscillations of the order parameter and is very
 sensitive to the temperature and the ferromagnetic layer thickness. In
-such materials the <span class="caps">CPR</span> could be written as <span class="math">\(I(\phi)=I_{0}sin(\phi+\pi)\)</span>,
-and doubling of periodicity in <span class="math">\(I_{c}\)</span>vs <span class="math">\(H\)</span> is observed(Frolov et al.
+such materials the <span class="caps">CPR</span> could be written as <span class="math">\(I(\phi)=I_{0}sin(\phi+\pi)\)</span>,
+and doubling of periodicity in <span class="math">\(I_{c}\)</span>vs <span class="math">\(H\)</span> is observed(Frolov et al.
 2004). In materials with broken time-reversal and broken parity
 symmetries (this can be obtained in systems with both a Zeemanfield and
 a Rashba spin-orbit coupling(Assouline et al. 2019; Strambini et al.,
-n.d.)), the <span class="caps">CPR</span> could take the form of <span class="math">\(I(\phi)=I_{0}sin(\phi+\phi_{0})\)</span>
+n.d.)), the <span class="caps">CPR</span> could take the form of <span class="math">\(I(\phi)=I_{0}sin(\phi+\phi_{0})\)</span>
 (Assouline et al. 2019), in Josephson junctions this term leads to the
 anomalous phase shift, which could manifest as the presence of second
 harmonics in the critical current - phase relation (Stoutimore et al.
-2018). This system is also simulated as a part of the thesis, where in
-the <span class="math">\(I_{C}H\)</span> behavior is replaced with the following:</p>
+2018). This system is also simulated as a part of the thesis, where in the <span class="math">\(I_{C}H\)</span> behavior is replaced with the following:</p>
 <div class="math">$$\begin{array}{cc}
 I_{c}=I_{c1}\left|\dfrac{\sin\left(\pi\frac{\Phi_{J}}{\Phi_{0}}\right)}{\pi\frac{\Phi_{J}}{\Phi_{0}}}\right| &amp; \mathrm{first\,harmonics}\\
 \\
@@ -385,29 +377,28 @@ I_{c}=I_{c1}\left|\dfrac{\sin\left(\pi\frac{\Phi_{J}}{\Phi_{0}}\right)}{\pi\frac
 \end{array}\label{eq: IcH 2}$$</div>
 <h1 id="simulation-details">Simulation Details<a class="headerlink" href="#simulation-details" title="Permanent link">¶</a></h1>
 <p>The characteristic signature of a Josephson junction, apart from its
-current voltage relation (<span class="caps">IV</span>) is the Critical current <span class="math">\(I_{c}\)</span>dependence
-on the applied magnetic field H ( <span class="math">\(I_{C}\)</span>vs H or <span class="math">\(I_{C}H\)</span>).</p>
+current voltage relation (<span class="caps">IV</span>) is the Critical current <span class="math">\(I_{c}\)</span>dependence
+on the applied magnetic field H ( <span class="math">\(I_{C}\)</span>vs H or <span class="math">\(I_{C}H\)</span>).</p>
 <p>The <span class="caps">PPMS</span> in the lab has builtin recipes only for <span class="caps">DC</span> measurement and as
 such <span class="caps">DC</span> measurements like <span class="caps">IV</span> are relatively slower (1 <span class="caps">IV</span> scan in 10-15
-minutes on good resolution). Thus getting data for <span class="math">\(I_{c}H\)</span> would
+minutes on good resolution). Thus getting data for <span class="math">\(I_{c}H\)</span> would
 require multiple IVs to be measured at a sweep of magnetic field H. This
 would take almost a day per device on a decent resolution and thus cant
 be done frequently. The more easier measurement would be to set and
-constant current (say the <span class="math">\(Ic\)</span> at zero magnetic field) then measure the
+constant current (say the <span class="math">\(Ic\)</span> at zero magnetic field) then measure the
 Voltage as a function of changing magnetic field ( V vs H or <span class="caps">VH</span> )
 however, there is little literature regarding the characteristics of <span class="caps">VH</span>
 relation (or magneto resistance ) of a Josephson junction.</p>
-<p>Thus the main goal of the thesis is to verify the correlation between
-the <span class="math">\(I_{C}H\)</span> and <span class="math">\(VH\)</span> signatures of a Josephson junction via simulation.
+<p>Thus the main goal of the thesis is to verify the correlation between the <span class="math">\(I_{C}H\)</span> and <span class="math">\(VH\)</span> signatures of a Josephson junction via simulation.
 simulation part of the thesis is to first setup the numerical solution
 to the <span class="caps">ODE</span> <a data-reference="eq:dammpedeqn" data-reference-type="ref" href="#eq:dammpedeqn">[eq:dammpedeqn]</a> , then simulate an
 I - V measurement, Iterate the <span class="caps">IV</span> sweep over multiple magnetic fields
-linearly spaced between <span class="math">\(-2\frac{\phi}{\phi_{0}}\)</span> and
+linearly spaced between <span class="math">\(-2\frac{\phi}{\phi_{0}}\)</span> and
 <span class="math">\(2\frac{\phi}{\phi_{0}}\)</span> . This would give us the data of all
-permissible sets junction current <span class="math">\(I_{J},\)</span>junction voltage <span class="math">\(V_{J}\)</span> and
-the applied magnetic field <span class="math">\(H\)</span> that are the possible states of the given
+permissible sets junction current <span class="math">\(I_{J},\)</span>junction voltage <span class="math">\(V_{J}\)</span> and
+the applied magnetic field <span class="math">\(H\)</span> that are the possible states of the given
 Josephson Junction. Finally, one could correlate the simulation with
-experimental data for junctions with and without second harmonics from
+experimental data for junctions with and without second harmonics from
 <span class="math">\(I_{c}H\)</span> and <span class="math">\(VH\)</span> measurements. First lets us try to understand the
 systems <span class="caps">ODE</span>.</p>
 <h3 id="modeling-the-ode">Modeling the <span class="caps">ODE</span><a class="headerlink" href="#modeling-the-ode" title="Permanent link">¶</a></h3>
@@ -429,17 +420,17 @@ R_{sg}(T)\; &amp; {\rm for\;}|V|\leq2\Delta(T)/e\\
 R_{n}\; &amp; {\rm for\;}|V|\geq2\Delta(T)/e
 \end{cases}
 \end{aligned}$$</div>
-<p> where typically <span class="math">\(R_{sg}\gg R_{n}\)</span>. The characteristic
-voltage of the junction is accordingly defined as <span class="math">\(V_{c}=I_{c}R_{n}\)</span>.</p>
+<p> where typically <span class="math">\(R_{sg}\gg R_{n}\)</span>. The characteristic
+voltage of the junction is accordingly defined as <span class="math">\(V_{c}=I_{c}R_{n}\)</span>.</p>
 <p>The current-phase relation (<span class="caps">CPR</span>) <span class="math">\(I_{s}(t)=I_{c}\sin(\phi)\)</span> describes
-the supercurrent via a Josephson junction (<span class="caps">JJ</span>), where <span class="math">\(I_{c}\)</span> is the
-critical current and <span class="math">\(\phi\)</span> is the junction phase-difference. The <span class="caps">CPR</span>
+the supercurrent via a Josephson junction (<span class="caps">JJ</span>), where <span class="math">\(I_{c}\)</span> is the
+critical current and <span class="math">\(\phi\)</span> is the junction phase-difference. The <span class="caps">CPR</span>
 can be stated in more broad terms as (Pal et al. 2014; Tanaka and
 Kashiwaya 1997)
 </p>
 <div class="math">$$I_{s}(t)=\sum_{\mathrm{n}\geq1}I_{\mathrm{c}_{\mathrm{n}}}\sin(\mathrm{n}\phi)$$</div>
 <p>
-, and when the first harmonic is suppressed (for example, at a 0 –<span class="math">\(\pi\)</span>
+, and when the first harmonic is suppressed (for example, at a 0 –<span class="math">\(\pi\)</span>
 transition)(Sellier et al. 2004), the second harmonic may become
 apparent. We try to determine the influence of adding a second harmonic
 <span class="caps">CPR</span> in the I c H and V H behavior in this thesis by simulation.</p>
@@ -452,8 +443,7 @@ the order 0.001861(units b). The significance of the second variable
 could be irreversibly lost while executing any operation pertinent to
 these variables, such as multiplication. One technique to assist limit
 these possible losses is to normalise the variables first. The equation
-is simplified with normalized time ( unitless ) via the plasma
-frequency, <span class="math">\(\tau=\omega_{p}t\)</span> where
+is simplified with normalized time ( unitless ) via the plasma frequency, <span class="math">\(\tau=\omega_{p}t\)</span> where
 <span class="math">\(\omega_{p}=\left(2eI_{c0}/\hbar C\right)^{1/2}\)</span>:(Schrieffer and Tinkham 1999)</p>
 <p><span class="math">\(\omega_{p}=\frac{1}{\tau_{p}}=\frac{1}{\sqrt{L_{c}C}}=\sqrt{\frac{2eI_{c}}{\hbar C}}\)</span>
 and
@@ -463,13 +453,12 @@ applying these factors we get</p>
 <div class="math">$$\Longrightarrow\frac{d^{2}\phi}{d\tau^{2}}=\frac{I}{I_{c}}-\sin(\phi)-\frac{1}{Q}\frac{d\phi}{d\tau}\label{eq:FinalODE}$$</div>
 <p>In this eq <a data-reference="eq:FinalODE" data-reference-type="ref" href="#eq:FinalODE">[eq:FinalODE]</a> Q is the damping factor
 (or quality factor) which depends on the inherent resistive and
-capacitive components of the <span class="caps">RCSJ</span> model. This Q is identical with
-<span class="math">\(\beta_{c}^{1/2}\)</span>, where <span class="math">\(\beta_{c}\)</span> is a frequently used damping
+capacitive components of the <span class="caps">RCSJ</span> model. This Q is identical with
+<span class="math">\(\beta_{c}^{1/2}\)</span>, where <span class="math">\(\beta_{c}\)</span> is a frequently used damping
 parameter that was introduced by Stewart and McCumber. In the case of
-heavy damping <span class="math">\((Q\ll1)\)</span> we see the same <span class="caps">IV</span> behavior for increasing and
-decreasing current, however in the case of under damped junction
-(<span class="math">\(Q\gg1)\)</span>, while decreasing the current, we see that the junction
-remains in the non zero voltage range below <span class="math">\(I_{c}\)</span>. This behavior is
+heavy damping <span class="math">\((Q\ll1)\)</span> we see the same <span class="caps">IV</span> behavior for increasing and
+decreasing current, however in the case of under damped junction (<span class="math">\(Q\gg1)\)</span>, while decreasing the current, we see that the junction
+remains in the non zero voltage range below <span class="math">\(I_{c}\)</span>. This behavior is
 also explored in the simulations.</p>
 <p>The <span class="math">\(I_{c}\)</span>in eq <a data-reference="eq:FinalODE" data-reference-type="ref" href="#eq:FinalODE">[eq:FinalODE]</a>, is the critical current
 and its dependence with magnetic field is to be incorporated separately
@@ -485,12 +474,12 @@ initial values.</p>
 \\
 \mathring{y_{1}}=\frac{I}{I_{c}}-\sin(\phi)-\frac{y_{0}}{Q} &amp; \,\,with &amp; y_{1}=\mathring{\phi}
 \end{array}$$</div>
-<p>The result one such <span class="caps">ODE</span> solve is <span class="math">\(\phi\)</span> and <span class="math">\(\mathring{\phi}\)</span> as a
-function of time for the given initial conditions of <span class="math">\(\phi\)</span> ,
+<p>The result one such <span class="caps">ODE</span> solve is <span class="math">\(\phi\)</span> and <span class="math">\(\mathring{\phi}\)</span> as a
+function of time for the given initial conditions of <span class="math">\(\phi\)</span> ,
 <span class="math">\(\mathring{\phi}\)</span> and <span class="math">\(I\)</span>. The dynamics of such a system depend vastly
 on the initial condition given to the <span class="caps">ODE</span>. As an example consider the
-<span class="caps">ODE</span> solution as a function of time (in <span class="math">\(\tau\)</span>) for different initial
-conditions for <span class="math">\(\phi\)</span> and <span class="math">\(\mathring{\phi}\)</span> in Fig
+<span class="caps">ODE</span> solution as a function of time (in <span class="math">\(\tau\)</span>) for different initial
+conditions for <span class="math">\(\phi\)</span> and <span class="math">\(\mathring{\phi}\)</span> in Fig
 <a data-reference="fig:ODE-relaxation-as" data-reference-type="ref" href="#fig:ODE-relaxation-as">3</a>.</p>
 <figure>
 <img alt="ODE solution as a function of time (in \tau) for different initial conditions for \phi and \mathring{\phi}" id="fig:ODE-relaxation-as" src="https://ashwinschronicles.github.io/Photos/ODE-relaxation.webp" style="width:15cm"/>
@@ -499,8 +488,8 @@ conditions for <span class="math">\(\phi\)</span> and <span class="math">\(\math
 conditions for <span class="math inline"><em>ϕ</em></span> and <span class="math inline"><em>ϕ̊</em></span></figcaption>
 </figure>
 <p>For the first iteration of the simulation (0 current and 0 phase
-difference) starting point for <span class="math">\(\phi\)</span> and <span class="math">\(\mathring{\phi}\)</span> should be
-set to zero as any <span class="math">\(\mathring{\phi}\)</span> would have to start from the moment
+difference) starting point for <span class="math">\(\phi\)</span> and <span class="math">\(\mathring{\phi}\)</span> should be
+set to zero as any <span class="math">\(\mathring{\phi}\)</span> would have to start from the moment
 a superconducting phase sets up and gradually evolves with time to reach equilibrium.</p>
 <p>After the system evolves for a certain amount of time steps (which needs
 to be adjusted depending on Q), the voltage is calculated by averaging
@@ -513,16 +502,16 @@ determined for each range of Q (below 0.1, below 1 below 10, below 100)
 and kept in a function called <em>timeparams.</em></p>
 <p>The entire process is then iterated over the given range of given
 currents. It must be noted that since the simulation for current depends
-on the previous relaxed values for <span class="math">\(\phi\)</span> and <span class="math">\(\mathring{\phi}\)</span>, the
+on the previous relaxed values for <span class="math">\(\phi\)</span> and <span class="math">\(\mathring{\phi}\)</span>, the
 voltage values for a given I depend on whether the current is a part of
 the increasing I cycle or decreasing I cycle. Thus one could clearly
 differentiate between the over damped <span class="caps">IV</span> and under damped <span class="caps">IV</span> based on
 the presence of re-trapping current. See fig
-<a data-reference="fig:IV-Q" data-reference-type="ref" href="#fig:IV-Q">4</a>. In the case of heavy damping <span class="math">\((Q\ll1)\)</span>
+<a data-reference="fig:IV-Q" data-reference-type="ref" href="#fig:IV-Q">4</a>. In the case of heavy damping <span class="math">\((Q\ll1)\)</span>
 we see the same <span class="caps">IV</span> behavior for increasing and decreasing current,
-however in the case of under damped junction (<span class="math">\(Q\gg1)\)</span>, while decreasing
+however in the case of under damped junction (<span class="math">\(Q\gg1)\)</span>, while decreasing
 the current, we see that the junction remains in the non zero voltage
-range below <span class="math">\(I_{c}\)</span>.</p>
+range below <span class="math">\(I_{c}\)</span>.</p>
 <figure>
 <img alt="IV sweep (both cycles) for selected under damped and over damped Q’s. Low damping (Q\gg1) results in substantial hysteresis with an almost linear retrapping branch, whereas the IV for high damping (Q\ll1) is without any hysteresis. " id="fig:IV-Q" src="https://ashwinschronicles.github.io/Photos/IV-VaryingQ.webp" style="width:7cm"/>
 <figcaption aria-hidden="true"><span class="caps">IV</span> sweep (both cycles) for selected under
@@ -566,26 +555,25 @@ second harmonics (bottom)</figcaption>
 parameter Q=0.5 (over damped) and only first harmonics (top) and with
 second harmonics (bottom)</figcaption>
 </figure>
-<p>In the case of heavy damping <span class="math">\((Q=0.5)\)</span> we see the same <span class="caps">IV</span> behavior for
+<p>In the case of heavy damping <span class="math">\((Q=0.5)\)</span> we see the same <span class="caps">IV</span> behavior for
 increasing and decreasing current, however in the case of under damped
-junction (<span class="math">\(Q=1.5)\)</span>, while decreasing the current, we see that the
-junction remains in the non zero voltage range below <span class="math">\(I_{c}\)</span>which is as
-expected. The variation in the <span class="math">\(I_{c}\)</span>as a function of applied magnetic
-field <span class="math">\(H\)</span> is also evident.</p>
-<p>The next part of the analysis is to compute the <span class="math">\(I_{C}H\)</span> data and <span class="math">\(VH\)</span>
+junction (<span class="math">\(Q=1.5)\)</span>, while decreasing the current, we see that the
+junction remains in the non zero voltage range below <span class="math">\(I_{c}\)</span>which is as
+expected. The variation in the <span class="math">\(I_{c}\)</span>as a function of applied magnetic field <span class="math">\(H\)</span> is also evident.</p>
+<p>The next part of the analysis is to compute the <span class="math">\(I_{C}H\)</span> data and <span class="math">\(VH\)</span>
 data from these simulations in both the first harmonics case as well as
 the second harmonics case.</p>
-<p>In Fig<a data-reference="fig:Plots-of-VHs-1.5" data-reference-type="ref" href="#fig:Plots-of-VHs-1.5">10</a>, we see the plots of
-<span class="math">\(I_{c}H\)</span> (top) and log plot of <span class="math">\(VH\)</span> (bottom) from simulation with
-parameter Q=1.5 and second harmonics enabled. The <span class="math">\(I_{c}H\)</span> and <span class="math">\(VH\)</span>
+<p>In Fig<a data-reference="fig:Plots-of-VHs-1.5" data-reference-type="ref" href="#fig:Plots-of-VHs-1.5">10</a>, we see the plots of
+<span class="math">\(I_{c}H\)</span> (top) and log plot of <span class="math">\(VH\)</span> (bottom) from simulation with
+parameter Q=1.5 and second harmonics enabled. The <span class="math">\(I_{c}H\)</span> and <span class="math">\(VH\)</span>
 plots have similar shape at the key magnetic field points. ie the main
 lobe width and the side lobe widths are same. The characteristic second
 harmonic kinks appear at the same positions as well thus confirming the
-hypothesis that <span class="math">\(I_{c}H\)</span>and <span class="math">\(VH\)</span> (magnetoresistance) have similar
+hypothesis that <span class="math">\(I_{c}H\)</span>and <span class="math">\(VH\)</span> (magnetoresistance) have similar
 characteristics for a Josephson junction. Fig
-<a data-reference="fig:Plots-of-VHs-1.5-1" data-reference-type="ref" href="#fig:Plots-of-VHs-1.5-1">12</a> is the same plots of
+<a data-reference="fig:Plots-of-VHs-1.5-1" data-reference-type="ref" href="#fig:Plots-of-VHs-1.5-1">12</a> is the same plots of
 <span class="math">\(I_{c}H\)</span>and <span class="math">\(VH\)</span> for Q-1.5 but with only the first harmonics included.
-Here too the <span class="math">\(I_{c}H\)</span>and <span class="math">\(VH\)</span> (magnetoresistance) have similar
+Here too the <span class="math">\(I_{c}H\)</span>and <span class="math">\(VH\)</span> (magnetoresistance) have similar
 characteristics further confirming the hypothesis.</p>
 <figure>
 <img alt="Plots of I_{c}H (top) and VH (bottom) from simulation with parameter Q=1.5 and second harmonics added " id="fig:Plots-of-VHs-1.5" src="https://ashwinschronicles.github.io/Photos/IcH-Q1.5-2nd.webp" style="width:18cm;height:10cm"/>
@@ -615,9 +603,9 @@ from simulation with parameter Q=1.5 and only first harmonics being kept
 from simulation with parameter Q=1.5 and only first harmonics being kept
 </figcaption>
 </figure>
-<p>One must notice that the <span class="math">\(VH\)</span> plots in bot the above figures have y axis
+<p>One must notice that the <span class="math">\(VH\)</span> plots in bot the above figures have y axis
 in log scale. The reason for this is that for the selected Q=1.5 the
-junction resistance turns out to be extreamly large at 120<span class="math">\(\Omega\)</span>, the
+junction resistance turns out to be extreamly large at 120<span class="math">\(\Omega\)</span>, the
 typical resistnace of a junction lies in the milli ohm range, thus the
 reported Voltages for the same current would be magnitudes higher, thus
 a log plot is taken inorder to correct this.</p>
@@ -652,8 +640,7 @@ layer. The yellow arrowed line shows the direction of current
 flow</figcaption>
 </figure>
 <p>All the superconducting devices were first cooled to sub 2K, and then a
-4 probe resistance vs temperature measurement was carried out with 1 -
-10 <span class="math">\(\mu\)</span>A by ramping the temperature slowly to 10K, in order to see the
+4 probe resistance vs temperature measurement was carried out with 1 - 10 <span class="math">\(\mu\)</span>A by ramping the temperature slowly to 10K, in order to see the
 phase transitions. One such R-T graph is shown in Fig
 <a data-reference="fig:RT-graph-for" data-reference-type="ref" href="#fig:RT-graph-for">16</a>.</p>
 <figure>
@@ -664,13 +651,13 @@ Josephson junction. The inset shows an <span class="caps">SEM</span> image of th
 </figure>
 <p>The first transition indicates the superconducting transition of the
 Niobium layer, and the second transition explains the proximitisation of
-the weak link. The resistance <span class="math">\(R_{n}\)</span> at 9K (above <span class="math">\(T_{c}\)</span>) and
-<span class="math">\(R_{L}\)</span>at 2K are noted and the sample is cooled back to sub 2K.
+the weak link. The resistance <span class="math">\(R_{n}\)</span> at 9K (above <span class="math">\(T_{c}\)</span>) and
+<span class="math">\(R_{L}\)</span>at 2K are noted and the sample is cooled back to sub 2K.
 <span class="math">\(R_{n}\)</span>is the normal resistance and indicates that the device is out of
 the superconducting regime. Once the devices cool down to 2K the
 current-voltage characteristics of the device is measured by sweeping
-current from -<span class="math">\(I_{n}\)</span> to +<span class="math">\(I_{n}\)</span>, where <span class="math">\(I_{n}\)</span> is the current for
-which the device yields the resistance <span class="math">\(R_{n}\)</span> at 2K, ie. the device
+current from -<span class="math">\(I_{n}\)</span> to +<span class="math">\(I_{n}\)</span>, where <span class="math">\(I_{n}\)</span> is the current for
+which the device yields the resistance <span class="math">\(R_{n}\)</span> at 2K, ie. the device
 switches to the normal regime. The I-V curves have the typical <span class="caps">JJ</span>
 behavior and is plotted in Fig
 <a data-reference="fig:IV-graph-for" data-reference-type="ref" href="#fig:IV-graph-for">17</a>.</p>
@@ -683,8 +670,8 @@ Josephson junction </figcaption>
 scripts mentioned in section
 <a data-reference="subsec:Automation-of-" data-reference-type="ref" href="#subsec:Automation-of-">[subsec:Automation-of-]</a>.</p>
 <p>In Fig <a data-reference="fig:IV-graph-for" data-reference-type="ref" href="#fig:IV-graph-for">17</a> the <span class="caps">IV</span> curve of a Nb/Cu
-Josephson Junction is shown. Once the device <span class="math">\(I_{c}\)</span> is found, the
-device is cooled to 2K and then supplied with <span class="math">\(I_{c}\)</span> current, and the
+Josephson Junction is shown. Once the device <span class="math">\(I_{c}\)</span> is found, the
+device is cooled to 2K and then supplied with <span class="math">\(I_{c}\)</span> current, and the
 junction voltage is measured while ramping the magnetic field from +250
 Oe to -250 Oe ( positive cycle ) and then from -250Oe to 250Oe (
 negative cycle ) at 2K. This gives us magnetoresistance as a function of
@@ -705,7 +692,7 @@ Josephson junction device in low magnetic fields</figcaption>
 <p>In Fig
 <a data-reference="fig:Magnetoresistance-of-the-1" data-reference-type="ref" href="#fig:Magnetoresistance-of-the-1">19</a> , we examine the
 magnetoresistance of the patterned Nb/Cu Josephson junction device in
-low magnetic fields (|H| &lt; 300 Oe) and at its <span class="math">\(I_{c}\)</span>. We find that
+low magnetic fields (|H| &lt; 300 Oe) and at its <span class="math">\(I_{c}\)</span>. We find that
 the main lobe of the positive and the negative cycle overlap completely
 and there is no shift of the main lobe from origin as one would expect
 for a normal S-N-S junction. Fig
@@ -722,33 +709,33 @@ confirmed with the simulation results.</p>
 Magnetoresistance of the patterned Nb/Cu Josephson junction device
 (which exhibits first harmonics only) in low magnetic fields for
 different values of junction currents is plotted. This plot is similar
-to the <span class="math">\(VH\)</span> plot obtained from the simulation for Q=1.5 with only first
+to the <span class="math">\(VH\)</span> plot obtained from the simulation for Q=1.5 with only first
 harmonics enabled (Fig
 <a data-reference="fig:Plots-of-VHs-1.5-1" data-reference-type="ref" href="#fig:Plots-of-VHs-1.5-1">12</a> (bottom) ). This further
-confirms the equivalence between <span class="math">\(VH\)</span> plot obtained experimentally and
-<span class="math">\(VH\)</span> plot obtained from simulations, Thus establishing that the <span class="math">\(VH\)</span>
+confirms the equivalence between <span class="math">\(VH\)</span> plot obtained experimentally and
+<span class="math">\(VH\)</span> plot obtained from simulations, Thus establishing that the <span class="math">\(VH\)</span>
 plot obtained experimentally confirms the typical characteristic of the
 Josephson junction.</p>
 <h3 id="processing-experimental-data">Processing experimental data<a class="headerlink" href="#processing-experimental-data" title="Permanent link">¶</a></h3>
-<h4 id="automation-of-i_c-extraction">Automation of <span class="math">\(I_{c}\)</span> extraction<span id="subsec:Automation-of-" label="subsec:Automation-of-"></span><a class="headerlink" href="#automation-of-i_c-extraction" title="Permanent link">¶</a></h4>
-<p>Once the <span class="caps">IV</span> simulation is done, in order to aggregate data for <span class="math">\(I_{c}\)</span>as
-a function of applied magnetic field <span class="math">\(H\)</span> (<span class="math">\(I_{c}H)\)</span> and Junction voltage
-at as a function of applied magnetic field <span class="math">\(H\)</span> (<span class="math">\(VH\)</span>), One must first
-set the process for identifying <span class="math">\(I_{c}\)</span>. In case of simulations, since
+<h4 id="automation-of-i_c-extraction">Automation of <span class="math">\(I_{c}\)</span> extraction<span id="subsec:Automation-of-" label="subsec:Automation-of-"></span><a class="headerlink" href="#automation-of-i_c-extraction" title="Permanent link">¶</a></h4>
+<p>Once the <span class="caps">IV</span> simulation is done, in order to aggregate data for <span class="math">\(I_{c}\)</span>as
+a function of applied magnetic field <span class="math">\(H\)</span> (<span class="math">\(I_{c}H)\)</span> and Junction voltage
+at as a function of applied magnetic field <span class="math">\(H\)</span> (<span class="math">\(VH\)</span>), One must first
+set the process for identifying <span class="math">\(I_{c}\)</span>. In case of simulations, since
 the data is quite smooth, we could choose a junction voltage which
 corresponds to Ic for one run and find the current value for that
 particular voltage on other runs. This is essentially a horizontal slice
 of the <span class="caps">IV</span> curve in Fig <a data-reference="fig:IV-Q" data-reference-type="ref" href="#fig:IV-Q">4</a>. For experimental data, there is another
-way to define the <span class="math">\(I_{c}\)</span>of a given <span class="caps">PPMS</span> data.</p>
+way to define the <span class="math">\(I_{c}\)</span>of a given <span class="caps">PPMS</span> data.</p>
 <p><span class="math">\(I_{c}\)</span> of the junction were extracted from this data by running through
 a python script that takes in the I-V data, calculates dV/dI, and
-applies a Savitzky–Golay filter of first-order to obtain <span class="math">\(d^{2}I/d^{2}V\)</span>
-and find the current (<span class="math">\(I_{c}\)</span>) for which <span class="math">\(d^{2}I/d^{2}V\)</span> in both the
+applies a Savitzky–Golay filter of first-order to obtain <span class="math">\(d^{2}I/d^{2}V\)</span>
+and find the current (<span class="math">\(I_{c}\)</span>) for which <span class="math">\(d^{2}I/d^{2}V\)</span> in both the
 positive and negative side and averages them. For normal Josephson
-junction the position of peak of <span class="math">\(dI/dV\)</span> is a good marker of the
-<span class="math">\(I_{c}\)</span>, however in cases where the junction resistance is high, <span class="math">\(dI/dV\)</span>
-might not be clear enough to mitigate this peaks of <span class="math">\(d^{2}I/d^{2}V\)</span> is a
-better marker of <span class="math">\(I_{c}\)</span> A sample graph of <span class="math">\(dI/dV\)</span> and <span class="math">\(d^{2}I/d^{2}V\)</span>
+junction the position of peak of <span class="math">\(dI/dV\)</span> is a good marker of the
+<span class="math">\(I_{c}\)</span>, however in cases where the junction resistance is high, <span class="math">\(dI/dV\)</span>
+might not be clear enough to mitigate this peaks of <span class="math">\(d^{2}I/d^{2}V\)</span> is a
+better marker of <span class="math">\(I_{c}\)</span> A sample graph of <span class="math">\(dI/dV\)</span> and <span class="math">\(d^{2}I/d^{2}V\)</span>
 for a I vs V curve measured on a Josephson junction is shown in Fig
 <a data-reference="fig:findIc" data-reference-type="ref" href="#fig:findIc">20</a>.</p>
 <figure>
@@ -774,23 +761,23 @@ visualizing the scatter plot of Josephson junctions <span class="caps">IV</span>
 </figure>
 <h4 id="inferring-i_c-behavior-via-repetitive-iv-measurement">Inferring <span class="math">\(I_{c}\)</span> behavior via repetitive <span class="caps">IV</span> measurement<a class="headerlink" href="#inferring-i_c-behavior-via-repetitive-iv-measurement" title="Permanent link">¶</a></h4>
 <p>The characteristic signature of a Josephson junction, apart from its
-current voltage relation (<span class="caps">IV</span>) is the Critical current <span class="math">\(I_{c}\)</span>dependence
-on the applied magnetic field H ( <span class="math">\(I_{C}\)</span>vs H or <span class="math">\(I_{C}H\)</span>).</p>
+current voltage relation (<span class="caps">IV</span>) is the Critical current <span class="math">\(I_{c}\)</span>dependence
+on the applied magnetic field H ( <span class="math">\(I_{C}\)</span>vs H or <span class="math">\(I_{C}H\)</span>).</p>
 <p>The <span class="caps">PPMS</span> in the lab has builtin recipes only for <span class="caps">DC</span> measurement and as
 such <span class="caps">DC</span> measurements like <span class="caps">IV</span> are relatively slower (1 <span class="caps">IV</span> scan in 10-15
-minutes on good resolution). Thus getting data for <span class="math">\(I_{c}H\)</span> would
+minutes on good resolution). Thus getting data for <span class="math">\(I_{c}H\)</span> would
 require multiple IVs to be measured at a sweep of magnetic field H. This
 would take almost a day per device on a decent resolution and thus cant
 be done frequently. The more easier measurement would be to set and
-constant current (say the <span class="math">\(Ic\)</span> at zero magnetic field) then measure the
+constant current (say the <span class="math">\(Ic\)</span> at zero magnetic field) then measure the
 Voltage as a function of changing magnetic field ( V vs H or <span class="caps">VH</span> )
 however, there is little literature regarding the <span class="caps">VH</span> relation (or
 magneto resistance ) of a Josephson junction. In order to verify the
-correlation between the <span class="math">\(I_{C}H\)</span> and <span class="math">\(VH\)</span> signatures of a Josephson
+correlation between the <span class="math">\(I_{C}H\)</span> and <span class="math">\(VH\)</span> signatures of a Josephson
 junction, apart from the simulation methods, multiple <span class="caps">IV</span> seeps of a
 Josephson Junction were setup at varying magnetic field were taken, and
 a python script mentioned in the previous sub section was used to
-identify the <span class="math">\(I_{C}\)</span> for each <span class="math">\(H\)</span>. The plots of these <span class="math">\(I_{C}H\)</span> and <span class="math">\(VH\)</span>
+identify the <span class="math">\(I_{C}\)</span> for each <span class="math">\(H\)</span>. The plots of these <span class="math">\(I_{C}H\)</span> and <span class="math">\(VH\)</span>
 data is shown in Fig . The <span class="caps">VH</span> data for these junctions have some parts
 which are offset due to random phase jumps. On comparison, one can make
 out the Fraunhofer like pattern in both plots at the same magnetic field
@@ -874,34 +861,34 @@ junction voltage and the data acquired by the device was quite
 unreliable and noisy, thus this method was not used further. A better
 way to do differential conductance would be to use a lock-in amplifier.</p>
 <h3 id="conclusion">Conclusion<a class="headerlink" href="#conclusion" title="Permanent link">¶</a></h3>
-<p>The main goal of the thesis was to establish equivalence between the
+<p>The main goal of the thesis was to establish equivalence between the
 <span class="math">\(I_{c}H\)</span>and <span class="math">\(VH\)</span> (magnetoresistance) characteristics of a Josephson
 junction ( with and without the second harmonics), then further
-establish the experimental <span class="math">\(VH\)</span> plot and the simulated <span class="math">\(VH\)</span> plot.</p>
+establish the experimental <span class="math">\(VH\)</span> plot and the simulated <span class="math">\(VH\)</span> plot.</p>
 <p>For the first part, the simulation was setup by solving the <span class="caps">ODE</span> with
 input similar to the experimental input of, sweeping the current while
 equilibrating the system at each step and then repeating this over
-multiple magnetic field, then further analysing this data to obtain
+multiple magnetic field, then further analysing this data to obtain
 <span class="math">\(I_{c}H\)</span>and <span class="math">\(VH\)</span> plots. For the second part, experimental data was
 gathered similar to the simulation steps (calculating <span class="caps">IV</span> data for
-multiple magnetic field ) and then analysed to to obtain <span class="math">\(I_{c}H\)</span>and
+multiple magnetic field ) and then analysed to to obtain <span class="math">\(I_{c}H\)</span>and
 <span class="math">\(VH\)</span> plots, the results obtained from this was matched with the
 simulation results.</p>
-<p>In both of the above method, the equivalence between the <span class="math">\(I_{c}H\)</span>and
+<p>In both of the above method, the equivalence between the <span class="math">\(I_{c}H\)</span>and
 <span class="math">\(VH\)</span> (magnetoresistance) characteristics of a Josephson junction was
 confirmed and was also matched with the experimental results. One could
 carry out the study further by:</p>
 <ul>
 <li>
-<p>Carrying out a simulation analysis with respect to <span class="math">\(\beta_{c}\)</span>and
+<p>Carrying out a simulation analysis with respect to <span class="math">\(\beta_{c}\)</span>and
     compare it with the results obtained through Q</p>
 </li>
 <li>
-<p>Simulation of other exotic <span class="caps">CPR</span> such as sin(<span class="math">\(\phi/2\)</span>)</p>
+<p>Simulation of other exotic <span class="caps">CPR</span> such as sin(<span class="math">\(\phi/2\)</span>)</p>
 </li>
 <li>
 <p>The simulation currently takes about 2hrs for sweeping magnetic
-    fields linearly spaced between <span class="math">\(-2\frac{\phi}{\phi_{0}}\)</span> and
+    fields linearly spaced between <span class="math">\(-2\frac{\phi}{\phi_{0}}\)</span> and
     <span class="math">\(2\frac{\phi}{\phi_{0}}\)</span> . An improvement in the
     simulation/integration time by using numba decorators for
     numpy-python modules could be made, for instance Scipy’s odeint
@@ -932,7 +919,7 @@ Junctions.” <em>Nature Communications 2019 10:1</em> 10 (January): 1–8.
 <p>Bardeen, J., <span class="caps">L. N.</span> Cooper, and <span class="caps">J. R.</span> Schrieffer. 1957. “Theory of
 Superconductivity.” <em>Phys. Rev.</em> 108 (December): 1175–1204.
 <a href="https://doi.org/10.1103/PhysRev.108.1175">https://doi.org/10.1103/PhysRev.108.1175</a>.</p>
-<p>DanielSank. n.d. “What Does the <span class="math">\(I\)</span>-<span class="math">\(V\)</span> Curve in Josephson Junction
+<p>DanielSank. n.d. “What Does the <span class="math">\(I\)</span>-<span class="math">\(V\)</span> Curve in Josephson Junction
 Mean?” Physics Stack Exchange.
 <a href="https://physics.stackexchange.com/q/197150">https://physics.stackexchange.com/q/197150</a>.</p>
 <p>Drozdov, A. P., <span class="caps">M. I.</span> Eremets, <span class="caps">I. A.</span> Troyan, V. Ksenofontov, and <span class="caps">S. I.
@@ -987,8 +974,7 @@ in Anisotropic Superconductors.” <em>Phys. Rev. B</em> 56 (July): 892–912.
 <a href="https://doi.org/10.1103/PhysRevB.56.892">https://doi.org/10.1103/PhysRevB.56.892</a>.</p>
 <p>Wang, Lujun. 2015. “Fabrication Stability of Josephson Junctions for
 Superconducting Qubits.” In.</p>
-<p>Yamashita, T., K. Tanikawa, S. Takahashi, and S. Maekawa. 2005.
-“Superconducting <span class="math">\(\ensuremath{\pi}\)</span> Qubit with a Ferromagnetic Josephson
+<p>Yamashita, T., K. Tanikawa, S. Takahashi, and S. Maekawa. 2005. “Superconducting <span class="math">\(\ensuremath{\pi}\)</span> Qubit with a Ferromagnetic Josephson
 Junction.” <em>Phys. Rev. Lett.</em> 95 (August): 097001.
 <a href="https://doi.org/10.1103/PhysRevLett.95.097001">https://doi.org/10.1103/PhysRevLett.95.097001</a>.</p>
 <h3 id="acknowledgments">Acknowledgments<a class="headerlink" href="#acknowledgments" title="Permanent link">¶</a></h3>
@@ -1141,7 +1127,7 @@ members for extending their love and support.</p>
     var mathjaxscript = document.createElement('script');
     mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
     mathjaxscript.type = 'text/javascript';
-    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_CHTML';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-AMS-MML_HTMLorMML';
 
     var configscript = document.createElement('script');
     configscript.type = 'text/x-mathjax-config';
@@ -1189,7 +1175,6 @@ members for extending their love and support.</p>
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
 </script>
-            </main>
 
 
              
@@ -1481,7 +1466,7 @@ members for extending their love and support.</p>
 <script>
 var sc_project=12223345;
 var sc_invisible=1;
-var sc_security="c77ea628";
+var sc_security="2ee4ddde";
 var scJsHost = (("https:" == document.location.protocol) ?
 "https://secure." : "http://www.");
 document.write("<sc"+"ript type='text/javascript' src='" +
@@ -1491,7 +1476,7 @@ scJsHost+
 <noscript><div class="statcounter"><a title="web analytics"
 href="http://statcounter.com/" target="_blank" rel="nofollow noopener noreferrer"><img
 class="statcounter"
-src="//c.statcounter.com/12223345/0/c77ea628/1/"
+src="//c.statcounter.com/12223345/0/2ee4ddde/1/"
 alt="web analytics"></a></div></noscript>
 <!-- End of StatCounter Code for Default Guide -->
     </body>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Ashwin's Chronicles🗞️ - Lecture Notes</title><link href="https://ashwinschronicles.github.io/" rel="alternate"></link><link href="https://ashwinschronicles.github.io/feeds/lecture-notes.atom.xml" rel="self"></link><id>https://ashwinschronicles.github.io/</id><updated>2020-06-10T00:00:00+05:30</updated><entry><title>Battery Management System for an xEV - Part 1</title><link href="https://ashwinschronicles.github.io/BMS_for_an_EV_intro" rel="alternate"></link><published>2020-05-25T00:00:00+05:30</published><updated>2020-06-10T00:00:00+05:30</updated><author><name>Ashwin</name></author><id>tag:ashwinschronicles.github.io,2020-05-25:/BMS_for_an_EV_intro</id><summary type="html">&lt;p&gt;This post is about information gathered on designing a &lt;span class="caps"&gt;BMS&lt;/span&gt; for a&amp;nbsp;xEV&lt;/p&gt;</summary><content type="html">
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Ashwin's Chronicles🗞️ - Lecture Notes</title><link href="https://ashwinschronicles.github.io/" rel="alternate"/><link href="https://ashwinschronicles.github.io/feeds/lecture-notes.atom.xml" rel="self"/><id>https://ashwinschronicles.github.io/</id><updated>2021-11-13T20:13:02+05:30</updated><entry><title>Battery Management System for an xEV - Part 1</title><link href="https://ashwinschronicles.github.io/BMS_for_an_EV_intro" rel="alternate"/><published>2020-05-25T00:00:00+05:30</published><updated>2020-06-10T00:00:00+05:30</updated><author><name>Ashwin</name></author><id>tag:ashwinschronicles.github.io,2020-05-25:/BMS_for_an_EV_intro</id><summary type="html">&lt;p&gt;This post is about information gathered on designing a &lt;span class="caps"&gt;BMS&lt;/span&gt; for a&amp;nbsp;xEV&lt;/p&gt;</summary><content type="html">
 &lt;p&gt;This is part 1 of a series on Battery management system design.&lt;/p&gt;
 &lt;p&gt;The data presented here was  collected as a part of study based Internship at Kaynes Technology, Mysore.&lt;/p&gt;
 &lt;p&gt;Most of the data here is my notes on the following resources:&lt;/p&gt;
@@ -585,7 +585,7 @@ All of these have costs in dollars, weight and/or volume&lt;/li&gt;
 &lt;li&gt;Article 3: Advanced methods for &lt;span class="caps"&gt;SOC&lt;/span&gt; estimation&lt;/li&gt;
 &lt;li&gt;Article 4: &lt;span class="caps"&gt;SOH&lt;/span&gt; estimation&lt;/li&gt;
 &lt;li&gt;Article 5: Balancing and power-limits estimation&lt;/li&gt;
-&lt;/ul&gt;</content><category term="Lecture Notes"></category><category term="BMS"></category><category term="EV"></category><category term="battery-terminologies"></category><category term="BMS-requirements"></category><category term="electrochemical-cell"></category><category term="Li-ion_working"></category><category term="ADC"></category><category term="Shunt-sensor"></category><category term="hall-effect current sensor"></category><category term="contactor"></category><category term="Isolation sensing"></category><category term="BMS protection"></category><category term="Charger control"></category><category term="Performance management"></category></entry><entry><title>Notes on Superconductivity</title><link href="https://ashwinschronicles.github.io/Superconductivity" rel="alternate"></link><published>2019-06-06T00:00:00+05:30</published><updated>2019-06-20T00:00:00+05:30</updated><author><name>Ashwin Kumar Karnad</name></author><id>tag:ashwinschronicles.github.io,2019-06-06:/Superconductivity</id><summary type="html">&lt;p&gt;Short note on&amp;nbsp;superconductivity&lt;/p&gt;</summary><content type="html">&lt;p&gt;[&lt;span class="caps"&gt;TOC&lt;/span&gt;]
+&lt;/ul&gt;</content><category term="Lecture Notes"/><category term="BMS"/><category term="EV"/><category term="battery-terminologies"/><category term="BMS-requirements"/><category term="electrochemical-cell"/><category term="Li-ion_working"/><category term="ADC"/><category term="Shunt-sensor"/><category term="hall-effect current sensor"/><category term="contactor"/><category term="Isolation sensing"/><category term="BMS protection"/><category term="Charger control"/><category term="Performance management"/></entry><entry><title>Notes on Superconductivity</title><link href="https://ashwinschronicles.github.io/Superconductivity" rel="alternate"/><published>2019-06-07T10:32:48+05:30</published><updated>2021-11-13T20:13:02+05:30</updated><author><name>Ashwin Kumar Karnad</name></author><id>tag:ashwinschronicles.github.io,2019-06-07:/Superconductivity</id><summary type="html">&lt;p&gt;Short note on&amp;nbsp;superconductivity&lt;/p&gt;</summary><content type="html">&lt;p&gt;[&lt;span class="caps"&gt;TOC&lt;/span&gt;]
 This post is my notes on Superconductivity from video lectures of &lt;a href="https://www.youtube.com/channel/UCDBKb7qMyNXujTf7kKRdstg" title="Youtube Link"&gt;Sergey Frolov&lt;/a&gt; on Solid State Physics and other online sites such as&amp;nbsp;http://www.superconductors.org&lt;/p&gt;
 &lt;h1 id="properties"&gt;Properties&lt;a class="headerlink" href="#properties" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h1&gt;
 &lt;ul&gt;
@@ -593,14 +593,14 @@ This post is my notes on Superconductivity from video lectures of &lt;a href="ht
 &lt;p&gt;Discoverd first in Hg at 4.2K in Liquid&amp;nbsp;Helium&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;Current induced in a ring follows &lt;div class="math"&gt;$$ I(t)=I_0e^{(-t/\tau))}$$&lt;/div&gt; and dosent change much for over 100,000 years for &lt;span class="caps"&gt;SC&lt;/span&gt; and goes to 1% of initial value in few nano seconds in a normal&amp;nbsp;metal.&lt;/p&gt;
+&lt;p&gt;Current induced in a ring&amp;nbsp;follows &lt;div class="math"&gt;$$ I(t)=I_0e^{(-t/\tau))}$$&lt;/div&gt; and dosent change much for over 100,000 years for &lt;span class="caps"&gt;SC&lt;/span&gt; and goes to 1% of initial value in few nano seconds in a normal&amp;nbsp;metal.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Magnetic field destroy super conductivity (so does current in the &lt;span class="caps"&gt;SC&lt;/span&gt;)
 &lt;img alt="image" src="../../images/SC_mag.webp" /&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;Magnetic Impurities lower &lt;span class="math"&gt;\(T_C\)&lt;/span&gt; (non mag has no&amp;nbsp;effect)&lt;/p&gt;
+&lt;p&gt;Magnetic Impurities&amp;nbsp;lower &lt;span class="math"&gt;\(T_C\)&lt;/span&gt; (non mag has no&amp;nbsp;effect)&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Fe Co Ni&amp;nbsp;nonSC&lt;/p&gt;
@@ -627,7 +627,7 @@ This post is my notes on Superconductivity from video lectures of &lt;a href="ht
 &lt;p&gt;&lt;em&gt;Meissner effect&lt;/em&gt; is perfect expulsion of Magnetic field out of &lt;span class="caps"&gt;SC&lt;/span&gt; (except penetration depth) due to screening current&lt;img alt="image" src="../../images/misener.webp" /&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;span class="caps"&gt;SC&lt;/span&gt; act as perfect diamagnet &lt;span class="math"&gt;\(\chi=-1\)&lt;/span&gt; and is a defining feature of &lt;span class="caps"&gt;SC&lt;/span&gt; and not just &lt;span class="math"&gt;\(\rho\)&lt;/span&gt;=0&lt;/p&gt;
+&lt;p&gt;&lt;span class="caps"&gt;SC&lt;/span&gt; act as perfect&amp;nbsp;diamagnet &lt;span class="math"&gt;\(\chi=-1\)&lt;/span&gt; and is a defining feature of &lt;span class="caps"&gt;SC&lt;/span&gt; and not&amp;nbsp;just &lt;span class="math"&gt;\(\rho\)&lt;/span&gt;=0&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Difference between perfect conductor and &lt;span class="caps"&gt;SC&lt;/span&gt; &lt;img alt="Difference between perfect conductor and SC" src="../../images/SUP_perfCandSC.webp" /&gt;&lt;/p&gt;
@@ -644,27 +644,27 @@ This post is my notes on Superconductivity from video lectures of &lt;a href="ht
 &lt;p&gt;3) &lt;a href="https://en.wikipedia.org/wiki/Meissner_effect"&gt;Meissner effect&lt;/a&gt;: As the material passes below the critical temperature and transitions into superconductivity, it ejects its magnetic&amp;nbsp;field.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;Heat capacity of a &lt;span class="caps"&gt;SC&lt;/span&gt; is discontinuous at &lt;span class="math"&gt;\(T_C\)&lt;/span&gt; and crashes to 0 after  &lt;span class="math"&gt;\(T_C\)&lt;/span&gt;
+&lt;p&gt;Heat capacity of a &lt;span class="caps"&gt;SC&lt;/span&gt; is discontinuous&amp;nbsp;at &lt;span class="math"&gt;\(T_C\)&lt;/span&gt; and crashes to 0&amp;nbsp;after  &lt;span class="math"&gt;\(T_C\)&lt;/span&gt;
 &lt;img alt="image" src="../../images/Heat_capacity.webp" /&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;The function is given by &lt;span class="math"&gt;\(C \alpha e^{a/T}\)&lt;/span&gt; and is simmilar to Einstein&amp;#8217;s model of specific heat, n coupled osscilator&amp;nbsp;model. &lt;/p&gt;
+&lt;p&gt;The function is given&amp;nbsp;by &lt;span class="math"&gt;\(C \alpha e^{a/T}\)&lt;/span&gt; and is simmilar to Einstein&amp;#8217;s model of specific heat, n coupled osscilator&amp;nbsp;model. &lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;[verify !] Exponents often go with gaps (semiconductor and superconductor&amp;nbsp;state)&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;In the super conducting state, there is a samll energy gap arround the fermi level. With &lt;span class="math"&gt;\(E_g~10x^{-4}E_F\)&lt;/span&gt;
+&lt;p&gt;In the super conducting state, there is a samll energy gap arround the fermi level.&amp;nbsp;With &lt;span class="math"&gt;\(E_g~10x^{-4}E_F\)&lt;/span&gt;
 &lt;img alt="SC_band" src="../../images/SC_band.webp" /&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;one in 10,000 electrons participate in &lt;span class="caps"&gt;SC&lt;/span&gt;&amp;nbsp;state.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;The a in &lt;span class="math"&gt;\(C \alpha e^{a/T}\)&lt;/span&gt; is given by &lt;span class="math"&gt;\(-E_g/2\)&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;The a&amp;nbsp;in &lt;span class="math"&gt;\(C \alpha e^{a/T}\)&lt;/span&gt; is given&amp;nbsp;by &lt;span class="math"&gt;\(-E_g/2\)&lt;/span&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;Higher &lt;span class="math"&gt;\(E_g\)&lt;/span&gt; implies higher &lt;span class="math"&gt;\(T_C\)&lt;/span&gt;
+&lt;p&gt;Higher &lt;span class="math"&gt;\(E_g\)&lt;/span&gt; implies&amp;nbsp;higher &lt;span class="math"&gt;\(T_C\)&lt;/span&gt;
 &lt;img alt="EG_periodic" src="../../images/EG_periodic.webp" /&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
@@ -692,7 +692,7 @@ This post is my notes on Superconductivity from video lectures of &lt;a href="ht
 &lt;/li&gt;
 &lt;li&gt;ie the flow velocity of liquid helium is independent of applied&amp;nbsp;pressure.&lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;in semicunductor attraction between &lt;span class="math"&gt;\(e^-\)&lt;/span&gt; in conduction band and holes in valence bond give rise to a bound pairs known as excitons , they also show super fluidity.&lt;img alt="superfluidity" src="../../images/exciton.webp" /&gt;&lt;/p&gt;
+&lt;p&gt;in semicunductor attraction&amp;nbsp;between &lt;span class="math"&gt;\(e^-\)&lt;/span&gt; in conduction band and holes in valence bond give rise to a bound pairs known as excitons , they also show super fluidity.&lt;img alt="superfluidity" src="../../images/exciton.webp" /&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Because they contain real bound pairs of 2 fermions (in contrast to cooper pais) excitons are&amp;nbsp;bosons.&lt;/p&gt;
@@ -703,16 +703,16 @@ This post is my notes on Superconductivity from video lectures of &lt;a href="ht
 &lt;h1 id="why-is-there-superconductivity"&gt;Why is there superconductivity?&lt;a class="headerlink" href="#why-is-there-superconductivity" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h1&gt;
 &lt;p&gt;tldr: Two electrons form a bound state called Cooper pair. These cooper pairs form a condensate.
 &lt;img alt="cooperpairs" src="../../images/cooperpairs.webp" /&gt;&lt;/p&gt;
-&lt;p&gt;When an electron is moving through a solid with momentum K, since it also interacts with the lattice, there is an electron phonon interaction, meaning an electron moving through the crystal launches a phonon, another electron flying in a different direction can absorb this photon and form a bound state. These cooper pairs form a condensate (they are all in the same indistinguishable quantum state). And the condensate can be represented by the wave function &lt;span class="math"&gt;\(\psi=n_s e^{i \phi}\)&lt;/span&gt;, where &lt;span class="math"&gt;\(n_s\)&lt;/span&gt; is the density of Cooper pair and &lt;span class="math"&gt;\(\phi\)&lt;/span&gt; denotes the&amp;nbsp;phase.&lt;/p&gt;
+&lt;p&gt;When an electron is moving through a solid with momentum K, since it also interacts with the lattice, there is an electron phonon interaction, meaning an electron moving through the crystal launches a phonon, another electron flying in a different direction can absorb this photon and form a bound state. These cooper pairs form a condensate (they are all in the same indistinguishable quantum state). And the condensate can be represented by the wave&amp;nbsp;function &lt;span class="math"&gt;\(\psi=n_s e^{i \phi}\)&lt;/span&gt;,&amp;nbsp;where &lt;span class="math"&gt;\(n_s\)&lt;/span&gt; is the density of Cooper pair&amp;nbsp;and &lt;span class="math"&gt;\(\phi\)&lt;/span&gt; denotes the&amp;nbsp;phase.&lt;/p&gt;
 &lt;h1 id="london-equations"&gt;London equations&lt;a class="headerlink" href="#london-equations" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h1&gt;
 &lt;p&gt;The London equations, developed by brothers Fritz and Heinz London in 1935 relate current to electromagnetic fields in and around a&amp;nbsp;superconductor.&lt;/p&gt;
 &lt;p&gt;&lt;img alt="London equations" src="../../images/London_eqn.webp" /&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;In ohms law &lt;span class="math"&gt;\(j=\sigma E\)&lt;/span&gt; so its differential wrt time is 0, however 1st london equation gives a non 0 relation with &lt;span class="math"&gt;\(j'\)&lt;/span&gt; and &lt;span class="math"&gt;\(E\)&lt;/span&gt;&amp;nbsp;.&lt;/p&gt;
+&lt;p&gt;In ohms&amp;nbsp;law &lt;span class="math"&gt;\(j=\sigma E\)&lt;/span&gt; so its differential wrt time is 0, however 1st london equation gives a non 0 relation&amp;nbsp;with &lt;span class="math"&gt;\(j'\)&lt;/span&gt; and &lt;span class="math"&gt;\(E\)&lt;/span&gt; .&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;In leq1, &lt;span class="math"&gt;\(j\)&lt;/span&gt; is the superconducting current density, E and B are respectively the electric and magnetic fields within the superconductor, &lt;span class="math"&gt;\(q\)&lt;/span&gt; is the charge of an electron &lt;span class="amp"&gt;&amp;amp;&lt;/span&gt; proton, m, is electron mass, and &lt;span class="math"&gt;\(n_s\)&lt;/span&gt;, is a phenomenological constant loosely associated with a number density of superconducting&amp;nbsp;carriers.&lt;/p&gt;
+&lt;p&gt;In&amp;nbsp;leq1, &lt;span class="math"&gt;\(j\)&lt;/span&gt; is the superconducting current density, E and B are respectively the electric and magnetic fields within the&amp;nbsp;superconductor, &lt;span class="math"&gt;\(q\)&lt;/span&gt; is the charge of an electron &lt;span class="amp"&gt;&amp;amp;&lt;/span&gt; proton, m, is electron mass,&amp;nbsp;and &lt;span class="math"&gt;\(n_s\)&lt;/span&gt;, is a phenomenological constant loosely associated with a number density of superconducting&amp;nbsp;carriers.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;London eqn 1 (le1) also means that particles in a super conductor accelerate when a voltage is applied, in normal metals they only move with drift velocity and 0&amp;nbsp;acceleration.&lt;/p&gt;
@@ -724,14 +724,14 @@ This post is my notes on Superconductivity from video lectures of &lt;a href="ht
 &lt;p&gt;The rationale for the le1 can be thought of in the following different&amp;nbsp;ways: &lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;1) By definition, the electrons in a superconductor flow with no resistance, hence one can  imagine electrons as if they were free electrons und er the influence of a uniform external electric field. According to the Lorentz force law &lt;span class="math"&gt;\(F=eE+ev\mathrm{x}B\)&lt;/span&gt; these electrons should encounter a uniform force, and thus they should in fact accelerate uniformly. This is precisely what the first London equation&amp;nbsp;states.&lt;/p&gt;
-&lt;p&gt;2) Current density is defined according to the equation &lt;span class="math"&gt;\(j=-n_s e v\)&lt;/span&gt; , Taking this expression from a classical description to a quantum mechanical one, we must replace values j and v by the expectation values of their operators. The velocity operator &lt;span class="math"&gt;\( v = (p+eA)/m\)&lt;/span&gt; is defined by dividing the gauge-invariant, kinematic momentum operator by the particle mass &lt;em&gt;m&lt;/em&gt;. we are using &lt;img alt="-e" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/07ba5105b33e9ac88f605cc50663a9e2c16fcc63" /&gt; as the electron charge. We may then make this replacement in the equation above. However, an important assumption from the microscopic theory of superconductivity (&lt;span class="caps"&gt;BCS&lt;/span&gt;) is that the superconducting state of a system is the ground state, and according to a theorem of Bloch&amp;#8217;s,[&lt;a href="https://en.wikipedia.org/wiki/London_equations#cite_note-Michael_Tinkham_1996_5-10"&gt;]&lt;/a&gt; in such a state the canonical momentum &lt;strong&gt;p&lt;/strong&gt; is zero. This gives us &lt;span class="math"&gt;\(j=-\frac{n_s e^2}{m}\textbf{A}\)&lt;/span&gt; which is loosely the&amp;nbsp;le1&lt;/p&gt;
+&lt;p&gt;1) By definition, the electrons in a superconductor flow with no resistance, hence one can  imagine electrons as if they were free electrons und er the influence of a uniform external electric field. According to the Lorentz force&amp;nbsp;law &lt;span class="math"&gt;\(F=eE+ev\mathrm{x}B\)&lt;/span&gt; these electrons should encounter a uniform force, and thus they should in fact accelerate uniformly. This is precisely what the first London equation&amp;nbsp;states.&lt;/p&gt;
+&lt;p&gt;2) Current density is defined according to the&amp;nbsp;equation &lt;span class="math"&gt;\(j=-n_s e v\)&lt;/span&gt; , Taking this expression from a classical description to a quantum mechanical one, we must replace values j and v by the expectation values of their operators. The velocity&amp;nbsp;operator &lt;span class="math"&gt;\( v = (p+eA)/m\)&lt;/span&gt; is defined by dividing the gauge-invariant, kinematic momentum operator by the particle mass &lt;em&gt;m&lt;/em&gt;. we are using &lt;img alt="-e" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/07ba5105b33e9ac88f605cc50663a9e2c16fcc63" /&gt; as the electron charge. We may then make this replacement in the equation above. However, an important assumption from the microscopic theory of superconductivity (&lt;span class="caps"&gt;BCS&lt;/span&gt;) is that the superconducting state of a system is the ground state, and according to a theorem of Bloch&amp;#8217;s,[&lt;a href="https://en.wikipedia.org/wiki/London_equations#cite_note-Michael_Tinkham_1996_5-10"&gt;]&lt;/a&gt; in such a state the canonical momentum &lt;strong&gt;p&lt;/strong&gt; is zero. This gives&amp;nbsp;us &lt;span class="math"&gt;\(j=-\frac{n_s e^2}{m}\textbf{A}\)&lt;/span&gt; which is loosely the&amp;nbsp;le1&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;img alt="1560962267192" src="../../images/field_penetration.webp" /&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;The solution for that differential equation is &lt;span class="math"&gt;\({ \nabla ^{2}\mathbf {B} ={\frac {1}{\lambda ^{2}}}\mathbf {B} ,\qquad \lambda \equiv {\sqrt {\frac {m}{\mu&amp;nbsp;_{0}n_{s}e^{2}}}}.}\)&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;The solution for that differential equation&amp;nbsp;is &lt;span class="math"&gt;\({ \nabla ^{2}\mathbf {B} ={\frac {1}{\lambda ^{2}}}\mathbf {B} ,\qquad \lambda \equiv {\sqrt {\frac {m}{\mu _{0}n_{s}e^{2}}}}.}\)&lt;/span&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;img alt="1560962571688" src="../../images/field_penetration.2.webp" /&gt;&lt;/p&gt;
@@ -761,19 +761,19 @@ This post is my notes on Superconductivity from video lectures of &lt;a href="ht
 &lt;p&gt;Here, the size of the energy gap indicates the energy gain for two electrons upon formation of a Cooper&amp;nbsp;pair&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;If a conventional superconducting material is cooled from its metallic state (at higher temperatures) into the superconducting state, then the superconducting energy gap is absent above the critical temperature &lt;span class="math"&gt;\(T_{c}\)&lt;/span&gt;, it starts to open upon entering the superconducting state at &lt;span class="math"&gt;\(T_{c}\)&lt;/span&gt;, and it grows upon further&amp;nbsp;cooling.&lt;/p&gt;
+&lt;p&gt;If a conventional superconducting material is cooled from its metallic state (at higher temperatures) into the superconducting state, then the superconducting energy gap is absent above the critical&amp;nbsp;temperature &lt;span class="math"&gt;\(T_{c}\)&lt;/span&gt;, it starts to open upon entering the superconducting state&amp;nbsp;at &lt;span class="math"&gt;\(T_{c}\)&lt;/span&gt;, and it grows upon further&amp;nbsp;cooling.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;In the \Delta$   there are only cooper pair condensate and outside there are only unbound&amp;nbsp;electrons.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;span class="caps"&gt;BCS&lt;/span&gt; theory predicts that the size &lt;span class="math"&gt;\(\Delta\)&lt;/span&gt;  of the superconducting energy gap for conventional superconductors at zero temperature scales with their critical temperature &lt;span class="math"&gt;\(\Delta (T=0)=1.764\,k_{B}T_{c}\)&lt;/span&gt;&amp;nbsp;.&lt;/p&gt;
+&lt;p&gt;&lt;span class="caps"&gt;BCS&lt;/span&gt; theory predicts that the&amp;nbsp;size &lt;span class="math"&gt;\(\Delta\)&lt;/span&gt;  of the superconducting energy gap for conventional superconductors at zero temperature scales with their critical&amp;nbsp;temperature &lt;span class="math"&gt;\(\Delta (T=0)=1.764\,k_{B}T_{c}\)&lt;/span&gt; .&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;The density of states is &lt;span class="math"&gt;\(N_s(E)=N_N(E) E/(E^2-&amp;nbsp;D^2)^{0.5}\)&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;The density of states&amp;nbsp;is &lt;span class="math"&gt;\(N_s(E)=N_N(E) E/(E^2- D^2)^{0.5}\)&lt;/span&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;The super conducting state can be describes with a singel macroscopic wave function &lt;span class="math"&gt;\(\Psi=\sqrt(n_s)e^{i \phi}\)&lt;/span&gt; with&lt;span class="math"&gt;\(n_s\)&lt;/span&gt; is the density of the cooper pairs, &lt;span class="math"&gt;\(\phi\)&lt;/span&gt;  phase of the&amp;nbsp;condensate.&lt;/p&gt;
+&lt;p&gt;The super conducting state can be describes with a singel macroscopic wave&amp;nbsp;function &lt;span class="math"&gt;\(\Psi=\sqrt(n_s)e^{i \phi}\)&lt;/span&gt; with&lt;span class="math"&gt;\(n_s\)&lt;/span&gt; is the density of the cooper&amp;nbsp;pairs, &lt;span class="math"&gt;\(\phi\)&lt;/span&gt;  phase of the&amp;nbsp;condensate.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;So how does the electron pairing occur? consider the crude&amp;nbsp;model:&lt;/p&gt;
@@ -788,7 +788,7 @@ This post is my notes on Superconductivity from video lectures of &lt;a href="ht
 &lt;p&gt;&lt;img alt="1561026690221" src="../../images/distance.webp" /&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;in the above picture, &lt;span class="math"&gt;\(\omega_D\)&lt;/span&gt; is the &lt;strong&gt;Debye&lt;/strong&gt; relaxation &lt;strong&gt;time&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;in the above&amp;nbsp;picture, &lt;span class="math"&gt;\(\omega_D\)&lt;/span&gt; is the &lt;strong&gt;Debye&lt;/strong&gt; relaxation &lt;strong&gt;time&lt;/strong&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;img alt="1561294266321" src="../../images/1561294266321.webp" /&gt;&lt;/p&gt;
@@ -843,7 +843,7 @@ This post is my notes on Superconductivity from video lectures of &lt;a href="ht
     var mathjaxscript = document.createElement('script');
     mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
     mathjaxscript.type = 'text/javascript';
-    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_CHTML';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-AMS-MML_HTMLorMML';
 
     var configscript = document.createElement('script');
     configscript.type = 'text/x-mathjax-config';
@@ -890,4 +890,4 @@ This post is my notes on Superconductivity from video lectures of &lt;a href="ht
     (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
-&lt;/script&gt;</content><category term="Lecture Notes"></category><category term="Superconductivity"></category><category term="spin"></category><category term="cooper pairs"></category></entry></feed>
+&lt;/script&gt;</content><category term="Lecture Notes"/><category term="Superconductivity"/><category term="spin"/><category term="cooper pairs"/></entry></feed>

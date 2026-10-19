@@ -9,7 +9,7 @@
         <link rel="dns-prefetch" href="//fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
 
-        <meta name="google-site-verification" content="p61t4jkBXn4Wc7q3yIKCNSLcb7VC3Fay6dNkDefU3Ic" />        <meta name="author" content="Ashwin" />
+        <meta name="author" content="Ashwin" />
 
         <meta name="description" content="Wake your own webbsite using Pelican static site generator and host it on github pages
 " />
@@ -24,7 +24,8 @@
 <meta property="og:description" content="Wake your own webbsite using Pelican static site generator and host it on github pages" />
 <meta property="og:site_name" content="Ashwin&#39;s Chronicles🗞️" />
 <meta property="og:article:author" content="Ashwin" />
-<meta property="og:article:published_time" content="2019-01-01T00:00:00+05:30" />
+<meta property="og:article:published_time" content="2018-12-29T18:50:09+05:30" />
+<meta property="og:article:modified_time" content="2023-06-11T16:25:38+05:30" />
 <meta name="twitter:title" content="Make a Github Pages blog with Pelican ">
 <meta name="twitter:description" content="Wake your own webbsite using Pelican static site generator and host it on github pages">
 <meta property="og:image" content="/theme/images/final.png" />
@@ -44,20 +45,16 @@
         <link rel="apple-touch-icon" sizes="152x152" href="https://ashwinschronicles.github.io/theme/images/apple-touch-icon-152x152.png" type="image/png" />
         <link rel="apple-touch-icon" sizes="152x152" href="https://ashwinschronicles.github.io/theme/images/apple-touch-icon-180x180.png" type="image/png" />
         <link href="https://ashwinschronicles.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Ashwin&#39;s Chronicles🗞️ - Full Atom Feed" />
-
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-E1G9M6CRCM"></script>
 <script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-     m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-     })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-    ga('create', 'UA-161419840-1', 'auto');
-    ga('send', 'pageview');
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-E1G9M6CRCM');
 </script>
 
-<script>
-    window.heap=window.heap||[],heap.load=function(e,t){window.heap.appid=e,window.heap.config=t=t||{};var r=t.forceSSL||"https:"===document.location.protocol,a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=(r?"https:":"http:")+"//cdn.heapanalytics.com/js/heap-"+e+".js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n);for(var o=function(e){return function(){heap.push([e].concat(Array.prototype.slice.call(arguments,0)))}},p=["addEventProperties","addUserProperties","clearEventProperties","identify","resetIdentity","removeEventProperty","setEventProperties","track","unsetEventProperty"],c=0;c<p.length;c++)heap[p[c]]=o(p[c])};
-      heap.load("1155667143");
-</script>
+
 
     </head>
     <body>
@@ -106,8 +103,7 @@
 <div class="row-fluid">
         <div class="span8 offset2 article-content">
             
-            <main>
-                <p>Github, worlds leading  hosting service for Git repositories  offers a simple, elegant website solution. It allows its users to  store page content in a git repository along with their&nbsp;code.</p>
+            <p>Github, worlds leading  hosting service for Git repositories  offers a simple, elegant website solution. It allows its users to  store page content in a git repository along with their&nbsp;code.</p>
 <p>In this blog post ill walk you through the process of setting up a website by combining Pelican with Github Pages. Pelican is a simple python utility that lets you create beautiful weblogs using just text files. In other words its a static-site generator. I have chosen Pelican over other static-site generators as Pelican unlike its counter parts is based on python hence initial  setup takes literally no&nbsp;time.</p>
 <h2 id="setting-up-a-githubio-page">Setting up a github.io page<a class="headerlink" href="#setting-up-a-githubio-page" title="Permanent link">&para;</a></h2>
 <p>To create your Github user page, log in to Github and create a  new repositorie username.github.io, as explained on Github pages. (Use your Github username for these repositories.) The  username.github.io repository will contain the output <span class="caps">HTML</span> files Pelican generates. To add the output directory as a submodule, initialize it with a <span class="caps">README</span>&nbsp;file.</p>
@@ -118,34 +114,28 @@ cd into the directory where you want to install the Pelican website and then run
 <span class="nb">source</span><span class="w"> </span>bin/activate
 </code></pre></div>
 
-
 <p>This essentially creates a virtual python environment where Pelican can be installed and any python package installed here wont affect the global python
 packages.
 Once the virtual environment has been created and activated, Pelican can be installed via  prefixing with sudo if permissions&nbsp;warrant:</p>
 <div class="highlight"><pre><span></span><code>pip<span class="w"> </span>install<span class="w"> </span>pelican<span class="w"> </span>markdown<span class="w"> </span>typogrify<span class="w"> </span>ghp-import<span class="w"> </span>shovel<span class="w"> </span>cssmin<span class="w"> </span>webassets
 </code></pre></div>
 
-
 <p>Now clone the source repository you&nbsp;created:</p>
 <div class="highlight"><pre><span></span><code><span class="w"> </span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/YOUR_USERNAME/YOUR_USERNAME.github.io.git<span class="w"> </span>web-sources
 </code></pre></div>
-
 
 <p>Then change directory to the source&nbsp;folder:</p>
 <div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>web-sources
 </code></pre></div>
 
-
 <p>Because of how Github Pages prefers to work, serving the files from the master branch, you have to put your source code in a new branch, preserving the &#8220;master&#8221; for the output of the static files generated by Pelican. To do that, you must create a new branch called&nbsp;&#8220;source&#8221;:</p>
 <div class="highlight"><pre><span></span><code>git<span class="w"> </span>checkout<span class="w"> </span>-b<span class="w"> </span><span class="nb">source</span>
 </code></pre></div>
-
 
 <h2 id="pelican-quickstart">Pelican quickstart<a class="headerlink" href="#pelican-quickstart" title="Permanent link">&para;</a></h2>
 <p>Pelican provides an excellent quickstart command. Run&nbsp;it:</p>
 <div class="highlight"><pre><span></span><code>pelican-quickstart
 </code></pre></div>
-
 
 <p>The quickstart will ask you various questions, which you can answer in turn. Before answering them, take a look at my answers&nbsp;below:</p>
 <div class="highlight"><pre><span></span><code>&gt;<span class="w"> </span>Where<span class="w"> </span><span class="k">do</span><span class="w"> </span>you<span class="w"> </span>want<span class="w"> </span>to<span class="w"> </span>create<span class="w"> </span>your<span class="w"> </span>new<span class="w"> </span>web<span class="w"> </span>site?<span class="w"> </span><span class="o">[</span>.<span class="o">]</span><span class="w"> </span>./
@@ -168,7 +158,6 @@ Once the virtual environment has been created and activated, Pelican can be inst
 Done.<span class="w"> </span>Your<span class="w"> </span>new<span class="w"> </span>project<span class="w"> </span>is<span class="w"> </span>available<span class="w"> </span>at<span class="w"> </span>YOUR_USERNAME.github.io
 </code></pre></div>
 
-
 <p>Now, go ahead and create your first blog post! You might want to open the project folder on your favorite code editor and find the &#8220;content&#8221; folder inside it. Then, create a new file, which can be called my-first-post.md (Just for testing). The contents should begin with the metadata which identifies the Title, Date, Category and more from the post before you start with the content, like&nbsp;this:</p>
 <div class="highlight"><pre><span></span><code>Title: My first post
 Date: 2018-1-2
@@ -182,29 +171,24 @@ Summary: What does your post talk about? Write here.
 This is the <span class="ge">*first post*</span> from my Pelican blog. <span class="gs">**YAY!**</span>
 </code></pre></div>
 
-
 <p>Let&#8217;s see how it&nbsp;looks?</p>
 <p>Go to the terminal, generate the static files and start the server. To do that, use the following&nbsp;command:</p>
 <div class="highlight"><pre><span></span><code><span class="o">(</span>venv<span class="o">)</span>$<span class="w"> </span>make<span class="w"> </span>html<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>make<span class="w"> </span>serve
 </code></pre></div>
 
-
-<p>While this command is running, you should be able to visit it on your favorite web browser by typing <code>localhost:8000</code> on the address&nbsp;bar.</p>
+<p>While this command is running, you should be able to visit it on your favorite web browser by&nbsp;typing <code>localhost:8000</code> on the address&nbsp;bar.</p>
 <h2 id="a-little-touch-up">A little touch up<a class="headerlink" href="#a-little-touch-up" title="Permanent link">&para;</a></h2>
-<p>Now,  if you want to put an image in a post, a neat way is to first  create a &#8216;images&#8217; directory inside your content directory, where your posts are. Now, you have to tell Pelican to use it. Find the <code>pelicanconf.py</code>, the file where you configure the system, and add a variable that contains the directory with your&nbsp;images:</p>
+<p>Now,  if you want to put an image in a post, a neat way is to first  create a &#8216;images&#8217; directory inside your content directory, where your posts are. Now, you have to tell Pelican to use it. Find&nbsp;the <code>pelicanconf.py</code>, the file where you configure the system, and add a variable that contains the directory with your&nbsp;images:</p>
 <div class="highlight"><pre><span></span><code><span class="n">STATIC_PATHS</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;images&#39;</span><span class="p">]</span>
 </code></pre></div>
-
 
 <p>Save it. Go to your post and add the image this&nbsp;way:</p>
 <div class="highlight"><pre><span></span><code>![<span class="nt">Write here a good description for people who can&#39;t see the image</span>](<span class="na">{filename}/images/IMAGE_NAME.webp</span>)
 </code></pre></div>
 
-
 <p>You can interrupt the server at anytime pressing <span class="caps">CTRL</span>+C on the terminal. But you should start it again and check if the image is correct. Can you remember&nbsp;how?</p>
 <div class="highlight"><pre><span></span><code><span class="o">(</span>venv<span class="o">)</span>$<span class="w"> </span>make<span class="w"> </span>html<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>make<span class="w"> </span>serve
 </code></pre></div>
-
 
 <p>One last step before your coding is &#8220;done&#8221;: you should make sure anyone can read your posts using <span class="caps">ATOM</span> or <span class="caps">RSS</span> feeds. Find the pelicanconf.py, the file where you configure the system, and edit the part about feed&nbsp;generation:</p>
 <div class="highlight"><pre><span></span><code><span class="n">FEED_ALL_ATOM</span> <span class="o">=</span> <span class="s1">&#39;feeds/all.atom.xml&#39;</span>
@@ -213,16 +197,13 @@ This is the <span class="ge">*first post*</span> from my Pelican blog. <span cla
 <span class="n">RSS_FEED_SUMMARY_ONLY</span> <span class="o">=</span> <span class="kc">False</span>
 </code></pre></div>
 
-
 <p>Save everything so you can send the code to Github. You can do that by adding all files, committing it with a message (&#8216;first commit&#8217;) and using git push. You will be asked for your Github login and&nbsp;password.</p>
 <div class="highlight"><pre><span></span><code>git<span class="w"> </span>add<span class="w"> </span>-A<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>git<span class="w"> </span>commit<span class="w"> </span>-a<span class="w"> </span>-m<span class="w"> </span><span class="s1">&#39;first commit&#39;</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>git<span class="w"> </span>push<span class="w"> </span>--all
 </code></pre></div>
 
-
 <p>As I had said before you would be preserving the master branch for the output of the static files generated by Pelican. Now it&#8217;s time  to generate the&nbsp;mater:</p>
 <div class="highlight"><pre><span></span><code>$<span class="w"> </span>make<span class="w"> </span>github
 </code></pre></div>
-
 
 <p>You will be asked for your Github login and password again. And&#8230; voilà! Your new blog should be live on&nbsp;https://YOUR_USERNAME.github.io.</p>
 <h1 id="whats-next">What&#8217;s next?<a class="headerlink" href="#whats-next" title="Permanent link">&para;</a></h1>
@@ -272,14 +253,12 @@ This is the <span class="ge">*first post*</span> from my Pelican blog. <span cla
 <span class="p">.</span><span class="n">pydevproject</span>
 </code></pre></div>
 
-
 <h3 id="automate-github-upload-process">Automate GitHub upload process<a class="headerlink" href="#automate-github-upload-process" title="Permanent link">&para;</a></h3>
-<p>Create a file <code>up.sh</code> in the  <code>web-sources</code></p>
+<p>Create a&nbsp;file <code>up.sh</code> in&nbsp;the  <code>web-sources</code></p>
 <div class="highlight"><pre><span></span><code>git<span class="w"> </span>add<span class="w"> </span>-A<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>git<span class="w"> </span>commit<span class="w"> </span>-a<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;&quot;</span><span class="nv">$1</span><span class="s2">&quot; &amp;&amp; git push --all</span>
 </code></pre></div>
 
-
-<p>Now whenever you want to upload sync the repo just do <code>bash up.sh "Comment"</code> Note that the argument &#8220;Comment&#8221; should not contain&nbsp;spaces.</p>
+<p>Now whenever you want to upload sync the repo just&nbsp;do <code>bash up.sh "Comment"</code> Note that the argument &#8220;Comment&#8221; should not contain&nbsp;spaces.</p>
 <h3 id="download-themes">Download Themes<a class="headerlink" href="#download-themes" title="Permanent link">&para;</a></h3>
 <p>Clone pelican-themes&nbsp;repository</p>
 <p><code>git clone --recursive https://github.com/getpelican/pelican-themes themes</code></p>
@@ -289,7 +268,6 @@ This is the <span class="ge">*first post*</span> from my Pelican blog. <span cla
 <span class="n">PATH</span> <span class="o">=</span> <span class="s1">&#39;content</span>
 </code></pre></div>
 
-
 <h3 id="custom-home-page">Custom Home page<a class="headerlink" href="#custom-home-page" title="Permanent link">&para;</a></h3>
 <p>Add this variables to&nbsp;pelicanconf.py</p>
 <div class="highlight"><pre><span></span><code><span class="c1"># Custom Home page</span>
@@ -298,12 +276,10 @@ This is the <span class="ge">*first post*</span> from my Pelican blog. <span cla
 <span class="n">TEMPLATE_PAGES</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;home.html&#39;</span><span class="p">:</span> <span class="s1">&#39;index.html&#39;</span><span class="p">,}</span>
 </code></pre></div>
 
-
 <p>Duplicated the index.html to blog.html in your template folder and add this&nbsp;lines:</p>
 <div class="highlight"><pre><span></span><code>{% set active_page = &quot;blog&quot; %}
 {% block title %}{{ SITENAME }} - Blog{% endblock %}
 </code></pre></div>
-
 
 <p>Create home.html or use page override feature to use a Markdown page as your home&nbsp;page.</p>
 <p><code>nano home.html</code></p>
@@ -316,11 +292,10 @@ This is the <span class="ge">*first post*</span> from my Pelican blog. <span cla
 {% endblock %}
 </code></pre></div>
 
-
 <h1 id="process-for-new-articles">Process for new articles.<a class="headerlink" href="#process-for-new-articles" title="Permanent link">&para;</a></h1>
-<p>Ones the setup is done, the contents of the folder <code>web-sources</code> need not be generated again using the above procedure. All one has to do is place the article in the content folder then (after testing the website locally using <code>make devserver</code>) then execute  <code>bash up.sh "Comment"</code>  to sync the source branch and then do <code>make github</code></p>
+<p>Ones the setup is done, the contents of the&nbsp;folder <code>web-sources</code> need not be generated again using the above procedure. All one has to do is place the article in the content folder then (after testing the website locally&nbsp;using <code>make devserver</code>) then&nbsp;execute  <code>bash up.sh "Comment"</code>  to sync the source branch and then&nbsp;do <code>make github</code></p>
 <h2 id="process-for-moving-to-a-different-machine">Process for moving to a different machine<a class="headerlink" href="#process-for-moving-to-a-different-machine" title="Permanent link">&para;</a></h2>
-<p>If you are on a different machine or you have lost access to the <code>web-sources</code> folder, you just have to make the virtual environment and then do git clone again.&nbsp;i.e</p>
+<p>If you are on a different machine or you have lost access to&nbsp;the <code>web-sources</code> folder, you just have to make the virtual environment and then do git clone again.&nbsp;i.e</p>
 <div class="highlight"><pre><span></span><code>virtualenv<span class="w"> </span>website<span class="w">  </span>
 <span class="nb">cd</span><span class="w"> </span>website
 <span class="nb">source</span><span class="w"> </span>bin/activate
@@ -329,7 +304,6 @@ git<span class="w"> </span>clone<span class="w"> </span>https://github.com/YOUR_
 <span class="nb">cd</span><span class="w"> </span>web-sources
 git<span class="w"> </span>checkout<span class="w"> </span>-b<span class="w"> </span><span class="nb">source</span>
 </code></pre></div>
-
 
 <p>This article just touches upon getting a basic website up and running. More features that Pelican offers (like custom plugins)can be explored <a href="http://docs.getpelican.com/en/3.6.3/content.html">here</a>.</p>
 <h1 id="upgrading-pelican">Upgrading Pelican<a class="headerlink" href="#upgrading-pelican" title="Permanent link">&para;</a></h1>
@@ -340,17 +314,14 @@ For instance when I wrote the tutorial initially pelican was on version 3.7 and 
 pelican<span class="w"> </span>content
 </code></pre></div>
 
-
 <p>Then we need to update the local copies of the plugins and themes. If you have just cloned from the original git repos the nall you need to do&nbsp;is </p>
 <div class="highlight"><pre><span></span><code>git<span class="w"> </span>pull<span class="w"> </span>origin
 </code></pre></div>
-
 
 <h1 id="faqs-and-tips">FAQs and Tips<a class="headerlink" href="#faqs-and-tips" title="Permanent link">&para;</a></h1>
 <ul>
 <li><strong>Separate slug (<span class="caps">URL</span>) words with a hyphen, or an underscore?</strong> you should use a <strong>hyphen</strong> for your <span class="caps">SEO</span> <strong>URLs</strong>. Google treats a <strong>hyphen</strong> as a word separator, but does not treat an <strong>underscore</strong> that way. Google treats and <strong>underscore</strong> as a word joiner — so github_pages is the same as githubpages to&nbsp;Google.</li>
 </ul>
-            </main>
 
 
              
@@ -426,7 +397,7 @@ pelican<span class="w"> </span>content
             <aside>
             <nav>
             <ul class="articles-timeline">
-                <li class="previous-article">« <a href="https://ashwinschronicles.github.io/qhe" title="Previous: Quantum Hall Effect and related phenomena">Quantum Hall Effect and related phenomena</a></li>
+                <li class="previous-article">« <a href="https://ashwinschronicles.github.io/Intro-to-IoT" title="Previous: A beginers IoT Project.">A beginers IoT Project.</a></li>
                 <li class="next-article"><a href="https://ashwinschronicles.github.io/git-cheat-sheet" title="Next: git cheat-sheet">git cheat-sheet</a> »</li>
             </ul>
             </nav>
@@ -436,7 +407,10 @@ pelican<span class="w"> </span>content
     <h4>Reading Time</h4>
     <p>~7 min read</p>
             <h4>Published</h4>
-            <time itemprop="dateCreated" datetime="2019-01-01T00:00:00+05:30">Jan 01, 2019</time>
+            <time itemprop="dateCreated" datetime="2018-12-29T18:50:09+05:30">Dec 29, 2018</time>
+<h4>Last Updated</h4>
+<time datetime="2023-06-11T16:25:38+05:30">Jun 11, 2023</time>
+
             <h4>Category</h4>
             <a class="category-link" href="https://ashwinschronicles.github.io/categories#blog-ref">Blog</a>
             <h4>Tags</h4>
@@ -612,7 +586,7 @@ pelican<span class="w"> </span>content
 <script>
 var sc_project=12223345;
 var sc_invisible=1;
-var sc_security="c77ea628";
+var sc_security="2ee4ddde";
 var scJsHost = (("https:" == document.location.protocol) ?
 "https://secure." : "http://www.");
 document.write("<sc"+"ript type='text/javascript' src='" +
@@ -622,7 +596,7 @@ scJsHost+
 <noscript><div class="statcounter"><a title="web analytics"
 href="http://statcounter.com/" target="_blank" rel="nofollow noopener noreferrer"><img
 class="statcounter"
-src="//c.statcounter.com/12223345/0/c77ea628/1/"
+src="//c.statcounter.com/12223345/0/2ee4ddde/1/"
 alt="web analytics"></a></div></noscript>
 <!-- End of StatCounter Code for Default Guide -->
     </body>

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Ashwin's Chronicles🗞️ - Blog</title><link href="https://ashwinschronicles.github.io/" rel="alternate"></link><link href="https://ashwinschronicles.github.io/feeds/blog.atom.xml" rel="self"></link><id>https://ashwinschronicles.github.io/</id><updated>2020-06-20T00:00:00+05:30</updated><entry><title>Producing Beamer slide shows from markdown using Pandoc</title><link href="https://ashwinschronicles.github.io/beamer-slides-using-markdown-and-pandoc" rel="alternate"></link><published>2020-06-06T00:00:00+05:30</published><updated>2020-06-20T00:00:00+05:30</updated><author><name>Ashwin Kumar Karnad</name></author><id>tag:ashwinschronicles.github.io,2020-06-06:/beamer-slides-using-markdown-and-pandoc</id><summary type="html">&lt;p&gt;Short note on bueatiful Producing Beamer slide shows from markdown using&amp;nbsp;Pandoc&lt;/p&gt;</summary><content type="html">&lt;h1 id="producing-slide-shows-with-pandoc"&gt;Producing slide shows with pandoc&lt;a class="headerlink" href="#producing-slide-shows-with-pandoc" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h1&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Ashwin's Chronicles🗞️ - Blog</title><link href="https://ashwinschronicles.github.io/" rel="alternate"/><link href="https://ashwinschronicles.github.io/feeds/blog.atom.xml" rel="self"/><id>https://ashwinschronicles.github.io/</id><updated>2023-06-11T16:25:38+05:30</updated><entry><title>Producing Beamer slide shows from markdown using Pandoc</title><link href="https://ashwinschronicles.github.io/beamer-slides-using-markdown-and-pandoc" rel="alternate"/><published>2020-07-01T10:10:03+05:30</published><updated>2023-06-11T16:25:38+05:30</updated><author><name>Ashwin Kumar Karnad</name></author><id>tag:ashwinschronicles.github.io,2020-07-01:/beamer-slides-using-markdown-and-pandoc</id><summary type="html">&lt;p&gt;Short note on bueatiful Producing Beamer slide shows from markdown using&amp;nbsp;Pandoc&lt;/p&gt;</summary><content type="html">&lt;h1 id="producing-slide-shows-with-pandoc"&gt;Producing slide shows with pandoc&lt;a class="headerlink" href="#producing-slide-shows-with-pandoc" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h1&gt;
 &lt;p&gt;Pandoc is a Haskell library for converting from one markup format to another, and a command-line tool that uses this&amp;nbsp;library.&lt;/p&gt;
 &lt;p&gt;You can use pandoc to produce an &lt;span class="caps"&gt;HTML&lt;/span&gt; + JavaScript slide presentation that can be viewed via a web browser. There are five ways to do this, using &lt;a href="https://meyerweb.com/eric/tools/s5/"&gt;S5&lt;/a&gt;, &lt;a href="http://paulrouget.com/dzslides/"&gt;DZSlides&lt;/a&gt;, &lt;a href="https://www.w3.org/Talks/Tools/Slidy2/"&gt;Slidy&lt;/a&gt;, &lt;a href="https://goessner.net/articles/slideous/"&gt;Slideous&lt;/a&gt;, or &lt;a href="https://revealjs.com/"&gt;reveal.js&lt;/a&gt;. You can also produce a &lt;span class="caps"&gt;PDF&lt;/span&gt; slide show using LaTeX &lt;a href="https://ctan.org/pkg/beamer"&gt;&lt;code&gt;beamer&lt;/code&gt;&lt;/a&gt;, or slides shows in Microsoft &lt;a href="https://en.wikipedia.org/wiki/Microsoft_PowerPoint"&gt;PowerPoint&lt;/a&gt;&amp;nbsp;format.&lt;/p&gt;
 &lt;p&gt;This article mainly covers generating slides in LaTeX &lt;a href="https://ctan.org/pkg/beamer"&gt;&lt;code&gt;beamer&lt;/code&gt;&lt;/a&gt;  format, which is what is used extensively in&amp;nbsp;academia. &lt;/p&gt;
-&lt;p&gt;If you are not familiar with markdown, you can take a look at the following markdown source for a simple beamer slide show, &lt;code&gt;Demo.md&lt;/code&gt;:&lt;/p&gt;
+&lt;p&gt;If you are not familiar with markdown, you can take a look at the following markdown source for a simple beamer slide&amp;nbsp;show, &lt;code&gt;Demo.md&lt;/code&gt;:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;---
 title:
 &lt;span class="k"&gt;-&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;AI Playground
@@ -86,7 +86,6 @@ $$x^n + y^n = z^n$$
 Can AI, help find near misses for this equation?
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-
 &lt;p&gt;The slides generated from this markdown can bee seen &lt;a href="https://ashwinschronicles.github.io/pdfs/Demo.pdf"&gt;here&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;When you compare the source and the resulting pdf that it generates, you notice the general rules that a markdown document&amp;nbsp;follows.&lt;/p&gt;
 &lt;p&gt;For instance, you can create a slide show broken up into sections (slides) by using the # tag and you can use ##  tags for sub heading. You can also create a new slide without a header using a horizontal rule (&amp;#8212;-). You can insert latex equations by going to math mode (Insert the equation in $ $&amp;nbsp;)&lt;/p&gt;
@@ -94,18 +93,15 @@ Can AI, help find near misses for this equation?
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;pandoc&lt;span class="w"&gt; &lt;/span&gt;-t&lt;span class="w"&gt; &lt;/span&gt;FORMAT&lt;span class="w"&gt; &lt;/span&gt;-s&lt;span class="w"&gt; &lt;/span&gt;Demo.txt&lt;span class="w"&gt; &lt;/span&gt;-o&lt;span class="w"&gt; &lt;/span&gt;Demo.html
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-
-&lt;p&gt;where &lt;code&gt;FORMAT&lt;/code&gt; is either &lt;code&gt;s5&lt;/code&gt;, &lt;code&gt;slidy&lt;/code&gt;, &lt;code&gt;slideous&lt;/code&gt;, &lt;code&gt;dzslides&lt;/code&gt;, or &lt;code&gt;revealjs&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;where &lt;code&gt;FORMAT&lt;/code&gt; is&amp;nbsp;either &lt;code&gt;s5&lt;/code&gt;, &lt;code&gt;slidy&lt;/code&gt;, &lt;code&gt;slideous&lt;/code&gt;, &lt;code&gt;dzslides&lt;/code&gt;,&amp;nbsp;or &lt;code&gt;revealjs&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;To produce a &lt;span class="caps"&gt;PDF&lt;/span&gt; slide show using  LaTeX &lt;a href="https://ctan.org/pkg/beamer"&gt;&lt;code&gt;beamer&lt;/code&gt;&lt;/a&gt;,&amp;nbsp;type&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;pandoc&lt;span class="w"&gt; &lt;/span&gt;-t&lt;span class="w"&gt; &lt;/span&gt;beamer&lt;span class="w"&gt; &lt;/span&gt;Demo.txt&lt;span class="w"&gt; &lt;/span&gt;-o&lt;span class="w"&gt; &lt;/span&gt;Demo.pdf
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 
 &lt;p&gt;Note that a reveal.js slide show can also be converted to a &lt;span class="caps"&gt;PDF&lt;/span&gt; by printing it to a file from the&amp;nbsp;browser.&lt;/p&gt;
 &lt;p&gt;To produce a Powerpoint slide show,&amp;nbsp;type&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;pandoc&lt;span class="w"&gt; &lt;/span&gt;Demo.txt&lt;span class="w"&gt; &lt;/span&gt;-o&lt;span class="w"&gt; &lt;/span&gt;Demo.pptx
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 
 &lt;p&gt;You get the&amp;nbsp;idea.&lt;/p&gt;
 &lt;h2 id="structuring-the-slide-show"&gt;Structuring the slide show&lt;a class="headerlink" href="#structuring-the-slide-show" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
@@ -121,21 +117,19 @@ Can AI, help find near misses for this equation?
 &lt;p&gt;These rules are designed to support many different styles of slide show. If you don’t care about structuring your slides into sections and subsections, you can just use level-1 headings for all each slide. (In that case, level-1 will be the slide level.) But you can also structure the slide show into sections, as in the example&amp;nbsp;above.&lt;/p&gt;
 &lt;p&gt;Note: in reveal.js slide shows, if slide level is 2, a two-dimensional layout will be produced, with level-1 headings building horizontally and level-2 headings building vertically. It is not recommended that you use deeper nesting of section levels with&amp;nbsp;reveal.js.&lt;/p&gt;
 &lt;h2 id="incremental-lists"&gt;Incremental lists&lt;a class="headerlink" href="#incremental-lists" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;By default, these writers produces lists that display &amp;#8220;all at once&amp;#8221;. If you want your lists to display incrementally (one item at a time), use the &lt;code class="literal"&gt;-i&lt;/code&gt; option. If you want aparticular list to depart from the default (that is, to display incrementally without the &lt;code class="literal"&gt;-i&lt;/code&gt; option and all at once with the &lt;code class="literal"&gt;-i&lt;/code&gt; option), put it in a block&amp;nbsp;quote:&lt;/p&gt;
+&lt;p&gt;By default, these writers produces lists that display &amp;#8220;all at once&amp;#8221;. If you want your lists to display incrementally (one item at a time), use&amp;nbsp;the &lt;code class="literal"&gt;-i&lt;/code&gt; option. If you want aparticular list to depart from the default (that is, to display incrementally without&amp;nbsp;the &lt;code class="literal"&gt;-i&lt;/code&gt; option and all at once with&amp;nbsp;the &lt;code class="literal"&gt;-i&lt;/code&gt; option), put it in a block&amp;nbsp;quote:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;gt; - Eat spaghetti
 &amp;gt; - Drink wine
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-
 &lt;p&gt;In this way incremental and non-incremental lists can be mixed in a
 single&amp;nbsp;document.&lt;/p&gt;
 &lt;h2 id="styling-the-slides"&gt;Styling the slides&lt;a class="headerlink" href="#styling-the-slides" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;To style beamer slides, you can specify a beamer “theme” or “colortheme” using the &lt;code&gt;-V&lt;/code&gt; option:&lt;/p&gt;
+&lt;p&gt;To style beamer slides, you can specify a beamer “theme” or “colortheme” using&amp;nbsp;the &lt;code&gt;-V&lt;/code&gt; option:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;pandoc&lt;span class="w"&gt; &lt;/span&gt;-t&lt;span class="w"&gt; &lt;/span&gt;beamer&lt;span class="w"&gt; &lt;/span&gt;Demo.txt&lt;span class="w"&gt; &lt;/span&gt;-V&lt;span class="w"&gt; &lt;/span&gt;theme:Warsaw&lt;span class="w"&gt; &lt;/span&gt;-o&lt;span class="w"&gt; &lt;/span&gt;Demo.pdf
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-
-&lt;p&gt;for more settings visit  &lt;a href="https://pandoc.org/MANUAL.html"&gt;Pandoc Manual&lt;/a&gt; and &lt;a href="https://bookdown.org/yihui/rmarkdown/beamer-presentation.html"&gt;bookdown.org&lt;/a&gt; &lt;/p&gt;</content><category term="Blog"></category><category term="Pandoc"></category><category term="slides"></category><category term="markdown"></category></entry><entry><title>Extending Desktop to another device over VNC</title><link href="https://ashwinschronicles.github.io/extending-desktop-to-another-device-over-vnc" rel="alternate"></link><published>2020-02-05T00:00:00+05:30</published><updated>2020-02-05T00:00:00+05:30</updated><author><name>Ashwin</name></author><id>tag:ashwinschronicles.github.io,2020-02-05:/extending-desktop-to-another-device-over-vnc</id><summary type="html">&lt;p&gt;This post details the procedure to Extending Desktop to another device over &lt;span class="caps"&gt;VNC&lt;/span&gt; or other protocol in&amp;nbsp;Linux&lt;/p&gt;</summary><content type="html">&lt;hr /&gt;
+&lt;p&gt;for more settings visit  &lt;a href="https://pandoc.org/MANUAL.html"&gt;Pandoc Manual&lt;/a&gt; and &lt;a href="https://bookdown.org/yihui/rmarkdown/beamer-presentation.html"&gt;bookdown.org&lt;/a&gt; &lt;/p&gt;</content><category term="Blog"/><category term="Pandoc"/><category term="slides"/><category term="markdown"/></entry><entry><title>Extending Desktop to another device over VNC</title><link href="https://ashwinschronicles.github.io/extending-desktop-to-another-device-over-vnc" rel="alternate"/><published>2020-02-05T00:00:00+05:30</published><updated>2020-02-05T00:00:00+05:30</updated><author><name>Ashwin</name></author><id>tag:ashwinschronicles.github.io,2020-02-05:/extending-desktop-to-another-device-over-vnc</id><summary type="html">&lt;p&gt;This post details the procedure to Extending Desktop to another device over &lt;span class="caps"&gt;VNC&lt;/span&gt; or other protocol in&amp;nbsp;Linux&lt;/p&gt;</summary><content type="html">&lt;hr /&gt;
 &lt;div class="toc"&gt;
 &lt;ul&gt;&lt;/ul&gt;
 &lt;/div&gt;
@@ -154,34 +148,28 @@ Any random number can be used for the frequency, as we are not using the mode wi
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;gtf&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;1920&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;1080&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;60&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-
 &lt;p&gt;This command generates the following&amp;nbsp;modeline:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="c1"&gt;# 1920x1080 @ 60.00 Hz (GTF) hsync: 67.08 kHz; pclk: 172.80 MHz&lt;/span&gt;
 &lt;span class="w"&gt;  &lt;/span&gt;Modeline&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;1920x1080_60.00&amp;quot;&lt;/span&gt;&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="m"&gt;172&lt;/span&gt;.80&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="m"&gt;1920&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;2040&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;2248&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;2576&lt;/span&gt;&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="m"&gt;1080&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;1081&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;1084&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;1118&lt;/span&gt;&lt;span class="w"&gt;  &lt;/span&gt;-HSync&lt;span class="w"&gt; &lt;/span&gt;+Vsync
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-
 &lt;p&gt;&lt;strong&gt;Step 2:&lt;/strong&gt; Generate a new mode based on the modeline we got from step&amp;nbsp;1.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;xrandr&lt;span class="w"&gt; &lt;/span&gt;--newmode&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;1920x1080_60.00&amp;quot;&lt;/span&gt;&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="m"&gt;172&lt;/span&gt;.80&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="m"&gt;1920&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;2040&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;2248&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;2576&lt;/span&gt;&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="m"&gt;1080&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;1081&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;1084&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;1118&lt;/span&gt;&lt;span class="w"&gt;  &lt;/span&gt;-HSync&lt;span class="w"&gt; &lt;/span&gt;+Vsync
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 
 &lt;p&gt;&lt;strong&gt;Step 3:&lt;/strong&gt; Add the desired mode to our disconnected&amp;nbsp;output:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;xrandr&lt;span class="w"&gt; &lt;/span&gt;--addmode&lt;span class="w"&gt; &lt;/span&gt;VIRTUAL1&lt;span class="w"&gt; &lt;/span&gt;1920x1080_60.00
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-
 &lt;p&gt;&lt;strong&gt;Step 4:&lt;/strong&gt; Enable the disconnected monitor using the newly added mode and use it to extend the desktop to the right of&amp;nbsp;eDP1:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;xrandr&lt;span class="w"&gt; &lt;/span&gt;--output&lt;span class="w"&gt; &lt;/span&gt;VIRTUAL1&lt;span class="w"&gt; &lt;/span&gt;--mode&lt;span class="w"&gt; &lt;/span&gt;1920x1080_60.00&lt;span class="w"&gt; &lt;/span&gt;--right-of&lt;span class="w"&gt; &lt;/span&gt;eDP1
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 
 &lt;p&gt;This extends your desktop to the invisible monitor on your left. At this point you can&amp;#8217;t see it&amp;#8217;s picture but you can move your mouse there and drag your windows there. if your hardware dosnet support &lt;span class="caps"&gt;VIRTUAL1&lt;/span&gt;, you can also use &lt;span class="caps"&gt;VGA1&lt;/span&gt;  instead of &lt;span class="caps"&gt;VIRTUAL1&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Step 5:&lt;/strong&gt; Run xrandr to check if the new setup is&amp;nbsp;listed.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Step 6:&lt;/strong&gt; Export the invisible part of your desktop using &lt;span class="caps"&gt;VNC&lt;/span&gt;&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;x11vnc&lt;span class="w"&gt; &lt;/span&gt;-clip&lt;span class="w"&gt; &lt;/span&gt;1920x1080+1920+0&lt;span class="w"&gt; &lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 
 &lt;p&gt;&lt;strong&gt;Step 7:&lt;/strong&gt; &lt;span class="caps"&gt;VNC&lt;/span&gt; viewer
 Some kind of &lt;span class="caps"&gt;VNC&lt;/span&gt; viewer that supports showing the remote cursor is needed on your secondary laptop /&amp;nbsp;tablet.&lt;/p&gt;
@@ -195,7 +183,7 @@ xrandr&lt;span class="w"&gt; &lt;/span&gt;--addmode&lt;span class="w"&gt; &lt;/s
 xrandr&lt;span class="w"&gt; &lt;/span&gt;--output&lt;span class="w"&gt; &lt;/span&gt;VIRTUAL1&lt;span class="w"&gt; &lt;/span&gt;--mode&lt;span class="w"&gt; &lt;/span&gt;1920x1080_60.00&lt;span class="w"&gt; &lt;/span&gt;--right-of&lt;span class="w"&gt; &lt;/span&gt;eDP1
 xrandr
 x11vnc&lt;span class="w"&gt; &lt;/span&gt;-clip&lt;span class="w"&gt; &lt;/span&gt;1920x1080+1920+0&lt;span class="w"&gt; &lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content><category term="Blog"></category><category term="VNC"></category><category term="Nomachine"></category><category term="Extend desktop"></category><category term="Linux"></category></entry><entry><title>git cheat-sheet</title><link href="https://ashwinschronicles.github.io/git-cheat-sheet" rel="alternate"></link><published>2019-04-17T00:00:00+05:30</published><updated>2019-04-17T00:00:00+05:30</updated><author><name>Ashwin</name></author><id>tag:ashwinschronicles.github.io,2019-04-17:/git-cheat-sheet</id><summary type="html">&lt;p&gt;This post is about&amp;nbsp;git&lt;/p&gt;</summary><content type="html">
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content><category term="Blog"/><category term="VNC"/><category term="Nomachine"/><category term="Extend desktop"/><category term="Linux"/></entry><entry><title>git cheat-sheet</title><link href="https://ashwinschronicles.github.io/git-cheat-sheet" rel="alternate"/><published>2019-04-17T00:00:00+05:30</published><updated>2019-04-17T00:00:00+05:30</updated><author><name>Ashwin</name></author><id>tag:ashwinschronicles.github.io,2019-04-17:/git-cheat-sheet</id><summary type="html">&lt;p&gt;This post is about&amp;nbsp;git&lt;/p&gt;</summary><content type="html">
 &lt;h1 id="quick-refresher"&gt;Quick Refresher&lt;a class="headerlink" href="#quick-refresher" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h1&gt;
 &lt;h2 id="initial-setup"&gt;Initial setup&lt;a class="headerlink" href="#initial-setup" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
 &lt;ul&gt;
@@ -204,26 +192,26 @@ x11vnc&lt;span class="w"&gt; &lt;/span&gt;-clip&lt;span class="w"&gt; &lt;/span&
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$&lt;span class="w"&gt; &lt;/span&gt;git&lt;span class="w"&gt; &lt;/span&gt;config&lt;span class="w"&gt; &lt;/span&gt;--global&lt;span class="w"&gt; &lt;/span&gt;user.name&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"Your name here"&lt;/span&gt;
 $&lt;span class="w"&gt; &lt;/span&gt;git&lt;span class="w"&gt; &lt;/span&gt;config&lt;span class="w"&gt; &lt;/span&gt;--global&lt;span class="w"&gt; &lt;/span&gt;user.email&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"your_email@example.com"&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;(Don’t type the &lt;code&gt;$&lt;/code&gt;; that just indicates that you’re doing this at the command line.)&lt;/p&gt;
+&lt;p&gt;(Don’t type the &lt;code&gt;$&lt;/code&gt;; that just indicates that you’re doing this at the command line.)&lt;/p&gt;
 &lt;p&gt;optionally do:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$&lt;span class="w"&gt; &lt;/span&gt;git&lt;span class="w"&gt; &lt;/span&gt;config&lt;span class="w"&gt; &lt;/span&gt;--global&lt;span class="w"&gt; &lt;/span&gt;color.ui&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nb"&gt;true&lt;/span&gt;
 $&lt;span class="w"&gt; &lt;/span&gt;git&lt;span class="w"&gt; &lt;/span&gt;config&lt;span class="w"&gt; &lt;/span&gt;--global&lt;span class="w"&gt; &lt;/span&gt;core.editor&lt;span class="w"&gt; &lt;/span&gt;nano
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;The first of these will enable coloured output in the terminal; the second tells git that you want to use nano (a user friendly text editor). You can change the highlighted section with your editor of choice!&lt;/p&gt;
-&lt;p&gt;Another way to do this is to edit the &lt;code&gt;.gitconfig&lt;/code&gt; file in your &lt;code&gt;home&lt;/code&gt; directory. The location of this file depends on the operating system you’re using.&lt;/p&gt;
+&lt;p&gt;Another way to do this is to edit the &lt;code&gt;.gitconfig&lt;/code&gt; file in your &lt;code&gt;home&lt;/code&gt; directory. The location of this file depends on the operating system you’re using.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;Set up ssh on your computer. &lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;Look to see if you have files &lt;code&gt;~/.ssh/id_rsa&lt;/code&gt; and &lt;code&gt;~/.ssh/id_rsa.pub&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Look to see if you have files &lt;code&gt;~/.ssh/id_rsa&lt;/code&gt; and &lt;code&gt;~/.ssh/id_rsa.pub&lt;/code&gt;.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;If not, create such public/private keys: Open a terminal/shell and type:&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;$ ssh-keygen -t rsa -C "your_email@example.com"&lt;/code&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;Copy your public key (the contents of the newly-created &lt;code&gt;id_rsa.pub&lt;/code&gt; file) into your clipboard.&lt;/p&gt;
+&lt;p&gt;Copy your public key (the contents of the newly-created &lt;code&gt;id_rsa.pub&lt;/code&gt; file) into your clipboard.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Paste your ssh public key into your github account settings.&lt;/p&gt;
@@ -251,7 +239,7 @@ not provide shell access.&lt;/code&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id="start-a-new-git-repository"&gt;Start a new git repository&lt;a class="headerlink" href="#start-a-new-git-repository" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;Your first instinct, when you start to do something new, should be &lt;code&gt;git init&lt;/code&gt;. You’re starting to write a new paper, you’re writing a bit of code to do a computer simulation, you’re mucking around with some new data … &lt;em&gt;anything&lt;/em&gt;: think &lt;code&gt;git init&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Your first instinct, when you start to do something new, should be &lt;code&gt;git init&lt;/code&gt;. You’re starting to write a new paper, you’re writing a bit of code to do a computer simulation, you’re mucking around with some new data … &lt;em&gt;anything&lt;/em&gt;: think &lt;code&gt;git init&lt;/code&gt;.&lt;/p&gt;
 &lt;h3 id="a-new-repo-from-scratch"&gt;A new repo from scratch&lt;a class="headerlink" href="#a-new-repo-from-scratch" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;Say you’ve just got some data from a collaborator and are about to start exploring it.&lt;/p&gt;
 &lt;ul&gt;
@@ -269,7 +257,7 @@ not provide shell access.&lt;/code&gt;&lt;/p&gt;
 &lt;li&gt;Go into the directory containing the project.&lt;/li&gt;
 &lt;li&gt;Type &lt;code&gt;git init&lt;/code&gt;.&lt;/li&gt;
 &lt;li&gt;Type &lt;code&gt;git add&lt;/code&gt; to add all of the relevant files.&lt;/li&gt;
-&lt;li&gt;You’ll probably want to create a &lt;code&gt;.gitignore&lt;/code&gt; file right away, to indicate all of the files you don’t want to track. Use &lt;code&gt;git add .gitignore&lt;/code&gt;, too.&lt;/li&gt;
+&lt;li&gt;You’ll probably want to create a &lt;code&gt;.gitignore&lt;/code&gt; file right away, to indicate all of the files you don’t want to track. Use &lt;code&gt;git add .gitignore&lt;/code&gt;, too.&lt;/li&gt;
 &lt;li&gt;Type &lt;code&gt;git commit&lt;/code&gt;.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id="connect-it-to-github"&gt;Connect it to github&lt;a class="headerlink" href="#connect-it-to-github" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
@@ -287,13 +275,13 @@ $&lt;span class="w"&gt; &lt;/span&gt;git&lt;span class="w"&gt; &lt;/span&gt;push
 &lt;p&gt;Actually, the first line of the instructions will usually say&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$&lt;span class="w"&gt; &lt;/span&gt;git&lt;span class="w"&gt; &lt;/span&gt;remote&lt;span class="w"&gt; &lt;/span&gt;add&lt;span class="w"&gt; &lt;/span&gt;origin&lt;span class="w"&gt; &lt;/span&gt;https://github.com/username/new_repo
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;But I use &lt;code&gt;git@github.com:username/new_repo&lt;/code&gt; rather than &lt;code&gt;https://github.com/username/new_repo&lt;/code&gt;, as the former is for use with &lt;a href="https://en.wikipedia.org/wiki/Secure_Shell"&gt;ssh&lt;/a&gt;, if you set up ssh  then you won’t have to type your password every time you push things to github. If you use the latter construction, you’ll have to type your github password every time you push to github.&lt;/p&gt;
+&lt;p&gt;But I use &lt;code&gt;git@github.com:username/new_repo&lt;/code&gt; rather than &lt;code&gt;https://github.com/username/new_repo&lt;/code&gt;, as the former is for use with &lt;a href="https://en.wikipedia.org/wiki/Secure_Shell"&gt;ssh&lt;/a&gt;, if you set up ssh  then you won’t have to type your password every time you push things to github. If you use the latter construction, you’ll have to type your github password every time you push to github.&lt;/p&gt;
 &lt;h2 id="often-used-commands"&gt;Often used commands&lt;a class="headerlink" href="#often-used-commands" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
 &lt;h3 id="add-and-commit"&gt;Add and commit&lt;a class="headerlink" href="#add-and-commit" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
-&lt;p&gt;After you’ve made some small modifications to your project and checked that they work, use &lt;code&gt;git add&lt;/code&gt; to indicate that they’re ready.&lt;/p&gt;
+&lt;p&gt;After you’ve made some small modifications to your project and checked that they work, use &lt;code&gt;git add&lt;/code&gt; to indicate that they’re ready.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$&lt;span class="w"&gt; &lt;/span&gt;git&lt;span class="w"&gt; &lt;/span&gt;add&lt;span class="w"&gt; &lt;/span&gt;R/modified.R&lt;span class="w"&gt; &lt;/span&gt;man/modified.Rd
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Then use &lt;code&gt;git commit&lt;/code&gt; to add the modifications to the repository.&lt;/p&gt;
+&lt;p&gt;Then use &lt;code&gt;git commit&lt;/code&gt; to add the modifications to the repository.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$&lt;span class="w"&gt; &lt;/span&gt;git&lt;span class="w"&gt; &lt;/span&gt;commit
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;A text editor (nano if you followed this tutorial) will open; add a short message describing the changes.&lt;/p&gt;
@@ -301,7 +289,7 @@ $&lt;span class="w"&gt; &lt;/span&gt;git&lt;span class="w"&gt; &lt;/span&gt;push
 &lt;p&gt;For a one-line commit message, you can just type&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$&lt;span class="w"&gt; &lt;/span&gt;git&lt;span class="w"&gt; &lt;/span&gt;commit&lt;span class="w"&gt; &lt;/span&gt;-m&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"Fix such and such"&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;If you want to commit all of the modifications you’ve made, without having to explicitly “add” each file, you can skip the separate &lt;code&gt;add&lt;/code&gt; and &lt;code&gt;commit&lt;/code&gt; commands and just type&lt;/p&gt;
+&lt;p&gt;If you want to commit all of the modifications you’ve made, without having to explicitly “add” each file, you can skip the separate &lt;code&gt;add&lt;/code&gt; and &lt;code&gt;commit&lt;/code&gt; commands and just type&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$&lt;span class="w"&gt; &lt;/span&gt;git&lt;span class="w"&gt; &lt;/span&gt;commit&lt;span class="w"&gt; &lt;/span&gt;-a
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;h3 id="push-to-github"&gt;Push to &lt;a href="https://github.com/"&gt;github&lt;/a&gt;&lt;a class="headerlink" href="#push-to-github" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
@@ -324,20 +312,20 @@ $&lt;span class="w"&gt; &lt;/span&gt;git&lt;span class="w"&gt; &lt;/span&gt;push
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;It’ll show you which lines have been added and which have been deleted.&lt;/p&gt;
 &lt;h3 id="gitignore"&gt;.gitignore&lt;a class="headerlink" href="#gitignore" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
-&lt;p&gt;The various files in your project directory that you’re not tracking in git should be indicated in a &lt;code&gt;.gitignore&lt;/code&gt; file.&lt;/p&gt;
-&lt;p&gt;You don’t &lt;em&gt;have&lt;/em&gt; to have a &lt;code&gt;.gitignore&lt;/code&gt; file, but if you don’t, those files will show up every time you type &lt;code&gt;git status&lt;/code&gt;.&lt;/p&gt;
-&lt;p&gt;Each subdirectory can have its own &lt;code&gt;.gitignore&lt;/code&gt; file, too.&lt;/p&gt;
-&lt;p&gt;Also, you can have a global such in your home directory; I use &lt;code&gt;~/.gitignore_global&lt;/code&gt;, which contains:&lt;/p&gt;
+&lt;p&gt;The various files in your project directory that you’re not tracking in git should be indicated in a &lt;code&gt;.gitignore&lt;/code&gt; file.&lt;/p&gt;
+&lt;p&gt;You don’t &lt;em&gt;have&lt;/em&gt; to have a &lt;code&gt;.gitignore&lt;/code&gt; file, but if you don’t, those files will show up every time you type &lt;code&gt;git status&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Each subdirectory can have its own &lt;code&gt;.gitignore&lt;/code&gt; file, too.&lt;/p&gt;
+&lt;p&gt;Also, you can have a global such in your home directory; I use &lt;code&gt;~/.gitignore_global&lt;/code&gt;, which contains:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;*~&lt;/span&gt;
 &lt;span class="err"&gt;.*~&lt;/span&gt;
 &lt;span class="na"&gt;.DS_Store&lt;/span&gt;
 &lt;span class="na"&gt;.Rhistory&lt;/span&gt;
 &lt;span class="na"&gt;.RData&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;You have to tell git about the global &lt;code&gt;.gitignore&lt;/code&gt; file:&lt;/p&gt;
+&lt;p&gt;You have to tell git about the global &lt;code&gt;.gitignore&lt;/code&gt; file:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$&lt;span class="w"&gt; &lt;/span&gt;git&lt;span class="w"&gt; &lt;/span&gt;config&lt;span class="w"&gt; &lt;/span&gt;--global&lt;span class="w"&gt; &lt;/span&gt;core.excludesfile&lt;span class="w"&gt; &lt;/span&gt;~/.gitignore_global
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Huge thanks to &lt;a href="https://kbroman.org/github_tutorial/"&gt;kbroman.org&lt;/a&gt; for his tutorials from where I have collated articles for this cheat sheet. you can check out his page for more detailed workflow. &lt;/p&gt;</content><category term="Blog"></category><category term="git"></category><category term="github"></category></entry><entry><title>Make a Github Pages blog with Pelican</title><link href="https://ashwinschronicles.github.io/gh-pages-with-pelican" rel="alternate"></link><published>2019-01-01T00:00:00+05:30</published><updated>2019-01-01T00:00:00+05:30</updated><author><name>Ashwin</name></author><id>tag:ashwinschronicles.github.io,2019-01-01:/gh-pages-with-pelican</id><summary type="html">&lt;p&gt;Wake your own webbsite using Pelican static site generator  and host it on github&amp;nbsp;pages&lt;/p&gt;</summary><content type="html">&lt;p&gt;Github, worlds leading  hosting service for Git repositories  offers a simple, elegant website solution. It allows its users to  store page content in a git repository along with their&amp;nbsp;code.&lt;/p&gt;
+&lt;p&gt;Huge thanks to &lt;a href="https://kbroman.org/github_tutorial/"&gt;kbroman.org&lt;/a&gt; for his tutorials from where I have collated articles for this cheat sheet. you can check out his page for more detailed workflow. &lt;/p&gt;</content><category term="Blog"/><category term="git"/><category term="github"/></entry><entry><title>Make a Github Pages blog with Pelican</title><link href="https://ashwinschronicles.github.io/gh-pages-with-pelican" rel="alternate"/><published>2018-12-29T18:50:09+05:30</published><updated>2023-06-11T16:25:38+05:30</updated><author><name>Ashwin</name></author><id>tag:ashwinschronicles.github.io,2018-12-29:/gh-pages-with-pelican</id><summary type="html">&lt;p&gt;Wake your own webbsite using Pelican static site generator  and host it on github&amp;nbsp;pages&lt;/p&gt;</summary><content type="html">&lt;p&gt;Github, worlds leading  hosting service for Git repositories  offers a simple, elegant website solution. It allows its users to  store page content in a git repository along with their&amp;nbsp;code.&lt;/p&gt;
 &lt;p&gt;In this blog post ill walk you through the process of setting up a website by combining Pelican with Github Pages. Pelican is a simple python utility that lets you create beautiful weblogs using just text files. In other words its a static-site generator. I have chosen Pelican over other static-site generators as Pelican unlike its counter parts is based on python hence initial  setup takes literally no&amp;nbsp;time.&lt;/p&gt;
 &lt;h2 id="setting-up-a-githubio-page"&gt;Setting up a github.io page&lt;a class="headerlink" href="#setting-up-a-githubio-page" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;To create your Github user page, log in to Github and create a  new repositorie username.github.io, as explained on Github pages. (Use your Github username for these repositories.) The  username.github.io repository will contain the output &lt;span class="caps"&gt;HTML&lt;/span&gt; files Pelican generates. To add the output directory as a submodule, initialize it with a &lt;span class="caps"&gt;README&lt;/span&gt;&amp;nbsp;file.&lt;/p&gt;
@@ -348,34 +336,28 @@ cd into the directory where you want to install the Pelican website and then run
 &lt;span class="nb"&gt;source&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;bin/activate
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-
 &lt;p&gt;This essentially creates a virtual python environment where Pelican can be installed and any python package installed here wont affect the global python
 packages.
 Once the virtual environment has been created and activated, Pelican can be installed via  prefixing with sudo if permissions&amp;nbsp;warrant:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;pip&lt;span class="w"&gt; &lt;/span&gt;install&lt;span class="w"&gt; &lt;/span&gt;pelican&lt;span class="w"&gt; &lt;/span&gt;markdown&lt;span class="w"&gt; &lt;/span&gt;typogrify&lt;span class="w"&gt; &lt;/span&gt;ghp-import&lt;span class="w"&gt; &lt;/span&gt;shovel&lt;span class="w"&gt; &lt;/span&gt;cssmin&lt;span class="w"&gt; &lt;/span&gt;webassets
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-
 &lt;p&gt;Now clone the source repository you&amp;nbsp;created:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="w"&gt; &lt;/span&gt;git&lt;span class="w"&gt; &lt;/span&gt;clone&lt;span class="w"&gt; &lt;/span&gt;https://github.com/YOUR_USERNAME/YOUR_USERNAME.github.io.git&lt;span class="w"&gt; &lt;/span&gt;web-sources
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 
 &lt;p&gt;Then change directory to the source&amp;nbsp;folder:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="nb"&gt;cd&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;web-sources
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-
 &lt;p&gt;Because of how Github Pages prefers to work, serving the files from the master branch, you have to put your source code in a new branch, preserving the &amp;#8220;master&amp;#8221; for the output of the static files generated by Pelican. To do that, you must create a new branch called&amp;nbsp;&amp;#8220;source&amp;#8221;:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;git&lt;span class="w"&gt; &lt;/span&gt;checkout&lt;span class="w"&gt; &lt;/span&gt;-b&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nb"&gt;source&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 
 &lt;h2 id="pelican-quickstart"&gt;Pelican quickstart&lt;a class="headerlink" href="#pelican-quickstart" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Pelican provides an excellent quickstart command. Run&amp;nbsp;it:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;pelican-quickstart
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 
 &lt;p&gt;The quickstart will ask you various questions, which you can answer in turn. Before answering them, take a look at my answers&amp;nbsp;below:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;gt;&lt;span class="w"&gt; &lt;/span&gt;Where&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;do&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;you&lt;span class="w"&gt; &lt;/span&gt;want&lt;span class="w"&gt; &lt;/span&gt;to&lt;span class="w"&gt; &lt;/span&gt;create&lt;span class="w"&gt; &lt;/span&gt;your&lt;span class="w"&gt; &lt;/span&gt;new&lt;span class="w"&gt; &lt;/span&gt;web&lt;span class="w"&gt; &lt;/span&gt;site?&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;.&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;./
@@ -398,7 +380,6 @@ Once the virtual environment has been created and activated, Pelican can be inst
 Done.&lt;span class="w"&gt; &lt;/span&gt;Your&lt;span class="w"&gt; &lt;/span&gt;new&lt;span class="w"&gt; &lt;/span&gt;project&lt;span class="w"&gt; &lt;/span&gt;is&lt;span class="w"&gt; &lt;/span&gt;available&lt;span class="w"&gt; &lt;/span&gt;at&lt;span class="w"&gt; &lt;/span&gt;YOUR_USERNAME.github.io
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-
 &lt;p&gt;Now, go ahead and create your first blog post! You might want to open the project folder on your favorite code editor and find the &amp;#8220;content&amp;#8221; folder inside it. Then, create a new file, which can be called my-first-post.md (Just for testing). The contents should begin with the metadata which identifies the Title, Date, Category and more from the post before you start with the content, like&amp;nbsp;this:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;Title: My first post
 Date: 2018-1-2
@@ -412,29 +393,24 @@ Summary: What does your post talk about? Write here.
 This is the &lt;span class="ge"&gt;*first post*&lt;/span&gt; from my Pelican blog. &lt;span class="gs"&gt;**YAY!**&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-
 &lt;p&gt;Let&amp;#8217;s see how it&amp;nbsp;looks?&lt;/p&gt;
 &lt;p&gt;Go to the terminal, generate the static files and start the server. To do that, use the following&amp;nbsp;command:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;(&lt;/span&gt;venv&lt;span class="o"&gt;)&lt;/span&gt;$&lt;span class="w"&gt; &lt;/span&gt;make&lt;span class="w"&gt; &lt;/span&gt;html&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;make&lt;span class="w"&gt; &lt;/span&gt;serve
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-
-&lt;p&gt;While this command is running, you should be able to visit it on your favorite web browser by typing &lt;code&gt;localhost:8000&lt;/code&gt; on the address&amp;nbsp;bar.&lt;/p&gt;
+&lt;p&gt;While this command is running, you should be able to visit it on your favorite web browser by&amp;nbsp;typing &lt;code&gt;localhost:8000&lt;/code&gt; on the address&amp;nbsp;bar.&lt;/p&gt;
 &lt;h2 id="a-little-touch-up"&gt;A little touch up&lt;a class="headerlink" href="#a-little-touch-up" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;Now,  if you want to put an image in a post, a neat way is to first  create a &amp;#8216;images&amp;#8217; directory inside your content directory, where your posts are. Now, you have to tell Pelican to use it. Find the &lt;code&gt;pelicanconf.py&lt;/code&gt;, the file where you configure the system, and add a variable that contains the directory with your&amp;nbsp;images:&lt;/p&gt;
+&lt;p&gt;Now,  if you want to put an image in a post, a neat way is to first  create a &amp;#8216;images&amp;#8217; directory inside your content directory, where your posts are. Now, you have to tell Pelican to use it. Find&amp;nbsp;the &lt;code&gt;pelicanconf.py&lt;/code&gt;, the file where you configure the system, and add a variable that contains the directory with your&amp;nbsp;images:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;STATIC_PATHS&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;images&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 
 &lt;p&gt;Save it. Go to your post and add the image this&amp;nbsp;way:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;![&lt;span class="nt"&gt;Write here a good description for people who can&amp;#39;t see the image&lt;/span&gt;](&lt;span class="na"&gt;{filename}/images/IMAGE_NAME.webp&lt;/span&gt;)
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-
 &lt;p&gt;You can interrupt the server at anytime pressing &lt;span class="caps"&gt;CTRL&lt;/span&gt;+C on the terminal. But you should start it again and check if the image is correct. Can you remember&amp;nbsp;how?&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;(&lt;/span&gt;venv&lt;span class="o"&gt;)&lt;/span&gt;$&lt;span class="w"&gt; &lt;/span&gt;make&lt;span class="w"&gt; &lt;/span&gt;html&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;make&lt;span class="w"&gt; &lt;/span&gt;serve
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 
 &lt;p&gt;One last step before your coding is &amp;#8220;done&amp;#8221;: you should make sure anyone can read your posts using &lt;span class="caps"&gt;ATOM&lt;/span&gt; or &lt;span class="caps"&gt;RSS&lt;/span&gt; feeds. Find the pelicanconf.py, the file where you configure the system, and edit the part about feed&amp;nbsp;generation:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;FEED_ALL_ATOM&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;feeds/all.atom.xml&amp;#39;&lt;/span&gt;
@@ -443,16 +419,13 @@ This is the &lt;span class="ge"&gt;*first post*&lt;/span&gt; from my Pelican blo
 &lt;span class="n"&gt;RSS_FEED_SUMMARY_ONLY&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kc"&gt;False&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-
 &lt;p&gt;Save everything so you can send the code to Github. You can do that by adding all files, committing it with a message (&amp;#8216;first commit&amp;#8217;) and using git push. You will be asked for your Github login and&amp;nbsp;password.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;git&lt;span class="w"&gt; &lt;/span&gt;add&lt;span class="w"&gt; &lt;/span&gt;-A&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;git&lt;span class="w"&gt; &lt;/span&gt;commit&lt;span class="w"&gt; &lt;/span&gt;-a&lt;span class="w"&gt; &lt;/span&gt;-m&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;first commit&amp;#39;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;git&lt;span class="w"&gt; &lt;/span&gt;push&lt;span class="w"&gt; &lt;/span&gt;--all
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-
 &lt;p&gt;As I had said before you would be preserving the master branch for the output of the static files generated by Pelican. Now it&amp;#8217;s time  to generate the&amp;nbsp;mater:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$&lt;span class="w"&gt; &lt;/span&gt;make&lt;span class="w"&gt; &lt;/span&gt;github
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 
 &lt;p&gt;You will be asked for your Github login and password again. And&amp;#8230; voilà! Your new blog should be live on&amp;nbsp;https://YOUR_USERNAME.github.io.&lt;/p&gt;
 &lt;h1 id="whats-next"&gt;What&amp;#8217;s next?&lt;a class="headerlink" href="#whats-next" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h1&gt;
@@ -502,14 +475,12 @@ This is the &lt;span class="ge"&gt;*first post*&lt;/span&gt; from my Pelican blo
 &lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;pydevproject&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-
 &lt;h3 id="automate-github-upload-process"&gt;Automate GitHub upload process&lt;a class="headerlink" href="#automate-github-upload-process" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h3&gt;
-&lt;p&gt;Create a file &lt;code&gt;up.sh&lt;/code&gt; in the  &lt;code&gt;web-sources&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Create a&amp;nbsp;file &lt;code&gt;up.sh&lt;/code&gt; in&amp;nbsp;the  &lt;code&gt;web-sources&lt;/code&gt;&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;git&lt;span class="w"&gt; &lt;/span&gt;add&lt;span class="w"&gt; &lt;/span&gt;-A&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;git&lt;span class="w"&gt; &lt;/span&gt;commit&lt;span class="w"&gt; &lt;/span&gt;-a&lt;span class="w"&gt; &lt;/span&gt;-m&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&amp;quot;&lt;/span&gt;&lt;span class="nv"&gt;$1&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot; &amp;amp;&amp;amp; git push --all&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-
-&lt;p&gt;Now whenever you want to upload sync the repo just do &lt;code&gt;bash up.sh "Comment"&lt;/code&gt; Note that the argument &amp;#8220;Comment&amp;#8221; should not contain&amp;nbsp;spaces.&lt;/p&gt;
+&lt;p&gt;Now whenever you want to upload sync the repo just&amp;nbsp;do &lt;code&gt;bash up.sh "Comment"&lt;/code&gt; Note that the argument &amp;#8220;Comment&amp;#8221; should not contain&amp;nbsp;spaces.&lt;/p&gt;
 &lt;h3 id="download-themes"&gt;Download Themes&lt;a class="headerlink" href="#download-themes" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;Clone pelican-themes&amp;nbsp;repository&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;git clone --recursive https://github.com/getpelican/pelican-themes themes&lt;/code&gt;&lt;/p&gt;
@@ -519,7 +490,6 @@ This is the &lt;span class="ge"&gt;*first post*&lt;/span&gt; from my Pelican blo
 &lt;span class="n"&gt;PATH&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;content&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-
 &lt;h3 id="custom-home-page"&gt;Custom Home page&lt;a class="headerlink" href="#custom-home-page" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;Add this variables to&amp;nbsp;pelicanconf.py&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="c1"&gt;# Custom Home page&lt;/span&gt;
@@ -528,12 +498,10 @@ This is the &lt;span class="ge"&gt;*first post*&lt;/span&gt; from my Pelican blo
 &lt;span class="n"&gt;TEMPLATE_PAGES&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;home.html&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;index.html&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-
 &lt;p&gt;Duplicated the index.html to blog.html in your template folder and add this&amp;nbsp;lines:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;{% set active_page = &amp;quot;blog&amp;quot; %}
 {% block title %}{{ SITENAME }} - Blog{% endblock %}
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 
 &lt;p&gt;Create home.html or use page override feature to use a Markdown page as your home&amp;nbsp;page.&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;nano home.html&lt;/code&gt;&lt;/p&gt;
@@ -546,11 +514,10 @@ This is the &lt;span class="ge"&gt;*first post*&lt;/span&gt; from my Pelican blo
 {% endblock %}
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-
 &lt;h1 id="process-for-new-articles"&gt;Process for new articles.&lt;a class="headerlink" href="#process-for-new-articles" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h1&gt;
-&lt;p&gt;Ones the setup is done, the contents of the folder &lt;code&gt;web-sources&lt;/code&gt; need not be generated again using the above procedure. All one has to do is place the article in the content folder then (after testing the website locally using &lt;code&gt;make devserver&lt;/code&gt;) then execute  &lt;code&gt;bash up.sh "Comment"&lt;/code&gt;  to sync the source branch and then do &lt;code&gt;make github&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Ones the setup is done, the contents of the&amp;nbsp;folder &lt;code&gt;web-sources&lt;/code&gt; need not be generated again using the above procedure. All one has to do is place the article in the content folder then (after testing the website locally&amp;nbsp;using &lt;code&gt;make devserver&lt;/code&gt;) then&amp;nbsp;execute  &lt;code&gt;bash up.sh "Comment"&lt;/code&gt;  to sync the source branch and then&amp;nbsp;do &lt;code&gt;make github&lt;/code&gt;&lt;/p&gt;
 &lt;h2 id="process-for-moving-to-a-different-machine"&gt;Process for moving to a different machine&lt;a class="headerlink" href="#process-for-moving-to-a-different-machine" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;If you are on a different machine or you have lost access to the &lt;code&gt;web-sources&lt;/code&gt; folder, you just have to make the virtual environment and then do git clone again.&amp;nbsp;i.e&lt;/p&gt;
+&lt;p&gt;If you are on a different machine or you have lost access to&amp;nbsp;the &lt;code&gt;web-sources&lt;/code&gt; folder, you just have to make the virtual environment and then do git clone again.&amp;nbsp;i.e&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;virtualenv&lt;span class="w"&gt; &lt;/span&gt;website&lt;span class="w"&gt;  &lt;/span&gt;
 &lt;span class="nb"&gt;cd&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;website
 &lt;span class="nb"&gt;source&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;bin/activate
@@ -559,7 +526,6 @@ git&lt;span class="w"&gt; &lt;/span&gt;clone&lt;span class="w"&gt; &lt;/span&gt;
 &lt;span class="nb"&gt;cd&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;web-sources
 git&lt;span class="w"&gt; &lt;/span&gt;checkout&lt;span class="w"&gt; &lt;/span&gt;-b&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nb"&gt;source&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 
 &lt;p&gt;This article just touches upon getting a basic website up and running. More features that Pelican offers (like custom plugins)can be explored &lt;a href="http://docs.getpelican.com/en/3.6.3/content.html"&gt;here&lt;/a&gt;.&lt;/p&gt;
 &lt;h1 id="upgrading-pelican"&gt;Upgrading Pelican&lt;a class="headerlink" href="#upgrading-pelican" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h1&gt;
@@ -570,13 +536,11 @@ For instance when I wrote the tutorial initially pelican was on version 3.7 and 
 pelican&lt;span class="w"&gt; &lt;/span&gt;content
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-
 &lt;p&gt;Then we need to update the local copies of the plugins and themes. If you have just cloned from the original git repos the nall you need to do&amp;nbsp;is &lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;git&lt;span class="w"&gt; &lt;/span&gt;pull&lt;span class="w"&gt; &lt;/span&gt;origin
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-
 &lt;h1 id="faqs-and-tips"&gt;FAQs and Tips&lt;a class="headerlink" href="#faqs-and-tips" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Separate slug (&lt;span class="caps"&gt;URL&lt;/span&gt;) words with a hyphen, or an underscore?&lt;/strong&gt; you should use a &lt;strong&gt;hyphen&lt;/strong&gt; for your &lt;span class="caps"&gt;SEO&lt;/span&gt; &lt;strong&gt;URLs&lt;/strong&gt;. Google treats a &lt;strong&gt;hyphen&lt;/strong&gt; as a word separator, but does not treat an &lt;strong&gt;underscore&lt;/strong&gt; that way. Google treats and &lt;strong&gt;underscore&lt;/strong&gt; as a word joiner — so github_pages is the same as githubpages to&amp;nbsp;Google.&lt;/li&gt;
-&lt;/ul&gt;</content><category term="Blog"></category><category term="Github"></category><category term="Pelican"></category><category term="gh-pages"></category></entry></feed>
+&lt;/ul&gt;</content><category term="Blog"/><category term="Github"/><category term="Pelican"/><category term="gh-pages"/></entry></feed>

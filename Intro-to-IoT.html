@@ -9,7 +9,7 @@
         <link rel="dns-prefetch" href="//fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
 
-        <meta name="google-site-verification" content="p61t4jkBXn4Wc7q3yIKCNSLcb7VC3Fay6dNkDefU3Ic" />        <meta name="author" content="Ashwin" />
+        <meta name="author" content="Ashwin" />
 
         <meta name="description" content="In this post, we’ll be making a simple IoT project. Web page controlled LED strip using NodeMCU connected on a local network.
 " />
@@ -44,20 +44,16 @@
         <link rel="apple-touch-icon" sizes="152x152" href="https://ashwinschronicles.github.io/theme/images/apple-touch-icon-152x152.png" type="image/png" />
         <link rel="apple-touch-icon" sizes="152x152" href="https://ashwinschronicles.github.io/theme/images/apple-touch-icon-180x180.png" type="image/png" />
         <link href="https://ashwinschronicles.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Ashwin&#39;s Chronicles🗞️ - Full Atom Feed" />
-
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-E1G9M6CRCM"></script>
 <script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-     m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-     })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-    ga('create', 'UA-161419840-1', 'auto');
-    ga('send', 'pageview');
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-E1G9M6CRCM');
 </script>
 
-<script>
-    window.heap=window.heap||[],heap.load=function(e,t){window.heap.appid=e,window.heap.config=t=t||{};var r=t.forceSSL||"https:"===document.location.protocol,a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=(r?"https:":"http:")+"//cdn.heapanalytics.com/js/heap-"+e+".js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n);for(var o=function(e){return function(){heap.push([e].concat(Array.prototype.slice.call(arguments,0)))}},p=["addEventProperties","addUserProperties","clearEventProperties","identify","resetIdentity","removeEventProperty","setEventProperties","track","unsetEventProperty"],c=0;c<p.length;c++)heap[p[c]]=o(p[c])};
-      heap.load("1155667143");
-</script>
+
 
     </head>
     <body>
@@ -123,8 +119,7 @@
     </div>
     <div class="span8 article-content">
             
-            <main>
-                
+            
 <p>In this post, we’ll be making a simple IoT project. Web page controlled <span class="caps">LED</span> strip using NodeMCU connected on a local network.</p>
 <h2 id="outline">Outline:<a class="headerlink" href="#outline" title="Permanent link">¶</a></h2>
 <p>Web page controlled <span class="caps">LED</span> strip is like the “Hello world” of IoT. In this post I will be detailing on the procedure I followed to set it up. The schematic of the project will be as follows:</p>
@@ -146,7 +141,7 @@
 <p><img alt="powersupply" src=".././images/IoT_4_powersupply.jpeg" style="zoom:33%;"/></p>
 <h2 id="installing-nodemcu-board-package-in-arduino-ide">Installing NodeMCU Board Package in Arduino <span class="caps">IDE</span>:<a class="headerlink" href="#installing-nodemcu-board-package-in-arduino-ide" title="Permanent link">¶</a></h2>
 <ul>
-<li>Open up Arduino <span class="caps">IDE</span>. Go to Files-&gt; Preferences. Enter <code>http://arduino.esp8266.com/stable/package_esp8266com_index.json</code> into Additional Board Manager URLs field.</li>
+<li>Open up Arduino <span class="caps">IDE</span>. Go to Files-&gt; Preferences. Enter <code>http://arduino.esp8266.com/stable/package_esp8266com_index.json</code> into Additional Board Manager URLs field.</li>
 </ul>
 <p><img alt="IoT_5_preference" src="../images/IoT_5_preference.webp"/></p>
 <ul>
@@ -196,7 +191,6 @@
 <p>Vola! there’s our first project!</p>
 <h2 id="whats-next">Whats next?<a class="headerlink" href="#whats-next" title="Permanent link">¶</a></h2>
 <p>We can add more feature to the project such as making it connect to a wifi router so that you can access the <span class="caps">LED</span> strip from anywhere in the world. We can convert this project to use the barebone <span class="caps">ESP8266</span> and <span class="caps">FTDI</span> programmer. We can use the power supply of the <span class="caps">LED</span> strip to power the <span class="caps">ESP8266</span> (Not recommended since most <span class="caps">LED</span> power supply have high <span class="caps">AC</span> noise as I found out in my case and hence can damage the <span class="caps">ESP8266</span> board).Add more devices for the <span class="caps">ESP</span> to control and much much more! All that</p>
-            </main>
 
 
              
@@ -266,7 +260,7 @@
             <nav>
             <ul class="articles-timeline">
                 <li class="previous-article">« <a href="https://ashwinschronicles.github.io/arduino-labview-review" title="Previous: Interfacing Arduino Mega using LabVIEW">Interfacing Arduino Mega using LabVIEW</a></li>
-                <li class="next-article"><a href="https://ashwinschronicles.github.io/qhe" title="Next: Quantum Hall Effect and related phenomena">Quantum Hall Effect and related phenomena</a> »</li>
+                <li class="next-article"><a href="https://ashwinschronicles.github.io/gh-pages-with-pelican" title="Next: Make a Github Pages blog with Pelican">Make a Github Pages blog with Pelican</a> »</li>
             </ul>
             </nav>
             </aside>
@@ -443,7 +437,7 @@
 <script>
 var sc_project=12223345;
 var sc_invisible=1;
-var sc_security="c77ea628";
+var sc_security="2ee4ddde";
 var scJsHost = (("https:" == document.location.protocol) ?
 "https://secure." : "http://www.");
 document.write("<sc"+"ript type='text/javascript' src='" +
@@ -453,7 +447,7 @@ scJsHost+
 <noscript><div class="statcounter"><a title="web analytics"
 href="http://statcounter.com/" target="_blank" rel="nofollow noopener noreferrer"><img
 class="statcounter"
-src="//c.statcounter.com/12223345/0/c77ea628/1/"
+src="//c.statcounter.com/12223345/0/2ee4ddde/1/"
 alt="web analytics"></a></div></noscript>
 <!-- End of StatCounter Code for Default Guide -->
     </body>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Ashwin's Chronicles🗞️ - Engineering</title><link href="https://ashwinschronicles.github.io/" rel="alternate"></link><link href="https://ashwinschronicles.github.io/feeds/engineering.atom.xml" rel="self"></link><id>https://ashwinschronicles.github.io/</id><updated>2019-07-13T00:00:00+05:30</updated><entry><title>Analog Discovery 2 + LabVIEW Home Bundle - Review</title><link href="https://ashwinschronicles.github.io/analog-discovery-2-labview-home-bundle-review" rel="alternate"></link><published>2019-07-13T00:00:00+05:30</published><updated>2019-07-13T00:00:00+05:30</updated><author><name>Ashwin</name></author><id>tag:ashwinschronicles.github.io,2019-07-13:/analog-discovery-2-labview-home-bundle-review</id><summary type="html">&lt;p&gt;This post is a review of the Analog Discovery 2 + LabVIEW Home Bundle in a lab&amp;nbsp;environment&lt;/p&gt;</summary><content type="html">
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Ashwin's Chronicles🗞️ - Engineering</title><link href="https://ashwinschronicles.github.io/" rel="alternate"/><link href="https://ashwinschronicles.github.io/feeds/engineering.atom.xml" rel="self"/><id>https://ashwinschronicles.github.io/</id><updated>2019-07-13T00:00:00+05:30</updated><entry><title>Analog Discovery 2 + LabVIEW Home Bundle - Review</title><link href="https://ashwinschronicles.github.io/analog-discovery-2-labview-home-bundle-review" rel="alternate"/><published>2019-07-13T00:00:00+05:30</published><updated>2019-07-13T00:00:00+05:30</updated><author><name>Ashwin</name></author><id>tag:ashwinschronicles.github.io,2019-07-13:/analog-discovery-2-labview-home-bundle-review</id><summary type="html">&lt;p&gt;This post is a review of the Analog Discovery 2 + LabVIEW Home Bundle in a lab&amp;nbsp;environment&lt;/p&gt;</summary><content type="html">
 &lt;p&gt;This post is a review of the Analog Discovery 2 + LabVIEW Home Bundle in a lab environment. It was originally posted &lt;a href="https://www.element14.com/community/roadTestReviews/3075/l/analog-discovery-2-labview-home-bundle-review"&gt;here&lt;/a&gt; as a part of element14’s RoadTest. I thank element14 for sending me the review unit.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
@@ -99,7 +99,7 @@
 &lt;td&gt;52 / 60&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
-&lt;/table&gt;</content><category term="Engineering"></category><category term="Analog Discovery 2"></category><category term="LabVIEW"></category><category term="Review"></category></entry><entry><title>A beginers IoT Project.</title><link href="https://ashwinschronicles.github.io/Intro-to-IoT" rel="alternate"></link><published>2018-07-12T00:00:00+05:30</published><updated>2018-07-12T00:00:00+05:30</updated><author><name>Ashwin</name></author><id>tag:ashwinschronicles.github.io,2018-07-12:/Intro-to-IoT</id><summary type="html">&lt;p&gt;In this post, we’ll be making a simple IoT project. Web page controlled &lt;span class="caps"&gt;LED&lt;/span&gt; strip using NodeMCU connected on a local&amp;nbsp;network.&lt;/p&gt;</summary><content type="html">
+&lt;/table&gt;</content><category term="Engineering"/><category term="Analog Discovery 2"/><category term="LabVIEW"/><category term="Review"/></entry><entry><title>A beginers IoT Project.</title><link href="https://ashwinschronicles.github.io/Intro-to-IoT" rel="alternate"/><published>2018-07-12T00:00:00+05:30</published><updated>2018-07-12T00:00:00+05:30</updated><author><name>Ashwin</name></author><id>tag:ashwinschronicles.github.io,2018-07-12:/Intro-to-IoT</id><summary type="html">&lt;p&gt;In this post, we’ll be making a simple IoT project. Web page controlled &lt;span class="caps"&gt;LED&lt;/span&gt; strip using NodeMCU connected on a local&amp;nbsp;network.&lt;/p&gt;</summary><content type="html">
 &lt;p&gt;In this post, we’ll be making a simple IoT project. Web page controlled &lt;span class="caps"&gt;LED&lt;/span&gt; strip using NodeMCU connected on a local network.&lt;/p&gt;
 &lt;h2 id="outline"&gt;Outline:&lt;a class="headerlink" href="#outline" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Web page controlled &lt;span class="caps"&gt;LED&lt;/span&gt; strip is like the “Hello world” of IoT. In this post I will be detailing on the procedure I followed to set it up. The schematic of the project will be as follows:&lt;/p&gt;
@@ -121,7 +121,7 @@
 &lt;p&gt;&lt;img alt="powersupply" src=".././images/IoT_4_powersupply.jpeg" style="zoom:33%;"/&gt;&lt;/p&gt;
 &lt;h2 id="installing-nodemcu-board-package-in-arduino-ide"&gt;Installing NodeMCU Board Package in Arduino &lt;span class="caps"&gt;IDE&lt;/span&gt;:&lt;a class="headerlink" href="#installing-nodemcu-board-package-in-arduino-ide" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;Open up Arduino &lt;span class="caps"&gt;IDE&lt;/span&gt;. Go to Files-&amp;gt; Preferences. Enter &lt;code&gt;http://arduino.esp8266.com/stable/package_esp8266com_index.json&lt;/code&gt; into Additional Board Manager URLs field.&lt;/li&gt;
+&lt;li&gt;Open up Arduino &lt;span class="caps"&gt;IDE&lt;/span&gt;. Go to Files-&amp;gt; Preferences. Enter &lt;code&gt;http://arduino.esp8266.com/stable/package_esp8266com_index.json&lt;/code&gt; into Additional Board Manager URLs field.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;&lt;img alt="IoT_5_preference" src="../images/IoT_5_preference.webp"/&gt;&lt;/p&gt;
 &lt;ul&gt;
@@ -170,7 +170,7 @@
 &lt;p&gt;&lt;img alt="IoT_14_tes5" src="../images/IoT_14_tes5.gif"/&gt;&lt;/p&gt;
 &lt;p&gt;Vola! there’s our first project!&lt;/p&gt;
 &lt;h2 id="whats-next"&gt;Whats next?&lt;a class="headerlink" href="#whats-next" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;We can add more feature to the project such as making it connect to a wifi router so that you can access the &lt;span class="caps"&gt;LED&lt;/span&gt; strip from anywhere in the world. We can convert this project to use the barebone &lt;span class="caps"&gt;ESP8266&lt;/span&gt; and &lt;span class="caps"&gt;FTDI&lt;/span&gt; programmer. We can use the power supply of the &lt;span class="caps"&gt;LED&lt;/span&gt; strip to power the &lt;span class="caps"&gt;ESP8266&lt;/span&gt; (Not recommended since most &lt;span class="caps"&gt;LED&lt;/span&gt; power supply have high &lt;span class="caps"&gt;AC&lt;/span&gt; noise as I found out in my case and hence can damage the &lt;span class="caps"&gt;ESP8266&lt;/span&gt; board).Add more devices for the &lt;span class="caps"&gt;ESP&lt;/span&gt; to control and much much more! All that&lt;/p&gt;</content><category term="Engineering"></category><category term="IoT"></category></entry><entry><title>Interfacing Arduino Mega using LabVIEW</title><link href="https://ashwinschronicles.github.io/arduino-labview-review" rel="alternate"></link><published>2017-12-15T00:00:00+05:30</published><updated>2017-12-15T00:00:00+05:30</updated><author><name>Ashwin</name></author><id>tag:ashwinschronicles.github.io,2017-12-15:/arduino-labview-review</id><summary type="html">&lt;p&gt;This post is about Interfacing Arduino Mega with&amp;nbsp;LabVIEW&lt;/p&gt;</summary><content type="html">
+&lt;p&gt;We can add more feature to the project such as making it connect to a wifi router so that you can access the &lt;span class="caps"&gt;LED&lt;/span&gt; strip from anywhere in the world. We can convert this project to use the barebone &lt;span class="caps"&gt;ESP8266&lt;/span&gt; and &lt;span class="caps"&gt;FTDI&lt;/span&gt; programmer. We can use the power supply of the &lt;span class="caps"&gt;LED&lt;/span&gt; strip to power the &lt;span class="caps"&gt;ESP8266&lt;/span&gt; (Not recommended since most &lt;span class="caps"&gt;LED&lt;/span&gt; power supply have high &lt;span class="caps"&gt;AC&lt;/span&gt; noise as I found out in my case and hence can damage the &lt;span class="caps"&gt;ESP8266&lt;/span&gt; board).Add more devices for the &lt;span class="caps"&gt;ESP&lt;/span&gt; to control and much much more! All that&lt;/p&gt;</content><category term="Engineering"/><category term="IoT"/></entry><entry><title>Interfacing Arduino Mega using LabVIEW</title><link href="https://ashwinschronicles.github.io/arduino-labview-review" rel="alternate"/><published>2017-12-15T00:00:00+05:30</published><updated>2017-12-15T00:00:00+05:30</updated><author><name>Ashwin</name></author><id>tag:ashwinschronicles.github.io,2017-12-15:/arduino-labview-review</id><summary type="html">&lt;p&gt;This post is about Interfacing Arduino Mega with&amp;nbsp;LabVIEW&lt;/p&gt;</summary><content type="html">
 &lt;p&gt;This post is about Interfacing Arduino Mega using LabVIEW. It was originally posted &lt;a href="https://community.element14.com/products/roadtest/rv/roadtest_reviews/233/arduino_a000067_mega_3"&gt;here&lt;/a&gt; as a part of element14’s RoadTest. I thank element14 for sending me the review unit.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
@@ -276,7 +276,7 @@
 &lt;td&gt;59 / 60&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
-&lt;/table&gt;</content><category term="Engineering"></category><category term="Arduino"></category><category term="LabVIEW"></category><category term="Review"></category></entry><entry><title>A Novel Stove Stand</title><link href="https://ashwinschronicles.github.io/a-novel-stove-stand" rel="alternate"></link><published>2014-11-13T00:00:00+05:30</published><updated>2014-11-13T00:00:00+05:30</updated><author><name>Ashwin</name></author><id>tag:ashwinschronicles.github.io,2014-11-13:/a-novel-stove-stand</id><summary type="html">&lt;p&gt;This post talks about construction of a novel stove stand that harnesses energy wasted during&amp;nbsp;cooking.&lt;/p&gt;</summary><content type="html">
+&lt;/table&gt;</content><category term="Engineering"/><category term="Arduino"/><category term="LabVIEW"/><category term="Review"/></entry><entry><title>A Novel Stove Stand</title><link href="https://ashwinschronicles.github.io/a-novel-stove-stand" rel="alternate"/><published>2014-11-13T00:00:00+05:30</published><updated>2014-11-13T00:00:00+05:30</updated><author><name>Ashwin</name></author><id>tag:ashwinschronicles.github.io,2014-11-13:/a-novel-stove-stand</id><summary type="html">&lt;p&gt;This post talks about construction of a novel stove stand that harnesses energy wasted during&amp;nbsp;cooking.&lt;/p&gt;</summary><content type="html">
 &lt;p&gt;This post is about the construction of a novel stove stand that harnesses energy wasted during cooking. It was originally a experimental project from my school days (developed from 9th - 12th grade). I have tried to document it as best as I can. It has won over many science exhibitions. I hope you find it interesting.&lt;/p&gt;
 &lt;h1 id="introduction"&gt;Introduction&lt;a class="headerlink" href="#introduction" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h1&gt;
 &lt;p&gt;Today there is energy crisis every where. Even small amount of energy that we can conserve is of great importance. But we are wasting a large amount of heat energy in stove, furnaces in various industries etc.
@@ -288,25 +288,25 @@ Growing technology have tried to conserve as much of energy as possible. But the
 &lt;p style="text-align: center;"&gt;Example of an &lt;span class="caps"&gt;LPG&lt;/span&gt; stove at Indian households&lt;/p&gt;
 &lt;/div&gt;
 &lt;p&gt;The &lt;span class="caps"&gt;LPG&lt;/span&gt; gas stove is a very common device used in every household. It is used for cooking food. The &lt;span class="caps"&gt;LPG&lt;/span&gt; gas stove is a very inefficient device. It wastes a lot of heat energy. The heat energy is wasted in two ways. One is the heat energy that is wasted by the flame. The other is the heat energy that is wasted by the utensil. The heat energy that is wasted by the flame is very high.
-The flame not only heats the utensil but also the surrounding air. This can easily be felt as cooking in the kitchen for a long time makes the kitchen very hot. This heat energy is wasted.  This is also very evident in the case of street food vendors also common in India.
-&lt;!-- &lt;img alt="Example of a street food vendor" src="https://ashwinschronicles.github.io/novel-stove-images/chat-seller.jpg" /&gt; --&gt;
+The flame not only heats the utensil but also the surrounding air. This can easily be felt as cooking in the kitchen for a long time makes the kitchen very hot. This heat energy is wasted.  This is also very evident in the case of street food vendors also common in India.&lt;/p&gt;
+&lt;!-- ![Example of a street food vendor]({attach}novel-stove-images/chat-seller.jpg) --&gt;
 &lt;div style="border: 1px solid black; padding: 5px;width:60%;"&gt;
 &lt;img alt="Example of a street food vendor" src="https://ashwinschronicles.github.io/novel-stove-images/chat-seller.jpg"/&gt;
 &lt;p style="text-align: center;"&gt;Example of a street food vendor&lt;/p&gt;
-&lt;/div&gt;&lt;/p&gt;
+&lt;/div&gt;
 &lt;h2 id="the-solution"&gt;The solution&lt;a class="headerlink" href="#the-solution" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
 &lt;h1 id="model-1-the-first-prototype"&gt;Model 1 : The first prototype&lt;a class="headerlink" href="#model-1-the-first-prototype" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h1&gt;
 &lt;h2 id="1-scientific-principle-involved"&gt;1. Scientific principle involved&lt;a class="headerlink" href="#1-scientific-principle-involved" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;&lt;strong&gt;Seebeck effect :&lt;/strong&gt; This project work is based on the principle of Seebeck effect. The Seebeck effect is the conversion of temperature differences directly into electricity and is named after Thomas Johann Seebeck. Metals respond to the temperature difference in different ways, creating a current loop and a magnetic field. The Seebeck effect is a classic example of an electromotive force (emf) and leads to measurable currents or voltages in the same way as any other emf.&lt;/p&gt;
-&lt;p&gt;Electromotive force &lt;span class="math"&gt;\(Emf = Sc * T\)&lt;/span&gt; (in joule).&lt;/p&gt;
+&lt;p&gt;Electromotive force &lt;span class="math"&gt;\(Emf = Sc * T\)&lt;/span&gt; (in joule).&lt;/p&gt;
 &lt;p&gt;Where Sc - Seebeck coefficient a property of the local material, T - Gradient in temperature &lt;strong&gt;.&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;The Seebeck coefficients generally vary as function of temperature, and depend strongly on the composition of the conductor. Thermoelectric generators are used for creating power from heat differentials.&lt;/p&gt;
 &lt;h3 id="working-principle-of-thermoelectric-generator-teg"&gt;Working Principle of thermoelectric generator (&lt;span class="caps"&gt;TEG&lt;/span&gt;)&lt;a class="headerlink" href="#working-principle-of-thermoelectric-generator-teg" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
-&lt;p&gt;Thermoelectric generators are solid-state heat engines that operate according to the Seebeck Effect. A thermoelectric generator is made of many pairs of p-type and n-type elements. The p-type and n-type have positive and negative Sc respectively. Connecting a p-type element to an n-type element creates a voltage potential across the junction. This voltage potential is proportional to the differences in the Sc in each element and the temperature of the junction. Soon, each hole and electron that “switch sides” will be in equilibrium and act like a barrier, preventing more electrons or holes from migrating. This is called the depletion zone. Heating this depletion zone area and cooling other ends of the element can break down this depletion zone. The mobile holes in the p-type are excited by the heat and move further into the element with the extra kinetic energy. The same happens to the mobile electrons in the n-type material. The net effect: many of the holes pile up at the cold end of the p-type element and many of the electrons pile up at the cold end of the n-type element, thereby creating a voltage potential across the p-n junction. By placing an electrical load or wire from the cold end of the p-type element to the n-type element, the electrons from the n-type element will flow at towards the end of the p-type element . In response, a hole from the p-type element will migrate towards n-type. The end effect is current flow across a voltage potential (from the p-n junction), and electrical power is created. This power is a function of many things such as temperature difference, Sc, and the electrical load that connects the sides.
+&lt;p&gt;Thermoelectric generators are solid-state heat engines that operate according to the Seebeck Effect. A thermoelectric generator is made of many pairs of p-type and n-type elements. The p-type and n-type have positive and negative Sc respectively. Connecting a p-type element to an n-type element creates a voltage potential across the junction. This voltage potential is proportional to the differences in the Sc in each element and the temperature of the junction. Soon, each hole and electron that “switch sides” will be in equilibrium and act like a barrier, preventing more electrons or holes from migrating. This is called the depletion zone. Heating this depletion zone area and cooling other ends of the element can break down this depletion zone. The mobile holes in the p-type are excited by the heat and move further into the element with the extra kinetic energy. The same happens to the mobile electrons in the n-type material. The net effect: many of the holes pile up at the cold end of the p-type element and many of the electrons pile up at the cold end of the n-type element, thereby creating a voltage potential across the p-n junction. By placing an electrical load or wire from the cold end of the p-type element to the n-type element, the electrons from the n-type element will flow at towards the end of the p-type element . In response, a hole from the p-type element will migrate towards n-type. The end effect is current flow across a voltage potential (from the p-n junction), and electrical power is created. This power is a function of many things such as temperature difference, Sc, and the electrical load that connects the sides.&lt;/p&gt;
 &lt;div style="border: 1px solid black; padding: 5px;width:60%;"&gt;
 &lt;img alt="Explanation of the thermoelectric generator" src="https://ashwinschronicles.github.io/novel-stove-images/principle-teg.jpg"/&gt;
 &lt;p style="text-align: center;"&gt;Explanation of the thermoelectric generator&lt;/p&gt;
-&lt;/div&gt;&lt;/p&gt;
+&lt;/div&gt;
 &lt;h2 id="experimental-method"&gt;Experimental method&lt;a class="headerlink" href="#experimental-method" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
 &lt;h3 id="basic-model-of-a-novel-stove-stand"&gt;Basic model of a Novel Stove Stand&lt;a class="headerlink" href="#basic-model-of-a-novel-stove-stand" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;This is a practical application of thermoelectric effect. Circuit of copper - copper oxide junction on the hot wire and an opposing copper oxide - copper junction on the cold wireis connected. Copper oxide, also acts like a thermistor with a very high negative temperature coefficient. Even the “cold” wire still gets hot enough that the resistance of the copper oxide drops relatively to a very low value - enabling current to flow.&lt;/p&gt;
@@ -323,11 +323,11 @@ The flame not only heats the utensil but also the surrounding air. This can easi
 &lt;/ul&gt;
 &lt;h3 id="improvised-model-of-novel-stove-stand"&gt;Improvised model of Novel stove stand&lt;a class="headerlink" href="#improvised-model-of-novel-stove-stand" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;This is practical application of thermoelectric effect. Four sets of &lt;span class="caps"&gt;TEG&lt;/span&gt; connected in a series to an aluminum metal box around the stove and the heat energy is converted into electrical energy.
-This is presented as “Model 2 : The second prototype” below.
+This is presented as “Model 2 : The second prototype” below.&lt;/p&gt;
 &lt;div style="border: 1px solid black; padding: 5px;width:60%;"&gt;
 &lt;img alt="Example of a TEG device" src="https://ashwinschronicles.github.io/novel-stove-images/teg.jpg"/&gt;
 &lt;p style="text-align: center;"&gt;Example of a &lt;span class="caps"&gt;TEG&lt;/span&gt; device&lt;/p&gt;
-&lt;/div&gt;&lt;/p&gt;
+&lt;/div&gt;
 &lt;h3 id="observation-and-results"&gt;Observation and Results&lt;a class="headerlink" href="#observation-and-results" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;The energy generated by the Cu-CuO based stove stand is not sufficient to charge a mobile phone. But it can be used to light up a &lt;span class="caps"&gt;LED&lt;/span&gt;.  but it is not efficient to capture all the wated energy, a more efficient device design is required to capture the extra flames and a better heat to electricity device must be employed (&lt;span class="caps"&gt;TEG&lt;/span&gt; or &lt;span class="caps"&gt;TEC&lt;/span&gt;). This is presented as “Model 2 : The second prototype” below.&lt;/p&gt;
 &lt;h3 id="conclusion"&gt;Conclusion:&lt;a class="headerlink" href="#conclusion" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
@@ -346,12 +346,12 @@ This prototype was desinged keeping in mind the flaws from the first design wher
 &lt;h3 id="experimentation"&gt;Experimentation&lt;a class="headerlink" href="#experimentation" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;This project work is based on the principle of Seebeck effect. The Seebeck effect is the conversion of temperature differences directly into electricity and is named after Thomas Johann Seebeck. The Seebeck effect is a classic example of an electromotive force and leads to measurable currents or voltages in the same way as any other emf.&lt;/p&gt;
 &lt;p&gt;A thermoelectric generator is used in this device. Thermoelectric generators are solid-state heat engines that operate according to the Seebeck Effect.&lt;/p&gt;
-&lt;p&gt;Schematically the model can be represented as in fig 2
-&lt;!-- &lt;img alt="Fig2: The schematic diagram of the model" src="https://ashwinschronicles.github.io/novel-stove-images/schmeaticdia.jpg" /&gt; --&gt;
+&lt;p&gt;Schematically the model can be represented as in fig 2&lt;/p&gt;
+&lt;!-- ![Fig2: The schematic diagram of the model]({attach}novel-stove-images/schmeaticdia.jpg) --&gt;
 &lt;div style="border: 1px solid black; padding: 5px;width:50%;"&gt;
 &lt;img alt="Fig2: The schematic diagram of the model" src="https://ashwinschronicles.github.io/novel-stove-images/schmeaticdia.jpg"/&gt;
 &lt;p style="text-align: center;"&gt;Fig2: The schematic diagram of the model&lt;/p&gt;
-&lt;/div&gt;&lt;/p&gt;
+&lt;/div&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;Here “A” represents the burner. The device is built with the burner as the center.&lt;/p&gt;
@@ -379,14 +379,14 @@ This prototype was desinged keeping in mind the flaws from the first design wher
 - 1) Voltage based and
 - 2) temperature based.&lt;/p&gt;
 &lt;h3 id="1-voltage-based-calculations"&gt;1) Voltage based calculations&lt;a class="headerlink" href="#1-voltage-based-calculations" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
-&lt;p&gt;The energy produced by each of the device is calculated based on observed data (for &lt;span class="caps"&gt;TEC&lt;/span&gt;) and collected data (for &lt;span class="caps"&gt;TEG&lt;/span&gt;). The table and graph below shows the results and calculation. Here energy saved is calculated using &lt;span class="math"&gt;\(E = V^2 t/ R.\)&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;The energy produced by each of the device is calculated based on observed data (for &lt;span class="caps"&gt;TEC&lt;/span&gt;) and collected data (for &lt;span class="caps"&gt;TEG&lt;/span&gt;). The table and graph below shows the results and calculation. Here energy saved is calculated using &lt;span class="math"&gt;\(E = V^2 t/ R.\)&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;Graph 1 shows a curve that initially increases sharply and then stabilises at around 5.5 V. First the energy saved by a home which uses this device for two hours a day is calculated then for a month and a year. Next Energy saved by a City with 10,000 families using this device in a year is taken into consideration.&lt;/p&gt;
-&lt;p&gt;The economical version (&lt;span class="caps"&gt;TEC&lt;/span&gt; type) of the device can generate 3.025 W but its fabrication cost comes out to be Rs 750. However the efficient version (&lt;span class="caps"&gt;TEG&lt;/span&gt; type) could generate 20 W of power with the cost of production coming at around Rs 4000 ($48).
-&lt;!-- &lt;img alt="Graph 1: A graph showing output voltage versus time" src="https://ashwinschronicles.github.io/novel-stove-images/graph1.jpg" /&gt; --&gt;
+&lt;p&gt;The economical version (&lt;span class="caps"&gt;TEC&lt;/span&gt; type) of the device can generate 3.025 W but its fabrication cost comes out to be Rs 750. However the efficient version (&lt;span class="caps"&gt;TEG&lt;/span&gt; type) could generate 20 W of power with the cost of production coming at around Rs 4000 ($48).&lt;/p&gt;
+&lt;!-- ![Graph 1: A graph showing output voltage versus time]({attach}novel-stove-images/graph1.jpg) --&gt;
 &lt;div style="border: 1px solid black; padding: 5px;width:70%;"&gt;
 &lt;img alt="Graph 1: A graph showing output voltage versus time" src="https://ashwinschronicles.github.io/novel-stove-images/graph1.jpg"/&gt;
 &lt;p style="text-align: center;"&gt;Graph 1: A graph showing output voltage versus time&lt;/p&gt;
-&lt;/div&gt;&lt;/p&gt;
+&lt;/div&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -414,16 +414,16 @@ This prototype was desinged keeping in mind the flaws from the first design wher
 &lt;tr&gt;
 &lt;td&gt;Energy          saved by them in a month&lt;/td&gt;
 &lt;td&gt;6.53x&lt;span class="math"&gt;\(10^5\)&lt;/span&gt;             J&lt;/td&gt;
-&lt;td&gt;4.579           x &lt;span class="math"&gt;\(10^6\)&lt;/span&gt;            J&lt;/td&gt;
+&lt;td&gt;4.579 x &lt;span class="math"&gt;\(10^6\)&lt;/span&gt;            J&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;Energy          saved by them in a year&lt;/td&gt;
-&lt;td&gt;8.74            x &lt;span class="math"&gt;\(10^6\)&lt;/span&gt;            J&lt;/td&gt;
+&lt;td&gt;8.74 x &lt;span class="math"&gt;\(10^6\)&lt;/span&gt;            J&lt;/td&gt;
 &lt;td&gt;5.571x          &lt;span class="math"&gt;\(10^7\)&lt;/span&gt;          J&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;Energy          saved by a city with 10,000 families using this device (in 1 year)&lt;/td&gt;
-&lt;td&gt;8.74            x &lt;span class="math"&gt;\(10^{10}\)&lt;/span&gt;             J&lt;/td&gt;
+&lt;td&gt;8.74 x &lt;span class="math"&gt;\(10^{10}\)&lt;/span&gt;             J&lt;/td&gt;
 &lt;td&gt;5.571x          &lt;span class="math"&gt;\(10^{11}\)&lt;/span&gt;           J&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
@@ -431,14 +431,14 @@ This prototype was desinged keeping in mind the flaws from the first design wher
 &lt;h3 id="2-temperature-based-calculations"&gt;&lt;strong&gt;2) Temperature based calculations&lt;/strong&gt;&lt;a class="headerlink" href="#2-temperature-based-calculations" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;These calculations are made to find out the feasibility of the device. I.e. to know the input output ratio and to know the effect of the device on heating.&lt;/p&gt;
 &lt;h4 id="to-find-conversion-ratio"&gt;To find conversion ratio&lt;a class="headerlink" href="#to-find-conversion-ratio" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h4&gt;
-&lt;p&gt;Consider the following Temperature vs Time plot.
-&lt;!-- &lt;img alt="Graph 2: A graph showing temperature versus time" src="https://ashwinschronicles.github.io/novel-stove-images/graph2.jpg" /&gt; --&gt;
+&lt;p&gt;Consider the following Temperature vs Time plot.&lt;/p&gt;
+&lt;!-- ![Graph 2: A graph showing temperature versus time]({attach}novel-stove-images/graph2.jpg   ) --&gt;
 &lt;div style="border: 1px solid black; padding: 5px;width:70%;"&gt;
 &lt;img alt="Graph 2: A graph showing temperature versus time" src="https://ashwinschronicles.github.io/novel-stove-images/graph2.jpg"/&gt;
 &lt;p style="text-align: center;"&gt;Graph 2: A graph showing temperature versus time&lt;/p&gt;
-&lt;/div&gt;&lt;/p&gt;
-&lt;p&gt;At equilibrium point (just before temperature becomes constant) the slope was found to be 0.3. Thus using Eq 1 and taking &lt;span class="math"&gt;\(m = 0.052 kg\)&lt;/span&gt; (calculated value); &lt;span class="math"&gt;\(S = 0.093 kcal/kg {}^{\circ}C\)&lt;/span&gt; (** ref 2) and &lt;span class="math"&gt;\(\frac{dT}{dt}\)&lt;/span&gt; as 0.3 (from graph). We get &lt;span class="math"&gt;\(\frac{dQ}{dt} = 0.052 *93*0.3 = 1.4508 cal/s = 6.07 watts\)&lt;/span&gt;. Further average power expended by the aluminium heat sink as P = mSΔT/Δt and taking m = 0.952 kg; ΔT= 29.5; Δt = 130 s (calculated values) and &lt;span class="math"&gt;\(S = 0.22 kcal/kg {}^{\circ}C\)&lt;/span&gt; (** ref 2).&lt;/p&gt;
-&lt;p&gt;So &lt;span class="math"&gt;\(P = (0.952*220*29.5)/130 = 47.52 cal/s = 198.98\)&lt;/span&gt; watt. &lt;span class="math"&gt;\(P_{(total)} = 198.98+6.07 = 205.05\)&lt;/span&gt; watt.&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;At equilibrium point (just before temperature becomes constant) the slope was found to be 0.3. Thus using Eq 1 and taking &lt;span class="math"&gt;\(m = 0.052 kg\)&lt;/span&gt; (calculated value); &lt;span class="math"&gt;\(S = 0.093 kcal/kg {}^{\circ}C\)&lt;/span&gt; (** ref 2) and &lt;span class="math"&gt;\(\frac{dT}{dt}\)&lt;/span&gt; as 0.3 (from graph). We get &lt;span class="math"&gt;\(\frac{dQ}{dt} = 0.052 *93*0.3 = 1.4508 cal/s = 6.07 watts\)&lt;/span&gt;. Further average power expended by the aluminium heat sink as P = mSΔT/Δt and taking m = 0.952 kg; ΔT= 29.5; Δt = 130 s (calculated values) and &lt;span class="math"&gt;\(S = 0.22 kcal/kg {}^{\circ}C\)&lt;/span&gt; (** ref 2).&lt;/p&gt;
+&lt;p&gt;So &lt;span class="math"&gt;\(P = (0.952*220*29.5)/130 = 47.52 cal/s = 198.98\)&lt;/span&gt; watt. &lt;span class="math"&gt;\(P_{(total)} = 198.98+6.07 = 205.05\)&lt;/span&gt; watt.&lt;/p&gt;
 &lt;p&gt;So out of 205.05 watt absorbed only 3.025 watt is converted to electrical energy implying 1.475% efficiency which is quite low but still significant and is in accordance with the specs of a &lt;span class="caps"&gt;TEC&lt;/span&gt;.&lt;/p&gt;
 &lt;h3 id="2-to-find-the-effect-on-cooking"&gt;2) To find the effect on cooking&lt;a class="headerlink" href="#2-to-find-the-effect-on-cooking" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;To study the effect of the device on the cooking process, we measured the time taken to boil 100mL of water in two scenarios one without the device and one with the device.&lt;/p&gt;
@@ -498,7 +498,7 @@ This prototype was desinged keeping in mind the flaws from the first design wher
     var mathjaxscript = document.createElement('script');
     mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
     mathjaxscript.type = 'text/javascript';
-    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_CHTML';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-AMS-MML_HTMLorMML';
 
     var configscript = document.createElement('script');
     configscript.type = 'text/x-mathjax-config';
@@ -545,4 +545,4 @@ This prototype was desinged keeping in mind the flaws from the first design wher
     (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
-&lt;/script&gt;</content><category term="Engineering"></category><category term="Seebeck effect"></category><category term="stove"></category><category term="cooking"></category><category term="energy"></category><category term="thermoelectric"></category></entry></feed>
+&lt;/script&gt;</content><category term="Engineering"/><category term="Seebeck effect"/><category term="stove"/><category term="cooking"/><category term="energy"/><category term="thermoelectric"/></entry></feed>

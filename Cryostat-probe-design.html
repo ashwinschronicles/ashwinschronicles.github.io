@@ -9,7 +9,7 @@
         <link rel="dns-prefetch" href="//fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
 
-        <meta name="google-site-verification" content="p61t4jkBXn4Wc7q3yIKCNSLcb7VC3Fay6dNkDefU3Ic" />        <meta name="author" content="Ashwin" />
+        <meta name="author" content="Ashwin" />
 
         <meta name="description" content="This post is about a design of a cryostat probe which is optimised for transport measurement.
 " />
@@ -45,20 +45,16 @@
         <link rel="apple-touch-icon" sizes="152x152" href="https://ashwinschronicles.github.io/theme/images/apple-touch-icon-152x152.png" type="image/png" />
         <link rel="apple-touch-icon" sizes="152x152" href="https://ashwinschronicles.github.io/theme/images/apple-touch-icon-180x180.png" type="image/png" />
         <link href="https://ashwinschronicles.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Ashwin&#39;s Chronicles🗞️ - Full Atom Feed" />
-
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-E1G9M6CRCM"></script>
 <script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-     m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-     })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-    ga('create', 'UA-161419840-1', 'auto');
-    ga('send', 'pageview');
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-E1G9M6CRCM');
 </script>
 
-<script>
-    window.heap=window.heap||[],heap.load=function(e,t){window.heap.appid=e,window.heap.config=t=t||{};var r=t.forceSSL||"https:"===document.location.protocol,a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=(r?"https:":"http:")+"//cdn.heapanalytics.com/js/heap-"+e+".js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n);for(var o=function(e){return function(){heap.push([e].concat(Array.prototype.slice.call(arguments,0)))}},p=["addEventProperties","addUserProperties","clearEventProperties","identify","resetIdentity","removeEventProperty","setEventProperties","track","unsetEventProperty"],c=0;c<p.length;c++)heap[p[c]]=o(p[c])};
-      heap.load("1155667143");
-</script>
+
 
     </head>
     <body>
@@ -147,8 +143,7 @@
     </div>
     <div class="span8 article-content">
             
-            <main>
-                
+            
 <h1 id="getting-to-know-the-cryostat">Getting to know the cryostat<a class="headerlink" href="#getting-to-know-the-cryostat" title="Permanent link">¶</a></h1>
 <p>A cryostat is a device used to maintain low cryogenic temperatures of samples or devices mounted within the cryostat. The temperature range can be as low as few milli-kelvin in Dilution refrigerators. Most common ones are either liquid Helium based which can cool to below 10 K or are liquid Nitrogen based, which can cool to about 80 K which is Nitrogen’s boiling point. The sample is mounted on something called as the probe, which houses electrical wires connecting the sample to the instruments used for various measurements. Cryostats can be closed cycle ones, or continuous flow systems. In closed cycle cryostat the cold cryogen (refrigerant) is pumped to the sample chamber and the warm cryogen is extracted and cooled and then recycled into the system. Continuous-flow cryostats are cooled by liquid cryogens from a storage dewar. As the cryogen boils within the cryostat, it is continuously replenished by a steady flow from the storage dewar.</p>
 <p>The cryostat at Superconductivity Lab, <span class="caps">NISER</span>, for which I had to develop the probe tip, is a customised closed system cryostat provided by ColdEdge. The key features of this cryostat is large sample space and fast cooling. In the large sample space (aka sample well), helium gas is purged (at &lt;0.5 psi pressure) which cools the sample by convection cooling methods. The helium gas is provided from an external gas cylinder. A 0.5 psi relief valve is present for safety in case the sample space becomes over pressurised.</p>
@@ -166,7 +161,7 @@
 <p>The lower end of this structure has a temperature sensor and a heater, so a probe tip had to be designed that can do measurements efficiently.</p>
 <p>The design finalized is as shown in Fig<a href="#fig:Design">2</a>. In this design, the brown square part is the copper sheet, the green sheet is an <span class="caps">RC</span> filter for all the input wires, and the sample is the purple one, the sample holder pcb can be connected and disconnected to the <span class="caps">RC</span> filter <span class="caps">PCB</span>, this is so that the sample holder can be removed and taken to the wire bonder etc. There are two versions of this support, the magnetic base (aka flat base)and the non magnetic base (aka square base). In both the case, the 10 pins of each side are connected in parallel. Hence in one go, one can measure at most 10 pads or 4 (2) samples.</p>
 <p><img alt='Design[[fig:Design]]{#fig:Design label="fig:Design"}' src="https://ashwinschronicles.github.io/Photos/Design.png"/></p>
-<p>Next we had to design the <span class="caps">PCB</span> which included an <span class="caps">RC</span> low pass filter and a sample holder, the design which was finalised is shown in Fig<a href="#fig:PCB-Design">3</a> it was designed using a free online service called www.easyeda.com . The <span class="caps">RC</span> filter parameters are <span class="math">\(f_c\)</span> = 1000Hz, R=150 ohm, C = 10 <span class="math">\(\mu\)</span> F.</p>
+<p>Next we had to design the <span class="caps">PCB</span> which included an <span class="caps">RC</span> low pass filter and a sample holder, the design which was finalised is shown in Fig<a href="#fig:PCB-Design">3</a> it was designed using a free online service called www.easyeda.com . The <span class="caps">RC</span> filter parameters are <span class="math">\(f_c\)</span> = 1000Hz, R=150 ohm, C = 10 <span class="math">\(\mu\)</span> F.</p>
 <p><img alt='PCB Design[[fig:PCB-Design]]{#fig:PCB-Design label="fig:PCB-Design"}' src="https://ashwinschronicles.github.io/Photos/PCB.png"/></p>
 <p>Another version of the square support is the flat support which supports  using magnetic coils for magnetic measurements is as shown in fig<a href="#fig:Magnetic-Base">3</a></p>
 <p><img alt='RC filter Circuit[[fig:RC-filter-Circuit]]{#fig:RC-filter-Circuit label="fig:RC-filter-Circuit"}' src="https://ashwinschronicles.github.io/Photos/MagneticBase.png"/></p>
@@ -239,11 +234,11 @@
 <h2 id="basic-rttt-plotter">Basic <span class="caps">RT</span>,Tt Plotter<a class="headerlink" href="#basic-rttt-plotter" title="Permanent link">¶</a></h2>
 <p>The interface for Basic <span class="caps">RT</span>,Tt Plotter is shown in Fig <a href="#fig:Basic-RT,Tt-Plotter" reference="fig:Basic-RT,Tt-Plotter" reference-type="ref">18</a>.</p>
 <p><img alt='[[fig:Basic-RT,Tt-Plotter]]{#fig:Basic-RT,Tt-Plotter label="fig:Basic-RT,Tt-Plotter"}Basic RT,Tt Plotter interface' src="https://ashwinschronicles.github.io/Photos/Screenshots/Screenshot(10).png"/></p>
-<p>The application takes in a tab separated text file containing data of index,V,I,R,<span class="math">\(T_(coldhead)\)</span>,<span class="math">\(T_(sample)\)</span> (obtained from temperature logger or <span class="caps">RT</span> Logger with Temperature controller )and then plots the <span class="caps">RT</span> , Tt graphs with T being the <span class="math">\(T_(sample)\)</span> .</p>
+<p>The application takes in a tab separated text file containing data of index,V,I,R,<span class="math">\(T_(coldhead)\)</span>,<span class="math">\(T_(sample)\)</span> (obtained from temperature logger or <span class="caps">RT</span> Logger with Temperature controller )and then plots the <span class="caps">RT</span> , Tt graphs with T being the <span class="math">\(T_(sample)\)</span> .</p>
 <h2 id="rt-logger-with-temperature-controller"><span class="caps">RT</span> Logger with Temperature controller<a class="headerlink" href="#rt-logger-with-temperature-controller" title="Permanent link">¶</a></h2>
 <p>The interface for <span class="caps">RT</span> Logger with Temperature controller is shown in Fig <a href="#fig:RT-Logger-with" reference="fig:RT-Logger-with" reference-type="ref">19</a>.</p>
 <p><img alt='[[fig:RT-Logger-with]]{#fig:RT-Logger-with label="fig:RT-Logger-with"}RT Logger with Temperature controller interface' src="https://ashwinschronicles.github.io/Photos/Screenshots/Screenshot(11).png"/></p>
-<p>This application is basically all the above utilities put in one. There are two tabs, one for controls, the other for viewing the plots. In the control tab, one can set the parameters for <span class="caps">SMU</span> as well as Temperature controller. When the application is executed with the correct parameters set, the data of index,V,I,R,<span class="math">\(T_(coldhead)\)</span>,<span class="math">\(T_(sample)\)</span> are stored in a tab separated text file at user specified location. The controls on the temperature controller side might look daunting at first, however a quick glance of <span class="caps">LS336</span> manual clears up all the parameters.</p>
+<p>This application is basically all the above utilities put in one. There are two tabs, one for controls, the other for viewing the plots. In the control tab, one can set the parameters for <span class="caps">SMU</span> as well as Temperature controller. When the application is executed with the correct parameters set, the data of index,V,I,R,<span class="math">\(T_(coldhead)\)</span>,<span class="math">\(T_(sample)\)</span> are stored in a tab separated text file at user specified location. The controls on the temperature controller side might look daunting at first, however a quick glance of <span class="caps">LS336</span> manual clears up all the parameters.</p>
 <h1 id="list-of-procedures">List of procedures<a class="headerlink" href="#list-of-procedures" title="Permanent link">¶</a></h1>
 <h2 id="cryostat-connections">Cryostat connections.<a class="headerlink" href="#cryostat-connections" title="Permanent link">¶</a></h2>
 <p>The connections of Vacuum jacket, Vacuum pump, Pirani gauge, load lock and the valves can be made as shown in Fig <a href="#fig:VacuumConnections" reference="fig:VacuumConnections" reference-type="ref">20</a>.</p>
@@ -366,7 +361,7 @@
 <p>Finally, one trail to measure the superconducting transition of a 55nm thin-film of Nb was done using the probe.</p>
 <p>The <span class="caps">RT</span> graph of the Nb sample as obtained is as in Fig <a href="#fig:Superconducting-Transition-of" reference="fig:Superconducting-Transition-of" reference-type="ref">31</a>. From this graph we can conclude that the Tc for the given sample is 7.68 K.</p>
 <p><img alt='Superconducting Transition of Nb(55nm) thin film[[fig:Superconducting-Transition-of]]{#fig:Superconducting-Transition-of label="fig:Superconducting-Transition-of"}' src="https://ashwinschronicles.github.io/Photos/pasted1.png"/></p>
-<p>An attempt was made to fabricate a Nb|<span class="math">\(Nb_2O_5\)</span>|Nb Josephson Junction and to measure the <span class="caps">IV</span> graph of the same. The junction was made by taking two strands of Nb wire (50 <span class="math">\(\mu\)</span> M thick ) cleaned with 0.5 molar HCl. One strand was oxidized at 100 degree Celsius for a fixed time, and then the two wires were made to contact each other under tension provided by a stick with sharp edge (Fig <a href="#fig:NbSISJunction" reference="fig:NbSISJunction" reference-type="ref">32</a>). However not much success was found.</p>
+<p>An attempt was made to fabricate a Nb|<span class="math">\(Nb_2O_5\)</span>|Nb Josephson Junction and to measure the <span class="caps">IV</span> graph of the same. The junction was made by taking two strands of Nb wire (50 <span class="math">\(\mu\)</span> M thick ) cleaned with 0.5 molar HCl. One strand was oxidized at 100 degree Celsius for a fixed time, and then the two wires were made to contact each other under tension provided by a stick with sharp edge (Fig <a href="#fig:NbSISJunction" reference="fig:NbSISJunction" reference-type="ref">32</a>). However not much success was found.</p>
 <p><img alt='Sample holder for Nb|\(Nb_2O_5\)|Nb Josephson Junction 1) Clean Nb wire 2) Nb wire oxidized in air 3) wooden stick for tension [[fig:NbSISJunction]]{#fig:NbSISJunction label="fig:NbSISJunction"}' src="https://ashwinschronicles.github.io/Photos/Mounted_sample_Junction.jpg"/></p>
 <h1 id="conclusions">Conclusions<a class="headerlink" href="#conclusions" title="Permanent link">¶</a></h1>
 <p>The probe was successfully fabricated according to the initial design. However many new modifications come into mind after going through the 2 month process. The first major draw back was the failure of the <span class="caps">RC</span> filter, which was caused by the <span class="caps">SMD</span> capacitor, one can modify the circuit for an inductor instead of capacitor, or one can replace the current <span class="caps">SMD</span> capacitor with a different class capacitor. The second draw back was the large thermal mass of the non magnetic base. To counter this, one can reduce the number of samples, thickness of Copper, Increase joint thermal conductivity (by applying thermal paste or indium sheet). Thirdly, the size of the probe is very close to the allowed limits of the system, hence a new design can have a smaller sample holder and adapter. Next, the problem of ease of changing adapter has to be addressed by modifying the entire design . One can also think of replacing the default shielding that the probe comes in with something like silica aerogel for better insulation. One of the major problem faced was that the Helium cylinder gets emptied very quickly, this can be because of helium escaping through the plastic tubing, one can fix this by replacing the tube with cooper piping. Also, <span class="caps">PID</span> values for both the heater have to be optimised, the current values of 10,20,10 give a moderately good result. Finally the LabVIEW program can be made more robust, the current program is as basic as it can get, more features such as automation of multiple trials using some form of sequence editor can be thought of.</p>
@@ -385,7 +380,7 @@
     var mathjaxscript = document.createElement('script');
     mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
     mathjaxscript.type = 'text/javascript';
-    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_CHTML';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-AMS-MML_HTMLorMML';
 
     var configscript = document.createElement('script');
     configscript.type = 'text/x-mathjax-config';
@@ -433,7 +428,6 @@
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
 </script>
-            </main>
 
 
              
@@ -710,7 +704,7 @@
 <script>
 var sc_project=12223345;
 var sc_invisible=1;
-var sc_security="c77ea628";
+var sc_security="2ee4ddde";
 var scJsHost = (("https:" == document.location.protocol) ?
 "https://secure." : "http://www.");
 document.write("<sc"+"ript type='text/javascript' src='" +
@@ -720,7 +714,7 @@ scJsHost+
 <noscript><div class="statcounter"><a title="web analytics"
 href="http://statcounter.com/" target="_blank" rel="nofollow noopener noreferrer"><img
 class="statcounter"
-src="//c.statcounter.com/12223345/0/c77ea628/1/"
+src="//c.statcounter.com/12223345/0/2ee4ddde/1/"
 alt="web analytics"></a></div></noscript>
 <!-- End of StatCounter Code for Default Guide -->
     </body>
