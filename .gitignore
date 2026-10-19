@@ -1,15 +1,29 @@
-Copy
 # Environment variables and secrets
 .env
 .env.*
 !.env.example
 
-#Custom
-output
+# Pelican output & local configs
+output/
 pelicanconf_local.py
 
-#Python
+# Python bytecode & cache
+__pycache__/
 *.py[cod]
+*$py.class
+.venv/
+
+# Backup & temporary files
+*.backup
+*.bkp
+*.swp
+*~
+.DS_Store
+
+# IDE & editors
+.vscode/
+.idea/
+
 
 # C extensions
 *.so
