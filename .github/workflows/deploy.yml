@@ -32,9 +32,11 @@ jobs:
 
       - name: Build site with Pelican
         env:
-          CONTEXT: production
-          MODERN_GOOGLE_ANALYTICS: ${{ secrets.MODERN_GOOGLE_ANALYTICS }}
-          CLAIM_GOOGLE: ${{ secrets.CLAIM_GOOGLE }}
+          CONTEXT: ${{ vars.CONTEXT || secrets.CONTEXT || 'production' }}
+          GOOGLE_ANALYTICS_PROD: ${{ vars.GOOGLE_ANALYTICS_PROD || secrets.GOOGLE_ANALYTICS_PROD }}
+          MODERN_GOOGLE_ANALYTICS_PROD: ${{ vars.MODERN_GOOGLE_ANALYTICS_PROD || secrets.MODERN_GOOGLE_ANALYTICS_PROD }}
+          STAT_COUNTER_PROJECT_PROD: ${{ vars.STAT_COUNTER_PROJECT_PROD || secrets.STAT_COUNTER_PROJECT_PROD }}
+          STAT_COUNTER_SECURITY_PROD: ${{ vars.STAT_COUNTER_SECURITY_PROD || secrets.STAT_COUNTER_SECURITY_PROD }}
         run: |
           uv run pelican content -o output -s publishconf.py
 
