@@ -11,10 +11,6 @@ Welcome!
 
 I am Ashwin Kumar Karnad, a Research Software Engineer (RSE) at the Jülich Supercomputing Centre (JSC), Forschungszentrum Jülich, Germany. My work primarily focuses on integrating quantum computers with classical high-performance computing (HPC) systems to build hybrid quantum computing infrastructure and benchmarking applications on it.
 
-Previously, I worked as an RSE at the Max Planck Institute for the Structure and Dynamics of Matter (MPSD) in Hamburg.
-
-I graduated from BITS Pilani, K.K. Birla Goa Campus (Batch of 2017–2022) with a dual degree: B.E. in Electronics & Instrumentation and Int.M.Sc. in Physics.
-
 I started this site as an open notebook to document projects, experiments, and technical notes—mostly spanning physics, instrumentation, computing, and software. Having a public record helps me organize what I have learned and remember how I tackled specific problems, while hopefully offering something helpful or interesting to others working on similar ideas.
 
 Feel free to explore the articles and notes. If you would like to discuss any of the projects or just say hi, don't hesitate to reach out!
