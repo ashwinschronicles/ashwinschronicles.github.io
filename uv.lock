@@ -16,36 +16,19 @@ wheels = [
 ]
 
 [[package]]
-name = "argcomplete"
-version = "3.7.2"
-source = { registry = "https://pypi.org/simple" }
-sdist = { url = "https://files.pythonhosted.org/packages/87/6f/5a73f04007ca950701765949209f068da628bd11f9c2da287278ce91e0ee/argcomplete-3.7.2.tar.gz", hash = "sha256:aad8b69a0b9969edb62db0d1752354c0d50717b10e0cbb00e2a958381b9fc6b9", size = 74473, upload-time = "2026-08-06T04:53:21.662Z" }
-wheels = [
-    { url = "https://files.pythonhosted.org/packages/46/bd/551ee6af426af84ca33e02622be722925c196608e9127d731ef17c47f06e/argcomplete-3.7.2-py3-none-any.whl", hash = "sha256:6029205678bdd9c1c728a155f5f9ecf5812393f969eef58807641a2bc2aa5b19", size = 43294, upload-time = "2026-08-06T04:53:20.246Z" },
-]
-
-[[package]]
 name = "ashwinschronicles-github-io"
 version = "0.1.0"
 source = { virtual = "." }
 dependencies = [
     { name = "beautifulsoup4" },
-    { name = "blinker" },
-    { name = "bs4" },
     { name = "cssmin" },
-    { name = "decorator" },
     { name = "docutils" },
-    { name = "feedgenerator" },
     { name = "ghp-import" },
     { name = "gitpython" },
-    { name = "invoke" },
     { name = "jinja2" },
     { name = "markdown" },
-    { name = "markdown-it-py" },
-    { name = "markupsafe" },
-    { name = "mdurl" },
     { name = "minchin-pelican-plugins-post-stats" },
-    { name = "pelican" },
+    { name = "pelican", extra = ["markdown"] },
     { name = "pelican-liquid-tags" },
     { name = "pelican-more-categories" },
     { name = "pelican-neighbors" },
@@ -56,44 +39,29 @@ dependencies = [
     { name = "pelican-share-post" },
     { name = "pelican-sitemap" },
     { name = "pelican-webassets" },
-    { name = "pexpect" },
-    { name = "pipx" },
-    { name = "ptyprocess" },
     { name = "pygments" },
-    { name = "pysimplegui" },
-    { name = "python-dateutil" },
-    { name = "pytz" },
-    { name = "rich" },
-    { name = "rtoml" },
-    { name = "six" },
-    { name = "smartypants" },
-    { name = "soupsieve" },
-    { name = "tqdm" },
     { name = "typogrify" },
     { name = "unidecode" },
-    { name = "userpath" },
     { name = "webassets" },
+]
+
+[package.optional-dependencies]
+dev = [
+    { name = "invoke" },
 ]
 
 [package.metadata]
 requires-dist = [
-    { name = "beautifulsoup4", specifier = ">=4.15.0" },
-    { name = "blinker", specifier = ">=1.9.0" },
-    { name = "bs4", specifier = ">=0.0.2" },
+    { name = "beautifulsoup4", specifier = ">=4.12.0" },
     { name = "cssmin", specifier = ">=0.2.0" },
-    { name = "decorator", specifier = ">=5.3.1" },
-    { name = "docutils", specifier = ">=0.23" },
-    { name = "feedgenerator", specifier = ">=2.2.1" },
+    { name = "docutils", specifier = ">=0.20" },
     { name = "ghp-import", specifier = ">=2.1.0" },
-    { name = "gitpython", specifier = ">=3.2.1" },
-    { name = "invoke", specifier = ">=3.0.3" },
-    { name = "jinja2", specifier = ">=3.1.6" },
-    { name = "markdown", specifier = ">=3.11" },
-    { name = "markdown-it-py", specifier = ">=4.2.0" },
-    { name = "markupsafe", specifier = ">=3.0.4" },
-    { name = "mdurl", specifier = ">=0.1.2" },
+    { name = "gitpython", specifier = ">=3.1.0" },
+    { name = "invoke", marker = "extra == 'dev'", specifier = ">=2.2.0" },
+    { name = "jinja2", specifier = ">=3.1.0" },
+    { name = "markdown", specifier = ">=3.5" },
     { name = "minchin-pelican-plugins-post-stats", specifier = ">=1.3.1" },
-    { name = "pelican", specifier = ">=4.12.0" },
+    { name = "pelican", extras = ["markdown"], specifier = ">=4.12.0" },
     { name = "pelican-liquid-tags", specifier = ">=1.0.4" },
     { name = "pelican-more-categories", specifier = ">=0.1.0" },
     { name = "pelican-neighbors", specifier = ">=1.2.0" },
@@ -104,24 +72,12 @@ requires-dist = [
     { name = "pelican-share-post", specifier = ">=1.2.1" },
     { name = "pelican-sitemap", specifier = ">=1.2.2" },
     { name = "pelican-webassets", specifier = ">=2.1.0" },
-    { name = "pexpect", specifier = ">=4.9.0" },
-    { name = "pipx", specifier = ">=1.17.12" },
-    { name = "ptyprocess", specifier = ">=0.7.0" },
-    { name = "pygments", specifier = ">=2.19.2" },
-    { name = "pysimplegui", specifier = ">=6.3.0.1" },
-    { name = "python-dateutil", specifier = ">=2.9.0.post0" },
-    { name = "pytz", specifier = ">=2026.5" },
-    { name = "rich", specifier = ">=15.0.0" },
-    { name = "rtoml", specifier = ">=0.13.0" },
-    { name = "six", specifier = ">=1.17.0" },
-    { name = "smartypants", specifier = ">=2.0.2" },
-    { name = "soupsieve", specifier = ">=2.10" },
-    { name = "tqdm", specifier = ">=4.70.1" },
-    { name = "typogrify", specifier = ">=2.1.0" },
-    { name = "unidecode", specifier = ">=1.4.0" },
-    { name = "userpath", specifier = ">=1.9.2" },
-    { name = "webassets", specifier = ">=3.0.0" },
+    { name = "pygments", specifier = ">=2.17.0" },
+    { name = "typogrify", specifier = ">=2.0.7" },
+    { name = "unidecode", specifier = ">=1.3.0" },
+    { name = "webassets", specifier = ">=2.0" },
 ]
+provides-extras = ["dev"]
 
 [[package]]
 name = "asttokens"
@@ -178,18 +134,6 @@ source = { registry = "https://pypi.org/simple" }
 sdist = { url = "https://files.pythonhosted.org/packages/21/28/9b3f50ce0e048515135495f198351908d99540d69bfdc8c1d15b73dc55ce/blinker-1.9.0.tar.gz", hash = "sha256:b4ce2265a7abece45e7cc896e98dbebe6cead56bcf805a3d23136d145f5445bf", size = 22460, upload-time = "2024-11-08T17:25:47.436Z" }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/10/cb/f2ad4230dc2eb1a74edf38f1a38b9b52277f75bef262d8908e60d957e13c/blinker-1.9.0-py3-none-any.whl", hash = "sha256:ba0efaa9080b619ff2f3459d1d500c57bddea4a6b424b60a91141db6fd2f08bc", size = 8458, upload-time = "2024-11-08T17:25:46.184Z" },
-]
-
-[[package]]
-name = "bs4"
-version = "0.0.2"
-source = { registry = "https://pypi.org/simple" }
-dependencies = [
-    { name = "beautifulsoup4" },
-]
-sdist = { url = "https://files.pythonhosted.org/packages/c9/aa/4acaf814ff901145da37332e05bb510452ebed97bc9602695059dd46ef39/bs4-0.0.2.tar.gz", hash = "sha256:a48685c58f50fe127722417bae83fe6badf500d54b55f7e39ffe43b798653925", size = 698, upload-time = "2024-01-17T18:15:47.371Z" }
-wheels = [
-    { url = "https://files.pythonhosted.org/packages/51/bb/bf7aab772a159614954d84aa832c129624ba6c32faa559dfb200a534e50b/bs4-0.0.2-py2.py3-none-any.whl", hash = "sha256:abf8742c0805ef7f662dce4b51cca104cffe52b835238afc169142ab9b3fbccc", size = 1189, upload-time = "2024-01-17T18:15:48.613Z" },
 ]
 
 [[package]]
@@ -291,15 +235,6 @@ wheels = [
 ]
 
 [[package]]
-name = "click"
-version = "8.5.0"
-source = { registry = "https://pypi.org/simple" }
-sdist = { url = "https://files.pythonhosted.org/packages/c7/0e/7fa0ef50764b67090eca4114772a2abf8b6148198475e54c660b97caeee6/click-8.5.0.tar.gz", hash = "sha256:ba0d2089de75ea0310e2dde03160e6ca10009947fb95a182f9b54021bb272e34", size = 382235, upload-time = "2026-08-26T13:33:14.56Z" }
-wheels = [
-    { url = "https://files.pythonhosted.org/packages/58/50/6c0d534c5f134586a8e1ba4e330569e32f057e33372ae556463212fb4cd3/click-8.5.0-py3-none-any.whl", hash = "sha256:255bc9599cf7748b4b1a446ccc735421bd08a2ae529a8b88597d3de5664ee360", size = 125251, upload-time = "2026-08-26T13:33:12.928Z" },
-]
-
-[[package]]
 name = "colorama"
 version = "0.4.6"
 source = { registry = "https://pypi.org/simple" }
@@ -313,15 +248,6 @@ name = "cssmin"
 version = "0.2.0"
 source = { registry = "https://pypi.org/simple" }
 sdist = { url = "https://files.pythonhosted.org/packages/8e/d8/dc9da69bb186303f7ab41adef0a5b6d34da2fdba006827620877760241c3/cssmin-0.2.0.tar.gz", hash = "sha256:e012f0cc8401efcf2620332339011564738ae32be8c84b2e43ce8beaec1067b6", size = 3228, upload-time = "2013-10-14T15:40:29.854Z" }
-
-[[package]]
-name = "decorator"
-version = "5.3.1"
-source = { registry = "https://pypi.org/simple" }
-sdist = { url = "https://files.pythonhosted.org/packages/60/8b/32f9823da46cde7df2087faa08cd98d01b908f8dcab982cdba9c84e85355/decorator-5.3.1.tar.gz", hash = "sha256:4cbcdd55a6efadb9dbea26b858f4fb3264567b52d69ca0d25b721b553f60ea82", size = 58084, upload-time = "2026-05-18T06:03:28.057Z" }
-wheels = [
-    { url = "https://files.pythonhosted.org/packages/05/7f/798705f5296a58ca505d600456748d1be48078eac8a7050d8a98bc9edb89/decorator-5.3.1-py3-none-any.whl", hash = "sha256:f47fe6fdbd2edd623ecfe36875d37aba411624e2670dd395dddae1358689bb3c", size = 10365, upload-time = "2026-05-18T06:03:26.517Z" },
-]
 
 [[package]]
 name = "defusedxml"
@@ -369,15 +295,6 @@ dependencies = [
 sdist = { url = "https://files.pythonhosted.org/packages/b0/d2/f05e9f4628cb0df988de66f8a97dd52877490e6ebf8e7b41cd341bf2ad6b/feedgenerator-2.2.1.tar.gz", hash = "sha256:0eaa955f1f0bcb5b87ac195af740f06ff9fff4a40ed30b8a7c6bbebb264d4dd1", size = 20872, upload-time = "2025-08-17T19:36:53.48Z" }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/b9/08/6f74bef4663fb137fa10b493facce85bee8c055b67fbd9a7695d88e3d1a3/feedgenerator-2.2.1-py3-none-any.whl", hash = "sha256:0d8bb321e49dd43c916b659e137c1eab1b1c053dd4535a03ef8d47e5f3358ba5", size = 18495, upload-time = "2025-08-17T19:36:52.036Z" },
-]
-
-[[package]]
-name = "filelock"
-version = "4.1.0"
-source = { registry = "https://pypi.org/simple" }
-sdist = { url = "https://files.pythonhosted.org/packages/4c/58/6fd434bec86eff7c38a3168454cb132b762b2bea9b3ac094101a2f7bc32a/filelock-4.1.0.tar.gz", hash = "sha256:ad7f724afef953e731b1cc39bcd3a09166d72ed7fcdf29e6e88b1c3235c6715d", size = 561277, upload-time = "2026-10-09T19:57:20.34Z" }
-wheels = [
-    { url = "https://files.pythonhosted.org/packages/ee/86/032133892a5de43b5a98200b01aadcad68cc255e274a762f08b8a76d2912/filelock-4.1.0-py3-none-any.whl", hash = "sha256:2ce9818e3e2d8f284c1a964414447ef148d42a5fd5e2a477a7118e574b293ec1", size = 133003, upload-time = "2026-10-09T19:57:18.716Z" },
 ]
 
 [[package]]
@@ -877,6 +794,11 @@ wheels = [
     { url = "https://files.pythonhosted.org/packages/6e/55/4adcce41a45f8f77e69d7e84ea447819dae1a78b4b9762a104599e5ec811/pelican-4.12.0-py3-none-any.whl", hash = "sha256:3697230f56cfcca9e98d3ac9ac26f655bb20cad807f7eacf156601e241f69ad8", size = 1358275, upload-time = "2026-04-20T15:30:15.383Z" },
 ]
 
+[package.optional-dependencies]
+markdown = [
+    { name = "markdown" },
+]
+
 [[package]]
 name = "pelican-liquid-tags"
 version = "1.0.4"
@@ -1014,23 +936,6 @@ wheels = [
 ]
 
 [[package]]
-name = "pipx"
-version = "1.17.12"
-source = { registry = "https://pypi.org/simple" }
-dependencies = [
-    { name = "argcomplete" },
-    { name = "colorama", marker = "sys_platform == 'win32'" },
-    { name = "filelock" },
-    { name = "packaging" },
-    { name = "platformdirs" },
-    { name = "userpath" },
-]
-sdist = { url = "https://files.pythonhosted.org/packages/73/c4/45fdc36e7c14b515389dc4a5e9a96ef6e3aa39ef94bd7e2078302e59af12/pipx-1.17.12.tar.gz", hash = "sha256:91f9381e7b218ff84b0cdeb79b0b6b4a014e374170a92b5550baba84e212d34a", size = 356778, upload-time = "2026-10-07T20:07:23.011Z" }
-wheels = [
-    { url = "https://files.pythonhosted.org/packages/bd/4c/8eea62b7078583abd9ddc11f3f7cf41f528b405e4aa314a95a57d4d5c118/pipx-1.17.12-py3-none-any.whl", hash = "sha256:f78052862c4b764155a33b8050e5dc181aca766167cbe833126131e4debae23d", size = 156296, upload-time = "2026-10-07T20:07:21.526Z" },
-]
-
-[[package]]
 name = "platformdirs"
 version = "4.12.4"
 source = { registry = "https://pypi.org/simple" }
@@ -1116,15 +1021,6 @@ wheels = [
 ]
 
 [[package]]
-name = "pysimplegui"
-version = "6.3.0.1"
-source = { registry = "https://pypi.org/simple" }
-sdist = { url = "https://files.pythonhosted.org/packages/99/58/bb2d530bfc597e1a86378b508a96bc57ff588af7b37ebd68fb4eec62a871/pysimplegui-6.3.0.1.tar.gz", hash = "sha256:d711ac856a8c03382ecc13e58468c8d6b02c580881fc4115c770691b0db680ea", size = 498434, upload-time = "2026-08-16T19:09:14.019Z" }
-wheels = [
-    { url = "https://files.pythonhosted.org/packages/45/69/dcff3a6f9c8b411b967a56cf34eafac2d50a14d5ea4efa15e2aa774c28cf/pysimplegui-6.3.0.1-py3-none-any.whl", hash = "sha256:937da4ae6dd6a93b8239aefc76f717e1f4861d4fb64cd4e9b3a5df88865520a5", size = 494935, upload-time = "2026-08-16T19:09:12.644Z" },
-]
-
-[[package]]
 name = "python-dateutil"
 version = "2.9.0.post0"
 source = { registry = "https://pypi.org/simple" }
@@ -1134,15 +1030,6 @@ dependencies = [
 sdist = { url = "https://files.pythonhosted.org/packages/66/c0/0c8b6ad9f17a802ee498c46e004a0eb49bc148f2fd230864601a86dcf6db/python-dateutil-2.9.0.post0.tar.gz", hash = "sha256:37dd54208da7e1cd875388217d5e00ebd4179249f90fb72437e91a35459a0ad3", size = 342432, upload-time = "2024-03-01T18:36:20.211Z" }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/ec/57/56b9bcc3c9c6a792fcbaf139543cee77261f3651ca9da0c93f5c1221264b/python_dateutil-2.9.0.post0-py2.py3-none-any.whl", hash = "sha256:a8b2bc7bffae282281c8140a97d3aa9c14da0b136dfe83f850eea9a5f7470427", size = 229892, upload-time = "2024-03-01T18:36:18.57Z" },
-]
-
-[[package]]
-name = "pytz"
-version = "2026.5"
-source = { registry = "https://pypi.org/simple" }
-sdist = { url = "https://files.pythonhosted.org/packages/14/21/d83d6ef28c4c912c4bb4d1dcf591f7b8c6bde87b9c66f9f454677314e16d/pytz-2026.5.tar.gz", hash = "sha256:fa23724b9c486543b9ff54a327ee7569ac83ade54bb9afd0fc18676620401c86", size = 318572, upload-time = "2026-10-04T02:37:58.719Z" }
-wheels = [
-    { url = "https://files.pythonhosted.org/packages/4f/ef/c66110d46fb800dda0bf33164182dfadabe26a90e4476844d502a23dca8e/pytz-2026.5-py2.py3-none-any.whl", hash = "sha256:e658af3757f9e26a9d25dd2aff38335acd92bc9104f890a894b2c1ba28311b03", size = 506342, upload-time = "2026-10-04T02:37:56.814Z" },
 ]
 
 [[package]]
@@ -1566,18 +1453,6 @@ wheels = [
 ]
 
 [[package]]
-name = "tqdm"
-version = "4.70.1"
-source = { registry = "https://pypi.org/simple" }
-dependencies = [
-    { name = "colorama", marker = "sys_platform == 'win32'" },
-]
-sdist = { url = "https://files.pythonhosted.org/packages/0d/ea/b2a5bd54b28a324dae8211928b2d730b6547500342c7e6c6dea08bd0a485/tqdm-4.70.1.tar.gz", hash = "sha256:cefd0eca11b2a37a3aee776544d4f4ae913f02688135b5556b8788dfa474afc4", size = 171846, upload-time = "2026-09-11T07:25:16.601Z" }
-wheels = [
-    { url = "https://files.pythonhosted.org/packages/a7/03/921a3d3c75785aca9ebfbfcabfbc3a1be12e2ab5265deb026d55a5a3f83e/tqdm-4.70.1-py3-none-any.whl", hash = "sha256:c293e525e6fef9c20e8728fd4612df02a0aa31bb5fe91ecd93e123b1b7bffa73", size = 80199, upload-time = "2026-09-11T07:25:14.599Z" },
-]
-
-[[package]]
 name = "traitlets"
 version = "5.16.1"
 source = { registry = "https://pypi.org/simple" }
@@ -1623,18 +1498,6 @@ source = { registry = "https://pypi.org/simple" }
 sdist = { url = "https://files.pythonhosted.org/packages/94/7d/a8a765761bbc0c836e397a2e48d498305a865b70a8600fd7a942e85dcf63/Unidecode-1.4.0.tar.gz", hash = "sha256:ce35985008338b676573023acc382d62c264f307c8f7963733405add37ea2b23", size = 200149, upload-time = "2025-04-24T08:45:03.798Z" }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/8f/b7/559f59d57d18b44c6d1250d2eeaa676e028b9c527431f5d0736478a73ba1/Unidecode-1.4.0-py3-none-any.whl", hash = "sha256:c3c7606c27503ad8d501270406e345ddb480a7b5f38827eafe4fa82a137f0021", size = 235837, upload-time = "2025-04-24T08:45:01.609Z" },
-]
-
-[[package]]
-name = "userpath"
-version = "1.9.2"
-source = { registry = "https://pypi.org/simple" }
-dependencies = [
-    { name = "click" },
-]
-sdist = { url = "https://files.pythonhosted.org/packages/d5/b7/30753098208505d7ff9be5b3a32112fb8a4cb3ddfccbbb7ba9973f2e29ff/userpath-1.9.2.tar.gz", hash = "sha256:6c52288dab069257cc831846d15d48133522455d4677ee69a9781f11dbefd815", size = 11140, upload-time = "2024-02-29T21:39:08.742Z" }
-wheels = [
-    { url = "https://files.pythonhosted.org/packages/43/99/3ec6335ded5b88c2f7ed25c56ffd952546f7ed007ffb1e1539dc3b57015a/userpath-1.9.2-py3-none-any.whl", hash = "sha256:2cbf01a23d655a1ff8fc166dfb78da1b641d1ceabf0fe5f970767d380b14e89d", size = 9065, upload-time = "2024-02-29T21:39:07.551Z" },
 ]
 
 [[package]]
