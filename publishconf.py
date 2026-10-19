@@ -42,7 +42,19 @@ if CONTEXT == "production":
         or os.environ.get("STAT_COUNTER_SECURITY")
         or os.environ.get("STATCOUNTER_SECURITY")
     )
-    GOOGLE_ANALYTICS = os.environ.get("GOOGLE_ANALYTICS_PROD") or os.environ.get("GOOGLE_ANALYTICS")
+    _ga_prod = (
+        os.environ.get("MODERN_GOOGLE_ANALYTICS_PROD")
+        or os.environ.get("MODERN_GOOGLE_ANALYTICS")
+        or os.environ.get("GOOGLE_ANALYTICS_PROD")
+        or os.environ.get("GOOGLE_ANALYTICS")
+    )
+    if _ga_prod:
+        if _ga_prod.startswith("G-"):
+            MODERN_GOOGLE_ANALYTICS = _ga_prod
+            GOOGLE_ANALYTICS = None
+        else:
+            GOOGLE_ANALYTICS = _ga_prod
+            MODERN_GOOGLE_ANALYTICS = None
     DISQUS_SITENAME = os.environ.get("DISQUS_SITENAME")
     HEAP_ANALYTICS = os.environ.get("HEAP_ANALYTICS_PROD") or os.environ.get("HEAP_ANALYTICS")
 #    COMMENTBOX_PROJECT = os.environ.get("COMMENTBOX_PROJECT")
@@ -71,11 +83,21 @@ elif CONTEXT in ("test", "development", "branch-deploy") or (CONTEXT == "branch-
         or os.environ.get("STAT_COUNTER_SECURITY")
         or os.environ.get("STATCOUNTER_SECURITY")
     )
-    GOOGLE_ANALYTICS = (
-        os.environ.get("GOOGLE_ANALYTICS_TEST")
+    _ga_test = (
+        os.environ.get("MODERN_GOOGLE_ANALYTICS_TEST")
+        or os.environ.get("MODERN_GOOGLE_ANALYTICS_NEXT")
+        or os.environ.get("GOOGLE_ANALYTICS_TEST")
         or os.environ.get("GOOGLE_ANALYTICS_NEXT")
+        or os.environ.get("MODERN_GOOGLE_ANALYTICS")
         or os.environ.get("GOOGLE_ANALYTICS")
     )
+    if _ga_test:
+        if _ga_test.startswith("G-"):
+            MODERN_GOOGLE_ANALYTICS = _ga_test
+            GOOGLE_ANALYTICS = None
+        else:
+            GOOGLE_ANALYTICS = _ga_test
+            MODERN_GOOGLE_ANALYTICS = None
     COMMENTBOX_PROJECT = os.environ.get("COMMENTBOX_PROJECT")
     HEAP_ANALYTICS = os.environ.get("HEAP_ANALYTICS_NEXT") or os.environ.get("HEAP_ANALYTICS")
 
@@ -83,7 +105,14 @@ else:
     SITEURL = ""
     STAT_COUNTER_PROJECT = os.environ.get("STAT_COUNTER_PROJECT") or os.environ.get("STATCOUNTER_PROJECT")
     STAT_COUNTER_SECURITY = os.environ.get("STAT_COUNTER_SECURITY") or os.environ.get("STATCOUNTER_SECURITY")
-    GOOGLE_ANALYTICS = os.environ.get("GOOGLE_ANALYTICS")
+    _ga_fallback = os.environ.get("MODERN_GOOGLE_ANALYTICS") or os.environ.get("GOOGLE_ANALYTICS")
+    if _ga_fallback:
+        if _ga_fallback.startswith("G-"):
+            MODERN_GOOGLE_ANALYTICS = _ga_fallback
+            GOOGLE_ANALYTICS = None
+        else:
+            GOOGLE_ANALYTICS = _ga_fallback
+            MODERN_GOOGLE_ANALYTICS = None
 
 # Set aliases for themes using alternative Pelican naming conventions
 STATCOUNTER_PROJECT = STAT_COUNTER_PROJECT
