@@ -19,7 +19,7 @@ Before joining JSC, I worked as an RSE at the **Max Planck Institute for the Str
 My academic foundation comes from **BITS Pilani, K.K. Birla Goa Campus** (Batch of 2017–2022), where I completed a dual degree:
 
 - **B.E. in Electronics & Instrumentation**
-- **M.Sc. in Physics**
+- **Integrated M.Sc. in Physics**
 
 This blend of physics theory and practical hardware/software engineering has shaped how I approach problems: I enjoy understanding the low-level physics of a system just as much as writing clean, scalable software to control or simulate it.
 
@@ -51,7 +51,7 @@ Research and engineering can often feel fragmented. Writing down how I designed 
 - [Single-page Academic CV](https://iamashwin99.github.io/1pageCV/Academic_CV.pdf)
 - [GitHub (`@iamashwin99`)](https://github.com/iamashwin99/)
 - [LinkedIn](https://www.linkedin.com/in/ashwin-k-4854b8121/)
-- Email: `a.karnad@fz-juelich.de` / `ashwinkumar.k.rao@gmail.com`
+- Email: `a.karnad@fz-juelich.de` / `mail@karnadash.win`
 
 Feel free to browse around, inspect the write-ups, or reach out if you would like to discuss quantum computing, collaborate on a project, or chat about music and dance!
 
