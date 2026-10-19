@@ -15,10 +15,14 @@ jobs:
     container:
       image: ghcr.io/astral-sh/uv:debian-slim
     steps:
-      - name: Install git, ca-certificates, and tzdata
+      - name: Install system dependencies and Stork search indexer
         run: |
-          apt-get update && apt-get install -y --no-install-recommends git ca-certificates tzdata
+          apt-get update && apt-get install -y --no-install-recommends git ca-certificates tzdata curl
           git config --global --add safe.directory "$GITHUB_WORKSPACE"
+          curl -sSL https://github.com/jameslittle230/stork/releases/download/v1.6.0/stork-ubuntu-22-04 -o /usr/local/bin/stork
+          chmod +x /usr/local/bin/stork
+          stork --version
+
 
 
       - name: Checkout source and submodules
