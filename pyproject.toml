@@ -1,0 +1,48 @@
+[project]
+name = "ashwinschronicles-github-io"
+version = "0.1.0"
+description = "Ashwin's personal blog"
+readme = "README.md"
+authors = [
+    { name = "Ashwin Karnad", email = "a.karnad@fz-juelich.de" }
+]
+requires-python = ">=3.11"
+dependencies = [
+    "beautifulsoup4>=4.15.0",
+    "blinker>=1.9.0",
+    "bs4>=0.0.2",
+    "cssmin>=0.2.0",
+    "decorator>=5.3.1",
+    "docutils>=0.23",
+    "feedgenerator>=2.2.1",
+    "ghp-import>=2.1.0",
+    "invoke>=3.0.3",
+    "jinja2>=3.1.6",
+    "markdown>=3.11",
+    "markdown-it-py>=4.2.0",
+    "markupsafe>=3.0.4",
+    "mdurl>=0.1.2",
+    "pelican>=4.12.0",
+    "pelican-search>=1.1.1",
+    "pexpect>=4.9.0",
+    "pipx>=1.17.12",
+    "ptyprocess>=0.7.0",
+    "pygments>=2.19.2",
+    "pysimplegui>=6.3.0.1",
+    "python-dateutil>=2.9.0.post0",
+    "pytz>=2026.5",
+    "rich>=15.0.0",
+    "rtoml>=0.13.0",
+    "six>=1.17.0",
+    "smartypants>=2.0.2",
+    "soupsieve>=2.10",
+    "tqdm>=4.70.1",
+    "typogrify>=2.1.0",
+    "unidecode>=1.4.0",
+    "userpath>=1.9.2",
+    "webassets>=3.0.0",
+]
+
+[tool.uv]
+package = false
+

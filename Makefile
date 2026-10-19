@@ -80,7 +80,7 @@ else
 endif
 
 publish:
-	. ../publish_cred_env.sh
+	@if [ -f ../publish_cred_env.sh ]; then . ../publish_cred_env.sh; fi
 	$(PELICAN) $(INPUTDIR) -o $(OUTPUTDIR) -s $(PUBLISHCONF) $(PELICANOPTS)
 
 github: publish

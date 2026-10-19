@@ -1,4 +1,9 @@
 Copy
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+
 #Custom
 output
 pelicanconf_local.py
