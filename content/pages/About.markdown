@@ -51,7 +51,8 @@ Research and engineering can often feel fragmented. Writing down how I designed 
 - [Single-page Academic CV](https://iamashwin99.github.io/1pageCV/Academic_CV.pdf)
 - [GitHub (`@iamashwin99`)](https://github.com/iamashwin99/)
 - [LinkedIn](https://www.linkedin.com/in/ashwin-k-4854b8121/)
-- Email: `a.karnad@fz-juelich.de` / `mail@karnadash.win`
+- Say hi: [hi@karnadash.win](mailto:hi@karnadash.win)
+- Work: [a.karnad@fz-juelich.de](mailto:a.karnad@fz-juelich.de)
 
 Feel free to browse around, inspect the write-ups, or reach out if you would like to discuss quantum computing, collaborate on a project, or chat about music and dance!
 

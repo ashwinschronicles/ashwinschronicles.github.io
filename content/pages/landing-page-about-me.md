@@ -19,5 +19,6 @@ Here is my CV:
 
 - [Curriculum Vitae (PDF)](https://iamashwin99.github.io/CV_lyx/CV-AshwinKumarKarnad.pdf)
 - [Single-page Academic CV](https://iamashwin99.github.io/1pageCV/Academic_CV.pdf)
+- Say hi: [hi@karnadash.win](mailto:hi@karnadash.win)
 
 

@@ -52,7 +52,7 @@ MARKDOWN = {
 
 # Social widget
 SOCIAL = (('Git', 'https://github.com/iamashwin99/'),
-          ('Email', 'mail@karnadash.win', 'My Email Address'),
+          ('Email', 'hi@karnadash.win', 'Say hi'),
           ("RSS", SITEURL + "/feeds/all.atom.xml"),
           ('Facebook', 'https://www.facebook.com/iamashwin99'),
           ('LinkedIn','https://www.linkedin.com/in/ashwin-k-4854b8121/'))
