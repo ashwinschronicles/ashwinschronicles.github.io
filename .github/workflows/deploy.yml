@@ -12,6 +12,9 @@ permissions:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
+    environment:
+      name: Production
+      url: https://ashwinschronicles.github.io
     container:
       image: ghcr.io/astral-sh/uv:debian-slim
     steps:
@@ -37,11 +40,15 @@ jobs:
 
       - name: Build site with Pelican
         env:
-          CONTEXT: ${{ vars.CONTEXT || secrets.CONTEXT || 'production' }}
-          GOOGLE_ANALYTICS_PROD: ${{ vars.GOOGLE_ANALYTICS_PROD || secrets.GOOGLE_ANALYTICS_PROD }}
-          MODERN_GOOGLE_ANALYTICS_PROD: ${{ vars.MODERN_GOOGLE_ANALYTICS_PROD || secrets.MODERN_GOOGLE_ANALYTICS_PROD }}
-          STAT_COUNTER_PROJECT_PROD: ${{ vars.STAT_COUNTER_PROJECT_PROD || secrets.STAT_COUNTER_PROJECT_PROD }}
-          STAT_COUNTER_SECURITY_PROD: ${{ vars.STAT_COUNTER_SECURITY_PROD || secrets.STAT_COUNTER_SECURITY_PROD }}
+          CONTEXT: ${{ secrets.CONTEXT || vars.CONTEXT || 'production' }}
+          GOOGLE_ANALYTICS_PROD: ${{ secrets.GOOGLE_ANALYTICS_PROD || vars.GOOGLE_ANALYTICS_PROD }}
+          MODERN_GOOGLE_ANALYTICS_PROD: ${{ secrets.MODERN_GOOGLE_ANALYTICS_PROD || vars.MODERN_GOOGLE_ANALYTICS_PROD }}
+          STAT_COUNTER_PROJECT_PROD: ${{ secrets.STAT_COUNTER_PROJECT_PROD || vars.STAT_COUNTER_PROJECT_PROD }}
+          STAT_COUNTER_SECURITY_PROD: ${{ secrets.STAT_COUNTER_SECURITY_PROD || vars.STAT_COUNTER_SECURITY_PROD }}
+          MODERN_GOOGLE_ANALYTICS: ${{ secrets.MODERN_GOOGLE_ANALYTICS_PROD || vars.MODERN_GOOGLE_ANALYTICS_PROD || secrets.MODERN_GOOGLE_ANALYTICS || vars.MODERN_GOOGLE_ANALYTICS }}
+          GOOGLE_ANALYTICS: ${{ secrets.GOOGLE_ANALYTICS_PROD || vars.GOOGLE_ANALYTICS_PROD || secrets.GOOGLE_ANALYTICS || vars.GOOGLE_ANALYTICS }}
+          STAT_COUNTER_PROJECT: ${{ secrets.STAT_COUNTER_PROJECT_PROD || vars.STAT_COUNTER_PROJECT_PROD || secrets.STAT_COUNTER_PROJECT || vars.STAT_COUNTER_PROJECT }}
+          STAT_COUNTER_SECURITY: ${{ secrets.STAT_COUNTER_SECURITY_PROD || vars.STAT_COUNTER_SECURITY_PROD || secrets.STAT_COUNTER_SECURITY || vars.STAT_COUNTER_SECURITY }}
         run: |
           uv run pelican content -o output -s publishconf.py
 

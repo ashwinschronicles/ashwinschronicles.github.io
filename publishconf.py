@@ -18,35 +18,41 @@ if os.path.exists(_env_path):
                 _k, _v = _line.split("=", 1)
                 _k = _k.strip()
                 _v = _v.strip().strip("'\"")
-                os.environ.setdefault(_k, _v)
+                if not os.environ.get(_k):
+                    os.environ[_k] = _v
+
+
+def _get_env(*keys, default=None):
+    for k in keys:
+        v = os.environ.get(k)
+        if v and v.strip():
+            return v.strip()
+    return default
+
 
 sys.path.append(os.curdir)
 from pelicanconf import *
 
 # Context can be "production", "test", "development", or "branch-deploy"
-CONTEXT = os.environ.get("CONTEXT", "production").lower()
+CONTEXT = _get_env("CONTEXT", default="production").lower()
 
 if CONTEXT == "production":
     SITEURL = "https://ashwinschronicles.github.io"
     FEED_DOMAIN = SITEURL
     FEED_ALL_ATOM = "feeds/all.atom.xml"
     CATEGORY_FEED_ATOM = "feeds/{slug}.atom.xml"
-    CLAIM_GOOGLE = os.environ.get("CLAIM_GOOGLE_PROD") or os.environ.get("CLAIM_GOOGLE")
-    STAT_COUNTER_PROJECT = (
-        os.environ.get("STAT_COUNTER_PROJECT_PROD")
-        or os.environ.get("STAT_COUNTER_PROJECT")
-        or os.environ.get("STATCOUNTER_PROJECT")
+    CLAIM_GOOGLE = _get_env("CLAIM_GOOGLE_PROD", "CLAIM_GOOGLE")
+    STAT_COUNTER_PROJECT = _get_env(
+        "STAT_COUNTER_PROJECT_PROD", "STAT_COUNTER_PROJECT", "STATCOUNTER_PROJECT"
     )
-    STAT_COUNTER_SECURITY = (
-        os.environ.get("STAT_COUNTER_SECURITY_PROD")
-        or os.environ.get("STAT_COUNTER_SECURITY")
-        or os.environ.get("STATCOUNTER_SECURITY")
+    STAT_COUNTER_SECURITY = _get_env(
+        "STAT_COUNTER_SECURITY_PROD", "STAT_COUNTER_SECURITY", "STATCOUNTER_SECURITY"
     )
-    _ga_prod = (
-        os.environ.get("MODERN_GOOGLE_ANALYTICS_PROD")
-        or os.environ.get("MODERN_GOOGLE_ANALYTICS")
-        or os.environ.get("GOOGLE_ANALYTICS_PROD")
-        or os.environ.get("GOOGLE_ANALYTICS")
+    _ga_prod = _get_env(
+        "MODERN_GOOGLE_ANALYTICS_PROD",
+        "MODERN_GOOGLE_ANALYTICS",
+        "GOOGLE_ANALYTICS_PROD",
+        "GOOGLE_ANALYTICS",
     )
     if _ga_prod:
         if _ga_prod.startswith("G-"):
@@ -55,8 +61,8 @@ if CONTEXT == "production":
         else:
             GOOGLE_ANALYTICS = _ga_prod
             MODERN_GOOGLE_ANALYTICS = None
-    DISQUS_SITENAME = os.environ.get("DISQUS_SITENAME")
-    HEAP_ANALYTICS = os.environ.get("HEAP_ANALYTICS_PROD") or os.environ.get("HEAP_ANALYTICS")
+    DISQUS_SITENAME = _get_env("DISQUS_SITENAME")
+    HEAP_ANALYTICS = _get_env("HEAP_ANALYTICS_PROD", "HEAP_ANALYTICS")
 #    COMMENTBOX_PROJECT = os.environ.get("COMMENTBOX_PROJECT")
 # filetime_from_git is very slow. Use it in production only
 # to avoid slow build times during development
@@ -71,25 +77,25 @@ elif CONTEXT in ("test", "development", "branch-deploy") or (CONTEXT == "branch-
     SITEURL = os.environ.get("SITEURL_TEST", "https://ashwinschronicles.github.io")
     FEED_DOMAIN = SITEURL
     LANDING_PAGE_TITLE = "The Journey Begins (Test)"
-    STAT_COUNTER_PROJECT = (
-        os.environ.get("STAT_COUNTER_PROJECT_TEST")
-        or os.environ.get("STAT_COUNTER_PROJECT_NEXT")
-        or os.environ.get("STAT_COUNTER_PROJECT")
-        or os.environ.get("STATCOUNTER_PROJECT")
+    STAT_COUNTER_PROJECT = _get_env(
+        "STAT_COUNTER_PROJECT_TEST",
+        "STAT_COUNTER_PROJECT_NEXT",
+        "STAT_COUNTER_PROJECT",
+        "STATCOUNTER_PROJECT",
     )
-    STAT_COUNTER_SECURITY = (
-        os.environ.get("STAT_COUNTER_SECURITY_TEST")
-        or os.environ.get("STAT_COUNTER_SECURITY_NEXT")
-        or os.environ.get("STAT_COUNTER_SECURITY")
-        or os.environ.get("STATCOUNTER_SECURITY")
+    STAT_COUNTER_SECURITY = _get_env(
+        "STAT_COUNTER_SECURITY_TEST",
+        "STAT_COUNTER_SECURITY_NEXT",
+        "STAT_COUNTER_SECURITY",
+        "STATCOUNTER_SECURITY",
     )
-    _ga_test = (
-        os.environ.get("MODERN_GOOGLE_ANALYTICS_TEST")
-        or os.environ.get("MODERN_GOOGLE_ANALYTICS_NEXT")
-        or os.environ.get("GOOGLE_ANALYTICS_TEST")
-        or os.environ.get("GOOGLE_ANALYTICS_NEXT")
-        or os.environ.get("MODERN_GOOGLE_ANALYTICS")
-        or os.environ.get("GOOGLE_ANALYTICS")
+    _ga_test = _get_env(
+        "MODERN_GOOGLE_ANALYTICS_TEST",
+        "MODERN_GOOGLE_ANALYTICS_NEXT",
+        "GOOGLE_ANALYTICS_TEST",
+        "GOOGLE_ANALYTICS_NEXT",
+        "MODERN_GOOGLE_ANALYTICS",
+        "GOOGLE_ANALYTICS",
     )
     if _ga_test:
         if _ga_test.startswith("G-"):
@@ -98,14 +104,14 @@ elif CONTEXT in ("test", "development", "branch-deploy") or (CONTEXT == "branch-
         else:
             GOOGLE_ANALYTICS = _ga_test
             MODERN_GOOGLE_ANALYTICS = None
-    COMMENTBOX_PROJECT = os.environ.get("COMMENTBOX_PROJECT")
-    HEAP_ANALYTICS = os.environ.get("HEAP_ANALYTICS_NEXT") or os.environ.get("HEAP_ANALYTICS")
+    COMMENTBOX_PROJECT = _get_env("COMMENTBOX_PROJECT")
+    HEAP_ANALYTICS = _get_env("HEAP_ANALYTICS_NEXT", "HEAP_ANALYTICS")
 
 else:
     SITEURL = ""
-    STAT_COUNTER_PROJECT = os.environ.get("STAT_COUNTER_PROJECT") or os.environ.get("STATCOUNTER_PROJECT")
-    STAT_COUNTER_SECURITY = os.environ.get("STAT_COUNTER_SECURITY") or os.environ.get("STATCOUNTER_SECURITY")
-    _ga_fallback = os.environ.get("MODERN_GOOGLE_ANALYTICS") or os.environ.get("GOOGLE_ANALYTICS")
+    STAT_COUNTER_PROJECT = _get_env("STAT_COUNTER_PROJECT", "STATCOUNTER_PROJECT")
+    STAT_COUNTER_SECURITY = _get_env("STAT_COUNTER_SECURITY", "STATCOUNTER_SECURITY")
+    _ga_fallback = _get_env("MODERN_GOOGLE_ANALYTICS", "GOOGLE_ANALYTICS")
     if _ga_fallback:
         if _ga_fallback.startswith("G-"):
             MODERN_GOOGLE_ANALYTICS = _ga_fallback
