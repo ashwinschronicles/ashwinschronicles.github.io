@@ -75,28 +75,25 @@ DEFAULT_PAGINATION = False
 
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True
-PLUGIN_PATHS = ['../plugins/']
+PLUGIN_PATHS = ['plugins', '../plugins/']
 
 PLUGINS = [
-          "search",
-          # "tipu_search",
-           "neighbors",
-           "render_math",
-           "sitemap",
-           "more_categories",
-           "liquid_tags.include_code",
-           "liquid_tags.img",
-           "neighbors",
-           "related_posts",
-           "share_post",
-           "series",
-           "post_stats",
-           "pelican-js",
-           "series", # which version of pelican works with tipue_search?
-#           "filetime_from_git",
-           "extract_toc",
-           "assets"
-           ]
+    "search",
+    # "tipue_search",
+    "neighbors",
+    "render_math",
+    "sitemap",
+    "more_categories",
+    "pelican.plugins.liquid_tags.include_code",
+    "pelican.plugins.liquid_tags.img",
+    "related_posts",
+    "share_post",
+    "series",
+    "post_stats",
+    # "filetime_from_git",
+    "extract_toc",
+    "assets",
+]
 
 DIRECT_TEMPLATES = (('index', 'tags', 'categories','archives', 'search', '404'))
 
@@ -183,5 +180,5 @@ SEARCH_HTML_SELECTOR = "article"
 
 # search settings
 STORK_INPUT_OPTIONS = {
-    "html_selector": "main"
+    "html_selector": "article"
 }

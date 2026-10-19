@@ -1,5 +1,5 @@
 PY?=python3
-PELICAN?=pelican
+PELICAN?=$(shell which pelican 2>/dev/null || ( [ -f $(BASEDIR)/.venv/bin/pelican ] && echo $(BASEDIR)/.venv/bin/pelican ) || echo pelican)
 PELICANOPTS=
 
 BASEDIR=$(CURDIR)

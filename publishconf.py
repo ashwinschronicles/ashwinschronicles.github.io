@@ -48,8 +48,10 @@ if CONTEXT == "production":
 #    COMMENTBOX_PROJECT = os.environ.get("COMMENTBOX_PROJECT")
 # filetime_from_git is very slow. Use it in production only
 # to avoid slow build times during development
-    PLUGINS.append("filetime_from_git")
-    PLUGINS.append("sitemap")
+    if "filetime_from_git" not in PLUGINS:
+        PLUGINS.append("filetime_from_git")
+    if "sitemap" not in PLUGINS:
+        PLUGINS.append("sitemap")
 
 elif CONTEXT in ("test", "development", "branch-deploy") or (CONTEXT == "branch-deploy" and os.environ.get("HEAD") == "next"):
     SITENAME = "Ashwin's Chronicles (Test)" if CONTEXT in ("test", "development") else "Site (Next)"

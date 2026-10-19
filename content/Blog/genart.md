@@ -1,4 +1,10 @@
-Generativeart
+---
+title: Generative Art
+date: 2021-09-20
+category: Blog
+tags: Generative Art, Processing, Linux
+status: draft
+---
 
 * **Download the Latest Processing 3 Release for Linux**
 * **Double-Click on Package and Extract Processing into /tmp**
