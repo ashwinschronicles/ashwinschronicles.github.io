@@ -7,22 +7,21 @@ status: hidden
 slug: landing-page-about-hidden
 ---
 
+Welcome!
 
-Thanks for joining me!
+I am Ashwin Kumar Karnad, a Research Software Engineer (RSE) at the Jülich Supercomputing Centre (JSC), Forschungszentrum Jülich, Germany. My work primarily focuses on integrating quantum computers with classical high-performance computing (HPC) systems to build hybrid quantum computing infrastructure and benchmarking applications on it.
 
-I am Ashwin Kumar Karnad, a Research Software Engineer at the Max Planck Institute for the Structure and Dynamics of Matter (MPSD) in Hamburg.
+Previously, I worked as an RSE at the Max Planck Institute for the Structure and Dynamics of Matter (MPSD) in Hamburg.
 
-I Dual Majored in B.E Electronics and Instrumentation & Int. MSc Physics at BITS Pilani KK Birla Goa campus, India (Batch of 2017-22).
+I graduated from BITS Pilani, K.K. Birla Goa Campus (Batch of 2017–2022) with a dual degree: B.E. in Electronics & Instrumentation and Int.M.Sc. in Physics.
 
-I had always wanted to publish some of my projects and experiments on a public platform so that people working on similar projects can give and take ideas. It also serves as a way to showcase the experience that I have gained while doing such projects.
+I started this site as an open notebook to document projects, experiments, and technical notes—mostly spanning physics, instrumentation, computing, and software. Having a public record helps me organize what I have learned and remember how I tackled specific problems, while hopefully offering something helpful or interesting to others working on similar ideas.
 
-I intend to post details of projects or experiments that I have performed  mostly in the field of Science and Engineering as I complete them on this web-page. Some articles are for me to remember how I did things and they can be useful for the general audience too.
+Feel free to explore the articles and notes. If you would like to discuss any of the projects or just say hi, don't hesitate to reach out!
 
-Take a trip down my memory lane. I hope to see you around!
+Here is my CV:
 
-Here is my CV  :
+- [Curriculum Vitae (PDF)](https://iamashwin99.github.io/CV_lyx/CV-AshwinKumarKarnad.pdf)
+- [Single-page Academic CV](https://iamashwin99.github.io/1pageCV/Academic_CV.pdf)
 
-[Curriculum Vitae](https://iamashwin99.github.io/CV_lyx/CV-AshwinKumarKarnad.pdf)
-
-[Single page version (old)](https://iamashwin99.github.io/1pageCV/Academic_CV.pdf)
 

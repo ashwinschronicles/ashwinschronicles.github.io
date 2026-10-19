@@ -139,31 +139,31 @@ SITE_LICENSE = """All articles written by me in this website are licensed under 
 # Landing Page
 PROJECTS = [
   {
-    'name': 'Cryostat Probe design and optimisation for transport measurement.',
+    'name': 'Cryostat Probe Design & Optimization',
     'url': 'https://ashwinschronicles.github.io/Cryostat-probe-design',
-    'description': 'Design of a cryogenic probe for transport measurements and using it to observe Superconducting transition of Niobium Nitrate'
+    'description': 'Design of a cryogenic probe for transport measurements and observation of the superconducting transition of Niobium Nitride.'
   },
   {
-    'name': 'A review of Analog Discovery 2',
+    'name': 'Study of Josephson Junctions',
+    'url': 'https://ashwinschronicles.github.io/josephson-junction-fabrication-and-characterisation',
+    'description': 'Master thesis research on fabrication, characterisation, and computational RCSJ simulations of Josephson Junctions.'
+  },
+  {
+    'name': 'A Review of Analog Discovery 2',
     'url': 'https://ashwinschronicles.github.io/analog-discovery-2-labview-home-bundle-review',
-    'description': 'A review of Analog discovery 2 in a Lab environment'
+    'description': 'Comprehensive review of Digilent Analog Discovery 2 integrated with LabVIEW in a physical laboratory environment.'
   },
   {
-    'name': 'A Beginers Guide to IoT',
+    'name': "A Beginner's Guide to IoT",
     'url': 'https://ashwinschronicles.github.io/Intro-to-IoT',
-    'description': 'An OTA controlled light'
-  },
-  {
-    'name': 'A Pressure-sensitive mat',
-    'url': 'https://ashwinschronicles.github.io/null',
-    'description': 'Designed a pressure-sensitive mat that can sense touch enabling the determination of different poses such as Running, Jumping,Rightward-leftward movement,one-leg hop etc.'
+    'description': 'Practical guide to building over-the-air (OTA) controllable lighting with ESP8266 / NodeMCU.'
   }
 ]
 
 
 LANDING_PAGE_TITLE = "The Journey Begins"
 # SEO
-SITE_DESCRIPTION = u'Im Ashwin Kumar Karnad, currently a Research Software engineer at Max Planck Institute for structure and dynamics of matter, Hamburg. This is my personal blog.'
+SITE_DESCRIPTION = u"I'm Ashwin Kumar Karnad, a Research Software Engineer at Jülich Supercomputing Centre (JSC), Forschungszentrum Jülich, Germany. This is my personal blog covering Quantum Computing, HPC, and Scientific Engineering."
 
 
 #MISC
