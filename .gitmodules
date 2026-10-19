@@ -1,0 +1,9 @@
+[submodule "theme"]
+	path = theme
+	url = https://github.com/Pelican-Elegant/elegant.git
+[submodule "src/pelican-tipue-search"]
+	path = src/pelican-tipue-search
+	url = https://github.com/getpelican/pelican-plugins.git
+[submodule "plugins"]
+	path = plugins
+	url = https://github.com/getpelican/pelican-plugins.git
