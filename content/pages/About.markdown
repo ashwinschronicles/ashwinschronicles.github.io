@@ -17,6 +17,7 @@ By day, I work at the **Jülich Supercomputing Centre (JSC)**, Forschungszentrum
 Before joining JSC, I worked as an RSE at the **Max Planck Institute for the Structure and Dynamics of Matter (MPSD)** in Hamburg, developing research tools for computational physics. 
 
 My academic foundation comes from **BITS Pilani, K.K. Birla Goa Campus** (Batch of 2017–2022), where I completed a dual degree:
+
 - **B.E. in Electronics & Instrumentation**
 - **M.Sc. in Physics**
 
@@ -26,22 +27,13 @@ This blend of physics theory and practical hardware/software engineering has sha
 
 ## Beyond the Terminal
 
-When I step away from code, compute clusters, and quantum simulators, my time is usually filled with a few deep passions:
+When I step away from code, compute clusters, and quantum simulators, a few interests keep me grounded:
 
-### 🎵 Flute & Acoustic Experiments
-Music is a big part of my life. I play the Indian classical flute (**Bansuri**). Over time, my physics curiosity spilled over into instrument-making: I have been collaborating on designing and 3D-printing custom flutes, calculating acoustic resonance formulas, experimenting with conical bores, and testing how subtle design changes shape tone and timbre.
-
-### 💃 Forró Dancing
-I fell in love with **Forró**—a vibrant, warm partner dance from northeastern Brazil. You can frequently find me on the social dance floor in Aachen, Cologne, or Düsseldorf, learning leader/follower dynamics, musicality, and connecting with a wonderful cross-cultural dance community. It is the perfect antidote to hours of screen time.
-
-### 🏃 Running & Parkrun
-I run to clear my mind and stay grounded. Saturday morning 5K **Parkruns** are a weekend staple, rain, frost, or shine, along with longer neighborhood and trail runs.
-
-### 🚲 Cycling & Bike Wrenching
-Cycling is both my daily commute and weekend escape through the Rhineland. I also enjoy the mechanical side of things—tuning derailleurs, fixing chains, and maintaining bikes myself.
-
-### ⚡ Electronics, Solar & Hardware Tinkering
-My workbench is rarely clear. I love tinkering with physical hardware: setting up small DIY solar panel rigs, designing battery management circuits, hacking microcontrollers (ESP8266/ESP32, Arduino) for over-the-air IoT controls, and soldering together sensor prototypes.
+- **Flute & Acoustic Experiments:** Music is a big part of my life. I play the Indian classical flute (Bansuri). Over time, my physics curiosity spilled over into instrument-making: collaborating on designing and 3D-printing custom flutes, calculating acoustic resonance formulas, experimenting with conical bores, and testing how subtle design changes shape tone and timbre.
+- **Forró Dancing:** I fell in love with Forró—a partner dance from northeastern Brazil. You can frequently find me on the social dance floor in Aachen, Cologne, or Düsseldorf, learning leader/follower dynamics, musicality, and connecting with a wonderful cross-cultural dance community.
+- **Running & Parkrun:** I run to clear my mind. Saturday morning 5K Parkruns are a weekend staple, rain, frost, or shine, along with longer trail and neighborhood runs.
+- **Cycling & Bike Mechanics:** Cycling is both my daily commute and weekend escape through the Rhineland. I also enjoy the mechanical side of things—tuning derailleurs, fixing chains, and maintaining bikes myself.
+- **Electronics & Hardware Tinkering:** My workbench is rarely clear. I enjoy tinkering with physical hardware: setting up small DIY solar panel rigs, designing battery management circuits, hacking microcontrollers (ESP8266/ESP32, Arduino) for IoT controls, and soldering together sensor prototypes.
 
 ---
 
@@ -55,11 +47,11 @@ Research and engineering can often feel fragmented. Writing down how I designed 
 
 ## Curriculum Vitae & Links
 
-- 📄 [Curriculum Vitae (PDF)](https://iamashwin99.github.io/CV_lyx/CV-AshwinKumarKarnad.pdf)
-- 📋 [Single-page Academic CV](https://iamashwin99.github.io/1pageCV/Academic_CV.pdf)
-- 💻 [GitHub (`@iamashwin99`)](https://github.com/iamashwin99/)
-- 💼 [LinkedIn](https://www.linkedin.com/in/ashwin-k-4854b8121/)
-- ✉️ Email: `a.karnad@fz-juelich.de` / `ashwinkumar.k.rao@gmail.com`
+- [Curriculum Vitae (PDF)](https://iamashwin99.github.io/CV_lyx/CV-AshwinKumarKarnad.pdf)
+- [Single-page Academic CV](https://iamashwin99.github.io/1pageCV/Academic_CV.pdf)
+- [GitHub (`@iamashwin99`)](https://github.com/iamashwin99/)
+- [LinkedIn](https://www.linkedin.com/in/ashwin-k-4854b8121/)
+- Email: `a.karnad@fz-juelich.de` / `ashwinkumar.k.rao@gmail.com`
 
 Feel free to browse around, inspect the write-ups, or reach out if you would like to discuss quantum computing, collaborate on a project, or chat about music and dance!
 
