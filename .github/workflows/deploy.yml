@@ -1,0 +1,46 @@
+name: Deploy Pelican Site
+
+on:
+  push:
+    branches:
+      - source
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    container:
+      image: ghcr.io/astral-sh/uv:debian-slim
+    steps:
+      - name: Install git and ca-certificates
+        run: |
+          apt-get update && apt-get install -y --no-install-recommends git ca-certificates
+          git config --global --add safe.directory "$GITHUB_WORKSPACE"
+
+      - name: Checkout source and submodules
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive
+          fetch-depth: 0
+
+      - name: Install dependencies with uv
+        run: |
+          uv sync --frozen
+
+      - name: Build site with Pelican
+        env:
+          CONTEXT: production
+          MODERN_GOOGLE_ANALYTICS: ${{ secrets.MODERN_GOOGLE_ANALYTICS }}
+          CLAIM_GOOGLE: ${{ secrets.CLAIM_GOOGLE }}
+        run: |
+          uv run pelican content -o output -s publishconf.py
+
+      - name: Deploy to master branch (GitHub Pages)
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git remote set-url origin "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git"
+          uv run ghp-import -b master -m "Deploy Pelican site from GitHub Actions [skip ci]" -p output
