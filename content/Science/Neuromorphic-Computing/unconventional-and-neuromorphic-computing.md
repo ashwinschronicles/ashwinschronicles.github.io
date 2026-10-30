@@ -19,13 +19,6 @@ As I set up a local Large Language Model (LLM) on my laptop last week, I was ama
 
 The question, of course, is how we can advance our understanding of matter to create ever more powerful, energy-efficient computing systems. Two complementary paths lead toward this goal: developing new, more efficient technology stacks or optimizing existing compute resources. Personally, I am drawn to the prospect of etching neural dynamics directly onto physical systems—harnessing the intrinsic non-linearities, topology, and transport phenomena of condensed matter to build neuromorphic and unconventional computing architectures.
 
-In this article, I reflect on the principles and physical trajectories underpinning this transition. We will explore:
-1. **The physical imperative for neuromorphic architectures:** Why modern AI demands a departure from the Von Neumann paradigm, and what physical principles make biological brains orders of magnitude more efficient.
-2. **Physical implementation trajectories:** From quantum materials and tunable resistive devices (memristors) to topological spin textures (magnetic and electric skyrmions).
-3. **Stochastic and Brownian computing:** Utilizing thermal fluctuations, skyrmion reshufflers, and token-based Brownian half-adders to perform non-arithmetic and near-zero-energy computations.
-4. **Physical reservoir computing:** Exploiting the high-dimensional, non-linear dynamics of magnetic textures and ferroelectric domain walls to process temporal and spatial data without iterative backpropagation.
-5. **Analog crossbar arrays & Ferroelectric Hafnia ($\text{HfO}_2$):** Performing $O(1)$ parallel vector-matrix multiplication in the analog domain, the crystallographic polymorphism of ferroelectric hafnia thin films, and the experimental techniques needed to engineer nanoscale synaptic devices.
-
 ---
 
 # Background & Experimental Foundations
@@ -59,7 +52,17 @@ My experimental work involved cleanroom fabrication and characterization tools, 
 
 Holding a dual major in Physics and Electronics & Instrumentation gave me a unique vantage point: understanding the quantum and solid-state physics of materials while being able to rapidly design auxiliary circuitry, build custom data acquisition software, and interface laboratory instruments.
 
-Following my Master's, I joined the Scientific Support Unit at the Max Planck Institute for the Structure and Dynamics of Matter (MPSD) in Hamburg as a Research Software Engineer. There, I worked on massively parallel scientific software, high-performance computing (HPC) workflows, Monte Carlo simulations using the Wang and Landau algorithm, and reproducible research infrastructure. In parallel, I investigated machine-learning-based classification of 3D magnetization vector field configurations simulated using OOMMF and mumax3, aiming to automate topological spin-texture identification (such as skyrmion ground states and reversal mechanisms described by Fangohr et al. [[9]](#ref9)). That work utilized convolutional autoencoders for spatial dimensionality reduction coupled with unsupervised clustering algorithms (such as DBSCAN) to distinguish distinct topological states.
+Following my Master's, I joined the Scientific Support Unit at the Max Planck Institute for the Structure and Dynamics of Matter (MPSD) in Hamburg as a Research Software Engineer. There, I worked on massively parallel scientific software, high-performance computing (HPC) workflows, Monte Carlo simulations using the Wang and Landau algorithm, and reproducible research infrastructure.
+
+It was obvious by then that I was very keen on computing. While I was researching for PhD positions, I kept looking at several kinds of computing paradigms that keep popping up. And the following is a small list of types of computing systems I've come across. It is indeed interesting to see how we name nature in different levels to make it do what we want it to do.
+
+
+In this article, I reflect on the principles and physical trajectories underpinning this transition. We will explore:
+1. **The physical imperative for neuromorphic architectures:** Why modern AI demands a departure from the Von Neumann paradigm, and what physical principles make biological brains orders of magnitude more efficient.
+2. **Physical implementation trajectories:** From quantum materials and tunable resistive devices (memristors) to topological spin textures (magnetic and electric skyrmions).
+3. **Stochastic and Brownian computing:** Utilizing thermal fluctuations, skyrmion reshufflers, and token-based Brownian half-adders to perform non-arithmetic and near-zero-energy computations.
+4. **Physical reservoir computing:** Exploiting the high-dimensional, non-linear dynamics of magnetic textures and ferroelectric domain walls to process temporal and spatial data without iterative backpropagation.
+5. **Analog crossbar arrays & Ferroelectric Hafnia ($\text{HfO}_2$):** Performing $O(1)$ parallel vector-matrix multiplication in the analog domain, the crystallographic polymorphism of ferroelectric hafnia thin films, and the experimental techniques needed to engineer nanoscale synaptic devices.
 
 ---
 
