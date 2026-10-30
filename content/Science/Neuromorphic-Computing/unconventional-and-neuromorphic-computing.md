@@ -1,5 +1,5 @@
 ---
-title: "Unconventional & Neuromorphic Computing:"
+title: Unconventional Computing:
 date: 2024-03-15
 tags: Neuromorphic Computing, Unconventional Computing, Magnetic Skyrmions, Reservoir Computing, Memristor, Ferroelectrics, Hafnium Oxide, Crossbar Array, Spintronics, Condensed Matter
 category: Science
@@ -77,10 +77,15 @@ This orders-of-magnitude disparity in energy efficiency is a fundamental thermod
 The extraordinary energy efficiency of biological brains stems from several key architectural and physical properties [[13]](#ref13):
 
 1. **Sparse Signaling & Noise Tolerance:** Unlike continuous, high-frequency digital clocking, biological neurons communicate via intermittent, asynchronous action potentials (spikes). Information is encoded sparsely in time and space, enabling the system to operate at minimal dynamic power while naturally tolerating stochastic thermal noise.
+
 2. **Co-located Memory and Processing:** Biological neurons and synapses simultaneously store information and compute with it. This completely eliminates the classical **Von Neumann bottleneck**—the costly, energy-intensive movement of data back and forth between physically separated CPU/GPU logic and DRAM memory buses.
+
 3. **Massive Parallelism:** The brain employs vast parallel connectivity across approximately $10^{11}$ neurons and $10^{14}$ synapses, achieving immense aggregate computational throughput despite low operational speeds (~10–100 Hz).
+
 4. **Adaptive, Plastic Synapses:** Biological synapses dynamically adjust their connection strengths (weights) via local biochemical and biophysical mechanisms (such as Spike-Timing-Dependent Plasticity, STDP), enabling continuous on-line learning without global backpropagation.
+
 5. **Inherent Fault Tolerance:** The brain functions robustly despite the stochastic death or failure of individual neurons due to redundant connectivity and continuous structural plasticity.
+
 6. **Stochasticity as a Feature:** Thermal noise and probabilistic ion-channel gating provide an intrinsic source of randomness that facilitates probabilistic inference, sampling, and escape from local energetic minima.
 
 By embedding these physical principles directly into solid-state hardware, neuromorphic engineering aims to create non-Von Neumann processors capable of learning and inferring at biological efficiency levels. While initial silicon implementations like IBM's TrueNorth and Heidelberg's BrainScaleS demonstrated the viability of brain-inspired spike routing, realizing the full potential of neuromorphic computing requires nanoscale materials that inherently compute through their internal physics.
