@@ -52,7 +52,7 @@ Research and engineering can often feel fragmented. Writing down how I designed 
 - [GitHub (`@iamashwin99`)](https://github.com/iamashwin99/)
 - [LinkedIn](https://www.linkedin.com/in/ashwin-k-4854b8121/)
 - Say hi: [hi@karnadash.win](mailto:hi@karnadash.win)
-- Work: [a.karnad@fz-juelich.de](mailto:a.karnad@fz-juelich.de)
+- Work email: [a.karnad@fz-juelich.de](mailto:a.karnad@fz-juelich.de)
 
 Feel free to browse around, inspect the write-ups, or reach out if you would like to discuss quantum computing, collaborate on a project, or chat about music and dance!
 

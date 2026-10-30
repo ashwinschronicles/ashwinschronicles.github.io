@@ -104,6 +104,9 @@ elif CONTEXT in ("test", "development", "branch-deploy") or (CONTEXT == "branch-
         else:
             GOOGLE_ANALYTICS = _ga_test
             MODERN_GOOGLE_ANALYTICS = None
+    CLAIM_GOOGLE = _get_env(
+        "CLAIM_GOOGLE_TEST", "CLAIM_GOOGLE_NEXT", "CLAIM_GOOGLE"
+    )
     COMMENTBOX_PROJECT = _get_env("COMMENTBOX_PROJECT")
     HEAP_ANALYTICS = _get_env("HEAP_ANALYTICS_NEXT", "HEAP_ANALYTICS")
 
