@@ -28,6 +28,11 @@ url = "/gh-pages-with-pelican"
 title = "Make a Github Pages blog with Pelican"
 
 [[input.files]]
+path = "unconventional-and-neuromorphic-computing.html"
+url = "/unconventional-and-neuromorphic-computing"
+title = "Unconventional Computing:"
+
+[[input.files]]
 path = "josephson-junction-simulation-and-analysis.html"
 url = "/josephson-junction-simulation-and-analysis"
 title = "Study of Josephson Junction."

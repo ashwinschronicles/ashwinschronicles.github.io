@@ -1,0 +1,860 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://ashwinschronicles.github.io/theme/css/style.min.css?2fcac227">
+
+        <link rel="dns-prefetch" href="//fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+
+        <meta name="author" content="Ashwin Kumar Karnad" />
+
+        <meta name="description" content="An exploration of unconventional and neuromorphic computing architectures—bridging the physics of brain efficiency, topological spin textures (skyrmions), physical reservoir computing, and CMOS-compatible ferroelectric hafnium oxide (HfO2) analog crossbar arrays.
+" />
+        <meta name="twitter:creator" content="@iamashwin99">
+        <meta property="og:type" content="article" />
+        <meta name="twitter:card" content="summary">
+
+<meta name="keywords" content="Neuromorphic Computing, Unconventional Computing, Magnetic Skyrmions, Reservoir Computing, Memristor, Ferroelectrics, Hafnium Oxide, Crossbar Array, Spintronics, Condensed Matter, Science, neuromorphic computing, unconventional computing, magnetic skyrmions, reservoir computing, memristor, ferroelectrics, hafnium oxide, crossbar array, CMOS BEOL" />
+
+<meta property="og:title" content="Unconventional Computing:  - From Topological Spin Textures to Ferroelectric Crossbar Arrays "/>
+<meta property="og:url" content="https://ashwinschronicles.github.io/unconventional-and-neuromorphic-computing" />
+<meta property="og:description" content="An exploration of unconventional and neuromorphic computing architectures—bridging the physics of brain efficiency, topological spin textures (skyrmions), physical reservoir computing, and CMOS-compatible ferroelectric hafnium oxide (HfO2) analog crossbar arrays." />
+<meta property="og:site_name" content="Ashwin&#39;s Chronicles🗞️" />
+<meta property="og:article:author" content="Ashwin Kumar Karnad" />
+<meta property="og:article:published_time" content="2024-03-15T00:00:00+05:30" />
+<meta property="og:article:modified_time" content="2026-10-30T00:00:00+05:30" />
+<meta name="twitter:title" content="Unconventional Computing:  - From Topological Spin Textures to Ferroelectric Crossbar Arrays ">
+<meta name="twitter:description" content="An exploration of unconventional and neuromorphic computing architectures—bridging the physics of brain efficiency, topological spin textures (skyrmions), physical reservoir computing, and CMOS-compatible ferroelectric hafnium oxide (HfO2) analog crossbar arrays.">
+<meta property="og:image" content="/theme/images/final.png" />
+<meta name="twitter:image" content="/theme/images/final.png" >
+
+        <title>Unconventional Computing:  - From Topological Spin Textures to Ferroelectric Crossbar Arrays  · Ashwin&#39;s Chronicles🗞️
+</title>
+        <link rel="shortcut icon" href="https://ashwinschronicles.github.io/theme/images/favicon.ico" type="image/x-icon" />
+        <link rel="icon" href="https://ashwinschronicles.github.io/theme/images/apple-touch-icon-152x152.png" type="image/png" />
+        <link rel="apple-touch-icon" href="https://ashwinschronicles.github.io/theme/images/apple-touch-icon.png"  type="image/png" />
+        <link rel="apple-touch-icon" sizes="57x57" href="https://ashwinschronicles.github.io/theme/images/apple-touch-icon-57x57.png" type="image/png" />
+        <link rel="apple-touch-icon" sizes="72x72" href="https://ashwinschronicles.github.io/theme/images/apple-touch-icon-72x72.png" type="image/png" />
+        <link rel="apple-touch-icon" sizes="76x76" href="https://ashwinschronicles.github.io/theme/images/apple-touch-icon-76x76.png" type="image/png" />
+        <link rel="apple-touch-icon" sizes="114x114" href="https://ashwinschronicles.github.io/theme/images/apple-touch-icon-114x114.png" type="image/png" />
+        <link rel="apple-touch-icon" sizes="120x120" href="https://ashwinschronicles.github.io/theme/images/apple-touch-icon-120x120.png" type="image/png" />
+        <link rel="apple-touch-icon" sizes="144x144" href="https://ashwinschronicles.github.io/theme/images/apple-touch-icon-144x144.png" type="image/png" />
+        <link rel="apple-touch-icon" sizes="152x152" href="https://ashwinschronicles.github.io/theme/images/apple-touch-icon-152x152.png" type="image/png" />
+        <link rel="apple-touch-icon" sizes="152x152" href="https://ashwinschronicles.github.io/theme/images/apple-touch-icon-180x180.png" type="image/png" />
+        <link href="https://ashwinschronicles.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Ashwin&#39;s Chronicles🗞️ - Full Atom Feed" />
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-E1G9M6CRCM"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-E1G9M6CRCM');
+</script>
+
+
+
+    </head>
+    <body>
+        <div id="content">
+            <div class="navbar navbar-static-top">
+                <div class="navbar-inner">
+                    <div class="container-fluid">
+                        <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </a>
+                        <a class="brand" href="https://ashwinschronicles.github.io/"><span class=site-name><span style="color:#329A97;">Ashwin's</span> <span style="color:purple">Chronicles</span>🗞️ </span></a>
+                        <div class="nav-collapse collapse">
+                            <ul class="nav pull-right top-menu">
+                                <li >
+                                    <a href=
+                                       https://ashwinschronicles.github.io
+                                    >Home</a>
+                                </li>
+                                <li ><a href="https://ashwinschronicles.github.io/AboutMe">About&nbsp;Me</a></li>
+                                <li ><a href="https://ashwinschronicles.github.io/categories">Categories</a></li>
+                                <li ><a href="https://ashwinschronicles.github.io/tags">Tags</a></li>
+                                <li ><a href="https://ashwinschronicles.github.io/archives">Archives</a></li>
+                                <li><form class="navbar-search" action="https://ashwinschronicles.github.io/search" onsubmit="return validateForm(this.elements['q'].value);"> <input type="text" class="search-query" placeholder="Search" name="q" id="tipue_search_input"></form></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid">
+                <div class="row-fluid">
+                    <div class="span1"></div>
+                    <div class="span10">
+<article itemscope>
+<div class="row-fluid">
+    <header class="page-header span10 offset2">
+        <h1>
+            <a href="https://ashwinschronicles.github.io/unconventional-and-neuromorphic-computing">
+                Unconventional&nbsp;Computing:
+                <small class="subtitle">
+                    From Topological Spin Textures to Ferroelectric Crossbar Arrays
+                </small>
+            </a>
+        </h1>
+    </header>
+</div>
+
+<div class="row-fluid">
+    <div class="span2 table-of-content">
+        <nav>
+        <h4>Contents</h4>
+        <div class="toc">
+<ul>
+<li><a href="#introduction-the-quest-for-matter-that-computes">Introduction: The Quest for Matter That Computes</a></li>
+<li><a href="#background-experimental-foundations">Background <span class="amp">&amp;</span> Experimental Foundations</a></li>
+<li><a href="#unconventional-computing-the-physical-need">Unconventional Computing: The Physical Need</a><ul>
+<li><a href="#the-thermodynamic-wall-of-deep-learning">The Thermodynamic Wall of Deep Learning</a></li>
+</ul>
+</li>
+<li><a href="#trajectories-for-physical-hardware-implementation">Trajectories for Physical Hardware Implementation</a><ul>
+<li><a href="#quantum-materials-and-non-linear-dynamics">Quantum Materials and Non-Linear Dynamics</a><ul>
+<li><a href="#1-tunable-resistive-devices-memristors-and-phase-change-materials">1. Tunable Resistive Devices: Memristors and Phase Change Materials</a></li>
+</ul>
+</li>
+<li><a href="#topological-spin-structures-for-computation">Topological Spin Structures for Computation</a></li>
+</ul>
+</li>
+<li><a href="#stochastic-brownian-computing">Stochastic <span class="amp">&amp;</span> Brownian Computing</a><ul>
+<li><a href="#skyrmion-reshufflers-for-probabilistic-computing">Skyrmion Reshufflers for Probabilistic Computing</a></li>
+<li><a href="#token-based-brownian-computing">Token-Based Brownian Computing</a></li>
+</ul>
+</li>
+<li><a href="#physical-reservoir-computing">Physical Reservoir Computing</a><ul>
+<li><a href="#architectural-principles-of-reservoir-computing">Architectural Principles of Reservoir Computing</a></li>
+<li><a href="#magnetic-systems-for-reservoir-computing">Magnetic Systems for Reservoir Computing</a></li>
+<li><a href="#ferroelectric-systems-for-reservoir-computing">Ferroelectric Systems for Reservoir Computing</a></li>
+</ul>
+</li>
+<li><a href="#analog-crossbar-arrays-ferroelectric-hafnia">Analog Crossbar Arrays <span class="amp">&amp;</span> Ferroelectric Hafnia</a><ul>
+<li><a href="#the-crossbar-array-architecture">The Crossbar Array Architecture</a><ul>
+<li><a href="#synaptic-device-requirements">Synaptic Device Requirements</a></li>
+</ul>
+</li>
+<li><a href="#material-physics-of-ferroelectric-hafnia-texthfo_2">Material Physics of Ferroelectric Hafnia (\(\text{HfO}_2\))</a><ul>
+<li><a href="#the-2011-paradigm-shift">The 2011 Paradigm Shift</a></li>
+<li><a href="#multifunctional-properties-of-ferroelectric-hafnia">Multifunctional Properties of Ferroelectric Hafnia</a></li>
+</ul>
+</li>
+<li><a href="#polymorphic-crystalline-phases">Polymorphic Crystalline Phases</a></li>
+<li><a href="#experimental-device-engineering-roadmap">Experimental <span class="amp">&amp;</span> Device Engineering Roadmap</a></li>
+</ul>
+</li>
+<li><a href="#summary-outlook">Summary <span class="amp">&amp;</span> Outlook</a></li>
+<li><a href="#references">References</a></li>
+</ul>
+</div>
+        </nav>
+    </div>
+    <div class="span8 article-content">
+            
+            
+<h1 id="introduction-the-quest-for-matter-that-computes">Introduction: The Quest for Matter That Computes<a class="headerlink" href="#introduction-the-quest-for-matter-that-computes" title="Permanent link">¶</a></h1>
+<p>As I set up a local Large Language Model (<span class="caps">LLM</span>) on my laptop last week, I was amazed at the incredible speed improvement compared to running inference on a friend’s five-year-old machine. Yet beneath this remarkable software progress lies an inescapable physical bottleneck: our conventional computing infrastructure is colliding with fundamental thermodynamic and architectural limits.</p>
+<p>The question, of course, is how we can advance our understanding of matter to create ever more powerful, energy-efficient computing systems. Two complementary paths lead toward this goal: developing new, more efficient technology stacks or optimizing existing compute resources. Personally, I am drawn to the prospect of etching neural dynamics directly onto physical systems—harnessing the intrinsic non-linearities, topology, and transport phenomena of condensed matter to build neuromorphic and unconventional computing architectures.</p>
+<hr/>
+<h1 id="background-experimental-foundations">Background <span class="amp">&amp;</span> Experimental Foundations<a class="headerlink" href="#background-experimental-foundations" title="Permanent link">¶</a></h1>
+<p>My fascination with nanoscale physics and hardware began as an undergraduate in the Solid State Physics Laboratory at <span class="caps">BITS</span> Pilani, <span class="caps">K.K.</span> Birla Goa Campus, where I worked under Dr. Ram Shanker Patel and Dr. Dhavala Suri, gaining hands-on experience in basic transport measurements and instrument interfacing.</p>
+<p>The physics department offered a rich curriculum of fundamental and technologically relevant courses—including <em>Quantum Information and Computation</em>, <em>Analog and Digital <span class="caps">VLSI</span> Design</em>, a study-oriented project on <em>Topological Insulators</em>, and <em>Non-linear Dynamics</em>. These courses provided a rigorous theoretical foundation while sparking my curiosity to delve into cutting-edge topics. I followed up by taking dedicated reading courses with faculty on the quantum Hall effect in graphene and 2D materials, topological insulators, and mesoscopic transport. In parallel, coursework in <em>Object-Oriented Programming</em>, <em>Computational Physics</em>, <em>Introduction to High Performance Computing</em>, and computational modeling using Density Functional Theory (<span class="caps">DFT</span>) allowed me to bridge experimental physics with scientific computation.</p>
+<p>In the summer of my second year, I worked as an intern in the Superconductivity Lab at the National Institute of Science Education and Research (<span class="caps">NISER</span>), Bhubaneswar. My project was to design a customized probe for a closed-cycle liquid helium cryostat to perform low-temperature electrical transport measurements. Through this internship, I developed essential practical engineering skills:</p>
+<ul>
+<li><strong>3D <span class="caps">CAD</span> modeling</strong> of the probe head to ensure optimal thermal contact with the sample while minimizing the thermal load on the cryostat (using Fusion 360, Onshape, and Blender).</li>
+<li><strong><span class="caps">PCB</span> designing</strong> for sample holders and multi-stage <span class="caps">RC</span> filtering to suppress high-frequency electrical noise (using Eagle <span class="caps">CAD</span> and EasyEDA).</li>
+<li><strong>Automated instrumentation interfacing</strong> of source measure units (SMUs) and cryogenic temperature controllers for automated resistance-versus-temperature (<span class="math">\(R\text{–}T\)</span>) measurements using LabVIEW and Python.</li>
+</ul>
+<p>In my final year, as part of my Master’s thesis under Dr. Kartik Senapati at <span class="caps">NISER</span>, I worked on a year-long project focused on the fabrication and low-temperature transport characterization of vertical and planar Copper/Niobium (<span class="math">\(\text{Cu/Nb}\)</span>) Josephson junctions. By measuring their <span class="math">\(R\text{–}T\)</span>, current-voltage (<span class="math">\(I\text{–}V\)</span>), and voltage-versus-magnetic-field (<span class="math">\(V\text{–}H\)</span>) characteristics, we verified device functionality and probed interfacial spin-orbit coupling phenomena. This work culminated in a co-authored publication in <em>Nature Communications</em> demonstrating the phase biasing of a Josephson junction via the Rashba-Edelstein effect <a href="#ref23">[23]</a>.</p>
+<p>My experimental work involved cleanroom fabrication and characterization tools, including <span class="caps">UV</span> optical lithography, <span class="caps">DC</span> magnetron sputtering, scanning electron microscopy (<span class="caps">SEM</span>), Gallium-ion Focused Ion Beam (Ga-<span class="caps">FIB</span>) milling, and Physical Property Measurement Systems (<span class="caps">PPMS</span>).</p>
+<figure style="text-align: center; margin: 2rem auto; max-width: 850px;">
+<div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 1.5rem; align-items: center;">
+<div style="flex: 1 1 380px; max-width: 420px;">
+<img alt="SEM colourised image of fabricated Josephson Junction" src="https://ashwinschronicles.github.io/images/JJ-device-colourised.png" style="width: 100%; border-radius: 6px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);"/>
+<figcaption style="font-size: 0.9rem; color: #555; margin-top: 0.5rem;"><strong>(a)</strong> False-colour <span class="caps">SEM</span> image of a vertical/planar Josephson junction device fabricated during my Master’s thesis (Senapati et al., <em>Nature Communications</em> 2023 <a href="#ref23">[23]</a>).</figcaption>
+</div>
+<div style="flex: 1 1 380px; max-width: 420px;">
+<img alt="Cryostat probe design and fabricated piece" src="https://ashwinschronicles.github.io/images/probe.png" style="width: 100%; border-radius: 6px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);"/>
+<figcaption style="font-size: 0.9rem; color: #555; margin-top: 0.5rem;"><strong>(b)</strong> Cryostat probe designed for transport measurements: 3D <span class="caps">CAD</span> model on the left, and the finished fabricated physical probe on the right.</figcaption>
+</div>
+</div>
+<figcaption style="font-size: 0.95rem; font-weight: 600; margin-top: 1rem; color: #333;">Figure 1: Nanoscale fabrication and cryogenic instrumentation foundations.</figcaption>
+</figure>
+<p>Holding a dual major in Physics and Electronics <span class="amp">&amp;</span> Instrumentation gave me a unique vantage point: understanding the quantum and solid-state physics of materials while being able to rapidly design auxiliary circuitry, build custom data acquisition software, and interface laboratory instruments.</p>
+<p>Following my Master’s, I joined the Scientific Support Unit at the Max Planck Institute for the Structure and Dynamics of Matter (<span class="caps">MPSD</span>) in Hamburg as a Research Software Engineer. There, I worked on massively parallel scientific software, high-performance computing (<span class="caps">HPC</span>) workflows, Monte Carlo simulations using the Wang and Landau algorithm, and reproducible research infrastructure.</p>
+<p>It was obvious by then that I was very keen on computing. While I was researching for PhD positions, I kept looking at several kinds of computing paradigms that keep popping up. And the following is a small list of types of computing systems I’ve come across. It is indeed interesting to see how we name nature in different levels to make it do what we want it to do.</p>
+<p>In this article, I reflect on the principles and physical trajectories underpinning this transition. We will explore:</p>
+<ol>
+<li>
+<p><strong>The physical imperative for neuromorphic architectures:</strong> Why modern <span class="caps">AI</span> demands a departure from the Von Neumann paradigm, and what physical principles make biological brains orders of magnitude more efficient.</p>
+</li>
+<li>
+<p><strong>Physical implementation trajectories:</strong> From quantum materials and tunable resistive devices (memristors) to topological spin textures (magnetic and electric skyrmions).</p>
+</li>
+<li>
+<p><strong>Stochastic and Brownian computing:</strong> Utilizing thermal fluctuations, skyrmion reshufflers, and token-based Brownian half-adders to perform non-arithmetic and near-zero-energy computations.</p>
+</li>
+<li>
+<p><strong>Physical reservoir computing:</strong> Exploiting the high-dimensional, non-linear dynamics of magnetic textures and ferroelectric domain walls to process temporal and spatial data without iterative backpropagation.</p>
+</li>
+<li>
+<p><strong>Analog crossbar arrays <span class="amp">&amp;</span> Ferroelectric Hafnia (<span class="math">\(\text{HfO}_2\)</span>):</strong> Performing <span class="math">\(O(1)\)</span> parallel vector-matrix multiplication in the analog domain, the crystallographic polymorphism of ferroelectric hafnia thin films, and the experimental techniques needed to engineer nanoscale synaptic devices.</p>
+</li>
+</ol>
+<hr/>
+<h1 id="unconventional-computing-the-physical-need">Unconventional Computing: The Physical Need<a class="headerlink" href="#unconventional-computing-the-physical-need" title="Permanent link">¶</a></h1>
+<h2 id="the-thermodynamic-wall-of-deep-learning">The Thermodynamic Wall of Deep Learning<a class="headerlink" href="#the-thermodynamic-wall-of-deep-learning" title="Permanent link">¶</a></h2>
+<p>The ongoing revolution in machine learning and artificial intelligence revolves around processing unprecedented volumes of data. Image recognition, natural language translation, audio processing, and generative modeling excel at finding structure in massive datasets. However, executing even an elementary image classification task—such as distinguishing a cat from a dog—consumes hundreds of watts on contemporary graphics processing units (GPUs). In stark contrast, the human biological brain performs this task almost instantaneously while drawing a total power budget of approximately 10 to 20 Watts <a href="#ref13">[13]</a>.</p>
+<p>This orders-of-magnitude disparity in energy efficiency is a fundamental thermodynamic challenge. As global computation demands scale exponentially, electricity consumption and its associated carbon footprint become critical constraints. To transcend this efficiency wall, we must look beyond standard synchronous digital logic and draw inspiration from the computational principles of the biological nervous system.</p>
+<p>The extraordinary energy efficiency of biological brains stems from several key architectural and physical properties <a href="#ref13">[13]</a>:</p>
+<ol>
+<li>
+<p><strong>Sparse Signaling <span class="amp">&amp;</span> Noise Tolerance:</strong> Unlike continuous, high-frequency digital clocking, biological neurons communicate via intermittent, asynchronous action potentials (spikes). Information is encoded sparsely in time and space, enabling the system to operate at minimal dynamic power while naturally tolerating stochastic thermal noise.</p>
+</li>
+<li>
+<p><strong>Co-located Memory and Processing:</strong> Biological neurons and synapses simultaneously store information and compute with it. This completely eliminates the classical <strong>Von Neumann bottleneck</strong>—the costly, energy-intensive movement of data back and forth between physically separated <span class="caps">CPU</span>/<span class="caps">GPU</span> logic and <span class="caps">DRAM</span> memory buses.</p>
+</li>
+<li>
+<p><strong>Massive Parallelism:</strong> The brain employs vast parallel connectivity across approximately <span class="math">\(10^{11}\)</span> neurons and <span class="math">\(10^{14}\)</span> synapses, achieving immense aggregate computational throughput despite low operational speeds (~10–100 Hz).</p>
+</li>
+<li>
+<p><strong>Adaptive, Plastic Synapses:</strong> Biological synapses dynamically adjust their connection strengths (weights) via local biochemical and biophysical mechanisms (such as Spike-Timing-Dependent Plasticity, <span class="caps">STDP</span>), enabling continuous on-line learning without global backpropagation.</p>
+</li>
+<li>
+<p><strong>Inherent Fault Tolerance:</strong> The brain functions robustly despite the stochastic death or failure of individual neurons due to redundant connectivity and continuous structural plasticity.</p>
+</li>
+<li>
+<p><strong>Stochasticity as a Feature:</strong> Thermal noise and probabilistic ion-channel gating provide an intrinsic source of randomness that facilitates probabilistic inference, sampling, and escape from local energetic minima.</p>
+</li>
+</ol>
+<p>By embedding these physical principles directly into solid-state hardware, neuromorphic engineering aims to create non-Von Neumann processors capable of learning and inferring at biological efficiency levels. While initial silicon implementations like <span class="caps">IBM</span>’s TrueNorth and Heidelberg’s BrainScaleS demonstrated the viability of brain-inspired spike routing, realizing the full potential of neuromorphic computing requires nanoscale materials that inherently compute through their internal physics.</p>
+<hr/>
+<h1 id="trajectories-for-physical-hardware-implementation">Trajectories for Physical Hardware Implementation<a class="headerlink" href="#trajectories-for-physical-hardware-implementation" title="Permanent link">¶</a></h1>
+<h2 id="quantum-materials-and-non-linear-dynamics">Quantum Materials and Non-Linear Dynamics<a class="headerlink" href="#quantum-materials-and-non-linear-dynamics" title="Permanent link">¶</a></h2>
+<p>Quantum materials exhibit rich, highly non-linear responses to modest external stimuli <a href="#ref10">[10]</a>. Abrupt changes in electrical resistivity, optical transmission, or magnetic order can be triggered by small electrical voltages, thermal gradients, or optical pulses. In conventional transistors, non-linearity must be engineered through steep subthreshold gate electrostatics. In quantum materials, non-linearity is an intrinsic property of strongly correlated electrons, enabling artificial neurons and synapses with orders-of-magnitude smaller footprints and lower switching energies.</p>
+<h3 id="1-tunable-resistive-devices-memristors-and-phase-change-materials">1. Tunable Resistive Devices: Memristors and Phase Change Materials<a class="headerlink" href="#1-tunable-resistive-devices-memristors-and-phase-change-materials" title="Permanent link">¶</a></h3>
+<p>Memristors—two-terminal passive components whose resistance depends on the history of electric charge or voltage applied across them—are prime candidates for artificial electronic synapses <a href="#ref11">[11]</a>, <a href="#ref19">[19]</a>, <a href="#ref25">[25]</a>, <a href="#ref28">[28]</a>. Their non-volatile, continuously tunable resistance states mimic synaptic weight modulation.</p>
+<p>Memristive switching relies on several distinct physical mechanisms <a href="#ref26">[26]</a>, <a href="#ref27">[27]</a>:</p>
+<ul>
+<li><strong>Electrochemical Metallization (<span class="caps">ECM</span>):</strong> The voltage-driven migration of active metal cations (such as <span class="math">\(\text{Ag}^+\)</span> or <span class="math">\(\text{Cu}^{2+}\)</span>) through an insulating matrix to form and rupture metallic conductive filaments.</li>
+<li><strong>Valence Change Mechanisms (<span class="caps">VCM</span>):</strong> The drift and diffusion of oxygen vacancies in transition metal oxides (<span class="math">\(\text{TiO}_{2-x}\)</span>, <span class="math">\(\text{HfO}_{2-x}\)</span>, <span class="math">\(\text{TaO}_{x}\)</span>), modulating local Schottky or tunneling barriers.</li>
+<li><strong>Phase Change Materials (<span class="caps">PCM</span>):</strong> Reversible structural transitions between a high-conductance crystalline state and a low-conductance amorphous state, typically in chalcogenide alloys like <span class="math">\(\text{Ge}_2\text{Sb}_2\text{Te}_5\)</span> (<span class="caps">GST</span>). While PCMs offer mature fabrication, their switching requires substantial Joule heating to melt the material, and continuous bidirectional analog tuning can be limited by resistance drift and asymmetric crystallization dynamics.</li>
+</ul>
+<p>Advanced memristive devices exhibit device footprints below 10 nm, data retention spanning decades, sub-nanosecond switching speeds, high cycling endurance (<span class="math">\(&gt;10^9\)</span> cycles), and operational currents in the nanoampere to picoampere regime. When organized into 2D crossbar matrices, they execute parallel vector-matrix multiplication directly at the site of data storage <a href="#ref21">[21]</a>.</p>
+<hr/>
+<h2 id="topological-spin-structures-for-computation">Topological Spin Structures for Computation<a class="headerlink" href="#topological-spin-structures-for-computation" title="Permanent link">¶</a></h2>
+<p>Beyond electronic charge transport, the electron’s spin degree of freedom offers dissipation-suppressed pathways for computing. In magnetic thin films with broken inversion symmetry, the interfacial <strong>Dzyaloshinskii-Moriya Interaction (<span class="caps">DMI</span>)</strong> stabilizes topologically protected spin configurations known as <strong>magnetic skyrmions</strong> <a href="#ref7">[7]</a>.</p>
+<figure style="text-align: center; margin: 2rem auto; max-width: 850px;">
+<div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 1.5rem; align-items: center;">
+<div style="flex: 1 1 360px; max-width: 440px;">
+<img alt="Physical reservoir computing schematic" src="https://ashwinschronicles.github.io/images/rnn.svg" style="width: 100%; border-radius: 6px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);"/>
+<figcaption style="font-size: 0.9rem; color: #555; margin-top: 0.5rem;"><strong>(a)</strong> Physical reservoir computing scheme: A magnetic reservoir (e.g., skyrmion fabric) or ferroelectric reservoir (domain walls) projects a non-linear input space into higher-dimensional linear classification boundaries (after Everschor-Sitte et al. <a href="#ref7">[7]</a>).</figcaption>
+</div>
+<div style="flex: 1 1 360px; max-width: 440px;">
+<img alt="Analog crossbar array representation" src="https://ashwinschronicles.github.io/images/crossbar-drawn.png" style="width: 100%; border-radius: 6px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);"/>
+<figcaption style="font-size: 0.9rem; color: #555; margin-top: 0.5rem;"><strong>(b)</strong> Representation of an analog crossbar array: Input voltage pulses <em>V<sub>i</sub></em> enter along row lines, interact with tunable ferroelectric synaptic elements, and produce summed output currents <em>I<sub>j</sub></em> = ∑ <em>V<sub>i</sub> G<sub>ij</sub></em> along column lines.</figcaption>
+</div>
+</div>
+<figcaption style="font-size: 0.95rem; font-weight: 600; margin-top: 1rem; color: #333;">Figure 2: Non-Von Neumann paradigms: Physical reservoir computing and analog crossbar arrays.</figcaption>
+</figure>
+<p>Skyrmions are nanoscale vortex-like whirls of magnetization characterized by an integer topological winding number:</p>
+<div class="math">$$N_{\text{sk}} = \frac{1}{4\pi} \iint \mathbf{m} \cdot \left( \frac{\partial \mathbf{m}}{\partial x} \times \frac{\partial \mathbf{m}}{\partial y} \right) dx \, dy$$</div>
+<p>Because <span class="math">\(N_{\text{sk}} \in \mathbb{Z}\)</span>, a skyrmion cannot be smoothly deformed into a uniform ferromagnetic ground state without creating an energetic singularity. This topological protection makes skyrmions exceptionally robust against structural defects and thermal fluctuations. Furthermore, skyrmions can be set into motion by spin-polarized electrical currents via spin-orbit torques (<span class="caps">SOT</span>) at current densities several orders of magnitude lower than those required to drive conventional ferromagnetic domain walls.</p>
+<p>More recently, analogous topologically protected configurations of <strong>electric dipoles</strong>—such as polar skyrmions, merons, and hopfions—have been discovered in ferroelectric oxide superlattices (such as <span class="math">\((\text{SrTiO}_3)_n / (\text{PbTiO}_3)_n\)</span>) <a href="#ref6">[6]</a>. These polar textures couple directly to electric fields rather than magnetic fields, holding immense promise for ultra-low-energy voltage-controlled neuromorphic devices that eliminate the inductive and resistive penalties of current-driven spintronics. Crucially, as we will discuss in Section 5, ferroelectric oxides based on doped <span class="math">\(\text{HfO}_2\)</span> can be seamlessly integrated into standard <span class="caps">CMOS</span> Back-End-of-Line (<span class="caps">BEOL</span>) fabrication processes <a href="#ref22">[22]</a>.</p>
+<hr/>
+<h1 id="stochastic-brownian-computing">Stochastic <span class="amp">&amp;</span> Brownian Computing<a class="headerlink" href="#stochastic-brownian-computing" title="Permanent link">¶</a></h1>
+<h2 id="skyrmion-reshufflers-for-probabilistic-computing">Skyrmion Reshufflers for Probabilistic Computing<a class="headerlink" href="#skyrmion-reshufflers-for-probabilistic-computing" title="Permanent link">¶</a></h2>
+<p>Conventional digital computers treat thermal fluctuations as unwanted noise that must be suppressed by maintaining high voltage margins. <strong>Stochastic computing</strong>, by contrast, embraces randomness by representing numbers as probabilistic bit streams <a href="#ref17">[17]</a>. For example, a real number <span class="math">\(p \in [0, 1]\)</span> is represented by a sequence of random binary bits where the probability of observing a <code>'1'</code> equals <span class="math">\(p\)</span>.</p>
+<p>In this probabilistic representation, complex mathematical operations collapse into elementary logic:</p>
+<ul>
+<li>Multiplying two independent stochastic bit streams <span class="math">\(A\)</span> (probability <span class="math">\(p_A\)</span>) and <span class="math">\(B\)</span> (probability <span class="math">\(p_B\)</span>) is performed using a single <strong><span class="caps">AND</span> gate</strong>, since <span class="math">\(P(A \land B) = p_A \times p_B\)</span>.</li>
+<li>Scaled addition can be performed using an elementary multiplexer.</li>
+</ul>
+<p>However, the mathematical validity of stochastic computing requires the bit streams to be strictly <strong>uncorrelated</strong>. Generating truly random, uncorrelated bit streams using conventional pseudo-random number generators (LFSRs) requires substantial silicon area and energy.</p>
+<p>Nanoscale skyrmions provide a natural physical solution. Due to their particle-like nature and low pinning thresholds at room temperature, skyrmions exhibit pronounced <strong>Brownian thermal diffusion</strong>. Zázvorka et al. <a href="#ref29">[29]</a> demonstrated a physical <strong>skyrmion reshuffler device</strong>: thermal excitation randomizes the spatial order of skyrmion tokens moving through a microfluidic-like magnetic chamber while preserving the overall token density (probability). This device achieved a residual correlation of only 11%, demonstrating that nanoscale spin textures can serve as native entropy sources for probabilistic computation.</p>
+<h2 id="token-based-brownian-computing">Token-Based Brownian Computing<a class="headerlink" href="#token-based-brownian-computing" title="Permanent link">¶</a></h2>
+<p>Taking thermodynamic efficiency to its ultimate limit, <strong>Brownian computing</strong> operates near the fundamental Landauer limit (<span class="math">\(k_B T \ln 2\)</span> per bit erasure) by allowing thermal fluctuations to drive the computation forward and backward through a state space <a href="#ref14">[14]</a>.</p>
+<p>In token-based Brownian circuits, discrete physical particles (such as individual skyrmions) act as computational tokens. Computation is mediated by three fundamental geometric building blocks <a href="#ref14">[14]</a>:</p>
+<ol>
+<li><strong>Hubs:</strong> Junctions that allow tokens to diffuse between interconnected tracks.</li>
+<li><strong>Ratchets:</strong> Asymmetric potential barriers that establish a preferred drift direction under thermal excitation, preventing backward diffusion.</li>
+<li><strong>C-Joints (Conservative Coincidence Gates):</strong> Non-linear junctions where two tokens must arrive simultaneously to interact and exit through designated output channels.</li>
+</ol>
+<p>These components have been experimentally verified in continuous magnetic thin films <a href="#ref1">[1]</a>, <a href="#ref12">[12]</a>. For instance, research teams have demonstrated a skyrmion-based Brownian half-adder: two input skyrmions diffuse into a central C-joint region; if both are present, their mutual repulsive interaction steers them into the ‘Carry’ output track, whereas a single token exits along the ‘Sum’ track. Computation proceeds via thermal diffusion, requiring minimal external energy input.</p>
+<hr/>
+<h1 id="physical-reservoir-computing">Physical Reservoir Computing<a class="headerlink" href="#physical-reservoir-computing" title="Permanent link">¶</a></h1>
+<h2 id="architectural-principles-of-reservoir-computing">Architectural Principles of Reservoir Computing<a class="headerlink" href="#architectural-principles-of-reservoir-computing" title="Permanent link">¶</a></h2>
+<p>Recurrent Neural Networks (RNNs) are powerful tools for processing temporal, sequential, and dynamical data (such as time-series forecasting, speech recognition, and non-linear system identification). However, training standard RNNs requires Backpropagation Through Time (<span class="caps">BPTT</span>)—an algorithm that is computationally demanding, prone to vanishing and exploding gradients, and difficult to implement directly on edge hardware.</p>
+<p><strong>Reservoir Computing (<span class="caps">RC</span>)</strong> bypasses the training of recurrent weights entirely <a href="#ref7">[7]</a>. The architecture consists of three distinct stages:</p>
+<ol>
+<li><strong>Input Layer:</strong> Feeds the external temporal signal <span class="math">\(\mathbf{u}(t)\)</span> into the reservoir.</li>
+<li><strong>The Reservoir:</strong> A complex, fixed, non-linear recurrent network that projects the low-dimensional input into a high-dimensional spatiotemporal state space <span class="math">\(\mathbf{x}(t)\)</span>.</li>
+<li><strong>Readout Layer:</strong> A simple linear layer that maps the reservoir states to the target output <span class="math">\(\mathbf{y}(t) = \mathbf{W}_{\text{out}} \mathbf{x}(t)\)</span>.</li>
+</ol>
+<p>Crucially, <strong>the internal connections of the reservoir are never modified during training</strong>. Only the weights of the linear readout layer (<span class="math">\(\mathbf{W}_{\text{out}}\)</span>) are trained, which can be accomplished using simple, closed-form linear regression (such as ridge regression or pseudo-inverse methods):</p>
+<div class="math">$$\mathbf{W}_{\text{out}} = \mathbf{Y}_{\text{target}} \mathbf{X}^T (\mathbf{X} \mathbf{X}^T + \lambda \mathbf{I})^{-1}$$</div>
+<p>This eliminates iterative gradient descent through the recurrent core, making reservoir computing fast to train and ideally suited for physical hardware implementations.</p>
+<div style="background: #f8f9fa; border-left: 4px solid #329A97; padding: 1rem 1.25rem; margin: 1.5rem 0; border-radius: 0 4px 4px 0;">
+<p style="margin: 0; font-weight: 600; color: #222;">Core Requirements for a Physical Reservoir:</p>
+<ul style="margin: 0.5rem 0 0 1.25rem; padding: 0; color: #444;">
+<li><strong>High Dimensionality:</strong> The physical substrate must map low-dimensional input signals into a vast space of non-linearly coupled physical observables.</li>
+<li><strong>Non-linearity:</strong> The system’s response to driving forces must be non-linear to render linearly inseparable problems separable in reservoir state space (Figure 2a).</li>
+<li><strong>Short-Term (Fading) Memory:</strong> The current physical state must retain information about past inputs over a finite time window (the <em>echo state property</em>), with past influence decaying smoothly to zero.</li>
+<li><strong>Reproducibility:</strong> Identical input driving sequences must produce identical reservoir trajectories across experimental runs.</li>
+</ul>
+</div>
+<p>Emulating these properties on digital transistors requires substantial circuitry. In contrast, condensed matter systems inherently exhibit non-linearity, memory, and complex collective dynamics at the nanometer scale.</p>
+<hr/>
+<h2 id="magnetic-systems-for-reservoir-computing">Magnetic Systems for Reservoir Computing<a class="headerlink" href="#magnetic-systems-for-reservoir-computing" title="Permanent link">¶</a></h2>
+<p>Magnetic materials are exceptional candidates for physical reservoirs because their spin configurations respond non-linearly to magnetic fields, electrical currents, mechanical strain, and light <a href="#ref7">[7]</a>. Furthermore, magnetic devices can be integrated with <span class="caps">CMOS</span> circuitry via magnetic tunnel junction (<span class="caps">MTJ</span>) technology.</p>
+<p>Candidate magnetic reservoir platforms include:</p>
+<ul>
+<li><strong>Dipole-Coupled Nanomagnet Arrays:</strong> Lithographically patterned islands of ferromagnets whose stray dipolar fields create complex collective relaxation dynamics.</li>
+<li><strong>Spin-Wave Reservoirs:</strong> Propagating magnons in yttrium iron garnet (<span class="caps">YIG</span>) thin films whose non-linear interference processes temporal microwave signals.</li>
+<li><strong>Skyrmion Fabrics:</strong> Dense, disordered ensembles of magnetic skyrmions confined in thin-film geometries <a href="#ref2">[2]</a>, <a href="#ref18">[18]</a>, <a href="#ref20">[20]</a>.</li>
+</ul>
+<p>When an electrical voltage pulse train is applied across a skyrmion fabric, the resulting current exerts spin-transfer and spin-orbit torques on the skyrmions. The textures deform, compress, and interact with material pinning sites. The competition between pinning forces, internal elasticity, and driving torques produces reproducible non-linear deformation and fading memory <a href="#ref18">[18]</a>, <a href="#ref20">[20]</a>. As the current ceases, the magnetic fabric relaxes toward an energetic equilibrium, encoding historical pulse sequences into the local anisotropic magnetoresistance (<span class="caps">AMR</span>) or topological Hall voltage. Extending these magnetic textures into the third spatial dimension (3D vertical nanowires and multilayered stacks) further magnifies the available state space <a href="#ref18">[18]</a>.</p>
+<hr/>
+<h2 id="ferroelectric-systems-for-reservoir-computing">Ferroelectric Systems for Reservoir Computing<a class="headerlink" href="#ferroelectric-systems-for-reservoir-computing" title="Permanent link">¶</a></h2>
+<p>Complementing spin-based reservoirs, ferroelectric materials provide an electrical-field-driven alternative that eliminates Ohmic Joule losses associated with steady-state currents <a href="#ref7">[7]</a>.</p>
+<p>In ferroelectrics, the spontaneous electric polarization can be reoriented by external electric fields, mechanical stress, or optical illumination, producing rich hysteretic and non-linear responses. Diverse device architectures have been explored:</p>
+<ul>
+<li><strong>Ferroelectric Tunnel Junctions (FTJs):</strong> Nanometer-thin ferroelectric barriers sandwiched between metal electrodes, where polarization reversal modulates the quantum mechanical tunneling electroresistance (<span class="caps">TER</span>).</li>
+<li><strong>Ferroelectric Field-Effect Transistors (FeFETs):</strong> Where a ferroelectric gate dielectric modulates the channel conductance of a semiconductor <a href="#ref8">[8]</a>, <a href="#ref15">[15]</a>.</li>
+<li><strong>Conductive Ferroelectric Domain Walls:</strong> The interface separating adjacent domains of differing polarization direction <a href="#ref16">[16]</a>, <a href="#ref21">[21]</a>.</li>
+</ul>
+<p>Ferroelectric domain walls are especially compelling. While the surrounding bulk domains are insulating dielectrics, the domain walls can exhibit substantial electrical conductivity due to localized band bending, structural distortions, and oxygen vacancy accumulation.</p>
+<p>When external voltage pulses are applied, these domain walls move, bend, and nucleate, altering their geometric length and connectivity. This dynamic reconfiguration yields non-linear conductance modulation with intrinsic fading memory <a href="#ref7">[7]</a>. Because domain wall dynamics depend on local defect pinning and elastic restoring forces, networks of domain walls act as physical reservoirs where input voltage signals are naturally mapped into complex conductance states across multi-terminal electrode arrays <a href="#ref21">[21]</a>.</p>
+<hr/>
+<h1 id="analog-crossbar-arrays-ferroelectric-hafnia">Analog Crossbar Arrays <span class="amp">&amp;</span> Ferroelectric Hafnia<a class="headerlink" href="#analog-crossbar-arrays-ferroelectric-hafnia" title="Permanent link">¶</a></h1>
+<h2 id="the-crossbar-array-architecture">The Crossbar Array Architecture<a class="headerlink" href="#the-crossbar-array-architecture" title="Permanent link">¶</a></h2>
+<p>Deep neural networks execute trillions of multiply-accumulate (<span class="caps">MAC</span>) operations:</p>
+<div class="math">$$\mathbf{y} = \mathbf{W} \cdot \mathbf{x} \quad \implies \quad y_j = \sum_{i=1}^n W_{ji} x_i$$</div>
+<p>On conventional digital GPUs, evaluating this matrix-vector multiplication scales with computational complexity <span class="math">\(O(n^2)\)</span>. Each weight must be fetched from memory, loaded into registers, processed in floating-point arithmetic logic units (ALUs), and written back. Memory bus bandwidth and capacitive charging of long interconnect lines dominate system energy consumption.</p>
+<p><strong>Analog crossbar arrays</strong> circumvent this bottleneck by performing matrix-vector multiplication in a single physical step using the fundamental laws of electrical circuits:</p>
+<ol>
+<li>
+<p><strong>Ohm’s Law:</strong> When an input voltage <span class="math">\(V_i\)</span> is applied across a two-terminal device with conductance <span class="math">\(G_{ji}\)</span>, the resulting current is:
+   <div class="math">$$I_{ji} = V_i \cdot G_{ji}$$</div>
+</p>
+</li>
+<li>
+<p><strong>Kirchhoff’s Current Law (<span class="caps">KCL</span>):</strong> When multiple rows feed into a common column line, the currents sum algebraically at the node:
+   <div class="math">$$I_j = \sum_{i=1}^n I_{ji} = \sum_{i=1}^n V_i \cdot G_{ji}$$</div>
+</p>
+</li>
+</ol>
+<p>By mapping neural network inputs to row voltages <span class="math">\(\mathbf{V}\)</span>, synaptic weights to junction conductances <span class="math">\(\mathbf{G}\)</span>, and reading out the column currents <span class="math">\(\mathbf{I}\)</span>, the entire matrix-vector product is computed in <span class="math">\(O(1)\)</span> time complexity in the analog domain <a href="#ref3">[3]</a>.</p>
+<figure style="text-align: center; margin: 2rem auto; max-width: 650px;">
+<img alt="3D rendering of analog crossbar array" src="https://ashwinschronicles.github.io/images/Crossbar.png" style="width: 100%; border-radius: 6px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);"/>
+<figcaption style="font-size: 0.9rem; color: #555; margin-top: 0.5rem;">Figure 3: 3D render of an analog crossbar array showing orthogonal top and bottom electrode bars sandwiching nanoscale ferroelectric functional switching layers.</figcaption>
+</figure>
+<h3 id="synaptic-device-requirements">Synaptic Device Requirements<a class="headerlink" href="#synaptic-device-requirements" title="Permanent link">¶</a></h3>
+<p>To realize high-precision analog acceleration, the crosspoint synaptic device must satisfy stringent physical criteria:</p>
+<ul>
+<li><strong>Fine, Continuous Conductance Tuning:</strong> The device must support numerous distinct, stable conductance levels (ideally <span class="math">\(&gt;1000\)</span> levels) under identical programming pulses to enable high weight resolution.</li>
+<li><strong>High Dynamic Resistance Range:</strong> Overall device resistance should reside in the <span class="math">\(1\text{ to }100\text{ M}\Omega\)</span> regime. Low-resistance devices draw excessive current, causing parasitic <span class="math">\(IR\)</span> voltage drops along metallic interconnect lines that degrade computational accuracy.</li>
+<li><strong>Bidirectional Symmetry <span class="amp">&amp;</span> Linearity:</strong> Weight potentiation (conductance increase) and depression (conductance decrease) should exhibit linear, symmetric trajectories.</li>
+<li><strong><span class="caps">CMOS</span> Compatibility:</strong> The materials must be synthesizable within the thermal and contamination constraints of standard silicon manufacturing (Back-End-of-Line, <span class="caps">BEOL</span>).</li>
+</ul>
+<p>Traditional candidates like phase-change materials (PCMs) and valence-change metal oxides (<span class="math">\(\text{TiO}_x\)</span>, <span class="math">\(\text{TaO}_x\)</span>) often struggle with non-linear switching, high programming currents, and resistance drift. Consequently, attention has converged on <strong>ferroelectric hafnium oxide (<span class="math">\(\text{HfO}_2\)</span>) memristive devices</strong> with engineered electrodes (such as <span class="math">\(\text{WO}_{3-x}\)</span>), which demonstrate reversible analog resistance modulation, sub-nanosecond switching dynamics, and exceptional <span class="caps">BEOL</span> integration potential <a href="#ref4">[4]</a>, <a href="#ref8">[8]</a>.</p>
+<hr/>
+<h2 id="material-physics-of-ferroelectric-hafnia-texthfo_2">Material Physics of Ferroelectric Hafnia (<span class="math">\(\text{HfO}_2\)</span>)<a class="headerlink" href="#material-physics-of-ferroelectric-hafnia-texthfo_2" title="Permanent link">¶</a></h2>
+<h3 id="the-2011-paradigm-shift">The 2011 Paradigm Shift<a class="headerlink" href="#the-2011-paradigm-shift" title="Permanent link">¶</a></h3>
+<p>For decades, ferroelectricity was believed to be restricted to complex perovskite oxides (such as <span class="math">\(\text{BaTiO}_3\)</span> and <span class="math">\(\text{Pb}(\text{Zr,Ti})\text{O}_3\)</span>). These materials suffer from severe scaling limitations: when scaled below ~10 nm, depolarizing fields suppress ferroelectricity (the “critical thickness problem”). Furthermore, perovskite materials contain incompatible elements (lead, bismuth) that poison standard silicon fabrication lines.</p>
+<p>In 2011, Böscke et al. reported the breakthrough discovery of robust ferroelectricity in silicon-doped hafnium oxide (<span class="math">\(\text{Si:HfO}_2\)</span>) thin films capped with TiN electrodes <a href="#ref5">[5]</a>. This was an astonishing finding: <span class="math">\(\text{HfO}_2\)</span> was already the standard high-<span class="math">\(k\)</span> dielectric used in commercial <span class="caps">CMOS</span> transistor gates (introduced at the 45 nm node). Worldwide research over the subsequent decade confirmed that nanoscale doped <span class="math">\(\text{HfO}_2\)</span> thin films retain robust polarization down to thicknesses below 5 nm <a href="#ref24">[24]</a>.</p>
+<p>Zirconium has emerged as the preferred dopant (<span class="math">\(\text{Hf}_{0.5}\text{Zr}_{0.5}\text{O}_2\)</span>, <span class="caps">HZO</span>) because <span class="math">\(\text{HfO}_2\)</span> and <span class="math">\(\text{ZrO}_2\)</span> form a continuous solid solution with lower crystallization temperatures (~<span class="math">\(400^\circ\text{C}\)</span>), fully compatible with <span class="caps">BEOL</span> thermal budgets.</p>
+<h3 id="multifunctional-properties-of-ferroelectric-hafnia">Multifunctional Properties of Ferroelectric Hafnia<a class="headerlink" href="#multifunctional-properties-of-ferroelectric-hafnia" title="Permanent link">¶</a></h3>
+<p>Ferroelectric <span class="math">\(\text{HfO}_2\)</span> exhibits a versatile spectrum of physical properties <a href="#ref24">[24]</a>:</p>
+<ul>
+<li><strong>Pyroelectricity:</strong> Generates electrical charge in response to temperature variations, opening pathways for integrated infrared and thermal gas sensors.</li>
+<li><strong>Piezoelectricity:</strong> Converts mechanical strain into electrical voltage and vice versa, enabling integrated nano-electromechanical systems (<span class="caps">NEMS</span>), acoustic resonators, and energy harvesters.</li>
+<li><strong>Tunable Non-Volatile Polarization:</strong> Enables diverse electronic device classes:</li>
+<li><em>Ferroelectric Random Access Memories (FeRAMs):</em> Ultra-fast, low-power capacitive bit cells.</li>
+<li><em>Ferroelectric Field-Effect Transistors (FeFETs):</em> Three-terminal devices where gate polarization modulates semiconductor channel conductance <a href="#ref15">[15]</a>.</li>
+<li><em>Ferroelectric Tunnel Junctions (FTJs):</em> Two-terminal devices where spontaneous polarization modulates quantum mechanical tunneling electroresistance, delivering power-efficient non-volatile analog memristive switching.</li>
+</ul>
+<hr/>
+<h2 id="polymorphic-crystalline-phases">Polymorphic Crystalline Phases<a class="headerlink" href="#polymorphic-crystalline-phases" title="Permanent link">¶</a></h2>
+<p>The origin of ferroelectricity in <span class="math">\(\text{HfO}_2\)</span> lies in a metastable, non-centrosymmetric orthorhombic crystalline phase. Pure bulk <span class="math">\(\text{HfO}_2\)</span> is not ferroelectric at ambient conditions. Instead, thin films exhibit rich polymorphism among several competing phases <a href="#ref22">[22]</a>, <a href="#ref24">[24]</a>:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Crystalline Phase</th>
+<th style="text-align: center;">Space Group</th>
+<th style="text-align: center;">Centrosymmetric?</th>
+<th style="text-align: center;">Polar / Ferroelectric?</th>
+<th style="text-align: left;">Physical Description <span class="amp">&amp;</span> Stability</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Monoclinic (<span class="math">\(m\)</span>)</strong></td>
+<td style="text-align: center;"><span class="math">\(P2_1/c\)</span></td>
+<td style="text-align: center;">Yes</td>
+<td style="text-align: center;">No (Dielectric)</td>
+<td style="text-align: left;">Thermodynamically stable ground state at room temperature. Exhibits a low dielectric constant (<span class="math">\(k \approx 16\text{–}20\)</span>). Detrimental to ferroelectric device performance.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Cubic (<span class="math">\(c\)</span>)</strong></td>
+<td style="text-align: center;"><span class="math">\(Fm\bar{3}m\)</span></td>
+<td style="text-align: center;">Yes</td>
+<td style="text-align: center;">No (Dielectric)</td>
+<td style="text-align: left;">Stable at high temperatures (<span class="math">\(&gt;2500^\circ\text{C}\)</span>) or high dopant concentrations. Characterized by high dielectric constant (<span class="math">\(k \approx 30\text{–}40\)</span>).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Tetragonal (<span class="math">\(t\)</span>)</strong></td>
+<td style="text-align: center;"><span class="math">\(P4_2/nmc\)</span></td>
+<td style="text-align: center;">Yes</td>
+<td style="text-align: center;">No (Antiferroelectric-like)</td>
+<td style="text-align: left;">High-temperature phase (<span class="math">\(&gt;1700^\circ\text{C}\)</span>). Antiferroelectric-like behavior with field-induced transition to polar phase. High dielectric constant.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Orthorhombic (<span class="math">\(o\text{-FE}\)</span>)</strong></td>
+<td style="text-align: center;"><span class="math">\(Pca2_1\)</span></td>
+<td style="text-align: center;"><strong>No</strong></td>
+<td style="text-align: center;"><strong>Yes (Ferroelectric)</strong></td>
+<td style="text-align: left;"><strong>Metastable polar phase.</strong> Arises from a non-centrosymmetric displacement of oxygen atoms along the polar <span class="math">\(c\)</span>-axis. Stabilized by nanoscale grain boundaries, mechanical clamping, chemical doping, and oxygen vacancies.</td>
+</tr>
+</tbody>
+</table>
+<p>Because the polar orthorhombic phase (<span class="math">\(Pca2_1\)</span>) is metastable relative to the non-polar monoclinic ground state (<span class="math">\(P2_1/c\)</span>), stabilizing it requires careful optimization of several thermodynamic and kinetic parameters:</p>
+<ol>
+<li>
+<p><strong>Surface Energy <span class="amp">&amp;</span> Grain Size:</strong> Due to lower surface energy of the orthorhombic/tetragonal phases compared to the monoclinic phase, keeping grain sizes small (below ~10 nm) thermodynamically stabilizes the polar phase.</p>
+</li>
+<li>
+<p><strong>Chemical Doping:</strong> Doping with <span class="math">\(\text{Zr}^{4+}\)</span>, <span class="math">\(\text{Si}^{4+}\)</span>, <span class="math">\(\text{Al}^{3+}\)</span>, <span class="math">\(\text{Y}^{3+}\)</span>, or <span class="math">\(\text{La}^{3+}\)</span> induces internal lattice strain and promotes oxygen vacancy formation that inhibits transformation into the monoclinic phase.</p>
+</li>
+<li>
+<p><strong>Electrode Clamping:</strong> Capping with top and bottom metallic electrodes (such as TiN or TaN) provides mechanical confinement and in-plane tensile stress during Rapid Thermal Annealing (<span class="caps">RTA</span>), freezing in the non-centrosymmetric orthorhombic lattice.</p>
+</li>
+</ol>
+<hr/>
+<h2 id="experimental-device-engineering-roadmap">Experimental <span class="amp">&amp;</span> Device Engineering Roadmap<a class="headerlink" href="#experimental-device-engineering-roadmap" title="Permanent link">¶</a></h2>
+<p>To translate ferroelectric <span class="math">\(\text{HfO}_2\)</span> into functional analog crossbar computing arrays, several experimental frontiers are being actively pursued:</p>
+<ol>
+<li>
+<p><strong>Atomic Layer Deposition (<span class="caps">ALD</span>):</strong> Thin films must be grown with sub-angstrom thickness control and atomic stoichiometry. <span class="caps">ALD</span> using metal-organic precursors (such as <span class="caps">TDMA</span>-Hf, <span class="caps">TDMA</span>-Zr) and oxidizers (<span class="math">\(\text{H}_2\text{O}\)</span> or <span class="math">\(\text{O}_3\)</span>) allows conformal deposition on high-aspect-ratio 3D structures.</p>
+</li>
+<li>
+<p><strong>Nanostructural Characterization (<span class="caps">HR</span>-<span class="caps">TEM</span>):</strong> High-Resolution Transmission Electron Microscopy coupled with energy-dispersive X-ray spectroscopy (<span class="caps">EDX</span>) is critical to elucidate polycrystalline grain boundaries, phase segregation, and interdiffusion at the <span class="math">\(\text{TiN/HfO}_2\)</span> interface.</p>
+</li>
+<li>
+<p><strong>Piezoresponse Force Microscopy (<span class="caps">PFM</span>):</strong> <span class="caps">PFM</span> enables real-space visualization of nanoscale domain switching dynamics, domain wall velocity, and local coercive field distributions under applied tip biases.</p>
+</li>
+<li>
+<p><strong>Ultrafast Pulse Manipulation:</strong> Exploring the manipulation of hafnia’s crystalline microstructure via ultrafast sub-nanosecond electric pulses. Short, intense pulses induce controlled local Joule heating to amorphize or de-crystallize the material, followed by large adiabatic relaxation pulses to re-crystallize it into desired polymorphic phase distributions.</p>
+</li>
+<li>
+<p><strong>Multiphysics Tuning:</strong> Investigating the interplay of mechanical strain, local temperature gradients, and optical excitation as external tuning parameters to dynamically modulate synaptic conductance.</p>
+</li>
+<li>
+<p><strong>FeFET Synaptic Integration:</strong> Implementing ferroelectric Field-Effect Transistors as synaptic elements <a href="#ref8">[8]</a>, <a href="#ref15">[15]</a>, where partial polarization switching of the gate oxide provides multi-level non-volatile channel conductance states with minimal read disturb.</p>
+</li>
+</ol>
+<hr/>
+<h1 id="summary-outlook">Summary <span class="amp">&amp;</span> Outlook<a class="headerlink" href="#summary-outlook" title="Permanent link">¶</a></h1>
+<p>The transition toward unconventional and neuromorphic computing represents one of the most intellectually invigorating frontiers in condensed matter physics and computer engineering. As standard silicon scaling hits thermal, interconnect, and memory-bandwidth limits, progress hinges on exploiting the intrinsic physics of matter to perform computation.</p>
+<p>Whether through:</p>
+<ul>
+<li>the topological stability and Brownian diffusion of magnetic skyrmions for stochastic computing,</li>
+<li>the high-dimensional fading-memory dynamics of magnetic fabrics and ferroelectric domain walls in physical reservoir computing, or</li>
+<li>the parallel <span class="math">\(O(1)\)</span> vector-matrix multiplication of <span class="caps">CMOS</span>-compatible ferroelectric hafnium oxide analog crossbar arrays,</li>
+</ul>
+<p>the future of computing lies at the interface of nanoscale material physics, experimental instrumentation, and brain-inspired architectures. Bridging the gap between fundamental laboratory discoveries and scalable solid-state devices will shape the next era of energy-efficient, cognitive hardware.</p>
+<hr/>
+<h1 id="references">References<a class="headerlink" href="#references" title="Permanent link">¶</a></h1>
+<div id="ref-list" style="font-size: 0.88rem; line-height: 1.6; color: #444;">
+<p id="ref1"><strong>[1]</strong> M. Goto, R. Ishikawa, S. Miki, T. Nozaki, Y. Suzuki, and E. Tamura, “<span class="caps">GA</span>-03: Hidden skyrmion diffusion and Brownian computing,” <em><span class="caps">IEEE</span> <span class="caps">INTERMAG</span> Conference</em>, 2021.</p>
+<p id="ref2"><strong>[2]</strong> G. Bourianoff, D. Pinna, M. Sitte, and K. Everschor-Sitte, “Potential implementation of reservoir computing models based on magnetic skyrmions,” <em><span class="caps">AIP</span> Advances</em>, vol. 8, no. 5, p. 055602, 2018. <a href="https://doi.org/10.1063/1.5006918" rel="noopener" target="_blank">doi:10.1063/1.5006918</a></p>
+<p id="ref3"><strong>[3]</strong> L. Bégon-Lours, M. Halter, D. Dávila Pineda, V. Bragaglia, Y. Popoff, A. La Porta, D. Jubin, J. Fompeyrine, and <span class="caps">B. J.</span> Offrein, “A Back-End-Of-Line Compatible, Ferroelectric Analog Non-Volatile Memory,” <em>2021 <span class="caps">IEEE</span> International Memory Workshop (<span class="caps">IMW</span>)</em>, pp. 1–4, 2021. <a href="https://doi.org/10.1109/IMW51353.2021.9439600" rel="noopener" target="_blank">doi:10.1109/<span class="caps">IMW51353</span>.2021.9439600</a></p>
+<p id="ref4"><strong>[4]</strong> L. Bégon-Lours, M. Halter, Y. Popoff, Z. Yu, <span class="caps">D. F.</span> Falcone, D. Dávila, V. Bragaglia, A. La Porta, D. Jubin, J. Fompeyrine, and <span class="caps">B. J.</span> Offrein, “Analog Resistive Switching in <span class="caps">BEOL</span>, Ferroelectric Synaptic Weights,” <em><span class="caps">IEEE</span> Journal of the Electron Devices Society</em>, vol. 9, pp. 1275–1281, 2021. <a href="https://doi.org/10.1109/JEDS.2021.3129598" rel="noopener" target="_blank">doi:10.1109/<span class="caps">JEDS</span>.2021.3129598</a></p>
+<p id="ref5"><strong>[5]</strong> <span class="caps">T. S.</span> Böscke, J. Müller, D. Bräuhaus, U. Schröder, and U. Böttger, “Ferroelectricity in hafnium oxide thin films,” <em>Applied Physics Letters</em>, vol. 99, no. 10, p. 102903, 2011. <a href="https://doi.org/10.1063/1.3634052" rel="noopener" target="_blank">doi:10.1063/1.3634052</a></p>
+<p id="ref6"><strong>[6]</strong> S. Das, <span class="caps">Y. L.</span> Tang, Z. Hong, <span class="caps">M. A. P.</span> Gonçalves, <span class="caps">M. R.</span> McCarter, C. Klewe, <span class="caps">K. X.</span> Nguyen, F. Gómez-Ortiz, P. Shafer, E. Arenholz, <span class="caps">V. A.</span> Stoica, S.-L. Hsu, B. Wang, C. Ophus, <span class="caps">J. F.</span> Liu, <span class="caps">C. T.</span> Nelson, S. Saremi, B. Prasad, <span class="caps">A. B.</span> Mei, <span class="caps">D. G.</span> Schlom, J. Íñiguez, P. García-Fernández, <span class="caps">D. A.</span> Muller, <span class="caps">L. Q.</span> Chen, J. Junquera, <span class="caps">L. W.</span> Martin, and R. Ramesh, “Observation of room-temperature polar skyrmions,” <em>Nature</em>, vol. 568, no. 7752, pp. 368–372, 2019. <a href="https://doi.org/10.1038/s41586-019-1092-8" rel="noopener" target="_blank">doi:10.1038/s41586-019-1092-8</a></p>
+<p id="ref7"><strong>[7]</strong> K. Everschor-Sitte, A. Majumdar, K. Wolk, and D. Meier, “Novel implementations for reservoir computing – from spin to charge,” <em>arXiv preprint arXiv:2311.12185</em>, 2023.</p>
+<p id="ref8"><strong>[8]</strong> <span class="caps">D. F.</span> Falcone, M. Halter, L. Bégon-Lours, and <span class="caps">B. J.</span> Offrein, “Back-End, <span class="caps">CMOS</span>-Compatible Ferroelectric FinFET for Synaptic Weights,” <em>Frontiers in Electronic Materials</em>, vol. 2, p. 883196, 2022. <a href="https://doi.org/10.3389/femat.2022.883196" rel="noopener" target="_blank">doi:10.3389/femat.2022.883196</a></p>
+<p id="ref9"><strong>[9]</strong> H. Fangohr et al., “Ground state search, hysteretic behaviour and reversal mechanism of skyrmionic textures in confined helimagnetic nanostructures,” <em>Scientific Reports</em>, vol. 5, no. 1, p. 17300, 2015. <a href="https://doi.org/10.1038/srep17300" rel="noopener" target="_blank">doi:10.1038/srep17300</a></p>
+<p id="ref10"><strong>[10]</strong> A. Hoffmann et al., “Quantum materials for energy-efficient neuromorphic computing: Opportunities and challenges,” <em><span class="caps">APL</span> Materials</em>, vol. 10, no. 7, p. 070904, 2022. <a href="https://doi.org/10.1063/5.0094205" rel="noopener" target="_blank">doi:10.1063/5.0094205</a></p>
+<p id="ref11"><strong>[11]</strong> D. Ielmini and H.-<span class="caps">S. P.</span> Wong, “In-memory computing with resistive switching devices,” <em>Nature Electronics</em>, vol. 1, no. 6, pp. 333–343, 2018. <a href="https://doi.org/10.1038/s41928-018-0092-2" rel="noopener" target="_blank">doi:10.1038/s41928-018-0092-2</a></p>
+<p id="ref12"><strong>[12]</strong> Y. Jibiki et al., “Skyrmion Brownian circuit implemented in continuous ferromagnetic thin film,” <em>Applied Physics Letters</em>, vol. 117, no. 8, p. 082402, 2020. <a href="https://doi.org/10.1063/5.0019918" rel="noopener" target="_blank">doi:10.1063/5.0019918</a></p>
+<p id="ref13"><strong>[13]</strong> D. Kuzum, <span class="caps">R. G. D.</span> Jeyasingh, B. Lee, and H.-<span class="caps">S. P.</span> Wong, “Nanoelectronic Programmable Synapses Based on Phase Change Materials for Brain-Inspired Computing,” <em>Nano Letters</em>, vol. 12, no. 5, pp. 2179–2186, 2011. <a href="https://doi.org/10.1021/nl201040y" rel="noopener" target="_blank">doi:10.1021/nl201040y</a></p>
+<p id="ref14"><strong>[14]</strong> J. Lee et al., “Brownian Circuits: Designs,” <em>International Journal of Unconventional Computing</em>, vol. 12, pp. 341–362, 2016.</p>
+<p id="ref15"><strong>[15]</strong> H. Mulaosmanovic, J. Ocker, S. Müller, M. Noack, J. Müller, P. Polakowski, T. Mikolajick, and S. Slesazeck, “Novel ferroelectric <span class="caps">FET</span> based synapse for neuromorphic systems,” <em>2017 Symposium on <span class="caps">VLSI</span> Technology</em>, pp. T176–T177, 2017. <a href="https://doi.org/10.23919/VLSIT.2017.7998165" rel="noopener" target="_blank">doi:10.23919/<span class="caps">VLSIT</span>.2017.7998165</a></p>
+<p id="ref16"><strong>[16]</strong> <span class="caps">G. F.</span> Nataf, M. Guennou, <span class="caps">J. M.</span> Gregg, D. Meier, J. Hlinka, <span class="caps">E. K. H.</span> Salje, and J. Kreisel, “Domain-wall engineering and topological defects in ferroelectric and ferroelastic materials,” <em>Nature Reviews Physics</em>, vol. 2, no. 11, pp. 634–648, 2020. <a href="https://doi.org/10.1038/s42254-020-0235-z" rel="noopener" target="_blank">doi:10.1038/s42254-020-0235-z</a></p>
+<p id="ref17"><strong>[17]</strong> D. Pinna, F. Abreu Araujo, J.-V. Kim, V. Cros, D. Querlioz, P. Bessiere, J. Droulez, and J. Grollier, “Skyrmion Gas Manipulation for Probabilistic Computing,” <em>Physical Review Applied</em>, vol. 9, no. 6, p. 064018, 2018. <a href="https://doi.org/10.1103/PhysRevApplied.9.064018" rel="noopener" target="_blank">doi:10.1103/PhysRevApplied.9.064018</a></p>
+<p id="ref18"><strong>[18]</strong> D. Pinna, G. Bourianoff, and K. Everschor-Sitte, “Reservoir Computing with Random Skyrmion Textures,” <em>Physical Review Applied</em>, vol. 14, no. 5, p. 054020, 2020. <a href="https://doi.org/10.1103/PhysRevApplied.14.054020" rel="noopener" target="_blank">doi:10.1103/PhysRevApplied.14.054020</a></p>
+<p id="ref19"><strong>[19]</strong> M. Prezioso, F. Merrikh-Bayat, <span class="caps">B. D.</span> Hoskins, <span class="caps">G. C.</span> Adam, <span class="caps">K. K.</span> Likharev, and <span class="caps">D. B.</span> Strukov, “Training and operation of an integrated neuromorphic network based on metal-oxide memristors,” <em>Nature</em>, vol. 521, no. 7550, pp. 61–64, 2015. <a href="https://doi.org/10.1038/nature14441" rel="noopener" target="_blank">doi:10.1038/nature14441</a></p>
+<p id="ref20"><strong>[20]</strong> D. Prychynenko, M. Sitte, K. Litzius, B. Krüger, G. Bourianoff, M. Kläui, J. Sinova, and K. Everschor-Sitte, “Magnetic Skyrmion as a Nonlinear Resistive Element: A Potential Building Block for Reservoir Computing,” <em>Physical Review Applied</em>, vol. 9, no. 1, p. 014034, 2018. <a href="https://doi.org/10.1103/PhysRevApplied.9.014034" rel="noopener" target="_blank">doi:10.1103/PhysRevApplied.9.014034</a></p>
+<p id="ref21"><strong>[21]</strong> <span class="caps">J. L.</span> Rieck, D. Cipollini, M. Salverda, <span class="caps">C. P.</span> Quinteros, <span class="caps">L. R. B.</span> Schomaker, and B. Noheda, “Ferroelastic Domain Walls in BiFeO3 as Memristive Networks,” <em>Advanced Intelligent Systems</em>, vol. 5, no. 1, p. 2200230, 2022. <a href="https://doi.org/10.1002/aisy.202200230" rel="noopener" target="_blank">doi:10.1002/aisy.202200230</a></p>
+<p id="ref22"><strong>[22]</strong> U. Schroeder et al., “Hafnium Oxide Based <span class="caps">CMOS</span> Compatible Ferroelectric Materials,” <em><span class="caps">ECS</span> Journal of Solid State Science and Technology</em>, vol. 2, no. 4, pp. N69–N72, 2013. <a href="https://doi.org/10.1149/2.010304jss" rel="noopener" target="_blank">doi:10.1149/2.010304jss</a></p>
+<p id="ref23"><strong>[23]</strong> T. Senapati, <span class="caps">A. K.</span> Karnad, and K. Senapati, “Phase biasing of a Josephson junction using Rashba Edelstein effect,” <em>Nature Communications</em>, vol. 14, no. 1, p. 7511, 2023. <a href="https://doi.org/10.1038/s41467-023-43358-0" rel="noopener" target="_blank">doi:10.1038/s41467-023-43358-0</a></p>
+<p id="ref24"><strong>[24]</strong> <span class="caps">J. P. B.</span> Silva, L. Bégon-Lours, et al., “Roadmap on ferroelectric hafnia- and zirconia-based materials and devices,” <em><span class="caps">APL</span> Materials</em>, vol. 11, no. 8, p. 089201, 2023. <a href="https://doi.org/10.1063/5.0148068" rel="noopener" target="_blank">doi:10.1063/5.0148068</a></p>
+<p id="ref25"><strong>[25]</strong> <span class="caps">D. B.</span> Strukov, <span class="caps">G. S.</span> Snider, <span class="caps">D. R.</span> Stewart, and <span class="caps">R. S.</span> Williams, “The missing memristor found,” <em>Nature</em>, vol. 453, no. 7191, pp. 80–83, 2008. <a href="https://doi.org/10.1038/nature06932" rel="noopener" target="_blank">doi:10.1038/nature06932</a></p>
+<p id="ref26"><strong>[26]</strong> R. Waser, R. Dittmann, G. Staikov, and K. Szot, “Redox-Based Resistive Switching Memories – Nanoionic Mechanisms, Prospects, and Challenges,” <em>Advanced Materials</em>, vol. 21, no. 25–26, pp. 2632–2663, 2009. <a href="https://doi.org/10.1002/adma.200900375" rel="noopener" target="_blank">doi:10.1002/adma.200900375</a></p>
+<p id="ref27"><strong>[27]</strong> <span class="caps">M. A.</span> Zidan, A. Chen, G. Indiveri, and <span class="caps">W. D.</span> Lu, “Memristive computing devices and applications,” <em>Journal of Electroceramics</em>, vol. 39, no. 1–4, pp. 4–20, 2017. <a href="https://doi.org/10.1007/s10832-017-0087-4" rel="noopener" target="_blank">doi:10.1007/s10832-017-0087-4</a></p>
+<p id="ref28"><strong>[28]</strong> <span class="caps">M. A.</span> Zidan, <span class="caps">J. P.</span> Strachan, and <span class="caps">W. D.</span> Lu, “The future of electronics based on memristive systems,” <em>Nature Electronics</em>, vol. 1, no. 1, pp. 22–29, 2018. <a href="https://doi.org/10.1038/s41928-017-0006-8" rel="noopener" target="_blank">doi:10.1038/s41928-017-0006-8</a></p>
+<p id="ref29"><strong>[29]</strong> J. Zázvorka, F. Jakobs, D. Heinze, N. Keil, S. Kromin, S. Jaiswal, K. Litzius, G. Jakob, P. Virnau, D. Pinna, K. Everschor-Sitte, L. Rózsa, A. Donges, U. Nowak, and M. Kläui, “Thermal skyrmion diffusion used in a reshuffler device,” <em>Nature Nanotechnology</em>, vol. 14, no. 7, pp. 658–661, 2019. <a href="https://doi.org/10.1038/s41565-019-0436-8" rel="noopener" target="_blank">doi:10.1038/s41565-019-0436-8</a></p>
+</div>
+<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width < 768) ? "left" : align;
+        indent = (screen.width < 768) ? "0em" : indent;
+        linebreak = (screen.width < 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-AMS-MML_HTMLorMML';
+
+    var configscript = document.createElement('script');
+    configscript.type = 'text/x-mathjax-config';
+    configscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'none' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        availableFonts: ['STIX', 'TeX']," +
+        "        preferredFont: 'STIX'," +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+</script>
+
+
+             
+
+
+<div class="applause_button">
+    <applause-button url=https://ashwinschronicles.github.io/unconventional-and-neuromorphic-computing> </applause-button>
+</div>
+
+ 
+                <p id="post-share-links">
+    Like this post? Share on:
+      <a href="https://twitter.com/intent/tweet?text=Unconventional%C2%A0Computing%3A%20From%20Topological%20Spin%20Textures%20to%20Ferroelectric%20Crossbar%20Arrays&url=https%3A//ashwinschronicles.github.io/unconventional-and-neuromorphic-computing&via=iamashwin99&hashtags=neuromorphic-computing,unconventional-computing,magnetic-skyrmions,reservoir-computing,memristor,ferroelectrics,hafnium-oxide,crossbar-array,spintronics,condensed-matter" target="_blank" rel="nofollow noopener noreferrer" title="Share on Twitter">Twitter</a>
+ ❄       <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A//ashwinschronicles.github.io/unconventional-and-neuromorphic-computing" target="_blank" rel="nofollow noopener noreferrer" title="Share on Facebook">Facebook</a>
+ ❄       <a href="https://www.reddit.com/submit?url=https%3A//ashwinschronicles.github.io/unconventional-and-neuromorphic-computing&title=Unconventional%C2%A0Computing%3A%20From%20Topological%20Spin%20Textures%20to%20Ferroelectric%20Crossbar%20Arrays" target="_blank" rel="nofollow noopener noreferrer" title="Share on Reddit">Reddit</a>
+ ❄       <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A//ashwinschronicles.github.io/unconventional-and-neuromorphic-computing&title=Unconventional%C2%A0Computing%3A%20From%20Topological%20Spin%20Textures%20to%20Ferroelectric%20Crossbar%20Arrays&summary=An%20exploration%20of%20unconventional%20and%20neuromorphic%20computing%20architectures%E2%80%94bridging%20the%20physics%20of%20brain%20efficiency%2C%20topological%20spin%20textures%20%28skyrmions%29%2C%20physical%20reservoir%20computing%2C%20and%20CMOS-compatible%20ferroelectric%20hafnium%20oxide%20%28HfO2%29%20analog%20crossbar%C2%A0arrays.&source=https%3A//ashwinschronicles.github.io/unconventional-and-neuromorphic-computing" target="_blank" rel="nofollow noopener noreferrer" title="Share on LinkedIn">LinkedIn</a>
+ ❄       <a href="mailto:?subject=Unconventional%C2%A0Computing%3A%20From%20Topological%20Spin%20Textures%20to%20Ferroelectric%20Crossbar%20Arrays&amp;body=https%3A//ashwinschronicles.github.io/unconventional-and-neuromorphic-computing" target="_blank" rel="nofollow noopener noreferrer" title="Share via Email">Email</a>
+
+            
+            
+
+
+
+
+
+
+
+<section>
+    <h6 style="display:none;">Comments</h6>
+    <p id="comment-message">So what do you think? Did I miss something? Is any part unclear? Leave your comments below. </p>
+
+    <div class="accordion" id="accordion2">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                <a class="accordion-toggle disqus-comment-count comment-count collapsed"
+                   data-toggle="collapse"
+                   data-parent="#accordion2"
+                   href="https://ashwinschronicles.github.io/unconventional-and-neuromorphic-computing#comment_thread"
+                   id="comment-accordion-toggle">
+                    Comments
+                </a>
+            </div>
+            <div id="comment_thread" class="accordion-body collapse">
+                <div class="accordion-inner">
+                    <div class="comments">
+
+                        <script src="https://utteranc.es/client.js"
+        data-repo="ashwinschronicles/ashwinschronicles.github.io"
+        data-issue-term="https://ashwinschronicles.github.io/unconventional-and-neuromorphic-computing"
+        data-label="💬Website-comments"
+        data-theme=""
+        crossorigin="anonymous"
+        async>
+</script>
+
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+            <hr/>
+            <aside>
+            <nav>
+            <ul class="articles-timeline">
+                <li class="previous-article">« <a href="https://ashwinschronicles.github.io/josephson-junction-simulation-and-analysis" title="Previous: Study of Josephson Junction. - II: Simulations and analysis">Study of Josephson Junction. <small class="subtitle">II: Simulations and analysis</small></a></li>
+                <li class="next-article"><a href="https://ashwinschronicles.github.io/gh-pages-with-pelican" title="Next: Make a Github Pages blog with Pelican">Make a Github Pages blog with Pelican</a> »</li>
+            </ul>
+            </nav>
+            </aside>
+        </div>
+        <section id="article-sidebar" class="span2">
+    <h4>Reading Time</h4>
+    <p>~22 min read</p>
+            <h4>Published</h4>
+            <time itemprop="dateCreated" datetime="2024-03-15T00:00:00+05:30">Mar 15, 2024</time>
+<h4>Last Updated</h4>
+<time datetime="2026-10-30T00:00:00+05:30">Oct 30, 2026</time>
+
+            <h4>Category</h4>
+            <a class="category-link" href="https://ashwinschronicles.github.io/categories#science-ref">Science</a>
+            <h4>Tags</h4>
+            <ul class="list-of-tags tags-in-article">
+                <li><a href="https://ashwinschronicles.github.io/tags#condensed-matter-ref">Condensed Matter
+                    <span class="superscript">1</span>
+</a></li>
+                <li><a href="https://ashwinschronicles.github.io/tags#crossbar-array-ref">Crossbar Array
+                    <span class="superscript">1</span>
+</a></li>
+                <li><a href="https://ashwinschronicles.github.io/tags#ferroelectrics-ref">Ferroelectrics
+                    <span class="superscript">1</span>
+</a></li>
+                <li><a href="https://ashwinschronicles.github.io/tags#hafnium-oxide-ref">Hafnium Oxide
+                    <span class="superscript">1</span>
+</a></li>
+                <li><a href="https://ashwinschronicles.github.io/tags#magnetic-skyrmions-ref">Magnetic Skyrmions
+                    <span class="superscript">1</span>
+</a></li>
+                <li><a href="https://ashwinschronicles.github.io/tags#memristor-ref">Memristor
+                    <span class="superscript">1</span>
+</a></li>
+                <li><a href="https://ashwinschronicles.github.io/tags#neuromorphic-computing-ref">Neuromorphic Computing
+                    <span class="superscript">1</span>
+</a></li>
+                <li><a href="https://ashwinschronicles.github.io/tags#reservoir-computing-ref">Reservoir Computing
+                    <span class="superscript">1</span>
+</a></li>
+                <li><a href="https://ashwinschronicles.github.io/tags#spintronics-ref">Spintronics
+                    <span class="superscript">1</span>
+</a></li>
+                <li><a href="https://ashwinschronicles.github.io/tags#unconventional-computing-ref">Unconventional Computing
+                    <span class="superscript">1</span>
+</a></li>
+            </ul>
+<h4>Stay in Touch</h4>
+<div id="sidebar-social-link">
+    <a href="mailto:hi@karnadash.win" title="Say hi" target="_blank" rel="nofollow noopener noreferrer">
+        <svg xmlns="http://www.w3.org/2000/svg" aria-label="Mail" role="img" viewBox="0 0 512 512"><rect width="512" height="512" rx="15%" fill="#328cff"/><path d="m250 186c-46 0-69 35-69 74 0 44 29 72 68 72 43 0 73-32 73-75 0-44-34-71-72-71zm-1-37c30 0 57 13 77 33 0-22 35-22 35 1v150c-1 10 10 16 16 9 25-25 54-128-14-187-64-56-149-47-195-15-48 33-79 107-49 175 33 76 126 99 182 76 28-12 41 26 12 39-45 19-168 17-225-82-38-68-36-185 67-248 78-46 182-33 244 32 66 69 62 197-2 246-28 23-71 1-71-32v-11c-20 20-47 32-77 32-57 0-108-51-108-108 0-58 51-110 108-110" fill="#fff"/></svg>
+    </a>
+    <a href="/feeds/all.atom.xml" title="" target="_blank" rel="nofollow noopener noreferrer">
+        <svg xmlns="http://www.w3.org/2000/svg" aria-label="RSS" role="img" viewBox="0 0 512 512"><rect width="512" height="512" rx="15%" fill="#f80"/><circle cx="145" cy="367" r="35" fill="#fff"/><path fill="none" stroke="#fff" stroke-width="60" d="M109 241c89 0 162 73 162 162M109 127c152 0 276 124 276 276"/></svg>
+    </a>
+    <a href="https://www.facebook.com/iamashwin99" title="" target="_blank" rel="nofollow noopener noreferrer">
+        <svg xmlns="http://www.w3.org/2000/svg" aria-label="Facebook" role="img" viewBox="0 0 512 512"><rect width="512" height="512" rx="15%" fill="#1877f2"/><path d="M355.6 330l11.4-74h-71v-48c0-20.2 9.9-40 41.7-40H370v-63s-29.3-5-57.3-5c-58.5 0-96.7 35.4-96.7 99.6V256h-65v74h65v182h80V330h59.6z" fill="#fff"/></svg>
+    </a>
+    <a href="https://www.linkedin.com/in/ashwin-k-4854b8121/" title="" target="_blank" rel="nofollow noopener noreferrer">
+        <svg xmlns="http://www.w3.org/2000/svg" aria-label="LinkedIn" role="img" viewBox="0 0 512 512" fill="#fff"><rect width="512" height="512" rx="15%" fill="#0077b5"/><circle cx="142" cy="138" r="37"/><path stroke="#fff" stroke-width="66" d="M244 194v198M142 194v198"/><path d="M276 282c0-20 13-40 36-40 24 0 33 18 33 45v105h66V279c0-61-32-89-76-89-34 0-51 19-59 32"/></svg>
+    </a>
+</div>
+            
+
+
+
+
+
+            
+
+
+
+<div id="mc-embed-signup">
+<!-- BEGIN FreeLists WEB FORM -->
+<form action="https://www.freelists.org/list/ashwinschronicles@freelists.org" target="_blank">
+<h4>Get New Release Alert</h4>
+  <input type="submit" value="Notify me" class="button">
+</form>
+<!-- END FreeLists WEB FORM -->
+</div>
+
+
+
+        </section>
+</div>
+</article>
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe.
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides.
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo https://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>                    </div>
+                    <div class="span1"></div>
+                </div>
+            </div>
+        </div>
+<footer>
+    <div>
+        All articles written by me in this website are licensed under <a rel="license"
+    href="http://creativecommons.org/licenses/by/4.0/">
+    Creative Commons Attribution 4.0 International License</a>.
+    </div>
+
+
+
+
+    <div id="fpowered">
+        Powered by: <a href="http://getpelican.com/" title="Pelican Home Page" target="_blank" rel="nofollow noopener noreferrer">Pelican</a>
+        Theme: <a href="https://elegant.oncrashreboot.com/" title="Theme Elegant Home Page" target="_blank" rel="nofollow noopener noreferrer">Elegant</a>
+    </div>
+</footer>            <script src="//code.jquery.com/jquery.min.js"></script>
+        <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+        <script src="https://ashwinschronicles.github.io/theme/js/elegant.prod.9e9d5ce754.js"></script>
+        <script>
+            function validateForm(query)
+            {
+                return (query.length > 0);
+            }
+        </script>
+
+    <script>
+    (function () {
+        if (window.location.hash.match(/^#comment-\d+$/)) {
+            $('#comment_thread').collapse('show');
+        }
+    })();
+    window.onhashchange=function(){
+        if (window.location.hash.match(/^#comment-\d+$/))
+            window.location.reload(true);
+    }
+    $('#comment_thread').on('shown', function () {
+        var link = document.getElementById('comment-accordion-toggle');
+        var old_innerHTML = link.innerHTML;
+        $(link).fadeOut(200, function() {
+            $(this).text('Click here to hide comments').fadeIn(200);
+        });
+        $('#comment_thread').on('hidden', function () {
+            $(link).fadeOut(200, function() {
+                $(this).text(old_innerHTML).fadeIn(200);
+            });
+        })
+    })
+</script>
+
+<!-- Start of StatCounter Code for Default Guide -->
+<script>
+var sc_project=12223345;
+var sc_invisible=1;
+var sc_security="2ee4ddde";
+var scJsHost = (("https:" == document.location.protocol) ?
+"https://secure." : "http://www.");
+document.write("<sc"+"ript type='text/javascript' src='" +
+scJsHost+
+"statcounter.com/counter/counter.js'></"+"script>");
+</script>
+<noscript><div class="statcounter"><a title="web analytics"
+href="http://statcounter.com/" target="_blank" rel="nofollow noopener noreferrer"><img
+class="statcounter"
+src="//c.statcounter.com/12223345/0/2ee4ddde/1/"
+alt="web analytics"></a></div></noscript>
+<!-- End of StatCounter Code for Default Guide -->
+    </body>
+    <!-- Theme: Elegant built for Pelican
+        License : MIT -->
+</html>
