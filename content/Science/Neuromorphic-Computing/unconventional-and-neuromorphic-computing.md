@@ -28,6 +28,7 @@ My fascination with nanoscale physics and hardware began as an undergraduate in 
 The physics department offered a rich curriculum of fundamental and technologically relevant courses—including *Quantum Information and Computation*, *Analog and Digital VLSI Design*, a study-oriented project on *Topological Insulators*, and *Non-linear Dynamics*. These courses provided a rigorous theoretical foundation while sparking my curiosity to delve into cutting-edge topics. I followed up by taking dedicated reading courses with faculty on the quantum Hall effect in graphene and 2D materials, topological insulators, and mesoscopic transport. In parallel, coursework in *Object-Oriented Programming*, *Computational Physics*, *Introduction to High Performance Computing*, and computational modeling using Density Functional Theory (DFT) allowed me to bridge experimental physics with scientific computation.
 
 In the summer of my second year, I worked as an intern in the Superconductivity Lab at the National Institute of Science Education and Research (NISER), Bhubaneswar. My project was to design a customized probe for a closed-cycle liquid helium cryostat to perform low-temperature electrical transport measurements. Through this internship, I developed essential practical engineering skills:
+
 - **3D CAD modeling** of the probe head to ensure optimal thermal contact with the sample while minimizing the thermal load on the cryostat (using Fusion 360, Onshape, and Blender).
 - **PCB designing** for sample holders and multi-stage RC filtering to suppress high-frequency electrical noise (using Eagle CAD and EasyEDA).
 - **Automated instrumentation interfacing** of source measure units (SMUs) and cryogenic temperature controllers for automated resistance-versus-temperature ($R\text{–}T$) measurements using LabVIEW and Python.
@@ -58,10 +59,15 @@ It was obvious by then that I was very keen on computing. While I was researchin
 
 
 In this article, I reflect on the principles and physical trajectories underpinning this transition. We will explore:
+
 1. **The physical imperative for neuromorphic architectures:** Why modern AI demands a departure from the Von Neumann paradigm, and what physical principles make biological brains orders of magnitude more efficient.
+
 2. **Physical implementation trajectories:** From quantum materials and tunable resistive devices (memristors) to topological spin textures (magnetic and electric skyrmions).
+
 3. **Stochastic and Brownian computing:** Utilizing thermal fluctuations, skyrmion reshufflers, and token-based Brownian half-adders to perform non-arithmetic and near-zero-energy computations.
+
 4. **Physical reservoir computing:** Exploiting the high-dimensional, non-linear dynamics of magnetic textures and ferroelectric domain walls to process temporal and spatial data without iterative backpropagation.
+
 5. **Analog crossbar arrays & Ferroelectric Hafnia ($\text{HfO}_2$):** Performing $O(1)$ parallel vector-matrix multiplication in the analog domain, the crystallographic polymorphism of ferroelectric hafnia thin films, and the experimental techniques needed to engineer nanoscale synaptic devices.
 
 ---
@@ -103,6 +109,7 @@ Quantum materials exhibit rich, highly non-linear responses to modest external s
 Memristors—two-terminal passive components whose resistance depends on the history of electric charge or voltage applied across them—are prime candidates for artificial electronic synapses [[11]](#ref11), [[19]](#ref19), [[25]](#ref25), [[28]](#ref28). Their non-volatile, continuously tunable resistance states mimic synaptic weight modulation.
 
 Memristive switching relies on several distinct physical mechanisms [[26]](#ref26), [[27]](#ref27):
+
 - **Electrochemical Metallization (ECM):** The voltage-driven migration of active metal cations (such as $\text{Ag}^+$ or $\text{Cu}^{2+}$) through an insulating matrix to form and rupture metallic conductive filaments.
 - **Valence Change Mechanisms (VCM):** The drift and diffusion of oxygen vacancies in transition metal oxides ($\text{TiO}_{2-x}$, $\text{HfO}_{2-x}$, $\text{TaO}_{x}$), modulating local Schottky or tunneling barriers.
 - **Phase Change Materials (PCM):** Reversible structural transitions between a high-conductance crystalline state and a low-conductance amorphous state, typically in chalcogenide alloys like $\text{Ge}_2\text{Sb}_2\text{Te}_5$ (GST). While PCMs offer mature fabrication, their switching requires substantial Joule heating to melt the material, and continuous bidirectional analog tuning can be limited by resistance drift and asymmetric crystallization dynamics.
@@ -146,6 +153,7 @@ More recently, analogous topologically protected configurations of **electric di
 Conventional digital computers treat thermal fluctuations as unwanted noise that must be suppressed by maintaining high voltage margins. **Stochastic computing**, by contrast, embraces randomness by representing numbers as probabilistic bit streams [[17]](#ref17). For example, a real number $p \in [0, 1]$ is represented by a sequence of random binary bits where the probability of observing a `'1'` equals $p$.
 
 In this probabilistic representation, complex mathematical operations collapse into elementary logic:
+
 - Multiplying two independent stochastic bit streams $A$ (probability $p_A$) and $B$ (probability $p_B$) is performed using a single **AND gate**, since $P(A \land B) = p_A \times p_B$.
 - Scaled addition can be performed using an elementary multiplexer.
 
@@ -158,6 +166,7 @@ Nanoscale skyrmions provide a natural physical solution. Due to their particle-l
 Taking thermodynamic efficiency to its ultimate limit, **Brownian computing** operates near the fundamental Landauer limit ($k_B T \ln 2$ per bit erasure) by allowing thermal fluctuations to drive the computation forward and backward through a state space [[14]](#ref14).
 
 In token-based Brownian circuits, discrete physical particles (such as individual skyrmions) act as computational tokens. Computation is mediated by three fundamental geometric building blocks [[14]](#ref14):
+
 1. **Hubs:** Junctions that allow tokens to diffuse between interconnected tracks.
 2. **Ratchets:** Asymmetric potential barriers that establish a preferred drift direction under thermal excitation, preventing backward diffusion.
 3. **C-Joints (Conservative Coincidence Gates):** Non-linear junctions where two tokens must arrive simultaneously to interact and exit through designated output channels.
@@ -173,6 +182,7 @@ These components have been experimentally verified in continuous magnetic thin f
 Recurrent Neural Networks (RNNs) are powerful tools for processing temporal, sequential, and dynamical data (such as time-series forecasting, speech recognition, and non-linear system identification). However, training standard RNNs requires Backpropagation Through Time (BPTT)—an algorithm that is computationally demanding, prone to vanishing and exploding gradients, and difficult to implement directly on edge hardware.
 
 **Reservoir Computing (RC)** bypasses the training of recurrent weights entirely [[7]](#ref7). The architecture consists of three distinct stages:
+
 1. **Input Layer:** Feeds the external temporal signal $\mathbf{u}(t)$ into the reservoir.
 2. **The Reservoir:** A complex, fixed, non-linear recurrent network that projects the low-dimensional input into a high-dimensional spatiotemporal state space $\mathbf{x}(t)$.
 3. **Readout Layer:** A simple linear layer that maps the reservoir states to the target output $\mathbf{y}(t) = \mathbf{W}_{\text{out}} \mathbf{x}(t)$.
@@ -202,6 +212,7 @@ Emulating these properties on digital transistors requires substantial circuitry
 Magnetic materials are exceptional candidates for physical reservoirs because their spin configurations respond non-linearly to magnetic fields, electrical currents, mechanical strain, and light [[7]](#ref7). Furthermore, magnetic devices can be integrated with CMOS circuitry via magnetic tunnel junction (MTJ) technology.
 
 Candidate magnetic reservoir platforms include:
+
 - **Dipole-Coupled Nanomagnet Arrays:** Lithographically patterned islands of ferromagnets whose stray dipolar fields create complex collective relaxation dynamics.
 - **Spin-Wave Reservoirs:** Propagating magnons in yttrium iron garnet (YIG) thin films whose non-linear interference processes temporal microwave signals.
 - **Skyrmion Fabrics:** Dense, disordered ensembles of magnetic skyrmions confined in thin-film geometries [[2]](#ref2), [[18]](#ref18), [[20]](#ref20).
@@ -215,6 +226,7 @@ When an electrical voltage pulse train is applied across a skyrmion fabric, the 
 Complementing spin-based reservoirs, ferroelectric materials provide an electrical-field-driven alternative that eliminates Ohmic Joule losses associated with steady-state currents [[7]](#ref7).
 
 In ferroelectrics, the spontaneous electric polarization can be reoriented by external electric fields, mechanical stress, or optical illumination, producing rich hysteretic and non-linear responses. Diverse device architectures have been explored:
+
 - **Ferroelectric Tunnel Junctions (FTJs):** Nanometer-thin ferroelectric barriers sandwiched between metal electrodes, where polarization reversal modulates the quantum mechanical tunneling electroresistance (TER).
 - **Ferroelectric Field-Effect Transistors (FeFETs):** Where a ferroelectric gate dielectric modulates the channel conductance of a semiconductor [[8]](#ref8), [[15]](#ref15).
 - **Conductive Ferroelectric Domain Walls:** The interface separating adjacent domains of differing polarization direction [[16]](#ref16), [[21]](#ref21).
@@ -236,8 +248,10 @@ $$\mathbf{y} = \mathbf{W} \cdot \mathbf{x} \quad \implies \quad y_j = \sum_{i=1}
 On conventional digital GPUs, evaluating this matrix-vector multiplication scales with computational complexity $O(n^2)$. Each weight must be fetched from memory, loaded into registers, processed in floating-point arithmetic logic units (ALUs), and written back. Memory bus bandwidth and capacitive charging of long interconnect lines dominate system energy consumption.
 
 **Analog crossbar arrays** circumvent this bottleneck by performing matrix-vector multiplication in a single physical step using the fundamental laws of electrical circuits:
+
 1. **Ohm's Law:** When an input voltage $V_i$ is applied across a two-terminal device with conductance $G_{ji}$, the resulting current is:
    $$I_{ji} = V_i \cdot G_{ji}$$
+
 2. **Kirchhoff's Current Law (KCL):** When multiple rows feed into a common column line, the currents sum algebraically at the node:
    $$I_j = \sum_{i=1}^n I_{ji} = \sum_{i=1}^n V_i \cdot G_{ji}$$
 
@@ -251,6 +265,7 @@ By mapping neural network inputs to row voltages $\mathbf{V}$, synaptic weights 
 ### Synaptic Device Requirements
 
 To realize high-precision analog acceleration, the crosspoint synaptic device must satisfy stringent physical criteria:
+
 - **Fine, Continuous Conductance Tuning:** The device must support numerous distinct, stable conductance levels (ideally $>1000$ levels) under identical programming pulses to enable high weight resolution.
 - **High Dynamic Resistance Range:** Overall device resistance should reside in the $1\text{ to }100\text{ M}\Omega$ regime. Low-resistance devices draw excessive current, causing parasitic $IR$ voltage drops along metallic interconnect lines that degrade computational accuracy.
 - **Bidirectional Symmetry & Linearity:** Weight potentiation (conductance increase) and depression (conductance decrease) should exhibit linear, symmetric trajectories.
@@ -273,6 +288,7 @@ Zirconium has emerged as the preferred dopant ($\text{Hf}_{0.5}\text{Zr}_{0.5}\t
 ### Multifunctional Properties of Ferroelectric Hafnia
 
 Ferroelectric $\text{HfO}_2$ exhibits a versatile spectrum of physical properties [[24]](#ref24):
+
 - **Pyroelectricity:** Generates electrical charge in response to temperature variations, opening pathways for integrated infrared and thermal gas sensors.
 - **Piezoelectricity:** Converts mechanical strain into electrical voltage and vice versa, enabling integrated nano-electromechanical systems (NEMS), acoustic resonators, and energy harvesters.
 - **Tunable Non-Volatile Polarization:** Enables diverse electronic device classes:
@@ -294,8 +310,11 @@ The origin of ferroelectricity in $\text{HfO}_2$ lies in a metastable, non-centr
 | **Orthorhombic ($o\text{-FE}$)** | $Pca2_1$ | **No** | **Yes (Ferroelectric)** | **Metastable polar phase.** Arises from a non-centrosymmetric displacement of oxygen atoms along the polar $c$-axis. Stabilized by nanoscale grain boundaries, mechanical clamping, chemical doping, and oxygen vacancies. |
 
 Because the polar orthorhombic phase ($Pca2_1$) is metastable relative to the non-polar monoclinic ground state ($P2_1/c$), stabilizing it requires careful optimization of several thermodynamic and kinetic parameters:
+
 1. **Surface Energy & Grain Size:** Due to lower surface energy of the orthorhombic/tetragonal phases compared to the monoclinic phase, keeping grain sizes small (below ~10 nm) thermodynamically stabilizes the polar phase.
+
 2. **Chemical Doping:** Doping with $\text{Zr}^{4+}$, $\text{Si}^{4+}$, $\text{Al}^{3+}$, $\text{Y}^{3+}$, or $\text{La}^{3+}$ induces internal lattice strain and promotes oxygen vacancy formation that inhibits transformation into the monoclinic phase.
+
 3. **Electrode Clamping:** Capping with top and bottom metallic electrodes (such as TiN or TaN) provides mechanical confinement and in-plane tensile stress during Rapid Thermal Annealing (RTA), freezing in the non-centrosymmetric orthorhombic lattice.
 
 ---
@@ -305,10 +324,15 @@ Because the polar orthorhombic phase ($Pca2_1$) is metastable relative to the no
 To translate ferroelectric $\text{HfO}_2$ into functional analog crossbar computing arrays, several experimental frontiers are being actively pursued:
 
 1. **Atomic Layer Deposition (ALD):** Thin films must be grown with sub-angstrom thickness control and atomic stoichiometry. ALD using metal-organic precursors (such as TDMA-Hf, TDMA-Zr) and oxidizers ($\text{H}_2\text{O}$ or $\text{O}_3$) allows conformal deposition on high-aspect-ratio 3D structures.
+
 2. **Nanostructural Characterization (HR-TEM):** High-Resolution Transmission Electron Microscopy coupled with energy-dispersive X-ray spectroscopy (EDX) is critical to elucidate polycrystalline grain boundaries, phase segregation, and interdiffusion at the $\text{TiN/HfO}_2$ interface.
+
 3. **Piezoresponse Force Microscopy (PFM):** PFM enables real-space visualization of nanoscale domain switching dynamics, domain wall velocity, and local coercive field distributions under applied tip biases.
+
 4. **Ultrafast Pulse Manipulation:** Exploring the manipulation of hafnia's crystalline microstructure via ultrafast sub-nanosecond electric pulses. Short, intense pulses induce controlled local Joule heating to amorphize or de-crystallize the material, followed by large adiabatic relaxation pulses to re-crystallize it into desired polymorphic phase distributions.
+
 5. **Multiphysics Tuning:** Investigating the interplay of mechanical strain, local temperature gradients, and optical excitation as external tuning parameters to dynamically modulate synaptic conductance.
+
 6. **FeFET Synaptic Integration:** Implementing ferroelectric Field-Effect Transistors as synaptic elements [[8]](#ref8), [[15]](#ref15), where partial polarization switching of the gate oxide provides multi-level non-volatile channel conductance states with minimal read disturb.
 
 ---
@@ -318,6 +342,7 @@ To translate ferroelectric $\text{HfO}_2$ into functional analog crossbar comput
 The transition toward unconventional and neuromorphic computing represents one of the most intellectually invigorating frontiers in condensed matter physics and computer engineering. As standard silicon scaling hits thermal, interconnect, and memory-bandwidth limits, progress hinges on exploiting the intrinsic physics of matter to perform computation.
 
 Whether through:
+
 - the topological stability and Brownian diffusion of magnetic skyrmions for stochastic computing,
 - the high-dimensional fading-memory dynamics of magnetic fabrics and ferroelectric domain walls in physical reservoir computing, or
 - the parallel $O(1)$ vector-matrix multiplication of CMOS-compatible ferroelectric hafnium oxide analog crossbar arrays,
