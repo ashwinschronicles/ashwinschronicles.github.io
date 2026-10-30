@@ -102,7 +102,7 @@ elif CONTEXT in ("test", "development", "branch-deploy") or (CONTEXT == "branch-
             MODERN_GOOGLE_ANALYTICS = _ga_test
             GOOGLE_ANALYTICS = None
         else:
-            0da954d7-d444-49a7-8562-7589e6b8d49f0da954d7-d444-49a7-8562-7589e6b8d49fGOOGLE_ANALYTICS = _ga_test
+            GOOGLE_ANALYTICS = _ga_test
             MODERN_GOOGLE_ANALYTICS = None
     CLAIM_GOOGLE = _get_env(
         "CLAIM_GOOGLE_TEST", "CLAIM_GOOGLE_NEXT", "CLAIM_GOOGLE"
