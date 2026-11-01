@@ -8,6 +8,7 @@ slug: managing-jobs-in-a-hpc
 author: Ashwin
 summary: Notes on submitting and managing Slurm job scripts in HPC
 comments: false
+gittime: off
 ---
 
 https://ubccr.freshdesk.com/support/solutions/articles/5000688140-submitting-a-slurm-job-script

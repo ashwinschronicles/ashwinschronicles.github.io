@@ -6,6 +6,7 @@ category: Blog
 Tags: Pandoc,slides,markdown
 Slug: beamer-slides-using-markdown-and-pandoc
 Summary: Short note on bueatiful Producing Beamer slide shows from markdown using Pandoc
+gittime: off
 ---
 # Producing slide shows with pandoc
 Pandoc is a Haskell library for converting from one markup format to another, and a command-line tool that uses this library.

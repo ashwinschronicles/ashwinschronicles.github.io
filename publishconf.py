@@ -64,10 +64,10 @@ if CONTEXT == "production":
     DISQUS_SITENAME = _get_env("DISQUS_SITENAME")
     HEAP_ANALYTICS = _get_env("HEAP_ANALYTICS_PROD", "HEAP_ANALYTICS")
 #    COMMENTBOX_PROJECT = os.environ.get("COMMENTBOX_PROJECT")
-# filetime_from_git is very slow. Use it in production only
-# to avoid slow build times during development
-    if "filetime_from_git" not in PLUGINS:
-        PLUGINS.append("filetime_from_git")
+# filetime_from_git is disabled so dates strictly follow markdown frontmatter
+#    if "filetime_from_git" not in PLUGINS:
+#        PLUGINS.append("filetime_from_git")
+    GIT_FILETIME_FROM_GIT = False
     if "sitemap" not in PLUGINS:
         PLUGINS.append("sitemap")
 

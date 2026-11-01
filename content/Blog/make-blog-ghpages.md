@@ -6,6 +6,7 @@ Category:Blog
 Slug: gh-pages-with-pelican
 Author: Ashwin
 Summary: Wake your own webbsite using Pelican static site generator  and host it on github pages
+gittime: off
 ---
 
 Github, worlds leading  hosting service for Git repositories  offers a simple, elegant website solution. It allows its users to  store page content in a git repository along with their code.

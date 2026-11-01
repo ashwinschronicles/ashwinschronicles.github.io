@@ -4,6 +4,7 @@ date: 2021-09-20
 category: Blog
 tags: Generative Art, Processing, Linux
 status: draft
+gittime: off
 ---
 
 * **Download the Latest Processing 3 Release for Linux**
